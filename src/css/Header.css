@@ -1,0 +1,14 @@
+.header-container {
+    background-color: #27a8df;
+    padding: 50px;
+    display: flex;
+
+  }
+  
+
+  h1 {
+    margin-right: 30px;
+    font-size: 22px;
+    color: #fff
+  }
+  
