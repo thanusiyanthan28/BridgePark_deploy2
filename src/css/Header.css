@@ -1,14 +1,61 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  background-image: url('../assets//images//HotelFront.jpg'); 
+  background-size: cover;
+  color: #fff; 
+  text-align: center;
+}
+
 .header-container {
-    background-color: #27a8df;
-    padding: 50px;
-    display: flex;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 80px;
+}
 
-  }
-  
+.header-link {
+  text-decoration: none; 
+  color: inherit; 
+}
 
-  h1 {
-    margin-right: 30px;
-    font-size: 22px;
-    color: #fff
-  }
-  
+.header-link:hover {
+  text-decoration: none; 
+}
+
+.hero-container p {
+  font-size: 1.5rem;
+}
+
+ h1 {
+  font-size: 20px; 
+  margin-top: 50px; 
+  margin-right: 50px; 
+  color: #fff;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.heading-container {
+  font-size: 50px; 
+  margin-top: 150px; 
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-size: 100px; 
+}
+
+.heading2 {
+  margin-top: -50px;
+  font-size: 100px; 
+}
+
