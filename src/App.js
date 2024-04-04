@@ -7,9 +7,8 @@ export default function App() {
   return ( 
     <div>
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Use curly braces to pass element prop */}
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
     </div>

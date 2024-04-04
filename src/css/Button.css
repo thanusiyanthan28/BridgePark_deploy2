@@ -1,0 +1,23 @@
+.button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  .button:hover {
+    background-color: #ffffff;
+  }
+  
+.buttonContainer{
+    margin-top: 50px;
+    margin-left: 500px;
+}
+.buttonContainer2{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+

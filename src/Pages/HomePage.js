@@ -1,11 +1,10 @@
 import React from 'react'
-import HeroSection from '../components/home/HeroSection'
+import Header from '../components/common/Header'
 
 export default function HomePage(){
   return (
    <>
-   <HeroSection/>
-   <div>hii</div>
+   <Header/>
    </>
   )
 }
