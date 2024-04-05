@@ -48,3 +48,29 @@
     width: 100%;
     justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+      width: auto; /* Adjust width for smaller screens */
+      margin: 5px auto; /* Center the card horizontally */
+      margin-left: 0; /* Reset margin-left */
+  }
+
+  .card-body {
+      margin-left: 12px; /* Reset margin-left */
+  }
+
+  .devider{
+      margin-left: 0; /* Reset margin-left */
+  }
+
+  .containerCol1{
+      margin-left: 0; /* Reset margin-left */
+  }
+
+  .btnPrimary {
+      margin-top: 20px; 
+      font-size: 20px; 
+      padding-bottom: 20px; 
+  }
+} 
