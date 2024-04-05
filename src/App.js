@@ -9,7 +9,7 @@ export default function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Use curly braces to pass element prop */}
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
       {<Footer/> }
