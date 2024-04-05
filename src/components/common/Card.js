@@ -41,7 +41,7 @@ function Card({ children, title, description }) {
                             <DatePicker defaultValue={dayjs("2024-12-01", "YYYY-MM-DD")} />
                         </Row>
                     </Col>
-                    <Col span={6} style={{ Color: 'black' }}><PrimaryButton title={"Check Availablity"}/></Col>
+                    <Col span={6} style={{ Color: 'black' }}><PrimaryButton title={"Check Availablity"}  className='btnPrimary'/></Col>
                 </Row>
             </div>
         </div>

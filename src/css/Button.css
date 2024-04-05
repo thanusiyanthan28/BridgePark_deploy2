@@ -14,10 +14,21 @@
   
 .buttonContainer{
     margin-top: 50px;
-    margin-left: 500px;
+    margin-left: 800px;
 }
 .buttonContainer2{
     margin-top: 50px;
     margin-left: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .buttonContainer,
+  .buttonContainer2 {
+    margin-left: -20px; 
+    margin-top: 20px; 
+    
+  }
+  .buttonContainer{
+    margin-top: 140px; 
+  }
+}

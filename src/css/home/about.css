@@ -1,0 +1,70 @@
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+}
+
+.textWrapper {
+  text-align: center;
+  margin-top: 80px;
+  /* padding-left: 50px; */
+}
+
+.aboutH1 {
+  color: black;
+  /* margin-left: 50px; */
+  font-size: 50px;
+  margin-top: 25px;
+  font-family: "Cadmium", sans-serif;
+  font-weight: lighter;
+}
+
+.paragraphContainer {
+  width: 80%;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 2;
+  font-family: "Cadmium", sans-serif;
+}
+
+.aboutCouroselComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the content horizontally */
+  margin-top: -40px;
+}
+
+.carousel-container {
+  margin: 10px; /* Adjust margin between carousel components */
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .textWrapper {
+    margin-top: 30px; /* Adjust margin-top for smaller screens */
+    padding-left: 20px; /* Adjust padding-left for smaller screens */
+  }
+
+  .aboutH1 {
+    font-size: 30px; /* Adjust font-size for smaller screens */
+    margin-left: 20px; /* Adjust margin-left for smaller screens */
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
+  }
+
+  .paragraphContainer {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+}
+
+
