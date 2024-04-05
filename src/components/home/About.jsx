@@ -26,7 +26,7 @@ const About = () => {
     return (
         <div className='abContainer'>
             <div className='aboutContainer'>
-                <div className='textWrapper'>
+                <div className='aboutTextWrapper'>
                     <p>WELCOME TO</p>
                     <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1>
                     <div className="paragraphContainer">

@@ -12,23 +12,23 @@
     background-color: #ffffff;
   }
   
-.buttonContainer{
+.headerButtonContainer{
     margin-top: 50px;
     margin-left: 800px;
 }
-.buttonContainer2{
+.headerButtonContainer2{
     margin-top: 50px;
     margin-left: 50px;
 }
 
 @media screen and (max-width: 768px) {
-  .buttonContainer,
-  .buttonContainer2 {
+  .headerButtonContainer,
+  .headerButtonContainer2 {
     margin-left: -20px; 
     margin-top: 20px; 
     
   }
-  .buttonContainer{
+  .headerButtonContainer{
     margin-top: 140px; 
   }
 }

@@ -30,8 +30,6 @@
     display: flex;
     gap: 15px;
     margin-bottom: 18px;
-    
-
   }
 
 
@@ -77,8 +75,6 @@
     
   }
 
-
-  
   @media (max-width: 768px) {
     /* .footer {
       flex-direction: column;
@@ -107,9 +103,6 @@
       align-items: center;
       margin: 0 100px ;
      
-     
-      
-      
     }
   }
   

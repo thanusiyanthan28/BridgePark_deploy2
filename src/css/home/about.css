@@ -6,7 +6,7 @@
 
 }
 
-.textWrapper {
+.aboutTextWrapper {
   text-align: center;
   margin-top: 80px;
   /* padding-left: 50px; */
@@ -19,6 +19,7 @@
   margin-top: 25px;
   font-family: "Cadmium", sans-serif;
   font-weight: lighter;
+  margin-left: 35px;
 }
 
 .paragraphContainer {
@@ -36,7 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center the content horizontally */
-  margin-top: -40px;
+  margin-top: -30px;
 }
 
 .carousel-container {
@@ -48,7 +49,7 @@
     height: auto; /* Adjust height for smaller screens */
   }
 
-  .textWrapper {
+  .aboutTextWrapper {
     margin-top: 30px; /* Adjust margin-top for smaller screens */
     padding-left: 20px; /* Adjust padding-left for smaller screens */
   }

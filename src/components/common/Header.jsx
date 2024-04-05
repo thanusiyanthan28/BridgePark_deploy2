@@ -45,14 +45,14 @@ const Header = () => {
               <h1>Meeting &amp; Events</h1>
             </Link>
 
-            <div className="buttonContainer">
+            <div className="headerButtonContainer">
               <Button onClick={handleClick}>Book Now</Button>
             </div>
-            <div className="buttonContainer2">
+            <div className="headerButtonContainer2">
               <Button onClick={handleClick}>LogIn / SignUp</Button>
             </div>
           </nav>
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="headerLogo" />
         </header>
         <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
