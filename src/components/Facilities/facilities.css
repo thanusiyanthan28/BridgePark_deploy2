@@ -1,6 +1,6 @@
 
 
-.facilities-body {
+.facilitiesbody {
   background: #fffff9;
   min-height: 100vh; 
   display: flex;
@@ -9,22 +9,22 @@
   font-family: 'Lato', sans-serif;
 }
 
-.facilities-container {
+.facilitiescontainer {
     width: 90%; 
     margin-bottom: 20px;
     margin-top: 110px;
     position: inherit;
 }
 @media(max-width:435px){
-  .facilities-container{
+  .facilitiescontainer{
     width:130%;
     position:static;
-    margin-top: 5px;
+    margin-top: 120px;
 
   }
 }
 
-.facilities-cards-container {
+.facilitiescardscontainer {
     display: flex;
     justify-content: center; 
     margin-top: 20px;
@@ -33,20 +33,24 @@
     margin-left: 40px;
 }
 @media(max-width:435px){
-  .facilities-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 115%;
-    height: 170px;
-    margin-left: 0px;
+  .facilitiescardscontainer {
+   
+    grid-template-columns: repeat(20px,);
+    margin-top: 40px;
+    width:150%;
+    height: 1000px;
+    margin-left: 15px;
+    display: grid;
+
+   
+    
     
 }
 
 }
 
 
-.facilities-card {
+.facilitiescard {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
@@ -63,17 +67,18 @@
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 @media(max-width:435px){
-  .facilities-card{
+  .facilitiescard{
     width: 500px;
-    margin: 3.3rem;
+    margin: .3rem;
     margin-right: 50px;
-    margin-top: 1px;
-    margin-left: 15px;
+    margin-top: 10px;
+    margin-left: 40px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
   }
 }
 
 
-.facilities-icon-container {
+.facilitiesiconcontainer {
     flex: 1; 
     display: flex;
     justify-content: center; 
@@ -81,22 +86,25 @@
    
   }
   @media(max-width:435px){
-    .facilities-icon-container {
-      flex: 2; 
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
+    .facilitiesiconcontainer {
+      display: grid;
+      grid-template-columns: repeat(2);
+      grid-template-rows: repeat(0, 10px);
+      grid-gap: 15px;
+      
+      padding-left: 0px;
+      margin-top: 10px; 
      
     }
     
   }
 
-.facilities-card:hover {
+.facilitiescard:hover {
     box-shadow: 0 4px 1rem -4px #000;
     transform: translateY(-3px);
 }
 
-.facilities-card-content {
+.facilitiescardcontent {
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -105,7 +113,7 @@
     font-family: 'Lato', sans-serif;
 }
 @media(max-width:435px){
-  .facilities-card-content {
+  .facilitiescardcontent {
     display: flex;
     justify-content: center;
     font-size: 10px;
@@ -113,7 +121,7 @@
 }
 
 }
-.facilities-head {
+.facilitieshead {
     color: #000;
     text-align: center;
     font-size: 50px;
@@ -121,16 +129,16 @@
     
 }
 @media(max-width:435px){
-  .facilities-head{
-    font-size: 20px;
+  .facilitieshead{
+    font-size: 40px;
     margin-bottom: 15px;
     margin-top: 80px;
-    margin-left: 220px;
+    margin-left: 330px;
     margin-bottom: 40px;
   }
 }
 
-.facilities-para {
+.facilitiespara {
      color: #000;
     text-align: center;
     margin-top: 0px;
@@ -140,16 +148,16 @@
     margin-right: 340px;
 }
 @media(max-width:435px){
-  .facilities-para{
-   
-    margin-left: 170px;
-    margin-right: 0px;
-    text-align: center;
-    position: inherit;
+  .facilitiespara{
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    position:0;
+    margin-left: 40px;
+    width: 180%;
   }
 }
 
-.facilities-button1 {
+.facilitiesbutton1 {
     color:white;
     padding: 10px 50px;
     cursor: pointer;
@@ -159,17 +167,20 @@
     background-color: #618e95;
 }
 @media(max-width:435px){
-  .facilities-button1{
-    margin-top: 500px;
+  .facilitiesbutton1{
+    margin-top: 50px;
     align-items: center;
-    margin-left: 225px;
+    margin-left: 290px;
+    width: 70%;
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
   }
-  .facilities-main{
+  .facilitiesmain{
     width:435px;
   }
 }
 
-.fs-column-list {
+.fscolumnlist {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-template-rows: repeat(3, 150px);
@@ -179,13 +190,16 @@
   margin-top: 50px; 
 }
 @media(max-width:435px){
- .fs-column-list{
-  margin-top: 300px;
+ .fscolumnlist{
+  margin-top: 100px;
   padding-left: 20px;
+  margin-left: 100px;
+  grid-gap:40px;
+  margin-bottom: 10px;
 }
 }
 
-.fs-column {
+.fscolumn {
   background-color:none;
   padding: 20px;
   border-radius: 5px;
@@ -193,24 +207,24 @@
   flex-direction: column;
 }
 
-.fs-column h2 {
+.fscolumnh2 {
   margin-top: 0;
   align-self: flex-start;
 }
 
-.fs-column ul {
+.fscolumn ul {
   margin-top: 0;
   padding-left: 0px;
 }
 
-.fs-column ul li {
+.fscolumn ul li {
   list-style-type: none;
   margin-bottom: 5px;
 
   
   
 }
-.fs-column ul li::before{
+.fscolumn ul li::before{
   content: '\2713'; 
   
   margin: 6px; 

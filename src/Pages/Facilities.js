@@ -5,18 +5,18 @@ import ColumnList from "../components/Facilities/facilitiesList"
 import { faWifi, faParking, faGlassMartiniAlt, faUtensils, faTv, faBed, faSmokingBan, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({ title, icon }) => (
-  <div className="facilities-card">
-    <div className='facilities-icon-container'>
+  <div className="facilitiescard">
+    <div className='facilitiesiconcontainer'>
       <FontAwesomeIcon icon={icon} size="4x" color="#618e95" style={{ imageRendering: 'pixelated' }} />
     </div>
-    <div className="facilities-card-content">
+    <div className="facilitiescardcontent">
       <h2>{title}</h2>
     </div>
   </div>
 );
 
 const CardContainer = ({ cards, icons }) => (
-  <div className='facilities-cards-container'>
+  <div className='facilitiescardscontainer'>
     {cards.map((card, index) => (
       <Card
         key={card.id}
@@ -49,14 +49,14 @@ const Facilities = () => {
   }
 
   return (
-    <body className='facilities-body'>
-    <div className='facilities-main'>
+    <body className='facilitiesbody'>
+    <div className='facilitiesmain'>
       <div>
-        <h1 className='facilities-head'>FACILITIES</h1>
+        <h1 className='facilitieshead'>FACILITIES</h1>
       </div>
 
       <div>
-        <p className='facilities-para'>
+        <p className='facilitiespara'>
           Notice of a bid advertisement shall be published in at
           least one local newspaper and in one trade publication a
           t least 30 days in advance of sale. If applicable, the notice must identify t
@@ -64,12 +64,12 @@ const Facilities = () => {
         </p>
       </div>
 
-      <div className="facilities-container">
+      <div className="facilitiescontainer">
         <CardContainer cards={cardsData} icons={icons} />
       </div>
 
       {showButton && <div>
-        <button className='facilities-button1' onClick={handleClick}> SEE ALL</button>
+        <button className='facilitiesbutton1' onClick={handleClick}> SEE ALL</button>
       </div>}
 
       {showList &&  <ColumnList />}
