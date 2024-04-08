@@ -4,6 +4,7 @@ import "../../css/Header.css";
 import logo from "../../assets/images/HotelLogo.png";
 import Button from "./Button";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { FaIconName } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const handleClick = () => {
