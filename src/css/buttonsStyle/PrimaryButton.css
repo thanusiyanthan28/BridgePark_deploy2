@@ -1,0 +1,11 @@
+.btn{
+    background-color: rgb(46, 163, 134);
+    padding: 100px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
