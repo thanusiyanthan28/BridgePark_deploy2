@@ -1,22 +1,22 @@
 
 
-body {
-    background: #fffff9;
-    min-height: 100vh; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-family: 'Lato', sans-serif;
+.facilities-body {
+  background: #fffff9;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-family: 'Lato', sans-serif;
 }
 
-.container {
+.facilities-container {
     width: 90%; 
     margin-bottom: 20px;
     margin-top: 110px;
     position: inherit;
 }
 @media(max-width:435px){
-  .container{
+  .facilities-container{
     width:130%;
     position:static;
     margin-top: 5px;
@@ -24,7 +24,7 @@ body {
   }
 }
 
-.cards-container {
+.facilities-cards-container {
     display: flex;
     justify-content: center; 
     margin-top: 20px;
@@ -33,7 +33,7 @@ body {
     margin-left: 40px;
 }
 @media(max-width:435px){
-  .cards-container {
+  .facilities-cards-container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 
-.card {
+.facilities-card {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
@@ -63,7 +63,7 @@ body {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 @media(max-width:435px){
-  .card{
+  .facilities-card{
     width: 500px;
     margin: 3.3rem;
     margin-right: 50px;
@@ -73,7 +73,7 @@ body {
 }
 
 
-.icon-container {
+.facilities-icon-container {
     flex: 1; 
     display: flex;
     justify-content: center; 
@@ -81,7 +81,7 @@ body {
    
   }
   @media(max-width:435px){
-    .icon-container {
+    .facilities-icon-container {
       flex: 2; 
       display: flex;
       justify-content: center; 
@@ -91,12 +91,12 @@ body {
     
   }
 
-.card:hover {
+.facilities-card:hover {
     box-shadow: 0 4px 1rem -4px #000;
     transform: translateY(-3px);
 }
 
-.card-content {
+.facilities-card-content {
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -105,7 +105,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 @media(max-width:435px){
-  .card-content {
+  .facilities-card-content {
     display: flex;
     justify-content: center;
     font-size: 10px;
@@ -113,7 +113,7 @@ body {
 }
 
 }
-.head {
+.facilities-head {
     color: #000;
     text-align: center;
     font-size: 50px;
@@ -121,7 +121,7 @@ body {
     
 }
 @media(max-width:435px){
-  .head{
+  .facilities-head{
     font-size: 20px;
     margin-bottom: 15px;
     margin-top: 80px;
@@ -130,7 +130,7 @@ body {
   }
 }
 
-.para {
+.facilities-para {
      color: #000;
     text-align: center;
     margin-top: 0px;
@@ -140,7 +140,7 @@ body {
     margin-right: 340px;
 }
 @media(max-width:435px){
-  .para{
+  .facilities-para{
    
     margin-left: 170px;
     margin-right: 0px;
@@ -149,7 +149,7 @@ body {
   }
 }
 
-.button1 {
+.facilities-button1 {
     color:white;
     padding: 10px 50px;
     cursor: pointer;
@@ -159,17 +159,17 @@ body {
     background-color: #618e95;
 }
 @media(max-width:435px){
-  .button1{
+  .facilities-button1{
     margin-top: 500px;
     align-items: center;
     margin-left: 225px;
   }
-  .main{
+  .facilities-main{
     width:435px;
   }
 }
 
-.column-list {
+.fs-column-list {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-template-rows: repeat(3, 150px);
@@ -179,13 +179,13 @@ body {
   margin-top: 50px; 
 }
 @media(max-width:435px){
- .column-list{
+ .fs-column-list{
   margin-top: 300px;
   padding-left: 20px;
 }
 }
 
-.column {
+.fs-column {
   background-color:none;
   padding: 20px;
   border-radius: 5px;
@@ -193,24 +193,24 @@ body {
   flex-direction: column;
 }
 
-.column h2 {
+.fs-column h2 {
   margin-top: 0;
   align-self: flex-start;
 }
 
-.column ul {
+.fs-column ul {
   margin-top: 0;
   padding-left: 0px;
 }
 
-.column ul li {
+.fs-column ul li {
   list-style-type: none;
   margin-bottom: 5px;
 
   
   
 }
-.column ul li::before{
+.fs-column ul li::before{
   content: '\2713'; 
   
   margin: 6px; 

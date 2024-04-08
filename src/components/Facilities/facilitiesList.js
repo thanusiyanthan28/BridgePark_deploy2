@@ -5,10 +5,10 @@ import { FaBath, FaBed, FaTree, FaUtensils, FaFootballBall, FaCouch, FaTv, FaWin
 const ColumnList = () => {
   return (
     <div>
-    <div className="column-list">
+    <div className="fs-column-list">
       
 
-      <div className="column">
+      <div className="fs-column">
         
         <h2><FaBath /> Bathroom</h2>
         <ul>
@@ -48,7 +48,7 @@ const ColumnList = () => {
           <li>TV</li>
         </ul>
       </div>
-      <div className="column">
+      <div className="fs-column">
         <h2><FaWineGlassAlt /> Food & Drink</h2>
         <ul>
           <li>Coffee house in site</li>
@@ -83,7 +83,7 @@ const ColumnList = () => {
           <li>List item 1</li>
         </ul>
       </div>
-      <div className="column">
+      <div className="fs-column">
         <h2><FaUserShield /> Safety & Security</h2>
         <ul>
           <li>Fire Exiting</li>
