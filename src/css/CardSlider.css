@@ -1,0 +1,203 @@
+/* CardSlider.css */
+
+.meeting-card-slider {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+
+
+}
+
+.meeting-cards-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  align-items: center;
+  margin-left: 35.5%;
+ 
+ 
+  
+
+}
+
+.meeting-card {
+  flex: 0 0 350px 300px;
+  margin: 10px 10px;
+  background-color: #f0f0f0;
+  border-radius: 00px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  padding: 5px;
+
+}
+
+.meeting-card.meeting-active {
+  opacity: 1;
+  border-radius: 10px;
+
+  
+
+
+}
+
+.meeting-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+
+
+.meeting-my-class{
+  width: 100%;
+  border: 1;
+  /* background-color: tomato; */
+  padding: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  height: 50%;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center
+
+  
+  
+
+
+}
+.meeting-non-active{
+  filter: blur(0.5px); /* Adjust blur intensity as needed */
+
+}
+.meeting-card.meeting-active:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; 
+
+
+}
+.meeting-non-active p,
+.meeting-non-active h2{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.meeting-text{
+  display: flex;
+  background-color: #669399;
+  /* background-color: #007bff; */
+  border-radius: 5px;
+
+ 
+}
+.meeting-title{
+  width: 70%;
+  margin-left: 5px;
+}
+
+
+
+.meeting-date{
+  font-size: 25px;
+}
+
+.meeting-non-active.meeting-text{
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.meeting-non-active h3  {
+position: absolute;
+margin-left: 20%;
+align-items: center;
+margin-top: 15%;
+
+
+} 
+.meeting-active .meeting-text .meeting-title h3,
+.meeting-active .meeting-text .meeting-title p {
+  position: relative;
+  margin-left: auto;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin-bottom: 28px;
+
+ 
+ } 
+.meeting-main-date{
+  line-height: 40%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 5px;
+  color: #fff;
+  max-height: max-content;
+  font-family:Arial, Helvetica, sans-serif;
+  /* background-color: rgb(161, 192, 206); */
+  padding: 2px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+
+}
+.meeting-time {
+  /* font-family: 'Digital-7', sans-serif; */
+  font-family: 'DSEG', sans-serif;
+  font-size: large;
+
+
+  
+}
+button{
+  margin-top: 40px;
+  transform: translateY(-50%);
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  padding: 0;
+  font-size: 16px;
+
+ 
+  border: none;
+  border-radius: 50%; /* Makes it a circle */
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+}
+.meeting-des{
+  margin-top: -15px;
+  font-size:medium;
+}
+.meeting-month{
+ font-size:medium;
+}
+
+@media (width: 430px) {
+  .meeting-cards-container {
+    margin-left:345px;
+}
+
+.meeting-active{
+  /* width: 200px;
+  height: 300px; */
+}
+
+}
+@media (width: 390px) {
+  .meeting-cards-container {
+    margin-left:300px;
+}
+}
+
+
+
