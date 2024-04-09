@@ -13,7 +13,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
-      <Card />
+      { <Card /> /*Meeting and events */}
       {<Footer />}
     </div>
   );
