@@ -12,7 +12,8 @@ const CardSlider = ({ cards }) => {
     }, 5000); // Auto slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, []); // Run only once when component mounts or cards change
+  }, []); 
+  // Run only once when component mounts or cards change
 
   const [currentIndex, setCurrentIndex] = useState(cards.length - 1);
 
@@ -23,13 +24,14 @@ const CardSlider = ({ cards }) => {
   const prevCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
   };
-
+  document.documentElement.style.setProperty('--currentIndex', currentIndex);
   return (
     <div className='meeting-my-class'>
       <h2>Meetings & Events </h2>
     <div className="meeting-card-slider">
  
-      <div className=" meeting-cards-container" style={{ transform: `translateX(-${currentIndex * 380}px)` }}>
+    <div className="meeting-cards-container" style={{ '--current-index': currentIndex }}>
+    {/* <div className="meeting-cards-container" style={{ transform: `translateX(-${currentIndex * 350}px)`, marginLeft: '33.9%' }}> */}
         {cards.map((card, index) => (
           <div key={index} className={`meeting-card ${index === currentIndex ? 'meeting-active' : 'meeting-non-active'}`}>
             <img src={card.image} alt={card.title} />

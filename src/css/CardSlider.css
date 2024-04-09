@@ -1,10 +1,14 @@
 /* CardSlider.css */
-
+:root {
+  /* Set a default value */
+}
 .meeting-card-slider {
   position:relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  /* margin-top: 10px; */
   /* overflow: hidden; */
 
 
@@ -14,28 +18,29 @@
   display: flex;
   transition: transform 0.3s ease;
   align-items: center;
-  margin-left: 38.5%;
- 
- 
-  
+  /* margin-left: 33.5%; */
+  margin-top: 10px;
+  transform: translateX(calc(var(--currentIndex) * -300px));
+  margin-left: 36%;
 
 }
 
 .meeting-card {
-  flex: 0 0 350px 300px;
-  margin: 10px 10px;
-  background-color: #f0f0f0;
+  flex: 0 0 300px 300px;
+  /* margin: ; */
+  background-color: #fff7f7;
   border-radius: 00px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   opacity: 0.5;
   transition: opacity 0.3s ease;
-  padding: 5px;
-
+  /* padding: 5px; */
 }
 
 .meeting-card.meeting-active {
   opacity: 1;
   border-radius: 10px;
+  z-index: 9999;
+  transform: scale(1.05);
 
   
 
@@ -53,10 +58,10 @@
 
 
 .meeting-my-class{
-  width: 100%;
+  width: 80%;
   border: 1;
   /* background-color: tomato; */
-  padding: 10px;
+  padding: 5px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -159,7 +164,8 @@ margin-top: 15%;
   
 }
 button{
-  margin-top: 40px;
+  position:absolute;
+  /* margin-top: 40px; */
   transform: translateY(-50%);
   width: 40px; /* Adjust the width as needed */
   height: 40px; /* Adjust the height as needed */
@@ -170,9 +176,16 @@ button{
   border: none;
   border-radius: 50%; /* Makes it a circle */
   cursor: pointer;
-  margin-right: 10px;
-  margin-left: 10px;
-  
+  /* margin-right: 10px;
+  margin-left: 10px; */
+}
+.meeting-prev-btn{
+  margin-left: -650px;
+  margin-top: -250px;
+}
+.meeting-next-btn{
+  margin-left: 610px;
+  margin-top: -250px;
 }
 .meeting-des{
   margin-top: -15px;
@@ -182,22 +195,127 @@ button{
  font-size:medium;
 }
 
+
+/* galaxy s20 */
+@media (width: 412px) {
+.meeting-prev-btn{
+  margin-left: -200px;
+  margin-top: -250px;
+}
+.meeting-next-btn{
+  margin-left: 160px;
+  margin-top: -250px;
+}
+.meeting-cards-container {
+
+  transform: translateX(calc(var(--currentIndex) * -280px));
+  margin-left: 95%;
+
+}
+.meeting-card {
+  flex: 0 0 280px 280px;
+}
+}
+/* iphone 14pro max */
 @media (width: 430px) {
+  .meeting-prev-btn{
+    margin-left: -200px;
+    margin-top: -250px;
+  }
+  .meeting-next-btn{
+    margin-left: 160px;
+    margin-top: -250px;
+  }
   .meeting-cards-container {
-    margin-left:345px;
+  
+    transform: translateX(calc(var(--currentIndex) * -280px));
+    margin-left: 90%;
+  
+  }
+  .meeting-card {
+    flex: 0 0 280px 280px;
+  }
+}
+/* galaxy S8+ */
+@media (width: 360px) {
+  .meeting-prev-btn{
+    margin-left: -170px;
+    margin-top: -250px;
+  }
+  .meeting-next-btn{
+    margin-left: 130px;
+    margin-top: -250px;
+  }
+  .meeting-cards-container {
+  
+    transform: translateX(calc(var(--currentIndex) * -250px));
+    margin-left: 117.5%;
+  
+  }
+  .meeting-card {
+    flex: 0 0 250px 250px;
+   
+  }
 }
 
-.meeting-active{
-  /* width: 200px;
-  height: 300px; */
-}
-
-}
 @media (width: 390px) {
+  .meeting-prev-btn{
+    margin-left: -170px;
+    margin-top: -250px;
+  }
+  .meeting-next-btn{
+    margin-left: 130px;
+    margin-top: -250px;
+  }
   .meeting-cards-container {
-    margin-left:300px;
+  
+    transform: translateX(calc(var(--currentIndex) * -250px));
+    margin-left: 109%;
+  
+  }
+  .meeting-card {
+    flex: 0 0 250px 250px;
+   
+  }
 }
+/* ipad pro */
+@media (width: 1024px) {
+  .meeting-prev-btn{
+    margin-left: -470px;
+    margin-top: -250px;
+  }
+  .meeting-next-btn{
+    margin-left: 425px;
+    margin-top: -250px;
+  }
+  .meeting-cards-container {
+  
+    transform: translateX(calc(var(--currentIndex) * -300px));
+    margin-left: 34%;
+  
+  }
+  .meeting-card {
+    flex: 0 0 300px 300px;
+   
+  }
 }
-
-
-
+@media (max-width:375px) {
+  .meeting-prev-btn{
+    margin-left: -180px;
+    margin-top: -250px;
+  }
+  .meeting-next-btn{
+    margin-left: 140px;
+    margin-top: -250px;
+  }
+  .meeting-cards-container {
+  
+    transform: translateX(calc(var(--currentIndex) * -250px));
+    margin-left: 112%;
+  
+  }
+  .meeting-card {
+    flex: 0 0 250px 300px;
+   
+  }
+}
