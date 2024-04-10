@@ -44,7 +44,7 @@ const cards = [
   ];
   
 
-function Card() {
+function MeetingAndEvents() {
   return (
     <div className="App">
       <CardSlider cards={cards} />
@@ -52,4 +52,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default MeetingAndEvents;

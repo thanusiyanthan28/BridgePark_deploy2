@@ -2,7 +2,7 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Footer from "./components/common/Footer"
-import Card from "../src/Pages/MeetingAndEvents/Card";
+import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
 
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
-      { <Card /> /*Meeting and events */}
+      { <MeetingAndEvents /> /*Meeting and events */}
       {<Footer />}
     </div>
   );
