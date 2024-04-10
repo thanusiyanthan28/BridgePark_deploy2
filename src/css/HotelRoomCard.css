@@ -1,64 +1,90 @@
 .cardContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    width: 500px;
-    height: auto;
-    margin-left: 200px;
-  }
-  
-  .cardImage {
-    width: 100%;
-    height: 50%;
-  }
-  
-  .cardDetails {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .cardTitle {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .cardDescription {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 10px;
-  }
-  
-  .cardInfoRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5px;
-  }
-  
-  .cardInfoText {
-    font-size: 12px;
-  }
-  
-  .cardPriceText {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .cardButton {
-    font-size: 12px;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .cardButton:hover {
-    background-color: darkblue;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 450px;
+  height: auto;
+
+}
+
+.cardImage {
+  flex: 1; /* Take up 50% of the height */
+  max-height: 230px; 
+}
+
+.cardDetails {
+  flex: 1; /* Take up 50% of the height */
+  padding: 10px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
+  padding-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.cardInfoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.cardInfoText {
+  font-size: 12px;
+}
+
+.cardPriceText {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cardButton {
+  font-size: 26px;
+  color: white;
+  background-color: #3883af;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.cardButton:hover {
+  background-color: #e0ffff
+}
+
+.hotelRoomCard-MainRow{
+  border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
+  padding-bottom: 5px;
+}
+
+.cardTopBar{
+  background-color: #ffffffc2;
+  flex: 1;
+  position: absolute;
+  top: -30px;
+  padding-left: 10px;
+  padding-right: 160px;
+  color: #000;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.hotelRoomMainRow{
+  width: 80%;
+  margin-left: 10%;
+}
