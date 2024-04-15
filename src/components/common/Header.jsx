@@ -70,7 +70,6 @@ const Header = () => {
             </div>
 
             {isLoggedIn ? (
-              // If user is logged in, display user profile icon/button
               <div className="HeaderProfileContainer">
                 <UserProfile user={userData} />
               </div>

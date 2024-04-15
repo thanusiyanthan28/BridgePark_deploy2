@@ -196,8 +196,6 @@
   }
 }
 
-/* Here After the CSS for the facilities List*/
-
 .fscolumnlist {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
