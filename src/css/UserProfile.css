@@ -1,0 +1,70 @@
+.user-profile {
+    position: relative;
+}
+
+.profile-picture {
+    width: 80px; /* Adjust image width as needed */
+    height: 80px;
+    border-radius: 50%; /* Create circular image */
+    overflow: hidden; /* Prevent image overflow */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    position: relative; /* Positioning context for arrow */
+    margin-left: 50px;
+    margin-top: 24px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.user-details {
+    position: absolute;
+    top: calc(100% + 10px); /* Position details below the profile picture */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 150px; /* Adjust width as needed */
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    z-index: 1; /* Ensure the details are above other elements */
+    color: black;
+}
+
+.user-details h2 {
+    margin: 0; /* Remove margin from heading */
+}
+
+.user-details p {
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+
+.user-details ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 6px;
+    text-align: left; /* Align list items to the left */
+    margin-top: 4px;
+}
+
+.user-details li {
+    margin-bottom: 16px; 
+    cursor: pointer;
+}
+
+/* Arrow style */
+.profile-picture::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%) rotate(45deg); /* Rotate the arrow */
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Match the background color */
+    border-left: 1px solid #ccc; /* Add border */
+    border-top: 1px solid #ccc; /* Add border */
+    z-index: -1; /* Ensure the arrow is behind other elements */
+}

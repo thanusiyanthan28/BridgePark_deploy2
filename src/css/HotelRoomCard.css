@@ -1,4 +1,4 @@
-.cardContainer {
+.hotelRoomCardContainer {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -10,47 +10,57 @@
 
 }
 
-.cardImage {
+.hotelRoomCardImage {
   flex: 1; /* Take up 50% of the height */
   max-height: 230px; 
 }
 
-.cardDetails {
+.hotelRoomCardDetails {
   flex: 1; /* Take up 50% of the height */
   padding: 10px;
 }
 
-.cardTitle {
+.hotelRoomCardTitle {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
-  border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
-  padding-bottom: 10px;
 }
 
-.cardDescription {
+.hotelRoomCardTitle2 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-left: 140px;
+}
+
+.hotelRoomCardTitleTextFirst{
+  border-bottom: 2px solid rgba(5 5, 5, 0.068); 
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* .cardDescription {
   font-size: 14px;
   color: gray;
   margin-bottom: 10px;
-}
+} */
 
-.cardInfoRow {
+.hotelRoomCardInfoRow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
   align-items: center;
 }
 
-.cardInfoText {
+/* .cardInfoText {
   font-size: 12px;
-}
+} */
 
-.cardPriceText {
+.hotelRoomCardPriceText {
   font-size: 14px;
   font-weight: bold;
 }
 
-.cardButton {
+.hotelRoomCardButton {
   font-size: 26px;
   color: white;
   background-color: #3883af;
@@ -62,16 +72,16 @@
   margin-top: 20px;
 }
 
-.cardButton:hover {
+.hotelRoomCardButton:hover {
   background-color: #e0ffff
 }
 
 .hotelRoomCard-MainRow{
   border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
-  padding-bottom: 5px;
+  margin-top: -3px;
 }
 
-.cardTopBar{
+.hotelRoomCardTopBar{
   background-color: #ffffffc2;
   flex: 1;
   position: absolute;
@@ -84,7 +94,40 @@
   padding-bottom: 8px;
 }
 
-.hotelRoomMainRow{
-  width: 80%;
-  margin-left: 10%;
+.hotelRoomViewMoreLink {
+  text-decoration: underline; 
+  cursor: pointer; 
+  margin-left: 140px;
+  margin-top: 10px;
+  user-select: none
 }
+
+.hotelRoomCard-subRow{
+  margin-top: -14px;
+  margin-left: 9px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hotelRoomCardContainer {
+    width: 360px; 
+    margin: 10px 0; 
+  }
+
+  .hotelRoomCardButton {
+    font-size: 18px; 
+    margin-left: 60px; 
+    margin-top: 10px;
+  }
+
+  .hotelRoomCardTopBar {
+    padding-right: 10px; 
+    padding-left: 10px; 
+    width: 100%; 
+    position: relative; 
+    top: auto; 
+    margin-bottom: 10px; 
+  }
+
+}
+

@@ -11,20 +11,32 @@ const HotelRoomCard = ({
   price,
   buttonText,
   cardtitle,
+  onViewMoreClick,
 }) => {
   return (
-    <div className="cardContainer">
-      <img src={imageSource} className="cardImage" alt="Room" />
-      <h1 className="cardTopBar">{cardtitle}</h1>
-      <div className="cardDetails">
-        <h2 className="cardTitle">{title}</h2>
+    <div className="hotelRoomCardContainer">
+      <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
+      <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
+      <div className="hotelRoomCardDetails">
+        <Row className="hotelRoomCardTitleTextFirst">
+          <Col span={12}>
+            {" "}
+            <h2 className="hotelRoomCardTitle">{title}</h2>
+          </Col>
+          <Col span={12}>
+            {" "}
+            <div className="hotelRoomViewMoreLink" onClick={onViewMoreClick}>
+              View More
+            </div>
+          </Col>
+        </Row>
         <Row className="hotelRoomCard-MainRow">
           <Col span={8}>
             <Row>
               {" "}
               <p>GUEST</p>
             </Row>
-            <Row>
+            <Row className="hotelRoomCard-subRow">
               <p>01</p>
             </Row>
           </Col>
@@ -33,7 +45,7 @@ const HotelRoomCard = ({
               {" "}
               <p>ROOMS</p>
             </Row>
-            <Row>
+            <Row className="hotelRoomCard-subRow">
               <p>02</p>
             </Row>
           </Col>
@@ -42,18 +54,18 @@ const HotelRoomCard = ({
               {" "}
               <p>AVAIABLE</p>
             </Row>
-            <Row>
+            <Row className="hotelRoomCard-subRow">
               <p>01</p>
             </Row>
           </Col>
         </Row>
-        <Row className="cardInfoRow">
+        <Row className="hotelRoomCardInfoRow">
           <Col span={12}>
-            <p className="cardPriceText">{price} per night</p>
+            <p className="hotelRoomCardPriceText">{price} per night</p>
             <p className="cardPriceText2">including taxes</p>
           </Col>
           <Col span={12}>
-            <button className="cardButton">{buttonText}</button>
+            <button className="hotelRoomCardButton">{buttonText}</button>
           </Col>
         </Row>
       </div>

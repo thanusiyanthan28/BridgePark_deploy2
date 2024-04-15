@@ -37,9 +37,18 @@ h1 {
 .headerLogo {
   width: 100px;
   height: auto;
-  margin-left: -855px;
   margin-top: 30px;
+
 }
+
+.headerLogoPosition{
+  margin-left: 260px;
+}
+
+/* .headerLogo.loggedIn {
+  width: 80px;
+  margin-top: 10px; 
+} */
 
 .heading-container {
   font-size: 50px;
@@ -63,6 +72,11 @@ h1 {
 .close-button {
   display: none;
 }
+
+/* .HeaderProfileContainer{
+  margin-left: -290px;
+
+} */
 
 @media screen and (max-width: 768px) {
   .toggle-icon {
@@ -115,7 +129,6 @@ h1 {
     text-align: center;
     z-index: 1000;
   }
-  
   
   .close-button i {
     color: #fff;
