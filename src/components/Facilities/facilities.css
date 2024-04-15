@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
     gap: 2rem;
+    margin-left: 12px;
 
   }
 }
@@ -36,16 +37,15 @@
 
 @media(max-width:435px) {
   .facilitiescardscontainer {
-
     max-width: 1000px;
     width: 300%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
-
-    height: 110%;
-    grid-gap: 5px;
-
-
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-auto-rows: minmax(170px, auto); /* Auto rows with min height of 170px */
+    grid-gap: 15px;
+    margin-left: 100px; /* Adjust as needed */
+    margin-right: 0px; /* Adjust as needed */
+    margin-top: 15px;
   }
 
 }
@@ -70,14 +70,19 @@
 
 @media(max-width:435px) {
   .facilitiescard {
-    width: 250px;
-    margin: .3rem;
-    margin-right: 30px;
-    margin-top: 50px;
-    margin-left: 100px;
-    grid-gap: 0px;
+    width: 70%; /* Full width for smaller screens */
+    margin: 0.5rem; /* Reset margin */
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-
+    margin-top: 0px;
+  }
+  .facilitiescard:nth-last-child(1) {
+    grid-column: 1 / span 2; /* Make the last card span both columns */
+    width: calc(86% - 10px); /* Adjust the width as needed, considering the grid-gap */
+    margin: 0 5px;
+  }
+  .facilitiescard:hover {
+    box-shadow: 0 4px 1rem -4px #000;
+    transform: translateY(-3px);
   }
 }
 
@@ -122,7 +127,7 @@
   .facilitiescardcontent {
     display: flex;
     justify-content: center;
-    font-size: 10px;
+    font-size: 20px;
     font-family: 'Lato', sans-serif;
   }
 
@@ -178,7 +183,7 @@
 
 @media(max-width:435px) {
   .facilitiesbutton1 {
-    margin-top: 150px;
+    margin-top: 650px;
     align-items: center;
     margin-left: 390px;
     width: 70%;
@@ -197,7 +202,7 @@
   display: grid;
   grid-template-columns: repeat(3, 5fr);
   grid-template-rows: repeat(3, 150px);
-  grid-gap: 40px;
+  grid-gap: 60px;
   align-items: flex-start;
   padding-left: 0px;
   margin-top: 50px;
@@ -205,9 +210,9 @@
 
 @media(max-width:435px) {
   .fscolumnlist {
-    margin-top: 150px;
+    margin-top: 650px;
     padding-left: 20px;
-    margin-left: 100px;
+    margin-left: 130px;
     grid-gap: 130px;
     margin-bottom: 10px;
   }
