@@ -1,9 +1,8 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import Header from './components/common/Header'
-import Facilities from './Pages/Facilities';
-import Card from "./Pages/Facilities";
+import Rooms from "./Pages/Rooms";
+import Footer from "./components/common/Footer"
 
 export default function App() {
   return (
@@ -13,9 +12,8 @@ export default function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Use curly braces to pass element prop */}
-          <Route path="/facilities" element={<Facilities />} />
-
+          <Route path="/" element={<HomePage />} />
+          <Route path="/rooms" element={<Rooms />} />
         </Routes>
       </Router>
       {/*<Footer />*/}

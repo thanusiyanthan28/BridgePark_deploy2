@@ -5,9 +5,12 @@ import logo from "../../assets/images/HotelLogo.png";
 import Button from "./Button";
 import Card from "./Card";
 import { Row } from "antd";
+import UserProfile from "./UserProfile";
+import img from "../../assets/images/DoubleEnsuite.jpg";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleClick = () => {
     console.log("button clicked");
@@ -21,6 +24,21 @@ const Header = () => {
     setIsNavOpen(false);
   };
 
+  const handleLogin = () => {
+    setIsLoggedIn(true); // Set login status to true
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Set login status to false
+  };
+
+  const userData = {
+    name: "John Doe",
+    avatar: img,
+    bio: "Lorem ipsum dolor sit amet",
+    email: "john@example.com",
+    location: "New York",
+  };
   return (
     <div>
       <div className="hero-container">
@@ -44,24 +62,31 @@ const Header = () => {
             <Link to="/meeting-events" className="header-link">
               <h1>Meeting &amp; Events</h1>
             </Link>
-
+            <div className="headerLogoPosition">
+            <img src={logo} alt="Logo" className="headerLogo" />
+            </div>
             <div className="headerButtonContainer">
               <Button onClick={handleClick}>Book Now</Button>
             </div>
-            <div className="headerButtonContainer2">
-              <Button onClick={handleClick}>LogIn / SignUp</Button>
-            </div>
+
+            {isLoggedIn ? (
+              // If user is logged in, display user profile icon/button
+              <div className="HeaderProfileContainer">
+                <UserProfile user={userData} />
+              </div>
+            ) : (
+              // If user is not logged in, display login/signup button
+              <div className="headerButtonContainer2">
+                <Button onClick={handleLogin}>LogIn / SignUp</Button>
+              </div>
+            )}
           </nav>
-          <img src={logo} alt="Logo" className="headerLogo" />
         </header>
         <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>
         </div>
-        <Card
-          title="Card Title 2"
-          description="Description for Card 2"
-        />
+        <Card title="Card Title 2" description="Description for Card 2" />
       </div>
     </div>
   );
