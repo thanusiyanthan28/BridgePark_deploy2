@@ -57,7 +57,7 @@ const CardSlider = ({ cards }) => {
       <button className="meeting-next-btn" onClick={nextCard}>
       <FontAwesomeIcon icon={faArrowRight} />
       </button>
-   
+   {/* lksvf */}
     </div>
   );
 };
