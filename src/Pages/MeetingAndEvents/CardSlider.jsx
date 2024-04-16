@@ -51,13 +51,13 @@ const CardSlider = ({ cards }) => {
       </div>
   
     </div>
-    <button className="meeting-prev-btn" onClick={prevCard}>
+    <button className="meeting-button meeting-prev-btn" onClick={prevCard}>
     <FontAwesomeIcon icon={faArrowLeft} />
       </button>
-      <button className="meeting-next-btn" onClick={nextCard}>
+      <button className="meeting-button meeting-next-btn" onClick={nextCard}>
       <FontAwesomeIcon icon={faArrowRight} />
       </button>
-   {/* lksvf */}
+
     </div>
   );
 };
