@@ -1,0 +1,12 @@
+.RoomInformationCardImage {
+    flex: 1; 
+    max-height: 300px;
+    width: 80%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  
