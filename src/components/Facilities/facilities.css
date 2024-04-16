@@ -12,6 +12,7 @@
   margin-bottom: 20px;
   margin-top: 110px;
   position: inherit;
+ 
 }
 
 @media(max-width:435px) {
@@ -82,9 +83,10 @@
   }
   .facilitiescard:hover {
     box-shadow: 0 4px 1rem -4px #000;
-    transform: translateY(-3px);
+    transform: translateY(3px);
   }
 }
+
 
 
 .facilitiesiconcontainer {
@@ -111,7 +113,7 @@
 
 .facilitiescard:hover {
   box-shadow: 0 4px 1rem -4px #000;
-  transform: translateY(-3px);
+  transform: translateY(6px);
 }
 
 .facilitiescardcontent {
@@ -179,6 +181,10 @@
   border: none;
   margin-left: 360px;
   background-color: #618e95;
+  transition: background-color 0.3s ease;
+}
+.facilitiesbutton1:hover {
+  background-color: #618e99; /* Change to desired hover color */
 }
 
 @media(max-width:435px) {

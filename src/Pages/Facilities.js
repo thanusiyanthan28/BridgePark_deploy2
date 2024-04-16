@@ -29,7 +29,7 @@ const CardContainer = ({ cards, icons }) => (
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);
-  const [showButton, setShowButton] = useState(true);
+  const [hideButton, setHideButton] = useState(false);
 
   const cardsData = [
     { id: 1, title: 'Free WiFi' },
@@ -45,7 +45,7 @@ const Facilities = () => {
 
   const handleClick = () => {
     setShowList(true);
-    setShowButton(false);
+    setHideButton(true);
   }
 
   return (
@@ -67,13 +67,17 @@ const Facilities = () => {
       <div className="facilitiescontainer">
         <CardContainer cards={cardsData} icons={icons} />
       </div>
+    <div>
+      <div className="facilitieslistcontainer">
+        {showList && <ColumnList />}
+      </div>
 
-      {showButton && <div>
-        <button className='facilitiesbutton1' onClick={handleClick}> SEE ALL</button>
-      </div>}
-
-      {showList &&  <ColumnList />}
-     
+      {!hideButton && (
+        <div>
+          <button className='facilitiesbutton1' onClick={handleClick}> SEE ALL</button>
+        </div>
+      )}
+     </div>
     </div>
     </body>
   );
