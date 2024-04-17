@@ -2,10 +2,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useRef  } from 'react';
 import '../../css/CardSlider.css';
 
 const CardSlider = ({ cards }) => {
+
+  // Run only once when component mounts or cards change
+
+  const [currentIndex, setCurrentIndex] = useState(cards.length - 1);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming mobile width threshold is 768px
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Update isMobile state on window resize
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextCard();
@@ -13,9 +32,8 @@ const CardSlider = ({ cards }) => {
 
     return () => clearInterval(interval);
   }, []); 
-  // Run only once when component mounts or cards change
 
-  const [currentIndex, setCurrentIndex] = useState(cards.length - 1);
+  
 
   const nextCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
@@ -24,10 +42,31 @@ const CardSlider = ({ cards }) => {
   const prevCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
   };
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      nextCard();
+    }
+
+    if (touchEndX.current - touchStartX.current > 50) {
+      prevCard();
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   document.documentElement.style.setProperty('--currentIndex', currentIndex);
   return (
-    <div className='meeting-my-class'>
-      <h2>Meetings & Events </h2>
+    <div className='meeting-my-class' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+      <h2 className='.meeting-my-class-title '>Meeting & Events </h2>
     <div className="meeting-card-slider">
  
     <div className="meeting-cards-container" style={{ '--current-index': currentIndex }}>
@@ -51,12 +90,16 @@ const CardSlider = ({ cards }) => {
       </div>
   
     </div>
+    {isMobile && (
+      <>
     <button className="meeting-button meeting-prev-btn" onClick={prevCard}>
     <FontAwesomeIcon icon={faArrowLeft} />
       </button>
       <button className="meeting-button meeting-next-btn" onClick={nextCard}>
       <FontAwesomeIcon icon={faArrowRight} />
       </button>
+      </>
+      )}
 
     </div>
   );
