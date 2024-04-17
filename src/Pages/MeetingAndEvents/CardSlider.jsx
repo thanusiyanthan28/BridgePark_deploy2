@@ -10,7 +10,7 @@ const CardSlider = ({ cards }) => {
   // Run only once when component mounts or cards change
 
   const [currentIndex, setCurrentIndex] = useState(cards.length - 1);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming mobile width threshold is 768px
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768 ); // Assuming mobile width threshold is 768px
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
   useEffect(() => {
@@ -31,7 +31,7 @@ const CardSlider = ({ cards }) => {
     }, 5000); // Auto slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, []); 
+  }, ); 
 
   
 
@@ -90,7 +90,7 @@ const CardSlider = ({ cards }) => {
       </div>
   
     </div>
-    {isMobile && (
+    { !isMobile && (
       <>
     <button className="meeting-button meeting-prev-btn" onClick={prevCard}>
     <FontAwesomeIcon icon={faArrowLeft} />
@@ -100,7 +100,7 @@ const CardSlider = ({ cards }) => {
       </button>
       </>
       )}
-
+    {/* <div className='meeting-add-button'><button>Add meeting</button></div> */}
     </div>
   );
 };
