@@ -244,7 +244,32 @@ h1 {
 }
 
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
-  
+  .headerButtonContainer2 Button{
+    margin-right: -1650px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -1500px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -150px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: -10px;
+  }
+  .heading-container h1{
+    font-size: 70px;
+    margin-top: 10px;
+    line-height: 40px;
+  }
+
 }
 
 @media only screen and (min-width: 1370px) and (max-width: 1605px) {
@@ -263,6 +288,7 @@ h1 {
     justify-content: flex-start;
     padding-left: 80px;
   }
+  
 
   .header-link {
     text-decoration: none;

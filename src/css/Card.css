@@ -106,27 +106,49 @@
 
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
   .card {
-    width: auto;
-    margin: 5px auto;
-    margin-left: 120px;
+    width: 85%;
+    height:115px;
+    margin-left: 100px;
+    border-radius: 45px;
+   
   }
 
   .card-body {
-    margin-left: 2px;
+    margin-top: 0;
+    
   }
 
   .devider {
     margin-left: 0;
+    margin-top: -20px;
+    font-size: 12px;
+  }
+  .titleH1{
+    font-size: 12px;
+    align-items: center;
+    margin-top: 0px;
+  }
+  .titleH3{
+    font-size: 11px;
+    margin-top: 5px;
   }
 
   .containerCol1 {
     margin-left: 0;
+    margin-top: 0;
+    line-height: 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .devider{
+   
   }
 
   .btnPrimary {
-    margin-top: 60px;
+    margin-top: 20px;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 }
 
