@@ -1,78 +1,153 @@
 .card {
-    border: 1px solid #ccc;
-    border-radius: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    overflow: hidden;
-    width: 300px; /* Adjust width as needed */
-    background-color: white;
-    color: black;
-    width: 1600px; /* Adjust width as needed */
-    height: 180px; 
-    margin-left: 150px;
-  }
-  
-  .card-body {
-    padding: 16px;
-    text-align: left;
-    margin-left: 30px;
-  }
-  
-  .devider{
-    height: 130px;
-     background: black;
-     margin-left: -70px;
-  }
+  border: 1px solid #ccc;
+  border-radius: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 300px; 
+  background-color: white;
+  color: black;
+  width: 1600px;
+  height: 180px;
+  margin-left: 150px;
+}
 
-  .titleH1{
-    color:rgb(59, 53, 53);
-    margin-top: 10px;
-  }
+.card-body {
+  padding: 16px;
+  text-align: left;
+  margin-left: 30px;
+}
 
-  .titleH3{
-    color: rgba(71, 54, 54, 0.5);
-    margin-top: 10px;
-  }
+.devider {
+  height: 130px;
+  background: black;
+  margin-left: -70px;
+}
 
-  .containerCol1{
-    margin-left: 10px;
-  }
+.titleH1 {
+  color: rgb(59, 53, 53);
+  margin-top: 10px;
+}
 
-  .btnPrimary{
-    background-color: rgb(46, 163, 134);
-    margin-top: 50px;
-    font-size: 30px;
-    padding-bottom: 50px;
-    text-align: center;
-    display: block;
-    width: 100%;
-    justify-content: center;
+.titleH3 {
+  color: rgba(71, 54, 54, 0.5);
+  margin-top: 10px;
+}
+
+.containerCol1 {
+  margin-left: 10px;
+}
+
+.btnPrimary {
+  background-color: rgb(46, 163, 134);
+  margin-top: 50px;
+  font-size: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  justify-content: center;
 }
 
 
 
 @media screen and (max-width: 768px) {
   .card {
-      width: auto; /* Adjust width for smaller screens */
-      margin: 5px auto; /* Center the card horizontally */
-      margin-left: 0; /* Reset margin-left */
+    width: auto;
+    margin: 5px auto; 
+    margin-left: 0; 
   }
 
   .card-body {
-      margin-left: 12px; /* Reset margin-left */
+    margin-left: 12px; 
+
   }
 
-  .devider{
-      margin-left: 0; /* Reset margin-left */
+  .devider {
+    margin-left: 0; 
   }
 
-  .containerCol1{
-      margin-left: 0; /* Reset margin-left */
+  .containerCol1 {
+    margin-left: 0;
   }
 
   .btnPrimary {
-      margin-top: 20px; 
-      font-size: 20px; 
-      padding-bottom: 20px; 
+    margin-top: 20px;
+    font-size: 20px;
+    padding-bottom: 20px;
   }
-} 
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: auto;
+    margin: 5px auto;
+    margin-left: 10px;
+  }
+
+  .card-body {
+    margin-left: 12px;
+  }
+
+  .devider {
+    margin-left: 0;
+  }
+
+  .containerCol1 {
+    margin-left: 0;
+  }
+
+  .btnPrimary {
+    margin-top: 60px;
+    font-size: 20px;
+    padding-bottom: 35px;
+  }
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .card {
+    width: auto;
+    margin: 5px auto;
+    margin-left: 120px;
+  }
+
+  .card-body {
+    margin-left: 2px;
+  }
+
+  .devider {
+    margin-left: 0;
+  }
+
+  .containerCol1 {
+    margin-left: 0;
+  }
+
+  .btnPrimary {
+    margin-top: 60px;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+  .card {
+    width: 1200px;
+    margin: 5px auto;
+    margin-left: 120px;
+  }
+
+  .devider {
+    height: 130px;
+    background: black;
+    margin-left: -9px;
+  }
+}
+
+@media only screen and (min-width: 1606px) and (max-width: 1920px) {
+  
+}
+
+@media only screen and (min-width: 1921px) {
+ 
+}

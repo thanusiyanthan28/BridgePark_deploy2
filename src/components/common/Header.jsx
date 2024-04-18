@@ -51,16 +51,16 @@ const Header = () => {
               <i className="fas fa-times"></i>
             </div>
             <Link to="/" className="header-link">
-              <h1>Home</h1>
+              <h1 className="headerlink-h1-1">Home</h1>
             </Link>
             <Link to="/rooms" className="header-link">
-              <h1>Rooms</h1>
+              <h1 className="headerlink-h1-2">Rooms</h1>
             </Link>
             <Link to="/facilities" className="header-link">
-              <h1>Facilities</h1>
+              <h1 className="headerlink-h1-3">Facilities</h1>
             </Link>
             <Link to="/meeting-events" className="header-link">
-              <h1>Meeting &amp; Events</h1>
+              <h1 className="headerlink-h1-4">Meeting & Events</h1>
             </Link>
             <div className="headerLogoPosition">
             <img src={logo} alt="Logo" className="headerLogo" />

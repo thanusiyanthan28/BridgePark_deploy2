@@ -11,9 +11,9 @@ export default function HomePage() {
     <>
       <Header />
       <About />
-      <Room />
-     <Facilities />
-    <RoomInformation />
+       <Room />
+     {/* <Facilities /> */}
+
     </>
   );
 }
