@@ -16,8 +16,10 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </Router>
+      
     </div>
   );
 }
