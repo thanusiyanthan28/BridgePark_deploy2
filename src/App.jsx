@@ -17,7 +17,6 @@ export default function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

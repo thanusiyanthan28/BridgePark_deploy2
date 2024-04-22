@@ -3,19 +3,16 @@
   justify-content: center;
   align-items: center;
   height: auto;
-
 }
 
 
 .aboutTextWrapper {
   text-align: center;
   margin-top: 80px;
-  /* padding-left: 50px; */
 }
 
 .aboutH1 {
   color: black;
-  /* margin-left: 50px; */
   font-size: 50px;
   margin-top: 25px;
   font-family: "Cadmium", sans-serif;
@@ -37,35 +34,67 @@
 .aboutCouroselComponent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
   margin-top: -30px;
 }
 
 
 .carousel-container {
-  margin: 10px; /* Adjust margin between carousel components */
+  margin: 10px; 
 }
 
 @media screen and (max-width: 768px) {
   .aboutContainer {
-    height: auto; /* Adjust height for smaller screens */
+    height: auto;
   }
 
   .aboutTextWrapper {
-    margin-top: 30px; /* Adjust margin-top for smaller screens */
-    padding-left: 20px; /* Adjust padding-left for smaller screens */
+    margin-top: 30px; 
+    padding-left: 20px; 
   }
 
   .aboutH1 {
-    font-size: 30px; /* Adjust font-size for smaller screens */
-    margin-left: 20px; /* Adjust margin-left for smaller screens */
-    margin-top: 10px; /* Adjust margin-top for smaller screens */
+    font-size: 30px; 
+    margin-left: 20px; 
+    margin-top: 10px; 
   }
 
   .paragraphContainer {
-    width: 90%; /* Adjust width for smaller screens */
-    margin-top: 10px; /* Adjust margin-top for smaller screens */
-    text-align: center; /* Center text on smaller screens */
+    width: 90%;
+    margin-top: 10px; 
+    text-align: center; 
   }
 
 }
+
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+    .aboutContainer {
+      width: auto;
+      height: auto;
+    }
+    .carousel-container {
+      margin: 5px; 
+    }
+
+    .aboutH1 {
+      color: black;
+      font-size: 50px;
+      margin-top: 25px;
+      font-family: "Cadmium", sans-serif;
+      font-weight: lighter;
+      justify-content: center;
+    }
+    
+    .paragraphContainer {
+      width: 80%;
+      padding: 0 20px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 2;
+      font-family: "Cadmium", sans-serif;
+      justify-content: center;
+    }
+  }
+

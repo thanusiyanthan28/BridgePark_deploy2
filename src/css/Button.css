@@ -1,34 +1,80 @@
+/* Default button styles */
 .button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 10px 20px;
-  }
-  
-  .button:hover {
-    background-color: #ffffff;
-  }
-  
-.headerButtonContainer{
-    margin-top: 50px;
-    margin-left: 500px;
-}
-.headerButtonContainer2{
-    margin-top: 50px;
-    margin-left: 50px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px 14px;
 }
 
+/* Hover styles */
+.button:hover {
+  background-color: #ffffff;
+}
+
+/* Default header button container styles */
+.headerButtonContainer {
+  margin-top: 38px;
+  margin-left: 500px; /* Default margin for large screens */
+}
+
+.headerButtonContainer2 {
+  margin-top: 38px;
+  margin-left: 50px; /* Default margin for all screens */
+}
+
+/* Media queries */
+
+/* Small screens (up to 768px) */
 @media screen and (max-width: 768px) {
   .headerButtonContainer,
   .headerButtonContainer2 {
     margin-left: -20px; 
     margin-top: 20px; 
-    
   }
-  .headerButtonContainer{
+  .headerButtonContainer {
     margin-top: 140px; 
+  }
+}
+
+/* Medium screens (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .headerButtonContainer {
+    margin-left: -10px; 
+  }
+  .headerButtonContainer2 {
+    margin-left: 50px; 
+  }
+}
+
+/* Large screens (1025px to 1366px) */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  .headerButtonContainer {
+    margin-left: -400px; 
+  }
+  .headerButtonContainer2 {
+    margin-left: 50px;
+  }
+}
+
+/* Extra large screens (1367px to 1605px) */
+@media only screen and (min-width: 1367px) and (max-width: 1605px) {
+  .headerButtonContainer {
+    margin-left: 250px;
+  }
+  .headerButtonContainer2 {
+    margin-left: 50px; 
+  }
+}
+
+/* Ultra large screens (1606px to 1920px) */
+@media only screen and (min-width: 1606px) and (max-width: 1920px) {
+  .headerButtonContainer {
+    margin-left: 500px; 
+  }
+  .headerButtonContainer2 {
+    margin-left: 50px; 
   }
 }
