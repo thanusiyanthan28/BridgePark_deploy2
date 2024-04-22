@@ -40,7 +40,7 @@ const Header = () => {
     location: "New York",
   };
   return (
-    <div>
+    <div className="head-main">
       <div className="hero-container">
         <header className="header-container">
           <div className="toggle-icon" onClick={toggleNav}>

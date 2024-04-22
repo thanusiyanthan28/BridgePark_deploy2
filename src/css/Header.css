@@ -8,6 +8,8 @@
   text-align: center;
 }
 
+
+
 .header-container {
   display: flex;
   justify-content: flex-start;
@@ -157,3 +159,7 @@ h1 {
     /* Add desktop-specific styles */
   }
 }
+
+  
+
+
