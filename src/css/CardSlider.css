@@ -286,3 +286,42 @@ margin-top: 15%;
    
   }
 }
+@media (min-width: 1200px){
+    .meeting-cards-container {
+    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+    margin-left:45.0%;
+  
+  }
+}
+@media (min-width: 1440px){
+  .meeting-cards-container {
+    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+    margin-left:38.5%;
+  
+  }
+}
+/* 1924px */
+@media (min-width: 1924px) {
+  .meeting-cards-container {
+    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+    margin-left:38.5%;
+  
+  }
+  @media (min-width: 2560px){
+    .meeting-cards-container {
+      transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+      margin-left:41.5%;
+    
+    }
+    .meeting-card {
+    }
+  }
+}
+@media (min-width: 3840px){
+  .meeting-cards-container {
+    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+    margin-left:44%;
+  
+  }
+}
+
