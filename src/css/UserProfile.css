@@ -68,3 +68,17 @@
     border-top: 1px solid #ccc; /* Add border */
     z-index: -1; /* Ensure the arrow is behind other elements */
 }
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+    .user-profile {
+        position: absolute;
+        margin-left: 850px;
+        
+    }  
+    .profile-picture {
+        width: 50px; /* Adjust image width as needed */
+        height: 50px;
+        margin-top: 35px;
+
+    }
+    
+}

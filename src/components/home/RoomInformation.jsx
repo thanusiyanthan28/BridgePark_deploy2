@@ -1,8 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
+import img1 from "../../assets/images/QuadEnsuitedoubleandtwosinglebeds.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
-import Button from "../common/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBed, faRestroom } from "@fortawesome/free-solid-svg-icons";
 
 const RoomInformation = () => {
   const handleSectionClick = (sectionName) => {
@@ -73,6 +74,11 @@ const RoomInformation = () => {
           </div>
         </Col>
         <Col span={8}>gh</Col>
+      </Row>
+      <Row>
+        <Col><FontAwesomeIcon icon={faBed} /></Col>
+        <Col><FontAwesomeIcon icon={faRestroom} /></Col>
+        
       </Row>
     </div>
   );
