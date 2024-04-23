@@ -300,8 +300,15 @@ margin-top: 15%;
   
   }
 }
+@media (min-width: 1366px){
+  .meeting-cards-container {
+    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
+    margin-left: 40%;
+  
+  }
+}
 /* 1924px */
-@media (min-width: 1924px) {
+@media (min-width: 1920px) {
   .meeting-cards-container {
     transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
     margin-left:38.5%;
