@@ -14,6 +14,7 @@ const HotelRoomCard = ({
   onViewMoreClick,
 }) => {
   return (
+    // <div className="main-hotelRoomCardContainer">
     <div className="hotelRoomCardContainer">
       <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
       <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
@@ -70,6 +71,7 @@ const HotelRoomCard = ({
         </Row>
       </div>
     </div>
+    // </div>
   );
 };
 
