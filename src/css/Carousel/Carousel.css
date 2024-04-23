@@ -1,7 +1,7 @@
 .carousel-container {
-    width: 300px; /* Set a fixed width for the carousel container */
-    height: 300px; /* Set a fixed height for the carousel container */
-    margin: 0 auto; /* Center the carousel horizontally */
+    width: 300px; 
+    height: 300px;
+    margin: 0 auto; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -9,13 +9,13 @@
   }
   
   .carousel-slide img {
-    width: 300px; /* Set image width to 100% of parent container */
-    height: 300px; /* Set image height to 100% of parent container */
+    width: 300px; 
+    height: 300px; 
   }
   
   .carousel-slide {
     text-align: center; 
-    margin-top: 50px; /* Adjust margin-top to center the images vertically */
+    margin-top: 50px; 
   }
   
   /* Style for navigation dots */
@@ -27,40 +27,40 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
   }
   
   .ant-carousel .slick-dots li.slick-active button {
-    background-color: #fff; /* Active dot color */
+    background-color: #fff;
   }
   
   @media screen and (max-width: 768px) {
     .carousel-container {
-      width: 80%; /* Set width to a percentage of the viewport width */
-      max-width: 300px; /* Set a maximum width */
-      height: auto; /* Let the height adjust according to content */
-      margin: 0 auto; /* Center the carousel horizontally */
-      margin-top: 20px; /* Adjust top margin as needed */
+      width: 80%; 
+      max-width: 300px; 
+      height: auto; 
+      margin: 0 auto; 
+      margin-top: 20px;
     }
   
     .carousel-slide img {
-      width: 100%; /* Set image width to 100% of parent container */
-      height: auto; /* Let the height adjust proportionally */
+      width: 100%; 
+      height: auto; 
     }
   
     .carousel-slide {
-      margin-top: 30px; /* Adjust margin-top for better alignment */
+      margin-top: 30px; 
     }
   
     /* Styles for navigation dots */
     .ant-carousel .slick-dots li {
-      margin: 0 6px; /* Adjust margin for navigation dots */
+      margin: 0 6px; 
     }
   
     .ant-carousel .slick-dots li button {
-      width: 8px; /* Adjust dot size */
-      height: 8px; /* Adjust dot size */
+      width: 8px; 
+      height: 8px; 
     }
   }
   

@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
 import img1 from "../../assets/images/Loungebar 1.jpg";
-import { Row, Col } from "antd";
+import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
+import RoomInformation from "./RoomInformation";
 
 const Room = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   const handleViewMoreClick = () => {
-    console.log("View More clicked");
+    setIsModalVisible(true);
   };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <div>
       <div className="aboutContainer">
@@ -106,6 +114,14 @@ const Room = () => {
           />{" "}
         </Col>
       </Row>
+      <Modal
+        visible={isModalVisible}
+        onCancel={handleCancel}
+        footer={null}
+        width="80%"
+      >
+        <RoomInformation />
+      </Modal>
     </div>
   );
 };
