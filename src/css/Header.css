@@ -8,6 +8,8 @@
   text-align: center;
 }
 
+
+
 .header-container {
   display: flex;
   justify-content: flex-start;
@@ -56,7 +58,7 @@ h1 {
   /* align-items: center;
   justify-content: center; */
   flex-wrap: wrap;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 .heading {
@@ -151,194 +153,178 @@ h1 {
 }
 
 /* For 1024 Resolution */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../assets//images//HotelFront.jpg");
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 80px;
-  }
-
-  .header-link {
-    text-decoration: none;
-    color: inherit;
-    font-size: 8px;
-    margin-left: -26px;
-  }
-
-  .header-link:hover {
-    text-decoration: none;
-  }
-
-  .hero-container p {
-    font-size: 1.5rem;
-  }
-
-  .headerlink-h1-1 {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .headerButtonContainer2 Button{
+    margin-right: -280px;
     font-size: 12px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  } 
-  .headerlink-h1-2 {
+  }
+  .headerButtonContainer Button{
+    margin-right: -100px;
     font-size: 12px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  } 
-  .headerlink-h1-3 {
-    font-size: 12px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  
-  } 
-  .headerlink-h1-4 {
-    font-size: 12px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-    white-space: nowrap
-  } 
-
-  .headerLogo {
-    width: 100px;
-    height: auto;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -270px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 13px;
     margin-top: 30px;
-    margin-left: -330px;
+    margin-left: -5px;
+   
   }
-
-  .headerLogoPosition {
-    margin-left: 260px;
+  .heading-container h1{
+    font-size: 60px;
+    margin-top: 0.5px;
+    line-height: 40px;
   }
-
-
-  .heading-container {
-    font-size: 50px;
-    margin-top: 100px;
-    flex-wrap: wrap;
-    margin-left: 50px;
-  }
-
-  .heading {
-    font-size: 100px;
-  }
-
-  .heading2 {
-    margin-top: -80px;
-    font-size: 100px;
-  }
-
-  .close-button {
-    display: none;
+  .nav-links{
+    margin-left: -20px;
   }
 }
-
-@media only screen and (min-width: 1030px) and (max-width: 1366px) {
-  
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .headerButtonContainer2 Button{
+     margin-right: -1430px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -1250px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -190px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: -5px;
+   
+  }
+  .heading-container h1{
+    font-size: 60px;
+    margin-top: 0.5px;
+    line-height: 40px;
+  }
+  .nav-links{
+    margin-left: -20px;
+  }
 }
-
-@media only screen and (min-width: 1370px) and (max-width: 1605px) {
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../assets//images//HotelFront.jpg");
-    background-size: cover;
-    color: #fff;
-    text-align: center;
+@media only screen and (min-width: 1201px) and (max-width: 1366px) {
+  .headerButtonContainer2 Button{
+    margin-right: -1650px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -1500px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -150px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: -10px;
+  }
+  .heading-container h1{
+    font-size: 70px;
+    margin-top: 10px;
+    line-height: 40px;
+  }
+  .heading-container{
+  width: 100%;
   }
 
-  .header-container {
+
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1440px) {
+ .header-container {
     display: flex;
     justify-content: flex-start;
     padding-left: 80px;
   }
-
   .header-link {
     text-decoration: none;
     color: inherit;
 
     margin-left: -18px;
   }
-
-  .header-link:hover {
-    text-decoration: none;
-  }
-
   .hero-container p {
     font-size: 1.5rem;
   }
 
-  .headerlink-h1-1 {
-    font-size: 18px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  } 
-  .headerlink-h1-2 {
-    font-size: 18px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  } 
-  .headerlink-h1-3 {
-    font-size: 18px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-  
-  } 
-  .headerlink-h1-4 {
-    font-size: 18px;
-    margin-top: 50px;
-    margin-right: 50px;
-    color: #fff;
-    white-space: nowrap
-  } 
-
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: 5px;
+  }
   .headerLogo {
     width: 100px;
-    height: auto;
-    margin-top: 30px;
-    margin-left: -130px;
+    margin-top: 50px;
+    margin-left: -90px;
   }
 
-  .headerLogoPosition {
-    margin-left: 260px;
+  .heading-container h1{
+    font-size: 70px;
+    margin-top: -50px;
+    line-height: 80px;
+    margin-bottom: 50px;
   }
 
-  .heading-container {
-    font-size: 50px;
-    margin-top: 100px;
-    flex-wrap: wrap;
-    margin-left: 50px;
+  .headerButtonContainer2 Button{
+    margin-right: -550px;
+    font-size: 12px;
   }
-
-  .heading {
-    font-size: 100px;
-  }
-
-  .heading2 {
-    margin-top: -80px;
-    font-size: 100px;
-  }
-
-  .close-button {
-    display: none;
+  .headerButtonContainer Button{
+    margin-right: -400px;
+    font-size: 12px;
   }
 }
+@media only screen and (min-width: 1446px) and (max-width: 1600px) {
+  .headerButtonContainer2 Button{
+    margin-right: -800px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -630px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -55px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 17px;
+    margin-top: 33px;
+    margin-left: -10px;
+  }
+  .heading-container h1{
+    font-size: 90px;
+    margin-top: 10px;
+    line-height: 45px;
+  }
 
-@media only screen and (min-width: 1606px) and (max-width: 1920px) {
+}
+
+
+@media only screen and (min-width: 1606px) and (max-width: 1923px) {
   .hero-container {
     display: flex;
     flex-direction: column;
@@ -389,7 +375,7 @@ h1 {
 
   .heading-container {
     font-size: 50px;
-    margin-top: 100px;
+    margin-top: 40px;
     flex-wrap: wrap;
     margin-left: 50px;
   }
@@ -401,9 +387,14 @@ h1 {
   .heading2 {
     margin-top: -80px;
     font-size: 100px;
+    margin-bottom: -5px;
   }
 
   .close-button {
     display: none;
   }
 }
+
+  
+
+

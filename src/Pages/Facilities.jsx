@@ -1,35 +1,12 @@
 import React, { useState } from 'react';
 import '../components/Facilities/facilities.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ColumnList from '../components/Facilities/facilitiesList'
-import { faWifi, faParking, faGlassMartiniAlt, faUtensils, faTv, faBed, faSmokingBan, faUsers } from '@fortawesome/free-solid-svg-icons';
-
-const Card = ({ title, icon }) => (
-  <div className="facilitiescard">
-    <div className='facilitiesiconcontainer'>
-      <FontAwesomeIcon icon={icon} size="4x" color="#618e95" style={{ imageRendering: 'pixelated' }} />
-    </div>
-    <div className="facilitiescardcontent">
-      <h2>{title}</h2>
-    </div>
-  </div>
-);
-
-const CardContainer = ({ cards, icons }) => (
-  <div className='facilitiescardscontainer'>
-    {cards.map((card, index) => (
-      <Card
-        key={card.id}
-        title={card.title}
-        icon={icons[index]}
-      />
-    ))}
-  </div>
-);
+import FacilitiesIconsContainer from '../components/Facilities/facilitiesiconsContainer';
+import ColumnList from '../components/Facilities/facilitiesList';
+import { faWifi, faParking, faGlassMartiniAlt, faCircleChevronDown, faTv, faBed, faSmokingBan, faUsers, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);
-  const [showButton, setShowButton] = useState(true);
 
   const cardsData = [
     { id: 1, title: 'Free WiFi' },
@@ -41,40 +18,46 @@ const Facilities = () => {
     { id: 7, title: 'Bar' },
   ];
 
-  const icons = [faWifi, faParking, faUsers, faTv, faBed, faSmokingBan, faGlassMartiniAlt];
+  const icons = [faWifi, faParking, faUsers, faBed, faUtensils, faSmokingBan, faGlassMartiniAlt];
 
-  const handleClick = () => {
-    setShowList(true);
-    setShowButton(false);
-  }
+  const handleToggleList = () => {
+    setShowList(!showList);
+  };
+
+  const handleHideList = () => {
+    setShowList(false);
+  };
 
   return (
     <body className='facilitiesbody'>
-    <div className='facilitiesmain'>
-      <div>
-        <h1 className='facilitieshead'>FACILITIES</h1>
+      <div className='facilitiesmain'>
+        <div>
+          <h1 className='facilitieshead'>FACILITIES</h1>
+        </div>
+
+        <div>
+          <p className='facilitiespara'>
+          Originally a Grade ii listed building, Bridge Park Hotel is the ideal
+           place to stay whether you are visiting Wembley or simply looking for 
+          accommodation to explore the sites of London. 
+          Just a short distance from Wembley Stadium.
+          </p>
+        </div>
+
+        <div className="facilitiescontainer">
+          <FacilitiesIconsContainer cards={cardsData} />
+        </div>
+        <div>
+          {!showList && <button className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
+          {showList && (
+            <button className='facilitieshidebutton' onClick={handleHideList}>
+              <FontAwesomeIcon icon={faCircleChevronDown} size='4x' />
+              <span>Hide All Ammenities</span>
+            </button>
+          )}
+        </div>
+        {showList && <ColumnList />}
       </div>
-
-      <div>
-        <p className='facilitiespara'>
-          Notice of a bid advertisement shall be published in at
-          least one local newspaper and in one trade publication a
-          t least 30 days in advance of sale. If applicable, the notice must identify t
-          he reservation within which the tracts to be leased are found.
-        </p>
-      </div>
-
-      <div className="facilitiescontainer">
-        <CardContainer cards={cardsData} icons={icons} />
-      </div>
-
-      {showButton && <div>
-        <button className='facilitiesbutton1' onClick={handleClick}> SEE ALL</button>
-      </div>}
-
-      {showList &&  <ColumnList />}
-     
-    </div>
     </body>
   );
 };
