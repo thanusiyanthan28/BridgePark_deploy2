@@ -1,7 +1,7 @@
 /* Base styles */
 .facilitiesbody {
   background: #fffff9;
-  min-height: 60vh;
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,6 @@
   width: 90%;
   margin-bottom: 20px;
   margin-top: 110px;
-  position: inherit;
  
 }
 
@@ -70,7 +69,7 @@
   font-size: 50px;
   font-family: 'Merriweather', serif;
   margin-left: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
   
 }
 
@@ -101,7 +100,7 @@
 
 .facilitieshidebutton {
   display: inline-block;
-  margin-left: 460px;
+  margin-left: 435px;
   border: none;
   padding: 20px;
   background-color: #fffff9;
