@@ -8,6 +8,8 @@
   text-align: center;
 }
 
+
+
 .header-container {
   display: flex;
   justify-content: flex-start;
@@ -38,10 +40,9 @@ h1 {
   width: 100px;
   height: auto;
   margin-top: 30px;
-
 }
 
-.headerLogoPosition{
+.headerLogoPosition {
   margin-left: 260px;
 }
 
@@ -57,7 +58,7 @@ h1 {
   /* align-items: center;
   justify-content: center; */
   flex-wrap: wrap;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 .heading {
@@ -73,11 +74,6 @@ h1 {
   display: none;
 }
 
-/* .HeaderProfileContainer{
-  margin-left: -290px;
-
-} */
-
 @media screen and (max-width: 768px) {
   .toggle-icon {
     display: block;
@@ -89,26 +85,26 @@ h1 {
   .nav-links {
     display: none;
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 80%; 
-    height: 100%; 
+    width: 80%;
+    height: 100%;
     background-color: #333;
-    padding-top: 80px; 
-    transition: transform 0.3s ease-in-out; 
-    z-index: 999; 
-    overflow-y: auto; 
+    padding-top: 80px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
     flex-direction: column;
     margin-top: 0px;
-    justify-content: top; 
+    justify-content: top;
     align-items: center;
   }
   .nav-links > * {
-    margin-top: -20px; 
-    margin-left: 40px; 
+    margin-top: -20px;
+    margin-left: 40px;
   }
   .nav-links.open {
-    display: flex; 
+    display: flex;
   }
 
   .headerLogo {
@@ -123,37 +119,282 @@ h1 {
   .close-button {
     display: block;
     position: absolute;
-    top: 80%; 
-    right: 52%; 
+    top: 80%;
+    right: 52%;
     cursor: pointer;
     text-align: center;
     z-index: 1000;
   }
-  
+
   .close-button i {
     color: #fff;
     font-size: 24px;
   }
-  
+
   .close-button:hover i {
-    color: #ccc; 
+    color: #ccc;
   }
 
   .heading-container {
     margin-top: 10px;
     margin-left: 20px;
   }
-  
 }
 
 /* Styles for desktop view */
 @media screen and (min-width: 769px) {
   .toggle-icon {
-    display: none; /* Hide the toggle icon on desktop view */
+    display: none; 
   }
 
   .nav-links {
-    display: flex; /* Ensure the navigation menu is always visible on desktop view */
-    /* Add desktop-specific styles */
+    display: flex; 
   }
 }
+
+/* For 1024 Resolution */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .headerButtonContainer2 Button{
+    margin-right: -280px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -100px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -270px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: -5px;
+   
+  }
+  .heading-container h1{
+    font-size: 60px;
+    margin-top: 0.5px;
+    line-height: 40px;
+  }
+  .nav-links{
+    margin-left: -20px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .headerButtonContainer2 Button{
+     margin-right: -1430px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -1250px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -190px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: -5px;
+   
+  }
+  .heading-container h1{
+    font-size: 60px;
+    margin-top: 0.5px;
+    line-height: 40px;
+  }
+  .nav-links{
+    margin-left: -20px;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1366px) {
+  .headerButtonContainer2 Button{
+    margin-right: -1650px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -1500px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -150px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: -10px;
+  }
+  .heading-container h1{
+    font-size: 70px;
+    margin-top: 10px;
+    line-height: 40px;
+  }
+  .heading-container{
+  width: 100%;
+  }
+
+
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1440px) {
+ .header-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 80px;
+  }
+  .header-link {
+    text-decoration: none;
+    color: inherit;
+
+    margin-left: -18px;
+  }
+  .hero-container p {
+    font-size: 1.5rem;
+  }
+
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: 5px;
+  }
+  .headerLogo {
+    width: 100px;
+    margin-top: 50px;
+    margin-left: -90px;
+  }
+
+  .heading-container h1{
+    font-size: 70px;
+    margin-top: -50px;
+    line-height: 80px;
+    margin-bottom: 50px;
+  }
+
+  .headerButtonContainer2 Button{
+    margin-right: -550px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -400px;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1446px) and (max-width: 1600px) {
+  .headerButtonContainer2 Button{
+    margin-right: -800px;
+    font-size: 12px;
+  }
+  .headerButtonContainer Button{
+    margin-right: -630px;
+    font-size: 12px;
+  }
+  .headerLogoPosition .headerLogo{
+    position: absolute;
+    margin-left: -55px;
+  }
+  .headerlink-h1-1,
+  .headerlink-h1-2,
+  .headerlink-h1-3,
+  .headerlink-h1-4{
+    font-size: 17px;
+    margin-top: 33px;
+    margin-left: -10px;
+  }
+  .heading-container h1{
+    font-size: 90px;
+    margin-top: 10px;
+    line-height: 45px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1606px) and (max-width: 1923px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../assets//images//HotelFront.jpg");
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 80px;
+  }
+
+  .header-link {
+    text-decoration: none;
+    color: inherit;
+   
+  }
+
+  .header-link:hover {
+    text-decoration: none;
+  }
+
+  .hero-container p {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 50px;
+    color: #fff;
+  }
+
+  .headerLogo {
+    width: 100px;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .headerLogoPosition {
+    margin-left: 260px;
+  }
+
+
+  .heading-container {
+    font-size: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+
+  .heading {
+    font-size: 100px;
+  }
+
+  .heading2 {
+    margin-top: -80px;
+    font-size: 100px;
+    margin-bottom: -5px;
+  }
+
+  .close-button {
+    display: none;
+  }
+}
+
+  
+
+

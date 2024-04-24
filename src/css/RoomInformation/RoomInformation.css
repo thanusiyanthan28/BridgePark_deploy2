@@ -1,0 +1,64 @@
+.RoomInformationCardImage {
+  flex: 1;
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.RoomInformation-section {
+
+  font-size: 12px;
+  font-weight: 50;
+  position: relative;
+  padding-bottom: 1px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.RoomInformation-section::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  right: -10px;
+  width: 1px;
+  background-color: black;
+  transform: translateY(-50%);
+  margin-top: 15px;
+}
+
+.RoomInformation-section-PriceList {
+  margin-left: 720px;
+  font-size: 12px;
+  margin-top: -12px;
+}
+
+.RoomInformation-section-PriceList-2 {
+  margin-top: -15px;
+  font-size: 10px;
+}
+
+.RoomInformation-section-All {
+  border-bottom: 1px solid gray;
+}
+
+.RoomInformation-section-Book {
+  font-size: 26px;
+  color: white;
+  background-color: #0084d1;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.RoomInformation-section-Book-Container {
+  margin-top: -10px;
+}
