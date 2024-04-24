@@ -1,11 +1,12 @@
 /* Base styles */
 .facilitiesbody {
   background: #fffff9;
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
 
 .facilitiescontainer {
@@ -69,6 +70,8 @@
   font-size: 50px;
   font-family: 'Merriweather', serif;
   margin-left: 25px;
+  margin-top: 10px;
+  
 }
 
 .facilitiespara {
@@ -90,6 +93,7 @@
   margin-left: 425px;
   background-color: #618e95;
   transition: background-color 0.3s ease;
+  margin-bottom: 12px;
 }
 .facilitiesbutton1:hover {
   background-color: #618e99; /* Change to desired hover color */
@@ -318,15 +322,15 @@
 
 @media only screen and (min-width:769px) and (max-width:1024px) {
   .facilitiescontainer {
-    width: 50%;
+    width: 45%;
     margin-bottom: 20px;
     margin-top: 110px;
     position: inherit;
-    margin-left: 440px;
+    margin-left: 320px;
   }
 
   .facilitiesbutton1 {
-    margin-left: 795px;
+    margin-left: 585px;
   }
 
   .facilitiespara {
@@ -337,24 +341,24 @@
     font-family: 'Lato', sans-serif;
     position: absolute;
     margin-bottom: 50px;
-    margin-right: 10px;
-    margin-left: 470px;
+    margin-right: 50px;
+    margin-left: 210px;
 
   }
 
   .facilitieshidebutton {
-    margin-left: 750px;
+    margin-left: 570px;
   }
 
   .fscolumnlist {
-    grid-gap: -15px;
+    grid-gap: 5px;
     font-size: 11px;
-    margin-left: 350px;
+    margin-left: 200px;
     margin-bottom: -150px;
   }
 
   .facilitieshead {
-    margin-left: 250px;
+    margin-left: 50px;
   }
 
 }
