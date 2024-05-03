@@ -10,18 +10,17 @@ import Facilities from "./Pages/Facilities";
 export default function App() {
   return (
     <div>
-
-      
-
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
         <Footer />
       </Router>
+      
     </div>
   );
 }
