@@ -35,6 +35,7 @@ const hotelRoomTypeTypeCard = ({
                   {buttonText}
                 </button>
               </Link>
+              
             </Col>
           </Row>
         </div>
