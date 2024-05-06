@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "antd";
 import "../../css/HotelRoomTypeCard.css";
 import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const hotelRoomTypeTypeCard = ({
   imageSource,
@@ -30,12 +31,13 @@ const hotelRoomTypeTypeCard = ({
 
                 <p>{price} Per Nights</p>
               </div>
-              <Link to="/BasicRoom">
+              
+
+              <Link to="/EnsuiteRoom">
                 <button className="hotelRoomTypeCardButton">
                   {buttonText}
                 </button>
               </Link>
-              
             </Col>
           </Row>
         </div>
