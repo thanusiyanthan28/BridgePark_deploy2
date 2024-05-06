@@ -14,14 +14,14 @@ const ColumnList = () => {
         <ul>
           <li>Toilet Paper </li>
           <li>Towels</li>
-          <li>Towels/sheets</li>
+          <li>Towels/Sheets (Extra Free)</li>
           <li>Hair Dryer</li>
         </ul>
 
         <h2 className='fscolumnh2'><FaBed /> Bedroom</h2>
         <ul>
           <li>Linen</li>
-          <li>List item 2</li>
+          <li>Wardrobe or Closet</li>
         </ul>
         <h2 className='fscolumnh2'><FaTree /> Outdoors</h2>
         <ul>
@@ -35,7 +35,7 @@ const ColumnList = () => {
         </ul>
         <h2 className='fscolumnh2'><FaFootballBall /> Activities</h2>
         <ul>
-          <li>Live Sports Events</li>
+          <li>Live Sport Events (Broadcast)</li>
         </ul>
         <h2 className='fscolumnh2'><FaCouch />Livining Area</h2>
         <ul>
@@ -43,7 +43,7 @@ const ColumnList = () => {
         </ul>
         <h2 className='fscolumnh2'><FaTv />Media & Technology</h2>
         <ul>
-          <li>Flat Screen TV</li>
+          <li>Flat-Screen TV</li>
           <li>Telephone</li>
           <li>TV</li>
         </ul>
@@ -52,9 +52,9 @@ const ColumnList = () => {
         <h2 className='fscolumnh2'><FaWineGlassAlt /> Food & Drink</h2>
         <ul>
           <li>Coffee house in site</li>
-          <li>Wines</li>
+          <li>Wine/Champagne (Additional Charge)</li>
           <li>Kid-friendly buffet</li>
-          <li>Kid Meals</li>
+          <li>Kid Meals(Additional Charge)</li>
           <li>Snack bar</li>
           <li>Bar</li>
           <li>Restaurant</li>
@@ -65,7 +65,8 @@ const ColumnList = () => {
         </ul>
         <h2 className='fscolumnh2'><FaParking /> Parking</h2>
         <ul>
-          <li>Free Public parking</li>
+          <li>Free Public parking is possible on site<br></br>
+              (Reservation is not needed)</li>
         </ul>
         <h2 className='fscolumnh2'><FaGlobe/> Services</h2>
         <ul>
@@ -73,20 +74,20 @@ const ColumnList = () => {
           <li>Concierge Service</li>
           <li>Lagguage Storage</li>
           <li>Wake-up service</li>
-          <li>Fax/Photocopying</li>
+          <li>Fax/Photocopying (Additional Charge)</li>
           <li>Express check-in/check-out</li>
-          <li>24 houres fruit desk</li>
-          <li>Room Services</li>
+          <li>24 hours front desk</li>
+          <li>Room Service</li>
         </ul>
         <h2 className='fscolumnh2'><FaHandHoldingHeart /> Reception Services</h2>
         <ul>
-          <li>List item 1</li>
+          <li>Invoice Provided</li>
         </ul>
       </div>
       <div className="fscolumn">
         <h2 className='fscolumnh2'><FaUserShield /> Safety & Security</h2>
         <ul>
-          <li>Fire Exiting</li>
+          <li>Fire Extinguishers</li>
           <li>CCTV outside property</li>
           <li>CCTV in common areas</li>
           <li>smoke alarms</li>
@@ -95,12 +96,13 @@ const ColumnList = () => {
         </ul>
         <h2 className='fscolumnh2'><FaHome /> General</h2>
         <ul>
-          <li>Designated working area</li>
-          <li>Non-</li>
-          <li>List item 3</li>
-          <li>List item 1</li>
-          <li>List item 2</li>
-          <li>List item 3</li>
+          <li>Designated smoking area</li>
+          <li>Non-smoking throughout</li>
+          <li>Heating</li>
+          <li> Carpeted</li>
+          <li>Family Rooms</li>
+          <li>Ironing Facilities</li>
+          <li>Non smoking rooms</li>
         </ul>
         <h2 className='fscolumnh2'><FaGlobe /> Languages spoken</h2>
         <ul>

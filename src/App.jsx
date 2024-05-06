@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Rooms from "./Pages/Rooms";
 import Footer from "./components/common/Footer"
+import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
+
 import Facilities from "./Pages/Facilities";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
@@ -16,7 +18,9 @@ export default function App() {
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
         </Routes>
+        <Footer />
       </Router>
+      
     </div>
   );
 }

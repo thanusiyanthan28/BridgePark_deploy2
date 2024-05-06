@@ -8,6 +8,8 @@
   text-align: center;
 }
 
+
+
 .header-container {
   display: flex;
   justify-content: flex-start;
@@ -38,6 +40,7 @@ h1 {
   width: 100px;
   height: auto;
   margin-top: 30px;
+
 }
 
 .headerLogoPosition {
@@ -71,6 +74,11 @@ h1 {
 .close-button {
   display: none;
 }
+
+/* .HeaderProfileContainer{
+  margin-left: -290px;
+
+} */
 
 @media screen and (max-width: 768px) {
   .toggle-icon {
@@ -123,7 +131,6 @@ h1 {
     text-align: center;
     z-index: 1000;
   }
-
   .close-button i {
     color: #fff;
     font-size: 24px;
@@ -392,3 +399,7 @@ h1 {
     display: none;
   }
 }
+
+  
+
+

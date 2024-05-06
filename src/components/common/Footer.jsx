@@ -25,9 +25,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-quick-links">       
-        <div className='quick-menu'>
+        <div className='footer-quick-menu'>
           <p><b>Quick Links</b></p>
-        <ul className="quick-links">
+          <ul className="quick-links">
           <li><a href="#rooms"> <span className="quick-link-label">Rooms</span></a></li>
           <li><a href="#group booking"> <span className="quick-link-label">Group booking</span></a></li>
           <li><a href="#booking policy"> <span className="quick-link-label">Booking Policy</span></a></li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         </div>
         
-     <div className='copyright'> <p>Copyright &copy; 2023 Bridge Park Hotel. All Right Reserved </p></div>
+     <div className='footer-copyright'> <p>Copyright &copy; 2023 Bridge Park Hotel. All Right Reserved</p></div>
     </footer>
   
   );
