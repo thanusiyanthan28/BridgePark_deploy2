@@ -82,6 +82,15 @@
   margin-left: 10px;
 }
 
+.facilitieshidebutton2 {
+  display: inline-block;
+  margin-left: 466px;
+  border: none;
+  padding: 20px;
+  background-color: #fffff9;
+  color: #618e95;
+}
+
 @media (max-width: 440px) {
   .RoomInformation-section {
     font-size: 15px;

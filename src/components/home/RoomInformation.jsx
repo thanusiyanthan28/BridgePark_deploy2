@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
+import "../Facilities/facilities.css"
 import Button from "../common/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -145,14 +146,14 @@ const RoomInformation = () => {
     <FacilitiesIconsContainer cards={cardsData} cardStyle={{ width: '710px', height: '150px', margin: '10px', marginLeft: '150px' }} />
   </div>
   <div>
-    {!showList && <button className='facilitieshidebutton' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='4x' /></button>}
+    {!showList && <button className='facilitieshidebutton2' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
     {showList && (
-      <button className='facilitieshidebutton' onClick={handleHideList}>
-        <FontAwesomeIcon icon={faCircleChevronUp} size='4x' />
+      <button className='facilitieshidebutton2' onClick={handleHideList}>
+        <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
       </button>
     )}
   </div>
-  {showList && <ColumnList />}
+  {showList && <ColumnList forRoomInfoPage={true}/>}
 </div>
 
 
