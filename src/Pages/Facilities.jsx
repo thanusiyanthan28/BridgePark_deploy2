@@ -3,7 +3,7 @@ import '../components/Facilities/facilities.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FacilitiesIconsContainer from '../components/Facilities/facilitiesiconsContainer';
 import ColumnList from '../components/Facilities/facilitiesList';
-import { faWifi, faParking, faGlassMartiniAlt, faCircleChevronDown, faTv, faBed, faSmokingBan, faUsers, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faWifi, faParking, faGlassMartiniAlt, faCircleChevronUp, faTv, faBed, faSmokingBan, faUsers, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);
@@ -51,7 +51,7 @@ const Facilities = () => {
           {!showList && <button className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
           {showList && (
             <button className='facilitieshidebutton' onClick={handleHideList}>
-              <FontAwesomeIcon icon={faCircleChevronDown} size='4x' />
+              <FontAwesomeIcon icon={faCircleChevronUp} size='4x' />
               <span>Hide All Ammenities</span>
             </button>
           )}
