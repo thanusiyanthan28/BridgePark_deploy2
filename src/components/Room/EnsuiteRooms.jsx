@@ -3,7 +3,6 @@ import HotelRoomCard from "../../components/common/HotelRoomCard";
 import img1 from "../../assets/images/Loungebar 1.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
-import Header2 from "../common/Header2";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
 
@@ -20,13 +19,11 @@ const EnsuiteRoom = () => {
 
   return (
     <div className="EnsuiteRoom-container">
-      <div className="aboutContainer">
-      <div>
-       <Header2/>
-      </div>
       <div>
         <Card/>
       </div>
+      <div className="aboutContainer">
+      
         <div className="aboutTextWrapper">
           <h1 className="aboutH1">ENSUITE ROOMS</h1>
         </div>
@@ -91,7 +88,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Luxury Room"
+            title="DOUBLE & BUNK ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -104,7 +101,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Luxury Room"
+            title="EXECUTIVE KING ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -114,13 +111,28 @@ const EnsuiteRoom = () => {
           />{" "}
         </Col>
       </Row>
+	  <Row className="hotelRoomMainRow">
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img1}
+            title="CHAMBRE OF TWILIGHT"
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            price="$200"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+          />{" "}
+        </Col>
+        
+      </Row>
       <Modal
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
         width="80%"
-      >
-        
+      >  
       </Modal>
     </div>
   );
