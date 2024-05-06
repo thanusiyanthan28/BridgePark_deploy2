@@ -1,0 +1,52 @@
+.EnsuiteRoom-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .card  {
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+    /* border-radius: 15px; */
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+  }
+  .card-body{
+    border-radius: 15px;
+  }
+  
+  .containerCol1 {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .titleH1 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .titleH3 {
+    font-size: 1.125rem;
+    color: #2d3748;
+  }
+  
+  .btnPrimary {
+    background-color: #669399;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 45px;
+  }
+ 
+ .aboutContainer{
+    margin-top: -30px;
+ }
+  
+
+  

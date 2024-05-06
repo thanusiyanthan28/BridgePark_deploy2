@@ -4,6 +4,8 @@ import img1 from "../../assets/images/Loungebar 1.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Header2 from "../common/Header2";
+import Card from "../common/Card";
+import "../../css/EnsuiteRooms.css";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -17,24 +19,16 @@ const EnsuiteRoom = () => {
   };
 
   return (
-    <div>
+    <div className="EnsuiteRoom-container">
       <div className="aboutContainer">
       <div>
        <Header2/>
       </div>
       <div>
-        
+        <Card/>
       </div>
         <div className="aboutTextWrapper">
-          <h1 className="aboutH1">OUR ROOMS</h1>
-          <div className="paragraphContainer">
-            <p>
-              Originally a Grade ii listed building, Bridge Park Hotel is the
-              ideal place to stay whether you are visiting Wembley or simply
-              looking for accommodation to explore the sites of London. Just a
-              short distance from Wembley Stadium
-            </p>
-          </div>
+          <h1 className="aboutH1">ENSUITE ROOMS</h1>
         </div>
       </div>
       <Row className="hotelRoomMainRow">
@@ -42,7 +36,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Single Room"
+            title="DOUBLE ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -56,7 +50,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Luxury Room"
+            title="TWIN ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -69,7 +63,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Luxury Room"
+            title="TRIPLE ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -84,7 +78,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Single Room"
+            title="QUAD ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
