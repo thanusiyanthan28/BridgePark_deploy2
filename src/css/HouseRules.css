@@ -1,11 +1,14 @@
 .house-rules-container {
   background-color: #fff;
   padding: 1.5rem;
-  margin: 10px 40px;
+  margin: 0 50px;
+  align-items: center;
+  margin-left: 100px;
 }
 .title-container {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 .house-rules-title {
   font-size: 1.5rem;
@@ -15,7 +18,7 @@
 }
 .availability-button {
   margin-top: 2rem;
-  margin-left: 135vh;
+  margin-left: 116vh;
   background-color: #3182ce;
   padding: 10px 36px;
   color: #fff;
@@ -32,46 +35,60 @@
   padding: 1.5rem;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
+  width: 90%;
 }
-
-.house-rules-section {
-  margin-bottom: 2rem;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
+.house-rules-table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.house-rules-item,
-.house-rules-info {
-  flex: 1; 
-}
-.house-rules-info {
-    display: flex;
-    flex-direction: column; 
-    list-style-type: none; 
-  }
-  .house-rules-info li {
-    margin:  0 10px;  
-    padding: 0;
-  }
-.house-rules-item {
-  flex: 0 0 auto;
-  margin-right: 1rem;
-  align-items: center;
-  font-size: 1.125rem;
-  font-weight: 500;
+.house-rules-info{
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500; 
   margin-bottom: 0.5rem;
+  vertical-align: top;
 }
 
+.house-rules-table th,
+.house-rules-table td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.house-rules-table td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.house-rules-table td li {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-bottom: 10px;
+  vertical-align: top; 
+  margin-top: -15px;
+  padding-bottom: 15px;
+}
+.house-rules-table-ul{
+  vertical-align: top;
+}
 .house-rules-icon {
+  width: 30px;
+  height: 30px;
   margin-right: 0.5rem;
 }
-
-.house-rules-link {
-  color: #3182ce;
-  text-decoration: underline;
+.house-rules-icon-rotate{
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  transform: rotate(180deg);
+}
+.house-rule-sub-topic{
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.house-rules-table tr:last-child td {
+  border-bottom: none; 
 }
 
-.house-rules-divider {
-  border-top: 1px solid #e2e8f0;
-  margin-top: 1rem;
-}
+ 
