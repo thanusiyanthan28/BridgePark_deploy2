@@ -5,6 +5,7 @@ import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
+import Hearder2 from "../common/Header2";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -19,6 +20,9 @@ const EnsuiteRoom = () => {
 
   return (
     <div className="EnsuiteRoom-container">
+      <div>
+        <Hearder2/>
+      </div>
       <div>
         <Card/>
       </div>
