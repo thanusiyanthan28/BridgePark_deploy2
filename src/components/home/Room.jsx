@@ -57,6 +57,7 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -70,6 +71,7 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
       </Row>
@@ -85,6 +87,7 @@ const Room = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -98,6 +101,7 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -111,6 +115,7 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
       </Row>
