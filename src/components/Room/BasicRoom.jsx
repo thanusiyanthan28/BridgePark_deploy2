@@ -7,6 +7,7 @@ import Header2 from "../common/Header2";
 import Card from "../common/Card";
 import Footer from "../common/Footer";
 import "../../css/BasicRoom.css";
+import RoomInfromation from "../home/RoomInformation";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -58,6 +59,7 @@ const BasicRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -71,6 +73,7 @@ const BasicRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
       </Row>
@@ -81,10 +84,9 @@ const BasicRoom = () => {
         footer={null}
         width="80%"
       >
+        <RoomInfromation/>
       </Modal>
-      <div>
-        <Footer/>
-      </div>
+      
     </div>
   );
 };
