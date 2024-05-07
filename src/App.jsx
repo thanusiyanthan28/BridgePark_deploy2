@@ -6,7 +6,7 @@ import Footer from "./components/common/Footer"
 import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
 
 import Facilities from "./Pages/Facilities";
-
+import HomeRules from "./components/common/HomeRules"
 export default function App() {
   return (
     <div>
@@ -16,6 +16,7 @@ export default function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
+          <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
         </Routes>
         <Footer />
