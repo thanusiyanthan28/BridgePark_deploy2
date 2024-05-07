@@ -6,6 +6,7 @@ import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
 import Hearder2 from "../common/Header2";
+import RoomInfromation from "../home/RoomInformation";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -58,6 +59,7 @@ const EnsuiteRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -71,6 +73,7 @@ const EnsuiteRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
       </Row>
@@ -86,6 +89,7 @@ const EnsuiteRoom = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -99,6 +103,7 @@ const EnsuiteRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
@@ -112,6 +117,7 @@ const EnsuiteRoom = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
       </Row>
@@ -127,6 +133,7 @@ const EnsuiteRoom = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         
@@ -137,6 +144,7 @@ const EnsuiteRoom = () => {
         footer={null}
         width="80%"
       >  
+      <RoomInfromation/>
       </Modal>
     </div>
   );
