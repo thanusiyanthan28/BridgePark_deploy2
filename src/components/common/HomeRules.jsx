@@ -1,12 +1,13 @@
 import React from "react";
 import "../../css/HouseRules.css";
 import exportImg from "../../assets/icons/export.gif";
-import cancelImg from "../../assets/icons/age-restriction.gif";
+import cancelImg from "../../assets/icons/cancel.gif";
 import childrenBed from "../../assets/icons/Children & Beds.gif";
 import ageImg from "../../assets/icons/age-restriction.gif";
 import pets from "../../assets/icons/Pets.gif";
 import groupImg from "../../assets/icons/Group.gif";
 import acceptPay from "../../assets/icons/Accepted payment methods.gif";
+import refundabaleImg from "../../assets/icons/Refundable DAmage.gif";
 const HouseRules = () => {
   return (
     <div className="house-rules-container">
@@ -67,8 +68,8 @@ const HouseRules = () => {
           <tr>
             <td>
               <img
-                src={cancelImg}
-                alt="Cancellation Icon"
+                src={refundabaleImg}
+                alt="Refundable damage deposit Icon"
                 class="house-rules-icon"
               />
             </td>
