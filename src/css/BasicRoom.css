@@ -1,9 +1,12 @@
-.EnsuiteRoom-container {
+.BasicRoom-containor {
     max-width: 100%;
     margin: 0 auto;
   }
   
   .card  {
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+    /* border-radius: 15px; */
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -16,7 +19,7 @@
   }
   
   .containerCol1 {
-    flex: 1;
+    flex: 1;                                                                                                                                                                                                                                                                                                                                                                                
     padding: 2rem;
   }
   
@@ -45,4 +48,5 @@
     margin-top: -30px;
  }
   
+
   

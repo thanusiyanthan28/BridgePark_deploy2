@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../css/Header2.css";
+import "../../css/Header.css";
 import logo from "../../assets/images/HotelLogo.png";
 import Button from "./Button";
 import Card from "./Card";
@@ -8,7 +8,7 @@ import { Row } from "antd";
 import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.jpg";
 
-const Header2 = () => {
+const HeaderUpdate = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -40,10 +40,9 @@ const Header2 = () => {
     location: "New York",
   };
   return (
-    <div>
-      <div>
-      <div className="header2-hero-container">
-        <header className="header2-container">
+    <div className="head-main">
+      <div className="hero-container">
+        <header className="header-container">
           <div className="toggle-icon" onClick={toggleNav}>
             <i className="fas fa-bars"></i>
           </div>
@@ -51,35 +50,40 @@ const Header2 = () => {
             <div className="close-button" onClick={closeNav}>
               <i className="fas fa-times"></i>
             </div>
-            <Link to="/" className="header2-link">
+            <Link to="/" className="header-link">
               <h1 className="headerlink-h1-1">Home</h1>
             </Link>
-            <Link to="/rooms" className="header2-link">
+            <Link to="/rooms" className="header-link">
               <h1 className="headerlink-h1-2">Rooms</h1>
             </Link>
-            <Link to="/facilities" className="header2-link">
+            <Link to="/facilities" className="header-link">
               <h1 className="headerlink-h1-3">Facilities</h1>
             </Link>
-            <Link to="/meeting-events" className="header2-link">
+            <Link to="/meeting-events" className="header-link">
               <h1 className="headerlink-h1-4">Meeting & Events</h1>
             </Link>
             <div className="headerLogoPosition">
-            <img src={logo} alt="Logo" className="header2Logo" />
+            <img src={logo} alt="Logo" className="headerLogo" />
             </div>
-            <div className="header2ButtonContainer">
+            <div className="headerButtonContainer">
               <Button onClick={handleClick}>Book Now</Button>
             </div>
-              <div className="Header2ProfileContainer">
+
+            {isLoggedIn ? (
+              <div className="HeaderProfileContainer">
                 <UserProfile user={userData} />
               </div>
-            
+            ) : (
+              // If user is not logged in, display login/signup button
+              <div className="headerButtonContainer2">
+                <Button onClick={handleLogin}>LogIn / SignUp</Button>
+              </div>
+            )}
           </nav>
         </header>
       </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Header2
-
+export default HeaderUpdate;
