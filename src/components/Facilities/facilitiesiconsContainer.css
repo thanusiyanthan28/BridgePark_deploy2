@@ -1,0 +1,69 @@
+.facilitiescontainer1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .facilitiesrow1 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 20px; /* Adjust the margin between rows */
+  }
+  
+  .facilitiescard1 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ece1e1;
+    border-radius: 5px;
+    width: calc(50% - 20px); /* Adjusted width for two-column layout */
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    height: 120px;
+    background-color: #ffffff;
+   
+  }
+  
+  .facilitiesiconcontainer1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .facilitiescardcontent1 {
+    text-align: center;
+  }
+  
+  .facilitiescard1:hover {
+    box-shadow: 0 4px 1rem -4px #33cccc;
+    transform: translateY(6px);
+  }
+  
+  .facilitiescardcontent1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+  }
+  .facilitieshidebutton1{
+    display: inline-block;
+    margin-left: 650px;
+    border: none;
+    padding: 20px;
+    background-color: #fffff9;
+    color: #618e95;
+  }
+  .facilitiesshowbutton1{
+    display: inline-block;
+    margin-left: 390px;
+    border: none;
+    padding: 20px;
+    background-color: #fffff9;
+    color: #618e95;
+  }
+  .columnlist{
+    margin-left: -180px;
+  }

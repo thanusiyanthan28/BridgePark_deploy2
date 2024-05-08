@@ -1,24 +1,35 @@
-import React, { useState } from 'react';
-import '../components/Facilities/facilities.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FacilitiesIconsContainer from '../components/Facilities/facilitiesiconsContainer';
+import React from 'react';
+import { useState } from 'react'; // Import useState
+import '../css/facilities.css';
 import ColumnList from '../components/Facilities/facilitiesList';
-import { faWifi, faParking, faGlassMartiniAlt, faCircleChevronUp, faTv, faBed, faSmokingBan, faUsers, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import nonSmokingGif from '../assets/Facilities of BPH/Non-smoking rooms.gif';
+import roomServiceGif from '../assets/Facilities of BPH/Room service.gif';
+import wifiGif from '../assets/Facilities of BPH/Free WiFi.gif';
+import parkingGif from '../assets/Facilities of BPH/Free on-site parking.gif';
+import familyRoomsGif from '../assets/Facilities of BPH/Rooms.gif';
+import frontDeskGif from '../assets/Facilities of BPH/Front Desk Services.gif';
+import barGif from '../assets/Facilities of BPH/champagne.gif';
+import heatingGif from '../assets/Facilities of BPH/heating.gif';
+import housekeepingGif from '../assets/Facilities of BPH/Cleaning Services.gif';
+import breakfastGif from '../assets/Facilities of BPH/Breakfast.gif';
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);
 
   const cardsData = [
-    { id: 1, title: 'Free WiFi' },
-    { id: 2, title: 'Free Parking' },
-    { id: 3, title: 'Family Rooms' },
-    { id: 4, title: 'Room Service' },
-    { id: 5, title: 'Restaurant' },
-    { id: 6, title: 'Non-Smoking Rooms' },
-    { id: 7, title: 'Bar' },
+    { id: 1, title: 'Non-smoking rooms', icon: nonSmokingGif },
+    { id: 2, title: 'Room service', icon: roomServiceGif },
+    { id: 3, title: 'Free WiFi', icon: wifiGif },
+    { id: 4, title: 'Free parking', icon: parkingGif },
+    { id: 5, title: 'Family rooms', icon: familyRoomsGif },
+    { id: 6, title: '24-hour front desk', icon: frontDeskGif },
+    { id: 7, title: 'Bar', icon: barGif },
+    { id: 8, title: 'Heating', icon: heatingGif },
+    { id: 9, title: 'Daily housekeeping', icon: housekeepingGif },
+    { id: 10, title: 'Breakfast', icon: breakfastGif },
   ];
-
-  const icons = [faWifi, faParking, faUsers, faBed, faUtensils, faSmokingBan, faGlassMartiniAlt];
 
   const handleToggleList = () => {
     setShowList(!showList);
@@ -29,33 +40,46 @@ const Facilities = () => {
   };
 
   return (
-    <body className='facilitiesbody'>
-      <div className='facilitiesmain'>
+    <body>
+      <div>
         <div>
           <h1 className='facilitieshead'>FACILITIES</h1>
         </div>
 
         <div>
           <p className='facilitiespara'>
-          Originally a Grade ii listed building, Bridge Park Hotel is the ideal
-           place to stay whether you are visiting Wembley or simply looking for 
-          accommodation to explore the sites of London. 
-          Just a short distance from Wembley Stadium.
+            Originally a Grade ii listed building, Bridge Park Hotel is the ideal
+            place to stay whether you are visiting Wembley or simply looking for
+            accommodation to explore the sites of London.
+            Just a short distance from Wembley Stadium.
           </p>
         </div>
 
+      
+
         <div className="facilitiescontainer">
-          <FacilitiesIconsContainer cards={cardsData} />
+          {cardsData.map((card) => (
+            <div key={card.id} className="facilitiescard">
+              <div className='facilitiesiconcontainer'>
+                <img src={card.icon} alt={card.title} style={{ width: '64px', height: '64px', objectFit: 'cover' }}/>
+              </div>
+              <div className="facilitiescardcontent">
+                <h2>{card.title}</h2>
+              </div>
+            </div>
+          ))}
         </div>
+
         <div>
           {!showList && <button className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
           {showList && (
             <button className='facilitieshidebutton' onClick={handleHideList}>
-              <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
-              <span>Hide All Ammenities</span>
+              <FontAwesomeIcon icon={faCircleChevronUp} size='4x' />
+              <span>Hide All Amenities</span>
             </button>
           )}
         </div>
+        
         {showList && <ColumnList />}
       </div>
     </body>

@@ -143,17 +143,18 @@ const RoomInformation = () => {
     <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Ammenities"}</h2>
   </div>
   <div>
-    <FacilitiesIconsContainer cards={cardsData} cardStyle={{ width: '710px', height: '150px', margin: '10px', marginLeft: '150px' }} />
+    <FacilitiesIconsContainer cards={cardsData} />
   </div>
   <div>
-    {!showList && <button className='facilitieshidebutton2' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+    {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
     {showList && (
-      <button className='facilitieshidebutton2' onClick={handleHideList}>
+      <button className='facilitieshidebutton1' onClick={handleHideList}>
         <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
       </button>
     )}
   </div>
-  {showList && <ColumnList forRoomInfoPage={true}/>}
+  {showList && 
+  <div className="columnlist"><ColumnList /></div>}
 </div>
 
 
