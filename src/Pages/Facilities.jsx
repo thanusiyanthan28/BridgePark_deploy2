@@ -76,6 +76,8 @@ const Facilities = () => {
             <button className='facilitieshidebutton' onClick={handleHideList}>
               <FontAwesomeIcon icon={faCircleChevronUp} size='4x' />
               <span>Hide All Amenities</span>
+              <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
+              <span>Hide All Ammenities</span>
             </button>
           )}
         </div>

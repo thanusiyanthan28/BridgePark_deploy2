@@ -2,9 +2,9 @@ import React from 'react';
 import '../../css/facilities.css';
 import { FaBath, FaBed, FaTree, FaUtensils,FaMicrowave, FaFootballBall, FaCouch, FaTv, FaWineGlassAlt, FaWifi, FaParking, FaHandHoldingHeart,FaHome, FaUserShield, FaInfoCircle, FaLanguage,FaGlobe } from 'react-icons/fa';
 
-const ColumnList = () => {
+const ColumnList =  ({ forRoomInfoPage }) => {
   return (
-    <div >
+    <div className={forRoomInfoPage ? "room-info-column" : "fscolumn"}>
     <div className="fscolumnlist">
       
 

@@ -137,7 +137,7 @@ const RoomInformation = () => {
         </Row>
       </div>
 
-      <div className="sec-02" ref={sec02Ref}>
+  <div className="sec-02" ref={sec02Ref}>
   <div>
     <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Ammenities"}</h2>
   </div>
@@ -145,16 +145,23 @@ const RoomInformation = () => {
     <FacilitiesIconsContainer cards={cardsData} />
   </div>
   <div>
-    {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
-    {showList && (
-      <button className='facilitieshidebutton1' onClick={handleHideList}>
-        <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
-      </button>
-    )}
+  {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+  {showList && (
+    <button className='facilitieshidebutton1' onClick={handleHideList}>
+      {!showList && <button className='facilitieshidebutton2' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+      {showList && (
+        <button className='facilitieshidebutton2' onClick={handleHideList}>
+          <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
+        </button>
+      )}
+    </button>
+  )}
+</div>
   </div>
   {showList && 
   <div className="columnlist"><ColumnList /></div>}
-</div>
+  {showList && <ColumnList forRoomInfoPage={true}/>}
+
 
 
 <div className="sec-03" ref={sec03Ref}>

@@ -330,3 +330,13 @@
     
   }
 }
+
+
+
+
+.room-info-column {
+
+  display: flex;
+  margin-left: 35px;
+  margin-bottom: -50px;
+}
