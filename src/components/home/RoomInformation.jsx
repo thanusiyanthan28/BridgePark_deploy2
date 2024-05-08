@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
-import "../Facilities/facilities.css"
+// import "../Facilities/facilities.css"
 import Button from "../common/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
