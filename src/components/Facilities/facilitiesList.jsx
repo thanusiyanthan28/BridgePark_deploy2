@@ -1,5 +1,5 @@
 import React from 'react';
-import './facilities.css';
+import '../../css/facilities.css';
 import { FaBath, FaBed, FaTree, FaUtensils,FaMicrowave, FaFootballBall, FaCouch, FaTv, FaWineGlassAlt, FaWifi, FaParking, FaHandHoldingHeart,FaHome, FaUserShield, FaInfoCircle, FaLanguage,FaGlobe } from 'react-icons/fa';
 
 const ColumnList = () => {

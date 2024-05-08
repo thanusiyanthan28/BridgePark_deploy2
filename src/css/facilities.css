@@ -1,6 +1,6 @@
 /* Base styles */
 .facilitiesbody {
-  background: #fffff9;
+  background: #ffffff;
   min-height: auto;
   display: flex;
   justify-content: center;
@@ -10,47 +10,34 @@
 }
 
 .facilitiescontainer {
-  width: 90%;
-  margin-bottom: 20px;
-  margin-top: 110px;
- 
-}
-
-.facilitiescardscontainer {
-  display: flex;
+  display: flex; 
+  flex-wrap: wrap; 
   justify-content: center;
-  margin-top: 20px;
-  width: 100%;
-  height: 170px;
-  margin-left: 40px;
+  margin-top: 100px; 
+  margin-bottom: 10px;
 }
 
 .facilitiescard {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem;
-  background: #fff;
-  overflow: hidden;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 250ms ease-in-out;
-  text-align: center;
-  flex: 0 0 calc(20% - 1rem);
+  margin: 10px; /* Add some margin between cards */
+  padding: 10px; /* Add some padding to the cards */
+  border: 1px solid #e9e4e4; 
+  border-radius: 5px; 
   width: 120px;
-  margin-left: 10px;
-  margin-right: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 120px; 
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .facilitiesiconcontainer {
-  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center the icon horizontally */
+}
+
+.facilitiescardcontent {
+  text-align: center; /* Center the text content */
 }
 
 .facilitiescard:hover {
-  box-shadow: 0 4px 1rem -4px #000;
+  box-shadow: 0 4px 1rem -4px #33cccc;
   transform: translateY(6px);
 }
 
@@ -61,6 +48,7 @@
   height: 40%;
   font-size: 12px;
   font-family: 'Lato', sans-serif;
+  margin-bottom: 15px;
 }
 
 .facilitieshead {
@@ -68,7 +56,7 @@
   text-align: center;
   font-size: 50px;
   font-family: 'Merriweather', serif;
-  margin-left: 25px;
+  margin-left: 60px;
   margin-top: 30px;
   
 }
@@ -80,19 +68,22 @@
   font-family: 'Lato', sans-serif;
   position: absolute;
   margin-bottom: 50px;
-  margin-right: 470px;
+  margin-right: 320px;
+  margin-left: 350px;
 }
 
 .facilitiesbutton1 {
   color: white;
-  padding: 10px 50px;
+  padding: 15px 70px;
   cursor: pointer;
   margin-top: 10px;
   border: none;
-  margin-left: 425px;
-  background-color: #618e95;
+  border-radius: 15px;
+  margin-left: 855px;
+  background-color: #6e8b8b;
   transition: background-color 0.3s ease;
   margin-bottom: 12px;
+
 }
 .facilitiesbutton1:hover {
   background-color: #618e99; /* Change to desired hover color */
@@ -100,7 +91,7 @@
 
 .facilitieshidebutton {
   display: inline-block;
-  margin-left: 430px;
+  margin-left: 875px;
   border: none;
   padding: 20px;
   background-color: #fffff9;
@@ -118,10 +109,10 @@
 .fscolumnlist {
   display: grid;
   grid-template-columns: repeat(3, 5fr);
-  grid-template-rows: repeat(3, 250px);
-  grid-gap: 90px;
+  grid-template-rows: repeat(3, 300px);
   align-items: flex-start;
   margin-top: 10px;
+  margin-left: 320px;
 }
 
 .fscolumn {
@@ -157,128 +148,69 @@
 
 /* Max width 768px */
 @media(max-width:768px) {
-  .facilitiescardscontainer {
-    max-width: 600px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 5px;
-    margin-top: 150px;
-    margin-bottom: 800px;
+  .facilitiesbutton1{
+    margin-left: 285px;
   }
-
-  .facilitiescard {
-    width: 70%;
-    margin: 1.5rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-    margin-top: 0px;
-    margin-left: px;
-    margin-bottom: 10px;
+  .facilitiespara{
+    margin-left: 20px;
+    margin-right: 20px;
   }
-
-  .facilitiescard:nth-last-child(1) {
-    grid-column: 1 / span 2;
-    width: calc(87% - 10px);
-    margin: 0.5rem;
-    margin-left: 25px;
+  .facilitieshidebutton{
+    margin-left: 300px;
   }
-
-  .facilitieshead {
-    font-size: 25px;
-    margin-bottom: 10px;
-    margin-top: 40px;
-    margin-left: 75px;
-    margin-bottom: 40px;
-  }
-
-  .facilitiespara {
-    display: flex;
-    padding: 0px 0px 0px 0px;
-    position: 0;
-    margin-left: 0px;
-    width: 70%;
-
-  }
-
-  .facilitiesbutton1 {
-    margin-left: 180px;
-    margin-bottom: 40px;
-  }
-
-  .facilitieshidebutton {
-    margin-left: 220px;
-  }
-
-  .fscolumnlist {
-    grid-gap: 15px;
-    font-size: 11px;
-    margin-left: -30px;
+  .fscolumnlist{
+    margin-left: 20px;
+    font-size: 12px;
   }
 }
-
+  
 /* Max width 435px */
 @media(max-width:435px) {
-  .facilitiescontainer {
-    max-width: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-    gap: 1rem;
-    margin-bottom: -200px;
-  }
-
-  .facilitiescardscontainer {
-    max-width: 600px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(170px, auto);
-    grid-gap: 15px;
-    margin-left: -60px;
-    margin-right: 0px;
-    margin-top: 65px;
-  }
-
-  .facilitiescard {
-    width: 70%;
-    margin: 1.5rem;
+   .facilitiescard {
+    width: 45%;
+    margin: -0.8rem;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-    margin-top: 0px;
+    margin-top: 50px;
     height: 130px;
+    margin-left: 50px;
   }
 
-  .facilitiescard:nth-last-child(1) {
+ /* .facilitiescard:nth-last-child(1) {
     grid-column: 1 / span 2;
     width: calc(87% - 10px);
     margin: 0.5rem;
     margin-left: 28px;
-  }
+  }*/
 
   .facilitiescardcontent {
     display: flex;
     justify-content: center;
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Lato', sans-serif;
   }
 
-  .facilitiesiconcontainer {
+  .facilitiescontainer {
     display: grid;
-    grid-template-columns: repeat(2);
-    grid-template-rows: repeat(0, 0.3rem);
-    grid-gap: 10px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: -100px;
 
   }
 
   .facilitiesbutton1 {
-    margin-left: 60px;
+    margin-left: 120px;
+    margin-top: 50px;
   }
 
   .facilitiespara {
-    margin-left: -17px;
+    margin-left: 25px;
+    margin-right: 25px;
+  
+    
   }
 
   .facilitieshidebutton {
-    margin-left: 60px;
+    margin-left: 120px;
+    margin-top: 50px;
 
   }
 
@@ -289,16 +221,20 @@
     grid-gap: 0px;
     align-items: center;
     margin-top: 15px;
+    margin-left: 30px;
+    font-size: 10px;
   }
 }
 
 @media only screen and (min-width:1030px) and (max-width:1366px) {
-  .facilitiescontainer {
-    width: 65%;
-    margin-bottom: 20px;
-    margin-top: 110px;
-    position: inherit;
-    margin-left: 170px;
+  .facilitiescardscontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+    height: 130px;
+
+    margin-left: 380px;
   }
 
   .facilitiespara {
@@ -310,57 +246,60 @@
     position: absolute;
     margin-bottom: 50px;
     margin-right: 75px;
-    margin-left: 30px;
+    margin-left: 70px;
 
   }
 
   .facilitiesbutton1 {
-    margin-left: 520px;
+    margin-left: 590px;
   }
   .facilitieshidebutton {
-    margin-left: 500px;
+    margin-left: 595px;
+  }
+  .fscolumnlist {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+    grid-template-rows: repeat(3, 300px);
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 120px;
   }
 }
 
 @media only screen and (min-width:769px) and (max-width:1024px) {
-  .facilitiescontainer {
-    width: 45%;
-    margin-bottom: 20px;
-    margin-top: 110px;
-    position: inherit;
-    margin-left: 320px;
-  }
+  
 
   .facilitiesbutton1 {
-    margin-left: 585px;
+    margin-left: 420px;
+  }
+  .facilitiescardcontent {
+   
+    height: 30%;
+    font-size: 10px;
+    margin-bottom: 15px;
   }
 
   .facilitiespara {
-
-    color: #000;
-    text-align: center;
-    margin-top: 0px;
-    font-family: 'Lato', sans-serif;
     position: absolute;
     margin-bottom: 50px;
     margin-right: 50px;
-    margin-left: 210px;
+    margin-left: 50px;
 
   }
 
   .facilitieshidebutton {
-    margin-left: 570px;
+    margin-left: 430px;
   }
 
   .fscolumnlist {
     grid-gap: 5px;
     font-size: 11px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-bottom: -150px;
   }
 
   .facilitieshead {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
 }
@@ -368,18 +307,26 @@
 @media only screen and (min-width:1370px) and (max-width:1440px) {
   .facilitiespara {
 
-    color: #000;
-    text-align: center;
-    margin-top: 0px;
     font-family: 'Lato', sans-serif;
     position: absolute;
     margin-bottom: 50px;
-    margin-right: 220px;
-    margin-left: 0px;
+    margin-right: 120px;
+    margin-left: 100px;
 
   }
 
   .facilitieshidebutton {
-    margin-left: 420px;
+    margin-left: 635px;
+  }
+  
+  .facilitiesbutton1 {
+    margin-left: 620px;
+  }
+  .fscolumnlist {
+    grid-gap: 5px;
+    font-size: 15px;
+    margin-left: 100px;
+    margin-bottom: -100px;
+    
   }
 }
