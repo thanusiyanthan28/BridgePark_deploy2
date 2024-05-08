@@ -1,0 +1,94 @@
+.house-rules-container {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 0 50px;
+  align-items: center;
+  margin-left: 100px;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.house-rules-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: black;
+}
+.availability-button {
+  margin-top: 2rem;
+  margin-left: 116vh;
+  background-color: #3182ce;
+  padding: 10px 36px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.house-rules-description {
+  font-size: 0.875rem;
+  margin-top: -5px;
+}
+.house-rules-container-body {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+.house-rules-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.house-rules-info{
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500; 
+  margin-bottom: 0.5rem;
+  vertical-align: top;
+}
+
+.house-rules-table th,
+.house-rules-table td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.house-rules-table td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.house-rules-table td li {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-bottom: 10px;
+  vertical-align: top; 
+  margin-top: -15px;
+  padding-bottom: 15px;
+}
+.house-rules-table-ul{
+  vertical-align: top;
+}
+.house-rules-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+.house-rules-icon-rotate{
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  transform: rotate(180deg);
+}
+.house-rule-sub-topic{
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.house-rules-table tr:last-child td {
+  border-bottom: none; 
+}
+
+ 
