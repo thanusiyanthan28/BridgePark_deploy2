@@ -9,6 +9,7 @@ import Facilities from "./Pages/Facilities";
 import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
+import HomeRules from "./components/common/HomeRules"
 export default function App() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
+          <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/BasicRoom" element={<BasicRoom/>}/>
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
