@@ -59,7 +59,7 @@ const RoomInformation = () => {
             className={`RoomInformation-section ${activeTab === "Room Information" ? "active" : ""}`}
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-headings">Room Information</h2>
+            <h2 className="RoomInformation-heading">Room Information</h2>
           </div>
 
           <div
@@ -148,9 +148,9 @@ const RoomInformation = () => {
   {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
   {showList && (
     <button className='facilitieshidebutton1' onClick={handleHideList}>
-      {!showList && <button className='facilitieshidebutton2' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+      {!showList && <button className='facilitieshidebutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
       {showList && (
-        <button className='facilitieshidebutton2' onClick={handleHideList}>
+        <button className='facilitieshidebutton1' onClick={handleHideList}>
           <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
         </button>
       )}
@@ -160,7 +160,7 @@ const RoomInformation = () => {
   </div>
   {showList && 
   <div className="columnlist"><ColumnList /></div>}
-  {showList && <ColumnList forRoomInfoPage={true}/>}
+  
 
 
 
@@ -171,11 +171,11 @@ const RoomInformation = () => {
         <div>
           <h2 className="RoomInformation-subHeadings">Check In</h2>
         </div>
-        <div>from 14:00 hours</div>
+        <div className="time-zone">from 14:00 hours</div>
         <div>
           <h2 className="RoomInformation-subHeadings">Check Out</h2>
         </div>
-        <div>Untill 11:00 hours</div>
+        <div className="time-zone">Untill 11:00 hours</div>
         <div>
           <h2 className="RoomInformation-subHeadings">
             Cancellation/prepayment
