@@ -27,6 +27,7 @@
 }
 .header-update-toggle-button {
   display: none;
+  float: right;
 }
 
 .header-update-profile{
@@ -44,12 +45,23 @@
 
 @media only screen and (max-width: 768px) {
   .header-update {
-    display: none;
+   
+    
+ 
+  }
+  .header-nav-bar-left .ant-menu-item,
+  .header-nav-bar-right .ant-menu-item{
+     display: none;
   }
   
   .header-update-toggle-button {
-    display: block; /* Display toggle button on screens smaller than 768px */
-    position: absolute;
+    display: flex; /* Display toggle button on screens smaller than 768px */
+   
     margin: 10px;
+    float: right;
+   margin-right: 10px;
   }
+
+
+
 }
