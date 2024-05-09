@@ -1,5 +1,6 @@
 import React from 'react';
 import CardSlider from './CardSlider';
+import Room from '../../components/home/Room';
 const cards = [
     {
       image: 'https://images.hdqwalls.com/wallpapers/santa-girl-lu.jpg',
@@ -44,12 +45,15 @@ const cards = [
   ];
   
 
-function MeetingAndEvents() {
+  const MeetingAndEvents = () => {
   return (
     <div className="App">
       <CardSlider cards={cards} />
+     
     </div>
   );
 }
 
 export default MeetingAndEvents;
+
+
