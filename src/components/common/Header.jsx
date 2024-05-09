@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <div className="head-main">
       <div className="hero-container">
-        <header className="header-container">
+        {/* <header className="header-container">
           <div className="toggle-icon" onClick={toggleNav}>
             <i className="fas fa-bars"></i>
           </div>
@@ -61,13 +61,13 @@ const Header = () => {
             </Link>
             <Link to="/meeting-events" className="header-link">
               <h1 className="headerlink-h1-4">Meeting & Events</h1>
-            </Link>
+            </Link> */}
             <div className="headerLogoPosition">
             <img src={logo} alt="Logo" className="headerLogo" />
             </div>
-            <div className="headerButtonContainer">
-              <Button onClick={handleClick}>Book Now</Button>
-            </div>
+            {/* <div className="headerButtonContainer">
+              <Button onClick={handleClick}>Book Now</Button> */}
+            {/* </div>
 
             {isLoggedIn ? (
               <div className="HeaderProfileContainer">
@@ -80,7 +80,7 @@ const Header = () => {
               </div>
             )}
           </nav>
-        </header>
+        </header> */}
         <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>
