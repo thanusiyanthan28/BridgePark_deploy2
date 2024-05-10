@@ -9,7 +9,7 @@ import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 
-const RoomInformation = () => {
+const RoomInformation = ({room}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
@@ -103,7 +103,7 @@ const RoomInformation = () => {
               <h2 className="RoomInformation-headings">Room Information</h2>
             </div>
             <div>
-              <h2 className="RoomInformation-subHeadings">Single Room Basic</h2>
+              <h2 className="RoomInformation-subHeadings">{room.title}</h2>
             </div>
             <div>
               <p className="RoomInformation-textP">
