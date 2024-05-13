@@ -119,19 +119,29 @@
     width: 360px;
     margin-left:-165px;
   }
-
+.hotelRoomTypeCardInfoRow{
+  width: 50%;
+}
   .hotelRoomTypeCardButton {
     font-size: 18px;
-    /* margin-left: 60px; */
+    margin-left: 150px;
     margin-top: 10px;
   }
-
   .hotelRoomTypeCardTopBar {
-    padding-right: 10px;
-    padding-left: 10px;
+    /* padding-right: 10px; */
+    /* padding-left: 10px; */
     width: 100%;
-    position: relative;
+    /* position: relative; */
     top: auto;
     margin-bottom: 10px;
+  }
+  .hotelRoomTypeCardInfoRow,
+  .HotelRoomTypeTextPara,
+  .hotelRoomTypeCardButton {
+    display: inline-block;
+  }
+  .HotelRoomTypeTextPara {
+    order: 1; 
+    margin-left: -280px;
   }
 }
