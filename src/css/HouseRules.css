@@ -252,4 +252,34 @@
     font-size: 12px;
    }
 }
+@media only screen and (min-width:769px) and (max-width:1024px){
+  .house-rules-container {
+    margin: 0 50px;
+    align-items: center;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .title-container {
+    display: inline;
+    align-items: center;
+  }
+  .house-rules-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    margin-top: 10px;
+  }
+  .house-rules-description{
+    font-size: 15px;
+    margin-right: 50px;
+    margin-top: -80px;
+  }
+  .availability-button {
+    margin-left: 490px;
+    padding: 15px 25px;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    font-size: 12px;
+   }
+}
 
