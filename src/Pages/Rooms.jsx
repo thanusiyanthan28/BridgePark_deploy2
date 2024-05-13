@@ -7,7 +7,7 @@ import Header2 from "../components/common/Header2";
 const Rooms = () => {
   return (
     <>
-      <Header2 />
+      {/* <Header2 /> */}
       <div className="RoomsTypeFirstAlignment">
         <RoomType  />
       </div>
