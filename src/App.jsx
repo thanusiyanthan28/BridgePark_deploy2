@@ -4,14 +4,13 @@ import HomePage from "./Pages/HomePage";
 import Rooms from "./Pages/Rooms";
 import Footer from "./components/common/Footer"
 import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
+import HeaderUpdate from "./components/common/HeaderUpdate" 
 
 import Facilities from "./Pages/Facilities";
 import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
 import HomeRules from "./components/common/HomeRules"
-import HeaderUpdate from "./components/common/HeaderUpdate";
-
 export default function App() {
   return (
     <div>
