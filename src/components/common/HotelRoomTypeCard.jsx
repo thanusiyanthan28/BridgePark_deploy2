@@ -71,7 +71,7 @@ const HotelRoomTypeCard = ({
         <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
         <div className="hotelRoomTypeCardDetails">
           <Row className="hotelRoomTypeCardInfoRow">
-            <Col span={12}>
+            <Col span={10}>
               <p>{description}</p>
             </Col>
             <Col span={12} className="HotelRoomTypeTextShown">
