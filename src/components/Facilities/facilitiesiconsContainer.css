@@ -11,7 +11,8 @@
     display: flex;
     justify-content: space-between;
     width: 60%;
-    margin-bottom: 20px; /* Adjust the margin between rows */
+    margin-bottom: 20px; 
+    box-shadow: none;
   }
   
   .facilitiescard1 {
@@ -23,6 +24,7 @@
     transition: transform 0.3s ease, box-shadow 0.5s ease;
     height: 120px;
     background-color: #ffffff;
+    box-shadow: none;
    
   }
   
@@ -51,37 +53,43 @@
   }
  
 /* media 435px*/
-
-  @media(max-width:435px){
-    .facilitiesrow1 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 85%;
-      
-    }
-  
-    .facilitiescard1 {
-      width: 85%;
-      margin: 0.5rem;
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
-      height: 120px;
-      margin-right: 1px;
-    }
-
-    .facilitiescontainer1{
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
-      margin-left: 20px;
-      margin-right: 20px;
-      
-    }
-    .facilitiescardcontent1{
-      font-size: 6px;
-    }
-  
+@media(max-width:435px){
+  .facilitiesrow1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px; 
+    box-shadow: none;
   }
+
+  .facilitiescard1 {
+    width: calc(50% - 10px); /* Adjusted width for two-column layout */
+    margin: 0.5rem;
+    padding: 10px;
+    border: 0px solid #ece1e1;
+    border-radius: 5px;
+    height: 120px;
+   
+    box-shadow: none;
+  }
+
+  .facilitiescontainer1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: none;
+  }
+  .facilitiescardcontent1 {
+    justify-content: center;
+    height: 50%;
+    font-size: 8px;
+   
+  }
+}
+
 
   @media(max-width:768px){
     .facilitiesrow1 {
@@ -151,6 +159,37 @@
       display: flex;
       justify-content: space-between;
       width: 85%;
+      margin-bottom: 20px;
+    }
+    
+    .facilitiescard1 {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ece1e1;
+      border-radius: 5px;
+      width: calc(50% - 20px);
+      transition: transform 0.3s ease, box-shadow 0.5s ease;
+      height: 120px;
+      background-color: #ffffff;
+     
+    }
+  }
+
+  @media only screen and (min-width:769px) and (max-width:1024px)
+  {
+    .facilitiescontainer1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+    
+    .facilitiesrow1 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
       margin-bottom: 20px;
     }
     

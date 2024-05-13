@@ -167,20 +167,15 @@
 /* Max width 435px */
 @media(max-width:435px) {
    .facilitiescard {
-    width: 45%;
-    margin: -0.8rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    width: 65%;
+    margin: -1.8rem;
+    box-shadow: px 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin-top: 50px;
     height: 130px;
-    margin-left: 50px;
+    margin-left: 37px;
   }
 
- /* .facilitiescard:nth-last-child(1) {
-    grid-column: 1 / span 2;
-    width: calc(87% - 10px);
-    margin: 0.5rem;
-    margin-left: 28px;
-  }*/
+
 
   .facilitiescardcontent {
     display: flex;
@@ -191,18 +186,18 @@
 
   .facilitiescontainer {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-column-gap: -100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
 
   }
 
   .facilitiesbutton1 {
-    margin-left: 120px;
+    margin-left: 130px;
     margin-top: 50px;
   }
 
   .facilitiespara {
-    margin-left: 25px;
+    margin-left: 35px;
     margin-right: 25px;
   
     
