@@ -145,6 +145,10 @@ const HeaderUpdate = () => {
   const handleLogin = () => {
     setIsLoggedIn(true); // Set login status to true
   };
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Set login status to false
+  };
+  
   
   const userData = {
     name: "John Doe",
@@ -202,9 +206,9 @@ const HeaderUpdate = () => {
     },
     {
       label: isLoggedIn ? (
-        <button  onClick={handleLogin} className='header-button'>
+        <button  onClick={handleLogout} className='header-button'>
         <Link to="/" className='header-book-sign'>
-         Loged
+         logout
           </Link>
       </button>
       ) : (
@@ -231,9 +235,7 @@ const HeaderUpdate = () => {
     onClose(); // Close the drawer after selecting an item
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false); // Set login status to false
-  };
+
 
   return (
     <div className='header-update-container'>
