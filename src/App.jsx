@@ -10,6 +10,7 @@ import Facilities from "./Pages/Facilities";
 import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
+import SignIn from "./components/User/Login";
 import HomeRules from "./components/common/HomeRules"
 export default function App() {
   return (
@@ -20,7 +21,10 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
+          {/* <Route path="/SignUp" element={<SignUp />} /> */}
           
+
+          <Route path="/SignIn" element={<SignIn />} />
           <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/BasicRoom" element={<BasicRoom/>}/>
