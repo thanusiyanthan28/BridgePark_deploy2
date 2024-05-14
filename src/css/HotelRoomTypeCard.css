@@ -118,10 +118,9 @@
   .hotelRoomTypeCardContainer {
     width: 360px;
     margin-left:-165px;
+    overflow-x: hidden;
   }
-.hotelRoomTypeCardInfoRow{
-  width: 50%;
-}
+
   .hotelRoomTypeCardButton {
     font-size: 18px;
     margin-left: 150px;
@@ -135,6 +134,9 @@
     top: auto;
     margin-bottom: 10px;
   }
+  .hotelRoomTypeCardInfoRow{
+    width:300%;
+  }
   .hotelRoomTypeCardInfoRow,
   .HotelRoomTypeTextPara,
   .hotelRoomTypeCardButton {
@@ -142,6 +144,6 @@
   }
   .HotelRoomTypeTextPara {
     order: 1; 
-    margin-left: -280px;
+    margin-left: -275px;
   }
 }
