@@ -12,6 +12,7 @@ import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
 import SignIn from "./components/User/Login";
 import HomeRules from "./components/common/HomeRules"
+import SignUp from "./components/User/Register";
 export default function App() {
   return (
     <div>
@@ -21,7 +22,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
-          {/* <Route path="/SignUp" element={<SignUp />} /> */}
+          <Route path="/SignUp" element={<SignUp />} />
+          
           
 
           <Route path="/SignIn" element={<SignIn />} />
