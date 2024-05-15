@@ -1,11 +1,16 @@
 import React from 'react'
 import "./Location.css"
 import Header from '../common/Header'
+import Card from '../common/Card'
 
 const Location = () => {
   return (
     <div className='location'>
-       <Header />
+       {/* <Header /> */}
+       <div className='location-main'>
+       <div className='location-title'>Our Location</div>
+       <div className='location-card'><Card /></div>
+       </div>
     <div className='location-sub'>
         <div className='location-sub-left'>
             <p className='location-sub-content'>As The Bridge Park Hotel is less than 2 miles from Wembley Stadium and Arena, this is the perfect place to stay if you’re coming to watch a concert or sporting event here. You will also find Brent Cross Shopping Centre nearby. To explore central London, you should make the most of public transport. The number 18 bus, which stops outside your hotel, will take you straight to Regents Park and Madame Tussauds. Travel via tube and you can get to places like Oxford Street and Piccadilly Circus with ease.</p>
@@ -26,8 +31,8 @@ const Location = () => {
         <div className='location-sub-right'>
         <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2481.4600418069726!2d-0.2610174!3d51.5414628!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487611967e94e951%3A0x9dae31c05fde0964!2sBridge%20Park%20Hotel!5e0!3m2!1sen!2slk!4v1713963613608!5m2!1sen!2slk"
-        width="100%"
-        height="100%"
+        width="98%"
+        height="95%"
         style={{ border: 0 }}
         allowFullScreen=""
         loading="lazy"
