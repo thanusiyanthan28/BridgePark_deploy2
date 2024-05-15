@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"); */
 .App-header {
   font-size: 1rem;
   text-align: center;
   font-family: "Oswald", sans-serif;
   padding-bottom: 2rem;
+}
+.carousel-title{
+  text-align: center;
+  color: black;
+ 
 }
 .carousel-images {
   position: relative;
@@ -17,15 +22,18 @@
   width: 99%;
   height: 99%;
   border-radius: 8px;
-  border: #ff00008e solid 2px;
+  border: #669399 solid 2px;
+
+  
 }
+
 .slide_direction {
   display: flex;
   justify-content: space-between;
 }
 .left,
 .right {
-  background-color: #fb666675;
+  background-color:#afc6c9;
   color: #fff;
   padding: 10px 8px 8px 13px;
   margin: 0 20px;
@@ -56,5 +64,6 @@
   border-radius: 50%;
 }
 .active {
-  background-color: #fa2020;
+  background-color: #669399;
 }
+

@@ -34,7 +34,7 @@ const Carousel = ({ images }) => {
   const slidersVariants = {
     hover: {
       scale: 1.2,
-      backgroundColor: "#ff00008e",
+      backgroundColor: "#669399",
     },
   };
   const dotsVariants = {
@@ -74,6 +74,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
+      <h1 className="carousel-title">Image Gallery</h1>
         <div className="carousel-images">
         <AnimatePresence>
           <motion.img

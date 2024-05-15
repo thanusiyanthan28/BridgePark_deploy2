@@ -4,15 +4,15 @@ import image1 from "../../assets/images/image_gellery/image1.jpg"
 import image2 from "../../assets/images/image_gellery/image2.jpg"
 import image3 from "../../assets/images/image_gellery/image3.jpg"
 import image4 from "../../assets/images/image_gellery/image4.jpg"
-import image5 from "../../assets/images/image_gellery/image1.jpg"
-import image6 from "../../assets/images/image_gellery/image1.jpg"
+import image5 from "../../assets/images/image_gellery/image5.jpeg"
+import image6 from "../../assets/images/image_gellery/image6.jpg"
 const images = [
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
   ];
 
 const ImageArray = () => {
