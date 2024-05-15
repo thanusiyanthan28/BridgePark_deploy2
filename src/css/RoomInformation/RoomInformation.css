@@ -138,12 +138,17 @@
   .RoomInformation-heading {
     font-size: 10px; 
     margin: -2px 0; 
+    
   }
 
   .RoomInformation-section-All {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid gray; 
+    
+  }
+  .sec-01{
+    margin-top: 400px;
   }
 
   .RoomInformation-section {
@@ -225,6 +230,12 @@
   }
   .time-zone{
     margin-left: 10px;
+  }
+  .site-card-room{
+    position: absolute;
+  top: 280px;
+  right: 40px;
+  z-index: 999; 
   }
   
 }

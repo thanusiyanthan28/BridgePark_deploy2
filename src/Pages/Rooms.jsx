@@ -1,6 +1,7 @@
 import React from "react";
 import RoomType from "../components/home/RoomType";
 import "../css/RoomType/Room.css";
+import GuestInfo from "../components/common/GuestInformation";
 
 
 const Rooms = () => {
@@ -8,7 +9,8 @@ const Rooms = () => {
     <>
       {/* <Header2 /> */}
       <div className="RoomsTypeFirstAlignment">
-        <RoomType  />
+        {/* <RoomType  /> */}
+        <GuestInfo/>
       </div>
     </>
   );
