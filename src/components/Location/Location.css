@@ -1,7 +1,6 @@
 .location-main{
     width: 100%;
     height: 500px;
-    background-color: aqua;
     background-image: url("../../assets/images/image_gellery/image6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,6 +14,7 @@
     padding: 70px;
 }
 .location-card{
+  
     margin-top: 50px;
 }
 .location-sub{
