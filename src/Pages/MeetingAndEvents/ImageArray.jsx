@@ -1,6 +1,11 @@
 import React from 'react'
 import Carousel from './ImageGallery';
-
+import image1 from "../../assets/images/image_gellery/image1.jpg"
+import image2 from "../../assets/images/image_gellery/image2.jpg"
+import image3 from "../../assets/images/image_gellery/image3.jpg"
+import image4 from "../../assets/images/image_gellery/image4.jpg"
+import image5 from "../../assets/images/image_gellery/image1.jpg"
+import image6 from "../../assets/images/image_gellery/image1.jpg"
 const images = [
     "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
     "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

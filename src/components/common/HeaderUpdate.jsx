@@ -185,7 +185,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/meeting-events" className="header-meeting">
+        <Link to="/main-meeting" className="header-meeting">
           Meeting&Events
         </Link>
       ),
