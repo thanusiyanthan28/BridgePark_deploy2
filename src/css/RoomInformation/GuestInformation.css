@@ -24,7 +24,7 @@
 .checkout-form {
   display: flex; 
   flex-direction: column; 
-  width: 400px; 
+  width: 600px; 
   margin: 0 auto; 
   padding: 20px; 
   border: none; 
@@ -37,7 +37,7 @@
 .checkout-form h2 {
   text-align: center; 
   margin-bottom: 20px; 
-  margin-left: -100px;
+  margin-left: -320px;
   color: #618e95;
 }
 
@@ -228,7 +228,7 @@
   }
   .checkout-form button {
      margin-top: 15px;
-    padding: 15px 130px;
+    padding: 15px 180px;
     margin-left: 20px; 
    }
   .cal-card {
@@ -270,7 +270,7 @@
     border: none; 
     border-top: 1px solid #ddd; 
     margin: 1px 0;
-    width: 380px;
+    width: 480px;
     margin-left: 20px;
   }
 }
@@ -280,27 +280,27 @@
     flex-direction: column;
     margin: 5px;
     overflow: hidden;
-    width: 1330px;
-    margin-left: -180px;
+    width: 1300px;
+    margin-left: 30px;
   
   }
   .checkout-form button {
      margin-top: 15px;
-    padding: 15px 170px;
-    margin-left: 45px; 
+    padding: 15px 280px;
+    margin-left: 20px; 
    }
   .checkout-form {
-    width: 1000px; 
+    width: 700px; 
     margin: 0 auto; 
     padding: 20px; 
-    margin-left: -120px; 
+    margin-left: 10px; 
     margin-top: 20px;
   }
   
   .checkout-form h2 {
     text-align: center; 
     margin-bottom: 20px; 
-    margin-right: 530px;
+    margin-right: 80px;
     color: #618e95;
   }
   .cal-card {
@@ -321,7 +321,7 @@
     border: none; 
     border-top: 1px solid #ddd; 
     margin: 1px 0;
-    width: 480px;
+    width: 680px;
     margin-left: 20px;
   }
 }
@@ -337,8 +337,8 @@
   }
   .checkout-form button {
      margin-top: 15px;
-    padding: 15px 170px;
-    margin-left: 45px; 
+    padding: 15px 230px;
+    margin-left: 20px; 
    }
   .checkout-form {
     width: 600px; 
@@ -351,7 +351,7 @@
   .checkout-form h2 {
     text-align: center; 
     margin-bottom: 20px; 
-    margin-right: 120px;
+    margin-left: -245px;
     color: #618e95;
   }
   .cal-card {
@@ -372,7 +372,7 @@
     border: none; 
     border-top: 1px solid #ddd; 
     margin: 1px 0;
-    width: 480px;
+    width: 580px;
     margin-left: 20px;
   }
 }
