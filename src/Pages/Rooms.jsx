@@ -10,6 +10,7 @@ const Rooms = () => {
       {/* <Header2 /> */}
       <div className="RoomsTypeFirstAlignment">
         <RoomType  />
+        
        
       </div>
     </>

@@ -17,6 +17,7 @@ import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
 import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
 import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
+import ResetPassword from "./components/User/ResetPassword";
 export default function App() {
   return (
     <div>
@@ -27,9 +28,6 @@ export default function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/SignUp" element={<SignUp />} />
-          
-          
-
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
@@ -40,6 +38,8 @@ export default function App() {
           <Route path="/main-meeting" element={<MainMeeting />} />
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
+          <Route path="/reset-password" element={ <ResetPassword />} />
+         
           
 
 

@@ -116,7 +116,7 @@ const SignIn = () => {
                 )}
               </div>
               <div className="signUpIn-forgotPassword">
-                <Link to="/ResetPassword">Forgot Password?</Link>
+                <Link to="/reset-password">Forgot Password?</Link>
               </div>
               <div className="signUpIn-SubmitContainor">
                 <div className="signUpIn-submit" onClick={handleSubmit}>
