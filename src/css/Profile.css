@@ -1,0 +1,76 @@
+.profile-avatar-container {
+    position: fixed;
+    top: 10px; 
+    right: 40px; 
+  }
+  
+  .profile-avatar {
+    background-color: #1890ff; 
+    font-size: 20px; 
+    cursor: pointer;
+  }
+.profile-custom-dropdown{
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
+}
+  .ant-popover {
+    width: 150px; 
+  }
+  
+  .ant-popover-inner-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ant-btn {
+    width: 100%;
+    text-align: left; 
+  }
+
+  .BeforeProfileBtn {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+
+/* Media queries for different screen sizes */
+@media (min-width: 576px) {
+  /* Small screen (sm) styles */
+  .profile-avatar {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium screen (md) styles */
+  .profile-avatar {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large screen (lg) styles */
+  .profile-avatar {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Extra large screen (xl) styles */
+  .profile-avatar {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1600px) {
+  /* Extra extra large screen (xxl) styles */
+  .profile-avatar {
+    font-size: 48px;
+  }
+}
+
+
+  
