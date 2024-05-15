@@ -13,6 +13,7 @@ import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 import SignIn from "./components/User/Login";
 import HomeRules from "./components/common/HomeRules"
 import SignUp from "./components/User/Register";
+import GuestInfo from "./components/common/GuestInformation";
 export default function App() {
   return (
     <div>
@@ -23,15 +24,13 @@ export default function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/SignUp" element={<SignUp />} />
-          
-          
-
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/BasicRoom" element={<BasicRoom/>}/>
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
+          <Route path="/guest-Info" element={<GuestInfo />} />
         </Routes>
         <Footer />
         
