@@ -16,6 +16,7 @@ import SignUp from "./components/User/Register";
 import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
 import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
 import Location from "./components/Location/Location";
+import GuestInfo from "./components/common/GuestInformation";
 export default function App() {
   return (
     <div>
@@ -38,6 +39,8 @@ export default function App() {
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
           <Route path="/main-meeting" element={<MainMeeting />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/guest-info" element={<GuestInfo />} />
+          
 
 
         </Routes>

@@ -17,7 +17,7 @@
 }
 .header-nav-bar-left .ant-menu-item{
   /* margin-right: 100px; */
-  gap: 30px;
+  /* gap: 30px; */
  }
 .header-button{
   color: white;
@@ -44,7 +44,7 @@
   
 }
 .header-button1{
-  width: 50px;
+  /* width: 50px; */
 }
 
 @media only screen and (max-width: 768px) {
