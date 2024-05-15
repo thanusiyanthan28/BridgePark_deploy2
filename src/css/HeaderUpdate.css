@@ -13,8 +13,12 @@
   
 }
 .header-nav-bar-left .ant-menu-item{
- width: 90px;
+
 }
+.header-nav-bar-left .ant-menu-item{
+  /* margin-right: 100px; */
+  gap: 30px;
+ }
 .header-button{
   color: white;
   background-color:#669399;

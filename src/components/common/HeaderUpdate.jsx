@@ -191,6 +191,14 @@ const HeaderUpdate = () => {
       ),
       key: 'Meeting & Events',
     },
+    {
+      label: (
+        <Link to="/location">
+          Location
+        </Link>
+      ),
+      key: 'Location',
+    },
   ];
   
   const itemsRight = [
