@@ -15,6 +15,7 @@ import HomeRules from "./components/common/HomeRules"
 import SignUp from "./components/User/Register";
 import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
 import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
+import Location from "./components/Location/Location";
 export default function App() {
   return (
     <div>
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/image-gallery" element={<ImageArray/>} />
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
           <Route path="/main-meeting" element={<MainMeeting />} />
+          <Route path="/location" element={<Location />} />
 
 
         </Routes>
