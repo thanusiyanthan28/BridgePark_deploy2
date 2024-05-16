@@ -18,6 +18,7 @@ import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
 import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
 import ResetPassword from "./components/User/ResetPassword";
+
 export default function App() {
   return (
     <div>
@@ -44,6 +45,7 @@ export default function App() {
 
 
         </Routes>
+        
         <Footer />
         
        
