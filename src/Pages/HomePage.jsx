@@ -10,7 +10,7 @@ export default function HomePage() {
     <>
       <Header />
       <About />
-      <Room />
+      {/* <Room /> */}
       <Facilities />
       <MeetingAndEvents />
     </>
