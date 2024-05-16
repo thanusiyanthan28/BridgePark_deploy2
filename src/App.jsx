@@ -22,6 +22,7 @@ import ResetPassword from "./components/User/ResetPassword";
 export default function App() {
   return (
     <div>
+      
       <Router>
       <HeaderUpdate />
         <Routes>
@@ -40,15 +41,9 @@ export default function App() {
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
-         
-          
-
-
         </Routes>
         
-        <Footer />
-        
-       
+        <Footer />  
       </Router>
       
     </div>
