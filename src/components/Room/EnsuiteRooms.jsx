@@ -38,7 +38,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="DOUBLE ENSUITE"
+            title="DOUBLE ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -52,7 +52,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TWIN ENSUITE"
+            title="TWIN ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -66,7 +66,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TRIPLE ENSUITE"
+            title="TRIPLE ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -82,7 +82,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="QUAD ENSUITE"
+            title="TRIPLE ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -96,7 +96,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="DOUBLE & BUNK ENSUITE"
+            title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -110,7 +110,7 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="EXECUTIVE KING ENSUITE"
+            title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -126,7 +126,21 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="CHAMBRE OF TWILIGHT"
+            title="EXECUTIVE KING ROOM WITH PRIVATE BATHROOM"
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            price="$200"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
+          />{" "}
+        </Col>
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img1}
+            title="CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
