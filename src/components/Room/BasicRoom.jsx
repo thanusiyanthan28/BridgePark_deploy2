@@ -3,9 +3,7 @@ import HotelRoomCard from "../../components/common/HotelRoomCard";
 import img1 from "../../assets/images/Loungebar 1.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
-import Header2 from "../common/Header2";
 import Card from "../common/Card";
-import Footer from "../common/Footer";
 import "../../css/BasicRoom.css";
 import RoomInfromation from "../home/RoomInformation";
 
@@ -23,9 +21,6 @@ const BasicRoom = () => {
   return (
     <div className="BasicRoom-containor">
       <div>
-        <Header2/>
-      </div>
-      <div>
         <Card/>
       </div>
       <div className="aboutContainer" style={{ textAlign: 'left' }}>
@@ -38,7 +33,7 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="SINGLE ROOM BASIC"
+            title="SINGLE ROOM WITH SHARED BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -52,7 +47,7 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="DOUBLE BASIC"
+            title="DOUBLE ROOM WITH SHARED BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -66,7 +61,7 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TRIPLE BASIC"
+            title="TWIN ROOM WITH SHARED BATHROOM"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -77,7 +72,22 @@ const BasicRoom = () => {
           />{" "}
         </Col>
       </Row>
-      
+      <Row className="hotelRoomMainRow">
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img1}
+            title="TRIPLE ROOM WITH SHARED BATHROOM"
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            price="$200"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
+          />{" "}
+        </Col> 
+      </Row> 
       <Modal
         visible={isModalVisible}
         onCancel={handleCancel}
