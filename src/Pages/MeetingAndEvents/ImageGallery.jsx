@@ -1,32 +1,39 @@
 import React, { useState, useRef } from 'react';
 import { Carousel } from 'antd';
 import './ImageGallery.css'; // Import the custom CSS file
+import image1 from "../../assets/images/image_gellery/image1.jpg"
+import image2 from "../../assets/images/image_gellery/image2.jpg"
+import image3 from "../../assets/images/image_gellery/image3.jpg"
+import image4 from "../../assets/images/image_gellery/image1.jpg"
+import image5 from "../../assets/images/image_gellery/image5.jpeg"
+import image6 from "../../assets/images/image_gellery/image6.jpg"
+import { height } from '@mui/system';
 
 const contentStyle = {
   margin: 'auto',
-  height: '450px',
   color: '#fff',
   lineHeight: '10px',
   textAlign: 'center',
   background: '#364d79',
-  width: '800px',
   borderRadius: '30px',
-  overflow: 'hidden', // Ensure content does not overflow the rounded corners
+  overflow: 'hidden',
+  objectFit: 'cover', // Ensure content does not overflow the rounded corners
 };
 
 const imagestyle = {
   width: '100%', // Make the image responsive
-  height: '100%', // Make the image responsive
   objectFit: 'cover', // Cover the entire area while maintaining aspect ratio
   borderRadius: '30px',
   transition: 'transform 0.5s ease-in-out', // Add transition for smooth animation
 };
 
 const images = [
-  'https://source.unsplash.com/random/800x450/?nature',
-  'https://source.unsplash.com/random/800x450/?city',
-  'https://source.unsplash.com/random/800x450/?technology',
-  'https://source.unsplash.com/random/800x450/?food',
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
 ];
 
 const ImageGallery = () => {
@@ -52,10 +59,11 @@ const ImageGallery = () => {
         style={contentStyle}
         beforeChange={handleSlideChange}
         dotPosition="none" // Hide default dots
+        className='content-wrapper'
       >
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} style={imagestyle} />
+            <img src={image} alt={`Slide ${index + 1}`} style={imagestyle}  className='image-gallery-photo'/>
           </div>
         ))}
       </Carousel>
