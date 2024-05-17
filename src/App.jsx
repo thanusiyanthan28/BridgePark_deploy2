@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/footer" element={<Footer />} />
         </Routes>
+       <Footer />
       </Router>
       
     </div>
