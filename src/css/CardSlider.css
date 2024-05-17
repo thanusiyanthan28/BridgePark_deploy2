@@ -1,13 +1,9 @@
-/* CardSlider.css */
-:root {
-  /* Set a default value */
-}
 
 .meeting-my-class {
   width: 100%;
   border: 1;
   /* background-color: tomato; */
-  padding: 5px;
+
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +19,9 @@
   display: flex;
   flex-direction: column; /* Ensure items stack vertically */
   position: relative; /* Required for absolute positioning */
+}
+.meeting-my-class2{
+
 }
 
 .meeting-my-class-title {
@@ -190,7 +189,7 @@ margin-top: 15%;
 .meeting-prev-btn {
   /* left: 50%; Position it at the center horizontally */
 
-  margin-left: 0px; /* Adjust to position it to the left of the center */
+  margin-left: 10px; /* Adjust to position it to the left of the center */
   margin-top: 0px; /* Adjust vertical positioning */
   z-index: 99999;
 }
