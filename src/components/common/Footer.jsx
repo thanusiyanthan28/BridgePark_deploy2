@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedinIn,faPinterest } from '@fortawesome/free-brands-svg-icons';
 
 import "../../css/Footer.css"; // CSS file for styling
 import logo from "../../assets/images/HotelLogo.png";
@@ -38,10 +38,11 @@ const Footer = () => {
         <div className='quick-social-media'>
         <p><b>Follow Us</b></p>
           <ul className="social-links">
-          <li><a href="https://instagram.com"><span><FontAwesomeIcon icon={faInstagram} /></span><span className="social-label">Instagram</span></a></li>
-          <li><a href="https://facebook.com"><span><FontAwesomeIcon icon={faFacebook} /></span><span className="social-label">Facebook</span></a></li>
-          <li><a href="https://twitter.com"><span><FontAwesomeIcon icon={faTwitter} /></span><span className="social-label">Twitter</span></a></li>
-          <li><a href="https://instagram.com"><span><FontAwesomeIcon icon={faYoutube} /></span><span className="social-label">Youtube</span></a></li>
+          <li><a href="https://www.instagram.com/bridgeparkhotellondon/"><span><FontAwesomeIcon icon={faInstagram} /></span><span className="social-label">Instagram</span></a></li>
+          <li><a href="https://www.facebook.com/bridgeparkhotellondon/"><span><FontAwesomeIcon icon={faFacebook} /></span><span className="social-label">Facebook</span></a></li>
+          <li><a href="https://twitter.com/bridgeparkuk"><span><FontAwesomeIcon icon={faTwitter} /></span><span className="social-label">Twitter</span></a></li>
+          <li><a href="https://www.linkedin.com/company/bridgeparkhotellondon"><span><FontAwesomeIcon icon={faLinkedinIn} /></span><span className="social-label">Linkedin</span></a></li>
+          <li><a href="https://www.pinterest.com/bridgeparkhotellondon/"><span><FontAwesomeIcon icon={faPinterest} /></span><span className="social-label">Pinterest</span></a></li>
         </ul>
         </div>
         </div>

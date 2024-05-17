@@ -7,7 +7,7 @@ import image3 from "../../assets/images/image_gellery/image3.jpg"
 import image4 from "../../assets/images/image_gellery/image1.jpg"
 import image5 from "../../assets/images/image_gellery/image5.jpeg"
 import image6 from "../../assets/images/image_gellery/image6.jpg"
-import { height } from '@mui/system';
+
 
 const contentStyle = {
   margin: 'auto',
