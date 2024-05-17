@@ -1,12 +1,13 @@
 import React from 'react'
 import MeetingAndEvents from './MeetingAndEvents'
-import ImageArray from './ImageArray'
+import ImageGallery from './ImageGallery'
+
+
 
 const MainMeeting = () => {
   return (
     <div>
-        <br />
-        <ImageArray />
+        <ImageGallery />
         <MeetingAndEvents />
         
     </div>

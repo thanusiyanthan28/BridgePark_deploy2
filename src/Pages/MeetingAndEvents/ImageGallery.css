@@ -1,69 +1,73 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"); */
-.App-header {
-  font-size: 1rem;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  padding-bottom: 2rem;
-}
-.carousel-title{
-  text-align: center;
-  color: black;
- 
-}
-.carousel-images {
-  position: relative;
-  border-radius: 10px;
-  height: 400px;
-  max-width: 650px;
-  margin: auto;
-  overflow: hidden;
-}
-.carousel-images img {
-  width: 99%;
-  height: 99%;
-  border-radius: 8px;
-  border: #669399 solid 2px;
-
+/* Hide the default dots */
+.ant-carousel .slick-dots {
+    display: none !important;
+  }
   
-}
+  .custom-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .indicator-line {
+    width: 50px;
+    height: 4px;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .indicator-line.active {
+    background-color: #1890ff;
+    transform: scale(1.2); /* Scale up the active indicator */
+  }
+  
+  .indicator-line:hover {
+    background-color: #1890ff;
+    transform: scale(1.2); /* Scale up the indicator on hover */
+  }
+  
+  .ant-carousel .slick-slide {
+    transition: transform 0.5s ease-in-out;
+  }
+  .image-gallery{
+    text-align: center;
 
-.slide_direction {
-  display: flex;
-  justify-content: space-between;
-}
-.left,
-.right {
-  background-color:#afc6c9;
-  color: #fff;
-  padding: 10px 8px 8px 13px;
-  margin: 0 20px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 10px;
-  height: 25px;
-  width: 25px;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
-}
-.carousel-indicator {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.dot {
-  background-color: #333;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-.active {
-  background-color: #669399;
-}
+  }
+  .image-gallery h1{
+    color: black;
+   font-size:25px;
+   margin-top: 5px;
 
+  }
+  
+  /* Optional: Add some keyframes for a more pronounced animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .ant-carousel .slick-slide {
+    animation: slideIn 0.5s forwards;
+  }
+/* Custom styles for the arrows on hover */
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  color: #1890ff; /* Change the color of the arrows on hover */
+  font-weight: bold;
+}
+  

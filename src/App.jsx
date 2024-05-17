@@ -13,11 +13,12 @@ import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 import SignIn from "./components/User/Login";
 import HomeRules from "./components/common/HomeRules"
 import SignUp from "./components/User/Register";
-import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
+// import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
 import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
 import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
 import ResetPassword from "./components/User/ResetPassword";
+import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 export default function App() {
   return (
@@ -35,15 +36,17 @@ export default function App() {
           <Route path="/footer" element={<Footer />} />
           <Route path="/BasicRoom" element={<BasicRoom/>}/>
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
-          <Route path="/image-gallery" element={<ImageArray/>} />
+          {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
           <Route path="/main-meeting" element={<MainMeeting />} />
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
+       
+          <Route path="/image-gallery" element={ <ImageGallery />} />
         </Routes>
-        
-        <Footer />  
+       
+        <Footer />
       </Router>
       
     </div>
