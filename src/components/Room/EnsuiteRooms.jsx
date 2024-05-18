@@ -34,7 +34,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="DOUBLE ROOM WITH PRIVATE BATHROOM"
+            // title="DOUBLE ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
