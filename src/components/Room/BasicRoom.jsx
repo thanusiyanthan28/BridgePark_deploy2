@@ -6,6 +6,8 @@ import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/BasicRoom.css";
 import RoomInfromation from "../home/RoomInformation";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed, faPerson } from '@fortawesome/free-solid-svg-icons';
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -33,7 +35,7 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="SINGLE ROOM WITH SHARED BATHROOM"
+            title={<>SINGLE ROOM WITH SHARED BATHROOM <FontAwesomeIcon icon={faBed} /> <FontAwesomeIcon icon={faPerson} /></>}
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
