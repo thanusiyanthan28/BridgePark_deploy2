@@ -5,7 +5,6 @@ import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
-import Hearder2 from "../common/Header2";
 import RoomInfromation from "../home/RoomInformation";
 
 const EnsuiteRoom = () => {
@@ -21,9 +20,6 @@ const EnsuiteRoom = () => {
 
   return (
     <div className="EnsuiteRoom-container">
-      <div>
-        <Hearder2/>
-      </div>
       <div>
         <Card/>
       </div>

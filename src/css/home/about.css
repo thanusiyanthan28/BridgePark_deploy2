@@ -47,6 +47,9 @@
   .aboutContainer {
     height: auto;
   }
+  .abContainer{
+    width: 95%;
+  }
 
   .aboutTextWrapper {
     margin-top: 30px; 

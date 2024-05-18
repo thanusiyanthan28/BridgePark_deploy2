@@ -7,8 +7,10 @@ import RoomInformation from "./RoomInformation";
 
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedRoom, setSelectedRoom] = useState(null);
 
-  const handleViewMoreClick = () => {
+  const handleViewMoreClick = (room) => {
+    setSelectedRoom(room);
     setIsModalVisible(true);
   };
 
@@ -17,7 +19,7 @@ const Room = () => {
   };
 
   return (
-    <div>
+    <div className="rooms-main-contaner">
       <div className="aboutContainer">
         <div className="aboutTextWrapper">
           <h1 className="aboutH1">OUR ROOMS</h1>
@@ -43,7 +45,10 @@ const Room = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Single Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
         <Col span={8}>
@@ -57,7 +62,10 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Luxury Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
         <Col span={8}>
@@ -71,7 +79,10 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Luxury Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
       </Row>
@@ -87,7 +98,10 @@ const Room = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Single Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
         <Col span={8}>
@@ -101,7 +115,10 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Luxury Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
         <Col span={8}>
@@ -115,7 +132,10 @@ const Room = () => {
             price="$200 per night"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            onViewMoreClick={() => handleViewMoreClick({
+              title: "Luxury Room",
+              description: "Spacious room with a breathtaking view",
+            })}
           />{" "}
         </Col>
       </Row>
@@ -125,7 +145,7 @@ const Room = () => {
         footer={null}
         width="80%"
       >
-        <RoomInformation />
+        <RoomInformation room={selectedRoom}/>
       </Modal>
     </div>
   );
