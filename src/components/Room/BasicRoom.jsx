@@ -8,6 +8,8 @@ import "../../css/BasicRoom.css";
 import RoomInfromation from "../home/RoomInformation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faPerson } from '@fortawesome/free-solid-svg-icons';
+import personIcon from "../../assets/icons/two.png";
+import bedIcon from "../../assets/icons/rest.png";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -35,7 +37,13 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title={<>SINGLE ROOM WITH SHARED BATHROOM <FontAwesomeIcon icon={faBed} /> <FontAwesomeIcon icon={faPerson} /></>}
+            // title=SINGLE ROOM WITH SHARED BATHROOM  
+            title={
+              <>
+                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -49,7 +57,13 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="DOUBLE ROOM WITH SHARED BATHROOM"
+            // title="DOUBLE ROOM WITH SHARED BATHROOM"
+            title={
+              <>
+                DOUBLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -63,13 +77,19 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TWIN ROOM WITH SHARED BATHROOM"
+            // title="TWIN ROOM WITH SHARED BATHROOM"
+            title={
+              <>
+                TWIN ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
             price="$200 per night"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="2x single bed"
             onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
@@ -79,13 +99,19 @@ const BasicRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TRIPLE ROOM WITH SHARED BATHROOM"
+            // title="TRIPLE ROOM WITH SHARED BATHROOM"
+            title={
+              <>
+                TRIPLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
             price="$200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="3x single bed"
             onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col> 
