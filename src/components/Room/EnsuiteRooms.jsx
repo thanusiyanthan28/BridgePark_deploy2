@@ -6,7 +6,8 @@ import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
 import RoomInfromation from "../home/RoomInformation";
-import 
+import personIcon from "../../assets/icons/two.png";
+import bedIcon from "../../assets/icons/rest.png";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -38,7 +39,7 @@ const EnsuiteRoom = () => {
             // title="DOUBLE ROOM WITH PRIVATE BATHROOM"
             title={
               <>
-                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                DOUBLE ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
                 <img src={bedIcon} alt="Bed Icon" className="room-icon" />
               </>
             }
@@ -55,7 +56,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TWIN ROOM WITH PRIVATE BATHROOM"
+            // title="TWIN ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                TWIN ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -69,13 +76,19 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TRIPLE ROOM WITH PRIVATE BATHROOM"
+            // title="TRIPLE ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                TRIPLE ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
             price="$200 per night"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="3x single bed"
             onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
@@ -85,7 +98,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="TRIPLE ROOM WITH PRIVATE BATHROOM"
+            // title="TRIPLE ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                TRIPLE ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -99,13 +118,19 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
+            // title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                QUADUPLE ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
             price="$200 per night"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="2x single bed"
             onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
@@ -113,7 +138,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
+            // title="QUADUPLE ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                QUADUPLE ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -129,7 +160,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="EXECUTIVE KING ROOM WITH PRIVATE BATHROOM"
+            // title="EXECUTIVE KING ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                EXECUTIVE KING ROOM WITH PRIVATE BATHROOM <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
@@ -143,7 +180,13 @@ const EnsuiteRoom = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM"
+            // title="CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM"
+            title={
+              <>
+                CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+              </>
+            }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
