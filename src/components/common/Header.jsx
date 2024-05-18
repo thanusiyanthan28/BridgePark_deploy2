@@ -7,11 +7,12 @@ import Card from "./Card";
 import { Row } from "antd";
 import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.jpg";
+import SiteCard from "../Sitecard/siteCard";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const handleClick = () => {
     console.log("button clicked");
   };
@@ -41,17 +42,16 @@ const Header = () => {
   };
   return (
     <div className="head-main">
+     {isMobile ? <div className="home-sitecard"><SiteCard /></div> :null}
       <div className="hero-container">
-   
             <div className="headerLogoPosition">
             <img src={logo} alt="Logo" className="headerLogo" />
-            </div>
-
-        <div className="heading-container">
+      </div>
+      <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
-          <h1 className="heading2">PARK HOTEL</h1>
-        </div>
-        <Card title="Card Title 2" description="Description for Card 2" />
+          <h1 className="heading2">PARK HOTEL</h1>    
+      </div >
+        {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> :null}
       </div>
     </div>
   );

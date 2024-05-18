@@ -19,7 +19,7 @@ const Room = () => {
   };
 
   return (
-    <div>
+    <div className="rooms-main-contaner">
       <div className="aboutContainer">
         <div className="aboutTextWrapper">
           <h1 className="aboutH1">OUR ROOMS</h1>
