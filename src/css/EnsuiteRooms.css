@@ -10,6 +10,7 @@
     align-items: center;
     width: 70%;
     height: 50px;
+    margin-top: 50px;
   }
   .card-body{
     border-radius: 15px;
