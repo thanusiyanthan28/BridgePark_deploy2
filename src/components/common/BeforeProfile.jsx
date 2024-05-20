@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { AntDesignOutlined } from '@ant-design/icons';
 import { Avatar, Space, Popover, Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import '../../css/Profile.css'; 
 
 const BeforeProfile = () => {
-  const [popoverVisible, setPopoverVisible] = useState(false); // State to manage the visibility of the popover
+  const [popoverVisible, setPopoverVisible] = useState(false); 
+  const navigate = useNavigate();
 
   const handleAvatarClick = () => {
-    setPopoverVisible(!popoverVisible); // Toggle the visibility of the popover
+    setPopoverVisible(!popoverVisible);
   };
 
   const handleSignIn = () => {
-    // Add your logic for signing in
+    navigate('/sign-in');
     console.log('Sign In clicked');
   };
 
   const handleSignUp = () => {
-    // Add your logic for signing upgit
+    navigate('/sign-up');
     console.log('Sign Up clicked');
   };
 
