@@ -185,11 +185,19 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/meeting-events" className="header-meeting">
+        <Link to="/main-meeting" className="header-meeting">
           Meeting&Events
         </Link>
       ),
       key: 'Meeting & Events',
+    },
+    {
+      label: (
+        <Link to="/location">
+          Location
+        </Link>
+      ),
+      key: 'Location',
     },
   ];
   
@@ -213,7 +221,7 @@ const HeaderUpdate = () => {
       </button>
       ) : (
         <button  onClick={handleLogin} className='header-button'>
-          <Link to="/" className='header-book-sign'>
+          <Link to="/SignIn" className='header-book-sign'>
             LogIn/SignUp
           </Link>
         </button>   

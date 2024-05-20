@@ -8,6 +8,7 @@ import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fort
 import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
+import SiteCard from "../Sitecard/siteCard";
 
 const RoomInformation = ({room}) => {
   const sec01Ref = useRef(null);
@@ -54,6 +55,9 @@ const RoomInformation = ({room}) => {
 
   return (
     <div>
+        <div className="site-card-room">
+        <SiteCard />
+        </div>
       <div className="The-header">
         <Row className="RoomInformation-section-All">
           <div
@@ -91,12 +95,13 @@ const RoomInformation = ({room}) => {
         </Row>
       </div>
 
-      <div className="sec-01" ref={sec01Ref}>
+      
         <Row>
           <Col span={24}>
             <img src={img1} className="RoomInformationCardImage" alt="Room" />
           </Col>
         </Row>
+        <div className="sec-01" ref={sec01Ref}>
         <Row>
           <Col span={16}>
             <div>
