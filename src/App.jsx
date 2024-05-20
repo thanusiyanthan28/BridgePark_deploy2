@@ -19,7 +19,8 @@ import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
 import ResetPassword from "./components/User/ResetPassword";
 import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
-import ImageSlider1 from "./Pages/MeetingAndEvents/ImageSlider1";
+
+
 
 export default function App() {
   return (
@@ -27,6 +28,9 @@ export default function App() {
       
       <Router>
       <HeaderUpdate />
+
+        
+    
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
