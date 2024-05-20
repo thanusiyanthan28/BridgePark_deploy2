@@ -50,5 +50,28 @@
   height: 20px; 
   margin-left: 20px;
   margin-top: 10px;
+}
+.rooms-icon{
+  width: 20px; 
+  height: 20px; 
+  margin-left: 20px;
+  /* margin-top: 10px; */
+  display: block;
 } 
-  
+.room-icons{
+  width: 20px; 
+  height: 20px;
+  display: flex;
+  margin-top: -20px;
+  margin-left: 60px;
+}
+.hotelRoomTypeCardInfoRow{
+  margin-top: -20px;
+}
+.hotelRoomTypeCardImage {
+  flex: 1; /* Take up 50% of the height */
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+} 
