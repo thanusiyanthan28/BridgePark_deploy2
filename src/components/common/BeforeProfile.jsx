@@ -13,12 +13,12 @@ const BeforeProfile = () => {
   };
 
   const handleSignIn = () => {
-    navigate('/sign-in');
+    navigate('/SignIn');
     console.log('Sign In clicked');
   };
 
   const handleSignUp = () => {
-    navigate('/sign-up');
+    navigate('/SignUp');
     console.log('Sign Up clicked');
   };
 

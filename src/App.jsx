@@ -11,12 +11,19 @@ import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
 import HomeRules from "./components/common/HomeRules"
+import Profile from './components/common/Profile';
+import Location from './components/Location/Location';
+import GuestInfo from './components/common/GuestInformation';
+import ResetPassword from './components/User/ResetPassword';
+import ImageGallery from './components/common/ImageGallery';
+
+
 export default function App() {
   return (
     <div>
       
       <Router>
-        {/* <HeaderUpdate /> */}
+        <HeaderUpdate />
         <Routes>
           <Route path="/profile" element={<Profile />} />
           {/* <Route path="/beforeProfile" element={<BeforeProfile />} /> */}
@@ -30,7 +37,7 @@ export default function App() {
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
           {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
-          <Route path="/main-meeting" element={<MainMeeting />} />
+          {/* <Route path="/main-meeting" element={<MainMeeting />} /> */}
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
