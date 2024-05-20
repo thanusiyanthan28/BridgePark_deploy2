@@ -19,8 +19,8 @@ export default function App() {
       <Router>
         {/* <HeaderUpdate /> */}
         <Routes>
-          {/* <Route path="/profile" element={<Profile />} /> */}
-          <Route path="/beforeProfile" element={<BeforeProfile />} />
+          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/beforeProfile" element={<BeforeProfile />} /> */}
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
