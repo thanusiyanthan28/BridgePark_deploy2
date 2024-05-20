@@ -7,6 +7,7 @@ import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
 
 import Facilities from "./Pages/Facilities";
 import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
+import ImageSlider1 from "./Pages/MeetingAndEvents/ImageSlider1";
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
       
 
       <Router>
+        <ImageSlider1 />
+    
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
