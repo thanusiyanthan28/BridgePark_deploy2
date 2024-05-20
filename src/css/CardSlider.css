@@ -76,7 +76,7 @@
   opacity: 1;
   border-radius: 10px;
   z-index: 9999;
-  transform: scale(1.1);
+  transform: scale(1);
 
   
 
@@ -96,7 +96,7 @@
 
 }
 .meeting-card.meeting-active:hover {
-  transform: scale(1.11);
+  transform: scale(1);
   transition: transform 0.4s ease; 
 
 

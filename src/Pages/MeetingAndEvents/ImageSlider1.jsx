@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect,useRef } from 'react';
 import './ImageSlider1.css';
-import  Icon from 'antd';
-import { RightOutlined ,LeftOutlined} from '@ant-design/icons';
+import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import image1 from "../../assets/images/image_gellery/image1.jpg";
 import image2 from "../../assets/images/image_gellery/image2.jpg";
 import image3 from "../../assets/images/image_gellery/image3.jpg";
@@ -18,28 +17,70 @@ const ImageSlider1 = () => {
     image5,
     image6,
   ];
-  const [index, setIndex] = useState(images.length - 3);
 
+  const [startIndex, setStartIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768 ); 
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Update isMobile state on window resize
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const handleNext = () => {
-    if (index < images.length - 3) {
-      setIndex(index + 1);
-    }
+    // Calculate the next start index with cyclic rotation
+    setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const handlePrev = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
+    // Calculate the previous start index with cyclic rotation
+    setStartIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); // Auto slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, ); 
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
   };
 
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      handleNext();
+    }
+
+    if (touchEndX.current - touchStartX.current > 50) {
+      handlePrev();
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+
   return (
-    <div className="image-galley-slider-container">
-      <h1 className='image-galley-title'>Image Gallery</h1>
+    <div className="image-galley-slider-container" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+      <h2 className='image-galley-title'>Image Gallery</h2>
       <div className="image-galley-arrow image-galley-left" onClick={handlePrev}><LeftOutlined style={{ fontSize: 25, color: '#08c' }}/></div>
       <div className="image-galley-slider">
-        {images.slice(index, index + 3).map((image, i) => (
+        {[...images, ...images, ...images].slice(startIndex, startIndex + 3).map((image, i) => (
           <div key={i} className={`image-galley-slider-image-wrapper image-galley-size-${i + 1}`}>
-            <img src={image} alt={`image-galley-Slide ${index + i}`} className="image-galley-slider-image" />
+            <img src={image} alt={`image-galley-Slide ${startIndex + i}`} className="image-galley-slider-image" />
           </div>
         ))}
       </div>

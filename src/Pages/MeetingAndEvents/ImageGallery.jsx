@@ -48,6 +48,7 @@ const ImageGallery = () => {
     carouselRef.current.goTo(index);
     setCurrentSlide(index); // Update the indicator immediately
   };
+  
 
   return (
     <div className='image-gallery'>
