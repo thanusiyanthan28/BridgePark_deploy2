@@ -120,6 +120,12 @@
 .columnlist{
   margin-left: -180px;
 }
+.site-card-room {
+  position: absolute;
+  top: 280px;
+  right: 70px;
+  z-index: 999; /* Ensure it's above other content */
+}
 
 @media (max-width: 435px) {
   .RoomInformationCardImage {
@@ -273,20 +279,20 @@
   }
   .RoomInformation-headings{
     font-size: 22px;
-    margin-left: 100px;
+    margin-left: 10px;
   }
   .RoomInformation-subHeadings {
     text-transform: uppercase;
-    margin-left: 100px;
+    margin-left: 10px;
   }
   .RoomInformation-main-container{
     display: flex;
-    margin-left: 100px;
+    margin-left: 10px;
   }
   .RoomInformation-textP {
     font-size: 12px;
-    width: 120%;
-    margin-left: 100px;
+    width: 100%;
+    margin-left: 10px;
   }
   .facilitieshidebutton1{
     margin-left: 240px;
@@ -305,6 +311,12 @@
     margin-left: 0px;
     font-size: 10px;
     margin-bottom: -50px;
+  }
+  .site-card-room {
+    position: absolute;
+    top: 280px;
+    right: 40px;
+    z-index: 999; /* Ensure it's above other content */
   }
 }
 @media only screen and (min-width:769px) and (max-width:1024px){
