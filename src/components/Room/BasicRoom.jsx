@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
-import img1 from "../../assets/images/Loungebar 1.jpg";
+import img1 from "../../assets/images/SingleRoomwithSharedBathroom.jpg";
+// import img2 from "../../assets/images/Loungebar 1.jpg";
+import img2 from "../../assets/images/DoubleEnsuite.jpg";
+import img3 from "../../assets/images/TwinRoom.jpg";
+import img4 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/BasicRoom.css";
 import RoomInfromation from "../home/RoomInformation";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faPerson } from '@fortawesome/free-solid-svg-icons';
-import personIcon from "../../assets/icons/two.png";
-import bedIcon from "../../assets/icons/rest.png";
+import personIcon2 from "../../assets/icons/two.png";
+import bedIcon2 from "../../assets/icons/rest.png";
+import bedIcon1 from "../../assets/icons/bed.png";
+import personIcon1 from "../../assets/icons/people.png";
+import personIcon3 from "../../assets/icons/Three.png";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -40,8 +45,8 @@ const BasicRoom = () => {
             // title=SINGLE ROOM WITH SHARED BATHROOM  
             title={
               <>
-                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon1} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon1} alt="Bed Icon" className="room-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -56,38 +61,38 @@ const BasicRoom = () => {
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            // title="DOUBLE ROOM WITH SHARED BATHROOM"
+            imageSource={img2}
+            // title=DOUBLE ROOM WITH SHARED BATHROOM  
             title={
               <>
-                DOUBLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+                DOUBLE ROOM WITH SHARED BATHROOM  <img src={personIcon2} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="$200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="1x double bed"
             onViewMoreClick={handleViewMoreClick}
           />{" "}
         </Col>
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            // title="TWIN ROOM WITH SHARED BATHROOM"
+            imageSource={img3}
+            // title=TWIN ROOM WITH SHARED BATHROOM  
             title={
               <>
-                TWIN ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+                TWIN ROOM WITH SHARED BATHROOM  <img src={personIcon2} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="$200"
             buttonText="Book Now"
             cardtitle="2x single bed"
             onViewMoreClick={handleViewMoreClick}
@@ -98,12 +103,12 @@ const BasicRoom = () => {
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
+            imageSource={img4}
             // title="TRIPLE ROOM WITH SHARED BATHROOM"
             title={
               <>
-                TRIPLE ROOM WITH SHARED BATHROOM  <img src={personIcon} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon} alt="Bed Icon" className="room-icon" />
+                TRIPLE ROOM WITH SHARED BATHROOM  <img src={personIcon3} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"

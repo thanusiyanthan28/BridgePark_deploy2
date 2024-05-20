@@ -20,11 +20,11 @@ const HotelRoomCard = ({
       <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
       <div className="hotelRoomCardDetails">
         <Row className="hotelRoomCardTitleTextFirst">
-          <Col span={12}>
+          <Col span={13}>
             {" "}
             <h2 className="hotelRoomCardTitle">{title}</h2>
           </Col>
-          <Col span={12}>
+          <Col span={11}>
             {" "}
             <div className="hotelRoomViewMoreLink" onClick={onViewMoreClick}>
               View More

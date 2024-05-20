@@ -82,7 +82,7 @@
   background-color: #ffffffc2;
   flex: 1;
   position: absolute;
-  top: -30px;
+  /* top: -30px; */
   padding-left: 10px;
   padding-right: 160px;
   color: #000;
