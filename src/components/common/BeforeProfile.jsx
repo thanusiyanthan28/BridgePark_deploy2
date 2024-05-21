@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { AntDesignOutlined } from '@ant-design/icons';
-import { Avatar, Space, Popover, Button } from 'antd';
-import { useNavigate } from 'react-router-dom';
-import '../../css/Profile.css'; 
+import React, { useState } from "react";
+import { AntDesignOutlined } from "@ant-design/icons";
+import { Avatar, Space, Popover, Button } from "antd";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../../css/Profile.css";
 
 const BeforeProfile = () => {
-  const [popoverVisible, setPopoverVisible] = useState(false); 
+  const [popoverVisible, setPopoverVisible] = useState(false);
   const navigate = useNavigate();
 
   const handleAvatarClick = () => {
@@ -13,19 +14,23 @@ const BeforeProfile = () => {
   };
 
   const handleSignIn = () => {
-    navigate('/SignIn');
-    console.log('Sign In clicked');
+    // navigate('/SignIn');
+    console.log("Sign In clicked");
   };
 
   const handleSignUp = () => {
-    navigate('/SignUp');
-    console.log('Sign Up clicked');
+    // navigate('/SignUp');
+    console.log("Sign Up clicked");
   };
 
   const content = (
     <Space direction="vertical">
-      <Button type="text" onClick={handleSignIn} className="BeforeProfileBtn">Sign In</Button>
-      <Button type="text" onClick={handleSignUp} className="BeforeProfileBtn">Sign Up</Button>
+      <Link to="/SignIn" className="BeforeProfileBtn">
+        Sign In
+      </Link>
+      <Link to="/SignUp" className="BeforeProfileBtn">
+        Sign Up
+      </Link>
     </Space>
   );
 
@@ -39,10 +44,7 @@ const BeforeProfile = () => {
           onVisibleChange={setPopoverVisible}
         >
           <span onClick={handleAvatarClick}>
-            <Avatar
-              className="profile-avatar"
-              icon={<AntDesignOutlined />}
-            />
+            <Avatar className="profile-avatar" icon={<AntDesignOutlined />} />
           </span>
         </Popover>
       </Space>

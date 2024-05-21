@@ -16,6 +16,7 @@ import Location from './components/Location/Location';
 import GuestInfo from './components/common/GuestInformation';
 import ResetPassword from './components/User/ResetPassword';
 import ImageGallery from './components/common/ImageGallery';
+import BeforeProfile from "./components/common/BeforeProfile";
 
 
 export default function App() {
@@ -25,8 +26,8 @@ export default function App() {
       <Router>
         <HeaderUpdate />
         <Routes>
-          <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/beforeProfile" element={<BeforeProfile />} /> */}
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          <Route path="/beforeProfile" element={<BeforeProfile />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
