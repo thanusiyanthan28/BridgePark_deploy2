@@ -48,11 +48,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .header-update {
-   
-    
- 
-  }
   .header-nav-bar-left .ant-menu-item,
   .header-nav-bar-right .ant-menu-item{
      display: none;

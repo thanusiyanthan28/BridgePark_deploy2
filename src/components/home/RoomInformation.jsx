@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
-import Button from "../common/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
@@ -104,7 +103,7 @@ const RoomInformation = ({room}) => {
         <div className="sec-01" ref={sec01Ref}>
         <Row>
           <Col span={16}>
-            <div>
+            <div className="Add-card-position">
               <h2 className="RoomInformation-headings">Room Information</h2>
             </div>
             <div>
