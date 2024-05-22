@@ -1,18 +1,68 @@
 import React, { useState } from 'react';
-import { AntDesignOutlined,ProfileOutlined,BellOutlined,SecurityScanOutlined,LoginOutlined } from '@ant-design/icons';
-import { Avatar, Badge, Space, Dropdown, Menu } from 'antd'; // Import Dropdown and Menu components
-import '../../css/Profile.css'; 
+import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
+import { AntDesignOutlined, ProfileOutlined, BellOutlined, SecurityScanOutlined, LoginOutlined } from '@ant-design/icons';
+import { Avatar, Badge, Space, Dropdown, Menu, Button } from 'antd';
+import '../../css/Profile.css';
 
-const Profile = () => {
-  const [menuVisible, setMenuVisible] = useState(false); // State to manage the visibility of the dropdown menu
+const [cookies, setCookie, removeCookie] = useCookies(['user']);
+const [isLoggedIn, setIsLoggedIn] = useState(!!cookies.user);
+
+const handleLogin = () => {
+  setCookie('user', 'John Doe', { path: '/' });
+  setIsLoggedIn(true);
+};
+
+const handleLogout = () => {
+  removeCookie('user');
+  setIsLoggedIn(false);
+};
+
+const BeforeProfile = () => {
+  const [popoverVisible, setPopoverVisible] = useState(false);
+  const navigate = useNavigate();
 
   const handleAvatarClick = () => {
-    setMenuVisible(!menuVisible); // Toggle the visibility of the dropdown menu
+    setPopoverVisible(!popoverVisible);
+  };
+
+  const content = (
+    <Space direction="vertical">
+      <Button onClick={handleLogin} className="BeforeProfileBtn">
+        Sign In
+      </Button>
+      <Button onClick={() => {}} className="BeforeProfileBtn">
+        Sign Up
+      </Button>
+    </Space>
+  );
+
+  return (
+    <div className="profile-avatar-container">
+      <Space>
+        <Dropdown overlay={content} visible={popoverVisible} placement="bottomRight" trigger={['click']}>
+          <span onClick={handleAvatarClick}>
+            <Avatar
+              className="profile-avatar"
+              icon={<AntDesignOutlined />}
+            />
+          </span>
+        </Dropdown>
+      </Space>
+    </div>
+  );
+};
+
+const CustomProfile = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleAvatarClick = () => {
+    setMenuVisible(!menuVisible);
   };
 
   const handleMenuClick = (e) => {
     console.log('Menu item clicked:', e);
-    setMenuVisible(false); // Close the dropdown menu when a menu item is clicked
+    setMenuVisible(false);
   };
 
   const items = [
@@ -30,7 +80,6 @@ const Profile = () => {
       label: 'Help',
       key: '3',
       icon: <SecurityScanOutlined />,
-      
     },
     {
       label: 'Logout',
@@ -57,14 +106,6 @@ const Profile = () => {
             <Badge size="small" count={1}>
               <Avatar
                 className="profile-avatar"
-                // size={{
-                //   xs: 20,
-                //   sm: 24,
-                //   md: 32,
-                //   lg: 40,
-                //   xl: 48,
-                //   xxl: 64,
-                // }}
                 icon={<AntDesignOutlined />}
               />
             </Badge>
@@ -75,6 +116,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
-
-
+export default CustomProfile;
