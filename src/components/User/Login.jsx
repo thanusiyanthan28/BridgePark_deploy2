@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext,} from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import ResetPassword from './ResetPassword';
 import { Routes } from 'react-router-dom';
+
 
 
 const SignIn = () => {
@@ -20,6 +21,9 @@ const SignIn = () => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState("fa-eye");
   const [successMessage, setSuccessMessage] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -40,15 +44,38 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post("/api/login", {
-        name,
-        email,
-        password,
-      });
+    // try {
+    //   const response = await axios.post("/api/login", {
+    //     name,
+    //     email,
+    //     password,
+    //   });
 
-      if (response.data.success) {
+    //   if (response.data.success) {
+    //     setSuccessMessage("Logged in successfully");
+    //     setIsLoggedIn(true);
+    //     navigate("/");
+    //   } else {
+    //     setErrors({ message: "Invalid email or password" });
+    //   }
+    // } catch (error) {
+    //   console.error("Login failed", error);
+    //   setErrors({ message: "Invalid email or password" });
+    // }
+    const mockResponse = {
+      data: {
+        success: true // Assuming login is successful
+      }
+    };
+    
+    try {
+      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (mockResponse.data.success) {
         setSuccessMessage("Logged in successfully");
+        console.log("Setting isLoggedIn to true");
+        setIsLoggedIn(true);
+        navigate("/");
       } else {
         setErrors({ message: "Invalid email or password" });
       }

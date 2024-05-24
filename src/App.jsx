@@ -11,6 +11,8 @@ import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
 import HomeRules from "./components/common/HomeRules"
+import Profile from "./components/common/Profile";
+import SignIn from "./components/User/Login";
 import SignUp from "./components/User/Register";
 // import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
 import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
@@ -18,6 +20,8 @@ import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
 import ResetPassword from "./components/User/ResetPassword";
 import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
+
+import SiteCard from "./components/Sitecard/siteCard";
 
 export default function App() {
   return (
@@ -27,6 +31,8 @@ export default function App() {
       <HeaderUpdate />
         <Routes>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
          
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />

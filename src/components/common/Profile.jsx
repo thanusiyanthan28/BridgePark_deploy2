@@ -13,6 +13,7 @@ const Profile = () => {
   const handleLogin = () => {
     setIsLoggedIn(true);
     setShowButtons(false);
+    console.log("User logged in successfully");
   };
 
   const handleLogout = () => {
@@ -55,7 +56,7 @@ const Profile = () => {
             {showButtons && (
               <div className="buttons-container">
                 <Space direction="vertical">
-                  <Link to="/SignIn">
+                <Link to="/SignIn">
                     <Button onClick={handleLogin} className="custom-button">Sign In</Button>
                   </Link>
                   <Link to="/SignUp">
@@ -75,6 +76,7 @@ const Profile = () => {
           </Dropdown>
         )}
       </div>
+      {console.log("isLoggedIn:", isLoggedIn)}
     </div>
   );
 };
