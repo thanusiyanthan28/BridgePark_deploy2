@@ -4,13 +4,13 @@
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 150px;
+    margin-left: 10px;
   }
   
   .facilitiesrow1 {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 65%;
     margin-bottom: 20px; 
     box-shadow: none;
   }
@@ -46,8 +46,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40%;
-    font-size: 12px;
+    height: 50%;
+    font-size: 11px;
     font-family: 'Lato', sans-serif;
     margin-bottom: 15px;
   }
@@ -122,13 +122,13 @@
       justify-content: space-between;
       margin-top: 10px;
       margin-bottom: 10px;
-      margin-left: 150px;
+      margin-left: 10px;
     }
     
     .facilitiesrow1 {
       display: flex;
       justify-content: space-between;
-      width: 80%;
+      width: 65%;
       margin-bottom: 20px; 
     }
     
@@ -139,26 +139,26 @@
       border-radius: 5px;
       width: calc(50% - 20px);
       transition: transform 0.3s ease, box-shadow 0.5s ease;
-      height: 120px;
+      height: 110px;
       background-color: #ffffff;
      
     }
   }
-  @media only screen and (min-width: 1030px) and (max-width: 1366px)
+  @media only screen and (min-width: 1030px) and (max-width: 1369px)
   {
     .facilitiescontainer1 {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 10px;
+      margin-top: 50px;
       margin-bottom: 10px;
-      margin-left: 120px;
+      margin-left: 10px;
     }
     
     .facilitiesrow1 {
       display: flex;
       justify-content: space-between;
-      width: 85%;
+      width: 70%;
       margin-bottom: 20px;
     }
     
@@ -169,7 +169,7 @@
       border-radius: 5px;
       width: calc(50% - 20px);
       transition: transform 0.3s ease, box-shadow 0.5s ease;
-      height: 120px;
+      height: 110px;
       background-color: #ffffff;
      
     }
@@ -181,7 +181,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 10px;
+      margin-top: 100px;
       margin-bottom: 10px;
       margin-left: 10px;
     }

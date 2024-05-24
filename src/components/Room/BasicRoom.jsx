@@ -18,8 +18,10 @@ import personIcon3 from "../../assets/icons/Three.png";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedRoom, setSelectedRoom] = useState(null);
 
-  const handleViewMoreClick = () => {
+  const handleViewMoreClick = (room) => {
+    setSelectedRoom(room);
     setIsModalVisible(true);
   };
 
@@ -127,7 +129,7 @@ const BasicRoom = () => {
         footer={null}
         width="80%"
       >
-        <RoomInfromation/>
+        <RoomInfromation room={selectedRoom}/>
       </Modal>
       
     </div>
