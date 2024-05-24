@@ -11,20 +11,20 @@ import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
 import HomeRules from "./components/common/HomeRules"
-import Profile from './components/common/Profile';
-import Location from './components/Location/Location';
-import GuestInfo from './components/common/GuestInformation';
-import ResetPassword from './components/User/ResetPassword';
-import ImageGallery from './components/common/ImageGallery';
-
-
+import SignUp from "./components/User/Register";
+// import ImageArray from "./Pages/MeetingAndEvents/ImageArray";
+import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
+import Location from "./components/Location/Location";
+import GuestInfo from "./components/common/GuestInformation";
+import ResetPassword from "./components/User/ResetPassword";
+import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 export default function App() {
   return (
     <div>
       
       <Router>
-        <HeaderUpdate />
+      <HeaderUpdate />
         <Routes>
           <Route path="/profile" element={<Profile />} />
          
@@ -42,6 +42,7 @@ export default function App() {
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
+          <Route path="/room-card" element={ <SiteCard />} />
        
           <Route path="/image-gallery" element={ <ImageGallery />} />
         </Routes>
