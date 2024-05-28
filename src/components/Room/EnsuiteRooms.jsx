@@ -5,6 +5,7 @@ import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
+import UrlLib from "../common/UrlLib";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -15,6 +16,10 @@ const EnsuiteRoom = () => {
 
   const handleCancel = () => {
     setIsModalVisible(false);
+  };
+  const getUrlById = (id) => {
+    const urlObject = UrlLib.find(url => url.id === id);
+    return urlObject ? urlObject.url : '#';
   };
 
   return (
@@ -37,10 +42,11 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£65"
             buttonText="Book Now"
             cardtitle="1x single bed"
             onViewMoreClick={handleViewMoreClick}
+            link={getUrlById(2)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -51,9 +57,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£68"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(11)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -64,9 +71,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£97"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(9)}
           />{" "}
         </Col>
       </Row>
@@ -79,9 +87,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£120"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(19)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -92,9 +101,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£110"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(20)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -105,9 +115,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£120"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(16)}
           />{" "}
         </Col>
       </Row>
@@ -120,9 +131,10 @@ const EnsuiteRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£125"
             buttonText="Book Now"
             cardtitle="1x single bed"
+            link={getUrlById(23)}
           />{" "}
         </Col>
         

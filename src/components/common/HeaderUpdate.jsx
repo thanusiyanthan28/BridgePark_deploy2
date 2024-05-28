@@ -205,7 +205,7 @@ const HeaderUpdate = () => {
     {
       label: (
         <button className='header-button'>
-          <Link to="/" className='header-book-now'>
+          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now'>
             Book Now
           </Link>
         </button>
