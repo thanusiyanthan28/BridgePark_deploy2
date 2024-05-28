@@ -44,7 +44,7 @@ export default function App() {
           <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
           {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
           <Route path="/meeting-events" element={<MeetingAndEvents />} />
-          {/* <Route path="/main-meeting" element={<MainMeeting />} /> */}
+          <Route path="/main-meeting" element={<MainMeeting />} />
           <Route path="/location" element={<Location />} />
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
