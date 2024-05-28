@@ -131,7 +131,7 @@ const HeaderUpdate = () => {
     {
       label: (
         <button className='header-button'>
-          <Link to="/" className='header-book-now'>
+          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now'>
             Book Now
           </Link>
         </button>
@@ -158,7 +158,7 @@ const HeaderUpdate = () => {
           <Avatar
             icon={<UserOutlined />}
             src={isLoggedIn ? userData.avatar : null}
-            onMouseEnter={() => setDropdownVisible(true)}
+            
           />
         </Dropdown>
       ),

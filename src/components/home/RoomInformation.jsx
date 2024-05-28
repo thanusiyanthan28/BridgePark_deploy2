@@ -83,7 +83,7 @@ const RoomInformation = ({room}) => {
             className="RoomInformation-section-PriceList"
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-section-PriceList-1">1200 per night</h2>
+            <h2 className="RoomInformation-section-PriceList-1">£200 per night</h2>
             <h2 className="RoomInformation-section-PriceList-2">
               including Taxes & Fees
             </h2>
@@ -97,7 +97,7 @@ const RoomInformation = ({room}) => {
       
         <Row>
           <Col span={24}>
-            <img src={img1} className="RoomInformationCardImage" alt="Room" />
+            <img src={room.imageSource} className="RoomInformationCardImage" alt="Room" />
           </Col>
         </Row>
         <div className="sec-01" ref={sec01Ref}>
