@@ -7,7 +7,7 @@ import img3 from "../../assets/images/TripleEnsuite3singlebeds.jpg";
 import img4 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import img5 from "../../assets/images/QuadEnsuitedoubleandtwosinglebeds.jpg";
 import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
-import img7 from "../../assets/images/ExecutiveKingRoom.jpg";
+import img7 from "../../assets/images/Untitled Project.jpg";
 import img8 from "../../assets/images/TwilightExecroom.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
