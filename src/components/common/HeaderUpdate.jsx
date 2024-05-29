@@ -8,7 +8,7 @@ import img from "../../assets/images/DoubleEnsuite.jpg";
 const HeaderUpdate = () => {
   const [current, setCurrent] = useState();
   const [open, setOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const isMobile = windowWidth <= 767;
