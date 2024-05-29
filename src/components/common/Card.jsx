@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/Card.css";
-import { Row, Col, DatePicker } from "antd";
+import {Input, Row, Col, DatePicker } from "antd";
 import { Divider } from "antd";
 import dayjs from "dayjs";
 import PrimaryButton from "./PrimaryButton";
@@ -30,7 +30,7 @@ function Card({ children, title, description }) {
                         <Row><h1 className="titleH1">Adult</h1></Row>
                         <Row><h3 className="titleH3">No Of Person</h3></Row>
                         <Row>
-                            <DatePicker  defaultValue={dayjs("2024-12-01", "YYYY-MM-DD")} />
+                        <Input type="number" min={0} placeholder="Enter number of Person" />
                         </Row>
                     </Col>
                     <Col> <Divider type="vertical" className="devider" /></Col>
@@ -38,7 +38,7 @@ function Card({ children, title, description }) {
                         <Row><h1 className="titleH1">Children</h1></Row>
                         <Row><h3 className="titleH3">No Of Child</h3></Row>
                         <Row>
-                            <DatePicker  defaultValue={dayjs("2024-12-01", "YYYY-MM-DD")} />
+                        <Input type="number" min={0} placeholder="Enter number of children" />
                         </Row>
                     </Col>
                     <Col span={6} style={{ Color: 'black' }}><PrimaryButton title={"Check Availablity"}  className='btnPrimary'/></Col>
