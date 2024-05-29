@@ -1,4 +1,4 @@
-.card {
+/* .card {
   border: 1px solid #ccc;
   border-radius: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -338,4 +338,113 @@
 
 @media only screen and (min-width: 1921px) {
  
+} */
+
+.card {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 85% !important;
+  background-color: white;
+  color: black;
+  height: 70px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body {
+  padding: 16px;
+  text-align: left;
+}
+
+.divider {
+  height: 100px;
+  background: black;
+}
+.divider4{
+  display: none;
+}
+
+.titleH1 {
+  color: rgb(59, 53, 53);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.titleH3 {
+  color: rgba(71, 54, 54, 0.5);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.containerCol {
+  text-align: center;
+  line-height: 10px;
+}
+
+.button-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrimary-check {
+  background-color: #53949A;
+  border-radius: 0 !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 50px 0 50px ;
+  margin-left: 60%;
+  height: 50px;
+}
+.ant-space {
+  display: flex;
+  align-items: center;
+}
+
+.ant-input {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+  .titleH1, .titleH3 {
+    font-size: 12px;
+  }
+  .btnPrimary-check  {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .titleH1, .titleH3 {
+    font-size: 15px;
+  }
+  .btnPrimary-check  {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1367px) {
+  .titleH1, .titleH3 {
+    font-size: 16px;
+  }
+  .btnPrimary-check {
+    font-size: 18px;
+  }
 }
