@@ -15,9 +15,11 @@ import UrlLib from "../common/UrlLib";
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [bookingUrl, setBookingUrl] = useState('');
 
-  const handleViewMoreClick = (room) => {
+  const handleViewMoreClick = (room,url) => {
     setSelectedRoom(room);
+    setBookingUrl(url);
     setIsModalVisible(true);
   };
 
