@@ -31,16 +31,49 @@
 
 // export default RoomType;
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
+import SiteCard from "../Sitecard/siteCard";
+import Card from "../common/Card";
 
 
 const RoomType = () => {
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
        <div>
+       {isMobile ? <div className="home-sitecard"><SiteCard /></div> : null}
+       {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
        </div>
+       <div className="aboutContainer" style={{ textAlign: 'left' }}>
+        <div className="aboutTextWrapper" >
+          <h1 className="RoomType-aboutH1" >OUR ROOMS</h1>
+        </div>
+        <div className="RoomType-sub">
+        <p className="RoomType-p">Originally a Grade ii listed building, Bridge Park Hotel is the ideal place to stay whether you are visiting Wembley or simply looking for 
+accommodation to explore the sites of London. Just a short distance from Wembley Stadium.</p>
+        </div>
+      </div>
+      <div className="RoomType-subHead">
+          <h1 className="RoomType-subHading">
+              ROOM TYPES
+          </h1>
+      </div>
       <HotelRoomTypeCard
         imageSource={img1}
         title="Single Room"
