@@ -56,15 +56,8 @@ const EnsuiteRoom = () => {
   return (
     <div>
       <div>
-        {isMobile ? (
-          <div className="EnsuiteRoom-sitecard">
-            <SiteCard />
-          </div>
-        ) : (
-          <div className="">
-            <Card title="Card Title 2" description="Description for Card 2" />
-          </div>
-        )}
+      {isMobile ? <div className="EnsuiteRoom-sitecard"><SiteCard /></div> : null}
+      {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
     
     <div className="EnsuiteRoom-container">
