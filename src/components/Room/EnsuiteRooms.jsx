@@ -54,10 +54,10 @@ const EnsuiteRoom = () => {
   }, []);
 
   return (
-    <div className="EnsuiteRoom-container">
+    <div>
       <div>
         {isMobile ? (
-          <div className="home-sitecard">
+          <div className="EnsuiteRoom-sitecard">
             <SiteCard />
           </div>
         ) : (
@@ -66,9 +66,12 @@ const EnsuiteRoom = () => {
           </div>
         )}
       </div>
+    
+    <div className="EnsuiteRoom-container">
+      
       <div className="aboutContainer">
         <div className="aboutTextWrapper">
-          <h1 className="aboutH1">ENSUITE ROOMS</h1>
+          <h1 className="EnsuiteRoom-aboutH1">ENSUITE ROOMS</h1>
         </div>
       </div>
       <Row className="hotelRoomMainRow">
@@ -240,6 +243,7 @@ const EnsuiteRoom = () => {
       <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width="80%">
         <RoomInfromation />
       </Modal>
+    </div>
     </div>
   );
 };

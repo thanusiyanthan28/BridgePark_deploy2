@@ -3,19 +3,7 @@
     margin: 0 auto;
   }
   
-  .card  {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    height: 50px;
-    margin-top: 50px;
-  }
-  .card-body{
-    border-radius: 15px;
-  }
-  
+
   .containerCol1 {
     flex: 1;
     padding: 2rem;
@@ -75,8 +63,30 @@
   object-fit: cover;
   margin-bottom: 5px;
 } 
+.EnsuiteRoom-aboutH1{
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 500;
+}
 @media (max-width: 768px) {
   .EnsuiteRoom-container {
     overflow-x: hidden;
+    margin-top: 600px;
+    margin-left: 15px;
+  }
+  .EnsuiteRoom-sitecard{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .EnsuiteRoom-aboutH1{
+    text-align: center;
+    font-size: 30px;
+    margin-left: -35px;
   }
 }
