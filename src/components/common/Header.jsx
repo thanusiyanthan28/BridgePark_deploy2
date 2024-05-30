@@ -61,7 +61,7 @@ const Header = () => {
       {isMobile ? <div className="home-sitecard"><SiteCard /></div> : null}
       <div className="hero-container">
         <div className="headerLogoPosition">
-          {/* <img src={logo} alt="Logo" className="headerLogo" /> */}
+          <img src={logo} alt="Logo" className="headerLogo" />
         </div>
         <img src={title}alt="title" className="header-title" />
         {/* <div className="heading-container">
