@@ -15,6 +15,8 @@ import bedIcon2 from "../../assets/icons/rest.png";
 import bedIcon1 from "../../assets/icons/bed.png";
 import personIcon1 from "../../assets/icons/people.png";
 import personIcon3 from "../../assets/icons/Three.png";
+import UrlLib from "../common/UrlLib";
+
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -28,9 +30,16 @@ const BasicRoom = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+  const getUrlById = (id) => {
+    const urlObject = UrlLib.find(url => url.id === id);
+    return urlObject ? urlObject.url : '#';
+  };
 
   return (
     <div className="BasicRoom-containor">
+      <div>
+        {/* <Header2/> */}
+      </div>
       <div>
         <Card/>
       </div>
@@ -54,10 +63,11 @@ const BasicRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£48"
             buttonText="Book Now"
             cardtitle="1x single bed"
             onViewMoreClick={handleViewMoreClick}
+            link={getUrlById(2)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -74,10 +84,11 @@ const BasicRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed"
             onViewMoreClick={handleViewMoreClick}
+            price="£58"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            link={getUrlById(3)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -94,10 +105,11 @@ const BasicRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="2x single bed"
             onViewMoreClick={handleViewMoreClick}
+            price="£85"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            link={getUrlById(10)}
           />{" "}
         </Col>
       </Row>
@@ -132,6 +144,8 @@ const BasicRoom = () => {
         <RoomInfromation room={selectedRoom}/>
       </Modal>
       
+      <div>
+      </div>
     </div>
   );
 };

@@ -20,16 +20,18 @@
 .location-sub{
     display: flex;
     width: 100%;
+
  
 
 
 }
 .location-sub-left{
     width: 60%;
+    padding: 10px;
 }
 .location-sub-right{
-
     width: 40%;
+    padding: 10px;
     
 }
 .location-sub-left p,

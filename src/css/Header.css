@@ -1,35 +1,51 @@
 .head-main{
-  /* display: flex;
-  flex-direction: column; */
   height: 100vh;
   background-image: url("../assets//images//HotelFront.jpg");
   background-size: cover;
   text-align: center;
 }
-.hero-container {
 
-}
 .headerLogoPosition{
  margin-bottom: -100px !important;
 }
 
-.heading-container{
-  width: 95%;
-
-}
 .heading-container h1{
   font-size: 90px;
   margin-right: auto;
   margin-left: auto;
 
 }
+.header-title{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.header-slogan{
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  padding: 10px 40px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
 
 @media only screen and (max-width: 768px){
   .home-sitecard{
     position: absolute;
-    margin-left: 17%;
-    margin-right: 17%;
-    margin-top: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+  }
+  .headerLogo{
+    width: 60px !important;
   }
   .headerLogoPosition{
     margin-bottom: -40px !important;
@@ -41,6 +57,24 @@
     line-height: 110px;
   
   }  
+  .header-title{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+  .header-slogan{
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+  }
 }
 
 
