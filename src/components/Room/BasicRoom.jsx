@@ -109,7 +109,7 @@ const BasicRoom = () => {
             price="£85"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            link={getUrlById(3)}
+            link={getUrlById(12)}
           />{" "}
         </Col>
       </Row>
@@ -132,7 +132,7 @@ const BasicRoom = () => {
             price="$200"
             buttonText="Book Now"
             cardtitle="3x single bed"
-            link={getUrlById(5)}
+            link={getUrlById(10)}
           />{" "}
         </Col> 
       </Row> 
