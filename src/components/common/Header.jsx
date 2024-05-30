@@ -8,6 +8,7 @@ import { Row } from "antd";
 import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.jpg";
 import SiteCard from "../Sitecard/siteCard";
+import title from "../../assets/web ok.png"
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -62,10 +63,12 @@ const Header = () => {
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
-        <div className="heading-container">
+        <img src={title}alt="title" className="header-title" />
+        {/* <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>
-        </div>
+        </div> */}
+        <div className="header-slogan">RESERVE YOUR STAY NOW</div>
         {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
     </div>
