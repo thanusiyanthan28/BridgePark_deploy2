@@ -1,58 +1,72 @@
 .BasicRoom-containor {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  .card  {
-    /* background-color: #ffffff; */
-    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
-    /* border-radius: 15px; */
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    height: 50px;
-    margin-top: 50px;
-  }
-  .card-body{
-    border-radius: 15px;
-  }
-  
-  .containerCol1 {
-    flex: 1;                                                                                                                                                                                                                                                                                                                                                                                
-    padding: 2rem;
-  }
-  
-  .titleH1 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #4a5568;
-  }
-  
-  .titleH3 {
-    font-size: 1.125rem;
-    color: #2d3748;
-  }
-  
-  .btnPrimary {
-    background-color: #669399;
-    color: #ffffff;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    margin-left: 25px;
-    margin-top: 45px;
-  }
- 
- .aboutContainer{
-    margin-top: -30px;
- }
-  
+  max-width: 100%;
+  margin: 0 auto;
+}
+.BasicRoom-aboutH1{
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.containerCol1 {
+  flex: 1;
+  padding: 2rem;
+}
+
+.titleH1 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.titleH3 {
+  font-size: 1.125rem;
+  color: #2d3748;
+}
+
+.btnPrimary {
+  background-color: #669399;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-top: 45px;
+}
+
+.aboutContainer {
+  margin-top: -30px;
+}
+
 .room-icon {
-  width: 20px; 
-  height: 20px; 
+  width: 20px;
+  height: 20px;
   margin-left: 20px;
   margin-top: 10px;
 }
-  
+
+
+@media (max-width: 768px) {
+  .BasicRoom-containor {
+    overflow-x: hidden;
+    margin-top: 600px;
+    margin-left: 15px;
+    align-items: center;
+   
+  }
+  .BasicRoom-sitecard {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .BasicRoom-aboutH1{
+    text-align: center;
+    font-size: 30px;
+    margin-left: -35px;
+  }
+}
