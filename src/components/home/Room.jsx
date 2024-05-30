@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
-import img1 from "../../assets/images/Loungebar 1.jpg";
+import img1 from "../../assets/images/SingleRoomwithSharedBathroom.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import RoomInformation from "./RoomInformation";
+import img3 from '../../assets/images/Tripleroomwithsharedbathroom.jpg'
+import img4 from "../../assets/images/DoubleEnsuite.jpg"
+import img5 from "../../assets/images/TwinRoom.jpg"
+import img6 from '../../assets/images/TripleEnsuite3singlebeds.jpg'
+import UrlLib from "../common/UrlLib";
+
+
 
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -16,6 +23,11 @@ const Room = () => {
 
   const handleCancel = () => {
     setIsModalVisible(false);
+  };
+
+  const getUrlById = (id) => {
+    const urlObject = UrlLib.find(url => url.id === id);
+    return urlObject ? urlObject.url : '#';
   };
 
   return (
@@ -38,51 +50,55 @@ const Room = () => {
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Single Room"
+            title="SINGLE ROOM BASIC"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="1x Single Bed"
             onViewMoreClick={() => handleViewMoreClick({
               title: "Single Room",
-              description: "Spacious room with a breathtaking view",
+              imageSource: img1,
             })}
+            link={getUrlById(2)}
           />{" "}
         </Col>
         <Col span={8}>
           {" "}
           <HotelRoomCard
             imageSource={img1}
-            title="Luxury Room"
+            title="DOUBLE BASIC"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="1x Double Bed"
             onViewMoreClick={() => handleViewMoreClick({
-              title: "Luxury Room",
-              description: "Spacious room with a breathtaking view",
+              title: "DOUBLE BASIC",
+              imageSource: img1,
             })}
+            link={getUrlById(5)}
           />{" "}
         </Col>
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            title="Luxury Room"
+            imageSource={img3}
+            title="TRIPLE BASIC"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="3x Single Bed"
             onViewMoreClick={() => handleViewMoreClick({
-              title: "Luxury Room",
-              description: "Spacious room with a breathtaking view",
+              title: "TRIPLE BASIC",
+              imageSource: img3,
+              
             })}
+            link={getUrlById(10)}
           />{" "}
         </Col>
       </Row>
@@ -90,52 +106,57 @@ const Room = () => {
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            title="Single Room"
+            imageSource={img4}
+            title="DOUBLE ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="1x Double Bed"
             onViewMoreClick={() => handleViewMoreClick({
-              title: "Single Room",
-              description: "Spacious room with a breathtaking view",
+              title: "DOUBLE ENSUITE",
+              imageSource: img4,
+              
             })}
+            link={getUrlById(2)}
           />{" "}
         </Col>
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            title="Luxury Room"
+            imageSource={img5}
+            title="TWIN ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="2x Single Bed"
             onViewMoreClick={() => handleViewMoreClick({
-              title: "Luxury Room",
-              description: "Spacious room with a breathtaking view",
+              title: "TWIN ENSUITE",
+              imageSource: img5,
+              
             })}
+            link={getUrlById(11)}
           />{" "}
         </Col>
         <Col span={8}>
           {" "}
           <HotelRoomCard
-            imageSource={img1}
-            title="Luxury Room"
+            imageSource={img6}
+            title="TRIPLE ENSUITE"
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
-            price="$200 per night"
+            price="£200"
             buttonText="Book Now"
-            cardtitle="1x single bed"
+            cardtitle="3x Single Bed"
             onViewMoreClick={() => handleViewMoreClick({
-              title: "Luxury Room",
-              description: "Spacious room with a breathtaking view",
+              title: "TRIPLE ENSUITE",
+              imageSource: img6,
             })}
+            link={getUrlById(9)}
           />{" "}
         </Col>
       </Row>

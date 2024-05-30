@@ -1,5 +1,7 @@
 .header-update-container{
   display: flex;
+  height: 50px;
+
 
 
 }
@@ -7,9 +9,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-
-  font-weight: bold;
+  font-weight:400;
   border-bottom: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+
   
 }
 .header-nav-bar-left .ant-menu-item{
@@ -24,7 +28,7 @@
   background-color:#669399;
   padding: 7px;
   border: none;
-  border-radius: 5px;
+ 
 }
 .ant-menu-horizontal {
   border-bottom: none; /* Remove the bottom border */
@@ -48,11 +52,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .header-update {
-   
-    
- 
-  }
   .header-nav-bar-left .ant-menu-item,
   .header-nav-bar-right .ant-menu-item{
      display: none;
@@ -68,4 +67,12 @@
 
 
 
+}
+/* HeaderUpdate.css */
+.custom-dropdown-menu {
+  width: 100px; /* Adjust the width as needed */
+}
+
+.custom-dropdown-item {
+  padding: 10px 20px; /* Adjust padding for better spacing */
 }

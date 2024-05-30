@@ -75,3 +75,8 @@
   object-fit: cover;
   margin-bottom: 5px;
 } 
+@media (max-width: 768px) {
+  .EnsuiteRoom-container {
+    overflow-x: hidden;
+  }
+}

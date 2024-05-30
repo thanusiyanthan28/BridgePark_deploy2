@@ -63,7 +63,7 @@
   color: white;
   background-color: #3883af;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   padding: 5px 10px;
   cursor: pointer;
   float: right;
@@ -102,7 +102,7 @@
 
 .hotelRoomCard-subRow{
   margin-top: -14px;
-  margin-left: 9px;
+  margin-left: 0px;
 }
 
 
