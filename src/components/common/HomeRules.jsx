@@ -8,6 +8,10 @@ import pets from "../../assets/icons/Pets.gif";
 import groupImg from "../../assets/icons/Group.gif";
 import acceptPay from "../../assets/icons/Accepted payment methods.gif";
 import refundabaleImg from "../../assets/icons/Refundable DAmage.gif";
+import americanex from "../../assets/Facilities of BPH/americanex.png"
+import mastercard from "../../assets/Facilities of BPH/mastercard.png"
+import visa from "../../assets/Facilities of BPH/visa.jpeg"
+import jcb from "../../assets/Facilities of BPH/jcb.png"
 const HouseRules = () => {
   return (
     <div className="house-rules-container">
@@ -158,7 +162,27 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Accepted payment methods</td>
-            <td>Card Images</td>
+            <td> <img
+                src={americanex}
+                alt="Accepted payment methods Icon"
+                class="house-rules-icon"/>
+                <img
+                src={mastercard}
+                alt="Accepted payment methods Icon"
+                class="house-rules-icon"/>
+                <img
+                src={jcb}
+                alt="Accepted payment methods Icon"
+                class="house-rules-icon"/>
+                <img
+                src={visa}
+                alt="Accepted payment methods Icon"
+                class="house-rules-icon"/>
+                <img
+                src={visa}
+                alt="Accepted payment methods Icon"
+                class="house-rules-icon"/>
+            </td>
           </tr>
         </table>
       </div>

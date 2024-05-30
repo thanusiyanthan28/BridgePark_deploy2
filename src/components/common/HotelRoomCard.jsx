@@ -12,6 +12,7 @@ const HotelRoomCard = ({
   buttonText,
   cardtitle,
   onViewMoreClick,
+  link,
 }) => {
   return (
     // <div className="main-hotelRoomCardContainer">
@@ -20,11 +21,11 @@ const HotelRoomCard = ({
       <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
       <div className="hotelRoomCardDetails">
         <Row className="hotelRoomCardTitleTextFirst">
-          <Col span={12}>
+          <Col span={13}>
             {" "}
             <h2 className="hotelRoomCardTitle">{title}</h2>
           </Col>
-          <Col span={12}>
+          <Col span={11}>
             {" "}
             <div className="hotelRoomViewMoreLink" onClick={onViewMoreClick}>
               View More
@@ -53,10 +54,10 @@ const HotelRoomCard = ({
           <Col span={8}>
             <Row>
               {" "}
-              <p>AVAIABLE</p>
+              <p>STATUS</p>
             </Row>
             <Row className="hotelRoomCard-subRow">
-              <p>01</p>
+              <p>{status}</p>
             </Row>
           </Col>
         </Row>
@@ -66,7 +67,9 @@ const HotelRoomCard = ({
             <p className="cardPriceText2">including taxes</p>
           </Col>
           <Col span={12}>
-            <button className="hotelRoomCardButton">{buttonText}</button>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+              <button className="hotelRoomCardButton">{buttonText}</button>
+            </a>          
           </Col>
         </Row>
       </div>

@@ -61,7 +61,7 @@ const Facilities = () => {
           {cardsData.map((card) => (
             <div key={card.id} className="facilitiescard">
               <div className='facilitiesiconcontainer'>
-                <img src={card.icon} alt={card.title} style={{ width: '64px', height: '64px', objectFit: 'cover' }}/>
+                <img src={card.icon} alt={card.title} style={{ width: '54px', height: '54px', objectFit: 'cover' }}/>
               </div>
               <div className="facilitiescardcontent">
                 <h2>{card.title}</h2>
@@ -74,8 +74,8 @@ const Facilities = () => {
           {!showList && <button className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
           {showList && (
             <button className='facilitieshidebutton' onClick={handleHideList}>
-              <FontAwesomeIcon icon={faCircleChevronUp} size='4x' />
-              <span>Hide All Amenities</span>
+              <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
+              <span>Hide All Ammenities</span>
             </button>
           )}
         </div>

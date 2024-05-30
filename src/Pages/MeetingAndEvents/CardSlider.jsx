@@ -66,6 +66,7 @@ const CardSlider = ({ cards }) => {
   document.documentElement.style.setProperty('--currentIndex', currentIndex);
   return (
     <div className='meeting-my-class' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+
       <h2 className='.meeting-my-class-title '>Meeting & Events </h2>
     <div className="meeting-card-slider">
  

@@ -9,6 +9,9 @@
       width: 100%;
       margin-left: 20px;
     }
+    .rooms-main-contaner{
+      width: 95%;
+    }
   
     .hotelRoomMainRow > .ant-col {
       width: 100%; /* Each column takes up full width on mobile */

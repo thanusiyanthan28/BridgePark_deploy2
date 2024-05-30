@@ -2,20 +2,20 @@ import React, { useState, useRef } from "react";
 import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
-// import "../Facilities/facilities.css"
-import Button from "../common/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
+import HouseRules from "../common/HomeRules";
+import SiteCard from "../Sitecard/siteCard";
 
-const RoomInformation = () => {
+const RoomInformation = ({room}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
 
   const [activeTab, setActiveTab] = useState("Room Information");
-  const [showList, setShowList] = useState(false); 
+  const [showList, setShowList] = useState(false);
 
   const handleTabClick = (sectionName) => {
     setActiveTab(sectionName);
@@ -54,13 +54,16 @@ const RoomInformation = () => {
 
   return (
     <div>
+        <div className="site-card-room">
+        <SiteCard />
+        </div>
       <div className="The-header">
         <Row className="RoomInformation-section-All">
           <div
             className={`RoomInformation-section ${activeTab === "Room Information" ? "active" : ""}`}
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-headings">Room Information</h2>
+            <h2 className="RoomInformation-heading">Room Information</h2>
           </div>
 
           <div
@@ -80,7 +83,7 @@ const RoomInformation = () => {
             className="RoomInformation-section-PriceList"
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-section-PriceList-1">1200 per night</h2>
+            <h2 className="RoomInformation-section-PriceList-1">£200 per night</h2>
             <h2 className="RoomInformation-section-PriceList-2">
               including Taxes & Fees
             </h2>
@@ -91,19 +94,20 @@ const RoomInformation = () => {
         </Row>
       </div>
 
-      <div className="sec-01" ref={sec01Ref}>
+      
         <Row>
           <Col span={24}>
-            <img src={img1} className="RoomInformationCardImage" alt="Room" />
+            <img src={room.imageSource} className="RoomInformationCardImage" alt="Room" />
           </Col>
         </Row>
+        <div className="sec-01" ref={sec01Ref}>
         <Row>
           <Col span={16}>
-            <div>
+            <div className="Add-card-position">
               <h2 className="RoomInformation-headings">Room Information</h2>
             </div>
             <div>
-              <h2 className="RoomInformation-subHeadings">Single Room Basic</h2>
+              <h2 className="RoomInformation-subHeadings">{room.title}</h2>
             </div>
             <div>
               <p className="RoomInformation-textP">
@@ -139,105 +143,33 @@ const RoomInformation = () => {
       </div>
 
       <div className="sec-02" ref={sec02Ref}>
-  <div>
-    <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Ammenities"}</h2>
-  </div>
-  <div>
-    <FacilitiesIconsContainer cards={cardsData} />
-  </div>
-  <div>
-    {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
-    {showList && (
-      <button className='facilitieshidebutton1' onClick={handleHideList}>
-        <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
-      </button>
-    )}
-  </div>
-  {showList && 
-  <div className="columnlist"><ColumnList /></div>}
-</div>
+        <div>
+          <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Ammenities"}</h2>
+        </div>
+        <div>
+          <FacilitiesIconsContainer cards={cardsData} />
+        </div>
+        <div>
+          {!showList && <button className='facilitiesshowbutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+          {showList && (
+            <button className='facilitieshidebutton1' onClick={handleHideList}>
+              {!showList && <button className='facilitieshidebutton1' onClick={handleToggleList}><FontAwesomeIcon icon={faCircleChevronDown} size='3x' /></button>}
+              {showList && (
+                <button className='facilitieshidebutton1' onClick={handleHideList}>
+                  <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
+                </button>
+              )}
+            </button>
+          )}
+        </div>
+      </div>
+      {showList &&
+        <div className="columnlist"><ColumnList /></div>}
 
 
-<div className="sec-03" ref={sec03Ref}>
-        
-          <h2 className="RoomInformation-headings">Read our Policies</h2>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Check In</h2>
-        </div>
-        <div>from 14:00 hours</div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Check Out</h2>
-        </div>
-        <div>Untill 11:00 hours</div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">
-            Cancellation/prepayment
-          </h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            Cancellation and prepayment policies vary according to
-            accommodation type. Please check the condition on your booking
-            confirmation.
-          </p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">
-            Refundable damage deposit
-          </h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            A damage deposit of CSP 100 may be required on arrival. This will be
-            collected by credit card. You should be reimbursed on check-out.<br></br>
-            Your deposit will be refunded in full via credit card, subject to an
-            inspection of the property.
-          </p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Child policies</h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            Children of any age are welcome accompanied by an adult. Children
-            aged 13 years and above are considered adults at this property.
-          </p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">
-            Cot and extra bed policies
-          </h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            Cots are available on request. Extra beds are not available at this
-            property.
-          </p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Age restriction</h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            The minimum age for check-in is 18.
-          </p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Pets</h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">Pets are not allowed.</p>
-        </div>
-        <div>
-          <h2 className="RoomInformation-subHeadings">Groups</h2>
-        </div>
-        <div>
-          <p className="RoomInformation-text">
-            When booking more than 5 rooms, different policies and additional
-            supplements may apply.
-          </p>
-        </div>
+        <div className="sec-03" ref={sec03Ref}><HouseRules/></div>
+
+     
     </div>
   );
 };

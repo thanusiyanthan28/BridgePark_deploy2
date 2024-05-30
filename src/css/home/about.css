@@ -26,7 +26,7 @@
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: justify;
   line-height: 2;
   font-family: "Cadmium", sans-serif;
 }
@@ -46,6 +46,9 @@
 @media screen and (max-width: 768px) {
   .aboutContainer {
     height: auto;
+  }
+  .abContainer{
+    width: 95%;
   }
 
   .aboutTextWrapper {

@@ -22,8 +22,8 @@
   padding: 10px; /* Add some padding to the cards */
   border: 1px solid #e9e4e4; 
   border-radius: 5px; 
-  width: 120px;
-  height: 120px; 
+  width: 100px;
+  height: 100px; 
   transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   height: 40%;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'Lato', sans-serif;
   margin-bottom: 15px;
 }
@@ -69,7 +69,7 @@
   position: absolute;
   margin-bottom: 50px;
   margin-right: 320px;
-  margin-left: 350px;
+  margin-left: 320px;
 }
 
 .facilitiesbutton1 {
@@ -79,7 +79,7 @@
   margin-top: 10px;
   border: none;
   border-radius: 15px;
-  margin-left: 855px;
+  margin-left: 670px;
   background-color: #6e8b8b;
   transition: background-color 0.3s ease;
   margin-bottom: 12px;
@@ -91,7 +91,7 @@
 
 .facilitieshidebutton {
   display: inline-block;
-  margin-left: 875px;
+  margin-left: 685px;
   border: none;
   padding: 20px;
   background-color: #fffff9;
@@ -103,7 +103,7 @@
   margin-top: 15px;
   color: #618e95;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .fscolumnlist {
@@ -112,7 +112,7 @@
   grid-template-rows: repeat(3, 300px);
   align-items: flex-start;
   margin-top: 10px;
-  margin-left: 320px;
+  margin-left: 220px;
 }
 
 .fscolumn {
@@ -147,40 +147,37 @@
 /* Media queries */
 
 /* Max width 768px */
-@media(max-width:768px) {
+@media only screen and (min-width:440px) and (max-width:768px) {
   .facilitiesbutton1{
-    margin-left: 285px;
+    margin-left: 290px;
   }
   .facilitiespara{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left:100px ;
+    margin-right:100px
+    
   }
   .facilitieshidebutton{
-    margin-left: 300px;
+    margin-left: 310px;
   }
   .fscolumnlist{
     margin-left: 20px;
     font-size: 12px;
+    margin-bottom: -200px;
   }
 }
   
 /* Max width 435px */
 @media(max-width:435px) {
    .facilitiescard {
-    width: 45%;
-    margin: -0.8rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    width: 65%;
+    margin: -1.8rem;
+    box-shadow: px 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin-top: 50px;
     height: 130px;
-    margin-left: 50px;
+    margin-left: 25px;
   }
 
- /* .facilitiescard:nth-last-child(1) {
-    grid-column: 1 / span 2;
-    width: calc(87% - 10px);
-    margin: 0.5rem;
-    margin-left: 28px;
-  }*/
+
 
   .facilitiescardcontent {
     display: flex;
@@ -191,25 +188,25 @@
 
   .facilitiescontainer {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-column-gap: -100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
 
   }
 
   .facilitiesbutton1 {
-    margin-left: 120px;
+    margin-left: 110px;
     margin-top: 50px;
   }
 
   .facilitiespara {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
   
     
   }
 
   .facilitieshidebutton {
-    margin-left: 120px;
+    margin-left: 140px;
     margin-top: 50px;
 
   }
@@ -226,7 +223,7 @@
   }
 }
 
-@media only screen and (min-width:1030px) and (max-width:1366px) {
+@media only screen and (min-width:1030px) and (max-width:1369px) {
   .facilitiescardscontainer {
     display: flex;
     justify-content: center;
@@ -268,9 +265,15 @@
 
 @media only screen and (min-width:769px) and (max-width:1024px) {
   
-
+  .facilitiescontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 100px; 
+    margin-left: 45px;
+  }
   .facilitiesbutton1 {
-    margin-left: 420px;
+    margin-left: 440px;
   }
   .facilitiescardcontent {
    
@@ -282,24 +285,24 @@
   .facilitiespara {
     position: absolute;
     margin-bottom: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 40px;
+    margin-left: 90px;
 
   }
 
   .facilitieshidebutton {
-    margin-left: 430px;
+    margin-left: 460px;
   }
 
   .fscolumnlist {
     grid-gap: 5px;
     font-size: 11px;
     margin-left: 100px;
-    margin-bottom: -150px;
+    margin-bottom: -250px;
   }
 
   .facilitieshead {
-    margin-left: 30px;
+    margin-left: 65px;
   }
 
 }
@@ -320,7 +323,7 @@
   }
   
   .facilitiesbutton1 {
-    margin-left: 620px;
+    margin-left: 625px;
   }
   .fscolumnlist {
     grid-gap: 5px;

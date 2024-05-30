@@ -34,13 +34,12 @@
 import React from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
-import Card from "../common/Card";
+
 
 const RoomType = () => {
   return (
     <div>
        <div>
-       <Card/>
        </div>
       <HotelRoomTypeCard
         imageSource={img1}
@@ -48,7 +47,7 @@ const RoomType = () => {
         description="All the rooms “Basic” are with shared bathroom facilities"
         guests={2}
         status="Available"
-        price="$200"
+        price="£48"
         buttonText="Book Now"
         cardtitle="Basic Rooms"
         linkTo="/BasicRoom"
@@ -59,7 +58,7 @@ const RoomType = () => {
         description="“En-suite” rooms are with Private bathroom facilities"
         guests={2}
         status="Available"
-        price="$200"
+        price="£200"
         buttonText="Book Now"
         cardtitle="Ensuite Rooms"
         linkTo="/EnsuiteRoom"

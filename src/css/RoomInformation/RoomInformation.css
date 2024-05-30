@@ -32,9 +32,9 @@
 }
 
 .RoomInformation-section-PriceList {
-  margin-left: 760px;
+  margin-left: 850px;
   font-size: 12px;
-  margin-top: -20px;
+  margin-top: -70px;
 }
 
 .RoomInformation-section-PriceList-2 {
@@ -56,75 +56,154 @@
   padding: 5px 10px;
   cursor: pointer;
   margin-left: 70px;
-  margin-top: 10px;
+  margin-top: -40px;
 }
 
 .RoomInformation-section-Book-Container {
   margin-top: -10px;
 }
+.RoomInformation-heading {
+  color: #639497;
+  font-weight: 500;
+  
+}
 .RoomInformation-headings {
   color: #639497;
   font-weight: 500;
+  margin-left: 10px;
+  
 }
 .RoomInformation-subHeadings {
   text-transform: uppercase;
+  margin-left: 10px;
 }
 .RoomInformation-main-container{
   display: flex;
+  margin-left: 10px;
 }
 .RoomInformation-icon-container {
   display: inline-flex;
   align-items: center;
   margin-top: 20px;
+
 }
 .RoomInformation-iconText {
   margin-right: 30px;
   margin-left: 10px;
-}
 
-.facilitieshidebutton2 {
+}
+.RoomInformation-text{
+  margin-left: 10px;
+}
+.time-zone{
+  margin-left: 10px;
+}
+.RoomInformation-textP{
+  margin-left: 10px;
+}
+.facilitieshidebutton1{
   display: inline-block;
-  margin-left: 466px;
+  margin-left: 220px;
   border: none;
   padding: 20px;
   background-color: #fffff9;
-  color: #618e95;
+  color: #42d0d0;
+}
+.facilitiesshowbutton1{
+  display: inline-block;
+  margin-left: 350px;
+  border: none;
+  padding: 20px;
+  background-color: #fffff9;
+  color: #42d0d0;
+}
+.columnlist{
+  margin-left: -180px;
+}
+.site-card-room {
+  position: absolute;
+  top: 260px;
+  right: 60px;
+  z-index: 999; /* Ensure it's above other content */
 }
 
-@media (max-width: 440px) {
-  .RoomInformation-section {
-    font-size: 15px;
+@media (max-width: 435px) {
+  .RoomInformationCardImage {
+    flex: 1;
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
   }
+  
+  .RoomInformation-section,
+  .RoomInformation-heading {
+    font-size: 10px; 
+    margin: -2px 0; 
+    
+  }
+
+  .RoomInformation-section-All {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray; 
+    
+  }
+  .sec-01{
+    margin-top: 450px;
+  }
+
+  .RoomInformation-section {
+    margin-right: 0; 
+    border-right: none;
+    border-left: none; 
+  }
+  
   .RoomInformation-headings{
-    font-size: 25px;
+    font-size: 22px;
+    margin-left: 10px;
   }
   .RoomInformation-section-PriceList {
-    margin-left: -5px;
+    font-size: 5px;
+    margin-left: 190px;
+    margin-top: -55px;
+  }
+  .RoomInformation-section-PriceList-1{
     font-size: 11px;
-    flex-direction: column;
-    text-align: left;
+
   }
-  .RoomInformation-section-PriceList-1 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  .RoomInformation-section-PriceList-2 {
-    font-size: 15px;
+  .RoomInformation-section-PriceList-2{
+   font-size: 10px;
+
   }
   .RoomInformation-section-Book-Container {
-    margin-top: -5px;
+    margin-top: 0px;
+    margin-left: 20px;
+    
+  }
+  .RoomInformation-section-Book{
+    margin-left:5px;
+    font-size: 10px;
+    margin-top: -80px;
+    margin-right: 20px;
   }
   .RoomInformation-subHeadings {
-    font-size: 25px;
+    font-size: 15px;
+    margin-left: 10px;
   }
   .RoomInformation-textP {
-    font-size: 25px;
-    width: 160%;
+    font-size: 5px;
+    width: 120%;
+    margin-left: 10px;
   }
   .RoomInformation-main-container {
     flex-direction: column;
     width: 150%;
+    margin-left: 10px;
   }
   .RoomInformation-icon-container {
     flex-direction: row;
@@ -134,7 +213,305 @@
     font-size: 25px;
   }
   .RoomInformation-text{
-    font-size: 25px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .facilitieshidebutton1{
+    margin-left: 45px;
+    margin-bottom: 10px;
+  }
+  .facilitiesshowbutton1{
+    margin-left: 115px;
+  }
+  .columnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 1600px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .time-zone{
+    margin-left: 10px;
+  }
+  .site-card-room{
+    position: absolute;
+    top: 290px;
+    right: 22px;
+    z-index: 999; 
+  }
+  
+}
+/*media 1440px*/
+@media only screen and (min-width: 1370px) and (max-width: 1440px)
+{
+  .RoomInformation-section-All{
+    height: 40px;
+  }
+  .RoomInformation-section{
+      margin-top: -20px;
+  }
+
+  .RoomInformation-section-PriceList {
+    margin-left: 490px;
+    font-size: 15px;
+    margin-top: -20px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-1 {
+    font-size: 15px;
+    margin-bottom: -5px;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-2 {
+    font-size: 10px;
+    margin-top: 1px;
+  }
+  
+  .RoomInformation-section-Book{
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 180px;
+  }
+  .RoomInformation-headings{
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .RoomInformation-subHeadings {
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+  .RoomInformation-main-container{
+    display: flex;
+    margin-left: 10px;
+  }
+  .RoomInformation-textP {
+    font-size: 12px;
+    width: 90%;
+    margin-left: 10px;
+  }
+  .facilitieshidebutton1{
+    margin-left: 240px;
+    margin-bottom: 10px;
+  }
+  .facilitiesshowbutton1{
+    margin-left: 330px;
+  }
+  .columnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 1200px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: -180px;
+    margin-left: 0px;
+    font-size: 10px;
+    margin-bottom: -50px;
+  }
+  .site-card-room {
+    position: absolute;
+    top: 220px;
+    right: 50px;
+    z-index: 999; /* Ensure it's above other content */
   }
 }
+@media only screen and (min-width:770px) and (max-width:1024px){
+  .RoomInformation-section-All{
+    height: 40px;
+  }
+  .RoomInformation-section{
+      margin-top: -20px;
+  }
+  .site-card-room{
+    margin-top: -50px;
+    margin-right: -15px;
+  }
+  .RoomInformation-section-PriceList {
+    margin-left: 530px;
+    font-size: 15px;
+    margin-top: -60px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-1 {
+    font-size: 15px;
+    margin-bottom: -5px;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-2 {
+    font-size: 12px;
+    margin-top: 1px;
+  }
+  
+  .RoomInformation-section-Book{
+    font-size: 15px;
+    margin-top: -32px;
+    margin-left: 180px;
+  }
+  .RoomInformation-headings{
+    font-size: 22px;
+    margin-left: 50px;
+  }
+  .RoomInformation-subHeadings {
+    text-transform: uppercase;
+    margin-left: 50px;
+  }
+  .RoomInformation-main-container{
+    display: flex;
+    margin-left: 50px;
+  }
+  .RoomInformation-textP {
+    font-size: 12px;
+    width: 70%;
+    margin-left: 50px;
+  }
+  .facilitieshidebutton1{
+    margin-left: 170px;
+    margin-bottom: -40px;
+  }
+  .facilitiesshowbutton1{
+    margin-left: 370px;
+  }
+  .columnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 1200px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: -180px;
+    margin-left: 0px;
+    font-size: 10px;
+    margin-bottom: -250px;
+  }
+}
+/* media 768px*/
+@media only screen and (min-width: 440px) and (max-width: 769px)
+{
+  .facilitieshidebutton1{
+    margin-left: 115px;
+    margin-bottom: 10px;
+  }
+  .facilitiesshowbutton1{
+    margin-left: 250px;
+  }
+ .Add-card-position{
+  margin-top: 420px;
+ }
+ .site-card-room{
+  margin-right: 80px;
+ }
+  .columnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 900px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: -80px;
+    margin-left: 10px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .RoomInformation-section-PriceList {
+    margin-left: 355px;
+    font-size: 15px;
+    margin-top: -58px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-1 {
+    font-size: 13px;
+    margin-bottom: -5px;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-2 {
+    font-size: 9px;
+    margin-top: 1px;
+  }
+  
+  .RoomInformation-section-Book{
+    font-size: 15px;
+    margin-top: -35px;
+    margin-left: 180px;
+  }
+  .RoomInformation-headings{
+    font-size: 22px;
+    margin-left: 10px;
+  
+  }
+  .RoomInformation-subHeadings {
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+  .RoomInformation-main-container{
+    display: flex;
+    margin-left: 10px;
+  }
+  .RoomInformation-textP {
+    font-size: 12px;
+    width: 120%;
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 1030px) and (max-width: 1369px)
+{
+.RoomInformation-section-All{
+    height: 40px;
+  }
+  .RoomInformation-section{
+      margin-top: -20px;
+  }
 
+  .RoomInformation-section-PriceList {
+    margin-left: 460px;
+    font-size: 15px;
+    margin-top: -18px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-1 {
+    font-size: 15px;
+    margin-bottom: -5px;
+    text-align: left;
+  }
+  .RoomInformation-section-PriceList-2 {
+    font-size: 10px;
+    margin-top: 1px;
+  }
+  
+  .RoomInformation-section-Book{
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  
+ 
+  .facilitieshidebutton1{
+    margin-left: 230px;
+    margin-bottom: 10px;
+  }
+  .facilitiesshowbutton1{
+    margin-left: 490px;
+  }
+  .columnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 1200px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: -180px;
+    margin-left: -80px;
+    font-size: 10px;
+    margin-bottom: -350px;
+  }
+  .site-card-room{
+    margin-top: -70px;
+  }
+  .RoomInformation-textP {
+    font-size: 12px;
+    width: 90%;
+    margin-left: 10px;
+  }
+}
