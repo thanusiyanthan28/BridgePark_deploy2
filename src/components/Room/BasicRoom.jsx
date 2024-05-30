@@ -67,7 +67,7 @@ const BasicRoom = () => {
             buttonText="Book Now"
             cardtitle="1x single bed"
             onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(2)}
+            link={getUrlById(8)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -109,7 +109,7 @@ const BasicRoom = () => {
             price="£85"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            link={getUrlById(10)}
+            link={getUrlById(3)}
           />{" "}
         </Col>
       </Row>
@@ -128,10 +128,11 @@ const BasicRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
+            onViewMoreClick={handleViewMoreClick}
             price="$200"
             buttonText="Book Now"
             cardtitle="3x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            link={getUrlById(5)}
           />{" "}
         </Col> 
       </Row> 
