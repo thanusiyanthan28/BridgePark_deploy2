@@ -34,10 +34,14 @@
 import React from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
+import Card from "../common/Card";
 
 const RoomType = () => {
   return (
     <div>
+       <div>
+       <Card/>
+       </div>
       <HotelRoomTypeCard
         imageSource={img1}
         title="Single Room"
