@@ -1,38 +1,15 @@
-.EnsuiteRoom-container {
+.EnsuiteRoom-Main-container {
     max-width: 100%;
     margin: 0 auto;
   }
-  
-
-  .containerCol1 {
-    flex: 1;
-    padding: 2rem;
+  .EnsuiteRoom-heading{
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-top: 80px;
   }
-  
-  .titleH1 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #4a5568;
-  }
-  
-  .titleH3 {
-    font-size: 1.125rem;
-    color: #2d3748;
-  }
-  
-  .btnPrimary {
-    background-color: #669399;
-    color: #ffffff;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    margin-left: 25px;
-    margin-top: 45px;
-  }
- 
- .aboutContainer{
-    margin-top: -30px;
- }
  .room-icon {
   width: 20px; 
   height: 20px; 
@@ -53,22 +30,7 @@
   margin-top: -20px;
   margin-left: 60px;
 }
-.hotelRoomTypeCardInfoRow{
-  margin-top: -20px;
-}
-.hotelRoomTypeCardImage {
-  flex: 1; /* Take up 50% of the height */
-  max-height: 300px;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 5px;
-} 
-.EnsuiteRoom-aboutH1{
-  text-align: center;
-  line-height: 50px;
-  font-size: 50px;
-  font-weight: 500;
-}
+
 @media (max-width: 768px) {
   .EnsuiteRoom-container {
     overflow-x: hidden;

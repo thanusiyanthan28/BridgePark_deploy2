@@ -60,11 +60,10 @@ const EnsuiteRoom = () => {
       {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
     
-    <div className="EnsuiteRoom-container">
-      
-      <div className="aboutContainer">
-        <div className="aboutTextWrapper">
-          <h1 className="EnsuiteRoom-aboutH1">ENSUITE ROOMS</h1>
+    <div className="EnsuiteRoom-Main-container">
+      <div className="EnsuiteRoom-Container">
+        <div className="EnsuiteRoom-TextWrapper">
+          <h1 className="EnsuiteRoom-heading">ENSUITE ROOMS</h1>
         </div>
       </div>
       <Row className="hotelRoomMainRow">
