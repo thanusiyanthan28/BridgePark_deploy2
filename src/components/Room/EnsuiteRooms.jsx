@@ -57,7 +57,7 @@ const EnsuiteRoom = () => {
     <div>
       <div>
       {isMobile ? <div className="EnsuiteRoom-sitecard"><SiteCard /></div> : null}
-      {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
+      {!isMobile ? <div className="EnsuiteRoom-card"><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
     
     <div className="EnsuiteRoom-Main-container">
@@ -73,8 +73,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 DOUBLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -93,8 +93,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 TWIN ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -113,8 +113,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -135,8 +135,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="room-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -155,8 +155,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="rooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icons" />
+                <img src={personIcon3} alt="Person Icon" className="EnsuiteRooms-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -175,8 +175,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="rooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icons" />
+                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -197,8 +197,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 EXECUTIVE KING ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon1} alt="Person Icon" className="rooms-icon" />
-                <img src={bedIcon1} alt="Bed Icon" className="room-icons" />
+                <img src={personIcon1} alt="Person Icon" className="EnsuiteRooms-icon" />
+                <img src={bedIcon1} alt="Bed Icon" className="EnsuiteRoom-icons" />
               </>
             }
             description="Spacious room with a breathtaking view"
@@ -217,8 +217,8 @@ const EnsuiteRoom = () => {
             title={
               <>
                 CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="rooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="room-icons" />
+                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
               </>
             }
             description="Spacious room with a breathtaking view"

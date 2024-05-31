@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
 import img1 from "../../assets/images/SingleRoomwithSharedBathroom.jpg";
 // import img2 from "../../assets/images/Loungebar 1.jpg";
@@ -16,11 +16,13 @@ import bedIcon1 from "../../assets/icons/bed.png";
 import personIcon1 from "../../assets/icons/people.png";
 import personIcon3 from "../../assets/icons/Three.png";
 import UrlLib from "../common/UrlLib";
+import SiteCard from "../Sitecard/siteCard";
 
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
 
   const handleViewMoreClick = (room) => {
     setSelectedRoom(room);
@@ -34,18 +36,30 @@ const BasicRoom = () => {
     const urlObject = UrlLib.find(url => url.id === id);
     return urlObject ? urlObject.url : '#';
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
+    <div>
+      <div>
+      {isMobile ? <div className="BasicRoom-sitecard"><SiteCard /></div> : null}
+      {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
+      </div>
     <div className="BasicRoom-containor">
-      <div>
-        {/* <Header2/> */}
-      </div>
-      <div>
-        <Card/>
-      </div>
+      
       <div className="aboutContainer" style={{ textAlign: 'left' }}>
         <div className="aboutTextWrapper" >
-          <h1 className="aboutH1" >BASIC ROOMS</h1>
+          <h1 className="BasicRoom-aboutH1" >BASIC ROOMS</h1>
         </div>
       </div>
       <Row className="hotelRoomMainRow">
@@ -67,7 +81,7 @@ const BasicRoom = () => {
             buttonText="Book Now"
             cardtitle="1x single bed"
             onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(2)}
+            link={getUrlById(8)}
           />{" "}
         </Col>
         <Col span={8}>
@@ -109,7 +123,7 @@ const BasicRoom = () => {
             price="£85"
             buttonText="Book Now"
             cardtitle="1x single bed"
-            link={getUrlById(10)}
+            link={getUrlById(12)}
           />{" "}
         </Col>
       </Row>
@@ -128,10 +142,11 @@ const BasicRoom = () => {
             description="Spacious room with a breathtaking view"
             guests={2}
             status="Available"
+            onViewMoreClick={handleViewMoreClick}
             price="$200"
             buttonText="Book Now"
             cardtitle="3x single bed"
-            onViewMoreClick={handleViewMoreClick}
+            link={getUrlById(10)}
           />{" "}
         </Col> 
       </Row> 
@@ -146,6 +161,7 @@ const BasicRoom = () => {
       
       <div>
       </div>
+    </div>
     </div>
   );
 };

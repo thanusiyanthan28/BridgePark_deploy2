@@ -3,7 +3,7 @@ import CardSlider from './CardSlider';
 import Room from '../../components/home/Room';
 const cards = [
     {
-      image: 'https://images.hdqwalls.com/wallpapers/santa-girl-lu.jpg',
+      image: 'https://images.hdqwalls.com/wallpapers/bthumb/superman-unstoppable-glide-b3.jpg',
       title: 'New Years eve Dinner',
       des: 'please welcome to all and enjoy it please welcome to all and enjoy it',
       month: 'Jan',
@@ -27,7 +27,7 @@ const cards = [
       time:'07:00 pm'
     },
     {
-      image: 'https://images.hdqwalls.com/wallpapers/merry-christmas-art-p4.jpg',
+      image: 'https://images.hdqwalls.com/wallpapers/spider-man-protector-gu.jpg',
       title: 'New Years eve Dinner',
       des: 'please welcome to all and enjoy it please welcome to all and enjoy it',
       month: 'Jan',
@@ -35,7 +35,7 @@ const cards = [
       time:'07:00 pm'
     },
     {
-      image: 'https://images.hdqwalls.com/wallpapers/merry-christmas-art-p4.jpg',
+      image: 'https://images.hdqwalls.com/wallpapers/spider-man-protector-gu.jpg',
       title: 'New Years eve Dinner',
       des: 'please welcome to all and enjoy it please welcome to all and enjoy it',
       month: 'Jan',

@@ -1,31 +1,54 @@
-.head-main{
+.head-main {
+  position: relative;
   height: 100vh;
-  background-image: url("../assets//images//HotelFront.jpg");
+  background-image: url("../assets/images/HotelFront.jpg");
   background-size: cover;
   text-align: center;
+  overflow: hidden; /* Ensures overlay stays within container bounds */
 }
-.headerLogo{
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 0.5 opacity */
+  z-index: 1; /* Ensures the overlay is above the background but below the content */
+  pointer-events: none; /* Ensures that the overlay doesn't interfere with clicking elements inside the container */
+}
+
+.hero-container,
+.headerLogoPosition,
+.header-title,
+.header-slogan {
+  position: relative;
+  z-index: 2; /* Ensures the content is above the overlay */
+}
+
+.headerLogo {
   width: 100px;
   margin-top: 20px;
 }
 
-.headerLogoPosition{
- margin-bottom: -100px !important;
+.headerLogoPosition {
+  margin-bottom: -100px !important;
 }
 
-.heading-container h1{
+.heading-container h1 {
   font-size: 90px;
   margin-right: auto;
   margin-left: auto;
-
 }
-.header-title{
+
+.header-title {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
 }
-.header-slogan{
+
+.header-slogan {
   background-color: rgb(255, 255, 255);
   width: fit-content;
   padding: 10px 40px;
@@ -38,8 +61,8 @@
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 768px){
-  .home-sitecard{
+@media only screen and (max-width: 768px) {
+  .home-sitecard {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,26 +71,25 @@
     align-items: center;
     margin-top: 30%;
   }
-  .headerLogo{
+  .headerLogo {
     width: 60px !important;
   }
-  .headerLogoPosition{
+  .headerLogoPosition {
     margin-bottom: -40px !important;
-   }
-   .heading-container h1{
+  }
+  .heading-container h1 {
     font-size: 60px;
   }
-  .heading-container{
+  .heading-container {
     line-height: 110px;
-  
-  }  
-  .header-title{
+  }
+  .header-title {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
   }
-  .header-slogan{
+  .header-slogan {
     background-color: rgb(255, 255, 255);
     width: fit-content;
     padding: 10px 40px;
@@ -80,5 +102,3 @@
     margin-bottom: 50px;
   }
 }
-
-
