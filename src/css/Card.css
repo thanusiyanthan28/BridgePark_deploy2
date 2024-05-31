@@ -86,11 +86,35 @@
     font-size: 14px;
   }
   .btnPrimary-check {
-    font-size: 16px;
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px ;
+    margin-left: 40%;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1225px) and (max-width: 1280px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px ;
+    margin-left: 40%;
+    height: 50px;
+    font-size: 12px;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1366px) {
+@media (min-width: 1281px) and (max-width: 1366px) {
   .titleH1, .titleH3 {
     font-size: 15px;
   }
@@ -101,13 +125,57 @@
   }
 }
 
-@media (min-width: 1367px) {
+
+@media (min-width: 1367px) and (max-width: 1440px) {
   .titleH1, .titleH3 {
-    font-size: 16px;
+    font-size: 15px;
   }
   .btnPrimary-check {
-    font-size: 18px;
-    margin-left: 80%;
+    padding: 0 40px 0 40px ;
+    margin-left: 60%;
+    height: 50px;
   }
 }
 
+
+@media (min-width: 1441px) and (max-width: 1924px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 60px 0 60px ;
+    margin-left: 50%;
+    height: 60px;
+    font-size: 12px;
+  }
+  
+.card {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 85% !important;
+  background-color: white;
+  color: black;
+  height: 150px !important;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.card-body {
+  padding: 16px;
+  text-align: left;
+  margin-top: 7px;
+
+
+ 
+  
+}
+
+}

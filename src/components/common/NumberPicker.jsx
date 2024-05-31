@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Button, Input, Space } from "antd";
 
-function NumberPicker({ placeholder, min = 0 }) {
-  const [value, setValue] = useState(min);
-
-  const increment = () => setValue(value + 1);
+function NumberPicker({ placeholder, value, onChange, min = 0 }) {
+  const increment = () => onChange(value + 1);
   const decrement = () => {
-    if (value > min) setValue(value - 1);
+    if (value > min) onChange(value - 1);
   };
 
   return (
     <Space>
-      <Button onClick={decrement}  >-</Button>
+      <Button onClick={decrement}>-</Button>
       <Input 
         value={value} 
         readOnly 
