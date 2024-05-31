@@ -122,6 +122,7 @@
   }
 
   .hotelRoomTypeCardButton {
+    width: 80%;
     font-size: 18px;
     margin-left: 150px;
     margin-top: 10px;
@@ -129,7 +130,6 @@
   .hotelRoomTypeCardTopBar {
     /* padding-right: 10px; */
     /* padding-left: 10px; */
-    width: 100%;
     /* position: relative; */
     top: auto;
     margin-bottom: 10px;

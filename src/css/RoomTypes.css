@@ -1,0 +1,47 @@
+.RoomType-containor{
+  align-items: center;
+}
+.RoomType-aboutH1{
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 400;
+}
+.RoomType-p{
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 0 70px;
+}
+.RoomType-subHead {
+  /* width: 80%; */
+margin: 0 auto; 
+margin-left: 225px;
+}
+.RoomType-subHading {
+line-height: 50px;
+font-size: 40px;
+font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .RoomType-containor{
+    align-items: center;
+  }
+  .RoomType-aboutH1{
+    text-align: center;
+  }
+  .RoomType-p{
+    text-align: justify;
+    padding: 10px;
+    margin-top: -10px;
+  }
+  .RoomType-subHading{
+    text-align: left;
+    margin-left: -150px;
+  }
+  .RoomType-typecontainor{
+    align-items: center;
+    padding-left: 200px;
+  }
+}
