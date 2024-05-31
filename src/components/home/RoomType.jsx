@@ -34,6 +34,7 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
+import img2 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg"
 import SiteCard from "../Sitecard/siteCard";
 import Card from "../common/Card";
 import "../../css/RoomTypes.css";
@@ -74,7 +75,7 @@ const RoomType = () => {
         // style={{ textAlign: "left" }}
       >
         <div className="RoomType-TextWrapper">
-          <h1 className="RoomType-aboutH1">OUR ROOMS</h1>
+          <h1 className="RoomType-header">OUR ROOMS</h1>
         </div>
         <div className="RoomType-sub">
           <p className="RoomType-p">
@@ -101,7 +102,7 @@ const RoomType = () => {
           linkTo="/BasicRoom"
         />
         <HotelRoomTypeCard
-          imageSource={img1}
+          imageSource={img2}
           title="Single Room"
           description="“En-suite” rooms are with Private bathroom facilities"
           guests={2}
