@@ -9,20 +9,25 @@ import img4 from "../../assets/images/DoubleEnsuite.jpg"
 import img5 from "../../assets/images/TwinRoom.jpg"
 import img6 from '../../assets/images/TripleEnsuite3singlebeds.jpg'
 import UrlLib from "../common/UrlLib";
-
+import { useNavigate } from "react-router-dom";
 
 
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [bookingUrl, setBookingUrl] = useState('');
+  const navigate = useNavigate();
 
-  const handleViewMoreClick = (room) => {
+  const handleViewMoreClick = (room,url) => {
     setSelectedRoom(room);
+    setBookingUrl(url);
     setIsModalVisible(true);
+   
   };
 
   const handleCancel = () => {
     setIsModalVisible(false);
+    navigate('/rooms');
   };
 
   const getUrlById = (id) => {
@@ -60,7 +65,7 @@ const Room = () => {
             onViewMoreClick={() => handleViewMoreClick({
               title: "Single Room",
               imageSource: img1,
-            })}
+            }, getUrlById(2))}
             link={getUrlById(2)}
           />{" "}
         </Col>
@@ -78,7 +83,7 @@ const Room = () => {
             onViewMoreClick={() => handleViewMoreClick({
               title: "DOUBLE BASIC",
               imageSource: img1,
-            })}
+            }, getUrlById(5))}
             link={getUrlById(5)}
           />{" "}
         </Col>
@@ -97,7 +102,7 @@ const Room = () => {
               title: "TRIPLE BASIC",
               imageSource: img3,
               
-            })}
+            }, getUrlById(10))}
             link={getUrlById(10)}
           />{" "}
         </Col>
@@ -118,7 +123,7 @@ const Room = () => {
               title: "DOUBLE ENSUITE",
               imageSource: img4,
               
-            })}
+            }, getUrlById(2))}
             link={getUrlById(2)}
           />{" "}
         </Col>
@@ -137,7 +142,7 @@ const Room = () => {
               title: "TWIN ENSUITE",
               imageSource: img5,
               
-            })}
+            }, getUrlById(11))}
             link={getUrlById(11)}
           />{" "}
         </Col>
@@ -155,7 +160,7 @@ const Room = () => {
             onViewMoreClick={() => handleViewMoreClick({
               title: "TRIPLE ENSUITE",
               imageSource: img6,
-            })}
+            }, getUrlById(9))}
             link={getUrlById(9)}
           />{" "}
         </Col>
@@ -166,7 +171,7 @@ const Room = () => {
         footer={null}
         width="80%"
       >
-        <RoomInformation room={selectedRoom}/>
+         <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
       </Modal>
     </div>
   );
