@@ -8,7 +8,7 @@ import { Row } from "antd";
 import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.jpg";
 import SiteCard from "../Sitecard/siteCard";
-import title from "../../assets/web ok.png"
+import title from "../../assets/title.png"
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -58,12 +58,13 @@ const Header = () => {
 
   return (
     <div className="head-main">
+      <div className="overlay"></div>
       {isMobile ? <div className="home-sitecard"><SiteCard /></div> : null}
       <div className="hero-container">
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
-        <img src={title}alt="title" className="header-title" />
+        <img src={title} alt="title" className="header-title" />
         {/* <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>

@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +8,7 @@ import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
 
-const RoomInformation = ({room}) => {
+const RoomInformation = ({room, bookingUrl}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
@@ -89,7 +88,7 @@ const RoomInformation = ({room}) => {
             </h2>
           </div>
           <div className="RoomInformation-section-Book-Container">
-            <button className="RoomInformation-section-Book" onClick={() => handleTabClick("Room Information")}>Book Now</button>
+            <button className="RoomInformation-section-Book" onClick={() => window.location.href = bookingUrl}>Book Now</button>
           </div>
         </Row>
       </div>

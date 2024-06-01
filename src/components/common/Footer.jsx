@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="footer-contact">
         <p><b>Contact Us</b></p>
         <ul className="contact-links">
-          <li><a href="#address"><span className='contact-icons'><FontAwesomeIcon icon={faMapMarkerAlt} /></span><span className='contact-lable'>Sportsman Suite Bridgepark Hotel, 16 Hillside,<br/> London NW10 8BN,United Kingdom </span></a></li>
+          <li><a href="https://www.google.com/maps?ll=51.541287,-0.261686&z=17&t=m&hl=en&gl=LK&mapclient=embed&cid=11362073612214208868"><span className='contact-icons'><FontAwesomeIcon icon={faMapMarkerAlt} /></span><span className='contact-lable'>Sportsman Suite Bridgepark Hotel, 16 Hillside,<br/> London NW10 8BN,United Kingdom </span></a></li>
           <li><a href="#about"><span className='contact-icons'><FontAwesomeIcon icon={faPhone} /></span><span className='contact-lable'>+44 208961 1260</span></a></li>
           <li><a href="#contact"><span span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-lable'>bridgeparkhotel@gmail.com</span></a></li>
         </ul>
@@ -28,10 +28,10 @@ const Footer = () => {
         <div className='footer-quick-menu'>
           <p><b>Quick Links</b></p>
           <ul className="quick-links">
-          <li><a href="#rooms"> <span className="quick-link-label">Rooms</span></a></li>
-          <li><a href="#group booking"> <span className="quick-link-label">Group booking</span></a></li>
+          <li><a href="/rooms"> <span className="quick-link-label">Rooms</span></a></li>
+          <li><a href="https://direct-book.com/properties/bridgeparkdirect?"> <span className="quick-link-label">Group booking</span></a></li>
           <li><a href="#booking policy"> <span className="quick-link-label">Booking Policy</span></a></li>
-          <li><a href="#terms and condition"> <span className="quick-link-label">Terms & Condition</span></a></li>
+          <li><a href="/HomeRules"> <span className="quick-link-label">Terms & Condition</span></a></li>
           </ul>
         </div>
 
