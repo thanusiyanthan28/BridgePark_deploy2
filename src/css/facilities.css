@@ -56,7 +56,6 @@
   text-align: center;
   font-size: 50px;
   font-family: 'Merriweather', serif;
-  margin-left: 60px;
   margin-top: 30px;
   
 }
@@ -333,7 +332,70 @@
     
   }
 }
+@media only screen and (min-width:1600px) and (max-width:1920px) {
+  .facilitiespara {
 
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 120px;
+    margin-left: 180px;
+
+  }
+
+  .facilitieshidebutton {
+    margin-left: 880px;
+  }
+  
+  .facilitiesbutton1 {
+    margin-left: 860px;
+  }
+  .fscolumnlist {
+    grid-gap: 5px;
+    font-size: 15px;
+    margin-left: 250px;
+    margin-bottom: -100px;
+    
+  }
+}
+@media only screen and (min-width:2000px) and (max-width:2560px){
+
+  
+  .facilitiescard {
+    width: 150px;
+    height: 150px; 
+  }
+  
+  .facilitiescardcontent {
+    height: 60%;
+    font-size: 12px;
+  
+  }
+  
+  .facilitiespara {
+    margin-right: 320px;
+    margin-left: 490px;
+  }
+  
+  .facilitiesbutton1 {
+   
+    margin-left: 1180px;
+    border-radius: 0px;
+  }
+  
+  .facilitieshidebutton {
+    margin-left: 1195px;
+  }
+  
+  .facilitieshidebutton span {
+    font-size: 15px;
+  }
+  
+  .fscolumnlist {
+    margin-left: 370px;
+  } 
+  
+}
 
 
 

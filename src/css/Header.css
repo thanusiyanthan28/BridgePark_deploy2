@@ -76,6 +76,7 @@
     margin-top: 20%;
     z-index: 999;
     text-align: left;
+    width: 100%;
   }
   .headerLogo {
     width: 60px !important;

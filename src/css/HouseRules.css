@@ -283,3 +283,61 @@
    }
 }
 
+@media only screen and (min-width:1600px) and (max-width:1920px){
+  .house-rules-container {
+    margin: 0 50px;
+    align-items: center;
+    margin-left:10px;
+  }
+  .title-container {
+    display: inline;
+    align-items: center;
+  }
+  .house-rules-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    margin-top: 10px;
+  }
+  .house-rules-description{
+    font-size: 15px;
+    margin-right: 50px;
+    margin-top: -80px;
+  }
+  .availability-button {
+    margin-left: 1100px;
+    padding: 15px 40px;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    font-size: 15px;
+   }
+}
+@media only screen and (min-width:2000px) and (max-width:2560px){
+  .house-rules-container {
+    margin: 0 50px;
+    align-items: center;
+    margin-left:30px;
+  }
+  .title-container {
+    display: inline;
+    align-items: center;
+  }
+  .house-rules-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    margin-top: 10px;
+  }
+  .house-rules-description{
+    font-size: 15px;
+    margin-right: 50px;
+    margin-top: -80px;
+  }
+  .availability-button {
+    margin-left: 1550px;
+    padding: 15px 40px;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    font-size: 15px;
+   }
+}

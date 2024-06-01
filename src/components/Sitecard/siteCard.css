@@ -1,16 +1,16 @@
 .app-container-site {
-  max-width: 350px;
+  max-width: 300px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .app-container2-site {
-  max-width: 340px;
+  max-width: 300px;
   margin: 0 auto;
   border: 0px solid;
   background-color: #fffdfd;
   border-radius: 10px;
-  height: 510px;
+  height: 460px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
 
@@ -18,11 +18,13 @@
   border: 0px solid #c9bcbc;
   border-radius: 5px;
   background-color: #f9f9f9;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
-
+.site-p{
+  font-size: 10px;
+}
 .card-body-site {
   display: flex;
   flex-direction: column;
@@ -32,23 +34,23 @@
   width: 100%;
   border-collapse: collapse;
   border: 1px; 
-  margin-bottom: 20px;
-  margin-top:-35px;
-  margin-left: -25px;
+  margin-bottom: 10px;
+  margin-top:-15px;
+  margin-left: 0px;
 }
 
 .tr-site {
   display: flex;
-  justify-content: space-between; /* Spread table cells evenly */
+  justify-content: space-between; 
 }
 
 .td-site {
-  flex: 1; /* Each table cell takes up equal space */
-  padding: 10px; /* Add padding to table cells */
+  flex: 1; 
+  padding: 10px; 
   text-align: left; 
 }
 
-/* Apply border only to the middle column */
+
 .td-site:nth-child(2) {
   border-left: 1px solid #ccc;
 }
@@ -56,9 +58,6 @@
   border-bottom: none;
 }
 
-
-
-/* Remove bottom border from specific cells */
 .td-site.label-cell {
   border-bottom: none;
 }
@@ -87,16 +86,21 @@
 }
 
 .card-body-site input[type="number"] {
-  width: 40px;
-  border: none; /* Remove input borders */
-  text-align: center; /* Center align text in input fields */
+  width: 30px;
+  border: none; 
+  text-align: center; 
 }
 
 .card-body-site tr:not(:last-child) {
-  border-bottom: 1px solid #ddd; /* Add a border line between rows */
+  border-bottom: 1px solid #ddd; 
 }
-
-
+.date-input-container-site .ant-picker-input input {
+  width: 100%; 
+  padding: 0px; 
+  font-size: 15px; 
+  border: 0px solid #ccc; 
+  font-weight: 500; 
+}
 
 .last-column-site {
   border-right: none;
@@ -109,15 +113,10 @@
   border: none;
   width: 30px;
   height: 30px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
-.react-datepicker-wrapper input {
-  border: none;
-  width: 90px;
-  height: 30px;
-  font-size: 25px;
-}
+
 .check-head-site{
   font-weight: bold;
  
@@ -162,9 +161,9 @@
   font-size: 20px; /* Increase font size */
 }
 .counter-site input[type="text"] {
-  width: 40px; /* Adjust the width as needed */
+  width: 18px; /* Adjust the width as needed */
   height: 40px; /* Adjust the height as needed */
-  font-size: 20px; /* Increase font size */
+  font-size: 15px; /* Increase font size */
   text-align: center; /* Center align text */
   border: none; /* Remove border */
   outline: none; /* Remove focus outline */
