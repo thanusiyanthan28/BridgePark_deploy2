@@ -1,0 +1,83 @@
+.RoomType-containor {
+  align-items: center;
+}
+.RoomType-header {
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 400;
+}
+.RoomType-p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 0 70px;
+}
+.RoomType-subHead {
+  /* width: 80%; */
+  margin: 0 auto;
+  margin-left: 200px;
+}
+.RoomType-subHading {
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.RoomType-typecontainor {
+  align-items: center;
+  padding-left: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .RoomType-containor {
+    align-items: center;
+  }
+  .RoomType-header {
+    text-align: center;
+  }
+  .RoomType-p {
+    text-align: justify;
+    padding: 10px;
+    margin-top: -10px;
+  }
+  .RoomType-subHading {
+    text-align: left;
+    margin-left: -110px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 2000px) and (max-width: 2560px) {
+  .RoomType-sub {
+    text-align: center;
+    margin: 0 150px;
+  }
+  .RoomType-subHading {
+    text-align: left;
+    margin-left: 200px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+    margin-left: 200px;
+  }
+  .RoomType-p{
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width:1600px) and (max-width:1920px){
+  .RoomType-sub {
+    text-align: center;
+    margin: 0 50px;
+  }
+  .RoomType-subHading {
+    text-align: left;
+    margin-left: 150px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+    margin-left: 150px;
+  }
+  .RoomType-p{
+    font-size: 20px;
+  }
+}

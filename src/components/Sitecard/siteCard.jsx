@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
+import { DatePicker } from 'antd'; // Import DatePicker from Ant Design
 import './siteCard.css'; // Import CSS file for styling
-import CustomDatePicker from './DatePicker'; // Import the CustomDatePicker component
-import { FaCalendarAlt } from 'react-icons/fa';
+import { Row, Col } from 'antd';
+import moment from 'moment'; // Import moment for date formatting
+
 const SiteCard = () => {
-  const [checkInDate, setCheckInDate] = useState('');
-  const [checkOutDate, setCheckOutDate] = useState('');
-  const [numAdults, setNumAdults] = useState(1);
-  const [numChildren, setNumChildren] = useState(0);
   const [formData, setFormData] = useState({
     checkInDate: '',
     checkOutDate: '',
@@ -26,10 +24,10 @@ const SiteCard = () => {
     }));
   };
 
-  const handleDateChange = (date, fieldName) => {
+  const handleDateChange = (date, dateString, fieldName) => {
     setFormData(prevState => ({
       ...prevState,
-      [fieldName]: date
+      [fieldName]: dateString
     }));
   };
 
@@ -44,14 +42,13 @@ const SiteCard = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-     const bookingURL = `https://direct-book.com/properties/bridgeparkdirect`;
-     const queryString = new URLSearchParams({
-        check_in_date: checkInDate,
-        check_out_date: checkOutDate,
-        number_adults: numAdults,
-        number_children: numChildren,
-     });
-     window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
+    const queryString = new URLSearchParams({
+      check_in_date: formData.checkInDate,
+      check_out_date: formData.checkOutDate,
+      number_adults: formData.adults,
+      number_children: formData.children,
+    });
+    window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
   };
 
   // Calculate total price
@@ -59,76 +56,74 @@ const SiteCard = () => {
   const tax = 53.69;
   const totalPrice = singleRoomPrice + tax;
 
+  const currentDateFormatted = moment().format('DD MMM');
+  const currentDayOfWeek = moment().format('dddd');
+
   return (
     <div className='app-container2-site'>
       <div className="app-container-site">
         <div className="card-site">
-
           <div className="card-body-site">
             <table className='table-site'>
               <tbody className='tbody-site'>
-
                 <tr className='tr-site'>
                   <td className='td-site'>
                     <p className='check-head-site'>CHECK IN</p>
                     <div className="date-input-container-site">
-                      <CustomDatePicker
+                      <DatePicker
                         name="checkInDate"
-                        selectedDate={formData.checkInDate}
-                        onChange={(date) => handleDateChange(date, 'checkInDate')}
+                        onChange={(date, dateString) => handleDateChange(date, dateString, 'checkInDate')}
+                        format="DD MMM"
+                        defaultValue={moment()}
                       />
-                      <FaCalendarAlt className="calendar-icon-site" /> {/* Add calendar icon */}
+                      {/* <FaCalendarAlt className="calendar-icon-site" /> */}
                     </div>
                   </td>
                   <td className='td-site'>
                     <p className='check-head-site'>CHECK OUT</p>
                     <div className="date-input-container-site">
-                      <CustomDatePicker
+                      <DatePicker
                         name="checkOutDate"
-                        selectedDate={formData.checkOutDate}
-                        onChange={(date) => handleDateChange(date, 'checkOutDate')}
+                        onChange={(date, dateString) => handleDateChange(date, dateString, 'checkOutDate')}
+                        format="DD MMM"
+                        defaultValue={moment()}
                       />
-                      <FaCalendarAlt className="calendar-icon-site" /> {/* Add calendar icon */}
+                      {/* <FaCalendarAlt className="calendar-icon-site" /> */}
                     </div>
                   </td>
                 </tr>
                 <tr className='tr-site'>
                   <td className='td-site'>
                     <label className='check-head-site'>ADULTS</label>
-                    <p>No of Persons</p>
+                    <p className='site-p'>No of Persons</p>
                     <div className="counter-site">
                       <button className="valueupdown-site" onClick={() => handleCountChange('adults', -1)}>-</button>
-                      <input type="text" name="numAdults" value={formData.adults.toString().padStart(2, '0')} onChange={handleChange} inputMode="none" readOnly />
+                      <input type="text" name="adults" value={formData.adults.toString().padStart(2, '0')} onChange={handleChange} readOnly />
                       <button className="valueupdown-site" onClick={() => handleCountChange('adults', 1)}>+</button>
                     </div>
                   </td>
                   <td className="td-site">
                     <label className='check-head-site'>CHILDREN</label>
-                    <p>No of Persons</p>
+                    <p  className='site-p'>No of Persons</p>
                     <div className="counter-site">
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', -1)}>-</button>
-                      <input type="text" name="numChildren" value={formData.children.toString().padStart(2, '0')} onChange={handleChange} inputMode="none" readOnly />
+                      <input type="text" name="children" value={formData.children.toString().padStart(2, '0')} onChange={handleChange} readOnly />
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', 1)}>+</button>
                     </div>
                   </td>
-
-
-
                 </tr>
               </tbody>
             </table>
-            <button className="button-site"type="submit" onClick={handleSubmit}>Modify</button>
+            <button className="button-site" type="submit" onClick={handleSubmit}>Modify</button>
           </div>
         </div>
         <div>
           <p>1 x Single Room Basic <span className='price-site'>${singleRoomPrice.toFixed(2)}</span></p>
           <p>Tax <span className='price-site'>${tax.toFixed(2)}</span></p>
-          <hr /> {/* Add a horizontal line */}
-          <p>Grand total <span className='price-site'>${totalPrice.toFixed(2)}</span></p> {/* Include the total price with span */}
-
+          <hr />
+          <p>Grand total <span className='price-site'>${totalPrice.toFixed(2)}</span></p>
         </div>
       </div>
-
     </div>
   );
 }
