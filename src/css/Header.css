@@ -6,6 +6,7 @@
   background-size: cover;
   text-align: center;
   overflow: hidden; /* Ensures overlay stays within container bounds */
+  width: 100%;
 }
 
 .overlay {
@@ -109,3 +110,20 @@
     margin-top: 20px;
   }
 }
+@media (max-height: 750px){
+  .home-sitecard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    z-index: 999;
+    text-align: left;
+    width: 100%;
+  }
+
+
+}
+
