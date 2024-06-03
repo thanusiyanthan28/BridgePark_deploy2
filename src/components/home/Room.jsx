@@ -26,8 +26,8 @@ const Room = () => {
   };
 
   const handleCancel = () => {
-    setIsModalVisible(false);
-    navigate('/rooms');
+   setIsModalVisible(false);
+   //navigate('/rooms');
   };
 
   const getUrlById = (id) => {

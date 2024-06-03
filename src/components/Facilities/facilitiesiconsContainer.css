@@ -67,7 +67,7 @@
     width: calc(50% - 10px); /* Adjusted width for two-column layout */
     margin: 0.5rem;
     padding: 10px;
-    border: 0px solid #ece1e1;
+    border: none;
     border-radius: 5px;
     height: 120px;
    
