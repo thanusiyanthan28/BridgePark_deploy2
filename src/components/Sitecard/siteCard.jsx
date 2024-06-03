@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { DatePicker } from 'antd'; // Import DatePicker from Ant Design
 import './siteCard.css'; // Import CSS file for styling
-import { Row, Col } from 'antd';
 import moment from 'moment'; // Import moment for date formatting
 
 const SiteCard = () => {
   const [formData, setFormData] = useState({
-    checkInDate: '',
-    checkOutDate: '',
+    checkInDate: '', // Initialize with current date
+    checkOutDate: '', // Initialize with current date
     adults: 1,
     children: 0,
     infants: 0,
@@ -15,19 +14,20 @@ const SiteCard = () => {
     currency: 'USD',
     // Add more form fields as needed
   });
+
   const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect`;
 
   const handleCountChange = (fieldName, increment) => {
     setFormData(prevState => ({
       ...prevState,
-      [fieldName]: Math.max(0, formData[fieldName] + increment) // Ensure the count doesn't go below 0
+      [fieldName]: Math.max(0, prevState[fieldName] + increment) // Ensure the count doesn't go below 0
     }));
   };
 
-  const handleDateChange = (date, dateString, fieldName) => {
+  const handleDateChange = (date, fieldName) => {
     setFormData(prevState => ({
       ...prevState,
-      [fieldName]: dateString
+      [fieldName]: date
     }));
   };
 
@@ -43,8 +43,8 @@ const SiteCard = () => {
     e.preventDefault();
   
     const queryString = new URLSearchParams({
-      check_in_date: formData.checkInDate,
-      check_out_date: formData.checkOutDate,
+      check_in_date: formData.checkInDate.format('YYYY-MM-DD'),
+      check_out_date: formData.checkOutDate.format('YYYY-MM-DD'),
       number_adults: formData.adults,
       number_children: formData.children,
     });
@@ -55,9 +55,6 @@ const SiteCard = () => {
   const singleRoomPrice = 1146.31;
   const tax = 53.69;
   const totalPrice = singleRoomPrice + tax;
-
-  const currentDateFormatted = moment().format('DD MMM');
-  const currentDayOfWeek = moment().format('dddd');
 
   return (
     <div className='app-container2-site'>
@@ -72,11 +69,10 @@ const SiteCard = () => {
                     <div className="date-input-container-site">
                       <DatePicker
                         name="checkInDate"
-                        onChange={(date, dateString) => handleDateChange(date, dateString, 'checkInDate')}
+                        value={formData.checkInDate}
+                        onChange={(date) => handleDateChange(date, 'checkInDate')}
                         format="DD MMM"
-                        defaultValue={moment()}
                       />
-                      {/* <FaCalendarAlt className="calendar-icon-site" /> */}
                     </div>
                   </td>
                   <td className='td-site'>
@@ -84,11 +80,10 @@ const SiteCard = () => {
                     <div className="date-input-container-site">
                       <DatePicker
                         name="checkOutDate"
-                        onChange={(date, dateString) => handleDateChange(date, dateString, 'checkOutDate')}
+                        value={formData.checkOutDate}
+                        onChange={(date) => handleDateChange(date, 'checkOutDate')}
                         format="DD MMM"
-                        defaultValue={moment()}
                       />
-                      {/* <FaCalendarAlt className="calendar-icon-site" /> */}
                     </div>
                   </td>
                 </tr>
@@ -104,7 +99,7 @@ const SiteCard = () => {
                   </td>
                   <td className="td-site">
                     <label className='check-head-site'>CHILDREN</label>
-                    <p  className='site-p'>No of Persons</p>
+                    <p className='site-p'>No of Persons</p>
                     <div className="counter-site">
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', -1)}>-</button>
                       <input type="text" name="children" value={formData.children.toString().padStart(2, '0')} onChange={handleChange} readOnly />
