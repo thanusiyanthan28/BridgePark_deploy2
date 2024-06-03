@@ -11,7 +11,7 @@
   font-size: 15px;
   line-height: 1.5;
   font-weight: 500;
-  padding: 0 70px;
+  padding: 0 80px;
   text-align: center;
   margin: 0 30px;
 }
@@ -27,7 +27,7 @@
 }
 .RoomType-typecontainor {
   align-items: center;
-  padding-left: 200px;
+  padding-left: 203px;
 }
 @media only screen and (max-width: 768px) {
   .RoomType-containor {
