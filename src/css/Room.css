@@ -5,16 +5,17 @@
 
 @media (max-width: 768px) {
     .hotelRoomMainRow {
-      display: block; /* Change to block to display columns one after the other */
-      width: 100%;
-      margin-left: 20px;
+      display: block; 
+      width: 80%;
+      /* margin-left: 20px; */
+      margin-right: auto;
+      margin-left: auto;
+      align-items: center;
+      
     }
-    .rooms-main-contaner{
-      width: 95%;
-    }
-  
+   
     .hotelRoomMainRow > .ant-col {
-      width: 100%; /* Each column takes up full width on mobile */
+      width: 95%;
       margin-bottom: 20px; /* Add spacing between columns */
     }
   }
