@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./Location.css"
 import Header from '../common/Header'
 import Card from '../common/Card'
+import SiteCard from "../Sitecard/siteCard";
 
 const Location = () => {
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className='location'>
        {/* <Header /> */}
        <div className='location-main'>
        <div className='location-title'>Our Location</div>
-       <div className='location-card'><Card /></div>
+       {isMobile ? <div className="location-sitecard"><SiteCard /></div> :  <div className='location-card'><Card /></div>}
+      
        </div>
     <div className='location-sub'>
         <div className='location-sub-left'>
