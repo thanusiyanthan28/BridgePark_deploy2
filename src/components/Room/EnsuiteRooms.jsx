@@ -55,187 +55,264 @@ const EnsuiteRoom = () => {
 
   return (
     <div>
-      <div>
-      {isMobile ? <div className="EnsuiteRoom-sitecard"><SiteCard /></div> : null}
-      {!isMobile ? <div className="EnsuiteRoom-card"><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
+      <div className="EnsuiteRoom-cardContainor">
+        {isMobile ? (
+          <div className="EnsuiteRoom-sitecard">
+            <SiteCard />
+          </div>
+        ) : null}
+        {!isMobile ? (
+          <div className="EnsuiteRoom-card">
+            <Card title="Card Title 2" description="Description for Card 2" />
+          </div>
+        ) : null}
       </div>
-    
-    <div className="EnsuiteRoom-Main-container">
-      <div className="EnsuiteRoom-Container">
-        <div className="EnsuiteRoom-TextWrapper">
-          <h1 className="EnsuiteRoom-heading">ENSUITE ROOMS</h1>
+
+      <div className="EnsuiteRoom-Main-container">
+        <div className="EnsuiteRoom-Container">
+          <div className="EnsuiteRoom-TextWrapper">
+            <h1 className="EnsuiteRoom-heading">ENSUITE ROOMS</h1>
+          </div>
         </div>
+        <Row className="hotelRoomMainRow">
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img1}
+              title={
+                <>
+                  DOUBLE ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon2}
+                    alt="Person Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="1x double bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(2)}
+            />
+          </Col>
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img2}
+              title={
+                <>
+                  TWIN ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon2}
+                    alt="Person Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="2x single bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(12)}
+            />
+          </Col>
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img3}
+              title={
+                <>
+                  TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon3}
+                    alt="Person Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="3x single bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(10)}
+            />
+          </Col>
+        </Row>
+        <Row className="hotelRoomMainRow">
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img4}
+              title={
+                <>
+                  TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon3}
+                    alt="Person Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icon"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="1x single bed + 1x double bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(19)}
+            />
+          </Col>
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img5}
+              title={
+                <>
+                  QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon3}
+                    alt="Person Icon"
+                    className="EnsuiteRooms-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icons"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="2x single bed + 1x double bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(20)}
+            />
+          </Col>
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img6}
+              title={
+                <>
+                  QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon2}
+                    alt="Person Icon"
+                    className="EnsuiteRooms-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icons"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="1x double bed + 1x bunk bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(19)}
+            />
+          </Col>
+        </Row>
+        <Row className="hotelRoomMainRow">
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img7}
+              title={
+                <>
+                  EXECUTIVE KING ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon1}
+                    alt="Person Icon"
+                    className="EnsuiteRooms-icon"
+                  />
+                  <img
+                    src={bedIcon1}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icons"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="1x double bed"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(3)}
+            />
+          </Col>
+          <Col span={8}>
+            <HotelRoomCard
+              imageSource={img8}
+              title={
+                <>
+                  CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM{" "}
+                  <img
+                    src={personIcon2}
+                    alt="Person Icon"
+                    className="EnsuiteRooms-icon"
+                  />
+                  <img
+                    src={bedIcon2}
+                    alt="Bed Icon"
+                    className="EnsuiteRoom-icons"
+                  />
+                </>
+              }
+              description="Spacious room with a breathtaking view"
+              guests={2}
+              status="Available"
+              price="$200"
+              buttonText="Book Now"
+              cardtitle="1x superior King Room"
+              onViewMoreClick={handleViewMoreClick}
+              link={getUrlById(25)}
+            />
+          </Col>
+        </Row>
+        <Modal
+          visible={isModalVisible}
+          onCancel={handleCancel}
+          footer={null}
+          width="80%"
+        >
+          <RoomInfromation />
+        </Modal>
       </div>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img1}
-            title={
-              <>
-                DOUBLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(2)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img2}
-            title={
-              <>
-                TWIN ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="2x single bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(12)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img3}
-            title={
-              <>
-                TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="3x single bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(10)}
-          />
-        </Col>
-      </Row>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img4}
-            title={
-              <>
-                TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x single bed + 1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(19)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img5}
-            title={
-              <>
-                QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="2x single bed + 1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(20)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img6}
-            title={
-              <>
-                QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed + 1x bunk bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(19)}
-          />
-        </Col>
-      </Row>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img7}
-            title={
-              <>
-                EXECUTIVE KING ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon1} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon1} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(3)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img8}
-            title={
-              <>
-                CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x superior King Room"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(25)}
-          />
-        </Col>
-      </Row>
-      <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width="80%">
-        <RoomInfromation />
-      </Modal>
-    </div>
     </div>
   );
 };
