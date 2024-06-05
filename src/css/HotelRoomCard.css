@@ -17,6 +17,9 @@
   max-height: 230px; 
 }
 
+.hotelRoomCardContainer a img{
+  width: 100%; /* Example property */
+}
 .hotelRoomCardDetails {
   flex: 1; /* Take up 50% of the height */
   padding: 10px;

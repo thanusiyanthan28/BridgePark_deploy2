@@ -9,7 +9,8 @@ import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/BasicRoom.css";
-import RoomInfromation from "../home/RoomInformation";
+import { useNavigate } from "react-router-dom";
+import RoomInformation from "../home/RoomInformation";
 import personIcon2 from "../../assets/icons/two.png";
 import bedIcon2 from "../../assets/icons/rest.png";
 import bedIcon1 from "../../assets/icons/bed.png";
@@ -21,12 +22,15 @@ import SiteCard from "../Sitecard/siteCard";
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [bookingUrl, setBookingUrl] = useState('');
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
 
-  const handleViewMoreClick = (room) => {
+  const handleViewMoreClick = (room, url) => {
     setSelectedRoom(room);
+    setBookingUrl(url);
     setIsModalVisible(true);
   };
 
@@ -50,6 +54,37 @@ const BasicRoom = () => {
     };
   }, []);
 
+  const BasicroomData = [
+    {
+      id: 2,
+      image: img1,
+      title: "SINGLE ROOM BASIC",
+      cardTitle: "1x Single Bed",
+      imageUrl: getUrlById(2),
+    },
+    {
+      id: 5,
+      image: img2,
+      title: "DOUBLE BASIC",
+      cardTitle: "1x Double Bed",
+      imageUrl: getUrlById(5),
+    },
+    {
+      id: 11,
+      image: img3,
+      title: "TWIN ENSUITE",
+      cardTitle: "2x Single Bed",
+      imageUrl: getUrlById(11),
+    },
+    {
+      id: 9,
+      image: img4,
+      title: "TRIPLE ENSUITE",
+      cardTitle: "3x Single Bed",
+      imageUrl: getUrlById(9),
+    },
+  ];
+
   return (
     <div>
       <div className="BasicRoom-cardContainor">
@@ -66,129 +101,47 @@ const BasicRoom = () => {
       </div>
       <div className="BasicRoom-containor">
         <div className="aboutContainer">
-          <div className="aboutTextWrapper">
+          <div className="BasicRoom-TextWrapper">
             <h1 className="BasicRoom-aboutH1">BASIC ROOMS</h1>
           </div>
         </div>
-        <Row className="hotelRoomMainRow">
-          <Col span={8}>
-            {" "}
-            <HotelRoomCard
-              imageSource={img1}
-              // title=SINGLE ROOM WITH SHARED BATHROOM
-              title={
-                <>
-                  SINGLE ROOM WITH SHARED BATHROOM{" "}
-                  <img
-                    src={personIcon1}
-                    alt="Person Icon"
-                    className="room-icon"
-                  />
-                  <img src={bedIcon1} alt="Bed Icon" className="room-icon" />
-                </>
-              }
-              description="Spacious room with a breathtaking view"
-              guests={2}
-              status="Available"
-              price="£48"
-              buttonText="Book Now"
-              cardtitle="1x single bed"
-              onViewMoreClick={handleViewMoreClick}
-              link={getUrlById(8)}
-            />{" "}
-          </Col>
-          <Col span={8}>
-            {" "}
-            <HotelRoomCard
-              imageSource={img2}
-              // title=DOUBLE ROOM WITH SHARED BATHROOM
-              title={
-                <>
-                  DOUBLE ROOM WITH SHARED BATHROOM{" "}
-                  <img
-                    src={personIcon2}
-                    alt="Person Icon"
-                    className="room-icon"
-                  />
-                  <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
-                </>
-              }
-              description="Spacious room with a breathtaking view"
-              guests={2}
-              status="Available"
-              onViewMoreClick={handleViewMoreClick}
-              price="£58"
-              buttonText="Book Now"
-              cardtitle="1x single bed"
-              link={getUrlById(3)}
-            />{" "}
-          </Col>
-          <Col span={8}>
-            {" "}
-            <HotelRoomCard
-              imageSource={img3}
-              // title=TWIN ROOM WITH SHARED BATHROOM
-              title={
-                <>
-                  TWIN ROOM WITH SHARED BATHROOM{" "}
-                  <img
-                    src={personIcon2}
-                    alt="Person Icon"
-                    className="room-icon"
-                  />
-                  <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
-                </>
-              }
-              description="Spacious room with a breathtaking view"
-              guests={2}
-              status="Available"
-              onViewMoreClick={handleViewMoreClick}
-              price="£85"
-              buttonText="Book Now"
-              cardtitle="1x single bed"
-              link={getUrlById(12)}
-            />{" "}
-          </Col>
-        </Row>
-        <Row className="hotelRoomMainRow">
-          <Col span={8}>
-            {" "}
-            <HotelRoomCard
-              imageSource={img4}
-              // title="TRIPLE ROOM WITH SHARED BATHROOM"
-              title={
-                <>
-                  TRIPLE ROOM WITH SHARED BATHROOM{" "}
-                  <img
-                    src={personIcon3}
-                    alt="Person Icon"
-                    className="room-icon"
-                  />
-                  <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
-                </>
-              }
-              description="Spacious room with a breathtaking view"
-              guests={2}
-              status="Available"
-              onViewMoreClick={handleViewMoreClick}
-              price="$200"
-              buttonText="Book Now"
-              cardtitle="3x single bed"
-              link={getUrlById(10)}
-            />{" "}
-          </Col>
-        </Row>
-        <Modal
-          visible={isModalVisible}
-          onCancel={handleCancel}
-          footer={null}
-          width="80%"
-        >
-          <RoomInfromation room={selectedRoom} />
-        </Modal>
-
-        <div></div>
       </div>
+      <div className="hotelRoomMainDiv">
+        <Row gutter={[16, 16]} className="BasicRoom-row ">
+          {BasicroomData.map((room) => (
+            <Col key={room.id} className="hotelRoom-col">
+              <HotelRoomCard
+                imageSource={room.image}
+                title={room.title}
+                description="Spacious room with a breathtaking view"
+                guests={2}
+                status="Available"
+                price="£200"
+                buttonText="Book Now"
+                cardtitle={room.cardTitle}
+                onViewMoreClick={() =>
+                  handleViewMoreClick(
+                    {
+                      title: room.title,
+                      imageSource: room.image,
+                    },
+                    room.imageUrl
+                  )
+                }
+                link={room.imageUrl}
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
+      <Modal
+        visible={isModalVisible}
+        onCancel={handleCancel}
+        footer={null}
+        width="80%"
+      >
+        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
+      </Modal>
     </div>
   );
 };
