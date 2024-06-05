@@ -6,7 +6,6 @@ import img2 from "../../assets/images/DoubleEnsuite.jpg";
 import img3 from "../../assets/images/TwinRoom.jpg";
 import img4 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col, Modal } from "antd";
-import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/BasicRoom.css";
 import { useNavigate } from "react-router-dom";
@@ -100,16 +99,16 @@ const BasicRoom = () => {
         ) : null}
       </div>
       <div className="BasicRoom-containor">
-        <div className="aboutContainer">
+        <div className="">
           <div className="BasicRoom-TextWrapper">
             <h1 className="BasicRoom-aboutH1">BASIC ROOMS</h1>
           </div>
         </div>
       </div>
-      <div className="hotelRoomMainDiv">
+      <div className="BasicRoom-main">
         <Row gutter={[16, 16]} className="BasicRoom-row ">
           {BasicroomData.map((room) => (
-            <Col key={room.id} className="hotelRoom-col">
+            <Col key={room.id} className="BasicRoom-col">
               <HotelRoomCard
                 imageSource={room.image}
                 title={room.title}
