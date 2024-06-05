@@ -5,8 +5,9 @@
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-
+ 
 }
+
 
 .hotelRoomCardImage {
   flex: 1; /* Take up 50% of the height */

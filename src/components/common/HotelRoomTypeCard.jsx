@@ -67,8 +67,10 @@ const HotelRoomTypeCard = ({
   return (
     <div>
       <div className="hotelRoomTypeCardContainer">
-        <img src={imageSource} className="hotelRoomTypeCardImage" alt="Room" />
-        <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
+      <Link to={linkTo}>
+          <img src={imageSource} className="hotelRoomTypeCardImage" alt="Room" />
+        </Link>       
+         <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
         <div className="hotelRoomTypeCardDetails">
           <Row className="hotelRoomTypeCardInfoRow">
             <Col span={10}>

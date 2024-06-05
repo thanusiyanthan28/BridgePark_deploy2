@@ -3,13 +3,20 @@
   flex-direction: column;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  /* width: 1300px; */
   height: auto;
-  width: 80%;
+  width: 90%;
   margin-bottom: 20px;
+  margin-left: -25px;
+  
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
+.hotelRoomTypeCardContainer:hover {
+  box-shadow: 0 4px 1rem -4px #202828;
+    transform: translateY(6px);
+}
+
 
 .hotelRoomTypeCardImage {
   flex: 1; /* Take up 50% of the height */
@@ -70,11 +77,12 @@
   color: white;
   background-color: #5E888C;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 0px;
+  padding: 10px 10px;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 220px;
   width:125px;
+  margin-top: 5px;
 
 }
 
@@ -86,7 +94,7 @@
 }
 
 .hotelRoomTypeCardButton:hover {
-  background-color: #e0ffff;
+  background-color: #118989;
 }
 
 
@@ -108,7 +116,8 @@
   margin-left: 250px;
   margin-bottom: -20px;
   margin-top: -10px;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 500;
 }
 .HotelRoomTypeTextPara p{
   width: 150px;

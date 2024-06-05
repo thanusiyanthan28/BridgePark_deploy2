@@ -17,8 +17,11 @@ const HotelRoomCard = ({
   return (
     // <div className="main-hotelRoomCardContainer">
     <div className="hotelRoomCardContainer">
-      <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
-      <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
+       <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
+        
+      </a> 
+      <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>     
       <div className="hotelRoomCardDetails">
         <Row className="hotelRoomCardTitleTextFirst">
           <Col span={14}>
