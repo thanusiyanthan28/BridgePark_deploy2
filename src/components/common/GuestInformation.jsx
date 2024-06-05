@@ -25,6 +25,9 @@ const GuestInfo = () => {
     event.preventDefault();
     console.log(formData);
   };
+  const handleButtonClick = () => {
+    window.location.href = 'https://direct-book.com/properties/bridgeparkdirect/book?';
+  };
 
   return (
     <div>
@@ -101,7 +104,7 @@ const GuestInfo = () => {
           </div>
           <hr />
           
-          <button type="submit">Proceed to Payment</button>
+          <button type="button" onClick={handleButtonClick}>Proceed to Payment</button>
         </form>
       </div>
     </div>

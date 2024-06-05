@@ -1,49 +1,55 @@
-.EnsuiteRoom-container {
+.EnsuiteRoom-Main-container {
     max-width: 100%;
     margin: 0 auto;
   }
-  
-  .card  {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    height: 50px;
+  .EnsuiteRoom-heading{
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-top: 80px;
   }
-  .card-body{
-    border-radius: 15px;
-  }
-  
-  .containerCol1 {
-    flex: 1;
-    padding: 2rem;
-  }
-  
-  .titleH1 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #4a5568;
-  }
-  
-  .titleH3 {
-    font-size: 1.125rem;
-    color: #2d3748;
-  }
-  
-  .btnPrimary {
-    background-color: #669399;
-    color: #ffffff;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    margin-left: 25px;
-    margin-top: 45px;
-  }
- 
- .aboutContainer{
-    margin-top: -30px;
- }
-  
+ .EnsuiteRoom-icon {
+  width: 20px; 
+  height: 20px; 
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.EnsuiteRooms-icon{
+  width: 20px; 
+  height: 20px; 
+  margin-left: 20px;
+  /* margin-top: 10px; */
+  display: block;
+} 
+.EnsuiteRoom-icons{
+  width: 20px; 
+  height: 20px;
+  display: flex;
+  margin-top: -20px;
+  margin-left: 60px;
+}
 
-  
+@media (max-width: 768px) {
+  .EnsuiteRoom-Main-container {
+    overflow-x: hidden;
+    margin-top: 550px;
+    margin-left: 15px;
+  }
+  .EnsuiteRoom-sitecard{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .EnsuiteRoom-heading{
+    text-align: center;
+    font-size: 30px;
+    margin-left: -35px;
+    font-weight: 500;
+  }
+}

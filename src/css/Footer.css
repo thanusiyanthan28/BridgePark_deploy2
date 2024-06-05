@@ -143,5 +143,12 @@
 
 
   }
+  @media (min-width: 1920px) and (max-width: 2560px) {
+    /* CSS styles for screens between X1px and X2px */
+    
+    .footer-logo{
+      margin-left: 10%;
+    }
+  }
   
   

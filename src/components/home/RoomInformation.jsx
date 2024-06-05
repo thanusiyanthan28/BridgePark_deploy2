@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
-import img1 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
 import { Row, Col } from "antd";
 import "../../css/RoomInformation/RoomInformation.css";
-import Button from "../common/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faRestroom, faCircleChevronDown, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
 import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
@@ -11,7 +9,7 @@ import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
 import FAQ from "../common/Faq";
 
-const RoomInformation = ({room}) => {
+const RoomInformation = ({room, bookingUrl}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
@@ -86,13 +84,13 @@ const RoomInformation = ({room}) => {
             className="RoomInformation-section-PriceList"
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-section-PriceList-1">1200 per night</h2>
+            <h2 className="RoomInformation-section-PriceList-1">£200 per night</h2>
             <h2 className="RoomInformation-section-PriceList-2">
               including Taxes & Fees
             </h2>
           </div>
           <div className="RoomInformation-section-Book-Container">
-            <button className="RoomInformation-section-Book" onClick={() => handleTabClick("Room Information")}>Book Now</button>
+            <button className="RoomInformation-section-Book" onClick={() => window.location.href = bookingUrl}>Book Now</button>
           </div>
         </Row>
       </div>
@@ -100,13 +98,13 @@ const RoomInformation = ({room}) => {
       
         <Row>
           <Col span={24}>
-            <img src={img1} className="RoomInformationCardImage" alt="Room" />
+            <img src={room.imageSource} className="RoomInformationCardImage" alt="Room" />
           </Col>
         </Row>
         <div className="sec-01" ref={sec01Ref}>
         <Row>
           <Col span={16}>
-            <div>
+            <div className="Add-card-position">
               <h2 className="RoomInformation-headings">Room Information</h2>
             </div>
             <div>

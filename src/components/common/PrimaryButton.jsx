@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import "../../css/Card.css";
 
 const PrimaryButton = ({ title, onClick }) => (
-  <Button type="default" className='btnPrimary' onClick={onClick}>
+  <Button type="default" className='btnPrimary-check' onClick={onClick}>
     {title}
   </Button>
 );

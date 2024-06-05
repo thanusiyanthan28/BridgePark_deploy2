@@ -1,46 +1,139 @@
-.head-main{
-  /* display: flex;
-  flex-direction: column; */
+
+.head-main {
+  position: relative;
   height: 100vh;
-  background-image: url("../assets//images//HotelFront.jpg");
+  background-image: url("../assets/images/HotelFront.jpg");
   background-size: cover;
   text-align: center;
-}
-.hero-container {
-
-}
-.headerLogoPosition{
- margin-bottom: -100px !important;
+  overflow: hidden; /* Ensures overlay stays within container bounds */
+  width: 100%;
 }
 
-.heading-container{
-  width: 95%;
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 0.5 opacity */
+  z-index: 1; /* Ensures the overlay is above the background but below the content */
+  pointer-events: none; /* Ensures that the overlay doesn't interfere with clicking elements inside the container */
 }
-.heading-container h1{
+
+.hero-container,
+.headerLogoPosition,
+.header-title,
+.header-slogan {
+  position: relative;
+  z-index: 2; /* Ensures the content is above the overlay */
+}
+
+.headerLogo {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.headerLogoPosition {
+  margin-bottom: -100px !important;
+}
+
+.heading-container h1 {
   font-size: 90px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.header-title {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.header-slogan {
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  padding: 10px 40px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
 
 }
 
-@media only screen and (max-width: 768px){
-  .home-sitecard{
+
+
+@media only screen and (max-width: 768px) {
+  .home-sitecard {
     position: absolute;
-    margin-left: 17%;
-    margin-right: 17%;
-    margin-top: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    z-index: 999;
+    text-align: left;
+    width: 100%;
   }
-  .headerLogoPosition{
+  .headerLogo {
+    width: 60px !important;
+  }
+  .headerLogoPosition {
     margin-bottom: -40px !important;
-   }
-   .heading-container h1{
+  }
+  .heading-container h1 {
     font-size: 60px;
   }
-  .heading-container{
+  .heading-container {
     line-height: 110px;
-  
-  }  
+  }
+  .header-title {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+  .header-slogan {
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
 }
+@media (max-height: 750px){
+  .home-sitecard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+    z-index: 999;
+    text-align: left;
+    width: 100%;
+  }
+  .head-main {
+    position: relative;
+    height: 110vh;
+    background-image: url("../assets/images/HotelFront.jpg");
+    background-size: cover;
+    text-align: center;
+    overflow: hidden; /* Ensures overlay stays within container bounds */
+    width: 100%;
+  }
+  
 
+
+}
 
