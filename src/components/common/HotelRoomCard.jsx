@@ -17,7 +17,7 @@ const HotelRoomCard = ({
   return (
     // <div className="main-hotelRoomCardContainer">
     <div className="hotelRoomCardContainer">
-      <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
+      <a href={link} target="_blank" rel="noopener noreferrer"><img src={imageSource} className="hotelRoomCardImage" alt="Room" /></a>
       <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
       <div className="hotelRoomCardDetails">
         <Row className="hotelRoomCardTitleTextFirst">
@@ -64,13 +64,14 @@ const HotelRoomCard = ({
         <Row className="hotelRoomCardInfoRow">
           <Col span={12}>
             <p className="hotelRoomCardPriceText">{price} per night</p>
-            <p className="cardPriceText2">including taxes</p>
+            
           </Col>
           <Col span={12}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-              <button className="hotelRoomCardButton">{buttonText}</button>
-            </a>          
+          <p className="cardPriceText2">including taxes</p>
           </Col>
+          <a href={link} target="_blank" rel="noopener noreferrer" className="hotelRoomCardButton-link">
+              <button className="hotelRoomCardButton">{buttonText}</button>
+            </a>  
         </Row>
       </div>
     </div>
