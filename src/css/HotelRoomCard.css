@@ -14,6 +14,7 @@
   transform: translateY(6px);
 }
 
+
 .hotelRoomCardImage {
   flex: 1; /* Take up 50% of the height */
   max-height: 230px; 

@@ -13,12 +13,17 @@ const HotelRoomCard = ({
   cardtitle,
   onViewMoreClick,
   link,
+  icon1,
+  icon2,
 }) => {
   return (
     // <div className="main-hotelRoomCardContainer">
     <div className="hotelRoomCardContainer">
-      <a href={link} target="_blank" rel="noopener noreferrer"><img src={imageSource} className="hotelRoomCardImage" alt="Room" /></a>
-      <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>
+       <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={imageSource} className="hotelRoomCardImage" alt="Room" />
+        
+      </a> 
+      <h1 className="hotelRoomCardTopBar">{cardtitle}</h1>     
       <div className="hotelRoomCardDetails">
         <Row className="hotelRoomCardTitleTextFirst">
           <Col span={14}>
@@ -31,6 +36,9 @@ const HotelRoomCard = ({
               View More
             </div>
           </Col>
+        </Row>
+        <Row className="hotelRoomCardTitleIcon">
+        <img src={icon1} /><img src={icon2} />
         </Row>
         <Row className="hotelRoomCard-MainRow">
           <Col span={8}>
