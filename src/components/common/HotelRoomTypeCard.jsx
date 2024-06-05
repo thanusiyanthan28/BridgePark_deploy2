@@ -70,7 +70,7 @@ const HotelRoomTypeCard = ({
       <Link to={linkTo}>
           <img src={imageSource} className="hotelRoomTypeCardImage" alt="Room" />
         </Link>       
-         <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
+        <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
         <div className="hotelRoomTypeCardDetails">
           <Row className="hotelRoomTypeCardInfoRow">
             <Col span={10}>
