@@ -9,11 +9,13 @@ import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
+import FAQ from "../common/Faq";
 
 const RoomInformation = ({room}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
+  const sec04Ref = useRef(null);
 
   const [activeTab, setActiveTab] = useState("Room Information");
   const [showList, setShowList] = useState(false);
@@ -169,7 +171,7 @@ const RoomInformation = ({room}) => {
 
 
         <div className="sec-03" ref={sec03Ref}><HouseRules/></div>
-
+        <div className="sec-04" ref={sec04Ref}><FAQ/></div>
      
     </div>
   );
