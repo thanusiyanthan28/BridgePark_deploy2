@@ -5,7 +5,11 @@
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  transition: background-color 0.2s, transform 0.2s;
 
+}
+.hotelRoomCardContainer:hover{
+  transform: scale(1.01);
 }
 
 .hotelRoomCardImage {
@@ -66,7 +70,12 @@
   border-radius: 0px;
   padding: 5px 10px;
   cursor: pointer;
-  float: right;
+  /* float: right; */
+  width: 100%;
+  border-radius: 3px;
+  height: 40px;
+
+  
 }
 
 .hotelRoomCardButton:hover {
@@ -103,6 +112,14 @@
 .hotelRoomCard-subRow{
   margin-top: -14px;
   margin-left: 0px;
+}
+.hotelRoomCardButton-link {
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.cardPriceText2{
+  float: right;
 }
 
 

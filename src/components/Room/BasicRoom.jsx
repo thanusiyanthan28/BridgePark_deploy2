@@ -65,7 +65,7 @@ const BasicRoom = () => {
         ) : null}
       </div>
       <div className="BasicRoom-containor">
-        <div className="aboutContainer" style={{ textAlign: "left" }}>
+        <div className="aboutContainer">
           <div className="aboutTextWrapper">
             <h1 className="BasicRoom-aboutH1">BASIC ROOMS</h1>
           </div>
