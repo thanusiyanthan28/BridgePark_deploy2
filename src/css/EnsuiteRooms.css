@@ -38,6 +38,7 @@
     margin-left: 15px;
   }
   .EnsuiteRoom-sitecard{
+    width: 100%;
     position: absolute;
     top: 40%;
     left: 50%;
