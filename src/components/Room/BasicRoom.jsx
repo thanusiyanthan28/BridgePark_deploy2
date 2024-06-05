@@ -53,7 +53,7 @@ const BasicRoom = () => {
     <div>
       <div>
       {isMobile ? <div className="BasicRoom-sitecard"><SiteCard /></div> : null}
-      {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
+      {!isMobile ? <div className="BasicRoom-card"><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
     <div className="BasicRoom-containor">
       

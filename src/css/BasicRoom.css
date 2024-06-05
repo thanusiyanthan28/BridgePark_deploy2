@@ -53,9 +53,9 @@
     margin-top: 600px;
     margin-left: 15px;
     align-items: center;
-   
   }
   .BasicRoom-sitecard {
+    width: 100%;
     position: absolute;
     top: 40%;
     left: 50%;
