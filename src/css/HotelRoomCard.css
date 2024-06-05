@@ -9,7 +9,9 @@
 
 }
 .hotelRoomCardContainer:hover{
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
+  box-shadow: 0 4px 1rem -4px #33cccc;
+  transform: translateY(6px);
 }
 
 .hotelRoomCardImage {
