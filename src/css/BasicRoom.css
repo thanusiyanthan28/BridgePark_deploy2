@@ -1,56 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+.BasicRoom-cardContainor {
+  margin-top: 50px;
+}
 .BasicRoom-containor {
   max-width: 100%;
   margin: 0 auto;
+  font-family: "Cinzel", serif;
 }
-.basic-room-main{
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+.BasicRoom-TextWrapper {
+  padding: 20px;
 }
-.BasicRoom-aboutH1{
+
+.BasicRoom-aboutH1 {
   text-align: center;
-  line-height: 50px;
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 500;
 }
 
-.containerCol1 {
-  flex: 1;
-  padding: 2rem;
+.BsicRoomMainDiv {
+  width: 100%;
+  align-items: center;
 }
-
-.titleH1 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #4a5568;
+.BasicRoom-row {
+  width: 90%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center;
+  align-items: center;
 }
-
-.titleH3 {
-  font-size: 1.125rem;
-  color: #2d3748;
+.BasicRoom-col {
+  display: flex;
+  flex-direction: row;
+  gap: auto;
+  justify-content: left;
 }
-
-.btnPrimary {
-  background-color: #669399;
-  color: #ffffff;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  margin-left: 25px;
-  margin-top: 45px;
-}
-
-.aboutContainer {
-  margin-top: -30px;
-}
-
-.room-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
 
 @media (max-width: 768px) {
   .BasicRoom-containor {
@@ -58,9 +42,9 @@
     margin-top: 600px;
     margin-left: 15px;
     align-items: center;
-   
   }
   .BasicRoom-sitecard {
+    width: 100%;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -69,9 +53,14 @@
     align-items: center;
     z-index: 99;
   }
-  .BasicRoom-aboutH1{
+  .BasicRoom-aboutH1 {
     text-align: center;
     font-size: 30px;
     margin-left: -35px;
+  }
+  .BsicRoomMainDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 }
