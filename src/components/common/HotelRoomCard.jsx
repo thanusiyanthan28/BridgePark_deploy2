@@ -36,9 +36,7 @@ const HotelRoomCard = ({
               View More
             </div>
           </Col>
-        </Row>
-        <Row className="hotelRoomCardTitleIcon">
-        <img src={icon1} /><img src={icon2} />
+          <div className="hotelRoomCard-main-icon"><img className="hotelRoomCard-icon" src={icon1} /><img className="hotelRoomCard-icon" src={icon2} /></div>
         </Row>
         <Row className="hotelRoomCard-MainRow">
           <Col span={8}>
