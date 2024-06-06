@@ -30,7 +30,12 @@ const About = () => {
                     <p>WELCOME TO</p>
                     <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1>
                     <div className="paragraphContainer">
-                        <p>Originally a Grade ii listed building, Bridge Park Hotel is the ideal place to stay whether you are visiting Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from Wembley Stadium we offer a warm welcome and exceptional accommodation. You can expect spacious rooms with freshly-prepared food and perfectly-poured pints whenever you visit us. All of our bedrooms feature comfortable mattresses, complimentary toiletries, flat-screen TVs and other essentials ensuring a great night's sleep. With a Lounge Bar & Grill at the heart of our property, a freshly cooked meal or late-night drinks are always nearby. You'll always get the best rate if you book direct!</p>
+                                <p>Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
+        Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
+        Wembley Stadium, we offer a warm welcome and exceptional accommodation. You can expect spacious 
+        rooms with freshly prepared food and perfectly poured pints whenever you visit us. All of our bedrooms 
+        feature comfortable mattresses, complimentary toiletries, flat-screen TVs, and other essentials, ensuring a 
+        great night's sleep. With a Lounge Bar & Grill at the heart of our property, a freshly cooked meal or latenight drinks are always nearby. You'll always get the best rate if you book direct!</p>
                     </div>
                 </div>
             </div>

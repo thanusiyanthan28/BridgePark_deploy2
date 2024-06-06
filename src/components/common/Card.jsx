@@ -29,8 +29,8 @@ function Card() {
   }, []);
 
   const handleCheckAvailability = () => {
-    const checkIn = checkInDate.format("YYYY-MM-DD");
-    const checkOut = checkOutDate.format("YYYY-MM-DD");
+    const checkIn = checkInDate ? checkInDate.format("YYYY-MM-DD") : '';
+    const checkOut = checkOutDate ? checkOutDate.format("YYYY-MM-DD") : '';
     const bookingUrl = `https://direct-book.com/properties/bridgeparkdirect?check_in_date=${checkIn}&check_out_date=${checkOut}&number_adults=${adults}&number_children=${children}`;
     window.open(bookingUrl, "_blank"); // Open in a new window
   };
@@ -44,7 +44,7 @@ function Card() {
               <h1 className="card-titleH1">CHECK IN</h1>
             </Row>
             <Row>
-              <h3 className="card-titleH3">{checkInDate.format("dddd")}</h3>
+              <h3 className="card-titleH3">{checkInDate ? checkInDate.format("dddd") : 'Select a date'}</h3>
             </Row>
             <Row>
               <DatePicker
@@ -63,7 +63,7 @@ function Card() {
               <h1 className="card-titleH1">CHECK OUT</h1>
             </Row>
             <Row>
-              <h3 className="card-titleH3">{checkOutDate.format("dddd")}</h3>
+              <h3 className="card-titleH3">{checkOutDate ? checkOutDate.format("dddd") : 'Select a date'}</h3>
             </Row>
             <Row>
               <DatePicker
