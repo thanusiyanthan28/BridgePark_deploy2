@@ -85,7 +85,9 @@
 }
 
 .hotelRoomCardButton:hover {
-  background-color: #e0ffff
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
 }
 
 .hotelRoomCard-MainRow{

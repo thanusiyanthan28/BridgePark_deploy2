@@ -1,3 +1,17 @@
+.custom-datepicker.ant-picker-outlined{
+  border: none;
+}
+.custom-datepicker.ant-picker .ant-picker-input >input{
+  font-size: 20px;
+  font-weight: bold;
+}
+.custom-datepicker.ant-picker .ant-picker-input{
+  width: 70%;
+}
+.custom-datepicker .anticon{
+  color: #669399;
+}
+.ant-picker .ant-picker-clear {}
 
 .card {
   border: 1px solid #ffffff;
@@ -27,13 +41,13 @@
   display: none;
 }
 
-.titleH1 {
-  color: rgb(59, 53, 53);
+.card-titleH1 {
+  color: rgb(0, 0, 0);
   margin-top: 10px;
   font-size: 16px;
 }
 
-.titleH3 {
+.card-titleH3 {
   color: rgba(71, 54, 54, 0.5);
   margin-top: 10px;
   font-size: 14px;
@@ -96,6 +110,10 @@
     margin-left: 40%;
     height: 50px;
     font-size: 12px;
+  }
+  .custom-datepicker.ant-picker .ant-picker-input >input{
+    font-size: 15px;
+    font-weight: bold;
   }
 }
 @media (min-width: 1225px) and (max-width: 1280px) {
