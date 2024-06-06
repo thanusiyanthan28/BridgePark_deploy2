@@ -62,6 +62,7 @@ const BasicRoom = () => {
           <h1 className="BasicRoom-aboutH1" >BASIC ROOMS</h1>
         </div>
       </div>
+      <div className="basic-room-main">
       <Row className="hotelRoomMainRow">
         <Col span={8}>
           {" "}
@@ -150,6 +151,7 @@ const BasicRoom = () => {
           />{" "}
         </Col> 
       </Row> 
+      </div>
       <Modal
         visible={isModalVisible}
         onCancel={handleCancel}
