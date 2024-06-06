@@ -16,6 +16,11 @@
   max-width: 100%;
   margin: -50px auto;
 }
+.basic-room-main{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .BasicRoom-aboutH1{
   text-align: center;
   line-height: 50px;

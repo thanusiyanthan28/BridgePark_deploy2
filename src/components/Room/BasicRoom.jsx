@@ -106,35 +106,95 @@ const BasicRoom = () => {
           </div>
         </div>
       </div>
-      <div className="test">
-      <div className="BasicRoom-main">
-        <Row gutter={[16, 16]} className="BasicRoom-row ">
-          {BasicroomData.map((room) => (
-            <Col key={room.id} className="BasicRoom-col">
-              <HotelRoomCard
-                imageSource={room.image}
-                title={room.title}
-                description="Spacious room with a breathtaking view"
-                guests={2}
-                status="Available"
-                price="£200"
-                buttonText="Book Now"
-                cardtitle={room.cardTitle}
-                onViewMoreClick={() =>
-                  handleViewMoreClick(
-                    {
-                      title: room.title,
-                      imageSource: room.image,
-                    },
-                    room.imageUrl
-                  )
-                }
-                link={room.imageUrl}
-              />
-            </Col>
-          ))}
-        </Row>
-      </div>
+      <div className="basic-room-main">
+      <Row className="hotelRoomMainRow">
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img1}
+            // title=SINGLE ROOM WITH SHARED BATHROOM  
+            title={
+              <>
+                SINGLE ROOM WITH SHARED BATHROOM  <img src={personIcon1} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon1} alt="Bed Icon" className="room-icon" />
+              </>
+            }
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            price="£48"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            onViewMoreClick={handleViewMoreClick}
+            link={getUrlById(8)}
+          />{" "}
+        </Col>
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img2}
+            // title=DOUBLE ROOM WITH SHARED BATHROOM  
+            title={
+              <>
+                DOUBLE ROOM WITH SHARED BATHROOM  <img src={personIcon2} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+              </>
+            }
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            onViewMoreClick={handleViewMoreClick}
+            price="£58"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            link={getUrlById(3)}
+          />{" "}
+        </Col>
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img3}
+            // title=TWIN ROOM WITH SHARED BATHROOM  
+            title={
+              <>
+                TWIN ROOM WITH SHARED BATHROOM  <img src={personIcon2} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+              </>
+            }
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            onViewMoreClick={handleViewMoreClick}
+            price="£85"
+            buttonText="Book Now"
+            cardtitle="1x single bed"
+            link={getUrlById(12)}
+          />{" "}
+        </Col>
+      </Row>
+      <Row className="hotelRoomMainRow">
+        <Col span={8}>
+          {" "}
+          <HotelRoomCard
+            imageSource={img4}
+            // title="TRIPLE ROOM WITH SHARED BATHROOM"
+            title={
+              <>
+                TRIPLE ROOM WITH SHARED BATHROOM  <img src={personIcon3} alt="Person Icon" className="room-icon" />
+                <img src={bedIcon2} alt="Bed Icon" className="room-icon" />
+              </>
+            }
+            description="Spacious room with a breathtaking view"
+            guests={2}
+            status="Available"
+            onViewMoreClick={handleViewMoreClick}
+            price="$200"
+            buttonText="Book Now"
+            cardtitle="3x single bed"
+            link={getUrlById(10)}
+          />{" "}
+        </Col> 
+      </Row> 
       </div>
       <Modal
         visible={isModalVisible}

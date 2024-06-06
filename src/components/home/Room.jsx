@@ -10,6 +10,9 @@ import img5 from "../../assets/images/TwinRoom.jpg"
 import img6 from '../../assets/images/TripleEnsuite3singlebeds.jpg'
 import UrlLib from "../common/UrlLib";
 import { useNavigate } from "react-router-dom";
+import icon11 from "../../assets/icons/bed.png"
+import icon22 from "../../assets/icons/two.png"
+
 
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -63,6 +66,7 @@ const Room = () => {
               <HotelRoomCard
                 imageSource={room.image}
                 title={room.title}
+
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Available"

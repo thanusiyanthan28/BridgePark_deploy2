@@ -2,7 +2,6 @@
   display: flex;
   height: 50px;
 
-
 }
 
 .header-update{
@@ -14,7 +13,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   position: fixed;
-  z-index: 99999;
+  z-index: 9999;
+ 
 
   
 }
@@ -68,7 +68,13 @@
   }
 
 
-
+  .update-header-drawer{
+    z-index: 10000;
+  }
+  .header-update{
+    position: relative;
+    z-index: 2;
+  }
 }
 /* HeaderUpdate.css */
 .custom-dropdown-menu {
