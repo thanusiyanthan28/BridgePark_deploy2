@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .pano-image-main{
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */
+  }
+  .pano-image-title{
+    font-family: "Cinzel", serif;
   }
   .pano-image-sub{
       background-color: #fff;
@@ -15,23 +21,26 @@
     }
     
     .pano-image-image-container {
-      width: calc(33.33% - 20px);
+      width: 300px;
+      height: 400px;
       /* max-width: 200px; Adjust based on your preference */
       overflow: hidden;
       /* width: 300px; */
-      /* border-radius: 10px; */
+      border-radius: 20px;
       cursor: pointer;
       transition: transform 0.3s ease;
       /* height: 200px; */
-  
-    
+    }
+    .pano-second-image-style{
+      height: 440px;
+      margin-top: -20px;
     }
     
     .pano-image-image-container img {
       width: 300px;
-      height:300px ;
+      height:440px ;
       object-fit: cover;
-  
+      border-radius: 20px;
     }
     
     .pano-image-image-container:hover {
@@ -119,7 +128,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .pano-image-discription h1
+    .pano-image-discription 
    {
         color: black;
         margin-top: -10px;
@@ -127,7 +136,7 @@
         margin-left: auto;
         margin-right: auto;
         font-size:larger;
-
+        font-family: "lato", sans-serif;
     }
   
     .pano-image-discription h2{
@@ -160,6 +169,16 @@
       .pano-image-nav-btn-pre:hover .anticon svg  {
         /* Define styles for the RightOutlined icon when its parent div is hovered */
         color: rgb(0, 238, 255); /* Change the color to red (you can use any color you prefer) */
+      }
+      .pano-image-title-line{
+        border: none;           
+        height: 1px;             
+        background-color:  #33cccc; 
+        width: 70%;
+         
+      }
+      .pano-image-main{
+        margin-bottom: 50px;
       }
 
       @media screen and (max-width: 768px) {

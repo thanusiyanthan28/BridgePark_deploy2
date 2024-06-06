@@ -3,14 +3,10 @@
 .meeting-my-class {
   width: 100%;
   border: 1;
-  /* background-color: tomato; */
-
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
   border-radius: 5px;
   height: 50%;
   font-family: "Lato", sans-serif;
@@ -32,7 +28,7 @@
   left: 50%; /* Move it to the center horizontally */
   transform: translateX(-50%); /* Center it horizontally */
   font-family: "Cinzel", serif;
-  margin-bottom: -20px;
+  margin-bottom: 0px;
   font-size: 50px;
 
 }

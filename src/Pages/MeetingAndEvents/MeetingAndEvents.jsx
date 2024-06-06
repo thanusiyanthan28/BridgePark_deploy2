@@ -48,6 +48,7 @@ const cards = [
   const MeetingAndEvents = () => {
   return (
     <div className="App">
+     
       <CardSlider cards={cards} />
      
     </div>
