@@ -13,8 +13,7 @@ const HotelRoomCard = ({
   cardtitle,
   onViewMoreClick,
   link,
-  icon1,
-  icon2,
+
 }) => {
   return (
     // <div className="main-hotelRoomCardContainer">
@@ -36,7 +35,7 @@ const HotelRoomCard = ({
               View More
             </div>
           </Col>
-          <div className="hotelRoomCard-main-icon"><img className="hotelRoomCard-icon" src={icon1} /><img className="hotelRoomCard-icon" src={icon2} /></div>
+         
         </Row>
         <Row className="hotelRoomCard-MainRow">
           <Col span={8}>
