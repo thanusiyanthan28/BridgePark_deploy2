@@ -10,6 +10,8 @@ import img5 from "../../assets/images/TwinRoom.jpg"
 import img6 from '../../assets/images/TripleEnsuite3singlebeds.jpg'
 import UrlLib from "../common/UrlLib";
 import { useNavigate } from "react-router-dom";
+import icon11 from "../../assets/icons/bed.png"
+import icon22 from "../../assets/icons/two.png"
 
 
 const Room = () => {
@@ -18,16 +20,14 @@ const Room = () => {
   const [bookingUrl, setBookingUrl] = useState('');
   const navigate = useNavigate();
 
-  const handleViewMoreClick = (room,url) => {
+  const handleViewMoreClick = (room, url) => {
     setSelectedRoom(room);
     setBookingUrl(url);
     setIsModalVisible(true);
-   
   };
 
   const handleCancel = () => {
-   setIsModalVisible(false);
-   //navigate('/rooms');
+    setIsModalVisible(false);
   };
 
   const getUrlById = (id) => {
@@ -35,14 +35,23 @@ const Room = () => {
     return urlObject ? urlObject.url : '#';
   };
 
+  const roomData = [
+    { id: 2, image: img1, title: "SINGLE ROOM BASIC", cardTitle: "1x Single Bed", imageUrl: getUrlById(2) },
+    { id: 5, image: img1, title: "DOUBLE BASIC", cardTitle: "1x Double Bed", imageUrl: getUrlById(5) },
+    { id: 10, image: img3, title: "TRIPLE BASIC", cardTitle: "3x Single Bed", imageUrl: getUrlById(10) },
+    { id: 2, image: img4, title: "DOUBLE ENSUITE", cardTitle: "1x Double Bed", imageUrl: getUrlById(2) },
+    { id: 11, image: img5, title: "TWIN ENSUITE", cardTitle: "2x Single Bed", imageUrl: getUrlById(11) },
+    { id: 9, image: img6, title: "TRIPLE ENSUITE",icon1:icon11,icon2:icon22, cardTitle: "3x Single Bed", imageUrl: getUrlById(9) }
+  ];
+
   return (
-    <div className="rooms-main-contaner">
-      <div className="roomaboutContainer">
+    <div className="rooms-main-container">
+      <div className="aboutContainer">
         <div className="aboutTextWrapper">
           <h1 className="aboutH1">OUR ROOMS</h1>
           <div className="paragraphContainer">
             <p>
-              Originally a Grade ii listed building, Bridge Park Hotel is the
+              Originally a Grade II listed building, Bridge Park Hotel is the
               ideal place to stay whether you are visiting Wembley or simply
               looking for accommodation to explore the sites of London. Just a
               short distance from Wembley Stadium
@@ -50,128 +59,38 @@ const Room = () => {
           </div>
         </div>
       </div>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img1}
-            title="SINGLE ROOM BASIC"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="1x Single Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "Single Room",
-              imageSource: img1,
-            }, getUrlById(2))}
-            link={getUrlById(2)}
-          />{" "}
-        </Col>
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img1}
-            title="DOUBLE BASIC"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="1x Double Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "DOUBLE BASIC",
-              imageSource: img1,
-            }, getUrlById(5))}
-            link={getUrlById(5)}
-          />{" "}
-        </Col>
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img3}
-            title="TRIPLE BASIC"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="3x Single Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "TRIPLE BASIC",
-              imageSource: img3,
-              
-            }, getUrlById(10))}
-            link={getUrlById(10)}
-          />{" "}
-        </Col>
-      </Row>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img4}
-            title="DOUBLE ENSUITE"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="1x Double Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "DOUBLE ENSUITE",
-              imageSource: img4,
-              
-            }, getUrlById(2))}
-            link={getUrlById(2)}
-          />{" "}
-        </Col>
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img5}
-            title="TWIN ENSUITE"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="2x Single Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "TWIN ENSUITE",
-              imageSource: img5,
-              
-            }, getUrlById(11))}
-            link={getUrlById(11)}
-          />{" "}
-        </Col>
-        <Col span={8}>
-          {" "}
-          <HotelRoomCard
-            imageSource={img6}
-            title="TRIPLE ENSUITE"
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="£200"
-            buttonText="Book Now"
-            cardtitle="3x Single Bed"
-            onViewMoreClick={() => handleViewMoreClick({
-              title: "TRIPLE ENSUITE",
-              imageSource: img6,
-            }, getUrlById(9))}
-            link={getUrlById(9)}
-          />{" "}
-        </Col>
-      </Row>
+      <div className="hotelRoomMainDiv">
+        <Row gutter={[16, 16]} className="hotelRoom-row">
+          {roomData.map((room) => (
+            <Col key={room.id} className="hotelRoom-col">
+              <HotelRoomCard
+                imageSource={room.image}
+                title={room.title}
+                // icon1={room.icon1}
+                // icon2={room.icon2}
+                description="Spacious room with a breathtaking view"
+                guests={2}
+                status="Available"
+                price="£200"
+                buttonText="Book Now"
+                cardtitle={room.cardTitle}
+                onViewMoreClick={() => handleViewMoreClick({
+                  title: room.title,
+                  imageSource: room.image,
+                }, room.imageUrl)}
+                link={room.imageUrl}
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
       <Modal
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
         width="80%"
       >
-         <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
+        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
       </Modal>
     </div>
   );

@@ -1,0 +1,11 @@
+.scroll-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}

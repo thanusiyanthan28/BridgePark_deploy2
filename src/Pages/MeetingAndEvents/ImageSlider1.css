@@ -6,10 +6,13 @@
     overflow: hidden;
 
   }
+  .image-galley-slider-image-wrapper img{
+    transition: transform 4s ease-in-out;
+  }
   
   .image-galley-slider {
     display: flex;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     gap: 10px; /* Add gap between images */
     padding: 0 10px; /* Add padding to adjust for the gap */
   
@@ -55,6 +58,7 @@
   .image-galley-arrow:hover {
     transform: scale(1.5); /* Zoom in on hover (adjust scale value as needed) */
     opacity: 0.8; /* Slightly reduce opacity on hover */
+
   }
   
   .image-galley-arrow:hover .anticon svg {
@@ -118,8 +122,9 @@
     
   }
   .image-galley-slider-image:hover {
-    transform: scale(1.05); /* Zoom in on hover (adjust scale value as needed) */
+    transform: scale(1.1); /* Zoom in on hover (adjust scale value as needed) */
     opacity: 0.8; /* Slightly reduce opacity on hover */
+    transition: transform 0.3s ease; 
   }
   .image-galley-title{
     text-align: center;

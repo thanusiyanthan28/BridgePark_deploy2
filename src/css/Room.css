@@ -1,14 +1,31 @@
-.hotelRoomMainRow {
-  width: 80%;
-  margin-left: 10%;
+.hotelRoomMainDiv {
+  width: 100%;
+  align-items: center;
+
+
+}
+.hotelRoom-row {
+ width: 90%;
+ margin-left: auto !important;
+ margin-right: auto !important;
+ justify-content: center;
+ align-items: center;
+}
+.hotelRoom-col {
+  display: flex;
+  flex-direction: row;
+  gap: auto;
+
 }
 
 @media (max-width: 768px) {
-  .roomaboutContainer{
-    width: 100%;
-    margin-left: auto;
-    margin-left: auto;
-    align-items: center;
+      .hotelRoomMainDiv {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+     
+   
+    }
   }
   .hotelRoomMainRow {
     display: block; /* Change to block to display columns one after the other */

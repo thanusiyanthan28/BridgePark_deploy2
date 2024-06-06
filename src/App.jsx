@@ -22,6 +22,7 @@ import ResetPassword from "./components/User/ResetPassword";
 import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 import SiteCard from "./components/Sitecard/siteCard";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
       
       <Router>
       <HeaderUpdate />
+      <ScrollToTop />
         <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
