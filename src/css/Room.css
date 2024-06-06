@@ -23,10 +23,8 @@
         margin-left: auto;
         margin-right: auto;
         width: 90%;
-     
-   
-    }
-  }
+      }
+  
   .hotelRoomMainRow {
     display: block; /* Change to block to display columns one after the other */
     width: 80%;
