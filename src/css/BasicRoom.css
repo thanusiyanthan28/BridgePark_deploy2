@@ -1,12 +1,16 @@
-.BasicRoom-cardContainor{
-  margin-top: 50px;
+.test{
+  width: 100%;
+  align-items: center;
 }
 .BasicRoom-main{
-  align-items: center !important;
+ 
+
 }
-.BasicRoom-row{
- width: 90%;
- margin-left: auto !important;
+
+
+
+.BasicRoom-cardContainor{
+  margin-top: 50px;
 }
 .BasicRoom-containor {
   max-width: 100%;
@@ -18,17 +22,27 @@
   font-size: 50px;
   font-weight: 500;
 }
-.room-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 20px;
-  margin-top: 10px;
+.BasicRoom-main{
+  
+  
 }
+.BasicRoom-row{
+  width: 95%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-items: center;
+  
+}
+.BasicRoom-col {
+ 
+ }
+
 .BasicRoom-TextWrapper{
   /* margin-top: 100px; */
   padding: 50px;
 }
 
+ 
 @media (max-width: 768px) {
   .BasicRoom-containor {
     overflow-x: hidden;

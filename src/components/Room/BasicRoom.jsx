@@ -57,35 +57,36 @@ const BasicRoom = () => {
     {
       id: 2,
       image: img1,
-      title: "SINGLE ROOM BASIC",
+      title: "SINGLE ROOM WITH SHARED BATHROOM",
+      icon:img1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
     },
     {
       id: 5,
       image: img2,
-      title: "DOUBLE BASIC",
+      title: "DOUBLE ROOM WITH SHARED BATHROOM",
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
     },
     {
       id: 11,
       image: img3,
-      title: "TWIN ENSUITE",
+      title: "TWIN ROOM WITH SHARED BATHROOM",
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
     },
     {
       id: 9,
       image: img4,
-      title: "TRIPLE ENSUITE",
+      title: "TRIPLE ROOM WITH SHARED BATHROOM",
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
     },
   ];
 
   return (
-    <div>
+    <div >
       <div className="BasicRoom-cardContainor">
         {isMobile ? (
           <div className="BasicRoom-sitecard">
@@ -105,6 +106,7 @@ const BasicRoom = () => {
           </div>
         </div>
       </div>
+      <div className="test">
       <div className="BasicRoom-main">
         <Row gutter={[16, 16]} className="BasicRoom-row ">
           {BasicroomData.map((room) => (
@@ -132,6 +134,7 @@ const BasicRoom = () => {
             </Col>
           ))}
         </Row>
+      </div>
       </div>
       <Modal
         visible={isModalVisible}
