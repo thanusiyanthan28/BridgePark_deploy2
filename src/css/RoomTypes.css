@@ -55,11 +55,6 @@
   }
   .RoomType-typecontainor {
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    transition: background-color 0.2s, transform 0.2s;
-  }
-  .RoomType-typecontainor:hover{
-    box-shadow: 0 4px 1rem -4px #33cccc;
   }
 }
 @media only screen and (min-width: 2000px) and (max-width: 2560px) {
