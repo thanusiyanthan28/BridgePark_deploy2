@@ -41,7 +41,7 @@ const Room = () => {
     { id: 10, image: img3, title: "TRIPLE BASIC", cardTitle: "3x Single Bed", imageUrl: getUrlById(10) },
     { id: 2, image: img4, title: "DOUBLE ENSUITE", cardTitle: "1x Double Bed", imageUrl: getUrlById(2) },
     { id: 11, image: img5, title: "TWIN ENSUITE", cardTitle: "2x Single Bed", imageUrl: getUrlById(11) },
-    { id: 9, image: img6, title: "TRIPLE ENSUITE", cardTitle: "3x Single Bed", imageUrl: getUrlById(9) }
+    { id: 9, image: img6, title: "TRIPLE ENSUITE",icon1:icon11,icon2:icon22, cardTitle: "3x Single Bed", imageUrl: getUrlById(9) }
   ];
 
   return (
@@ -66,7 +66,8 @@ const Room = () => {
               <HotelRoomCard
                 imageSource={room.image}
                 title={room.title}
-
+                // icon1={room.icon1}
+                // icon2={room.icon2}
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Available"
