@@ -13,7 +13,7 @@ function NumberPicker({ placeholder, value, onChange, min = 0 }) {
       <Button 
         shape="circle" 
         onClick={decrement} 
-        style={{ border: "none", backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+        style={{ border: "none", backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
       >
         <MinusOutlined style={{ color: '#669399', fontWeight: 'bold',fontSize:'15px' }} />
       </Button>
@@ -26,7 +26,7 @@ function NumberPicker({ placeholder, value, onChange, min = 0 }) {
       <Button 
         shape="circle" 
         onClick={increment} 
-        style={{ border: "none", backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+        style={{ border: "none", backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
       >
         <PlusOutlined style={{ color: '#669399', fontWeight: 'bold',fontSize:'15px' }} />
       </Button>

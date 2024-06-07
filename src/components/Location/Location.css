@@ -2,13 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .location-main{
-  width: 100%;
+  width: 95%;
+  background-color: #33cccc;
   height: 500px;
-  background-image: url("C:/Users/THANUSIYANTHAN/Desktop/final_project/BridgePark/src/assets/images/Restaurant1.jpg");
+  background-image: url("../../assets/images/Restaurant1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 30%; /* Adjust as needed */
-  margin-top: -20px;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }
 .location{}
 .location-title{
