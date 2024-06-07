@@ -23,7 +23,7 @@ import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
-
+import Privacy from "./components/Privacy/Privacy";
 export default function App() {
   return (
     <div>
@@ -35,7 +35,7 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-         
+          <Route path="/privacy" element={<Privacy/>}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
