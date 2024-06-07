@@ -1,29 +1,42 @@
-.location-main{
-    width: 100%;
-    height: 500px;
-    background-image: url("../../assets/images/image_gellery/image6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-    
+.location-main{
+  width: 95%;
+  background-color: #33cccc;
+  height: 500px;
+  background-image: url("../../assets/images/Restaurant1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }
+.location{}
 .location-title{
     text-align: center;
-    font-size: 70px;
-    color: white;
-    padding: 70px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+}
+.location-content{
+  display: flex;
 }
 .location-card{
-  
-    margin-top: 50px;
+  padding-top: 10%;
 }
 .location-sub{
-    display: flex;
-    width: 100%;
-
- 
-
-
+  
+    margin-left: auto;
+    margin-right: auto;
+  width: 95%;
+  border: 1px solid #33cccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 .location-sub-left{
     width: 60%;
@@ -32,6 +45,8 @@
 .location-sub-right{
     width: 40%;
     padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #33cccc;
     
 }
 .location-sub-left p,
@@ -45,11 +60,20 @@
    margin-top: 30px;
    color: rgb(0, 0, 0);
    font-weight: 500;
+   margin-bottom: 30px;
+   font-family: "Cinzel", serif;
 }
 .location-sub-content{
     color: rgba(51, 49, 49, 0.767);
     opacity: 1;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 40px; 
+    text-align: justify;
+    margin-right: 40px; 
+    font-family: "lato", sans-serif;
+    
 }
 .location-sub-right{
 align-items: center;
@@ -57,6 +81,18 @@ align-items: center;
 }
 .location-map{
     margin-top: 15px;
+}
+.location-line{
+  border: none;           
+  height: 1px;             
+  background-color:  #33cccc; 
+  margin-left: 30px; 
+}
+.location-sub-title-OnFoot{
+  margin-left: 40px; 
+}
+.location-sub-content-ex{
+
 }
 
 @media screen and (max-width: 768px) {

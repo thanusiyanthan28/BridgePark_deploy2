@@ -1,15 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .meeting-my-class {
   width: 100%;
   border: 1;
-  /* background-color: tomato; */
-
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
   border-radius: 5px;
   height: 50%;
   font-family: "Lato", sans-serif;
@@ -19,16 +16,21 @@
   display: flex;
   flex-direction: column; /* Ensure items stack vertically */
   position: relative; /* Required for absolute positioning */
+ 
 }
 .meeting-my-class2{
 
 }
 
 .meeting-my-class-title {
-  position: absolute; /* Position the h2 absolutely */
+  position: relative; /* Position the h2 absolutely */
   top: 0; /* Position it at the top of the container */
   left: 50%; /* Move it to the center horizontally */
   transform: translateX(-50%); /* Center it horizontally */
+  font-family: "Cinzel", serif;
+  margin-bottom: 0px;
+  font-size: 50px;
+
 }
 
 .meeting-card-slider {
@@ -279,6 +281,12 @@ margin-top: 15%;
   .meeting-card {
     flex: 0 0 300px 300px;
    
+  }
+}
+@media (max-width: 768px) {
+  .meeting-my-class-title {
+    font-size: 25px;
+  
   }
 }
 

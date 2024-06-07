@@ -48,7 +48,7 @@
 
 // export default hotelRoomTypeTypeCard;
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col } from "antd";
 import "../../css/HotelRoomTypeCard.css";
 import { Link } from "react-router-dom";
@@ -64,6 +64,22 @@ const HotelRoomTypeCard = ({
   cardtitle,
   linkTo,
 }) => {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 767px)").matches
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
       <div className="hotelRoomTypeCardContainer">
@@ -81,14 +97,20 @@ const HotelRoomTypeCard = ({
                 <p>Our Price Starts From </p>
                 <p>{price} Per Night</p>
               </div>
-              <Link to={linkTo}>
-                <button className="hotelRoomTypeCardButton">
+              {/* <Link to={linkTo} >
+                <button className='hotelRoomTypeCardButton'>
+                  {buttonText}
+                </button>
+              </Link> */}
+            </Col>
+          </Row>
+          
+        </div>
+        <Link to={linkTo} style={{ textDecoration: 'none' }}>
+                <button className={` ${isMobile ? 'mobileButton' : `mobileButton1`}`}>
                   {buttonText}
                 </button>
               </Link>
-            </Col>
-          </Row>
-        </div>
       </div>
     </div>
   );

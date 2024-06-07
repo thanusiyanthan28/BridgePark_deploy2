@@ -51,10 +51,9 @@ const Room = () => {
           <h1 className="aboutH1">OUR ROOMS</h1>
           <div className="paragraphContainer">
             <p>
-              Originally a Grade II listed building, Bridge Park Hotel is the
-              ideal place to stay whether you are visiting Wembley or simply
-              looking for accommodation to explore the sites of London. Just a
-              short distance from Wembley Stadium
+              Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
+              Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
+              Wembley Stadium.
             </p>
           </div>
         </div>

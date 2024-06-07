@@ -13,8 +13,8 @@
 .RoomType-header {
   text-align: center;
   font-family: "Cinzel", serif;
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: bold;
 }
 .RoomType-p {
   font-size: 15px;
@@ -31,7 +31,7 @@
   text-align: left;
   font-family: "Cinzel", serif;
   font-size: 36px;
-  font-weight: 500;
+  font-weight: bold;
 }
 .RoomType-typecontainor {
   align-items: left;
@@ -45,7 +45,7 @@
     text-align: center;
   }
   .RoomType-p {
-    text-align: justify;
+    text-align: center;
     padding: 10px;
     margin-top: -10px;
   }
@@ -55,6 +55,7 @@
   }
   .RoomType-typecontainor {
     align-items: center;
+    padding-left: 10px;
   }
 }
 @media only screen and (min-width: 2000px) and (max-width: 2560px) {

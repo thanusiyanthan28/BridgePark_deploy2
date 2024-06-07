@@ -34,7 +34,7 @@ const ScrollToTop = () => {
       size="large" 
       onClick={scrollTop} 
       className="scroll-to-top"
-      style={{ display: showScroll ? 'flex' : 'none', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderColor: 'transparent' }}
+      style={{zIndex:999999, display: showScroll ? 'flex' : 'none', backgroundColor: '#669399', borderColor: 'white' }}
     />
   );
 }
