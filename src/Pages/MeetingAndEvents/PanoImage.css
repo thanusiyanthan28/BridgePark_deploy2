@@ -8,6 +8,7 @@
   }
   .pano-image-title{
     font-family: "Cinzel", serif;
+    width: 80%;
   }
   .pano-image-sub{
       background-color: #fff;
@@ -199,6 +200,10 @@
         height: 100%;
         width: 100%;
         border-radius: 10px;
+      }
+      .pano-second-image-style{
+        height: 400px;
+        margin-top: 0;
       }
     }
       

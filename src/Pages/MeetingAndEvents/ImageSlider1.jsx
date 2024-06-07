@@ -1,12 +1,16 @@
 import React, { useState ,useEffect,useRef } from 'react';
 import './ImageSlider1.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
-import image1 from "../../assets/images/image_gellery/image1.jpg";
-import image2 from "../../assets/images/image_gellery/image2.jpg";
-import image3 from "../../assets/images/image_gellery/image3.jpg";
-import image4 from "../../assets/images/image_gellery/image4.jpg";
-import image5 from "../../assets/images/image_gellery/image5.jpeg";
-import image6 from "../../assets/images/image_gellery/image6.jpg";
+import image1 from "../../assets/images/Bar2.jpg";
+import image2 from "../../assets/images/BreakfastBuffet.jpg";
+import image3 from "../../assets/images/HotelBreakfast.jpg";
+import image4 from "../../assets/images/HotelFront.jpg";
+import image5 from "../../assets/images/Loungebar 1.jpg";
+import image6 from "../../assets/images/RearBeergarden.jpg";
+import image7 from "../../assets/images/Reception1.jpg";
+import image8 from "../../assets/images/Restaurant1.jpg";
+import image9 from "../../assets/images/Restaurant2.jpg";
+
 
 const ImageSlider1 = () => {
   const images = [
@@ -16,6 +20,10 @@ const ImageSlider1 = () => {
     image4,
     image5,
     image6,
+    image7,
+    image8,
+    image9,
+
   ];
 
   const [index, setIndex] = useState(images.length - 3);
