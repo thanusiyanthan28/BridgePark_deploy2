@@ -4,7 +4,7 @@
 .location-main{
   width: 100%;
   height: 500px;
-  background-image: url("C:/Users/THANUSIYANTHAN/Desktop/final_project/BridgePark/src/assets/images/Restaurant1.jpg");
+  /* background-image: url("C:/Users/THANUSIYANTHAN/Desktop/final_project/BridgePark/src/assets/images/Restaurant1.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 30%; /* Adjust as needed */
