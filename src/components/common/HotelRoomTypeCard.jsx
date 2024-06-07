@@ -48,7 +48,7 @@
 
 // export default hotelRoomTypeTypeCard;
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Row, Col } from "antd";
 import "../../css/HotelRoomTypeCard.css";
 import { Link } from "react-router-dom";
@@ -64,22 +64,6 @@ const HotelRoomTypeCard = ({
   cardtitle,
   linkTo,
 }) => {
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div>
       <div className="hotelRoomTypeCardContainer">
@@ -97,17 +81,25 @@ const HotelRoomTypeCard = ({
                 <p>Our Price Starts From </p>
                 <p>{price} Per Night</p>
               </div>
-              {/* <Link to={linkTo} >
-                <button className='hotelRoomTypeCardButton'>
+              <Link to={linkTo} className="hotelRoomTypeCardButton-link">
+                <button className="hotelRoomTypeCardButton">
                   {buttonText}
                 </button>
-              </Link> */}
+              </Link>
             </Col>
           </Row>
-          
         </div>
-        <Link to={linkTo} style={{ textDecoration: 'none' }}>
-                <button className={` ${isMobile ? 'mobileButton' : `mobileButton1`}`}>
+        <div className="hotelRoomTypeCardButton-dis">
+          <div className="hotelRoomTypeCardButton-dis-left">
+            <p>{description}</p>
+            </div>
+          <div className="hotelRoomTypeCardButton-dis-right">
+            <p>Our Price Starts From </p>
+          <p>{price} Per Night</p>
+          </div>
+        </div>
+        <Link to={linkTo} className="hotelRoomTypeCardButton-mobile-line">
+                <button className="hotelRoomTypeCardButton-mobile">
                   {buttonText}
                 </button>
               </Link>

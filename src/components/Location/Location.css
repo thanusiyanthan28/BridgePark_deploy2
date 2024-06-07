@@ -18,10 +18,11 @@
 .location{}
 .location-title{
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(0, 0, 0);
     font-family: "Cinzel", serif;
-    font-weight: bold;
+    font-weight:500;
+    padding: 35px;
 }
 .location-content{
   display: flex;
@@ -62,6 +63,7 @@
    font-weight: 500;
    margin-bottom: 30px;
    font-family: "Cinzel", serif;
+   font-size: x-large;
 }
 .location-sub-content{
     color: rgba(51, 49, 49, 0.767);
