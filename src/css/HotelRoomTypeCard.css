@@ -123,11 +123,57 @@
   width: 150px;
 }
 
+.hotelRoomTypeCardButton-mobile-line{
+  display: none;
+}
+.hotelRoomTypeCardButton-dis{
+  display: none;
+}
+
+
 @media only screen and (max-width: 768px) {
+  .hotelRoomTypeCardButton-dis{
+    display: flex;
+  }
+  .hotelRoomTypeCardButton-dis-left p{
+width: 70%;
+margin-left: 10px;
+  }
+  .hotelRoomTypeCardButton-dis-right p{
+    margin-left: 10px;
+      }
+      .HotelRoomTypeTextShown{
+        display: none;
+      }
+      .hotelRoomTypeCardDetails{
+        display: none;
+      }
   .hotelRoomTypeCardContainer {
     width: 360px;
     margin-left:-165px;
     overflow-x: hidden;
+  }
+  .hotelRoomTypeCardButton-link{
+    display: none;
+  }
+  .hotelRoomTypeCardButton-mobile-line{
+    display: flex;
+    text-decoration: none;
+  }
+  .hotelRoomTypeCardButton-mobile{
+    font-size: 20px;
+    color: white;
+    background-color: #5E888C;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    width:95%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    text-decoration: none;
   }
 
   .hotelRoomTypeCardButton {
