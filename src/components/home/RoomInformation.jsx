@@ -62,7 +62,9 @@ const RoomInformation = ({room, bookingUrl}) => {
             className={`RoomInformation-section ${activeTab === "Room Information" ? "active" : ""}`}
             onClick={() => handleTabClick("Room Information")}
           >
+            <div className="fixed-head">
             <h2 className="RoomInformation-heading">Room Information</h2>
+            </div>
           </div>
 
           <div

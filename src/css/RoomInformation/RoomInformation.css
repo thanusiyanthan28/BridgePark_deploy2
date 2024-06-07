@@ -140,30 +140,38 @@
     margin-top: 5px;
   }
   
-  .RoomInformation-section-All {
+  /* .RoomInformation-section-All {
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid gray;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
-  }
+  } */
   
   .RoomInformation-section {
     cursor: pointer;
     flex: 1;
-    text-align: center;
+    text-align: left;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
+    margin-left: 0px;
     
   }
   .RoomInformation-heading {
     cursor: pointer;
     flex: 1;
     text-align: center;
-    padding: 1px;
-    font-size: 10px;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 180px;
     
+    
+  }
+  .fixed-head{
+    margin-left: -140px;
+    margin-bottom: -30px;
     
   }
 
@@ -190,10 +198,11 @@
   .RoomInformation-section-PriceList {
     font-size: 5px;
     margin-left: 7px;
-    margin-top: -20px;
+    margin-top: -30px;
+    margin-bottom: 25px;
   }
   .RoomInformation-section-PriceList-1{
-    font-size: 11px;
+    font-size: 10px;
 
   }
   .RoomInformation-section-PriceList-2{
@@ -207,10 +216,11 @@
   }
   .RoomInformation-section-Book{
     margin-left:5px;
-    font-size: 15px;
-    margin-top: -20px;
-    margin-right: -15px;
-    padding: 5px 50px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-right: -20px;
+    padding: 5px 120px;
+    border-radius: 7px;
   }
   .RoomInformation-subHeadings {
     font-size: 15px;
