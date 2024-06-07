@@ -44,10 +44,11 @@ const PanoImage = () => {
     <div className='pano-image-main'>
         
         
-        <h2 className='pano-image-title'>360° Virtual Tour</h2>
+        <h1 className='pano-image-title'>Experience Bridge Park Hotel Like Never Before</h1>
+       
         <div  className='pano-image-discription'>
-          <h2>Experience Bridge Park Hotel Like Never Before</h2>
-          <h1>Our 360° virtual tour provides an immersive look into our elegant rooms, stunning facilities, and scenic surroundings.</h1>
+        <hr class="pano-image-title-line" />
+         <p>Our 360° virtual tour provides an immersive look into our elegant rooms, stunning facilities, and scenic surroundings.</p>
         </div>
         <div className='pano-image-main2'>
         <button onClick={handlePrevClick} className={`pano-image-nav-btn-pre ${startIndex > 0? 'pano-image-active-btn' : 'pano-image-inactive-btn'}`}>
@@ -55,11 +56,11 @@ const PanoImage = () => {
           </button>
       <div className="pano-image-image-gallery">
 
-        {images.slice(startIndex, startIndex + 3).map((image, index) => (
-          <div key={index} className="pano-image-image-container" onClick={() => handleImageClick(index)}>
-            <img src={image.url} alt={image.alt} />
-          </div>
-        ))}
+      {images.slice(startIndex, startIndex + 3).map((image, index) => (
+  <div key={index} className={`pano-image-image-container ${index === 1 ? 'pano-second-image-style' : ''}`} onClick={() => handleImageClick(index)}>
+    <img src={image.url} alt={image.alt} />
+  </div>
+))}
      
       </div>
       <button onClick={handleNextClick} className={`pano-image-nav-btn-nxt ${startIndex + 3 < images.length? 'pano-image-active-btn' : 'pano-image-inactive-btn'}`} >

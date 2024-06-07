@@ -67,7 +67,9 @@ const HotelRoomTypeCard = ({
   return (
     <div>
       <div className="hotelRoomTypeCardContainer">
-        <img src={imageSource} className="hotelRoomTypeCardImage" alt="Room" />
+      <Link to={linkTo}>
+          <img src={imageSource} className="hotelRoomTypeCardImage" alt="Room" />
+        </Link>       
         <h1 className="hotelRoomTypeCardTopBar">{cardtitle}</h1>
         <div className="hotelRoomTypeCardDetails">
           <Row className="hotelRoomTypeCardInfoRow">
@@ -79,7 +81,7 @@ const HotelRoomTypeCard = ({
                 <p>Our Price Starts From </p>
                 <p>{price} Per Night</p>
               </div>
-              <Link to={linkTo}>
+              <Link to={linkTo} className="hotelRoomTypeCardButton-link">
                 <button className="hotelRoomTypeCardButton">
                   {buttonText}
                 </button>
@@ -87,6 +89,20 @@ const HotelRoomTypeCard = ({
             </Col>
           </Row>
         </div>
+        <div className="hotelRoomTypeCardButton-dis">
+          <div className="hotelRoomTypeCardButton-dis-left">
+            <p>{description}</p>
+            </div>
+          <div className="hotelRoomTypeCardButton-dis-right">
+            <p>Our Price Starts From </p>
+          <p>{price} Per Night</p>
+          </div>
+        </div>
+        <Link to={linkTo} className="hotelRoomTypeCardButton-mobile-line">
+                <button className="hotelRoomTypeCardButton-mobile">
+                  {buttonText}
+                </button>
+              </Link>
       </div>
     </div>
   );

@@ -20,28 +20,25 @@ const Location = () => {
   }, []);
   return (
     <div className='location'>
-       {/* <Header /> */}
-       <div className='location-main'>
-       <div className='location-title'>Our Location</div>
+       <div className='location-main'>  
        {isMobile ? <div className="location-sitecard"><SiteCard /></div> :  <div className='location-card'><Card /></div>}
-      
        </div>
+       <div className='location-title'>Location</div>
     <div className='location-sub'>
+    
+    <p className='location-sub-content location-sub-content-ex'>As The Bridge Park Hotel is less than 2 miles from Wembley Stadium and Arena, this is the perfect place to stay if you’re coming to watch a concert or sporting event here. You will also find Brent Cross Shopping Centre nearby. To explore central London, you should make the most of public transport. The number 18 bus, which stops outside your hotel, will take you straight to Regents Park and Madame Tussauds. Travel via tube and you can get to places like Oxford Street and Piccadilly Circus with ease.</p>
+    <div className="location-content">
         <div className='location-sub-left'>
-            <p className='location-sub-content'>As The Bridge Park Hotel is less than 2 miles from Wembley Stadium and Arena, this is the perfect place to stay if you’re coming to watch a concert or sporting event here. You will also find Brent Cross Shopping Centre nearby. To explore central London, you should make the most of public transport. The number 18 bus, which stops outside your hotel, will take you straight to Regents Park and Madame Tussauds. Travel via tube and you can get to places like Oxford Street and Piccadilly Circus with ease.</p>
+             <hr class="location-line" />
             <h1 className='location-sub-title'>By Train:</h1>
             <p className='location-sub-content'>You will find that Harlesden Train Station is within easy walking distance of The Bridge Park Hotel.</p>
+            <hr class="location-line" />
             <h1 className='location-sub-title'>By Car:</h1>
             <p className='location-sub-content'>Bridge Park Hotel is near the A238 road to Kingston upon Thames.</p>
+            <hr class="location-line" />
             <h1 className='location-sub-title'>By Tube:</h1>
             <p className='location-sub-content'>To get to The Bridge Park Hotel on the tube you should travel on the Bakerloo Line and get off at Harlesden or Stonebridge Park Tube Station.</p>
-            <h1 className='location-sub-title'>On Foot:</h1>
-            <p className='location-sub-content'>The Bridge Park Hotel is less than 10 minutes walk from Harlesden Tube Station (Bakerloo and London Overground lines) and 16 minutes from Stonebridge Park Tube Station (Bakerloo and London Overground lines).
-
-            Once you get to Harlesden Train / Tube Station you should exit onto Acton Lane and turn left. Take the first left into Winchelsea Road and carry straight on to Knatchbull Road. Once you reach the end turn left into Hillside where you will find Bridge Park Hotel at number 16.
-
-            Upon arrival at Stonebridge Park Tube Station, you need to exit onto Argenta Way and turn left. Start walking and then turn right into Point Place. At the end of this road, take another right into Brentfield Road. Carry straight on onto Hillside where you will find Bridge Park Hotel.</p>
-            
+            <hr class="location-line" />
         </div>
         <div className='location-sub-right'>
         <iframe
@@ -56,6 +53,14 @@ const Location = () => {
         className='location-map'
       ></iframe>
         </div>
+        </div>
+        
+        <h1 className='location-sub-title location-sub-title-OnFoot'>On Foot:</h1>
+            <p className='location-sub-content location-sub-content-ex'>The Bridge Park Hotel is less than 10 minutes walk from Harlesden Tube Station (Bakerloo and London Overground lines) and 16 minutes from Stonebridge Park Tube Station (Bakerloo and London Overground lines).
+
+            Once you get to Harlesden Train / Tube Station you should exit onto Acton Lane and turn left. Take the first left into Winchelsea Road and carry straight on to Knatchbull Road. Once you reach the end turn left into Hillside where you will find Bridge Park Hotel at number 16.
+
+            Upon arrival at Stonebridge Park Tube Station, you need to exit onto Argenta Way and turn left. Start walking and then turn right into Point Place. At the end of this road, take another right into Brentfield Road. Carry straight on onto Hillside where you will find Bridge Park Hotel.</p>
     </div>
     </div>
   )

@@ -1,4 +1,4 @@
-.hotelRoomCardContainer {
+.hotelRoomCardContainerBasicRoom {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -7,53 +7,51 @@
   overflow: hidden;
   transition: background-color 0.2s, transform 0.2s;
   width: 350px;
-
 }
-.hotelRoomCardContainer:hover{
+.hotelRoomCardContainerBasicRoom:hover {
   /* transform: scale(1.01); */
   box-shadow: 0 4px 1rem -4px #33cccc;
   transform: translateY(6px);
 }
 
-
-.hotelRoomCardImage {
+.hotelRoomCardImageBasicRoom {
   flex: 1; /* Take up 50% of the height */
-  max-height: 230px; 
+  max-height: 230px;
 }
 
-.hotelRoomCardContainer a img{
+.hotelRoomCardContainerBasicRoom a img {
   width: 100%; /* Example property */
 }
-.hotelRoomCardDetails {
+.hotelRoomCardDetailsBasicRoom {
   flex: 1; /* Take up 50% of the height */
   padding: 10px;
 }
 
-.hotelRoomCardTitle {
+.hotelRoomCardTitleBasicRoom {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.hotelRoomCardTitle2 {
+.hotelRoomCardTitle2BasicRoom {
   font-size: 16px;
   font-weight: lighter;
   margin-left: 140px;
 }
 
-.hotelRoomCardTitleTextFirst{
-  border-bottom: 2px solid rgba(5 5, 5, 0.068); 
+.hotelRoomCardTitleTextFirstBasicRoom {
+  border-bottom: 2px solid rgba(5 5, 5, 0.068);
   padding-bottom: 10px;
   width: 100%;
 }
 
 /* .cardDescription {
-  font-size: 14px;
-  color: gray;
-  margin-bottom: 10px;
-} */
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  } */
 
-.hotelRoomCardInfoRow {
+.hotelRoomCardInfoRowBasicRoom {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -61,17 +59,17 @@
 }
 
 /* .cardInfoText {
-  font-size: 12px;
-} */
+    font-size: 12px;
+  } */
 
-.hotelRoomCardPriceText {
+.hotelRoomCardPriceTextBasicRoom {
   font-size: 14px;
   font-weight: bold;
 }
 
-.hotelRoomCardButton {
+.hotelRoomCardButtonBasicRoom {
   font-size: 100%;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #3883af;
   border: none;
   border-radius: 0px;
@@ -81,22 +79,18 @@
   width: 100%;
   border-radius: 3px;
   height: 40px;
-
-  
 }
 
-.hotelRoomCardButton:hover {
+.hotelRoomCardButtonBasicRoom:hover {
   background-color: #e0ffff;
-  color: black;
-  border: 1px solid #000000
 }
 
-.hotelRoomCard-MainRow{
-  border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
+.hotelRoomCard-MainRowBasicRoom {
+  border-bottom: 2px solid rgba(5, 5, 5, 0.068);
   margin-top: -3px;
 }
 
-.hotelRoomCardTopBar{
+.hotelRoomCardTopBarBasicRoom {
   background-color: #ffffffc2;
   flex: 1;
   position: absolute;
@@ -110,57 +104,59 @@
   padding-bottom: 8px;
 }
 
-.hotelRoomViewMoreLink {
-  text-decoration: underline; 
-  cursor: pointer; 
+.hotelRoomViewMoreLinkBasicRoom {
+  text-decoration: underline;
+  cursor: pointer;
   margin-top: 10px;
   user-select: none;
   float: right;
 }
 
-.hotelRoomCard-subRow{
+.hotelRoomCard-subRowBasicRoom {
   margin-top: -14px;
   margin-left: 0px;
 }
-.hotelRoomCardButton-link {
+.hotelRoomCardButton-linkBasicRoom {
   width: 100%;
   padding-top: 4px;
   padding-bottom: 4px;
 }
-.cardPriceText2{
+.cardPriceText2BasicRoom {
   float: right;
 }
-
-
-
+.hotelRoomCardiconBasicRoom {
+  float: left;
+  /* margin-left: -5px !important; */
+}
+.hotelRoomCardiconBasicRoom img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
 
 @media only screen and (max-width: 768px) {
-  .hotelRoomCardContainer {
+  .hotelRoomCardContainerBasicRoom {
     width: 360px;
     justify-content: center;
     margin-left: auto !important;
     margin-right: auto !important;
     left: auto;
     right: auto;
-  
-    
   }
 
-  .hotelRoomCardButton {
-    font-size: 18px; 
-    margin-left: 60px; 
+  .hotelRoomCardButtonBasicRoom {
+    font-size: 18px;
+    margin-left: 60px;
     margin-top: 10px;
     float: right;
   }
 
-  .hotelRoomCardTopBar {
-    padding-right: 10px; 
-    padding-left: 10px; 
-    width: 100%; 
-    position: relative; 
-    top: auto; 
-    margin-bottom: 10px; 
+  .hotelRoomCardTopBarBasicRoom {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    position: relative;
+    top: auto;
+    margin-bottom: 10px;
   }
-
 }
-

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/ScrollToTop.css"
+import { Button } from 'antd';
+import { RightOutlined } from '@ant-design/icons';
+
+import "../../css/ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -13,7 +16,7 @@ const ScrollToTop = () => {
   };
 
   const scrollTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -24,9 +27,22 @@ const ScrollToTop = () => {
   }, [showScroll]);
 
   return (
-    <div className="scroll-to-top" onClick={scrollTop} style={{display: showScroll ? 'flex' : 'none'}}>
-      &#8679;
-    </div>
+    <Button 
+      type="primary" 
+      shape="circle" 
+      icon={<CustomUpOutlined />} // Use custom icon component
+      size="large" 
+      onClick={scrollTop} 
+      className="scroll-to-top"
+      style={{zIndex:999999, display: showScroll ? 'flex' : 'none', backgroundColor: '#669399', borderColor: 'white' }}
+    />
+  );
+}
+
+// Custom icon component to rotate the RightOutlined icon
+const CustomUpOutlined = () => {
+  return (
+    <RightOutlined style={{ transform: 'rotate(-90deg)' }} />
   );
 }
 
