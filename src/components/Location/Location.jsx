@@ -62,6 +62,19 @@ const Location = () => {
 
             Upon arrival at Stonebridge Park Tube Station, you need to exit onto Argenta Way and turn left. Start walking and then turn right into Point Place. At the end of this road, take another right into Brentfield Road. Carry straight on onto Hillside where you will find Bridge Park Hotel.</p>
     </div>
+    <div className='location-sub-right-mobile'>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2481.4600418069726!2d-0.2610174!3d51.5414628!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487611967e94e951%3A0x9dae31c05fde0964!2sBridge%20Park%20Hotel!5e0!3m2!1sen!2slk!4v1713963613608!5m2!1sen!2slk"
+        width="98%"
+        height="98%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Map"
+        className='location-map'
+      ></iframe>
+        </div>
     </div>
   )
 }
