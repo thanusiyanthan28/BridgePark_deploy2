@@ -32,6 +32,7 @@ const Footer = () => {
           <li><a href="https://direct-book.com/properties/bridgeparkdirect?" target='_blank'> <span className="quick-link-label">Group booking</span></a></li>
           <li><a href="/HomeRules"> <span className="quick-link-label" target='_blank'>Booking Policy</span></a></li>
           <li><a href="/"> <span className="quick-link-label" target='_blank'>Terms & Condition</span></a></li>
+          <li><a href="/"> <span className="quick-link-label" target='_blank'>Gust Info</span></a></li>
           </ul>
         </div>
 
