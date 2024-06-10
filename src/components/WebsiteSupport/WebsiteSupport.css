@@ -56,58 +56,63 @@
   text-align: justify;
   margin-right: 10px;
 }
-.WebsiteSupport-sub-content{
-    color: rgba(51, 49, 49, 0.767);
-    opacity: 1;
-    font-weight: 400;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 40px; 
-    text-align: justify;
-    margin-right: 40px; 
-    font-family: "lato", sans-serif;
-    
+.WebsiteSupport-sub-content {
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 40px;
+  text-align: justify;
+  margin-right: 40px;
+  font-family: "lato", sans-serif;
 }
 .WebsiteSupport-sub-content a {
   cursor: pointer;
   text-decoration: underline;
-   color: rgba(51, 49, 49, 0.767);
-    opacity: 1;
-    font-weight: 400;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-    font-family: "lato", sans-serif;
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-family: "lato", sans-serif;
 }
 @media screen and (max-width: 768px) {
-    .WebsiteSupport{
-      width: 100%;
-      height: 600px;
-      background-image: url("../../assets/images/image_gellery/image6.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-  
-      
+  .WebsiteSupport {
+    width: 100%;
+    height: 600px;
+    background-image: url("../../assets/images/image_gellery/image6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
-  .WebsiteSupport-title{
-        text-align: center;
-        font-size: 50px;
-        color: rgb(0, 0, 0);
-        padding: 5px;
-    }
-      
-      .WebsiteSupport-containor {
-          display: flex;
-          flex-direction: column;
-          margin-left: auto;
-          margin-right: auto;
-          justify-content: center;
-        }
-        .WebsiteSupport-sub-title {
-            margin-top: 20px;
-            font-size: 18px;
-         }
-    }
 
-  
+  .WebsiteSupport-title {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+  }
+
+  .WebsiteSupport-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .WebsiteSupport-containor {
+    width: 95%;
+    /* padding: 5px; */
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .WebsiteSupport-sub-title {
+    margin-top: 20px;
+    font-size: 18px;
+    width: 80%;
+    line-height: 1;
+  }
+}
