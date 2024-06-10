@@ -101,6 +101,12 @@
   border: 0px solid #ccc; 
   font-weight: 500; 
 }
+.date-input-container-site .ant-picker-input input::placeholder {
+  font-style: normal;
+  font-size: 15px;
+  color: #0a0a0a;
+  font-weight: 600;
+}
 
 .last-column-site {
   border-right: none;
