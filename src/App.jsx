@@ -23,6 +23,7 @@ import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
+import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 
 export default function App() {
   return (
@@ -39,7 +40,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
-          
+          <Route path="/website-support" element={<WebsiteSupport />} />
           <Route path="/HomeRules" element={<HomeRules />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/BasicRoom" element={<BasicRoom />} />
@@ -51,8 +52,9 @@ export default function App() {
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
           <Route path="/room-card" element={ <SiteCard />} />
-       
+         
           <Route path="/image-gallery" element={ <ImageGallery />} />
+          
         </Routes>
         <Footer />
         
