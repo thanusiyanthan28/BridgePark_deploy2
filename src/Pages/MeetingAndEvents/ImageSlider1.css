@@ -4,161 +4,136 @@
 .image-galley-slider-container {
     position: relative;
     width: 100%;
-    /* max-width: 900px; */
     margin: auto;
     overflow: hidden;
+}
+.image-galley-slider-image-wrapper img {
+    transition: transform 2s ease-in-out;
+       transform-style: flat;
+   
+   
+}
 
-  }
-  .image-galley-slider-image-wrapper img{
-    transition: transform 4s ease-in-out;
-  }
-  
-  .image-galley-slider {
+.image-galley-slider {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     gap: 10px; /* Add gap between images */
     padding: 0 10px; /* Add padding to adjust for the gap */
-  
-  }
-  
-  .image-galley-slider-image {
-    transition: transform 0.2s ease-in-out;
+}
+
+.image-galley-slider-image {
     object-fit: cover; /* Ensure the image covers its container */
     width: 100%; /* Ensure the image takes the full width of its container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: add border-radius for rounded corners */
-  }
+}
 
-  
-  .image-galley-size-1 {
+.image-galley-size-1 {
     flex: 0 0 calc(60% - 10px);
     height: 400px; /* Set a consistent height */
-  }
-  
-  .image-galley-size-2 {
+}
+
+.image-galley-size-2 {
     flex: 0 0 calc(25% - 10px);
     height: 350px; /* Set a consistent height */
-  }
-  
-  .image-galley-size-3 {
+}
+
+.image-galley-size-3 {
     flex: 0 0 calc(15% - 10px);
     height: 300px; /* Set a consistent height */
-  }
-  
-  .image-galley-arrow {
+}
+
+.image-galley-arrow {
     position: absolute;
     top: 50%;
-    /* transform: translateY(-50%); */
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* color: white; */
-    border: none;
-    /* padding: 10px; */
     cursor: pointer;
     z-index: 100;
-    /* font-size: 100px; */
     transition: transform 0.3s ease; /* Add transition for smooth effect */
-  }
-  .image-galley-arrow:hover {
-    transform: scale(1.5); /* Zoom in on hover (adjust scale value as needed) */
+}
+
+.image-galley-arrow:hover {
+    transform: scale(1.5); /* Zoom in on hover */
     opacity: 0.8; /* Slightly reduce opacity on hover */
+}
 
-  }
-  
-  .image-galley-arrow:hover .anticon svg {
+.image-galley-arrow:hover .anticon svg {
+    color: rgb(255, 255, 255); 
+}
 
-    color:(255, 255, 255); 
-  }
-  .image-galley-arrow {
-    /* Define initial styles for the div */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
-  }
-  
-  .image-galley-arrow:hover {
-    /* Define styles for the div when hovered */
-    transform: scale(1.5); /* Zoom effect: increase size by 10% */
-  }
-  
-  .image-galley-arrow:hover .anticon svg {
-    /* Define styles for the RightOutlined icon when its parent div is hovered */
-    color: rgb(255, 255, 255); /* Change the color to red (you can use any color you prefer) */
-  }
-  
-  .image-galley-arrow.image-galley-left {
+.image-galley-arrow.image-galley-left {
     left: 0;
     margin-left: 10px;
-  }
-  
-  .image-galley-arrow.image-galley-right {
+}
+
+.image-galley-arrow.image-galley-right {
     right: 0;
     margin-right: 10px;
-  }
-  .image-galley-slider-image-wrapper {
+}
+
+.image-galley-slider-image-wrapper {
     position: relative;
     overflow: hidden;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-galley-slider-image-wrapper.image-galley-size-1 {
-    flex: 0 0 calc(60% );
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-1 {
+    flex: 0 0 calc(60%);
     height: 500px;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-galley-slider-image-wrapper.image-galley-size-2 {
+ 
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-2 {
     flex: 0 0 calc(25% - 10px);
     height: 500px;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-galley-slider-image-wrapper.image-galley-size-3 {
+ 
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-3 {
     flex: 0 0 calc(15% - 10px);
     height: 500px;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-galley-slider-image {
+    
+}
+
+.image-galley-slider-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px; /* Optional: add border-radius for rounded corners */
-    
-  }
-  .image-galley-slider-image:hover {
-    transform: scale(1.1); /* Zoom in on hover (adjust scale value as needed) */
+    border-radius: 8px; /* Optional: add border-radius for rounded corners */ 
+}
+
+.image-galley-slider-image:hover {
+    transform: scale(1.2); /* Zoom in on hover */
     opacity: 0.8; /* Slightly reduce opacity on hover */
     transition: transform 0.3s ease; 
-  }
+}
 
-  .image-galley-title{
+.image-galley-title {
     text-align: center;
     color: black;
     margin-left: auto;
     margin-right: auto;
     font-family: "Cinzel", serif;
-    
-  }
-  @media (max-width: 768px) {
+}
+
+
+
+@media (max-width: 768px) {
     .image-galley-size-2,
-    .image-galley-size-3
-    {
+    .image-galley-size-3 {
         display: none;
     }
     .image-galley-slider-image-wrapper.image-galley-size-1 {
-        flex: 0 0 calc(100% );
+        flex: 0 0 calc(100%);
         height: 500px;
-      }
-      
-      .image-galley-slider-image-wrapper.image-galley-size-2 {
+    }
+    .image-galley-slider-image-wrapper.image-galley-size-2 {
         flex: 0 0 calc(0);
         height: 500px;
-      }
-      
-      .image-galley-slider-image-wrapper.image-galley-size-3 {
+    }
+    .image-galley-slider-image-wrapper.image-galley-size-3 {
         flex: 0 0 calc(0);
         height: 500px;
-      }
-      .image-galley-arrow{
+    }
+    .image-galley-arrow {
         display: none;
-      }
-  }
+    }
+}

@@ -70,7 +70,7 @@ const Facilities = () => {
           ))}
         </div>
 
-        <div>
+        <div className='fs-button'>
           {!showList && <button className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
           {showList && (
             <button className='facilitieshidebutton' onClick={handleHideList}>

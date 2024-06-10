@@ -61,10 +61,11 @@ const Header = () => {
       <div className="overlay"></div>
       {isMobile ? <div className="home-sitecard"><SiteCard /></div> : null}
       <div className="hero-container">
+     <img src={title} alt="title" className="header-title" />
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
-        <img src={title} alt="title" className="header-title" />
+        
         {/* <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>

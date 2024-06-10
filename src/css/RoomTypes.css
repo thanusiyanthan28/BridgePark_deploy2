@@ -1,52 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 .RoomType-containor {
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
+  text-align: center;
+  width: 100%;
+}
+/* For Card */
+.RoomType-CardContainor{
+  margin-top: 50px;
+}
+/* Our Room Heading */
+.RoomType-TextWrapper{
+  padding-top: 20px;
 }
 .RoomType-header {
   text-align: center;
-  line-height: 50px;
+  font-family: "Cinzel", serif;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: bold;
 }
+/* Top paragraph */
 .RoomType-p {
   font-size: 15px;
   line-height: 1.5;
   font-weight: 500;
-  padding: 0 80px;
+  padding: 0 120px;
   text-align: center;
-  margin: 0 30px;
+  /* margin: 0 30px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 .RoomType-subHead {
-  /* width: 80%; */
-  margin: 0 auto;
-  margin-left: 200px;
+  /* margin: 20px auto; Centering horizontally */
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .RoomType-subHading {
-  line-height: 50px;
-  font-size: 40px;
-  font-weight: 500;
+  text-align: left;
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  font-weight: bold;
 }
 .RoomType-typecontainor {
-  align-items: center;
-  padding-left: 203px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 @media only screen and (max-width: 768px) {
   .RoomType-containor {
     align-items: center;
   }
+  /* Our Room topic */
   .RoomType-header {
     text-align: center;
+    font-size: 37px;
   }
+  /* Main topic paragraph */
   .RoomType-p {
-    text-align: justify;
+    text-align: center;
     padding: 10px;
     margin-top: -10px;
   }
   .RoomType-subHading {
-    text-align: left;
-    margin-left: -110px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
   }
   .RoomType-typecontainor {
     align-items: center;
+    padding-left: 10px;
   }
 }
 @media only screen and (min-width: 2000px) and (max-width: 2560px) {

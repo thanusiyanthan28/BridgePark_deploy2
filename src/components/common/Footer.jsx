@@ -8,6 +8,7 @@ import "../../css/Footer.css"; // CSS file for styling
 import logo from "../../assets/images/HotelLogo.png";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     
     <footer className="footer">
@@ -32,6 +33,7 @@ const Footer = () => {
           <li><a href="https://direct-book.com/properties/bridgeparkdirect?" target='_blank'> <span className="quick-link-label">Group booking</span></a></li>
           <li><a href="/HomeRules"> <span className="quick-link-label" target='_blank'>Booking Policy</span></a></li>
           <li><a href="/"> <span className="quick-link-label" target='_blank'>Terms & Condition</span></a></li>
+          <li><a href="/"> <span className="quick-link-label" target='_blank'>Gust Info</span></a></li>
           </ul>
         </div>
 
@@ -47,7 +49,7 @@ const Footer = () => {
         </div>
         </div>
         
-     <div className='footer-copyright'> <p>Copyright &copy; 2023 Bridge Park Hotel. All Right Reserved</p></div>
+     <div className='footer-copyright'>  <p>Copyright &copy; {currentYear} Bridge Park Hotel. All Rights Reserved</p></div>
     </footer>
   
   );
