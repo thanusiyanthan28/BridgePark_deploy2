@@ -5,7 +5,7 @@
   width: 95%;
   background-color: #33cccc;
   height: 500px;
-  background-image: url("../assets/images/Restaurant1.jpg");
+  background-image: url("../../assets/images/Restaurant1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -87,12 +87,25 @@
     font-weight: 700;
     font-size: 15px;
 }
-
+.panel-border p{
+  font-size: 15px;
+}
+.faq-view-full-text{
+  font-size: 15px;
+  background: none;
+  border: none;
+  color: #33cccc;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px; /* Adjust as needed */
+  display: block;
+}
 @media (max-width: 768px) {
     .faq-main{
         width: 100%;
         height: 600px;
-        background-image: url("../assets/images/image_gellery/image6.jpg");
+        background-image: url("../../assets/images/image_gellery/image6.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }    

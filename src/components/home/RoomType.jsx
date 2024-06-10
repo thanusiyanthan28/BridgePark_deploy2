@@ -34,7 +34,7 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
-import img2 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg"
+import img2 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
 import SiteCard from "../Sitecard/siteCard";
 import Card from "../common/Card";
 import "../../css/RoomTypes.css";
@@ -58,7 +58,7 @@ const RoomType = () => {
   }, []);
   return (
     <div className="RoomType-containor">
-      <div>
+      <div className="RoomType-CardContainor">
         {isMobile ? (
           <div className="RoomType-sitecard">
             <SiteCard />
@@ -70,10 +70,7 @@ const RoomType = () => {
           </div>
         ) : null}
       </div>
-      <div
-        className="RoomType-ContaineraboutContainer"
-        // style={{ textAlign: "left" }}
-      >
+      <div className="RoomType-ContaineraboutContainer">
         <div className="RoomType-TextWrapper">
           <h1 className="RoomType-header">OUR ROOMS</h1>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState ,useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ImageSlider1.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import image1 from "../../assets/images/Bar2.jpg";
@@ -11,7 +11,6 @@ import image7 from "../../assets/images/Reception1.jpg";
 import image8 from "../../assets/images/Restaurant1.jpg";
 import image9 from "../../assets/images/Restaurant2.jpg";
 
-
 const ImageSlider1 = () => {
   const images = [
     image1,
@@ -23,13 +22,11 @@ const ImageSlider1 = () => {
     image7,
     image8,
     image9,
-
   ];
 
   const [index, setIndex] = useState(images.length - 3);
-
   const [startIndex, setStartIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768 ); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
@@ -44,6 +41,7 @@ const ImageSlider1 = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   const handleNext = () => {
     // Calculate the next start index with cyclic rotation
     setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -53,13 +51,14 @@ const ImageSlider1 = () => {
     // Calculate the previous start index with cyclic rotation
     setStartIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
     }, 5000); // Auto slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, ); 
+  }, []);
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
@@ -81,7 +80,6 @@ const ImageSlider1 = () => {
     touchStartX.current = null;
     touchEndX.current = null;
   };
-
 
   return (
     <div className="image-galley-slider-container" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>

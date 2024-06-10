@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 .RoomType-containor {
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
+}
+.RoomType-CardContainor{
+  margin-top: 50px;
+}
+.RoomType-TextWrapper{
+  padding-top: 20px;
 }
 .RoomType-header {
   text-align: center;
-  line-height: 50px;
+  font-family: "Cinzel", serif;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: bold;
 }
 .RoomType-p {
   font-size: 15px;
@@ -16,18 +25,17 @@
   margin: 0 30px;
 }
 .RoomType-subHead {
-  /* width: 80%; */
-  margin: 0 auto;
-  margin-left: 200px;
+  margin-left: 150px;
 }
 .RoomType-subHading {
-  line-height: 50px;
-  font-size: 40px;
-  font-weight: 500;
+  text-align: left;
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  font-weight: bold;
 }
 .RoomType-typecontainor {
-  align-items: center;
-  padding-left: 203px;
+  align-items: left;
+  margin-left: 180px;
 }
 @media only screen and (max-width: 768px) {
   .RoomType-containor {
@@ -37,7 +45,7 @@
     text-align: center;
   }
   .RoomType-p {
-    text-align: justify;
+    text-align: center;
     padding: 10px;
     margin-top: -10px;
   }
@@ -47,6 +55,7 @@
   }
   .RoomType-typecontainor {
     align-items: center;
+    padding-left: 10px;
   }
 }
 @media only screen and (min-width: 2000px) and (max-width: 2560px) {
