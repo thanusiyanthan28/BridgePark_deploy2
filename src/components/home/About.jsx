@@ -14,6 +14,7 @@ import img9 from '../../assets/images/Reception1.jpg';
 import img10 from '../../assets/images/Loungebar 1.jpg';
 import img11 from '../../assets/images/Loungebar 1.jpg';
 import img12 from '../../assets/images/TwilightExecroom.jpg';
+import bgimage from '../../assets/bph-welcome.png'
 
 const About = () => {
     const carouselImages = [
@@ -24,7 +25,8 @@ const About = () => {
     ];
 
     return (
-        <>
+        < div className='abContainer-main'>
+            <img className='about-bgimage' src={bgimage}/>
       <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 25% and get exclusive discounts when you Book!</button></a>
         <div className='abContainer'>
            
@@ -53,7 +55,7 @@ const About = () => {
                 </Row>
             </div>
         </div>
-        </>
+        </div>
     );
 };
 

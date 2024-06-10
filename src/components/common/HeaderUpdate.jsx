@@ -4,7 +4,7 @@ import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
 import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
 import img from "../../assets/images/DoubleEnsuite.jpg";
-import logo from '../../assets/images/HotelLogo.png'
+import headerlogo from '../../assets/header-logo.png'
 
 const HeaderUpdate = () => {
   const [current, setCurrent] = useState();
@@ -170,24 +170,22 @@ const HeaderUpdate = () => {
   return (
     <div className='header-update-container'>
       <div className='header-update'>
+        <img src={headerlogo}/>
         {!isMobile ? (
           <div className='header-nav-bar-left'>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />
           </div>
         ) : null}
-        
         {!isMobile ? (
         <div className='header-nav-bar-right'>
-        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsRight} />
-      </div>
+          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsRight} />
+        </div>
         ) : null}
-        
         <div className='header-update-toggle-button'>
           <Button type="primary" onClick={showDrawer} className="mobile-toggle">
             <MenuOutlined />
           </Button>
         </div>
-        <img className='update-header-logo' src={logo}/>
       </div>
       <Drawer placement="left" closable={false} onClose={onClose} open={open} className='update-header-drawer'>
         <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft} />
