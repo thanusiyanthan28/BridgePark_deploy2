@@ -9,7 +9,6 @@ import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
 import img7 from "../../assets/images/Untitled Project.jpg";
 import img8 from "../../assets/images/TwilightExecroom.jpg";
 import { Row, Col, Modal } from "antd";
-import "../../css/Room.css";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
 import RoomInfromation from "../home/RoomInformation";
@@ -21,12 +20,19 @@ import bedIcon2 from "../../assets/icons/rest.png";
 import UrlLib from "../common/UrlLib";
 import SiteCard from "../Sitecard/siteCard";
 import HouseRules from "../common/HomeRules";
+import HotelRoomCardBasicRoom from "../Room/HotelRoomCardBasicRoom";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [selectedRoom, setSelectedRoom] = useState(null);
+  const [bookingUrl, setBookingUrl] = useState("");
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 767px)").matches
+  );
 
-  const handleViewMoreClick = () => {
+  const handleViewMoreClick = (EnsuiteRoom, url) => {
+    setSelectedRoom(EnsuiteRoom);
+    setBookingUrl(url);
     setIsModalVisible(true);
   };
 
@@ -41,10 +47,8 @@ const EnsuiteRoom = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
     };
-
-    handleResize(); // Set the initial state correctly
 
     window.addEventListener("resize", handleResize);
 
@@ -54,11 +58,94 @@ const EnsuiteRoom = () => {
     };
   }, []);
 
+  const EnsuiteroomData = [
+    {
+      id: 14,
+      image: img1,
+      title: "DOUBLE ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon1,
+      icon2: bedIcon1,
+      cardTitle: "1x Double Bed",
+      imageUrl: getUrlById(14),
+    },
+    {
+      id: 11,
+      image: img2,
+      title: "TWIN ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon2,
+      icon2: bedIcon2,
+      cardTitle: "2x Single Bed",
+      imageUrl: getUrlById(11),
+    },
+    {
+      id: 9,
+      image: img3,
+      title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon2,
+      icon2: bedIcon2,
+      cardTitle: "3x Single Bed",
+      imageUrl: getUrlById(9),
+    },
+    {
+      id: 10,
+      image: img4,
+      title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon3,
+      icon2: bedIcon2,
+      cardTitle: "1x single bed + 1x double bed",
+      imageUrl: getUrlById(10),
+    },
+    {
+      id: 10,
+      image: img5,
+      title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon3,
+      icon2: bedIcon2,
+      cardTitle: "2x single bed + 1x double bed",
+      imageUrl: getUrlById(10),
+    },
+    {
+      id: 10,
+      image: img6,
+      title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon3,
+      icon2: bedIcon2,
+      cardTitle: "1x double bed + 1x bunk bed",
+      imageUrl: getUrlById(10),
+    },
+    {
+      id: 10,
+      image: img7,
+      title: "EXECUTIVE KING ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon3,
+      icon2: bedIcon2,
+      cardTitle: "1x Double bed",
+      imageUrl: getUrlById(10),
+    },
+    {
+      id: 10,
+      image: img8,
+      title: "CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM",
+      icon1: personIcon3,
+      icon2: bedIcon2,
+      cardTitle: "1x Superior King Room",
+      imageUrl: getUrlById(10),
+    },
+  ];
+
   return (
     <div>
-      <div>
-      {isMobile ? <div className="EnsuiteRoom-sitecard"><SiteCard /></div> : null}
-      {!isMobile ? <div className="EnsuiteRoom-card"><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
+      <div className="EnsuiteRoom-cardContainor">
+        {isMobile ? (
+          <div className="EnsuiteRoom-sitecard">
+            <SiteCard />
+          </div>
+        ) : null}
+        {!isMobile ? (
+          <div className="EnsuiteRoom-card">
+            <Card title="Card Title 2" description="Description for Card 2" />
+          </div>
+        ) : null}
       </div>
     
     <div className="EnsuiteRoom-Main-container">
@@ -70,177 +157,46 @@ const EnsuiteRoom = () => {
         </div>
           <h1 className="EnsuiteRoom-heading">ENSUITE ROOMS</h1>
         </div>
+        <div className="EnsuiteRoomMainDiv">
+          <Row gutter={[16, 16]} className="EnsuiteRoom-row">
+            {EnsuiteroomData.map((Ensuiteroom) => (
+              <Col key={Ensuiteroom.id} className="EnsuiteRoom-col">
+                <HotelRoomCardBasicRoom
+                  imageSource={Ensuiteroom.image}
+                  title={Ensuiteroom.title}
+                  icon1={Ensuiteroom.icon1}
+                  icon2={Ensuiteroom.icon2}
+                  description="Spacious room with a breathtaking view"
+                  guests={2}
+                  status="Available"
+                  price="£200"
+                  buttonText="Book Now"
+                  cardtitle={Ensuiteroom.cardTitle}
+                  onViewMoreClick={() =>
+                    handleViewMoreClick(
+                      {
+                        title: Ensuiteroom.title,
+                        imageSource: Ensuiteroom.image,
+                      },
+                      Ensuiteroom.imageUrl
+                    )
+                  }
+                  link={Ensuiteroom.imageUrl}
+                />
+              </Col>
+            ))}
+          </Row>
+        </div>
+        <HouseRules />
+        <Modal
+          visible={isModalVisible}
+          onCancel={handleCancel}
+          footer={null}
+          width="80%"
+        >
+          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} />
+        </Modal>
       </div>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img1}
-            title={
-              <>
-                DOUBLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(2)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img2}
-            title={
-              <>
-                TWIN ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="2x single bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(12)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img3}
-            title={
-              <>
-                TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="3x single bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(10)}
-          />
-        </Col>
-      </Row>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img4}
-            title={
-              <>
-                TRIPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRoom-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icon" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x single bed + 1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(19)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img5}
-            title={
-              <>
-                QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon3} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="2x single bed + 1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(20)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img6}
-            title={
-              <>
-                QUADUPLE ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed + 1x bunk bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(19)}
-          />
-        </Col>
-      </Row>
-      <Row className="hotelRoomMainRow">
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img7}
-            title={
-              <>
-                EXECUTIVE KING ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon1} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon1} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x double bed"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(3)}
-          />
-        </Col>
-        <Col span={8}>
-          <HotelRoomCard
-            imageSource={img8}
-            title={
-              <>
-                CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM{" "}
-                <img src={personIcon2} alt="Person Icon" className="EnsuiteRooms-icon" />
-                <img src={bedIcon2} alt="Bed Icon" className="EnsuiteRoom-icons" />
-              </>
-            }
-            description="Spacious room with a breathtaking view"
-            guests={2}
-            status="Available"
-            price="$200"
-            buttonText="Book Now"
-            cardtitle="1x superior King Room"
-            onViewMoreClick={handleViewMoreClick}
-            link={getUrlById(25)}
-          />
-        </Col>
-      </Row>
-      <HouseRules />
-      <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width="80%">
-        <RoomInfromation />
-      </Modal>
     </div>
     </div>
   );

@@ -71,10 +71,10 @@ const Facilities = () => {
           ))}
         </div>
 
-        <div style={{ textAlign: 'center' }}>
-          {!showList && <button  style={{ width: '322px' }} className='hotelRoomCardButton' onClick={handleToggleList}>SEE ALL</button>}
+        <div >
+          {!showList &&<button   className='facilitiesbutton1' onClick={handleToggleList}>SEE ALL</button>}
           {showList && (
-            <button style={{ width: '322px' }} className='hotelRoomCardButton' onClick={handleHideList}>
+            <button className='facilitieshidebutton' onClick={handleHideList}>
               <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
               <span>Hide All Ammenities</span>
             </button>

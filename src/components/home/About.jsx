@@ -24,8 +24,10 @@ const About = () => {
     ];
 
     return (
+        <>
+      <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 25% and get exclusive discounts when you Book!</button></a>
         <div className='abContainer'>
-             <button className="hotelRoomCardButton about-discount">Hello</button>
+           
             <div className='aboutContainer'>
                 <div className='aboutTextWrapper'>
                     <p className='about-welcome'>WELCOME TO</p>
@@ -51,6 +53,7 @@ const About = () => {
                 </Row>
             </div>
         </div>
+        </>
     );
 };
 

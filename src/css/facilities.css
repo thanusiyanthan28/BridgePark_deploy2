@@ -15,9 +15,9 @@
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
-  margin-left: 40px; 
+  width: 93%;
   text-align: justify;
-  margin-right: 40px; 
+  line-height: 1.5;
   font-family: "lato", sans-serif;
   
 }
@@ -26,7 +26,7 @@
   display: flex; 
   flex-wrap: wrap; 
   justify-content: center;
-  margin-top: 100px; 
+  margin-top: 30px; 
   margin-bottom: 10px;
   
 }
@@ -55,13 +55,7 @@
   box-shadow: 0 4px 1rem -4px #33cccc;
   transform: translateY(6px);
 }
-.seeall-button{
-  width: 322px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-  align-items: center;
-}
+
 
 .facilitiescardcontent {
   display: flex;
@@ -111,6 +105,8 @@
   transition: background-color 0.3s ease;
   margin-bottom: 12px;
 
+  
+
 }
 .facilitiesbutton1:hover {
   background-color: #618e99; /* Change to desired hover color */
@@ -118,7 +114,8 @@
 
 .facilitieshidebutton {
   display: inline-block;
-  margin-left: 685px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   padding: 20px;
   background-color: #fffff9;
