@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
-import { MenuOutlined, UserOutlined } from '@ant-design/icons';
+import { MenuOutlined, UserOutlined,CloseOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
 import img from "../../assets/images/DoubleEnsuite.jpg";
 import headerlogo from '../../assets/header-logo.png'
@@ -26,6 +26,7 @@ const HeaderUpdate = () => {
     email: "john@example.com",
     location: "New York",
   };
+  
 
   const showDrawer = () => {
     setOpen(true);
@@ -166,11 +167,17 @@ const HeaderUpdate = () => {
       key: 'profile',
     },
   ];
+  useEffect(() => {
+    // Close drawer when switching from mobile to desktop view
+    if (!isMobile) {
+      onClose();
+    }
+  }, [isMobile]);
 
   return (
     <div className='header-update-container'>
       <div className='header-update'>
-        <img src={headerlogo}/>
+        <a href='/'><img className='update-header-logo' src={headerlogo}/></a>
         {!isMobile ? (
           <div className='header-nav-bar-left'>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />
@@ -187,10 +194,14 @@ const HeaderUpdate = () => {
           </Button>
         </div>
       </div>
+     
+      
       <Drawer placement="left" closable={false} onClose={onClose} open={open} className='update-header-drawer'>
+        <Button onClick={onClose}  className='drawer-close-btn'><CloseOutlined /></Button>
         <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft} />
         <Menu mode="inline" items={profileMenuItems} onClick={onClose} />
       </Drawer>
+     
     </div>
   );
 };
