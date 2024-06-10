@@ -20,6 +20,7 @@ import bedIcon1 from "../../assets/icons/bed.png";
 import bedIcon2 from "../../assets/icons/rest.png";
 import UrlLib from "../common/UrlLib";
 import SiteCard from "../Sitecard/siteCard";
+import HouseRules from "../common/HomeRules";
 
 const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -63,6 +64,10 @@ const EnsuiteRoom = () => {
     <div className="EnsuiteRoom-Main-container">
       <div className="EnsuiteRoom-Container">
         <div className="EnsuiteRoom-TextWrapper">
+        <div className="about-sub-content">
+             <h3 style={{textAlign:'center'}}>Special Offer</h3>
+              <p style={{textAlign:'center'}}>Book now for exclusive discounted online rates. Whether you're making a last minute booking or a long stay reservation, we have a discount for you! Book through our secure website for instant confirmation. Then use our online portal to view, modify or cancel your booking.</p>
+        </div>
           <h1 className="EnsuiteRoom-heading">ENSUITE ROOMS</h1>
         </div>
       </div>
@@ -232,6 +237,7 @@ const EnsuiteRoom = () => {
           />
         </Col>
       </Row>
+      <HouseRules />
       <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width="80%">
         <RoomInfromation />
       </Modal>

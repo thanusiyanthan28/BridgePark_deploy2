@@ -73,6 +73,7 @@ const Header = () => {
         <div className="header-slogan">RESERVE YOUR STAY NOW</div>
         {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
+     
     </div>
   );
 };

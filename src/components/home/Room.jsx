@@ -48,8 +48,9 @@ const Room = () => {
     <div className="rooms-main-container">
       <div className="aboutContainer">
         <div className="aboutTextWrapper">
-          <h1 className="aboutH1">OUR ROOMS</h1>
-          <div className="paragraphContainer">
+          {/* <h1 className="aboutH1">OUR ROOMS</h1> */}
+          <div className='location-title'>OUR ROOMS</div>
+          <div className="rooms-sub-content">
             <p>
               Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
               Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 

@@ -4,6 +4,7 @@ import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
 import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
 import img from "../../assets/images/DoubleEnsuite.jpg";
+import logo from "../../assets/images/HotelLogo.png"
 
 const HeaderUpdate = () => {
   const [current, setCurrent] = useState();
@@ -51,7 +52,7 @@ const HeaderUpdate = () => {
   const itemsLeft = [
     {
       label: (
-        <Link to="/" className="header-home">
+        <Link to="/" className="header-home header-font">
           Home
         </Link>
       ),
@@ -59,7 +60,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/rooms" className="header-rooms">
+        <Link to="/rooms" className="header-rooms header-font">
           Rooms
         </Link>
       ),
@@ -67,7 +68,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/facilities" className="header-facilities">
+        <Link to="/facilities" className="header-facilities header-font">
           Facilities
         </Link>
       ),
@@ -75,7 +76,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/main-meeting" className="header-meeting">
+        <Link to="/main-meeting" className="header-meeting header-font">
           Meeting&Events
         </Link>
       ),
@@ -83,7 +84,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/location">
+        <Link to="/location" className="location-meeting header-font">
           Location
         </Link>
       ),
@@ -94,7 +95,7 @@ const HeaderUpdate = () => {
   const profileMenuItems = isLoggedIn ? [
     {
       label: (
-        <Link to="/profile" className="custom-dropdown-item" onClick={onClose}>
+        <Link to="/profile" className="custom-dropdown-item header-font" onClick={onClose}>
           Profile
         </Link>
       ),
@@ -102,7 +103,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/" className="custom-dropdown-item" onClick={() => { handleLogout(); setCurrent('Home'); }}>
+        <Link to="/" className="custom-dropdown-item header-font" onClick={() => { handleLogout(); setCurrent('Home'); }}>
         Logout
       </Link>
       ),
@@ -111,7 +112,7 @@ const HeaderUpdate = () => {
   ] : [
     {
       label: (
-        <Link to="/SignIn" className="custom-dropdown-item" onClick={onClose}>
+        <Link to="/SignIn" className="custom-dropdown-item header-font" onClick={onClose}>
           Login
         </Link>
       ),
@@ -119,7 +120,7 @@ const HeaderUpdate = () => {
     },
     {
       label: (
-        <Link to="/SignUp" className="custom-dropdown-item" onClick={onClose}>
+        <Link to="/SignUp" className="custom-dropdown-item header-font" onClick={onClose}>
           Signup
         </Link>
       ),
@@ -130,8 +131,8 @@ const HeaderUpdate = () => {
   const itemsRight = [
     {
       label: (
-        <button className='header-button'>
-          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now'>
+        <button className='header-button '>
+          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now header-font'>
             Book Now
           </Link>
         </button>
@@ -174,6 +175,7 @@ const HeaderUpdate = () => {
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />
           </div>
         ) : null}
+        <img style={{width:'50px', height:'50px'}} src={logo}/>
         <div className='header-nav-bar-right'>
           <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsRight} />
         </div>

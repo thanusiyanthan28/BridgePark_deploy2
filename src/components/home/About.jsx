@@ -25,11 +25,13 @@ const About = () => {
 
     return (
         <div className='abContainer'>
+             <button className="hotelRoomCardButton about-discount">Hello</button>
             <div className='aboutContainer'>
                 <div className='aboutTextWrapper'>
-                    <p>WELCOME TO</p>
-                    <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1>
-                    <div className="paragraphContainer">
+                    <p className='about-welcome'>WELCOME TO</p>
+                    {/* <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1> */}
+                    <div className='location-title'>BRIDGE PARK HOTEL</div>
+                    <div className="about-sub-content">
                                 <p>Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
         Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
         Wembley Stadium, we offer a warm welcome and exceptional accommodation. You can expect spacious 

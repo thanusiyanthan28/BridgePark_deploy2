@@ -67,7 +67,8 @@ const CardSlider = ({ cards }) => {
   return (
     <div className='meeting-my-class' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
         
-      <h1 className='meeting-my-class-title '>Meeting & Events </h1>
+      {/* <h1 className='meeting-my-class-title '>Meeting & Events </h1> */}
+      <div className='location-title'>MEETING & EVENTS</div>
     <div className="meeting-card-slider">
  
     <div className="meeting-cards-container" style={{ '--current-index': currentIndex }}>

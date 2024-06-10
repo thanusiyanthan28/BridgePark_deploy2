@@ -45,12 +45,14 @@
   color: rgb(0, 0, 0);
   margin-top: 10px;
   font-size: 16px;
+  font-family: "lato", serif;
 }
 
 .card-titleH3 {
   color: rgba(71, 54, 54, 0.5);
   margin-top: 10px;
   font-size: 14px;
+  font-family: "lato", serif;
 }
 
 .containerCol {
@@ -73,6 +75,7 @@
   padding: 0 50px 0 50px ;
   margin-left: 60%;
   height: 50px;
+  font-family: "lato", serif;
 }
 .ant-space {
   display: flex;

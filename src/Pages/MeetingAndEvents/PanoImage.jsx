@@ -44,7 +44,8 @@ const PanoImage = () => {
     <div className='pano-image-main'>
         
         
-        <h1 className='pano-image-title'>Experience Bridge Park Hotel Like Never Before</h1>
+        {/* <h1 className='pano-image-title'>Experience Bridge Park Hotel Like Never Before</h1> */}
+        <div className='location-title'>Experience Bridge Park Hotel Like Never Before</div>
        
         <div  className='pano-image-discription'>
         <hr class="pano-image-title-line" />
