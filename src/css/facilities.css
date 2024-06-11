@@ -9,13 +9,27 @@
   font-family: 'Lato', sans-serif;
   overflow: hidden;
 }
+.facilities-sub-content{
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "lato", sans-serif;
+  text-align: center;
+  
+}
 
 .facilitiescontainer {
   display: flex; 
   flex-wrap: wrap; 
   justify-content: center;
-  margin-top: 100px; 
+  margin-top: 30px; 
   margin-bottom: 10px;
+  
 }
 
 .facilitiescard {
@@ -35,6 +49,7 @@
 
 .facilitiescardcontent {
   text-align: center; /* Center the text content */
+  
 }
 
 .facilitiescard:hover {
@@ -42,14 +57,18 @@
   transform: translateY(6px);
 }
 
+
 .facilitiescardcontent {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 40%;
-  font-size: 10px;
-  font-family: 'Lato';
+  font-size: 14px;
+  font-family: "lato", sans-serif;
   margin-bottom: 15px;
+  font-weight: bold;
+
+ 
 }
 
 .facilitieshead {

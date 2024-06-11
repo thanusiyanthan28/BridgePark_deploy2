@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.faq-main {
+  width: 95%;
+  background-color: #33cccc;
+  height: 500px;
+  background-image: url("../../assets/images/Restaurant1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  padding: 35px;
+}
+
+.faq-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+.faq-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  background: white;
+  border: none;
+}
+
+.faq-heading {
+  align-items: center;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+}
+
+.faq-content {
+  flex-grow: 1;
+  overflow-y: auto; /* Allow vertical scrolling */
+  border-radius: 3px;
+  padding-bottom: 50px;
+}
+
+.faq-collapse {
+  width: 100%;
+}
+
+.faq-collapse .ant-collapse-item {
+    border: 1px solid #33cccc; 
+  }
+  
+  .faq-collapse .ant-collapse-header {
+    color: #33cccc; 
+  }
+  
+  .faq-collapse .ant-collapse-content {
+    border-top: 1px solid #33cccc; 
+  }
+  .faq-collapse .ant-collapse-item:last-child {
+    border-bottom: 2px solid #33cccc; 
+  }
+  .faq-collapse .ant-collapse-item:first-child {
+    border-top: 2px solid #33cccc; 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+  }
+  .ant-collapse-item:hover > .ant-collapse-header {
+    background-color: #ECECEC;
+}
+
+.ant-collapse-item > .ant-collapse-header {
+    background-color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+.panel-border p{
+  font-size: 15px;
+}
+.faq-view-full-text{
+  font-size: 15px;
+  background: none;
+  border: none;
+  color: #33cccc;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px; /* Adjust as needed */
+  display: block;
+}
+@media (max-width: 768px) {
+    .faq-main{
+        width: 100%;
+        height: 600px;
+        background-image: url("../../assets/images/image_gellery/image6.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+    .faq-title{
+        text-align: center;
+        font-size: 50px;
+        /* color: white; */
+        padding: 5px;
+    }
+}

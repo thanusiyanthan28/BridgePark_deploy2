@@ -4,6 +4,19 @@
 
 
 }
+.rooms-sub-content{
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "lato", sans-serif;
+  text-align: center;
+  
+}
 .hotelRoom-row {
  width: 90%;
  margin-left: auto !important;
@@ -32,11 +45,17 @@
     
   }
   .rooms-main-contaner {
-    width: 95%;
+    width: 100%;
   }
 
   .hotelRoomMainRow > .ant-col {
     width: 100%; /* Each column takes up full width on mobile */
     margin-bottom: 20px; /* Add spacing between columns */
   }
+}
+.room-text-wraper{
+  width: 95%;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
 }

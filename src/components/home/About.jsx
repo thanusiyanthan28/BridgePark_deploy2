@@ -14,6 +14,7 @@ import img9 from '../../assets/images/Reception1.jpg';
 import img10 from '../../assets/images/Loungebar 1.jpg';
 import img11 from '../../assets/images/Loungebar 1.jpg';
 import img12 from '../../assets/images/TwilightExecroom.jpg';
+import bgimage from '../../assets/bph-welcome.png'
 
 const About = () => {
     const carouselImages = [
@@ -24,12 +25,17 @@ const About = () => {
     ];
 
     return (
+        < div className='abContainer-main'>
+            <img className='about-bgimage' src={bgimage}/>
+      <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 25% and get exclusive discounts when you Book!</button></a>
         <div className='abContainer'>
+           
             <div className='aboutContainer'>
                 <div className='aboutTextWrapper'>
-                    <p>WELCOME TO</p>
-                    <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1>
-                    <div className="paragraphContainer">
+                    <p className='about-welcome'>WELCOME TO</p>
+                    {/* <h1 className='aboutH1'>BRIDGE PARK HOTEL</h1> */}
+                    <div className='location-title'>BRIDGE PARK HOTEL</div>
+                    <div className="about-sub-content">
                                 <p>Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
         Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
         Wembley Stadium, we offer a warm welcome and exceptional accommodation. You can expect spacious 
@@ -48,6 +54,7 @@ const About = () => {
                     ))}
                 </Row>
             </div>
+        </div>
         </div>
     );
 };

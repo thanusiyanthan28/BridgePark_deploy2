@@ -83,7 +83,7 @@ const ImageSlider1 = () => {
 
   return (
     <div className="image-galley-slider-container" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-      <h1 className='image-galley-title'>Image Gallery</h1>
+      {/* <h1 className='image-galley-title'>Image Gallery</h1> */}
       <div className="image-galley-arrow image-galley-left" onClick={handlePrev}><LeftOutlined style={{ fontSize: 25, color: '#08c' }}/></div>
       <div className="image-galley-slider">
         {[...images, ...images, ...images].slice(startIndex, startIndex + 3).map((image, i) => (

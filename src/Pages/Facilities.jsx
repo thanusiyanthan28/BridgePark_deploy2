@@ -43,11 +43,12 @@ const Facilities = () => {
     <body>
       <div>
         <div>
-          <h1 className='facilitieshead'>FACILITIES</h1>
+          {/* <h1 className='facilitieshead'>FACILITIES</h1> */}
+          <div className='location-title'>FACILITIES</div>
         </div>
 
         <div>
-          <p className='facilitiespara'>
+          <p className='facilities-sub-content'>
             Originally a Grade ii listed building, Bridge Park Hotel is the ideal
             place to stay whether you are visiting Wembley or simply looking for
             accommodation to explore the sites of London.
@@ -64,7 +65,7 @@ const Facilities = () => {
                 <img src={card.icon} alt={card.title} style={{ width: '54px', height: '54px', objectFit: 'cover' }}/>
               </div>
               <div className="facilitiescardcontent">
-                <h2>{card.title}</h2>
+                <>{card.title}</>
               </div>
             </div>
           ))}

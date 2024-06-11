@@ -5,7 +5,7 @@ import Card from '../common/Card'
 import SiteCard from "../Sitecard/siteCard";
 
 const Location = () => {
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.matchMedia("(max-width: 767px)").matches);

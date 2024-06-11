@@ -193,7 +193,7 @@ margin-top: 15%;
 
   margin-left: 10px; /* Adjust to position it to the left of the center */
   margin-top: 0px; /* Adjust vertical positioning */
-  z-index: 99999;
+  z-index: 100;
 }
 
 .meeting-next-btn {
@@ -201,7 +201,7 @@ margin-top: 15%;
   margin-right: 0px; /* Reset margin */
   margin-left: 96%; /* Push to the right */
   margin-top: 0px; /* Adjust vertical positioning */
-  z-index: 99999;
+  z-index: 100;
 }
 
 .meeting-des{
