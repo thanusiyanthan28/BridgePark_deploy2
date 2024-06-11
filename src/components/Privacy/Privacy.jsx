@@ -5,7 +5,7 @@ import SiteCard from "../Sitecard/siteCard";
 
 const Privacy = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
 
   useEffect(() => {

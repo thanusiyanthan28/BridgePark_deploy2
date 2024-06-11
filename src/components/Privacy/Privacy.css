@@ -15,6 +15,9 @@
   margin-right: auto;
   border-radius: 20px;
 }
+.privacy-sitecard{
+  margin-top: 25px;
+}
 
 .privacy-title {
   text-align: center;
