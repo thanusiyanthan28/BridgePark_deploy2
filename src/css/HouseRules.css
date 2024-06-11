@@ -1,34 +1,50 @@
 .house-rules-container {
   background-color: #fff;
   padding: 1.5rem;
-  margin: 0 50px;
   align-items: center;
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
-.title-container {
+.house-rules-title-container {
   display: flex;
-  align-items: center;
-  margin-top: 20px;
+  width: 90%;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+}
+.house-rules-main-title {
+  display: flex;
+  align-items: start;
+  width: 100%;
 }
 .house-rules-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: black;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.house-rules-availability-button{
+  width: 100%;
+  align-items: end;
 }
 .availability-button {
-  margin-top: 2rem;
-  margin-left: 90vh;
-  background-color: #3182ce;
-  padding: 10px 36px;
-  color: #fff;
+  color: white;
+  background-color: #3883af;
   border: none;
-  outline: none;
-  border-radius: 5px;
+  border-radius: 0px;
+  /* padding: 5px 10px; */
+  cursor: pointer;
+  float: right;
+  width: 40%;
+  border-radius: 3px;
+  height: 40px;
+  font-family: "lato", serif;
+  margin-left: auto;
 }
 .house-rules-description {
   font-size: 0.875rem;
-  margin-top: -5px;
 }
 .house-rules-container-body {
   background-color: #fff;
@@ -41,10 +57,10 @@
   width: 100%;
   border-collapse: collapse;
 }
-.house-rules-info{
+.house-rules-info {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 500; 
+  font-weight: 500;
   margin-bottom: 0.5rem;
   vertical-align: top;
 }
@@ -64,11 +80,11 @@
   list-style-type: none;
   margin-left: -40px;
   margin-bottom: 10px;
-  vertical-align: top; 
+  vertical-align: top;
   margin-top: -15px;
   padding-bottom: 15px;
 }
-.house-rules-table-ul{
+.house-rules-table-ul {
   vertical-align: top;
 }
 .house-rules-icon {
@@ -76,26 +92,26 @@
   height: 30px;
   margin-right: 0.5rem;
 }
-.house-rules-icon-rotate{
+.house-rules-icon-rotate {
   width: 30px;
   height: 30px;
   margin-right: 0.5rem;
   transform: rotate(180deg);
 }
-.house-rule-sub-topic{
+.house-rule-sub-topic {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 700;
 }
 .house-rules-table tr:last-child td {
-  border-bottom: none; 
+  border-bottom: none;
 }
 
-@media(max-width:435px){
+@media (max-width: 435px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:-2px;
+    margin-left: -2px;
     width: 250px;
   }
   .title-container {
@@ -108,7 +124,7 @@
     margin-bottom: 1rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 11px;
     margin-right: 60px;
     margin-top: -45px;
@@ -119,8 +135,8 @@
     margin-top: 0px;
     margin-bottom: 15px;
     font-size: 8px;
-   }
-   .house-rules-table tr {
+  }
+  .house-rules-table tr {
     display: block;
     margin-bottom: 20px;
   }
@@ -160,14 +176,13 @@
     text-align: center;
     margin-bottom: 20px;
   }
- 
 }
- 
-@media only screen and (min-width: 440px) and (max-width: 768px){
+
+@media only screen and (min-width: 440px) and (max-width: 768px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:10px;
+    margin-left: 10px;
   }
   .title-container {
     display: inline;
@@ -179,7 +194,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 13px;
     margin-right: 50px;
     margin-top: -80px;
@@ -190,14 +205,14 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 8px;
-   }
+  }
 }
 
-@media only screen and (min-width: 1370px) and (max-width: 1440px){
+@media only screen and (min-width: 1370px) and (max-width: 1440px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:10px;
+    margin-left: 10px;
   }
   .title-container {
     display: inline;
@@ -209,7 +224,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 15px;
     margin-right: 50px;
     margin-top: -80px;
@@ -220,13 +235,13 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 12px;
-   }
+  }
 }
-@media only screen and (min-width: 1030px) and (max-width: 1369px){
+@media only screen and (min-width: 1030px) and (max-width: 1369px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:80px;
+    margin-left: 80px;
     margin-top: 20px;
   }
   .title-container {
@@ -239,7 +254,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 15px;
     margin-right: 50px;
     margin-top: -80px;
@@ -250,13 +265,13 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 12px;
-   }
+  }
 }
-@media only screen and (min-width:769px) and (max-width:1024px){
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:80px;
+    margin-left: 80px;
     margin-top: 20px;
   }
   .title-container {
@@ -269,7 +284,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 15px;
     margin-right: 50px;
     margin-top: -80px;
@@ -280,14 +295,14 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 12px;
-   }
+  }
 }
 
-@media only screen and (min-width:1600px) and (max-width:1920px){
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:10px;
+    margin-left: 10px;
   }
   .title-container {
     display: inline;
@@ -299,7 +314,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 15px;
     margin-right: 50px;
     margin-top: -80px;
@@ -310,13 +325,13 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 15px;
-   }
+  }
 }
-@media only screen and (min-width:2000px) and (max-width:2560px){
+@media only screen and (min-width: 2000px) and (max-width: 2560px) {
   .house-rules-container {
     margin: 0 50px;
     align-items: center;
-    margin-left:30px;
+    margin-left: 30px;
   }
   .title-container {
     display: inline;
@@ -328,7 +343,7 @@
     margin-bottom: 0.2rem;
     margin-top: 10px;
   }
-  .house-rules-description{
+  .house-rules-description {
     font-size: 15px;
     margin-right: 50px;
     margin-top: -80px;
@@ -339,5 +354,5 @@
     margin-top: 0px;
     margin-bottom: 60px;
     font-size: 15px;
-   }
+  }
 }
