@@ -33,6 +33,7 @@
 .WebsiteSupport-content {
   margin-left: auto;
   margin-right: auto;
+  align-items: center;
   width: 95%;
   border: 1px solid #33cccc;
   border-radius: 10px;
@@ -89,7 +90,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  .WebsiteSupport-sitecard{
+    margin-top: 25px;
+  }
   .WebsiteSupport-title {
     text-align: center;
     font-size: 50px;
@@ -106,11 +109,10 @@
   }
   .WebsiteSupport-containor {
     width: 95%;
-    /* padding: 5px; */
+    padding: 5px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    margin-left: 0;
   }
   .WebsiteSupport-sub-title {
     margin-top: 20px;

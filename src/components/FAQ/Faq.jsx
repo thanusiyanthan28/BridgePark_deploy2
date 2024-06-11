@@ -10,7 +10,7 @@ const { Panel } = Collapse;
 
 const FAQ = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
   const navigate = useNavigate();
   const expandIcon = ({ isActive }) => {
