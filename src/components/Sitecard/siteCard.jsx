@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatePicker } from 'antd'; // Import DatePicker from Ant Design
 import './siteCard.css'; // Import CSS file for styling
 import moment from 'moment';
@@ -15,6 +15,11 @@ const SiteCard = () => {
     // Add more form fields as needed
   });
 
+  const [daysOfWeek, setDaysOfWeek] = useState({
+    checkInDay: moment().format('dddd'), // Initialize with current day
+    checkOutDay: moment().format('dddd'), // Initialize with current day
+  });
+
   const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect`;
 
   const handleCountChange = (fieldName, increment) => {
@@ -29,6 +34,18 @@ const SiteCard = () => {
       ...prevState,
       [fieldName]: date
     }));
+
+    if (fieldName === 'checkInDate') {
+      setDaysOfWeek(prevState => ({
+        ...prevState,
+        checkInDay: date ? date.format('dddd') : ''
+      }));
+    } else if (fieldName === 'checkOutDate') {
+      setDaysOfWeek(prevState => ({
+        ...prevState,
+        checkOutDay: date ? date.format('dddd') : ''
+      }));
+    }
   };
 
   const handleChange = (e) => {
@@ -67,6 +84,7 @@ const SiteCard = () => {
                 <tr className='tr-site'>
                   <td className='td-site'>
                     <p className='check-head-site'>CHECK IN</p>
+                    <div className='current-day-site'>{daysOfWeek.checkInDay}</div>
                     <div className="date-input-container-site">
                       <DatePicker
                         name="checkInDate"
@@ -79,6 +97,7 @@ const SiteCard = () => {
                   </td>
                   <td className='td-site'>
                     <p className='check-head-site'>CHECK OUT</p>
+                    <div className='current-day-site'>{daysOfWeek.checkOutDay}</div>
                     <div className="date-input-container-site">
                       <DatePicker
                         name="checkOutDate"

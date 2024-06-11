@@ -23,6 +23,7 @@ import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
+import SiteCard2 from "./components/SiteCard2/siteCard2";
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
           <Route path="/room-card" element={ <SiteCard />} />
+          <Route path="/site-card2" element={ <SiteCard2 />} />
        
           <Route path="/image-gallery" element={ <ImageGallery />} />
         </Routes>

@@ -1,20 +1,20 @@
-.app-container-site {
+.app-container-site2 {
   max-width: 300px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.app-container2-site {
+.app-container2-site2 {
   max-width: 300px;
   margin: 0 auto;
   border: 0px solid;
   background-color: #fffdfd;
   border-radius: 10px;
-  height: 460px;
+  height: 500px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
 
-.card-site {
+.card-site2 {
   border: 0px solid #c9bcbc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -22,15 +22,15 @@
   margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
-.site-p{
+.site2-p{
   font-size: 10px;
 }
-.card-body-site {
+.card-body-site2 {
   display: flex;
   flex-direction: column;
 }
 
-.table-site {
+.table-site2 {
   width: 100%;
   border-collapse: collapse;
   border: 1px; 
@@ -39,31 +39,31 @@
   margin-left: 0px;
 }
 
-.tr-site {
+.tr-site2 {
   display: flex;
   justify-content: space-between; 
 }
 
-.td-site {
+.td-site2 {
   flex: 1; 
   padding: 10px; 
   text-align: left; 
 }
 
 
-.td-site:nth-child(2) {
+.td-site2:nth-child(2) {
   border-left: 1px solid #ccc;
 }
-.tr-site td {
+.tr-site2 td {
   border-bottom: none;
 }
 
-.td-site.label-cell {
+.td-site2.label-cell {
   border-bottom: none;
 }
 
 
-.button-site {
+.button-site2 {
   padding: 10px 20px;
   background-color: #618e95;
   color: #fff;
@@ -72,52 +72,41 @@
   cursor: pointer;
 }
 
-.card-body-site table {
+.card-body-site2 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.card-body-site td {
+.card-body-site2 td {
   padding: 10px;
 }
 
-.card-body-site label {
+.card-body-site2 label {
   display: block;
 }
 
-.card-body-site input[type="number"] {
+.card-body-site2 input[type="number"] {
   width: 30px;
   border: none; 
   text-align: center; 
 }
 
-.card-body-site tr:not(:last-child) {
+.card-body-site2 tr:not(:last-child) {
   border-bottom: 1px solid #ddd; 
 }
-.date-input-container-site .ant-picker-input input {
+.date-input-container-site2 .ant-picker-input input {
   width: 100%; 
   padding: 0px; 
   font-size: 15px; 
   border: 0px solid #ccc; 
   font-weight: 500; 
 }
-.date-input-container-site .ant-picker-input input::placeholder {
-  font-style: normal;
-  font-size: 15px;
-  color: #0a0a0a;
-  font-weight: 600;
-}
-.current-day-site {
-  font-size: 12px;
-  color: #000000;
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
-.last-column-site {
+
+.last-column-site2 {
   border-right: none;
    /* Remove border on the right side of the last column */
 }
-.valueupdown-site{
+.valueupdown-site2{
   background-color: #f5f2f2;
   border-radius: 90%;
   color: #618e95;
@@ -128,12 +117,12 @@
   font-weight: 600;
 }
 
-.check-head-site{
+.check-head-site2{
   font-weight: bold;
  
   
 }
-.price-site{
+.price-site2{
   float: right;
   font-weight: 500;
 }
@@ -149,13 +138,13 @@
 .react-datepicker-wrapper input::placeholder {
   font-size: 25px; /* Adjust the font size as needed */
 }
-.date-input-container-site {
+.date-input-container-site2 {
   display: flex;
 
   align-items: center; /* Align items vertically */
 }
 
-.calendar-icon-site {
+.calendar-icon-site2 {
   position:relative;
   right: 20px; /* Adjust the right offset as needed */
   transform: translateY(-50%);
@@ -166,12 +155,12 @@
 
 }
 
-.counter-site input[type="number"] {
+.counter-site2 input[type="number"] {
   width: 40px; /* Adjust the width as needed */
   height: 40px; /* Adjust the height as needed */
   font-size: 20px; /* Increase font size */
 }
-.counter-site input[type="text"] {
+.counter-site2 input[type="text"] {
   width: 18px; /* Adjust the width as needed */
   height: 40px; /* Adjust the height as needed */
   font-size: 15px; /* Increase font size */
@@ -180,12 +169,12 @@
   outline: none; /* Remove focus outline */
 }
 
-.counter-site input[type="text"]::-webkit-inner-spin-button,
-.counter-site input[type="text"]::-webkit-outer-spin-button {
+.counter-site2 input[type="text"]::-webkit-inner-spin-button,
+.counter-site2 input[type="text"]::-webkit-outer-spin-button {
   -webkit-appearance: none; /* Remove default spin buttons */
   margin: 0; /* Remove margin */
 }
-.site-card-popup {
+.site2-card-popup {
   position: absolute;
   top: 280px;
   right: 70px;
@@ -193,13 +182,13 @@
 }
 
 @media(max-width:435px){
-  .app-container-site {
+  .app-container-site2 {
     max-width: 300px;
     margin: 0 auto;
     padding: 0px;
     
   }
-  .app-container2-site {
+  .app-container2-site2 {
       max-width: 300px;
       margin: 0 auto;
       padding: 20px;
@@ -209,7 +198,7 @@
       height: 460px;
       margin-bottom: 10px;
     }
-    .card-site {
+    .card-site2 {
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #f9f9f9;
@@ -218,7 +207,7 @@
      
      
     }
-    .table-site {
+    .table-site2 {
       width: 100%;
       border-collapse: collapse;
       border: 3px; 
@@ -226,7 +215,7 @@
       margin-top:0px;
       margin-left: 1px;/* Collapse table borders */
     }
-    .button-site {
+    .button-site2 {
       padding: 8px 15px;
       background-color: #618e95;
       color: #fff;
@@ -234,22 +223,22 @@
       border-radius: 0px;
       cursor: pointer;
     }
-    .check-head-site{
+    .check-head-site2{
       margin-top: 0px;
     }
     .react-datepicker-wrapper input::placeholder {
       font-size: 15px; 
     }
-    .card-body-site td {
+    .card-body-site2 td {
       padding: 10px;
     }
     
-    .card-body-site label {
+    .card-body-site2 label {
       display: block;
     }
   
    
-    .valueupdown-site{
+    .valueupdown-site2{
       background-color: #f5f2f2;
       border-radius: 90%;
       color: #618e95;
@@ -276,7 +265,7 @@
     
   
     
-    .calendar-icon-site {
+    .calendar-icon-site2 {
       position:relative;
       right: 15px;
       margin-top: 40px;
@@ -284,19 +273,19 @@
     
     }
     
-    .counter-site input[type="number"] {
+    .counter-site2 input[type="number"] {
       width: 40px; /* Adjust the width as needed */
       height: 40px; /* Adjust the height as needed */
       font-size: 20px; /* Increase font size */
     }
-    .counter-site input[type="text"] {
+    .counter-site2 input[type="text"] {
       width: 40px; /* Adjust the width as needed */
       height: 40px; /* Adjust the height as needed */
       font-size: 20px; /* Increase font size */
   
     }
     
-    .site-card-popup {
+    .site2-card-popup {
       position: absolute;
       top: 300px;
       right: 30px;
