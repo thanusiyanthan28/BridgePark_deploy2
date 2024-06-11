@@ -24,6 +24,8 @@ import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
 import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
+import Faq from "./components/FAQ/Faq";
+import FaqDetails from "./components/FAQ/FaqDetails";
 
 export default function App() {
   return (
@@ -36,7 +38,8 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-         
+          <Route path="/faq" element={<Faq/>}/>
+          <Route path="/faq/:id" element={<FaqDetails />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
