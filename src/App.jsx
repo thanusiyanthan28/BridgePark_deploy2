@@ -27,6 +27,7 @@ import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 import Faq from "./components/FAQ/Faq";
 import FaqDetails from "./components/FAQ/FaqDetails";
 
+import Privacy from "./components/Privacy/Privacy";
 export default function App() {
   return (
     <div>
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/faq/:id" element={<FaqDetails />} />
+          <Route path="/privacy" element={<Privacy/>}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/Facilities" element={<Facilities />} />
