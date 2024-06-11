@@ -58,7 +58,7 @@ const BasicRoom = () => {
     {
       id: 2,
       image: img1,
-      title: "SINGLE ROOM & SHARED BATHROOM",
+      title: "SINGLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon1,
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
@@ -67,7 +67,7 @@ const BasicRoom = () => {
     {
       id: 5,
       image: img2,
-      title: "DOUBLE ROOM & SHARED BATHROOM",
+      title: "DOUBLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
@@ -76,7 +76,7 @@ const BasicRoom = () => {
     {
       id: 11,
       image: img3,
-      title: "TWIN ROOM & SHARED BATHROOM",
+      title: "TWIN ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "2x Single Bed",
@@ -85,7 +85,7 @@ const BasicRoom = () => {
     {
       id: 9,
       image: img4,
-      title: "TRIPLE ROOM & SHARED BATHROOM",
+      title: "TRIPLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon3,
       icon2:bedIcon2,
       cardTitle: "3x Single Bed",
