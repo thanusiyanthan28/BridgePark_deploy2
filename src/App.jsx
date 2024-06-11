@@ -25,6 +25,10 @@ import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
 
 import Privacy from "./components/Privacy/Privacy";
+import FAQ from "./components/FAQ/Faq";
+import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
+import FaqDetails from "./components/FAQ/FaqDetails";
+import SiteCard2 from "./components/SiteCard2/siteCard2";
 export default function App() {
   return (
     <div>
@@ -36,7 +40,7 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/faq" element={<Faq/>}/>
+          <Route path="/faq" element={<FAQ/>}/>
           <Route path="/faq/:id" element={<FaqDetails />} />
           <Route path="/privacy" element={<Privacy/>}/>
           <Route path="/" element={<HomePage />} />
@@ -54,6 +58,7 @@ export default function App() {
           <Route path="/guest-info" element={<GuestInfo />} />
           <Route path="/reset-password" element={ <ResetPassword />} />
           <Route path="/room-card" element={ <SiteCard />} />
+          <Route path="/card2" element={ <SiteCard2 />} />
        
           <Route path="/image-gallery" element={ <ImageGallery />} />
           
