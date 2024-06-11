@@ -1,4 +1,6 @@
-/* HouseRules.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 .house-rules-container {
   padding: 20px;
@@ -22,29 +24,33 @@
 }
 
 .house-rules-title {
-  font-size: 2em;
-  color: #333;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+    font-family: "Cinzel", serif;
+    font-weight:500;
 }
 
 .house-rules-availability-button .availability-button {
   background-color: #3883af;
+  font-size: 100%;
   width: 100%;
-  color: #fff;
+  color: rgb(255, 255, 255);
   border: none;
-  /* padding: 12px 120px; */
-  border-radius: 5px;
+  padding: 5px 20px;
+  border-radius: 3px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  height: 40px;
+  font-family: "lato", serif;
 }
 
 .house-rules-availability-button .availability-button:hover {
-  background-color: #0056b3;
+  background-color: #e0ffff;
 }
 
 .house-rules-description {
-  font-size: 1.2em;
-  color: #666;
-  margin-bottom: 20px;
+  color: rgba(51, 49, 49, 0.767);
+  font-weight: 400;
+  font-family: "lato", sans-serif;
 }
 
 .house-rules-container-body {
@@ -70,6 +76,7 @@
 .house-rules-table td {
   border-bottom: 1px solid #ddd;
   vertical-align: top;
+  font-family: "lato", sans-serif;
 }
 
 .house-rules-table td li {
@@ -101,6 +108,7 @@
   font-weight: bold;
   color: #333;
   width: 200px;
+  font-family: "lato", sans-serif;
 }
 
 .house-rules-table-ul {
@@ -110,6 +118,7 @@
 .house-rule-sub-topic {
   font-weight: bold;
   margin-top: 10px;
+  font-family: "lato", sans-serif;
 }
 
 .house-rules-table tr:last-child td {

@@ -20,7 +20,7 @@ const HouseRules = () => {
           <h1 className="house-rules-title">House rules</h1>
         </div>
         <div className="house-rules-availability-button">
-          <button className="availability-button">See Availability</button>
+          <button className="availability-button"  onClick={() => window.location.href = 'https://direct-book.com/properties/bridgeparkdirect'}>See Availability</button>
         </div>
       </div>
       <p className="house-rules-description">
@@ -99,7 +99,7 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Children and beds</td>
-            <td>
+            <td className="house-rules-Details">
               <ul>
                 <li className="house-rule-sub-topic">Child policies</li>
                 <li>Children of any age are welcome.</li>
@@ -129,7 +129,7 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Age restriction</td>
-            <td>The minimum age for check-in is 18</td>
+            <td className="house-rules-Details">The minimum age for check-in is 18</td>
           </tr>
 
           <tr>
@@ -137,7 +137,7 @@ const HouseRules = () => {
               <img src={pets} alt="Pets Icon" class="house-rules-icon" />
             </td>
             <td className="house-rules-info">Pets</td>
-            <td>Pets are not allowed.</td>
+            <td className="house-rules-Details">Pets are not allowed.</td>
           </tr>
 
           <tr>
@@ -145,7 +145,7 @@ const HouseRules = () => {
               <img src={groupImg} alt="Group Icon" class="house-rules-icon" />
             </td>
             <td className="house-rules-info">Groups</td>
-            <td>
+            <td className="house-rules-Details">
               When booking more than 5 rooms, different policies and additional
               supplements may apply.
             </td>

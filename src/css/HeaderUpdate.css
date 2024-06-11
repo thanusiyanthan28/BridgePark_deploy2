@@ -7,7 +7,7 @@
 
 }
 .header-font{
-  font-family: "lato", sans-serif;
+  font-family: "lato", serif;
 }
 
 .header-update{
@@ -19,18 +19,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   position: fixed;
-  z-index: 9999;
+ z-index: 999;
  
 
   
 }
 .header-nav-bar-left {
- width: 100%;
-
+  width: 100%;
 }
 .header-nav-bar-left .ant-menu-item{
-  /* margin-right: 100px; */
-  /* gap: 30px; */
+
  }
 .header-button{
   color: white;
@@ -44,8 +42,8 @@
 }
 .header-update-toggle-button {
   display: none;
-  float: right;
 }
+
 
 .header-update-profile{
   position: relative;
@@ -76,11 +74,19 @@
 
 
   .update-header-drawer{
-    z-index: 10000;
+   
   }
   .header-update{
     position: relative;
     z-index: 2;
+  }
+ .ant-drawer{
+  }
+  .drawer-close-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    z-index: 99999999;
   }
 }
 /* HeaderUpdate.css */
@@ -91,11 +97,8 @@
 .custom-dropdown-item {
   padding: 10px 20px; /* Adjust padding for better spacing */
 }
-.update-header-logo {
-  width: 40px;
-  height: 30px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.update-header-logo{
+  margin-left: 10px;
+  padding: 5px;
+  margin-right: 20px;
 }
