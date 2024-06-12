@@ -28,17 +28,17 @@ import Faq from "./components/FAQ/Faq";
 import FaqDetails from "./components/FAQ/FaqDetails";
 
 import Privacy from "./components/Privacy/Privacy";
-import Newmeeting from "./Pages/MeetingAndEvents/Newmeeting";
+
 export default function App() {
   return (
     <div>
       
       <Router>
         
-      {/* <HeaderUpdate /> */}
+      <HeaderUpdate />
       <ScrollToTop />
         <Routes>
-        <Route path="/Newmeeting" element={<Newmeeting />} />
+        
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
@@ -64,7 +64,7 @@ export default function App() {
           <Route path="/image-gallery" element={ <ImageGallery />} />
           
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
         
        
       </Router>
