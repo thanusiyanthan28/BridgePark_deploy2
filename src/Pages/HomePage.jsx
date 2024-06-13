@@ -5,6 +5,8 @@ import Room from "../components/home/Room";
 import Facilities from "./Facilities";
 import RoomInformation from "../components/home/RoomInformation";
 import MeetingAndEvents from "./MeetingAndEvents/MeetingAndEvents";
+import NewMeeting from "./MeetingAndEvents/NewMeeting";
+
 
 export default function HomePage() {
   return (
@@ -14,7 +16,8 @@ export default function HomePage() {
       <About />
       <Room />
       <Facilities />
-      <MeetingAndEvents />
+      <NewMeeting />
+       
     </>
   );
 }

@@ -3,16 +3,22 @@ import MeetingAndEvents from './MeetingAndEvents'
 import ImageGallery from './ImageGallery'
 import ImageSlider1 from './ImageSlider1'
 import PanoImage from './PanoImage'
+import Newmeeting from './NewMeeting'
+
+
+
 
 
 
 const MainMeeting = () => {
   return (
     <div>
-        {/* <ImageGallery /> */}
+        
         <ImageSlider1 />
-        <MeetingAndEvents />
+        {/* <MeetingAndEvents /> */}
+        <Newmeeting />
         <PanoImage />
+        
       
         
     </div>

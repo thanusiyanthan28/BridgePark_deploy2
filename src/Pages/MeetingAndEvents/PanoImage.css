@@ -20,6 +20,9 @@
       gap: 20px;
       
     }
+    .pano-image-image-container{
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
     
     .pano-image-image-container {
       width: 300px;
