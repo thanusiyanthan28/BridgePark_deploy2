@@ -3,7 +3,7 @@ import MeetingAndEvents from './MeetingAndEvents'
 import ImageGallery from './ImageGallery'
 import ImageSlider1 from './ImageSlider1'
 import PanoImage from './PanoImage'
-import Newmeeting from './NewMeeting'
+import NewMeeting from './NewMeeting'
 
 
 
@@ -16,7 +16,7 @@ const MainMeeting = () => {
         
         <ImageSlider1 />
         {/* <MeetingAndEvents /> */}
-        <Newmeeting />
+        <NewMeeting />
         <PanoImage />
         
       
