@@ -6,6 +6,7 @@ import Facilities from "./Facilities";
 import RoomInformation from "../components/home/RoomInformation";
 import MeetingAndEvents from "./MeetingAndEvents/MeetingAndEvents";
 import NewMeeting from "./MeetingAndEvents/NewMeeting";
+import FAQ from "../components/FAQ/Faq";
 
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Room />
       <Facilities />
       <NewMeeting />
+      {/* <FAQ /> */}
        
     </>
   );

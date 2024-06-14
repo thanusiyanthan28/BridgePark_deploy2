@@ -14,6 +14,7 @@ import barGif from '../assets/Facilities of BPH/champagne.gif';
 import heatingGif from '../assets/Facilities of BPH/heating.gif';
 import housekeepingGif from '../assets/Facilities of BPH/Cleaning Services.gif';
 import breakfastGif from '../assets/Facilities of BPH/Breakfast.gif';
+import bgimage from '../assets/bph-welcome.png'
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);
@@ -40,7 +41,8 @@ const Facilities = () => {
   };
 
   return (
-    <body>
+    <body className='facilities-background'>
+      <img className='about-bgimage' src={bgimage}/>
       <div>
         <div>
           {/* <h1 className='facilitieshead'>FACILITIES</h1> */}
