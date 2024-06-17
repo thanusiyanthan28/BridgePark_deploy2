@@ -29,14 +29,17 @@ import FAQ from "./components/FAQ/Faq";
 import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 import FaqDetails from "./components/FAQ/FaqDetails";
 import SiteCard2 from "./components/SiteCard2/siteCard2";
+
 export default function App() {
   return (
     <div>
       
       <Router>
+        
       <HeaderUpdate />
       <ScrollToTop />
         <Routes>
+        
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />

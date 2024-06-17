@@ -91,6 +91,14 @@ const HeaderUpdate = () => {
       ),
       key: 'Location',
     },
+    {
+      label: (
+        <Link to="/review" className="location-meeting header-font">
+          Review
+        </Link>
+      ),
+      key: 'Review',
+    },
   ];
 
   const profileMenuItems = isLoggedIn ? [

@@ -63,6 +63,7 @@ const BasicRoom = () => {
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
+      BroomPrice: "£48",
     },
     {
       id: 5,
@@ -72,6 +73,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
+      BroomPrice: "£58",
     },
     {
       id: 11,
@@ -81,6 +83,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
+      BroomPrice: "£60",
     },
     {
       id: 9,
@@ -90,6 +93,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
+      BroomPrice: "£85",
     },
   ];
 
@@ -132,7 +136,7 @@ const BasicRoom = () => {
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Available"
-                price="£200"
+                price={Basicroom.BroomPrice}
                 buttonText="Book Now"
                 cardtitle={Basicroom.cardTitle}
                 onViewMoreClick={() => handleViewMoreClick({

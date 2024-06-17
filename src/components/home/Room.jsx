@@ -36,12 +36,56 @@ const Room = () => {
   };
 
   const roomData = [
-    { id: 2, image: img1, title: "SINGLE ROOM BASIC", cardTitle: "1x Single Bed", imageUrl: getUrlById(2) },
-    { id: 5, image: img1, title: "DOUBLE BASIC", cardTitle: "1x Double Bed", imageUrl: getUrlById(5) },
-    { id: 10, image: img3, title: "TRIPLE BASIC", cardTitle: "3x Single Bed", imageUrl: getUrlById(10) },
-    { id: 2, image: img4, title: "DOUBLE ENSUITE", cardTitle: "1x Double Bed", imageUrl: getUrlById(2) },
-    { id: 11, image: img5, title: "TWIN ENSUITE", cardTitle: "2x Single Bed", imageUrl: getUrlById(11) },
-    { id: 9, image: img6, title: "TRIPLE ENSUITE",icon1:icon11,icon2:icon22, cardTitle: "3x Single Bed", imageUrl: getUrlById(9) }
+    {
+      id: 2,
+      image: img1,
+      title: "SINGLE ROOM BASIC",
+      cardTitle: "1x Single Bed",
+      imageUrl: getUrlById(2),
+      roomPrice: "£42",
+    },
+    {
+      id: 5,
+      image: img1,
+      title: "DOUBLE BASIC",
+      cardTitle: "1x Double Bed",
+      imageUrl: getUrlById(5),
+      roomPrice: "£45",
+    },
+    {
+      id: 10,
+      image: img3,
+      title: "TRIPLE BASIC",
+      cardTitle: "3x Single Bed",
+      imageUrl: getUrlById(10),
+      roomPrice: "£85",
+    },
+    {
+      id: 2,
+      image: img4,
+      title: "DOUBLE ENSUITE",
+      cardTitle: "1x Double Bed",
+      imageUrl: getUrlById(2),
+      roomPrice: "£55",
+    },
+    {
+      id: 11,
+      image: img5,
+      title: "TWIN ENSUITE",
+      cardTitle: "2x Single Bed",
+      imageUrl: getUrlById(11),
+      roomPrice: "£55",
+    },
+    {
+      id: 9,
+      image: img6,
+      title: "TRIPLE ENSUITE",
+      icon1: icon11,
+      icon2: icon22,
+      cardTitle: "3x Single Bed",
+      imageUrl: getUrlById(9),
+      roomPrice: "£85",
+    },
   ];
 
   return (
@@ -71,7 +115,7 @@ const Room = () => {
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Available"
-                price="£200"
+                price={room.roomPrice}
                 buttonText="Book Now"
                 cardtitle={room.cardTitle}
                 onViewMoreClick={() => handleViewMoreClick({

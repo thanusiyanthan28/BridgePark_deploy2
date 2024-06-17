@@ -32,11 +32,11 @@ const Footer = () => {
           <li><a href="/rooms" target='_blank'> <span className="quick-link-label">Rooms</span></a></li>
           <li><a href="https://direct-book.com/properties/bridgeparkdirect?" target='_blank'> <span className="quick-link-label">Group booking</span></a></li>
           <li><a href="/HomeRules" target='_blank'> <span className="quick-link-label" >Booking Policy</span></a></li>
-          <li><a href="/"> <span className="quick-link-label" target='_blank'>Terms & Condition</span></a></li>
-          <li><a href="/guest-info" target='_blank'> <span className="quick-link-label">Guest Info</span></a></li>
+          {/* <li><a href="/"> <span className="quick-link-label" target='_blank'>Terms & Condition</span></a></li> */}
+          <li><a href="https://direct-book.com/properties/bridgepark/book?step=step1" target='_blank'> <span className="quick-link-label">Guest Info</span></a></li>
           <li><a href="/faq" target='_blank'> <span className="quick-link-label" >FAQ</span></a></li>
           <li><a href="/website-support" target='_blank'> <span className="quick-link-label" >Help & Support</span></a></li>
-          <li><a href="/" target='_blank'> <span className="quick-link-label" >Siteminder page</span></a></li>
+          <li><a href="https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-06-14&checkOutDate=2024-06-15&trackPage=no" target='_blank'> <span className="quick-link-label" >Siteminder page</span></a></li>
           <li><a href="/privacy" target='_blank'> <span className="quick-link-label" target='_blank'>Privacy & Policy</span></a></li>
           </ul>
         </div>
