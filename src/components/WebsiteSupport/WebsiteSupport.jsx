@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const WebsiteSupport = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ const WebsiteSupport = () => {
             </h1>
             <div className="WebsiteSupport-sub-content">
               
-                <a href="/" > We offer a quick and easy online booking service directly from
+                <a href="https://direct-book.com/properties/bridgeparkdirect"> We offer a quick and easy online booking service directly from
                 our website for finding the lowest rates available, checking
                 availability, and reserving your room. It only takes 3 clicks to
                 book your room via our fast and secure booking service. You will
@@ -114,14 +114,14 @@ const WebsiteSupport = () => {
             <div className="WebsiteSupport-sub-content">
               <p>
                 Click&nbsp;'
-                <a href="/">Directions
+                <a href="/location">Directions
                   </a>
                 ' above for directions from the tube and a map. <br />
                 For further enquiries, feel free to check the information on our
                 website or use the form below. Usage of our website and forms
                 are covered by our &nbsp;
                 
-                <a href="/">privacy policy
+                <a href="/privacy">privacy policy
                   </a>
                 .
               </p>

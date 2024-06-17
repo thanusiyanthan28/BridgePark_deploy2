@@ -12,7 +12,12 @@
   color: #669399;
 }
 .ant-picker .ant-picker-clear {}
-
+.card .ant-row {
+   margin-top: -3px;
+}
+.btnPrimary-check:hover {
+  border: #669399;
+}
 .card {
   border: 1px solid #ffffff;
   border-radius: 20px;
@@ -20,7 +25,7 @@
 
   margin: 10px;
   overflow: hidden;
-  width: 85% !important;
+  width: 90% !important;
   background-color: white;
   color: black;
   height: 130px !important;
@@ -31,6 +36,9 @@
 .card-body {
   padding: 16px;
   text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
 }
 
 .divider {
@@ -67,7 +75,7 @@
 }
 
 .btnPrimary-check {
-  background-color: #53949A;
+  background-color: #669399;
   border-radius: 0 !important;
   color: white;
   border: none;
@@ -142,8 +150,10 @@
   }
   .btnPrimary-check {
     padding: 0 40px 0 40px ;
-    margin-left: 60%;
+    margin-left: 50%;
     height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -194,10 +204,6 @@
   padding: 16px;
   text-align: left;
   margin-top: 7px;
-
-
- 
-  
 }
 
 }

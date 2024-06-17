@@ -8,16 +8,20 @@ import pets from "../../assets/icons/Pets.gif";
 import groupImg from "../../assets/icons/Group.gif";
 import acceptPay from "../../assets/icons/Accepted payment methods.gif";
 import refundabaleImg from "../../assets/icons/Refundable DAmage.gif";
-import americanex from "../../assets/Facilities of BPH/americanex.png"
-import mastercard from "../../assets/Facilities of BPH/mastercard.png"
-import visa from "../../assets/Facilities of BPH/visa.jpeg"
-import jcb from "../../assets/Facilities of BPH/jcb.png"
+import americanex from "../../assets/Facilities of BPH/americanex.png";
+import mastercard from "../../assets/Facilities of BPH/mastercard.png";
+import visa from "../../assets/Facilities of BPH/visa.jpeg";
+import jcb from "../../assets/Facilities of BPH/jcb.png";
 const HouseRules = () => {
   return (
     <div className="house-rules-container">
-      <div className="title-container">
-        <h1 className="house-rules-title">House rules</h1>
-        <button className="availability-button">See Availability</button>
+      <div className="house-rules-title-container">
+        <div className="house-rules-main-title">
+          <h1 className="house-rules-title">House rules</h1>
+        </div>
+        <div className="house-rules-availability-button">
+          <button className="availability-button"  onClick={() => window.location.href = 'https://direct-book.com/properties/bridgeparkdirect'}>See Availability</button>
+        </div>
       </div>
       <p className="house-rules-description">
         Bridge Park Hotel takes special requests - add in the next step!
@@ -95,7 +99,7 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Children and beds</td>
-            <td>
+            <td className="house-rules-Details">
               <ul>
                 <li className="house-rule-sub-topic">Child policies</li>
                 <li>Children of any age are welcome.</li>
@@ -108,7 +112,9 @@ const HouseRules = () => {
                   the number of children in your group and their ages to your
                   search.
                 </li>
-                <li className="house-rule-sub-topic">Cot and extra bed policies</li>
+                <li className="house-rule-sub-topic">
+                  Cot and extra bed policies
+                </li>
                 <li>Cots and extra beds are not available at this property.</li>
               </ul>
             </td>
@@ -123,31 +129,23 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Age restriction</td>
-            <td>The minimum age for check-in is 18</td>
+            <td className="house-rules-Details">The minimum age for check-in is 18</td>
           </tr>
 
           <tr>
             <td>
-              <img
-                src={pets}
-                alt="Pets Icon"
-                class="house-rules-icon"
-              />
+              <img src={pets} alt="Pets Icon" class="house-rules-icon" />
             </td>
             <td className="house-rules-info">Pets</td>
-            <td>Pets are not allowed.</td>
+            <td className="house-rules-Details">Pets are not allowed.</td>
           </tr>
 
           <tr>
             <td>
-              <img
-                src={groupImg}
-                alt="Group Icon"
-                class="house-rules-icon"
-              />
+              <img src={groupImg} alt="Group Icon" class="house-rules-icon" />
             </td>
             <td className="house-rules-info">Groups</td>
-            <td>
+            <td className="house-rules-Details">
               When booking more than 5 rooms, different policies and additional
               supplements may apply.
             </td>
@@ -162,26 +160,33 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Accepted payment methods</td>
-            <td> <img
+            <td>
+              {" "}
+              <img
                 src={americanex}
                 alt="Accepted payment methods Icon"
-                class="house-rules-icon"/>
-                <img
+                class="house-rules-icon"
+              />
+              <img
                 src={mastercard}
                 alt="Accepted payment methods Icon"
-                class="house-rules-icon"/>
-                <img
+                class="house-rules-icon"
+              />
+              <img
                 src={jcb}
                 alt="Accepted payment methods Icon"
-                class="house-rules-icon"/>
-                <img
+                class="house-rules-icon"
+              />
+              <img
                 src={visa}
                 alt="Accepted payment methods Icon"
-                class="house-rules-icon"/>
-                <img
+                class="house-rules-icon"
+              />
+              <img
                 src={visa}
                 alt="Accepted payment methods Icon"
-                class="house-rules-icon"/>
+                class="house-rules-icon"
+              />
             </td>
           </tr>
         </table>

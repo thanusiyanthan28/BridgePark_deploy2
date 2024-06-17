@@ -15,7 +15,9 @@
   margin-right: auto;
   border-radius: 20px;
 }
-
+.faq-card{
+  padding-top: 10%;
+}
 .faq-title {
   text-align: center;
   font-size: 40px;
@@ -42,10 +44,14 @@
   border: none;
 }
 
-.faq-heading {
-  align-items: center;
-  font-family: "Cinzel", serif;
-  font-weight: 500;
+.faq-Mainheading {
+  line-height: 0px;
+   margin-top: 30px;
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   margin-bottom: 30px;
+   font-family: "Cinzel", serif;
+   font-size: x-large;
 }
 
 .faq-content {
@@ -84,14 +90,22 @@
 
 .ant-collapse-item > .ant-collapse-header {
     background-color: white;
-    font-weight: 700;
-    font-size: 15px;
+    color: rgba(51, 49, 49, 0.767);
+    opacity: 1;
+    font-weight: bold;
+    font-family: "lato", sans-serif;
+    font-size: medium;
 }
 .panel-border p{
-  font-size: 15px;
+  color: rgba(51, 49, 49, 0.767);
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  opacity: 1;
+  font-size: medium;
 }
 .faq-view-full-text{
-  font-size: 15px;
+  font-size: medium;
+  font-family: "lato", sans-serif;
   background: none;
   border: none;
   color: #33cccc;
@@ -114,5 +128,11 @@
         font-size: 50px;
         /* color: white; */
         padding: 5px;
+    }
+    .faq-Mainheading{
+      line-height:1 ;
+    }
+    .faq-sitecard{
+      margin-top: 25px;
     }
 }

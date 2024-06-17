@@ -33,7 +33,7 @@
 .privacy-sub {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 95%;
   border: 1px solid #33cccc;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -60,6 +60,7 @@
   margin-left: 40px;
   text-align: justify;
   margin-right: 40px;
+  font-size: medium;
   font-family: "lato", sans-serif;
 }
 .privacy-Containor p,
@@ -86,7 +87,6 @@
   .privacy-title {
     text-align: center;
     font-size: 50px;
-    color: white;
     padding: 5px;
   }
 
