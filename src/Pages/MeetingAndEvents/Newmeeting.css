@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .new-meeting-card-carousel {
     display: flex;
     align-items: center;
@@ -18,12 +21,12 @@
     cursor: pointer;
     background: none;
     font-size: 25px;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-
+    transform: none;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
   }
-  .new-meeting-nav-button :hover{
   
-    transform: scale(1.2); /* Zoom effect: increase size by 10% */
+  .new-meeting-nav-button:hover {
+    transform: scale(1.5); /* Zoom effect: increase size by 10% */
   }
   
   
@@ -79,7 +82,7 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     line-height: 1px;
-   
+    font-family: "Cinzel", serif;
   }
   
   .new-meeting-card.new-meeting-active {
