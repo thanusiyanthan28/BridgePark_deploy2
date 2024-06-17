@@ -15,6 +15,8 @@ const SiteCard = () => {
     // Add more form fields as needed
   });
 
+  
+
   const [daysOfWeek, setDaysOfWeek] = useState({
     checkInDay: moment().format('dddd'), // Initialize with current day
     checkOutDay: moment().format('dddd'), // Initialize with current day
