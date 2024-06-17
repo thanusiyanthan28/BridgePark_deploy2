@@ -17,13 +17,15 @@ import icon22 from "../../assets/icons/two.png"
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedRoomId, setSelectedRoomId] = useState(0);
   const [bookingUrl, setBookingUrl] = useState('');
   const navigate = useNavigate();
 
-  const handleViewMoreClick = (room, url) => {
+  const handleViewMoreClick = (room, url, id) => {
     setSelectedRoom(room);
     setBookingUrl(url);
     setIsModalVisible(true);
+    setSelectedRoomId(id)
   };
 
   const handleCancel = () => {
@@ -121,7 +123,8 @@ const Room = () => {
                 onViewMoreClick={() => handleViewMoreClick({
                   title: room.title,
                   imageSource: room.image,
-                }, room.imageUrl)}
+                  id: room.id
+                }, room.imageUrl, room.id)}
                 link={room.imageUrl}
               />
             </Col>

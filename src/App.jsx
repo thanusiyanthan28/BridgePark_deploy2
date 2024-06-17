@@ -29,7 +29,7 @@ import FAQ from "./components/FAQ/Faq";
 import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 import FaqDetails from "./components/FAQ/FaqDetails";
 import SiteCard2 from "./components/SiteCard2/siteCard2";
-
+import ReviewPage from "./components/Review/reviewPage";
 export default function App() {
   return (
     <div>
@@ -62,6 +62,7 @@ export default function App() {
           <Route path="/reset-password" element={ <ResetPassword />} />
           <Route path="/room-card" element={ <SiteCard />} />
           <Route path="/card2" element={ <SiteCard2 />} />
+          <Route path="/review" element={ <ReviewPage />} />
        
           <Route path="/image-gallery" element={ <ImageGallery />} />
           
