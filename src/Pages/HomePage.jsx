@@ -5,7 +5,7 @@ import Room from "../components/home/Room";
 import Facilities from "./Facilities";
 import RoomInformation from "../components/home/RoomInformation";
 import MeetingAndEvents from "./MeetingAndEvents/MeetingAndEvents";
-import NewMeeting from "./MeetingAndEvents/NewMeeting";
+import NewMeeting from "./MeetingAndEvents/NewMeeting"
 import FAQ from "../components/FAQ/Faq";
 
 
