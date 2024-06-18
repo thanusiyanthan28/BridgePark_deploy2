@@ -8,7 +8,7 @@ import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
 
-const RoomInformation = ({room, bookingUrl}) => {
+const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
@@ -54,7 +54,7 @@ const RoomInformation = ({room, bookingUrl}) => {
   return (
     <div>
         <div className="site-card-room">
-        <SiteCard />
+        <SiteCard selectedRoomId={selectedRoomId} />
         </div>
       <div className="The-header">
         <Row className="RoomInformation-section-All">

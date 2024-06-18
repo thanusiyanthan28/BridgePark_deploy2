@@ -23,15 +23,17 @@ const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState('');
+  const [selectedRoomId, setSelectedRoomId] = useState(0);
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
 
-  const handleViewMoreClick = (Basicroom, url) => {
+  const handleViewMoreClick = (Basicroom, url , id) => {
     setSelectedRoom(Basicroom);
     setBookingUrl(url);
     setIsModalVisible(true);
+    setSelectedRoomId(id)
   };
 
   const handleCancel = () => {
@@ -98,7 +100,7 @@ const BasicRoom = () => {
       <div className="BasicRoom-cardContainor">
         {isMobile ? (
           <div className="BasicRoom-sitecard">
-            <SiteCard />
+            <SiteCard selectedRoomId={selectedRoomId} />
           </div>
         ) : null}
         {!isMobile ? (
@@ -138,7 +140,8 @@ const BasicRoom = () => {
                 onViewMoreClick={() => handleViewMoreClick({
                   title: Basicroom.title,
                   imageSource: Basicroom.image,
-                }, Basicroom.imageUrl)}
+                  id: Basicroom.id
+                }, Basicroom.imageUrl,Basicroom.id)}
                 link={Basicroom.imageUrl}
               />
             </Col>
@@ -153,7 +156,7 @@ const BasicRoom = () => {
         footer={null}
         width="80%"
       >
-        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
+        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
       </Modal>
     </div>
   );
