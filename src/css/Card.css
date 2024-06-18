@@ -16,8 +16,11 @@
    margin-top: -3px;
 }
 .btnPrimary-check:hover {
-  border: #669399;
+  background-color: #D5ECF4 !important;
+  color: white; /* Optional: Change the text color to white for better contrast */
+  border: 1px solid  black !important;
 }
+
 .card {
   border: 1px solid #ffffff;
   border-radius: 20px;
