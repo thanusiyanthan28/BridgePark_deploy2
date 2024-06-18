@@ -67,6 +67,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon1,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(14),
+      EroomPrice: "£65",
     },
     {
       id: 11,
@@ -76,6 +77,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
+      EroomPrice: "£68",
     },
     {
       id: 9,
@@ -85,6 +87,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
+      EroomPrice: "£92",
     },
     {
       id: 10,
@@ -94,6 +97,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x single bed + 1x double bed",
       imageUrl: getUrlById(10),
+      EroomPrice: "£97",
     },
     {
       id: 10,
@@ -103,6 +107,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "2x single bed + 1x double bed",
       imageUrl: getUrlById(10),
+      EroomPrice: "£120",
     },
     {
       id: 10,
@@ -112,6 +117,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x double bed + 1x bunk bed",
       imageUrl: getUrlById(10),
+      EroomPrice: "£110",
     },
     {
       id: 10,
@@ -121,6 +127,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x Double bed",
       imageUrl: getUrlById(10),
+      EroomPrice: "£120",
     },
     {
       id: 10,
@@ -130,6 +137,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x Superior King Room",
       imageUrl: getUrlById(10),
+      EroomPrice: "£125",
     },
   ];
 
@@ -169,7 +177,7 @@ const EnsuiteRoom = () => {
                   description="Spacious room with a breathtaking view"
                   guests={2}
                   status="Available"
-                  price="£200"
+                  price={Ensuiteroom.EroomPrice}
                   buttonText="Book Now"
                   cardtitle={Ensuiteroom.cardTitle}
                   onViewMoreClick={() =>
