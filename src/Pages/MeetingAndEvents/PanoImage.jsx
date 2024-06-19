@@ -25,11 +25,11 @@ const PanoImage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   
   const handlePrevClick = () => {
-    setStartIndex(Math.max(startIndex - 3, 0));
+    setStartIndex(Math.max(startIndex - 1, 0));
   };
 
   const handleNextClick = () => {
-    setStartIndex(Math.min(startIndex + 3, images.length - 3));
+    setStartIndex(Math.min(startIndex + 1, images.length - 3));
   };
 
   const handleImageClick = (index) => {
