@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './popupPage.css';
-import { List, Avatar, Rate, Button, Select } from 'antd';
-import { LikeOutlined, DislikeOutlined, StarOutlined } from '@ant-design/icons';
-import { Progress, Tag } from 'antd';
-import { ArrowDownOutlined } from '@ant-design/icons';
+import { List, Avatar, Rate, Button, Select, Progress } from 'antd';
+import { LikeOutlined, DislikeOutlined, ArrowDownOutlined, FrownOutlined, MehOutlined, SmileOutlined } from '@ant-design/icons';
 import PopupCard from './Sidebar';
-import { FrownOutlined, MehOutlined, SmileOutlined } from '@ant-design/icons';
+
 const { Option } = Select;
 
 const reviewData = [
   {
     id: 1,
+    name: 'María',
+    country: 'Argentina',
+    room: 'Single Room with Shared Bathroom',
+    nights: '19 nights · July 2023',
+    travelerType: 'Solo traveller',
+    reviewDate: '30 July 2023',
+    score: 7,
+    title: 'Exceptional',
+    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+    helpful: 12,
+    notHelpful: 1,
+    reviewerChoice: true
+  },
+  {
+    id: 2,
     name: 'María',
     country: 'Argentina',
     room: 'Single Room with Shared Bathroom',
@@ -26,41 +41,56 @@ const reviewData = [
     reviewerChoice: true
   },
   {
-    id: 2,
-    name: 'Graham',
-    country: 'United Kingdom',
-    room: 'Double Room Ensuite',
-    nights: '2 nights · April 2024',
+    id: 3,
+    name: 'María',
+    country: 'Argentina',
+    room: 'Single Room with Shared Bathroom',
+    nights: '19 nights · July 2023',
     travelerType: 'Solo traveller',
-    reviewDate: '15 May 2024',
-    score: 6,
-    title: 'As expected from previous visits.',
-    text: `Managed to change room on arrival. Location good for work, breakfast was good this time.
-           Room 201, single room with a double bed. The en-suite un-usable, lack of space, the loo is just about under the sink, no sink just a hand basin.
-           VAT invoices only for 1 night, when 2 nights stayed. As a business, I can't claim it all back because of their book keeping!!`,
-    helpful: 8,
-    notHelpful: 5,
-    reviewerChoice: false
+    reviewDate: '30 July 2023',
+    score: 5,
+    title: 'Exceptional',
+    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+    helpful: 12,
+    notHelpful: 1,
+    reviewerChoice: true
   },
   {
-    id: 3,
-    name: 'Dussanthan',
-    country: 'Sri Lanka',
-    room: 'Double Room Ensuite',
-    nights: '2 nights · April 2024',
+    id: 4,
+    name: 'leesa',
+    country: 'Argentina',
+    room: 'Single Room with Shared Bathroom',
+    nights: '19 nights · July 2023',
     travelerType: 'Solo traveller',
-    reviewDate: '15 May 2024',
+    reviewDate: '30 July 2023',
     score: 10,
-    title: 'As a new visitor',
-    text: `Managed to change room on arrival. Location good for work, breakfast was good this time.
-           Room 201, single room with a double bed. The en-suite un-usable, lack of space, the loo is just about under the sink, no sink just a hand basin.
-           VAT invoices only for 1 night, when 2 nights stayed. As a business, I can't claim it all back because of their book keeping!!`,
-    helpful: 8,
-    notHelpful: 5,
+    title: 'Exceptional',
+    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+    helpful: 12,
+    notHelpful: 1,
+    reviewerChoice: true
+  },
+  {
+    id: 5,
+    name: 'James',
+    country: 'Argentina',
+    room: 'Single Room with Shared Bathroom',
+    nights: '19 nights · July 2023',
+    travelerType: 'Solo traveller',
+    reviewDate: '30 July 2023',
+    score: 3,
+    title: 'Exceptional',
+    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+    helpful: 12,
+    notHelpful: 1,
     reviewerChoice: true
   },
   // Add more reviews as needed
 ];
+
 const customIcons = {
   1: <FrownOutlined />,
   2: <FrownOutlined />,
@@ -68,6 +98,7 @@ const customIcons = {
   4: <SmileOutlined />,
   5: <SmileOutlined />,
 };
+
 const ReviewApp = () => {
   const [sortOption, setSortOption] = useState('Most relevant');
   const [reviews, setReviews] = useState(reviewData);
@@ -79,30 +110,33 @@ const ReviewApp = () => {
     filter4: '',
     filter5: '',
   });
-
-  const score = 6.1;
-  const totalReviews = 2651;
-  const reviewText = 'Pleasant';
-  const topics = ['Room', 'Location', 'Breakfast', 'Bed', 'Clean'];
-
+  const [countries, setCountries] = useState([]);
   const [visible, setVisible] = useState(false);
   const [bookingNumber, setBookingNumber] = useState('');
   const [username, setUsername] = useState('');
 
-  const showModal = () => {
-    setVisible(true);
-  };
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await axios.get('https://restcountries.com/v3.1/all');
+        const countryNames = response.data.map((country) => country.name.common);
+        setCountries(countryNames.sort());
+      } catch (error) {
+        console.error('Error fetching countries:', error);
+      }
+    };
+    fetchCountries();
+  }, []);
 
-  const handleCancel = () => {
-    setVisible(false);
-  };
-
-  const handleSubmit = () => {
-    console.log('Booking Number:', bookingNumber);
-    console.log('Username/Email:', username);
-    setBookingNumber('');
-    setUsername('');
-    setVisible(false);
+  const getFilteredReviews = () => {
+    if (selectedTopics.length === 0) {
+      return reviews;
+    }
+    return reviews.filter((review) =>
+      selectedTopics.some((topic) =>
+        review.text.toLowerCase().includes(topic.toLowerCase())
+      )
+    );
   };
 
   const handleSortChange = (value) => {
@@ -122,26 +156,41 @@ const ReviewApp = () => {
     setFilters({ ...filters, [name]: value });
   };
 
-  const getFilteredReviews = () => {
-    if (selectedTopics.length === 0) {
-      return reviews;
-    }
-    return reviews.filter((review) =>
-      selectedTopics.some((topic) =>
-        review.text.toLowerCase().includes(topic.toLowerCase())
+  const handleHelpfulClick = (id) => {
+    setReviews((prevReviews) =>
+      prevReviews.map((review) =>
+        review.id === id
+          ? { ...review, userReaction: 'helpful', helpful: review.helpful + 1 }
+          : review
       )
     );
   };
 
+  const handleNotHelpfulClick = (id) => {
+    setReviews((prevReviews) =>
+      prevReviews.map((review) =>
+        review.id === id
+          ? { ...review, userReaction: 'notHelpful', notHelpful: review.notHelpful + 1 }
+          : review
+      )
+    );
+  };
+
+  const filteredReviews = getFilteredReviews();
+  const totalReviews = filteredReviews.length;
+  const reviewText = 'Pleasant';
+
   const categories = [
-    { name: 'Staff', score: 7.9, color: '#003b95' },
-    { name: 'Facilities', score: 6.1, color: '#d4111e' },
-    { name: 'Cleanliness', score: 6.3, color: '#d4111e' },
-    { name: 'Comfort', score: 6.4, color: '#d4111e' },
-    { name: 'Value for money', score: 7.0, color: '#003b95' },
-    { name: 'Location', score: 7.1, color: '#d4111e' },
-    { name: 'Free WiFi', score: 6.6, color: '#d4111e' },
+    { name: 'Staff', score: 7.9 },
+    { name: 'Facilities', score: 4.9 },
+    { name: 'Cleanliness', score: 6.3 },
+    { name: 'Comfort', score: 4 },
+    { name: 'Value for money', score: 7.0 },
+    { name: 'Location', score: 7.1 },
+    { name: 'Free WiFi', score: 6.6 },
   ];
+
+  const topics = ['Room', 'Breakfast', 'Facilities', 'Bed', 'Location'];
 
   const CustomIcon = ({ icon, size }) => (
     <span style={{ fontSize: size }}>
@@ -149,38 +198,50 @@ const ReviewApp = () => {
     </span>
   );
 
+  const getProgressBarColor = (score) => {
+    return score > 5 ? '#F6BE00' : '#618e95';
+  };
+
   return (
     <div className="container-pop">
       <div className="guest-reviews-pop">
-        <div className="score-pop">{score}</div>
+        <div className="score-pop">6.1</div>
         <div className="details-pop">
           <span className="review-text-pop">{reviewText}</span> · {totalReviews} reviews
         </div>
-        <button className='write-pop' onClick={showModal}>Write Review</button>
+        <button className='write-pop' onClick={() => setVisible(true)}>Write Review</button>
         <PopupCard
           visible={visible}
-          showModal={showModal}
-          handleCancel={handleCancel}
+          showModal={() => setVisible(true)}
+          handleCancel={() => setVisible(false)}
           bookingNumber={bookingNumber}
           setBookingNumber={setBookingNumber}
           username={username}
           setUsername={setUsername}
-          handleSubmit={handleSubmit}
+          handleSubmit={() => {
+            console.log('Booking Number:', bookingNumber);
+            console.log('Username/Email:', username);
+            setBookingNumber('');
+            setUsername('');
+            setVisible(false);
+          }}
         />
       </div>
       <div className="review-card"></div>
       <h3>Categories:</h3>
       <div className="categories-pop">
-        {categories.map((category) => (
+        {categories
+        .sort((a, b) => b.score - a.score)
+        .map((category) => (
           <div key={category.name} className="category-pop">
             <span className="category-name-pop">
               {category.name}
-              {category.color === '#d4111e' && <ArrowDownOutlined className="down-arrow-pop" />}
+              {category.score <= 5 && <ArrowDownOutlined className="down-arrow-pop" />}
             </span>
             <span className="category-score-pop">{category.score}</span>
             <Progress
               percent={(category.score / 10) * 100}
-              strokeColor={category.color}
+              strokeColor={getProgressBarColor(category.score)}
               trailColor="#f0f0f0"
               showInfo={false}
               style={{ width: '80%' }}
@@ -191,45 +252,53 @@ const ReviewApp = () => {
 
       <div className="filter-options">
         <div>
-          <label>Reviewers:</label>
+          <label>Category :</label>
           <select
             name="Reviewers"
             value={filters.filter1}
             onChange={handleFilterChange}
           >
             <option value="">Select Option</option>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
+            <option value="Option 1">Staff</option>
+            <option value="Option 2">Facilities</option>
+            <option value="Option 3">Rooms</option>
+            <option value="Option 4">Cleanlines</option>
+            <option value="Option 5">Location</option>
+            <option value="Option 6">Comport</option>
+            <option value="Option 7">Value of Money</option>
           </select>
         </div>
         <div>
-          <label>Review scores:</label>
+          <label>Review Rating:</label>
           <select
             name="Review scores"
             value={filters.filter2}
             onChange={handleFilterChange}
           >
             <option value="">Select Option</option>
-            <option value="Option A">Option A</option>
-            <option value="Option B">Option B</option>
-            <option value="Option C">Option C</option>
+            <option value="Option A">Excellent</option>
+            <option value="Option B">Very Good</option>
+            <option value="Option C">Good</option>
+            <option value="Option C">Fair</option>
+            <option value="Option C">Poor</option>
           </select>
         </div>
         <div>
-          <label>Languages</label>
+          <label>Country :</label>
           <select
             name="Languages"
             value={filters.filter3}
             onChange={handleFilterChange}
           >
-            <option value="">Select Option</option>
-            <option value="Option X">Option X</option>
-            <option value="Option Y">Option Y</option>
-            <option value="Option Z">Option Z</option>
+            <option value="">Select Country</option>
+            {countries.map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
           </select>
         </div>
-        <div>
+        {/* <div>
           <label>Time of year</label>
           <select
             name="Time of year"
@@ -241,7 +310,7 @@ const ReviewApp = () => {
             <option value="Option 456">Option 456</option>
             <option value="Option 789">Option 789</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div>
         <h3 className="button-head-pop">Select topics to read reviews:</h3>
@@ -261,7 +330,7 @@ const ReviewApp = () => {
         </div>
       </div>
       <div className="guest-reviews-container">
-        <h2>Guest reviews</h2>
+        <h2 className='title-top-pop'>Guest reviews</h2>
         <div className="sort-reviews-pop">
           <span>Sort reviews by:</span>
           <Select defaultValue={sortOption} onChange={handleSortChange} style={{ width: 200 }}>
@@ -271,50 +340,84 @@ const ReviewApp = () => {
             <Option value="Lowest score">Lowest score</Option>
           </Select>
         </div>
-        <List className='pop-content'
-          itemLayout="vertical"
-          dataSource={getFilteredReviews()}
-          renderItem={review => (
-            <List.Item key={review.id} className="review-item-pop">
-              <List.Item.Meta
-                avatar={<Avatar>{review.name[0]}</Avatar>}
-                title={
-                  <div className="review-header-pop">
-                    <span className="reviewer-name-pop">{review.name}</span>
-                    <span className="reviewer-country-pop">{review.country}</span>
-                  </div>
-                }
-                description={
-                  <>
-                    <div className="review-details-pop">
-                      <p>{review.room}</p>
-                      <p>{review.nights}</p>
-                      <p>{review.travelerType}</p>
-                    </div>
-                    <div className="review-meta-pop">
-                      <span className="review-date-pop">Reviewed: {review.reviewDate}</span>
-                      {review.reviewerChoice && <span className="reviewers-choice-pop">Reviewers' choice</span>}
-                    </div>
-                  </>
-                }
-              />
-              <div className="review-content-pop">
-                <h3>{review.title}</h3>
-                <p>{review.text}</p>
-                <div className="review-actions-pop">
-                  <div className="button-row-pop">
-                    <Button className='btn-rev-like' type="link" icon={<LikeOutlined />}>Helpful ({review.helpful})</Button>
-                    <Button className='btn-rev-dislike' type="link" icon={<DislikeOutlined />}>Not helpful ({review.notHelpful})</Button>
-                  </div>
-                  <Rate className='rate-pop'
-                    disabled
-                    defaultValue={review.score / 2}
-                    count={5}
-                    character={({ index }) => <CustomIcon icon={customIcons[index + 1]} size="30px" />}
-                  />
+        <List
+        itemLayout="vertical"
+        size="large"
+        pagination={{
+          onChange: (page) => {
+            console.log(page);
+          },
+          pageSize: 5,
+        }}
+        dataSource={filteredReviews}
+        renderItem={(review) => (
+          <List.Item key={review.id} className="review-item-pop">
+             <div>
+            <List.Item.Meta
+              avatar={<Avatar>{review.name[0]}</Avatar>}
+              title={
+                <div className="review-header-pop">
+                  <span className="reviewer-name-pop">{review.name}</span>
+                  <span className="reviewer-country-pop">{review.country}</span>
                 </div>
+              }
+              description={
+                <>
+                  <div className="review-details-pop">
+                    <p>{review.room}</p>
+                    <p>{review.nights}</p>
+                    <p>{review.travelerType}</p>
+                  </div>
+                  <div className="review-meta-pop">
+                    <span className="review-date-pop">Reviewed: {review.reviewDate}</span>
+                    {review.reviewerChoice && <span className="reviewers-choice-pop">Reviewers' choice</span>}
+                  </div>
+                </>
+              }
+            />
+            </div>
+            <div className="review-content-pop">
+              <h3 className="review-title-pop">{review.title}</h3>
+              <p  className="review-text-pop">{review.text}</p>
+              <div className="review-actions-pop">
+                <div className="button-row-pop">
+                  {!review.userReaction && (
+                    <>
+                      <Button
+                        className='btn-rev-like'
+                        type="link"
+                        icon={<LikeOutlined />}
+                        onClick={() => handleHelpfulClick(review.id)}
+                      >
+                        Helpful ({review.helpful})
+                      </Button>
+                      <Button
+                        className='btn-rev-dislike'
+                        type="link"
+                        icon={<DislikeOutlined />}
+                        onClick={() => handleNotHelpfulClick(review.id)}
+                      >
+                        Not helpful ({review.notHelpful})
+                      </Button>
+                    </>
+                  )}
+                  {review.userReaction && (
+                    <span className='clicked-text-useful'>
+                      {review.userReaction === 'helpful'
+                        ? 'You marked this review as helpful.'
+                        : 'You marked this review as not helpful.'}
+                    </span>
+                  )}
+                </div>
+                <Rate className='rate-pop'
+                  disabled
+                  defaultValue={review.score / 2}
+                  count={5}
+                  character={({ index }) => <CustomIcon icon={customIcons[index + 1]} size="25px" />}
+                />
               </div>
-            </List.Item>
+            </div>
+          </List.Item>
           )}
         />
       </div>

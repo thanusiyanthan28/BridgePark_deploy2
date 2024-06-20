@@ -44,7 +44,7 @@ const Room = () => {
       title: "SINGLE ROOM BASIC",
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
-      roomPrice: "£42",
+      roomPrice: "£48",
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ const Room = () => {
       title: "DOUBLE BASIC",
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
-      roomPrice: "£45",
+      roomPrice: "£58",
     },
     {
       id: 10,
@@ -60,15 +60,15 @@ const Room = () => {
       title: "TRIPLE BASIC",
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(10),
-      roomPrice: "£85",
+      roomPrice: "£60",
     },
     {
-      id: 2,
+      id: 3,
       image: img4,
       title: "DOUBLE ENSUITE",
       cardTitle: "1x Double Bed",
-      imageUrl: getUrlById(2),
-      roomPrice: "£55",
+      imageUrl: getUrlById(3),
+      roomPrice: "£65",
     },
     {
       id: 11,
@@ -76,7 +76,7 @@ const Room = () => {
       title: "TWIN ENSUITE",
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
-      roomPrice: "£55",
+      roomPrice: "£68",
     },
     {
       id: 9,
@@ -86,7 +86,7 @@ const Room = () => {
       icon2: icon22,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
-      roomPrice: "£85",
+      roomPrice: "£97",
     },
   ];
 
@@ -137,7 +137,7 @@ const Room = () => {
         footer={null}
         width="80%"
       >
-        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} />
+         <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
       </Modal>
     </div>
   );

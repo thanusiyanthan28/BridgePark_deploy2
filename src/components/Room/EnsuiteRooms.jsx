@@ -26,14 +26,16 @@ const EnsuiteRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState("");
+  const [selectedRoomId, setSelectedRoomId] = useState(0);
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
 
-  const handleViewMoreClick = (EnsuiteRoom, url) => {
+  const handleViewMoreClick = (EnsuiteRoom, url ,id) => {
     setSelectedRoom(EnsuiteRoom);
     setBookingUrl(url);
     setIsModalVisible(true);
+    setSelectedRoomId(id)
   };
 
   const handleCancel = () => {
@@ -146,7 +148,7 @@ const EnsuiteRoom = () => {
       <div className="EnsuiteRoom-cardContainor">
         {isMobile ? (
           <div className="EnsuiteRoom-sitecard">
-            <SiteCard />
+             <SiteCard selectedRoomId={selectedRoomId} />
           </div>
         ) : null}
         {!isMobile ? (
@@ -185,8 +187,9 @@ const EnsuiteRoom = () => {
                       {
                         title: Ensuiteroom.title,
                         imageSource: Ensuiteroom.image,
+                        id: Ensuiteroom.id
                       },
-                      Ensuiteroom.imageUrl
+                      Ensuiteroom.imageUrl,Ensuiteroom.id
                     )
                   }
                   link={Ensuiteroom.imageUrl}
@@ -202,7 +205,7 @@ const EnsuiteRoom = () => {
           footer={null}
           width="80%"
         >
-          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} />
+          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
         </Modal>
       </div>
     </div>

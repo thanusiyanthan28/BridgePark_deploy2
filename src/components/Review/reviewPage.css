@@ -15,22 +15,26 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
+  .rev-home-head{
+    font-family: 'Cinzel';
+  }
   .category-rev {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  
+  .category-home{
+    font-family: 'Cinzel';
+  }
   .category-name-rev {
-    font-weight: bold;
+    font-family: 'leto';
     margin-bottom: -15px;
     display: flex;
     align-items: center;
   }
   .down-arrow-rev {
     margin-left: 5px;
-    color: #d4111e;
+    color: #618e95;
   }
   .category-score-rev {
     font-size: 14px;
@@ -58,43 +62,35 @@
     width: 100%;
   }
   .review-show-btn{
-    padding: 10px 40px;
-    background-color: rgb(87, 83, 194);
+    padding: 10px 60px;
+    background-color: #618e95;
     color: #ffffff;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     font-size: 16px;
+    margin-top: 70px;
   }
   
+  .review-show {
+    margin-left: auto; 
+    margin-top: -80px; 
+  }
+ .topic-buttons-container-rev {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjust this value as needed */
+  flex-wrap: wrap;
+}
  
  
- 
-  /* .see-all-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: #fafafa;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-left: -20px;
-    margin-top: 80px;
-  } */
-  
-  /* .buttons-container button:hover,
-  .search-button:hover,
-  .see-all-button:hover {
-    background-color: #dfe7f0;
-    color: #2511e2;
-    
-  } */
   .guest-reviews-rev {
     display: flex;
     align-items: center;
     font-family: Arial, sans-serif;
   }
   .score-rev {
-    background-color: #003b95;
+    background-color: #F6BE00;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -122,6 +118,7 @@
   
   .button-head-rev{
     font-size: 15px;
+    font-family: 'leto';
   }
   .topic-buttons-rev {
     display: flex;
@@ -158,8 +155,11 @@
     .topic-buttons-rev {
       margin-left: 15px;
      }
-     .review-show-btn{
-      margin-left: 85px;
+     .review-show{
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
      
     }
    
@@ -183,8 +183,11 @@
     .topic-buttons-rev {
       margin-left: 15px;
      }
-     .review-show-btn{
-      margin-left: 270px;
+     .review-show{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
      
     }
     .category-score-rev {
@@ -212,8 +215,8 @@
     .topic-buttons-rev {
       margin-left: 15px;
      }
-     .review-show-btn{
-      margin-left: 370px;
+     .review-show{
+      margin-right: 30px;
      
     }
     .category-score-rev {

@@ -10,7 +10,7 @@
   border: 0px solid;
   background-color: #fffdfd;
   border-radius: 10px;
-  height: 460px;
+  height: 470px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
 
@@ -206,7 +206,7 @@
       border: 1px ;
       background-color: #f5f5f5;
       border-radius: 15px;
-      height: 460px;
+      height: 470px;
       margin-bottom: 10px;
     }
     .card-site {

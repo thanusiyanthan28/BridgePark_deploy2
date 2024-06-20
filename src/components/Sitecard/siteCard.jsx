@@ -3,32 +3,35 @@ import { DatePicker } from 'antd'; // Import DatePicker from Ant Design
 import './siteCard.css'; // Import CSS file for styling
 import moment from 'moment';
 
-const SiteCard = () => {
+const SiteCard = ({ selectedRoomId }) => {
   const [formData, setFormData] = useState({
-    checkInDate: null, // Initialize with current date
-    checkOutDate: null, // Initialize with current date
+    checkInDate: null,
+    checkOutDate: null,
     adults: 1,
     children: 0,
     infants: 0,
     language: 'en',
     currency: 'USD',
-    // Add more form fields as needed
   });
-
-  
 
   const [daysOfWeek, setDaysOfWeek] = useState({
-    checkInDay: moment().format('dddd'), // Initialize with current day
-    checkOutDay: moment().format('dddd'), // Initialize with current day
+    checkInDay: moment().format('dddd'),
+    checkOutDay: moment().format('dddd'),
   });
+  const [singleRoomPrice, setSingleRoomPrice] = useState(0.00);
+  const [tax, setTax] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect`;
 
   const handleCountChange = (fieldName, increment) => {
-    setFormData(prevState => ({
-      ...prevState,
-      [fieldName]: Math.max(0, prevState[fieldName] + increment) // Ensure the count doesn't go below 0
-    }));
+    setFormData(prevState => {
+      const updatedValue = Math.max(0, prevState[fieldName] + increment);
+      return {
+        ...prevState,
+        [fieldName]: updatedValue,
+      };
+    });
   };
 
   const handleDateChange = (date, fieldName) => {
@@ -60,7 +63,7 @@ const SiteCard = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const queryString = new URLSearchParams({
       check_in_date: formData.checkInDate.format('YYYY-MM-DD'),
       check_out_date: formData.checkOutDate.format('YYYY-MM-DD'),
@@ -70,10 +73,43 @@ const SiteCard = () => {
     window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
   };
 
-  // Calculate total price
-  const singleRoomPrice = 1146.31;
-  const tax = 53.69;
-  const totalPrice = singleRoomPrice + tax;
+  const valueCheck = (selectedRoomId) => {
+    let price = 48;
+    if (selectedRoomId === 2) {
+      price = 48;
+    } else if (selectedRoomId === 5) {
+      price = 58;
+    } else if (selectedRoomId === 3) {
+      price = 68;
+    } else if (selectedRoomId === 10) {
+      price = 60;
+    } else if (selectedRoomId === 11) {
+      price = 68;
+    } else if (selectedRoomId === 9) {
+      price = 97;
+    }
+    setSingleRoomPrice(price);
+  };
+
+  const calculatePrices = () => {
+    const personCount = formData.adults + formData.children;
+    let price = singleRoomPrice;
+    if (personCount > 2) {
+      price *= 2; // Double the price if more than two persons
+    }
+    const tax = price * 0.1; // Assuming a tax rate of 10%
+    setTax(tax);
+    setTotalPrice(price + tax);
+  };
+
+  useEffect(() => {
+    valueCheck(selectedRoomId);
+  }, [selectedRoomId]);
+
+  useEffect(() => {
+    calculatePrices();
+  }, [formData.adults, formData.children, singleRoomPrice]);
+
   const currentDate = moment().format('DD MMM');
 
   return (
@@ -137,10 +173,10 @@ const SiteCard = () => {
           </div>
         </div>
         <div>
-          <p>1 x Single Room Basic <span className='price-site'>${singleRoomPrice.toFixed(2)}</span></p>
-          <p>Tax <span className='price-site'>${tax.toFixed(2)}</span></p>
+          <p>1 x Single Room Basic <span className='price-site'>£{singleRoomPrice.toFixed(2)}</span></p>
+          <p>Tax <span className='price-site'>£{tax.toFixed(2)}</span></p>
           <hr />
-          <p>Grand total <span className='price-site'>${totalPrice.toFixed(2)}</span></p>
+          <p>Grand total <span className='price-site'>£{totalPrice.toFixed(2)}</span></p>
         </div>
       </div>
     </div>
