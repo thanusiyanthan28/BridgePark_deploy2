@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Modal, Progress } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
-import ReButton from './ViewButton';
 import ReviewApp from './popupPage';
 import './reviewPage.css';
 
 const ReviewPage = () => {
   const categories = [
-    { name: 'Staff', score: 7.9, color: '#003b95' },
-    { name: 'Facilities', score: 6.1, color: '#d4111e' },
-    { name: 'Cleanliness', score: 6.3, color: '#d4111e' },
-    { name: 'Comfort', score: 6.4, color: '#d4111e' },
-    { name: 'Value for money', score: 7.0, color: '#003b95' },
-    { name: 'Location', score: 7.1, color: '#d4111e' },
-    { name: 'Free WiFi', score: 6.6, color: '#d4111e' },
+    { name: 'Staff', score: 7.9 },
+    { name: 'Facilities', score: 6.1 },
+    { name: 'Cleanliness', score: 6.3 },
+    { name: 'Comfort', score: 4.9 },
+    { name: 'Value for money', score: 7.0 },
+    { name: 'Location', score: 4.1 },
+    { name: 'Free WiFi', score: 6.6 }
   ];
-  
+
   const score = 6.1;
   const totalReviews = 2651;
   const reviewText = 'Pleasant';
@@ -38,9 +37,13 @@ const ReviewPage = () => {
     setClickedTopics([]);
   };
 
+  const getProgressBarColor = (score) => {
+    return score > 5 ? '#F6BE00' : '#618e95';
+  };
+
   return (
     <div className="container-rev">
-      <h2>Guest Reviews</h2>
+      <h2 className='rev-home-head'>Guest Reviews</h2>
       <div className="guest-reviews-rev">
         <div className="score-rev">{score}</div>
         <div className="details-rev">
@@ -51,42 +54,46 @@ const ReviewPage = () => {
         </Button>
       </div>
       <div className="review-categories-rev">
-        <h3>Categories:</h3>
+        <h3 className='category-home'>Categories:</h3>
         <div className="categories-rev">
-          {categories.map((category) => (
-            <div key={category.name} className="category-rev">
-              <span className="category-name-rev">
-                {category.name}
-                {category.color === '#d4111e' && <ArrowDownOutlined className="down-arrow-rev" />}
-              </span>
-              <span className="category-score-rev">{category.score}</span>
-              <Progress
-                percent={(category.score / 10) * 100}
-                strokeColor={category.color}
-                trailColor="#f0f0f0"
-                showInfo={false}
-              />
-            </div>
-          ))}
+          {categories
+            .sort((a, b) => b.score - a.score)
+            .map((category) => (
+              <div key={category.name} className="category-rev">
+                <span className="category-name-rev">
+                  {category.name}
+                  {category.score <= 5 && <ArrowDownOutlined className="down-arrow-rev" />}
+                </span>
+                <span className="category-score-rev">{category.score}</span>
+                <Progress
+                  percent={(category.score / 10) * 100}
+                  strokeColor={getProgressBarColor(category.score)}
+                  trailColor="#f0f0f0"
+                  showInfo={false}
+                />
+              </div>
+            ))}
         </div>
       </div>
       <h3 className="button-head-rev">Select topics to read reviews:</h3>
-      <div className="topic-buttons-rev">
-        {topics.map((topic) => (
-          <Button
-            key={topic}
-            type="default"
-            shape="round"
-            icon={clickedTopics.includes(topic) ? <span>&times;</span> : <span>+</span>}
-            onClick={() => handleCategoryClick(topic)}
-          >
-            {topic}
-          </Button>
-        ))}
+      <div className="topic-buttons-container-rev">
+        <div className="topic-buttons-rev">
+          {topics.map((topic) => (
+            <Button
+              key={topic}
+              type="default"
+              shape="round"
+              icon={clickedTopics.includes(topic) ? <span>&times;</span> : <span>+</span>}
+              onClick={() => handleCategoryClick(topic)}
+            >
+              {topic}
+            </Button>
+          ))}
+        </div>
+        <Button type="link" className="review-show" onClick={() => setIsModalVisible(true)}>
+          <button className='review-show-btn'>Read All Reviews</button>
+        </Button>
       </div>
-      <Button type="link" className="review-show"onClick={() => setIsModalVisible(true)}>
-      <button className='review-show-btn'>See All Reviews</button>
-      </Button>
       <Modal
         title="All Reviews"
         visible={isModalVisible}
