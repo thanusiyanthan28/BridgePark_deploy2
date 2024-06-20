@@ -45,6 +45,8 @@
 
 .house-rules-availability-button .availability-button:hover {
   background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
 }
 
 .house-rules-description {

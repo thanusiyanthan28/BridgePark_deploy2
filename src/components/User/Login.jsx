@@ -1,15 +1,13 @@
-import React, { useState, useEffect ,useContext,} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import ResetPassword from './ResetPassword';
-import { Routes } from 'react-router-dom';
-
-
+import ResetPassword from "./ResetPassword";
+import { Routes } from "react-router-dom";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -22,7 +20,7 @@ const SignIn = () => {
   const [icon, setIcon] = useState("fa-eye");
   const [successMessage, setSuccessMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+
   const navigate = useNavigate();
 
   const handleNameChange = (e) => {
@@ -64,12 +62,11 @@ const SignIn = () => {
     // }
     const mockResponse = {
       data: {
-        success: true // Assuming login is successful
-      }
+        success: true, // Assuming login is successful
+      },
     };
-    
+
     try {
-      
       await new Promise((resolve) => setTimeout(resolve, 1000));
       if (mockResponse.data.success) {
         setSuccessMessage("Logged in successfully");
@@ -100,8 +97,8 @@ const SignIn = () => {
           <div className="signUpIn-header">
             <div className="signUpIn-text">Login</div>
             <p className="signUpIn-Subtext">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Join Bridge Park Hotel and share your experience to help us
+              improve and provide the best services.
             </p>
             <div className="signUpIn-inputs">
               <div className="signUpIn-input">
@@ -111,7 +108,9 @@ const SignIn = () => {
                   value={name}
                   onChange={handleNameChange}
                 />
-                {errors.name && <span className="signUpIn-error">{errors.name}</span>}
+                {errors.name && (
+                  <span className="signUpIn-error">{errors.name}</span>
+                )}
               </div>
               <div className="signUpIn-input">
                 <input
@@ -120,7 +119,9 @@ const SignIn = () => {
                   value={email}
                   onChange={handleEmailChange}
                 />
-                {errors.email && <span className="signUpIn-error">{errors.email}</span>}
+                {errors.email && (
+                  <span className="signUpIn-error">{errors.email}</span>
+                )}
               </div>
               <div className="signUpIn-input">
                 <div className="signUpIn-passwordWrapper">
@@ -130,9 +131,12 @@ const SignIn = () => {
                     value={password}
                     onChange={handlePasswordChange}
                   />
-                  <span className="signUpIn-togglePassword" onClick={handleToggle}>
+                  <span
+                    className="signUpIn-togglePassword"
+                    onClick={handleToggle}
+                  >
                     <FontAwesomeIcon
-                       icon={showPassword ? faEyeSlash : faEye}
+                      icon={showPassword ? faEyeSlash : faEye}
                       size="xs"
                       style={{ color: "#669399" }}
                     />
@@ -150,7 +154,10 @@ const SignIn = () => {
                   Login
                 </div>
                 {isGoogleBtnClicked ? (
-                  <div className="signUpIn-signUpGoogle" onClick={handleGoogleBtnClick}>
+                  <div
+                    className="signUpIn-signUpGoogle"
+                    onClick={handleGoogleBtnClick}
+                  >
                     <FontAwesomeIcon
                       icon="fa-brands fa-google"
                       size="s"
