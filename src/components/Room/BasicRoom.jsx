@@ -17,6 +17,7 @@ import personIcon3 from "../../assets/icons/Three.png";
 import UrlLib from "../common/UrlLib";
 import SiteCard from "../Sitecard/siteCard";
 import HotelRoomCardBasicRoom from "../Room/HotelRoomCardBasicRoom";
+import HouseRules from "../common/HomeRules";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -57,38 +58,42 @@ const BasicRoom = () => {
     {
       id: 2,
       image: img1,
-      title: "SINGLE ROOM & SHARED BATHROOM",
+      title: "SINGLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon1,
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
+      BroomPrice: "£48",
     },
     {
       id: 5,
       image: img2,
-      title: "DOUBLE ROOM & SHARED BATHROOM",
+      title: "DOUBLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
+      BroomPrice: "£58",
     },
     {
       id: 11,
       image: img3,
-      title: "TWIN ROOM & SHARED BATHROOM",
+      title: "TWIN ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
+      BroomPrice: "£60",
     },
     {
       id: 9,
       image: img4,
-      title: "TRIPLE ROOM & SHARED BATHROOM",
+      title: "TRIPLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon3,
       icon2:bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
+      BroomPrice: "£85",
     },
   ];
 
@@ -108,8 +113,14 @@ const BasicRoom = () => {
       </div>
       <div className="BasicRoom-containor">
         <div className="">
+
           <div className="BasicRoom-TextWrapper">
-            <h1 className="BasicRoom-aboutH1">BASIC ROOMS</h1>
+          <div className="about-sub-content">
+                                <h3 style={{textAlign:'center'}}>Lowest Price Guaranteed</h3>
+                                <p style={{textAlign:'center'}}>Book here on for peace of mind that you're getting the best possible deal. Thanks to our Lowest Price Guarantee you can rest assured that you'll pay the cheapest rate possible. Book to secure your savings today!</p>
+                    </div>
+            {/* <h1 className="BasicRoom-aboutH1">BASIC ROOMS</h1> */}
+            <div className='location-title'>BASIC ROOMS</div>
           </div>
         </div>
       </div>
@@ -125,7 +136,7 @@ const BasicRoom = () => {
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Available"
-                price="£200"
+                price={Basicroom.BroomPrice}
                 buttonText="Book Now"
                 cardtitle={Basicroom.cardTitle}
                 onViewMoreClick={() => handleViewMoreClick({
@@ -138,6 +149,7 @@ const BasicRoom = () => {
           ))}
         </Row>
       </div>
+     <div style={{widows:'100%'}}> <HouseRules /></div>
       
       <Modal
         visible={isModalVisible}

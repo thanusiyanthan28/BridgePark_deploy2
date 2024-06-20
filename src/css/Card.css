@@ -12,6 +12,14 @@
   color: #669399;
 }
 .ant-picker .ant-picker-clear {}
+.card .ant-row {
+   margin-top: -3px;
+}
+.btnPrimary-check:hover {
+  background-color: #D5ECF4 !important;
+  color: white; /* Optional: Change the text color to white for better contrast */
+  border: 1px solid  black !important;
+}
 
 .card {
   border: 1px solid #ffffff;
@@ -20,7 +28,7 @@
 
   margin: 10px;
   overflow: hidden;
-  width: 85% !important;
+  width: 90% !important;
   background-color: white;
   color: black;
   height: 130px !important;
@@ -31,6 +39,9 @@
 .card-body {
   padding: 16px;
   text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
 }
 
 .divider {
@@ -45,12 +56,14 @@
   color: rgb(0, 0, 0);
   margin-top: 10px;
   font-size: 16px;
+  font-family: "lato", serif;
 }
 
 .card-titleH3 {
   color: rgba(71, 54, 54, 0.5);
   margin-top: 10px;
   font-size: 14px;
+  font-family: "lato", serif;
 }
 
 .containerCol {
@@ -65,7 +78,7 @@
 }
 
 .btnPrimary-check {
-  background-color: #53949A;
+  background-color: #669399;
   border-radius: 0 !important;
   color: white;
   border: none;
@@ -73,6 +86,7 @@
   padding: 0 50px 0 50px ;
   margin-left: 60%;
   height: 50px;
+  font-family: "lato", serif;
 }
 .ant-space {
   display: flex;
@@ -139,8 +153,10 @@
   }
   .btnPrimary-check {
     padding: 0 40px 0 40px ;
-    margin-left: 60%;
+    margin-left: 50%;
     height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -191,10 +207,6 @@
   padding: 16px;
   text-align: left;
   margin-top: 7px;
-
-
- 
-  
 }
 
 }

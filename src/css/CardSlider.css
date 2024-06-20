@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .meeting-my-class {
   width: 100%;
   border: 1;
@@ -7,6 +5,8 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   height: 50%;
   font-family: "Lato", sans-serif;
@@ -14,74 +14,56 @@
   font-style: normal;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Ensure items stack vertically */
-  position: relative; /* Required for absolute positioning */
- 
-}
-.meeting-my-class2{
-
+  flex-direction: column;
+  position: relative;
 }
 
 .meeting-my-class-title {
-  position: relative; /* Position the h2 absolutely */
-  top: 0; /* Position it at the top of the container */
-  left: 50%; /* Move it to the center horizontally */
-  transform: translateX(-50%); /* Center it horizontally */
-  font-family: "Cinzel", serif;
-  margin-bottom: 0px;
-  font-size: 50px;
-
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
 }
 
 .meeting-card-slider {
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
-  /* background-color: #669399; */
   overflow: hidden;
   margin: auto;
   border-radius: 5px;
+  height: 600px;
 }
-
-
 
 .meeting-cards-container {
   display: flex;
   transition: transform 0.3s ease;
   align-items: center;
-  /* margin-left: 33.5%; */
   margin-top: 10px;
-  /* transform: translateX(calc(var(--currentIndex) * -300px)); */
-  transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-  margin-left: 36.27379209370425%;
   margin-bottom: 10px;
-
-
+  transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * 0px));
+  margin-left: -28%;
   
-
 }
 
 .meeting-card {
-  flex: 0 0 300px 300px;
-  margin: 15px;
+  flex: 0 0 300px;
   background-color: #fff7f7;
-  border-radius: 00px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.3s ease;
-  padding: 5px;
+  border-radius: 5px;
+ 
 }
 
 .meeting-card.meeting-active {
   opacity: 1;
-  border-radius: 10px;
   z-index: 9999;
-  transform: scale(1);
-
-  
-
+  transform: scale(1.1);
+  border-radius: 5px;
 
 }
 
@@ -90,93 +72,44 @@
   height: 300px;
   object-fit: cover;
   border-radius: 5px;
-
+ 
+}
+.meeting-active img {
+  width:97%;
+  margin-top: 1.5%;
+  border-radius: 15px;
 }
 
-.meeting-non-active{
-  filter: blur(0.5px); /* Adjust blur intensity as needed */
-
+.meeting-non-active {
+  /* filter: blur(0.5px); */
 }
+
 .meeting-card.meeting-active:hover {
-  transform: scale(1);
-  transition: transform 0.4s ease; 
-
-
+  transform: scale(1.15);
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 1rem #33cccc;
 }
-.meeting-non-active p,
-.meeting-non-active h2{
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.meeting-active .meeting-text{
+text-align: left;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+color: black
+;
 }
-
 .meeting-text{
-  display: flex;
-  background-color: #669399;
-  /* background-color: #007bff; */
-  border-radius: 5px;
-
- 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
-.meeting-title{
-  width: 70%;
-  margin-left: 5px;
-}
-
-
-
-.meeting-date{
-  font-size: 25px;
-}
-
-.meeting-non-active.meeting-text{
-  background-color: rgba(0, 0, 0, 0.5);
- 
-}
-.meeting-non-active h3  {
-position: absolute;
-margin-left: 20%;
-align-items: center;
-margin-top: 15%;
-
-
-} 
-.meeting-active .meeting-text .meeting-title h3,
-.meeting-active .meeting-text .meeting-title p {
-  position: relative;
-  margin-left: auto;
-  text-align: left;
-  color: rgb(255, 255, 255);
-  margin-bottom: 28px;
-
- 
- } 
-.meeting-main-date{
-  line-height: 40%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  margin-left: 5px;
-  color: #fff;
-  max-height: max-content;
-  font-family:Arial, Helvetica, sans-serif;
-  /* background-color: rgb(161, 192, 206); */
-  padding: 2px;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-
-
-}
-.meeting-time {
-  /* font-family: 'Digital-7', sans-serif; */
-  font-family: 'DSEG', sans-serif;
-  font-size: large;
-
-
+.meeting-non-active .meeting-text {
   
+margin-top: -150px;
 }
+.meeting-title {
+  width: 100%;
+}
+
+
 .meeting-button {
   position: absolute;
   width: 40px;
@@ -189,162 +122,122 @@ margin-top: 15%;
 }
 
 .meeting-prev-btn {
-  /* left: 50%; Position it at the center horizontally */
-
-  margin-left: 10px; /* Adjust to position it to the left of the center */
-  margin-top: 0px; /* Adjust vertical positioning */
+  margin-left: 10px;
+  margin-top: 0px;
   z-index: 99999;
 }
 
 .meeting-next-btn {
-  /* right: 0; Position it to the right */
-  margin-right: 0px; /* Reset margin */
-  margin-left: 96%; /* Push to the right */
-  margin-top: 0px; /* Adjust vertical positioning */
+  margin-right: 0px;
+  margin-left: 96%;
+  margin-top: 0px;
   z-index: 99999;
 }
 
-.meeting-des{
-  margin-top: -15px;
-  font-size:medium;
+@media (max-width: 430px) {
+  .meeting-cards-container {
+ 
+  }
+  .meeting-card {
+    flex: 0 0 280px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
-.meeting-month{
- font-size:medium;
-}
-
-
-
 /* galaxy s20 */
 @media (max-width: 412px) {
-
-.meeting-cards-container {
-  transform: translateX(calc(var(--currentIndex) * -280px + var(--currentIndex) * -40px));
-  margin-left: 140%;
-
-}
-.meeting-card {
-  flex: 0 0 280px 280px;
-}
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 280px));
+  }
+  .meeting-card {
+    flex: 0 0 280px;
+  }
 }
 
 /* iphone 14pro max */
 @media (width: 430px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -280px + var(--currentIndex) * -40px));
-    margin-left: 136%;
+    transform: translateX(calc(50% - var(--currentIndex) * 280px));
   }
   .meeting-card {
-    flex: 0 0 280px 280px;
+    flex: 0 0 280px;
   }
 }
-/* iphone 7+ */
-@media (width: 414px) {
-  .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -280px + var(--currentIndex) * -40px));
-    margin-left: 142%;
-  }
-  .meeting-card {
-    flex: 0 0 280px 280px;
-  }
-}
+
 /* iphone 12 pro */
 @media (width: 390px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -260px + var(--currentIndex) * -40px));
-    margin-left: 155%;
+    transform: translateX(calc(50% - var(--currentIndex) * 260px));
   }
   .meeting-card {
-    flex: 0 0 260px 260px;
+    flex: 0 0 260px;
   }
 }
+
 /* galaxy S8+ */
 @media (width: 360px) {
   .meeting-cards-container {
-  
-    transform: translateX(calc(var(--currentIndex) * -240px + var(--currentIndex) * -40px));
-    margin-left: 175%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 240px));
   }
   .meeting-card {
-    flex: 0 0 240px 240px;
-   
+    flex: 0 0 240px;
   }
 }
-/* ipad mini 768 px*/
+
+/* ipad mini 768 px */
 @media (width: 768px) {
   .meeting-cards-container {
-  
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left: 73%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
   .meeting-card {
-    flex: 0 0 300px 300px;
-   
-  }
-}
-@media (max-width: 768px) {
-  .meeting-my-class-title {
-    font-size: 30px;
-  
+    flex: 0 0 300px;
   }
 }
 
 /* ipad pro */
 @media (width: 1024px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left: 55%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
   .meeting-card {
-    flex: 0 0 300px 300px;
-   
+    flex: 0 0 300px;
   }
 }
-@media (min-width: 1200px){
-    .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left:45.0%;
-  
-  }
-}
-@media (min-width: 1440px){
+
+@media (min-width: 1200px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left:38.5%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
 }
-@media (min-width: 1366px){
+
+@media (min-width: 1440px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left: 40%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
 }
+
+@media (min-width: 1366px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
 /* 1924px */
 @media (min-width: 1920px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left:38.5%;
-  
-  }
-  @media (min-width: 2560px){
-    .meeting-cards-container {
-      transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-      margin-left:41.5%;
-    
-    }
-    .meeting-card {
-    }
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
 }
-@media (min-width: 3840px){
+
+@media (min-width: 2560px) {
   .meeting-cards-container {
-    transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * -40px));
-    margin-left:44%;
-  
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+@media (min-width: 3840px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
   }
 }
 

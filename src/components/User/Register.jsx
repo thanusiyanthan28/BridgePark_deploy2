@@ -5,10 +5,8 @@ import hotelFront from "../../assets/images/HotelFront.jpg";
 import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import axios from 'axios';
-import { Routes } from 'react-router-dom';
-
-
+import axios from "axios";
+import { Routes } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -98,8 +96,8 @@ const SignUp = () => {
           <div className="signUpIn-header">
             <div className="signUpIn-text">Create an account</div>
             <p className="signUpIn-Subtext">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Join Bridge Park Hotel and share your experience to help us
+              improve and provide the best services.
             </p>
             <div className="signUpIn-inputs">
               <div className="signUpIn-input">
@@ -109,7 +107,9 @@ const SignUp = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
-                {errors.name && <span className="signUpIn-error">{errors.name}</span>}
+                {errors.name && (
+                  <span className="signUpIn-error">{errors.name}</span>
+                )}
               </div>
               <div className="signUpIn-input">
                 <input
@@ -118,7 +118,9 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                {errors.email && <span className="signUpIn-error">{errors.email}</span>}
+                {errors.email && (
+                  <span className="signUpIn-error">{errors.email}</span>
+                )}
               </div>
               <div className="signUpIn-input">
                 <div className="signUpIn-passwordWrapper">
@@ -128,7 +130,10 @@ const SignUp = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <span className="signUpIn-togglePassword" onClick={handleToggle}>
+                  <span
+                    className="signUpIn-togglePassword"
+                    onClick={handleToggle}
+                  >
                     <FontAwesomeIcon
                       icon={showPassword ? faEyeSlash : faEye}
                       size="xs"
@@ -165,7 +170,10 @@ const SignUp = () => {
                   Create account
                 </div>
                 {isGoogleBtnClicked ? (
-                  <div className="signUpIn-signUpGoogle" onClick={handleGoogleBtnClick}>
+                  <div
+                    className="signUpIn-signUpGoogle"
+                    onClick={handleGoogleBtnClick}
+                  >
                     <FontAwesomeIcon
                       icon="fa-brands fa-google"
                       size="s"

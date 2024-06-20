@@ -1,0 +1,234 @@
+.container-rev {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    align-items: flex-start;
+  }
+  
+  .review-categories-rev {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .categories-rev {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .category-rev {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .category-name-rev {
+    font-weight: bold;
+    margin-bottom: -15px;
+    display: flex;
+    align-items: center;
+  }
+  .down-arrow-rev {
+    margin-left: 5px;
+    color: #d4111e;
+  }
+  .category-score-rev {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 350px;
+  }
+  
+  .topics-rev {
+    margin: 20px 0;
+  }
+  
+  .topics-rev .ant-tag {
+    margin-bottom: 10px;
+  }
+  
+  .progress-container-rev {
+    position: relative;
+    height: 20px;
+    margin-top: 15px;
+  }
+  .progress-container-rev {
+    width: 50%; /* Adjust the width as needed */
+  }
+  .progress-container-rev progress {
+    width: 100%;
+  }
+  .review-show-btn{
+    padding: 10px 40px;
+    background-color: rgb(87, 83, 194);
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+ 
+ 
+ 
+  /* .see-all-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fafafa;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: -20px;
+    margin-top: 80px;
+  } */
+  
+  /* .buttons-container button:hover,
+  .search-button:hover,
+  .see-all-button:hover {
+    background-color: #dfe7f0;
+    color: #2511e2;
+    
+  } */
+  .guest-reviews-rev {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  .score-rev {
+    background-color: #003b95;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .details-rev {
+    margin-left: 10px;
+  }
+  
+  .review-text-rev {
+    font-weight: bold;
+  }
+  
+  .read-reviews-link-rev {
+    margin-left: 10px;
+    color: #0057b8; /* Adjust color to match your design */
+    text-decoration: none;
+  }
+  
+  .read-reviews-link-rev:hover {
+    text-decoration: underline;
+  }
+  
+  .button-head-rev{
+    font-size: 15px;
+  }
+  .topic-buttons-rev {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+  }
+  
+  .topic-buttons-rev .ant-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 1px solid;
+    height: 40px;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 435px)
+  {
+    .container-rev {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 10px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .categories-rev {
+      display: grid;
+      grid-template-columns: repeat(1, 0fr);
+      gap: 20px;
+    }
+    .button-head-rev{
+      margin-left: 5px;
+    }
+    .topic-buttons-rev {
+      margin-left: 15px;
+     }
+     .review-show-btn{
+      margin-left: 85px;
+     
+    }
+   
+  }
+  @media only screen and (min-width: 440px) and (max-width: 769px)
+  {
+    .container-rev {
+      margin: 0 auto;
+      padding: 10px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .categories-rev {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .button-head-rev{
+      margin-left: 5px;
+    }
+    .topic-buttons-rev {
+      margin-left: 15px;
+     }
+     .review-show-btn{
+      margin-left: 270px;
+     
+    }
+    .category-score-rev {
+      margin-left: 300px;
+    }
+   
+  }
+ 
+  @media only screen and (min-width: 770px) and (max-width: 1025px)
+  {
+    .container-rev {
+      margin: 0 auto;
+      padding: 10px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .categories-rev {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .button-head-rev{
+      margin-left: 5px;
+    }
+    .topic-buttons-rev {
+      margin-left: 15px;
+     }
+     .review-show-btn{
+      margin-left: 370px;
+     
+    }
+    .category-score-rev {
+      margin-left: 420px;
+    }
+   
+  }
+ 
+ 
+  
+  
+  
+  
+ 
+  
+  
+  
+  

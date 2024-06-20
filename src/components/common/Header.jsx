@@ -9,6 +9,7 @@ import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.jpg";
 import SiteCard from "../Sitecard/siteCard";
 import title from "../../assets/title.png"
+import HomeCard from "../Sitecard/homeCard";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -45,7 +46,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
@@ -59,12 +60,13 @@ const Header = () => {
   return (
     <div className="head-main">
       <div className="overlay"></div>
-      {isMobile ? <div className="home-sitecard"><SiteCard /></div> : null}
+      {isMobile ? <div className="home-sitecard"><HomeCard /></div> : null}
       <div className="hero-container">
+     <img src={title} alt="title" className="header-title" />
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
-        <img src={title} alt="title" className="header-title" />
+        
         {/* <div className="heading-container">
           <h1 className="heading">BRIDGE </h1>
           <h1 className="heading2">PARK HOTEL</h1>
@@ -72,6 +74,7 @@ const Header = () => {
         <div className="header-slogan">RESERVE YOUR STAY NOW</div>
         {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>
+     
     </div>
   );
 };

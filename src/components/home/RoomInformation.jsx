@@ -169,7 +169,6 @@ const RoomInformation = ({room, bookingUrl}) => {
 
 
         <div className="sec-03" ref={sec03Ref}><HouseRules/></div>
-
      
     </div>
   );

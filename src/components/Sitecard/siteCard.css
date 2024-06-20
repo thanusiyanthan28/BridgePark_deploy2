@@ -101,7 +101,18 @@
   border: 0px solid #ccc; 
   font-weight: 500; 
 }
-
+.date-input-container-site .ant-picker-input input::placeholder {
+  font-style: normal;
+  font-size: 15px;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+.current-day-site {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
 .last-column-site {
   border-right: none;
    /* Remove border on the right side of the last column */

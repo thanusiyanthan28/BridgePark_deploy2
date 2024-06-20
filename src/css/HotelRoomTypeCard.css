@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 .hotelRoomTypeCardContainer {
   display: flex;
   flex-direction: column;
@@ -26,47 +27,53 @@
 
 .hotelRoomTypeCardDetails {
   flex: 1; /* Take up 50% of the height */
-  width: 70%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 /* Bottom First column text */
 .hotelRoomTypeCardInfoRow {
   display: flex;
-  /* margin-bottom: 5px; */
   justify-content: space-between;
   flex-direction: row;
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 12px;
   font-weight: 500;
   align-items: flex-start;
 }
 .HotelRoomTypeTopicText{
   text-align: left;
+  font-family: "lato", sans-serif;
 }
 .hotelRoomTypeCardButton {
-  font-size: 20px;
-  color: white;
-  background-color: #3883af;
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  background-color: #53949A;
   border: none;
-  border-radius: 0px;
-  padding: 10px 10px;
+  border-radius: 3px;
+  padding: 10px 20px;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  width: 125px;
-  margin-top: 5px;
+  width: 100%;
+  margin-top: 10px;
+  font-family: "lato", serif;
 }
 .hotelRoomTypeCardButton:hover {
-  background-color: #118989;
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
 }
 /* Show the bottom text of the card */
 .HotelRoomTypeTextShown {
   display: flex;
   /* flex-direction: row; */
   margin-bottom: 10px;
+  justify-content: flex-end;
+  font-family: "lato", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
 }
 
 /* Card Top Name (BasicRoom & EnsuiteRoom) */
@@ -82,6 +89,7 @@
   padding-bottom: 18px;
   display: block;
   margin-top: 4px;
+  font-family: "lato", sans-serif;
 }
 /* Bottom bar Middle text */
 .HotelRoomTypeTextPara {
@@ -105,22 +113,27 @@
 .hotelRoomTypeCardButton-dis {
   display: none;
 }
-
-@media only screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) */
+@media only screen and (width: 768px) {
   .hotelRoomTypeCardButton-dis {
     display: flex;
+    width: 100%;
   }
-  .hotelRoomTypeCardButton-dis-left p {
+  .hotelRoomTypeCardButton-dis-left  {
     width: 70%;
-    margin-left: 10px;
-    font-size: 13px;
-    font-weight: 500;
+    text-align: left;
+    font-size: small;
+    padding-left: 15px;
+    font-family: "lato", sans-serif;
   }
-  .hotelRoomTypeCardButton-dis-right p {
-    /* margin-left: 20px; */
-    font-size: 12px;
-    font-weight: 500;
-    padding-right: 10px;
+  .hotelRoomTypeCardButton-dis-right  {
+   width: 30%;
+   text-align: right;
+   padding-right: 15px;
+   line-height: 1px;
+   font-size: small;
+   font-family: "lato", sans-serif;
+    
   }
   .HotelRoomTypeTextShown {
     display: none;
@@ -140,9 +153,9 @@
     text-decoration: none;
   }
   .hotelRoomTypeCardButton-mobile {
-    font-size: 20px;
+    font-size: 100%;
     color: white;
-    background-color: #3883af;
+    background-color: #53949A;
     border: none;
     border-radius: 5px;
     padding: 10px 10px;
@@ -153,6 +166,102 @@
     margin-right: auto;
     margin-bottom: 5px;
     text-decoration: none;
+    font-family: "lato", serif;
+
+  }
+  .hotelRoomTypeCardButton-mobile:hover {
+    background-color: #e0ffff;
+    color: black;
+    border: 1px solid #000000;
+  }
+
+  .hotelRoomTypeCardButton {
+    /* width: 80%; */
+    font-size: 18px;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+  .hotelRoomTypeCardTopBar {
+    /* padding-right: 10px; */
+    /* padding-left: 10px; */
+    /* position: relative; */
+    top: auto;
+    margin-bottom: 10px;
+  }
+  .hotelRoomTypeCardInfoRow {
+    width: 300%;
+  }
+  .HotelRoomTypeTextPara {
+    order: 1;
+    margin-left: -275px;
+  }
+  .RoomType-subHead {
+    margin-bottom: -20px;
+  }
+  .hotelRoomTypeCardButton-dis-right{
+    float: right !important;
+    margin-right: 0 !important;
+    margin-left: 20px;
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .hotelRoomTypeCardButton-dis {
+    display: flex;
+    width: 100%;
+  }
+  .hotelRoomTypeCardButton-dis-left p {
+    width: 70%;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "lato", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .hotelRoomTypeCardButton-dis-right p {
+    /* margin-left: 20px; */
+    font-weight: 500;
+    padding-right: 5px;
+    font-family: "lato", sans-serif;
+    font-size: 13px;
+    display: flex;
+    /* justify-content: flex-end; */
+    
+  }
+  .HotelRoomTypeTextShown {
+    display: none;
+  }
+  .hotelRoomTypeCardDetails {
+    display: none;
+  }
+  /* .hotelRoomTypeCardContainer {
+    width: 360px;git 
+    margin-left: -155px;
+  } */
+  .hotelRoomTypeCardButton-link {
+    display: none;
+  }
+  .hotelRoomTypeCardButton-mobile-line {
+    display: flex;
+    text-decoration: none;
+  }
+  .hotelRoomTypeCardButton-mobile {
+    font-size: 100%;
+    color: white;
+    background-color: #53949A;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    width: 95%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-family: "lato", serif;
+
   }
   .hotelRoomTypeCardButton-mobile:hover {
     background-color: #e0ffff;
@@ -184,13 +293,13 @@
     margin-bottom: -20px;
   }
 }
-@media only screen and (min-width: 1030px) and (max-width: 1369px) {
+/* @media only screen and (min-width: 1030px) and (max-width: 1369px) {
   .hotelRoomTypeCardButton {
     margin-left: 150px;
     width: 125px;
   }
-}
-@media only screen and (min-width: 770px) and (max-width: 1025px) {
+} */
+/* @media only screen and (min-width: 770px) and (max-width: 1025px) {
   .hotelRoomTypeCardButton {
     margin-left: 50px;
     width: 125px;
@@ -214,8 +323,9 @@
     margin-bottom: 20px;
     margin-left: -100px;
   }
-}
-@media only screen and (min-width: 1600px) and (max-width: 1925px) {
+  
+} */
+/* @media only screen and (min-width: 1600px) and (max-width: 1925px) {
   .hotelRoomTypeCardButton {
     margin-left: 50px;
     width: 155px;
@@ -239,4 +349,4 @@
     margin-bottom: 20px;
     margin-left: -180px;
   }
-}
+} */

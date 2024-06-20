@@ -1,0 +1,71 @@
+.container-write {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-write {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info-write .ant-avatar {
+  margin-right: 15px;
+}
+
+.user-email-write {
+  font-size: 18px;
+  font-weight: bold;
+}
+.ant-form-item-label > label {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+  
+}
+.rating-container-write {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px; 
+}
+
+.rating-container-write .ant-form-item {
+  box-sizing: border-box;
+  width: calc(70% - 10px); 
+}
+
+.ant-rate {
+  font-size: 50px;
+}
+
+.ant-rate-star {
+  margin-right: 20px !important;  
+}
+
+.ant-rate-star:last-child {
+  margin-right: 0;
+}
+
+.ant-rate-star-full .anticon {
+  color: #FFD700; 
+}
+
+.ant-rate-star-half .anticon {
+  color: #FFD700; 
+}
+
+.ant-rate-star-zero .anticon {
+  color: #5d5c5c; 
+}
+
+.button-write{
+  color: #ffffff;
+  background-color: blue;
+  width: 100%;
+  height: auto;
+}

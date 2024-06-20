@@ -7,6 +7,7 @@
   overflow: hidden;
   transition: background-color 0.2s, transform 0.2s;
   width: 350px;
+  font-family: "lato", serif;
 
 }
 .hotelRoomCardContainer:hover{
@@ -27,24 +28,28 @@
 .hotelRoomCardDetails {
   flex: 1; /* Take up 50% of the height */
   padding: 10px;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCardTitle {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCardTitle2 {
   font-size: 16px;
   font-weight: lighter;
   margin-left: 140px;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCardTitleTextFirst{
   border-bottom: 2px solid rgba(5 5, 5, 0.068); 
   padding-bottom: 10px;
   width: 100%;
+  font-family: "lato", serif;
 }
 
 /* .cardDescription {
@@ -67,12 +72,13 @@
 .hotelRoomCardPriceText {
   font-size: 14px;
   font-weight: bold;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCardButton {
   font-size: 100%;
   color: white;
-  background-color: #3883af;
+  background-color: #669399;
   border: none;
   border-radius: 0px;
   padding: 5px 10px;
@@ -81,6 +87,7 @@
   width: 100%;
   border-radius: 3px;
   height: 40px;
+  font-family: "lato", serif;
 
   
 }
@@ -108,6 +115,7 @@
   font-size: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-family: "lato", serif;
 }
 
 .hotelRoomViewMoreLink {
@@ -116,6 +124,7 @@
   margin-top: 10px;
   user-select: none;
   float: right;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCard-subRow{
@@ -126,9 +135,11 @@
   width: 100%;
   padding-top: 4px;
   padding-bottom: 4px;
+  font-family: "lato", serif;
 }
 .cardPriceText2{
   float: right;
+  font-family: "lato", serif;
 }
 
 

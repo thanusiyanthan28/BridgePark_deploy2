@@ -39,9 +39,10 @@ const RoomType = () => {
       </div>
       <div className="RoomType-ContaineraboutContainer">
         <div className="RoomType-TextWrapper">
-          <h1 className="RoomType-header">OUR ROOMS</h1>
+          {/* <h1 className="RoomType-header">OUR ROOMS</h1> */}
+          <div className='location-title'>OUR ROOMS</div>
         </div>
-        <div className="RoomType-sub">
+        <div className="RoomType-sub-content">
           <p className="RoomType-p">
             Originally a Grade ii listed building, Bridge Park Hotel is the
             ideal place to stay whether you are visiting Wembley or simply
@@ -51,7 +52,8 @@ const RoomType = () => {
         </div>
       </div>
       <div className="RoomType-subHead">
-        <h1 className="RoomType-subHading">ROOM TYPES</h1>
+        {/* <h1 className="RoomType-subHading">ROOM TYPES</h1> */}
+        <div className='location-title'>ROOM TYPES</div>
       </div>
       <div className="RoomType-typecontainor">
         <HotelRoomTypeCard
