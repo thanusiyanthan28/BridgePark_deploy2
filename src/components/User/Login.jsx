@@ -1,13 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import { GoogleLogin } from '@react-oauth/google';
 import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
-import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import ResetPassword from "./ResetPassword";
-import { Routes } from "react-router-dom";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -15,12 +12,8 @@ const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
-  const [isGoogleBtnClicked, setIsGoogleBtnClicked] = useState(false);
-  const [type, setType] = useState("password");
-  const [icon, setIcon] = useState("fa-eye");
   const [successMessage, setSuccessMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   const navigate = useNavigate();
 
   const handleNameChange = (e) => {
@@ -35,34 +28,11 @@ const SignIn = () => {
     setPassword(e.target.value);
   };
 
-  const handleGoogleBtnClick = () => {
-    setIsGoogleBtnClicked(true);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // try {
-    //   const response = await axios.post("/api/login", {
-    //     name,
-    //     email,
-    //     password,
-    //   });
-
-    //   if (response.data.success) {
-    //     setSuccessMessage("Logged in successfully");
-    //     setIsLoggedIn(true);
-    //     navigate("/");
-    //   } else {
-    //     setErrors({ message: "Invalid email or password" });
-    //   }
-    // } catch (error) {
-    //   console.error("Login failed", error);
-    //   setErrors({ message: "Invalid email or password" });
-    // }
     const mockResponse = {
       data: {
-        success: true, // Assuming login is successful
+        success: true,
       },
     };
 
@@ -70,7 +40,6 @@ const SignIn = () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       if (mockResponse.data.success) {
         setSuccessMessage("Logged in successfully");
-        console.log("Setting isLoggedIn to true");
         setIsLoggedIn(true);
         navigate("/");
       } else {
@@ -81,10 +50,23 @@ const SignIn = () => {
       setErrors({ message: "Invalid email or password" });
     }
   };
-  //For the password icon
+
+  const handleGoogleSuccess = (response) => {
+    console.log(response);
+    const token = response.credential; 
+    console.log('token', token)
+    setSuccessMessage("Logged in with Google successfully");
+    setIsLoggedIn(true);
+    navigate("/");
+  };
+
+  const handleGoogleFailure = (error) => {
+    console.error("Google login failed", error);
+    setErrors({ message: "Google login failed" });
+  };
+
   const handleToggle = () => {
-    setType(type === "password" ? "text" : "password");
-    setIcon(icon === "fa-eye" ? "fa-eye-slash" : "fa-eye");
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -126,7 +108,7 @@ const SignIn = () => {
               <div className="signUpIn-input">
                 <div className="signUpIn-passwordWrapper">
                   <input
-                    type={type}
+                    type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     value={password}
                     onChange={handlePasswordChange}
@@ -153,21 +135,10 @@ const SignIn = () => {
                 <div className="signUpIn-submit" onClick={handleSubmit}>
                   Login
                 </div>
-                {isGoogleBtnClicked ? (
-                  <div
-                    className="signUpIn-signUpGoogle"
-                    onClick={handleGoogleBtnClick}
-                  >
-                    <FontAwesomeIcon
-                      icon="fa-brands fa-google"
-                      size="s"
-                      style={{ color: "#669399" }}
-                    />
-                    Sign up with Google
-                  </div>
-                ) : (
-                  <SignUpGoogleBtn />
-                )}
+                <GoogleLogin
+                  onSuccess={handleGoogleSuccess}
+                  onError={handleGoogleFailure}
+                />
               </div>
               <div className="signUpIn-alreadyAccount">
                 Don't have an account?{" "}
@@ -176,7 +147,9 @@ const SignIn = () => {
                 </span>
               </div>
               {successMessage && (
-                <div className="signUpIn-successMessage">{successMessage}</div>
+                <div className="signUpIn-successMessage">
+                  {successMessage}
+                </div>
               )}
             </div>
           </div>

@@ -10,7 +10,7 @@ import Facilities from "./Pages/Facilities";
 import BasicRoom from "./components/Room/BasicRoom";
 import EnsuiteRoom from "./components/Room/EnsuiteRooms";
 
-import HomeRules from "./components/common/HomeRules"
+import HomeRules from "./components/common/HomeRules";
 import Profile from "./components/common/Profile";
 import SignIn from "./components/User/Login";
 import SignUp from "./components/User/Register";
@@ -30,47 +30,47 @@ import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 import FaqDetails from "./components/FAQ/FaqDetails";
 import SiteCard2 from "./components/SiteCard2/siteCard2";
 import ReviewPage from "./components/Review/reviewPage";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+
+const clientId =
+  "1009464659569-k6eof9rvm8ugs5mcnb86h4j5iud5elnr.apps.googleusercontent.com";
+
 export default function App() {
   return (
     <div>
-      
-      <Router>
-        
-      <HeaderUpdate />
-      <ScrollToTop />
-        <Routes>
-        
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/SignIn" element={<SignIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/faq" element={<FAQ/>}/>
-          <Route path="/faq/:id" element={<FaqDetails />} />
-          <Route path="/privacy" element={<Privacy/>}/>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/rooms" element={<Rooms />} />
-          <Route path="/Facilities" element={<Facilities />} />
-          <Route path="/website-support" element={<WebsiteSupport />} />
-          <Route path="/HomeRules" element={<HomeRules />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/BasicRoom" element={<BasicRoom />} />
-          <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
-          {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
-          <Route path="/meeting-events" element={<MeetingAndEvents />} />
-          <Route path="/main-meeting" element={<MainMeeting />} />
-          <Route path="/location" element={<Location />} />
-          <Route path="/guest-info" element={<GuestInfo />} />
-          <Route path="/reset-password" element={ <ResetPassword />} />
-          <Route path="/room-card" element={ <SiteCard />} />
-          <Route path="/card2" element={ <SiteCard2 />} />
-          <Route path="/review" element={ <ReviewPage />} />
-       
-          <Route path="/image-gallery" element={ <ImageGallery />} />
-          
-        </Routes>
-        <Footer />
-        
-       
-      </Router>
+      <GoogleOAuthProvider clientId={clientId}>
+        <Router>
+          <HeaderUpdate />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/faq/:id" element={<FaqDetails />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/rooms" element={<Rooms />} />
+            <Route path="/Facilities" element={<Facilities />} />
+            <Route path="/website-support" element={<WebsiteSupport />} />
+            <Route path="/HomeRules" element={<HomeRules />} />
+            <Route path="/footer" element={<Footer />} />
+            <Route path="/BasicRoom" element={<BasicRoom />} />
+            <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
+            {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
+            <Route path="/meeting-events" element={<MeetingAndEvents />} />
+            <Route path="/main-meeting" element={<MainMeeting />} />
+            <Route path="/location" element={<Location />} />
+            <Route path="/guest-info" element={<GuestInfo />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/room-card" element={<SiteCard />} />
+            <Route path="/card2" element={<SiteCard2 />} />
+            <Route path="/review" element={<ReviewPage />} />
+            <Route path="/image-gallery" element={<ImageGallery />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </GoogleOAuthProvider>
     </div>
   );
 }
