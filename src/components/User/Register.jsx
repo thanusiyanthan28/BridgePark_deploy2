@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
-import { Routes } from "react-router-dom";
+import {registerApi} from '../../Services/auth'
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -20,8 +19,8 @@ const SignUp = () => {
   const [icon, setIcon] = useState("fa-eye");
   const [successMessage, setSuccessMessage] = useState("");
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate();
 
-  //Function to the valaidate form inputs
   const validateForm = () => {
     const errors = {};
     if (!name.trim()) {
@@ -44,28 +43,23 @@ const SignUp = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Submit the form if validation succeeds
-      console.log("Form submitted:", { name, email, password });
-
-      //save user data in localStorage for autosave
-      localStorage.setItem("user", JSON.stringify({ name, email }));
-
-      setSuccessMessage("Registration successful.");
-      //set input feilds clear
-      setTimeout(() => {
-        setName("");
-        setEmail("");
-        setPassword("");
-        setConfirmPassword("");
-        setSuccessMessage("");
-        window.location.href = "/";
-      }, 2000);
-      //Navigate to home page
+  const handleSubmit = async () => {
+    const formData = {
+      name: name,
+      email: email,
+      password: password
+    };
+    
+    try {
+      const response = await registerApi(formData);
+      const token = response.passwordHash
+      localStorage.setItem('token', token)
+      navigate("/signIn");
+    } catch (error) {
+      console.error('Sign in failed:', error);
     }
   };
+
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -80,7 +74,7 @@ const SignUp = () => {
   const handleGoogleBtnClick = () => {
     setIsGoogleBtnClicked(true);
   };
-  //For the password icon
+
   const handleToggle = () => {
     setType(type === "password" ? "text" : "password");
     setIcon(icon === "fa-eye" ? "fa-eye-slash" : "fa-eye");
