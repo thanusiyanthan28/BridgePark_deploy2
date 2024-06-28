@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin } from "@react-oauth/google";
 import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { loginApi } from "../../Services/auth";
+import { Alert } from "antd";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -28,33 +30,37 @@ const SignIn = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const mockResponse = {
-      data: {
-        success: true,
-      },
+  const handleSubmit = async () => {
+    const formData = {
+      email: email,
+      password: password,
     };
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      if (mockResponse.data.success) {
-        setSuccessMessage("Logged in successfully");
-        setIsLoggedIn(true);
-        navigate("/");
-      } else {
-        setErrors({ message: "Invalid email or password" });
-      }
+      const response = await loginApi(formData);
+      const  token = response.token; 
+      const user  = response.user; 
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      console.log('tokensss',token)
+      console.log('user12233',user)
+      setSuccessMessage("Login successful!");
+      setIsLoggedIn(true);
+      navigate("/");
     } catch (error) {
-      console.error("Login failed", error);
-      setErrors({ message: "Invalid email or password" });
+      console.error("Sign in failed:", error);
+      setErrors({
+        message: "Login failed. Please check your credentials and try again.",
+      });
     }
   };
 
+
   const handleGoogleSuccess = (response) => {
     console.log(response);
-    const token = response.credential; 
-    console.log('token', token)
+    const token = response.credential;
+    console.log("token", token);
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
@@ -90,9 +96,6 @@ const SignIn = () => {
                   value={name}
                   onChange={handleNameChange}
                 />
-                {errors.name && (
-                  <span className="signUpIn-error">{errors.name}</span>
-                )}
               </div>
               <div className="signUpIn-input">
                 <input
@@ -128,8 +131,16 @@ const SignIn = () => {
                   <span className="signUpIn-error">{errors.password}</span>
                 )}
               </div>
-              <div className="signUpIn-forgotPassword">
-                <Link to="/reset-password">Forgot Password?</Link>
+              <div>
+                <div className="signUpIn-forgotPassword">
+                  <Link to="/reset-password">Forgot Password?</Link>
+                </div>
+                {successMessage && (
+                  <Alert message={successMessage} type="success" showIcon />
+                )}
+                {errors.message && (
+                  <Alert message={errors.message} type="error" showIcon />
+                )}
               </div>
               <div className="signUpIn-SubmitContainor">
                 <div className="signUpIn-submit" onClick={handleSubmit}>
@@ -147,9 +158,7 @@ const SignIn = () => {
                 </span>
               </div>
               {successMessage && (
-                <div className="signUpIn-successMessage">
-                  {successMessage}
-                </div>
+                <div className="signUpIn-successMessage">{successMessage}</div>
               )}
             </div>
           </div>

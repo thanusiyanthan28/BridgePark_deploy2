@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import { Form, Input, Button, DatePicker, Rate, Avatar, Select } from 'antd';
-import { FrownOutlined, MehOutlined, SmileOutlined, UserOutlined } from '@ant-design/icons';
-import 'antd/dist/reset.css';
-import './writeReview.css';
-import { getUniqueRoomDetails } from './roomData';
+import React, { useState, useEffect } from "react";
+import { Form, Input, Button, DatePicker, Rate, Avatar, Select } from "antd";
+import {
+  FrownOutlined,
+  MehOutlined,
+  SmileOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import "antd/dist/reset.css";
+import "./writeReview.css";
+import { getUniqueRoomDetails } from "./roomData";
+import id from "../common/UrlLib";
+import { submitReview } from '../../Services/api';
+
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -17,17 +25,28 @@ const customIcons = {
 };
 
 const getInitials = (name) => {
-  const names = name.split(' ');
-  const initials = names.map(name => name[0]).join('');
+  if (!name) return "";
+  const names = name.split(" ");
+  const initials = names.map((name) => name[0]).join("");
   return initials.substring(0, 2).toUpperCase();
 };
 
 const countries = [
-  "United States", "Canada", "United Kingdom", "Australia", "Germany", 
-  "France", "Italy", "Spain", "Mexico", "India", "China", "Japan"
+  "United States",
+  "Canada",
+  "United Kingdom",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Mexico",
+  "India",
+  "China",
+  "Japan",
 ];
 
-const ReviewForm = ({ user }) => {
+const ReviewForm = () => {
   const [form] = Form.useForm();
   const [ratings, setRatings] = useState({
     staff: 0,
@@ -38,10 +57,97 @@ const ReviewForm = ({ user }) => {
     wifi: 0,
     facilities: 0,
   });
+  const [token, setToken] = useState("");
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [userId, setUSerId] = useState("");
 
-  const handleSubmit = (values) => {
-    console.log('Form values: ', values);
-    console.log('Ratings: ', ratings);
+  console.log("user.email", user.email);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    const storedUser = localStorage.getItem("user");
+
+    if (storedToken) {
+      setToken(storedToken);
+    }
+
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+        setEmail(parsedUser.email);
+        setUSerId(parsedUser.userId);
+      } catch (error) {
+        console.error("Error parsing user from localStorage:", error);
+      }
+    }
+  }, []);
+
+  const RoomID = (roomType) => {
+    console.log("roomDetails", roomDetails);
+    const selectedRoom = roomDetails.find((room) => room.detail === roomType);
+    console.log("Selected Room:", selectedRoom);
+    return selectedRoom ? selectedRoom.id : null;
+  };
+
+  const handleSubmit = async (values) => {
+    console.log("values for form component", values);
+    const roomId = RoomID(values.roomType);
+
+    const reviewData = {
+      reviewId: "0",
+      userId: userId,
+      roomId: roomId,
+      comment: values.description,
+      reviewCategoryRatings: [
+        {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "1",
+          rating: values.staff,
+        },
+        {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "2",
+          rating: values.facilities,
+        }, {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "3",
+          rating: values.cleanliness,
+        }, {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "4",
+          rating: values.comfort,
+        }, {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "5",
+          rating: values.valueforMoney,
+        }, {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "6",
+          rating: values.location,
+        }, {
+          id: "0",
+          reviewId: "0",
+          reviewCategoryId: "7",
+          rating: values.freeWiFi,
+        },
+      ],
+    };
+
+    try {
+      const response = await submitReview(reviewData); 
+    console.log('Review submitted successfully:', response);
+
+    } catch (error) {
+      console.error("Failed to submit review:", error);
+    }
   };
 
   const handleRatingChange = (key, value) => {
@@ -53,39 +159,27 @@ const ReviewForm = ({ user }) => {
   return (
     <div className="container-write">
       <div className="user-info-write">
-        <Avatar
-          src={user.image}
-          size={64}
-          icon={<UserOutlined />}
-        >
-          {!user.image && getInitials(user.email.split('@')[0])}
+        <Avatar src={user?.image} size={64} icon={<UserOutlined />}>
+          {!user.image && getInitials(email.split("@")[0])}
         </Avatar>
-        <div className="user-email-write">{user.email}</div>
+        <div className="user-email-write">{email}</div>
       </div>
 
-      <Form
-        form={form}
-        layout="vertical"
-        onFinish={handleSubmit}
-      >
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[{ required: true, message: 'Please enter your email!' }]}
-        >
-          <Input defaultValue={user.email} disabled />
+      <Form form={form} layout="vertical" onFinish={handleSubmit}>
+        <Form.Item name="email" label="Email">
+          <Input defaultValue={email} disabled />
         </Form.Item>
         <Form.Item
           name="username"
           label="Username"
-          rules={[{ required: true, message: 'Please enter your username!' }]}
+          rules={[{ required: true, message: "Please enter your username!" }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
           name="country"
           label="Country"
-          rules={[{ required: true, message: 'Please select your country!' }]}
+          rules={[{ required: true, message: "Please select your country!" }]}
         >
           <Select>
             {countries.map((country) => (
@@ -98,12 +192,12 @@ const ReviewForm = ({ user }) => {
         <Form.Item
           name="roomType"
           label="Room Type"
-          rules={[{ required: true, message: 'Please select your room type!' }]}
+          rules={[{ required: true, message: "Please select your room type!" }]}
         >
           <Select>
             {roomDetails.map((detail) => (
-              <Option key={detail} value={detail}>
-                {detail}
+              <Option key={detail.id} value={detail.detail}>
+                {detail.detail}
               </Option>
             ))}
           </Select>
@@ -111,70 +205,70 @@ const ReviewForm = ({ user }) => {
         <Form.Item
           name="description"
           label="Description"
-          rules={[{ required: true, message: 'Please enter a description!' }]}
+          rules={[{ required: true, message: "Please enter a description!" }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
           name="date"
           label="Date"
-          rules={[{ required: true, message: 'Please select a date!' }]}
+          rules={[{ required: true, message: "Please select a date!" }]}
         >
           <DatePicker />
         </Form.Item>
         <div className="rating-container-write">
-          <Form.Item label="Staff">
+          <Form.Item label="Staff" name="staff">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('staff', value)}
+              onChange={(value) => handleRatingChange("staff", value)}
             />
           </Form.Item>
-          <Form.Item label="Cleanliness">
+          <Form.Item label="Cleanliness" name="cleanliness">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('cleanliness', value)}
+              onChange={(value) => handleRatingChange("cleanliness", value)}
             />
           </Form.Item>
-          <Form.Item label="Comfort">
+          <Form.Item label="Comfort" name="comfort">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('comfort', value)}
+              onChange={(value) => handleRatingChange("comfort", value)}
             />
           </Form.Item>
-          <Form.Item label="Value for Money">
+          <Form.Item label="Value for Money" name="valueforMoney">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('value', value)}
+              onChange={(value) => handleRatingChange("value", value)}
             />
           </Form.Item>
-          <Form.Item label="Location">
+          <Form.Item label="Location" name="location">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('location', value)}
+              onChange={(value) => handleRatingChange("location", value)}
             />
           </Form.Item>
-          <Form.Item label="Free WiFi">
+          <Form.Item label="Free WiFi" name="freeWiFi">
             <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('wifi', value)}
+              onChange={(value) => handleRatingChange("wifi", value)}
             />
           </Form.Item>
-          <Form.Item label="Facilities">
-            <Rate 
+          <Form.Item label="Facilities" name="facilities">
+            <Rate
               defaultValue={0}
               character={({ index }) => customIcons[index + 1]}
-              onChange={(value) => handleRatingChange('facilities', value)}
+              onChange={(value) => handleRatingChange("facilities", value)}
             />
           </Form.Item>
         </div>
         <Form.Item>
-          <Button className='button-write' type="" htmlType="submit">
+          <Button className="button-write" type="" htmlType="submit">
             Submit Review
           </Button>
         </Form.Item>
