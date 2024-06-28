@@ -84,6 +84,7 @@ const ReviewForm = () => {
     }
   }, []);
 
+
   const RoomID = (roomType) => {
     console.log("roomDetails", roomDetails);
     const selectedRoom = roomDetails.find((room) => room.detail === roomType);
