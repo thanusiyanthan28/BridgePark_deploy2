@@ -51,28 +51,43 @@ const HomeCard = () => {
     if (fieldName === 'checkInDate') {
       setDaysOfWeek(prevState => ({
         ...prevState,
-        checkInDay: date ? date.format('dddd') : ''
+        checkInDay: date ? date.format('dddd') : 'Select a date'
       }));
     } else if (fieldName === 'checkOutDate') {
       setDaysOfWeek(prevState => ({
         ...prevState,
-        checkOutDay: date ? date.format('dddd') : ''
+        checkOutDay: date ? date.format('dddd') : 'Select a date'
       }));
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate check-in date
+    if (formData.checkInDate && formData.checkInDate.isBefore(moment(), 'day')) {
+      alert('Please select a future date for Check-in.');
+      return;
+    }
+
+    // Validate check-out date
+    if (formData.checkOutDate && formData.checkOutDate.isBefore(moment(), 'day')) {
+      alert('Please select a future date for Check-out.');
+      return;
+    }
+
     const queryString = new URLSearchParams({
       check_in_date: formData.checkInDate.format('YYYY-MM-DD'),
       check_out_date: formData.checkOutDate.format('YYYY-MM-DD'),
       number_adults: formData.adults,
       number_children: formData.children,
     });
+
     window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
   };
 
-   const currentDate = moment().format('DD MMM');
+  const currentDate = moment().format('DD MMM');
+
   return (
     <div className='app-container2-site-home'>
       <div className="app-container-site-home">

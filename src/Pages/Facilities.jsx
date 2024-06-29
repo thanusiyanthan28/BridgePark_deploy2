@@ -51,7 +51,7 @@ const Facilities = () => {
 
         <div>
           <p className='facilities-sub-content'>
-            Originally a Grade ii listed building, Bridge Park Hotel is the ideal
+            Originally a Grade II-listed building, Bridge Park Hotel is the ideal
             place to stay whether you are visiting Wembley or simply looking for
             accommodation to explore the sites of London.
             Just a short distance from Wembley Stadium.

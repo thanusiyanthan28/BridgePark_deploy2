@@ -8,6 +8,17 @@
     min-height: 100px;
     
   }
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+    white-space: nowrap;
+  }
+  
   .footer-logo{
    margin: auto;
    width: 33%;
@@ -15,6 +26,7 @@
   .footer-contact{
     text-align: left;
     width: 34%;
+   
   }
 
   .footer-quick-links{
@@ -38,12 +50,16 @@
     height: auto;
     margin: auto;
   }
+  .contact-links li a{
+    font-size:small
+  }
 
   .quick-links,
   .social-links,
   .contact-links {
     list-style: none;
     padding: 0;
+
   }
   
   .quick-links li,
@@ -58,6 +74,11 @@
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+  }
+ 
+  .footer a :hover{
+    
+    text-decoration:underline;
   }
   
   .social-label,

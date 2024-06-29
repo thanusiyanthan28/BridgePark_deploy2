@@ -26,7 +26,7 @@ const Location = () => {
        <div className='location-title'>Location</div>
     <div className='location-sub'>
     
-    <p className='location-sub-content location-sub-content-ex'>As The Bridge Park Hotel is less than 2 miles from Wembley Stadium and Arena, this is the perfect place to stay if you’re coming to watch a concert or sporting event here. You will also find Brent Cross Shopping Centre nearby. To explore central London, you should make the most of public transport. The number 18 bus, which stops outside your hotel, will take you straight to Regents Park and Madame Tussauds. Travel via tube and you can get to places like Oxford Street and Piccadilly Circus with ease.</p>
+    <p className='location-sub-content location-sub-content-ex'>As The Bridge Park Hotel is less than 2 miles from Wembley Stadium and Arena, this is the perfect place to stay if you're coming to watch a concert or sporting event here. You will also find Brent Cross Shopping Centre nearby. To explore central London, you should make the most of public transport. The number 18 bus, which stops outside your hotel, will take you straight to Regents Park and Madame Tussauds. Travel via tube, and you can get to places like Oxford Street and Piccadilly Circus with ease.</p>
     <div className="location-content">
         <div className='location-sub-left'>
              <hr class="location-line" />
@@ -37,7 +37,7 @@ const Location = () => {
             <p className='location-sub-content'>Bridge Park Hotel is near the A238 road to Kingston upon Thames.</p>
             <hr class="location-line" />
             <h1 className='location-sub-title'>By Tube:</h1>
-            <p className='location-sub-content'>To get to The Bridge Park Hotel on the tube you should travel on the Bakerloo Line and get off at Harlesden or Stonebridge Park Tube Station.</p>
+            <p className='location-sub-content'>To get to The Bridge Park Hotel on the tube, you should travel on the Bakerloo Line and get off at Harlesden or Stonebridge Park Tube Station.</p>
             <hr class="location-line" />
         </div>
         <div className='location-sub-right'>

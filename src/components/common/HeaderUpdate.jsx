@@ -78,7 +78,7 @@ const HeaderUpdate = () => {
     {
       label: (
         <Link to="/main-meeting" className="header-meeting header-font">
-          Meeting&Events
+          Meeting & Events
         </Link>
       ),
       key: 'Meeting & Events',
