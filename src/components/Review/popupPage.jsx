@@ -18,7 +18,7 @@ const reviewData = [
     reviewDate: '30 July 2023',
     score: 7,
     title: 'Exceptional',
-    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
+    text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at . The cleaning very good.
            The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
     helpful: 12,
     notHelpful: 1,
@@ -51,7 +51,7 @@ const reviewData = [
     score: 5,
     title: 'Exceptional',
     text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
-           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport to location.`,
     helpful: 12,
     notHelpful: 1,
     reviewerChoice: true
@@ -67,7 +67,7 @@ const reviewData = [
     score: 10,
     title: 'Exceptional',
     text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
-           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good breakfast.`,
     helpful: 12,
     notHelpful: 1,
     reviewerChoice: true
@@ -83,7 +83,7 @@ const reviewData = [
     score: 3,
     title: 'Exceptional',
     text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
-           The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
+           The bus stop is in front of the hotel and the underground is 8 blocks away, very good bed requirements.`,
     helpful: 12,
     notHelpful: 1,
     reviewerChoice: true
@@ -253,7 +253,7 @@ const ReviewApp = () => {
       <div className="filter-options">
         <div>
           <label>Category :</label>
-          <select
+          <select className='filter-pop'
             name="Reviewers"
             value={filters.filter1}
             onChange={handleFilterChange}
@@ -264,13 +264,13 @@ const ReviewApp = () => {
             <option value="Option 3">Rooms</option>
             <option value="Option 4">Cleanlines</option>
             <option value="Option 5">Location</option>
-            <option value="Option 6">Comport</option>
+            <option value="Option 6">Comfort</option>
             <option value="Option 7">Value of Money</option>
           </select>
         </div>
         <div>
           <label>Review Rating:</label>
-          <select
+          <select className='filter-pop'
             name="Review scores"
             value={filters.filter2}
             onChange={handleFilterChange}
@@ -285,7 +285,7 @@ const ReviewApp = () => {
         </div>
         <div>
           <label>Country :</label>
-          <select
+          <select className='filter-pop'
             name="Languages"
             value={filters.filter3}
             onChange={handleFilterChange}

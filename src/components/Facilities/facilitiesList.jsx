@@ -37,11 +37,11 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         <ul>
           <li>Live Sport Events (Broadcast)</li>
         </ul>
-        <h2 className='fscolumnh2'><FaCouch />Livining Area</h2>
+        <h2 className='fscolumnh2'><FaCouch /> Livining Area</h2>
         <ul>
           <li>Desk</li>
         </ul>
-        <h2 className='fscolumnh2'><FaTv />Media & Technology</h2>
+        <h2 className='fscolumnh2'><FaTv /> Media & Technology</h2>
         <ul>
           <li>Flat-Screen TV</li>
           <li>Telephone</li>
