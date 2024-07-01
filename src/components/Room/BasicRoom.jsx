@@ -24,6 +24,7 @@ const BasicRoom = () => {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState('');
   const [selectedRoomId, setSelectedRoomId] = useState(0);
+  const [bathroomType, setBathroomType] = useState('');
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
@@ -34,6 +35,11 @@ const BasicRoom = () => {
     setBookingUrl(url);
     setIsModalVisible(true);
     setSelectedRoomId(id)
+    if (Basicroom.title.includes('BASIC')) {
+      setBathroomType('Shared');
+    } else {
+      setBathroomType('Shared');
+    }
   };
 
   const handleCancel = () => {
@@ -144,7 +150,9 @@ const BasicRoom = () => {
                 onViewMoreClick={() => handleViewMoreClick({
                   title: Basicroom.title,
                   imageSource: Basicroom.image,
-                  id: Basicroom.id
+                  cardTitle: Basicroom.cardTitle,
+                  id: Basicroom.id,
+                  BroomPrice: Basicroom.BroomPrice,
                 }, Basicroom.imageUrl,Basicroom.id)}
                 link={Basicroom.imageUrl}
               />
@@ -160,7 +168,7 @@ const BasicRoom = () => {
         footer={null}
         width="80%"
       >
-        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
+        <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}  bathroomType={bathroomType} roomPrice={selectedRoom ? selectedRoom.BroomPrice : ''}/>
       </Modal>
     </div>
   );

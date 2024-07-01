@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/facilities.css';
-import { FaBath, FaBed, FaTree, FaUtensils,FaMicrowave, FaFootballBall, FaCouch, FaTv, FaWineGlassAlt, FaWifi, FaParking, FaHandHoldingHeart,FaHome, FaUserShield, FaInfoCircle, FaLanguage,FaGlobe } from 'react-icons/fa';
+import { FaBath, FaBed, FaTree, FaUtensils,FaSink, FaFootballBall, FaCouch, FaTv, FaWineGlassAlt, FaWifi, FaParking, FaHandHoldingHeart,FaHome, FaUserShield, FaInfoCircle, FaLanguage,FaGlobe, FaBriefcase } from 'react-icons/fa';
 
 const ColumnList =  ({ forRoomInfoPage }) => {
   return (
@@ -37,7 +37,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         <ul>
           <li>Live Sport Events (Broadcast)</li>
         </ul>
-        <h2 className='fscolumnh2'><FaCouch /> Livining Area</h2>
+        <h2 className='fscolumnh2'><FaCouch /> Living Area</h2>
         <ul>
           <li>Desk</li>
         </ul>
@@ -51,10 +51,10 @@ const ColumnList =  ({ forRoomInfoPage }) => {
       <div className="fscolumn">
         <h2 className='fscolumnh2'><FaWineGlassAlt /> Food & Drink</h2>
         <ul>
-          <li>Coffee house in site</li>
+          <li>Coffee house on site</li>
           <li>Wine/Champagne (Additional Charge)</li>
           <li>Kid-friendly buffet</li>
-          <li>Kid Meals(Additional Charge)</li>
+          <li>Kid Meals(Additional charge)</li>
           <li>Snack bar</li>
           <li>Bar</li>
           <li>Restaurant</li>
@@ -66,25 +66,29 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         <h2 className='fscolumnh2'><FaParking /> Parking</h2>
         <ul>
           <li>Free Public parking is possible on site<br></br>
-              (Reservation is not needed)</li>
+          <span class="before-bracket">(Reservation is not needed)</span></li>
         </ul>
-        <h2 className='fscolumnh2'><FaGlobe/> Services</h2>
+        <h2 className='fscolumnh2'><FaHandHoldingHeart /> Reception services</h2>
         <ul>
-          <li>Daily Housekeeping</li>
+          <li>Invoice provided</li>
           <li>Concierge Service</li>
           <li>Lagguage Storage</li>
-          <li>Wake-up service</li>
-          <li>Fax/Photocopying (Additional Charge)</li>
           <li>Express check-in/check-out</li>
           <li>24 hours front desk</li>
-          <li>Room Service</li>
         </ul>
-        <h2 className='fscolumnh2'><FaHandHoldingHeart /> Reception Services</h2>
+        <h2 className='fscolumnh2'><FaSink/> Cleaning services</h2>
         <ul>
-          <li>Invoice Provided</li>
+          <li>Daily housekeeping</li>
         </ul>
       </div>
       <div className="fscolumn">
+      <h2 className='fscolumnh2'><FaBriefcase /> Business facilities</h2>
+        <ul>
+          <li>Fax/photocopying
+          (Additional charge)</li>
+          <li>Meeting/banquet facilities
+          (Additional charge)</li>
+        </ul>
         <h2 className='fscolumnh2'><FaUserShield /> Safety & Security</h2>
         <ul>
           <li>Fire Extinguishers</li>
@@ -92,7 +96,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>CCTV in common areas</li>
           <li>smoke alarms</li>
           <li>Key access</li>
-          <li>Safety default box</li>
+          <li>Safety deposit box</li>
         </ul>
         <h2 className='fscolumnh2'><FaHome /> General</h2>
         <ul>
@@ -103,6 +107,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Family Rooms</li>
           <li>Ironing Facilities</li>
           <li>Non smoking rooms</li>
+          <li>Room service</li>
         </ul>
         <h2 className='fscolumnh2'><FaGlobe /> Languages spoken</h2>
         <ul>

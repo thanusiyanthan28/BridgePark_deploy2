@@ -52,6 +52,12 @@ const SiteCard = ({ selectedRoomId }) => {
       }));
     }
   };
+  const handleClearDate = (fieldName) => {
+    setFormData(prevState => ({
+      ...prevState,
+      [fieldName]: null
+    }));
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -130,6 +136,8 @@ const SiteCard = ({ selectedRoomId }) => {
                         onChange={(date) => handleDateChange(date, 'checkInDate')}
                         format="DD MMM"
                         placeholder={currentDate}
+                    
+                        
                       />
                     </div>
                   </td>
@@ -143,6 +151,7 @@ const SiteCard = ({ selectedRoomId }) => {
                         onChange={(date) => handleDateChange(date, 'checkOutDate')}
                         format="DD MMM"
                         placeholder={currentDate}
+                        
                       />
                     </div>
                   </td>

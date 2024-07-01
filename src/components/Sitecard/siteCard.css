@@ -71,7 +71,11 @@
   border-radius: 0px;
   cursor: pointer;
 }
-
+.button-site:hover{
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000;
+}
 .card-body-site table {
   width: 100%;
   border-collapse: collapse;
@@ -191,6 +195,7 @@
   right: 70px;
   z-index: 999; /* Ensure it's above other content */
 }
+/*------------------------------------*/
 
 @media(max-width:435px){
   .app-container-site {

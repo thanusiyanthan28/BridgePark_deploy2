@@ -20,7 +20,7 @@ const HouseRules = () => {
           <h1 className="house-rules-title">House rules</h1>
         </div>
         <div className="house-rules-availability-button">
-          <button className="availability-button"  onClick={() => window.location.href = 'https://direct-book.com/properties/bridgeparkdirect'}>See Availability</button>
+          <button className="availability-button"  onClick={() => window.location.href = 'https://direct-book.com/properties/bridgeparkdirect'}>See All Availability</button>
         </div>
       </div>
       <p className="house-rules-description">

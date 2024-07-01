@@ -175,7 +175,9 @@
   margin: 6px;
   top: 0;
 }
-
+.before-bracket {
+  margin-left: 25px; /* Adjust the value as needed */
+}
 /* Media queries */
 
 /* Max width 768px */

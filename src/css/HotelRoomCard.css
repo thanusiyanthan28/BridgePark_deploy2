@@ -126,7 +126,10 @@
   float: right;
   font-family: "lato", serif;
 }
-
+.hotelRoomViewMoreLink:hover {
+  color: blue;
+  text-decoration: none; 
+}
 .hotelRoomCard-subRow{
   margin-top: -14px;
   margin-left: 0px;
