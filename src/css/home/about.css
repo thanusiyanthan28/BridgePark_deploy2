@@ -47,7 +47,6 @@ font-family: "lato", serif;
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
-  text-align: justify;
   line-height: 1.5;
   font-family: "lato", sans-serif;
   text-align: center;
@@ -101,6 +100,11 @@ font-family: "lato", serif;
   .aboutContainer {
     height: auto;
   }
+  .about-sub-content {
+    text-align: justify;
+    
+  }
+  
   .abContainer{
     width: 95%;
   }

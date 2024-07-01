@@ -14,7 +14,7 @@ import HomeCard from "../Sitecard/homeCard";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
 
   const handleClick = () => {
     console.log("button clicked");
@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <div className="head-main">
       <div className="overlay"></div>
-      {isMobile ? <div className="home-sitecard"><HomeCard /></div> : null}
+      {isMobile && <div className="home-sitecard"><HomeCard /></div>  }
       <div className="hero-container">
      <img src={title} alt="title" className="header-title" />
         <div className="headerLogoPosition">

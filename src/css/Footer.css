@@ -93,7 +93,13 @@
     color: #fff;
     font-size: 12px;
     margin-right: 100px;
+
     
+  }
+  .footer-copyright a{
+
+    text-decoration: none;
+    color: #fff;
   }
 
 
@@ -152,14 +158,16 @@
     }
 
     .contact-links li a{
-      display: grid;
+     margin-left: 0;
     }
    .contact-icons{
-    align-items: center;
-    margin: auto;
+    
    }
-   .contact-lable{
-    margin: auto;
+   .contact-label{
+   text-align: left ;
+   }
+   .footer-contact-title{
+    text-align: left;
    }
 
 

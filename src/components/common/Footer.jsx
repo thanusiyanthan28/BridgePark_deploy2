@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-contact">
-        <p><b>Contact Us</b></p>
+        <p className='footer-contact-title'><b>Contact Us</b></p>
         <ul className="contact-links">
           <li><a href="https://www.google.com/maps?ll=51.541287,-0.261686&z=17&t=m&hl=en&gl=LK&mapclient=embed&cid=11362073612214208868" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faMapMarkerAlt} /></span><span className='contact-label'>Bridge Park Hotel, 16 Hillside,<br/>London, NW10 8BN, United Kingdom</span></a></li>
           <li><a onClick={(e) => handlePhoneClick(e, '+44 208961 1260')} style={{ cursor: 'pointer' }}><span className='contact-icons'><FontAwesomeIcon icon={faPhone} /></span><span className='contact-label'>(+44) 020 8661 1260</span></a></li>
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       
       <div className='footer-copyright'>
-        <p>Copyright &copy; {currentYear} Bridge Park Hotel. All Rights Reserved</p>
+       <a href='/copyright'><p>Copyright &copy; {currentYear} Bridge Park Hotel. All Rights Reserved</p></a>
       </div>
       
       {showTooltip && (

@@ -201,6 +201,13 @@
 }
   
 /* Max width 435px */
+@media (max-width :768px){
+  .facilities-sub-content{
+    text-align: justify;
+    width: 90%;
+    
+  }
+}
 @media(max-width:435px) {
    .facilitiescard {
     width: 65%;
