@@ -2,22 +2,34 @@ import React, { useState, useEffect } from 'react';
 import { DatePicker } from 'antd'; // Import DatePicker from Ant Design
 import './siteCard.css'; // Import CSS file for styling
 import moment from 'moment';
+import dayjs from 'dayjs';
+import weekday from 'dayjs/plugin/weekday';
+import updateLocale from 'dayjs/plugin/updateLocale';
+
+dayjs.extend(weekday);
+dayjs.extend(updateLocale);
+
+dayjs.updateLocale('en', {
+  weekdays: [
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+  ]
+});
 
 const SiteCard = ({ selectedRoomId }) => {
   const [formData, setFormData] = useState({
-    checkInDate: null,
-    checkOutDate: null,
+    checkInDate: dayjs(),
+    checkOutDate: dayjs(),
     adults: 1,
     children: 0,
-    infants: 0,
     language: 'en',
     currency: 'USD',
   });
 
   const [daysOfWeek, setDaysOfWeek] = useState({
-    checkInDay: moment().format('dddd'),
-    checkOutDay: moment().format('dddd'),
+    checkInDay: dayjs().format('dddd'),
+    checkOutDay: dayjs().format('dddd'),
   });
+
   const [singleRoomPrice, setSingleRoomPrice] = useState(0.00);
   const [tax, setTax] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -43,12 +55,12 @@ const SiteCard = ({ selectedRoomId }) => {
     if (fieldName === 'checkInDate') {
       setDaysOfWeek(prevState => ({
         ...prevState,
-        checkInDay: date ? date.format('dddd') : ''
+        checkInDay: date ? date.format('dddd') : 'Select the date'
       }));
     } else if (fieldName === 'checkOutDate') {
       setDaysOfWeek(prevState => ({
         ...prevState,
-        checkOutDay: date ? date.format('dddd') : ''
+        checkOutDay: date ? date.format('dddd') : 'Select the date'
       }));
     }
   };
@@ -130,14 +142,13 @@ const SiteCard = ({ selectedRoomId }) => {
                     <p className='check-head-site'>CHECK IN</p>
                     <div className='current-day-site'>{daysOfWeek.checkInDay}</div>
                     <div className="date-input-container-site">
-                      <DatePicker
+                    <DatePicker
                         name="checkInDate"
                         value={formData.checkInDate}
                         onChange={(date) => handleDateChange(date, 'checkInDate')}
                         format="DD MMM"
-                        placeholder={currentDate}
-                    
-                        
+                        placeholder="Select the date"
+                        className="custom-datepicker1"
                       />
                     </div>
                   </td>
@@ -145,13 +156,13 @@ const SiteCard = ({ selectedRoomId }) => {
                     <p className='check-head-site'>CHECK OUT</p>
                     <div className='current-day-site'>{daysOfWeek.checkOutDay}</div>
                     <div className="date-input-container-site">
-                      <DatePicker
+                    <DatePicker
                         name="checkOutDate"
                         value={formData.checkOutDate}
                         onChange={(date) => handleDateChange(date, 'checkOutDate')}
                         format="DD MMM"
-                        placeholder={currentDate}
-                        
+                        placeholder="Select the date"
+                        className="custom-datepicker1"
                       />
                     </div>
                   </td>

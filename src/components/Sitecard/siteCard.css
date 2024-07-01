@@ -148,7 +148,22 @@
 .custom-date-picker{
   font-size: 25px;
 }
+.custom-datepicker1.ant-picker-outlined {
+  border: none;
+}
 
+.custom-datepicker1.ant-picker .ant-picker-input > input {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-datepicker1.ant-picker .ant-picker-input {
+  width: 100%;
+}
+
+.custom-datepicker1 .anticon {
+  color: #669399;
+}
 /* CSS */
 .react-datepicker-wrapper input::placeholder {
   font-size: 25px; /* Adjust the font size as needed */
