@@ -145,29 +145,29 @@
   font-size: 12px;
   font-weight: bold;
 }
-.custom-date-picker{
+/* .custom-date-picker{
   font-size: 25px;
-}
+} */
 .custom-datepicker1.ant-picker-outlined {
   border: none;
 }
 
 .custom-datepicker1.ant-picker .ant-picker-input > input {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
 }
 
 .custom-datepicker1.ant-picker .ant-picker-input {
-  width: 100%;
+  width: 70px;
 }
 
 .custom-datepicker1 .anticon {
   color: #669399;
 }
 /* CSS */
-.react-datepicker-wrapper input::placeholder {
+/* .react-datepicker-wrapper input::placeholder {
   font-size: 25px; /* Adjust the font size as needed */
-}
+
 .date-input-container-site {
   display: flex;
 

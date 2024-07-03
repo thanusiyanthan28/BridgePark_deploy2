@@ -1,14 +1,19 @@
+
+
 .RoomInformationCardImage {
-  flex: 1;
-  max-height: 300px;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6px;
+  width: 100%; /* Ensure the large image takes full width */
+  height: 300px; /* Maintain aspect ratio */
+  display: block; /* Ensure block display */
 }
+.aboutCouroselComponent1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+
+
 
 .RoomInformation-section {
   font-size: 12px;
@@ -291,7 +296,7 @@
   .site-card-room{
     position: absolute;
     top: 270px;
-    right: 1px;
+    right: 23px;
     z-index: 999; 
   }
   
@@ -453,7 +458,7 @@
   margin-top: 420px;
  }
  .site-card-room{
-  margin-right: 80px;
+  margin-right: 95px;
  }
   .columnlist {
     display: grid;

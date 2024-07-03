@@ -1,0 +1,18 @@
+.room-info-cards {
+    max-width: auto;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    height: 300px; /* Fixed height for each card */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: hidden; /* Hide overflow to prevent image distortion */
+  }
+  
+  .info-card img {
+    width: auto; /* Ensure image maintains aspect ratio */
+    height: 100%; /* Ensure image fills the height of the card */
+    object-fit: cover; /* Maintain aspect ratio and cover the content area */
+  }
