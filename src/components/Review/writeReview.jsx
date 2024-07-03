@@ -61,6 +61,7 @@ const ReviewForm = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [userId, setUSerId] = useState("");
+  const [image, setImage] = useState("");
 
   console.log("user.email", user.email);
 
@@ -78,6 +79,7 @@ const ReviewForm = () => {
         setUser(parsedUser);
         setEmail(parsedUser.email);
         setUSerId(parsedUser.userId);
+        setImage(parsedUser.picture);
       } catch (error) {
         console.error("Error parsing user from localStorage:", error);
       }
@@ -93,63 +95,33 @@ const ReviewForm = () => {
   };
 
   const handleSubmit = async (values) => {
-    console.log("values for form component", values);
     const roomId = RoomID(values.roomType);
-
+  
     const reviewData = {
-      reviewId: "0",
+      reviewId: 0,
       userId: userId,
       roomId: roomId,
+      country: values.country,
       comment: values.description,
       reviewCategoryRatings: [
-        {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "1",
-          rating: values.staff,
-        },
-        {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "2",
-          rating: values.facilities,
-        }, {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "3",
-          rating: values.cleanliness,
-        }, {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "4",
-          rating: values.comfort,
-        }, {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "5",
-          rating: values.valueforMoney,
-        }, {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "6",
-          rating: values.location,
-        }, {
-          id: "0",
-          reviewId: "0",
-          reviewCategoryId: "7",
-          rating: values.freeWiFi,
-        },
+        { id: "0", reviewId: "0", reviewCategoryId: "2", rating: ratings.staff },
+        { id: "0", reviewId: "0", reviewCategoryId: "2", rating: ratings.facilities },
+        { id: "0", reviewId: "0", reviewCategoryId: "3", rating: ratings.cleanliness },
+        { id: "0", reviewId: "0", reviewCategoryId: "4", rating: ratings.comfort },
+        { id: "0", reviewId: "0", reviewCategoryId: "5", rating: ratings.valueforMoney },
+        { id: "0", reviewId: "0", reviewCategoryId: "6", rating: ratings.location },
+        { id: "0", reviewId: "0", reviewCategoryId: "7", rating: ratings.freeWiFi },
       ],
     };
-
+  
     try {
-      const response = await submitReview(reviewData); 
-    console.log('Review submitted successfully:', response);
-
+      const response = await submitReview(reviewData);
+      console.log('Review submitted successfully:', response);
     } catch (error) {
       console.error("Failed to submit review:", error);
     }
   };
+  
 
   const handleRatingChange = (key, value) => {
     setRatings({ ...ratings, [key]: value });
@@ -160,14 +132,14 @@ const ReviewForm = () => {
   return (
     <div className="container-write">
       <div className="user-info-write">
-        <Avatar src={user?.image} size={64} icon={<UserOutlined />}>
+        <Avatar src={image} size={64} icon={<UserOutlined />}>
           {!user.image && getInitials(email.split("@")[0])}
         </Avatar>
         <div className="user-email-write">{email}</div>
       </div>
 
       <Form form={form} layout="vertical" onFinish={handleSubmit}>
-        <Form.Item name="email" label="Email">
+        <Form.Item name="" label="Email">
           <Input defaultValue={email} disabled />
         </Form.Item>
         <Form.Item
@@ -209,13 +181,6 @@ const ReviewForm = () => {
           rules={[{ required: true, message: "Please enter a description!" }]}
         >
           <TextArea rows={4} />
-        </Form.Item>
-        <Form.Item
-          name="date"
-          label="Date"
-          rules={[{ required: true, message: "Please select a date!" }]}
-        >
-          <DatePicker />
         </Form.Item>
         <div className="rating-container-write">
           <Form.Item label="Staff" name="staff">

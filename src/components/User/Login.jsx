@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginApi } from "../../Services/auth";
 import { Alert } from "antd";
+import { jwtDecode } from "jwt-decode";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -61,11 +62,15 @@ const SignIn = () => {
     console.log(response);
     const token = response.credential;
     console.log("token", token);
+    const userData = jwtDecode(token);
+    console.log("User Data:", userData);
+    localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
   };
-
+  
   const handleGoogleFailure = (error) => {
     console.error("Google login failed", error);
     setErrors({ message: "Google login failed" });

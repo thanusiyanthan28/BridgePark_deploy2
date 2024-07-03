@@ -15,8 +15,6 @@ import { getAllReviews } from "../../Services/api";
 
 const { Option } = Select;
 
-
-
 const customIcons = {
   1: <FrownOutlined />,
   2: <FrownOutlined />,
@@ -40,39 +38,18 @@ const ReviewApp = () => {
   const [visible, setVisible] = useState(false);
   const [bookingNumber, setBookingNumber] = useState("");
   const [username, setUsername] = useState("");
-  const [rev, setRev] = useState("");
-
-  console.log(rev)
-
-  const reviewData = [
-    {
-      id:1,
-      name: 'maria',
-      country: "Argentina",
-      room: "Single Room with Shared Bathroom",
-      nights: "19 nights · July 2023",
-      travelerType: "Solo traveller",
-      reviewDate: "30 July 2023",
-      score: 7,
-      title: "Exceptional",
-      text: `Excellent hotel and value for money. All the staff were friendly and attentive to what I needed at all times. The cleaning very good.
-             The bus stop is in front of the hotel and the underground is 8 blocks away, very good access for both types of transport.`,
-      helpful: 12,
-      notHelpful: 1,
-      reviewerChoice: true,
-    },
-  ];
-
- 
+  const [rev, setRev] = useState([]);
 
   useEffect(() => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
+       
         const countryNames = response.data.map(
           (country) => country.name.common
         );
         setCountries(countryNames.sort());
+        console.log("responses country", countryNames)
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
@@ -84,8 +61,8 @@ const ReviewApp = () => {
     const fetchReviews = async () => {
       try {
         const reviewsData = await getAllReviews();
-        console.log('reviewdata',reviewsData);
-        setRev(reviewsData.$values);
+        const sortedReviews = reviewsData.$values.sort((a, b) => b.reviewId - a.reviewId);
+        setRev(sortedReviews);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }
@@ -94,6 +71,9 @@ const ReviewApp = () => {
     fetchReviews();
   }, []);
 
+
+  console.log("reviews finds", rev)
+  
   const getFilteredReviews = () => {
     if (selectedTopics.length === 0) {
       return reviews;
@@ -121,6 +101,7 @@ const ReviewApp = () => {
     const { name, value } = event.target;
     setFilters({ ...filters, [name]: value });
   };
+  
 
   const handleHelpfulClick = (id) => {
     setReviews((prevReviews) =>
@@ -332,12 +313,12 @@ const ReviewApp = () => {
             },
             pageSize: 5,
           }}
-          dataSource={reviewData}
+          dataSource={rev}
           renderItem={(review) => (
             <List.Item key={review.id} className="review-item-pop">
               <div>
                 <List.Item.Meta
-                  avatar={<Avatar>{review.com}</Avatar>}
+                  avatar={<Avatar></Avatar>}
                   title={
                     <div className="review-header-pop">
                       <span className="reviewer-name-pop">{review.name}</span>
@@ -349,7 +330,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{review.room}</p>
+                        <p>{review.roomId}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>
@@ -369,7 +350,7 @@ const ReviewApp = () => {
               </div>
               <div className="review-content-pop">
                 <h3 className="review-title-pop">{review.title}</h3>
-                <p className="review-text-pop">{review.text}</p>
+                <p className="review-text-pop">{review.comment}</p>
                 <div className="review-actions-pop">
                   <div className="button-row-pop">
                     {!review.userReaction && (

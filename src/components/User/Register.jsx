@@ -53,7 +53,6 @@ const SignUp = () => {
     try {
       const response = await registerApi(formData);
       const token = response.passwordHash
-      localStorage.setItem('token', token)
       navigate("/signIn");
     } catch (error) {
       console.error('Sign in failed:', error);
