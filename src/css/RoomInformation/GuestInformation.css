@@ -1,0 +1,479 @@
+.cal-card {
+  position: absolute;
+  top: 240px;
+  right: 200px;
+  z-index: 999; 
+}
+
+.Guestimage{
+  height: 300px;
+  
+}
+.hotelRoomCardContainer2 {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 1200px;
+  margin-left: 150px;
+
+}
+.checkout-form {
+  display: flex; 
+  flex-direction: column; 
+  width: 600px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  border: none; 
+  border-radius: 5px; 
+  background-color: #fff;
+  margin-left: 140px; 
+}
+
+/* Form heading */
+.checkout-form h2 {
+  text-align: center; 
+  margin-bottom: 20px; 
+  margin-left: -320px;
+  color: #618e95;
+}
+
+/* Form row */
+.form-row {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+/* Labels */
+.checkout-form label {
+  flex: 1; 
+  margin-right: 10px;
+  font-weight: bold; 
+}
+
+/* Input fields */
+.checkout-form input,
+.checkout-form textarea {
+  flex: 2; 
+  padding: 10px; 
+  border: none; 
+  border-bottom: none; 
+  border-radius: 0; 
+  box-sizing: border-box; 
+}
+
+/* Text area */
+.checkout-form textarea {
+  height: 70px; 
+  resize: vertical; 
+}
+
+
+.checkout-form hr {
+  border: none; 
+  border-top: 1px solid #ddd; 
+  margin: 1px 0;
+  width: 600px;
+}
+
+/* Submit button */
+.checkout-form button {
+  display: block;
+  margin-top: 15px;
+  padding: 15px 240px; 
+  background-color: #618e95; 
+  color: #fff; 
+  border: none; 
+  border-radius: 0px; 
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media(max-width:435px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 400px;
+    margin-left: 15px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 110px;
+    margin-left: 15px; 
+   }
+  .cal-card {
+    position: absolute;
+    top: 240px;
+    right: 60px;
+    z-index: 999;
+     
+  }
+  .checkout-form {
+    width: 350px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 10px; 
+    margin-top: 350px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -50px;
+    color: #618e95;
+  }
+  
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 10px;
+    font-weight: bold; 
+    margin-left: 10px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 300px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width:440px) and (max-width:768px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 710px;
+    margin-left: 30px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 95px;
+    margin-left: 10px; 
+   }
+  .cal-card {
+    position: absolute;
+    top: 240px;
+    right: 80px;
+    z-index: 999;
+     
+  }
+  .checkout-form {
+    width: 350px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: -10px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -40px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 240px;
+    right: 40px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 10px;
+    font-weight: bold; 
+    margin-left: 10px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 300px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 900px;
+    margin-left: 65px;
+  
+  }
+  .Guestimage{
+    height: 200px;
+    /* width: fit-content; */
+    
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 180px;
+    margin-left: 20px; 
+   }
+  .cal-card {
+    position: absolute;
+    top: 240px;
+    right: 10px;
+    z-index: 999;
+     
+  }
+  .checkout-form {
+    width: 500px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 20px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -150px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 170px;
+    right: 70px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 1px;
+    font-weight: bold; 
+    margin-left: 38px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 480px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width:1030px) and (max-width:1369px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    overflow: hidden;
+    width: 1300px;
+    margin-left: 30px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 280px;
+    margin-left: 20px; 
+   }
+  .checkout-form {
+    width: 700px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 10px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-right: 80px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 240px;
+    right: 60px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 1px;
+    font-weight: bold; 
+    margin-left: 38px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 680px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width:1370px) and (max-width:1445px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    overflow: hidden;
+    width: 1200px;
+    margin-left: 120px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 230px;
+    margin-left: 20px; 
+   }
+  .checkout-form {
+    width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 70px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -245px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 200px;
+    right: 160px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 1px;
+    font-weight: bold; 
+    margin-left: 38px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 580px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width:1600px) and (max-width:1920px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 100px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 280px;
+    margin-left: 20px; 
+   }
+  .checkout-form {
+    width: 700px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 70px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -355px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 200px;
+    right: 160px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 1px;
+    font-weight: bold; 
+    margin-left: 28px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 680px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width:2000px) and (max-width:2560px){
+  .hotelRoomCardContainer2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 130px;
+  
+  }
+  .checkout-form button {
+     margin-top: 15px;
+    padding: 15px 340px;
+    margin-left: 20px; 
+   }
+  .checkout-form {
+    width: 700px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-left: 70px; 
+    margin-top: 20px;
+  }
+  
+  .checkout-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    margin-left: -355px;
+    color: #618e95;
+  }
+  .cal-card {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    z-index: 999;
+     
+  }
+  
+  .checkout-form label {
+    flex: 1; 
+    margin-right: 1px;
+    font-weight: bold; 
+    margin-left: 28px;
+  }
+  .checkout-form hr {
+    border: none; 
+    border-top: 1px solid #ddd; 
+    margin: 1px 0;
+    width: 790px;
+    margin-left: 20px;
+  }
+}

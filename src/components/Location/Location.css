@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.location-main{
+  width: 95%;
+  background-color: #33cccc;
+  height: 500px;
+  background-image: url("../../assets/images/Restaurant1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+.location-sub-right-mobile{
+  display: none;
+}
+.location-title{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-family: "Cinzel", serif;
+    font-weight:500;
+    padding: 35px;
+}
+.location-content{
+  display: flex;
+}
+.location-card{
+  padding-top: 10%;
+}
+.location-sub{
+  
+    margin-left: auto;
+    margin-right: auto;
+  width: 95%;
+  border: 1px solid #33cccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.location-sub-left{
+    width: 60%;
+    padding: 10px;
+}
+.location-sub-right{
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #33cccc;
+    margin-right: 3%;
+    
+    
+}
+.location-sub-left p,
+.location-sub-left h1{
+    margin-left: 30px;
+    text-align: justify;
+    margin-right: 10px;
+}
+.location-sub-title{
+   line-height: 0px;
+   margin-top: 30px;
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   margin-bottom: 30px;
+   font-family: "Cinzel", serif;
+   font-size: x-large;
+}
+.location-sub-content{
+    color: rgba(51, 49, 49, 0.767);
+    opacity: 1;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 40px; 
+    text-align: justify;
+    margin-right: 40px; 
+    font-family: "lato", sans-serif;
+    
+}
+.location-sub-right{
+align-items: center;
+
+}
+.location-map{
+    margin-top: 15px;
+}
+.location-line{
+  border: none;           
+  height: 1px;             
+  background-color:  #33cccc; 
+  margin-left: 30px; 
+}
+.location-sub-title-OnFoot{
+  margin-left: 40px; 
+}
+.location-sub-content-ex{
+
+}
+
+@media screen and (max-width: 768px) {
+  .location-main{
+    width: 100%;
+    height: 600px;
+    background-image: url("../../assets/images/image_gellery/image6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+    .location-title{
+      text-align: center;
+      font-size: 50px;
+      color: rgb(0, 0, 0);
+      padding: 5px;
+  }
+    
+    .location-sub {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+      }
+      
+      .location-sub-left {
+        width: 95%;
+        padding: 5px;
+    
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 0;
+      }
+      
+      .location-sub-right {
+        width: 95%;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+      }
+      
+      .location-sub-title {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      
+      .location-sub-content {
+        margin-top: 10px;
+      }
+      
+      .location-map {
+        margin-top: 20px;
+        width: 100%;
+      }
+      .location-sitecard{
+        margin-top: 25px;
+      }
+      .location-sub-right-mobile{
+        width: 93%;
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #33cccc;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        height: 300px;
+      }
+      .location-sub-right-mobile iframe{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      .location-line{
+        border: none;           
+        height: 1px;             
+        background-color:  #33cccc; 
+        margin-left: 10px;
+        margin-right: 10px; 
+        width: 100%;
+      }
+      
+}

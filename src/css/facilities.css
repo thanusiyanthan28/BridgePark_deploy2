@@ -1,0 +1,439 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.facilitiesbody {
+  background: #ffffff;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+.facilities-sub-content{
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "lato", sans-serif;
+  text-align: center;
+  
+}
+
+.facilitiescontainer {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: 30px; 
+  margin-bottom: 10px;
+  
+}
+
+.facilitiescard {
+  margin: 10px; /* Add some margin between cards */
+  padding: 10px; /* Add some padding to the cards */
+  border: 1px solid #e9e4e4; 
+  border-radius: 5px; 
+  width: 100px;
+  height: 100px; 
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+.facilitiesiconcontainer {
+  display: flex;
+  justify-content: center; /* Center the icon horizontally */
+}
+
+.facilitiescardcontent {
+  text-align: center; /* Center the text content */
+  
+}
+
+.facilitiescard:hover {
+  box-shadow: 0 4px 1rem -4px #33cccc;
+  transform: translateY(6px);
+}
+
+
+.facilitiescardcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  font-size: 14px;
+  font-family: "lato", sans-serif;
+  margin-bottom: 15px;
+  font-weight: bold;
+
+ 
+}
+
+.facilitieshead {
+  color: #000;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  /* font-weight: 500; */
+  /* font-style: normal; */
+  margin-top: 30px;
+  
+}
+
+.facilitiespara {
+  color: #000;
+  text-align: center;
+  margin-top: 0px;
+  font-family: 'Lato';
+  position: absolute;
+  margin-bottom: 50px;
+  margin-right: 320px;
+  margin-left: 320px;
+}
+
+.fs-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Optional: If you want to center it vertically within the entire viewport */
+}
+
+.facilitiesbutton1 {
+  font-size: 100%;
+  color: white;
+  background-color: #669399;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 322px;
+  border-radius: 3px;
+  height: 40px;
+}
+.facilitiesbutton1:hover {
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
+}
+
+.facilitieshidebutton {
+  display: inline-block;
+  margin-left: 0px;
+  border: none;
+  padding: 20px;
+  background-color: #fffff9;
+  color: #669399;
+
+}
+
+.facilitieshidebutton span {
+  display: block;
+  margin-top: 15px;
+  color: #669399;
+  font-weight: bold;
+  font-size: 12px;
+ 
+}
+
+.fscolumnlist {
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  grid-template-rows: repeat(3, 300px);
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-left: 220px;
+}
+
+.fscolumn {
+  background-color: none;
+  padding: 0px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fscolumnh2 {
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+.fscolumn ul {
+  margin-top: 0;
+  padding-left: 0px;
+}
+
+.fscolumn ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.fscolumn ul li::before {
+  content: '\2713';
+  margin: 6px;
+  top: 0;
+}
+
+/* Media queries */
+
+/* Max width 768px */
+@media only screen and (min-width:440px) and (max-width:768px) {
+  .facilitiesbutton1{
+    margin-bottom: 10px;
+  }
+  .facilitiespara{
+    margin-left:100px ;
+    margin-right:100px
+    
+  }
+  .facilitieshidebutton{
+    margin-bottom: -50px;
+  }
+  .fscolumnlist{
+    margin-left: 20px;
+    margin-top: 60px;
+   
+    font-size: 12px;
+    margin-bottom: -200px;
+  }
+}
+  
+/* Max width 435px */
+@media(max-width:435px) {
+   .facilitiescard {
+    width: 65%;
+    margin: -1.8rem;
+    box-shadow: px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    height: 130px;
+    margin-left: 25px;
+  }
+
+  .facilitiescardcontent {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .facilitiescontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+
+  }
+
+  .facilitiesbutton1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .facilitiespara {
+    margin-left: 35px;
+    margin-right: 35px;
+  
+    
+  }
+
+  .facilitieshidebutton {
+    margin-top: 50px;
+
+  }
+
+  .fscolumnlist {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    grid-template-rows: repeat(1, 600px);
+    grid-gap: 0px;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width:1030px) and (max-width:1369px) {
+  .facilitiescardscontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+    height: 130px;
+
+    margin-left: 380px;
+  }
+
+  .facilitiespara {
+
+    color: #000;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 75px;
+    margin-left: 70px;
+
+  }
+
+  .facilitiesbutton1 {
+    margin-left: 0px;
+  }
+  .facilitieshidebutton {
+    margin-left: 0px;
+  }
+  .fscolumnlist {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+    grid-template-rows: repeat(3, 300px);
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+  
+  .facilitiescontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 100px; 
+  }
+  .facilitiesbutton1 {
+    /* margin-left: 440px; */
+  }
+  .facilitiescardcontent {
+   
+    height: 30%;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .facilitiespara {
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 1px;
+    margin-left: 10px;
+
+  }
+
+  .facilitieshidebutton {
+    margin-top: 50px;
+  }
+
+  .fscolumnlist {
+    grid-gap: 5px;
+    font-size: 11px;
+    margin-left: 100px;
+    margin-bottom: -250px;
+    margin-top: 60px;
+  }
+
+  .facilitieshead {
+    margin-left: 0px;
+  }
+
+}
+
+@media only screen and (min-width:1370px) and (max-width:1440px) {
+  .facilitiespara {
+
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 120px;
+    margin-left: 100px;
+
+  }
+
+  .facilitieshidebutton {
+    margin-left: 0px;
+  }
+  
+  .facilitiesbutton1 {
+    margin-left: 0px;
+  }
+  .fscolumnlist {
+    grid-gap: 5px;
+    font-size: 15px;
+    margin-left: 170px;
+    margin-bottom: -100px;
+    
+  }
+}
+@media only screen and (min-width:1600px) and (max-width:1920px) {
+  .facilitiespara {
+
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 120px;
+    margin-left: 180px;
+
+  }
+
+  .facilitieshidebutton {
+    margin-left: 0px;
+  }
+  
+  .facilitiesbutton1 {
+    margin-left: 0px;
+  }
+  .fscolumnlist {
+    grid-gap: 5px;
+    font-size: 15px;
+    margin-left: 250px;
+    margin-bottom: -100px;
+    
+  }
+}
+@media only screen and (min-width:2000px) and (max-width:2560px){
+
+  
+  .facilitiescard {
+    width: 150px;
+    height: 150px; 
+  }
+  
+  .facilitiescardcontent {
+    height: 60%;
+    font-size: 12px;
+  
+  }
+  
+  .facilitiespara {
+    margin-right: 320px;
+    margin-left: 490px;
+  }
+  
+  .facilitiesbutton1 {
+   
+    margin-left: 0px;
+    border-radius: 0px;
+  }
+  
+  .facilitieshidebutton {
+    margin-left: 0px;
+  }
+  
+  .facilitieshidebutton span {
+    font-size: 15px;
+  }
+  
+  .fscolumnlist {
+    margin-left: 370px;
+  } 
+  
+}
+
+
+
+.room-info-column {
+
+  display: flex;
+  margin-left: 35px;
+  margin-bottom: -50px;
+}

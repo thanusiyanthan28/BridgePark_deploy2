@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.header-update-container{
+  display: flex;
+  height: 50px;
+
+}
+.header-font{
+  font-family: "lato", serif;
+}
+
+.header-update{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight:400;
+  border-bottom: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  position: fixed;
+ z-index: 999;
+ 
+
+  
+}
+.header-nav-bar-left {
+  width: 100%;
+}
+.header-nav-bar-left .ant-menu-item{
+
+ }
+.header-button{
+  color: white;
+  background-color:#669399;
+  padding: 7px;
+  border: none;
+ 
+}
+.ant-menu-horizontal {
+  border-bottom: none; /* Remove the bottom border */
+}
+.header-update-toggle-button {
+  display: none;
+}
+
+
+.header-update-profile{
+  position: relative;
+  display: flex;
+  margin-top: -70px;
+  margin-left: -950px;
+  width: 30px;
+  height: 30px;
+  
+}
+.header-button1{
+  /* width: 50px; */
+}
+
+@media only screen and (max-width: 768px) {
+  .header-nav-bar-left .ant-menu-item,
+  .header-nav-bar-right .ant-menu-item{
+     display: none;
+  }
+  
+  .header-update-toggle-button {
+    display: flex; /* Display toggle button on screens smaller than 768px */
+   
+    margin: 10px;
+    float: right;
+   margin-right: 10px;
+  }
+
+
+  .update-header-drawer{
+   
+  }
+  .header-update{
+    position: relative;
+    z-index: 2;
+  }
+ .ant-drawer{
+  }
+  .drawer-close-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    z-index: 99999999;
+  }
+}
+/* HeaderUpdate.css */
+.custom-dropdown-menu {
+  width: 100px; /* Adjust the width as needed */
+}
+
+.custom-dropdown-item {
+  padding: 10px 20px; /* Adjust padding for better spacing */
+}
+.update-header-logo{
+  margin-left: 10px;
+  padding: 5px;
+  margin-right: 20px;
+}

@@ -1,0 +1,243 @@
+.meeting-my-class {
+  width: 100%;
+  border: 1;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  height: 50%;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.meeting-my-class-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+}
+
+.meeting-card-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 5px;
+  height: 600px;
+}
+
+.meeting-cards-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: translateX(calc(var(--currentIndex) * -300px + var(--currentIndex) * 0px));
+  margin-left: -28%;
+  
+}
+
+.meeting-card {
+  flex: 0 0 300px;
+  background-color: #fff7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+ 
+}
+
+.meeting-card.meeting-active {
+  opacity: 1;
+  z-index: 9999;
+  transform: scale(1.1);
+  border-radius: 5px;
+
+}
+
+.meeting-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+ 
+}
+.meeting-active img {
+  width:97%;
+  margin-top: 1.5%;
+  border-radius: 15px;
+}
+
+.meeting-non-active {
+  /* filter: blur(0.5px); */
+}
+
+.meeting-card.meeting-active:hover {
+  transform: scale(1.15);
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 1rem #33cccc;
+}
+.meeting-active .meeting-text{
+text-align: left;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+color: black
+;
+}
+.meeting-text{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+.meeting-non-active .meeting-text {
+  
+margin-top: -150px;
+}
+.meeting-title {
+  width: 100%;
+}
+
+
+.meeting-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.meeting-prev-btn {
+  margin-left: 10px;
+  margin-top: 0px;
+  z-index: 99999;
+}
+
+.meeting-next-btn {
+  margin-right: 0px;
+  margin-left: 96%;
+  margin-top: 0px;
+  z-index: 99999;
+}
+
+@media (max-width: 430px) {
+  .meeting-cards-container {
+ 
+  }
+  .meeting-card {
+    flex: 0 0 280px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+/* galaxy s20 */
+@media (max-width: 412px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 280px));
+  }
+  .meeting-card {
+    flex: 0 0 280px;
+  }
+}
+
+/* iphone 14pro max */
+@media (width: 430px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 280px));
+  }
+  .meeting-card {
+    flex: 0 0 280px;
+  }
+}
+
+/* iphone 12 pro */
+@media (width: 390px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 260px));
+  }
+  .meeting-card {
+    flex: 0 0 260px;
+  }
+}
+
+/* galaxy S8+ */
+@media (width: 360px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 240px));
+  }
+  .meeting-card {
+    flex: 0 0 240px;
+  }
+}
+
+/* ipad mini 768 px */
+@media (width: 768px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+  .meeting-card {
+    flex: 0 0 300px;
+  }
+}
+
+/* ipad pro */
+@media (width: 1024px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+  .meeting-card {
+    flex: 0 0 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+@media (min-width: 1440px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+@media (min-width: 1366px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+/* 1924px */
+@media (min-width: 1920px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+@media (min-width: 2560px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+
+@media (min-width: 3840px) {
+  .meeting-cards-container {
+    transform: translateX(calc(50% - var(--currentIndex) * 300px));
+  }
+}
+

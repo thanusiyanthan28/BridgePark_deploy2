@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.pano-image-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
+  .pano-image-title{
+    font-family: "Cinzel", serif;
+    width: 80%;
+  }
+  .pano-image-sub{
+      background-color: #fff;
+  }
+  .pano-image-image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      
+    }
+    .pano-image-image-container{
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    
+    .pano-image-image-container {
+      width: 300px;
+      height: 400px;
+      /* max-width: 200px; Adjust based on your preference */
+      overflow: hidden;
+      /* width: 300px; */
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      /* height: 200px; */
+    }
+    .pano-second-image-style{
+      height: 440px;
+      margin-top: -20px;
+    }
+    
+    .pano-image-image-container img {
+      width: 300px;
+      height:440px ;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    
+    .pano-image-image-container:hover {
+      transform: scale(1.05);
+    }
+    .pano-image-all-button{
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      width: 100%;
+     
+  
+     
+    }
+    
+    .pano-image-nav-btn-nxt,
+    .pano-image-nav-btn-pre {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+  
+    
+    .pano-image-nav-btn:hover {
+      color: #555;
+    }
+    
+    .pano-image-modal {
+      position: fixed;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.808);
+      padding: 30px 0px 5px 0px;
+      border-radius: 10px;
+      z-index: 1000;
+      height: 500px;
+      width: 800px;
+      
+    }
+    
+    .pano-image-modal iframe {
+      /* max-width: 100%; */
+      /* max-height: 80vh; */
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      width: 790px;
+      height: 500px;
+      border-radius: 10px;
+    }
+    
+    .pano-image-close-btn {
+      position: absolute;
+      top: -6.5px;
+      right: -2px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 34px;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .pano-image-close-btn:hover {
+      color: #ccc;
+    }
+    .pano-image-main2{
+      
+      display: flex;
+      align-items: center;
+  
+    }
+    .pano-image-inactive-btn{
+      opacity: 0.3;
+    }
+    .pano-image-title{
+        color: black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pano-image-discription 
+   {
+        color: black;
+        margin-top: -10px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:larger;
+        font-family: "lato", sans-serif;
+    }
+  
+    .pano-image-discription h2{
+        color: black;
+        margin-top: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .pano-image-discription{
+        margin-top: -30px;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+    .pano-image-nav-btn-nxt,
+    .pano-image-nav-btn-pre {
+        /* Define initial styles for the div */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        transition: transform 0.3s ease; /* Add transition for smooth effect */
+      }
+      
+      .pano-image-nav-btn-nxt:hover,
+      .pano-image-nav-btn-pre:hover {
+        /* Define styles for the div when hovered */
+        transform: scale(1.5); /* Zoom effect: increase size by 10% */
+      }
+      
+      .pano-image-nav-btn-nxt:hover .anticon svg,
+      .pano-image-nav-btn-pre:hover .anticon svg  {
+        /* Define styles for the RightOutlined icon when its parent div is hovered */
+        color: rgb(0, 238, 255); /* Change the color to red (you can use any color you prefer) */
+      }
+      .pano-image-title-line{
+        border: none;           
+        height: 1px;             
+        background-color:  #33cccc; 
+        width: 70%;
+         
+      }
+      .pano-image-main{
+        margin-bottom: 50px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .pano-image-modal{
+          background-color: rgba(0, 0, 0, 0.808);
+          padding: 30px 0px 5px 0px;
+          border-radius: 10px;
+          z-index: 1000;
+          height: 400px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+      
+          
+      }
+      .pano-image-modal iframe {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .pano-second-image-style{
+        height: 400px;
+        margin-top: 0;
+      }
+    }
+      
+    

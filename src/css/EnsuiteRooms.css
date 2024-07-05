@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+.EnsuiteRoom-cardContainor {
+  margin-top: 50px;
+}
+.EnsuiteRoom-containor {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.EnsuiteRoom-TextWrapper {
+  padding: 20px;
+}
+
+.EnsuiteRoom-heading {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "Cinzel", serif;
+}
+
+.EnsuiteRoomMainDiv {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.EnsuiteRoom-row {
+  width: 90%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center;
+  align-items: center;
+}
+.EnsuiteRoom-col {
+  display: flex;
+  flex-direction: row;
+  gap: auto;
+  justify-content: left;
+}
+
+@media (max-width: 768px) {
+  .EnsuiteRoom-Container {
+    overflow-x: hidden;
+    margin-top: 600px;
+    margin-left: 15px;
+    align-items: center;
+  }
+  .EnsuiteRoom-sitecard {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .EnsuiteRoom-heading {
+    text-align: center;
+    font-size: 30px;
+    margin-left: -35px;
+  }
+  .EnsuiteRoomMainDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}

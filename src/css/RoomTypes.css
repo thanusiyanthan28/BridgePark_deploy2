@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+.RoomType-containor {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.RoomType-sub-content{
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 40px; 
+  text-align: justify;
+  margin-right: 40px; 
+  font-family: "lato", sans-serif;
+  
+}
+/* For Card */
+.RoomType-CardContainor{
+  margin-top: 50px;
+}
+/* Our Room Heading */
+.RoomType-TextWrapper{
+  padding-top: 20px;
+}
+.RoomType-header {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+/* Top paragraph */
+.RoomType-p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 0 120px;
+  text-align: center;
+  /* margin: 0 30px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.RoomType-subHead {
+  /* margin: 20px auto; Centering horizontally */
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.RoomType-subHading {
+  text-align: left;
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+.RoomType-typecontainor {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+@media only screen and (max-width: 768px) {
+  .RoomType-containor {
+    align-items: center;
+  }
+  /* Our Room topic */
+  .RoomType-header {
+    text-align: center;
+    font-size: 37px;
+  }
+  /* Main topic paragraph */
+  .RoomType-p {
+    text-align: center;
+    padding: 10px;
+    margin-top: -10px;
+  }
+  .RoomType-subHading {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+    padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 2000px) and (max-width: 2560px) {
+  .RoomType-sub {
+    text-align: center;
+    margin: 0 150px;
+  }
+  .RoomType-subHading {
+    text-align: left;
+    margin-left: 200px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+    margin-left: 200px;
+  }
+  .RoomType-p{
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width:1600px) and (max-width:1920px){
+  .RoomType-sub {
+    text-align: center;
+    margin: 0 50px;
+  }
+  .RoomType-subHading {
+    text-align: left;
+    margin-left: 150px;
+  }
+  .RoomType-typecontainor {
+    align-items: center;
+    margin-left: 150px;
+  }
+  .RoomType-p{
+    font-size: 20px;
+  }
+}

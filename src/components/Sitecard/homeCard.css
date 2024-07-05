@@ -1,0 +1,310 @@
+.app-container-site-home {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-container2-site-home {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 0px solid;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 430px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+  }
+  
+  .card-site-home {
+    border: 0px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+  }
+  .site-home-p{
+    font-size: 10px;
+  }
+  .card-body-site-home {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-site-home {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px; 
+    margin-bottom: 10px;
+    margin-top:-15px;
+    margin-left: 0px;
+  }
+  
+  .tr-site-home {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .td-site-home {
+    flex: 1; 
+    padding: 10px; 
+    text-align: left; 
+  }
+  
+  
+  .td-site-home:nth-child(2) {
+    border-left: 1px solid #ccc;
+  }
+  .tr-site-home td {
+    border-bottom: none;
+  }
+  
+  .td-site-home.label-cell {
+    border-bottom: none;
+  }
+  
+  
+  .button-site-home {
+    padding: 10px 20px;
+    background-color: #618e95;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  
+  .card-body-site-home table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .card-body-site-home td {
+    padding: 10px;
+  }
+  
+  .card-body-site-home label {
+    display: block;
+  }
+  
+  .card-body-site-home input[type="number"] {
+    width: 30px;
+    border: none; 
+    text-align: center; 
+  }
+  
+  .card-body-site-home tr:not(:last-child) {
+    border-bottom: 1px solid #ddd; 
+  }
+  .date-input-container-site-home .ant-picker-input input {
+    width: 100%; 
+    padding: 0px; 
+    font-size: 15px; 
+    border: 0px solid #ccc; 
+    font-weight: 500; 
+  }
+  .booking-link-home{
+    color: #618e95;
+  }
+  
+  .last-column-site-home {
+    border-right: none;
+     /* Remove border on the right side of the last column */
+  }
+  .valueupdown-site-home{
+    background-color: #f5f2f2;
+    border-radius: 90%;
+    color: #618e95;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .check-head-site-home{
+    font-weight: bold;
+   
+    
+  }
+  .price-site-home{
+    float: right;
+    font-weight: 500;
+  }
+  .day-of-week{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .custom-date-picker{
+    font-size: 25px;
+  }
+  
+  /* CSS */
+  .react-datepicker-wrapper input::placeholder {
+    font-size: 25px;
+  }
+  .date-input-container-site-home .ant-picker-input input::placeholder {
+    font-style: normal;
+    font-size: 15px;
+    color: #0a0a0a;
+    font-weight: 600;
+  }
+  .date-input-container-site-home {
+    display: flex;
+  
+    align-items: center; /* Align items vertically */
+  }
+  
+  .calendar-icon-site-home {
+    position:relative;
+    right: 20px; /* Adjust the right offset as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #618e95;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+  }
+  
+  .counter-site-home input[type="number"] {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 20px; /* Increase font size */
+  }
+  .counter-site-home input[type="text"] {
+    width: 18px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 15px; /* Increase font size */
+    text-align: center; /* Center align text */
+    border: none; /* Remove border */
+    outline: none; /* Remove focus outline */
+  }
+  
+  .counter-site-home input[type="text"]::-webkit-inner-spin-button,
+  .counter-site-home input[type="text"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove default spin buttons */
+    margin: 0; /* Remove margin */
+  }
+  .site-card-home-popup {
+    position: absolute;
+    top: 280px;
+    right: 70px;
+    z-index: 999; /* Ensure it's above other content */
+  }
+
+  .home-para{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "leto";
+  }
+  
+  @media(max-width:435px){
+    .app-container-site-home {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 0px;
+      
+    }
+    .app-container2-site-home {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px ;
+        background-color: #f5f5f5;
+        border-radius: 15px;
+        height: 460px;
+        margin-bottom: 10px;
+      }
+      .card-site-home {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 5px;
+       
+       
+      }
+      .table-site-home {
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px; 
+        margin-bottom: 20px;
+        margin-top:0px;
+        margin-left: 1px;/* Collapse table borders */
+      }
+      .button-site-home {
+        padding: 8px 15px;
+        background-color: #618e95;
+        color: #fff;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+      }
+      .check-head-site-home{
+        margin-top: 0px;
+      }
+      .react-datepicker-wrapper input::placeholder {
+        font-size: 15px; 
+      }
+      .card-body-site-home td {
+        padding: 10px;
+      }
+      
+      .card-body-site-home label {
+        display: block;
+      }
+    
+     
+      .valueupdown-site-home{
+        background-color: #f5f2f2;
+        border-radius: 90%;
+        color: #618e95;
+        border: none;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .react-datepicker-wrapper input {
+        border: none;
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+      }
+      
+      .day-of-week{
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .custom-date-picker{
+        font-size: 25px;
+      }
+      
+    
+      
+      .calendar-icon-site-home {
+        position:relative;
+        right: 15px;
+        margin-top: 40px;
+        margin-left: 25px;
+      
+      }
+      
+      .counter-site-home input[type="number"] {
+        width: 40px; /* Adjust the width as needed */
+        height: 40px; /* Adjust the height as needed */
+        font-size: 20px; /* Increase font size */
+      }
+      .counter-site-home input[type="text"] {
+        width: 40px; /* Adjust the width as needed */
+        height: 40px; /* Adjust the height as needed */
+        font-size: 20px; /* Increase font size */
+    
+      }
+      
+      .site-card-home-popup {
+        position: absolute;
+        top: 300px;
+        right: 30px;
+       
+      }
+  }

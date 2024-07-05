@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.house-rules-container {
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.house-rules-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.house-rules-main-title {
+  flex: 1;
+}
+
+.house-rules-title {
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+    font-family: "Cinzel", serif;
+    font-weight:500;
+}
+
+.house-rules-availability-button .availability-button {
+  background-color: #53949A;
+  font-size: 100%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 40px;
+  font-family: "lato", serif;
+}
+
+.house-rules-availability-button .availability-button:hover {
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
+}
+
+.house-rules-description {
+  color: rgba(51, 49, 49, 0.767);
+  font-weight: 400;
+  font-family: "lato", sans-serif;
+}
+
+.house-rules-container-body {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.house-rules-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.house-rules-table th,
+.house-rules-table td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.house-rules-table td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-family: "lato", sans-serif;
+}
+
+.house-rules-table td li {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-bottom: 10px;
+  vertical-align: top;
+  margin-top: -15px;
+  padding-bottom: 15px;
+}
+
+.house-rules-table-ul {
+  vertical-align: top;
+}
+
+.house-rules-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.house-rules-icon-rotate {
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+}
+
+.house-rules-info {
+  font-weight: bold;
+  color: #333;
+  width: 200px;
+  font-family: "lato", sans-serif;
+}
+
+.house-rules-table-ul {
+  vertical-align: top;
+}
+
+.house-rule-sub-topic {
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "lato", sans-serif;
+}
+
+.house-rules-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 435px) {
+  .house-rules-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .house-rules-description {
+    order: 1;
+  }
+
+  .house-rules-availability-button {
+    width: 100%;
+    margin-top: 20px;
+    order: 2;
+  }
+
+  .house-rules-availability-button .availability-button {
+    width: 100%;
+    padding: 12px;
+  }
+  .house-rules-table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .house-rules-table td {
+    display: block;
+    text-align: center;
+  }
+
+  .house-rules-table th,
+  .house-rules-table td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  .house-rules-icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .house-rules-info {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .title-and-image-container {
+    text-align: center;
+  }
+
+  .house-rules-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .house-rules-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 768px) {
+  .house-rules-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .house-rules-description {
+    margin-bottom: 20px;
+  }
+
+  .house-rules-availability-button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .house-rules-availability-button .availability-button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .house-rules-availability-button .availability-button {
+    padding: 12px 60px;
+  }
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1369px) {
+  .house-rules-availability-button .availability-button {
+    padding: 12px 80px;
+  }
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1440px) {
+  .house-rules-availability-button .availability-button {
+    padding: 12px 100px;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+  .house-rules-availability-button .availability-button {
+    padding: 12px 120px;
+  }
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 2560px) {
+  .house-rules-availability-button .availability-button {
+    padding: 12px 150px;
+  }
+}

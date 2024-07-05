@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.image-galley-slider-image-wrapper{
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.image-galley-slider-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.image-galley-slider-image-wrapper img {
+    transition: transform 2s ease-in-out;
+       transform-style: flat;
+   
+   
+}
+
+.image-galley-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px; /* Add gap between images */
+    padding: 0 10px; /* Add padding to adjust for the gap */
+}
+
+.image-galley-slider-image {
+    object-fit: cover; /* Ensure the image covers its container */
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add border-radius for rounded corners */
+}
+
+.image-galley-size-1 {
+    flex: 0 0 calc(60% - 10px);
+    height: 400px; /* Set a consistent height */
+}
+
+.image-galley-size-2 {
+    flex: 0 0 calc(25% - 10px);
+    height: 350px; /* Set a consistent height */
+}
+
+.image-galley-size-3 {
+    flex: 0 0 calc(15% - 10px);
+    height: 300px; /* Set a consistent height */
+}
+
+.image-galley-arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.image-galley-arrow:hover {
+    transform: scale(1.5); /* Zoom in on hover */
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+.image-galley-arrow:hover .anticon svg {
+    color: rgb(255, 255, 255); 
+}
+
+.image-galley-arrow.image-galley-left {
+    left: 0;
+    margin-left: 10px;
+}
+
+.image-galley-arrow.image-galley-right {
+    right: 0;
+    margin-right: 10px;
+}
+
+.image-galley-slider-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-1 {
+    flex: 0 0 calc(60%);
+    height: 500px;
+ 
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-2 {
+    flex: 0 0 calc(25% - 10px);
+    height: 500px;
+ 
+}
+
+.image-galley-slider-image-wrapper.image-galley-size-3 {
+    flex: 0 0 calc(15% - 10px);
+    height: 500px;
+    
+}
+
+.image-galley-slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: add border-radius for rounded corners */ 
+}
+
+.image-galley-slider-image:hover {
+    transform: scale(1.2); /* Zoom in on hover */
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+    transition: transform 0.3s ease; 
+}
+
+.image-galley-title {
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Cinzel", serif;
+}
+
+
+
+@media (max-width: 768px) {
+    .image-galley-size-2,
+    .image-galley-size-3 {
+        display: none;
+    }
+    .image-galley-slider-image-wrapper.image-galley-size-1 {
+        flex: 0 0 calc(100%);
+        height: 500px;
+    }
+    .image-galley-slider-image-wrapper.image-galley-size-2 {
+        flex: 0 0 calc(0);
+        height: 500px;
+    }
+    .image-galley-slider-image-wrapper.image-galley-size-3 {
+        flex: 0 0 calc(0);
+        height: 500px;
+    }
+    .image-galley-arrow {
+        display: none;
+    }
+}

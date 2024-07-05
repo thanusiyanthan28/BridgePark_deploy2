@@ -1,0 +1,62 @@
+.profile-wrapper {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.profile-avatar {
+  background-color: #1890ff; 
+  font-size: 20px; 
+  cursor: pointer;
+}
+.profile-container {
+  text-align: center;
+}
+
+.profile-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.custom-button {
+  border: none;
+  width: 100px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s, border-radius 0.3s; 
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.custom-button:hover {
+  background-color: blue; 
+  border-radius: 10px; 
+}
+
+.dropdown-menu {
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+}
+.custom-menu-item {
+  font-size: 16px !important; 
+  font-weight: 600 !important;
+}
+.Profile-icon {
+  margin-right: 10px;
+}

@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.signUpIn-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+.signUpIn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.signUpIn-fullRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.signUpIn-Logpicture {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpIn-Logpicture img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.signUpIn-header {
+  flex: 1;
+  padding: 20px;
+  margin: 50px 25px;
+}
+
+.signUpIn-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #669399;
+}
+
+.signUpIn-Subtext {
+  margin-top: 10px;
+  color: #555;
+  font-size: 11px;
+  
+}
+
+.signUpIn-inputs {
+  margin-top: 30px;
+}
+
+.signUpIn-input {
+  margin-bottom: 10px;
+  color: #d5d5d5;
+}
+
+.signUpIn-input input {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #f4f5fb;
+}
+.signUpIn-passwordWrapper {
+  position: relative;
+}
+.signUpIn-ResetpasswordWrapper {
+  position: relative;
+  margin-top: 15px;
+}
+.signUpIn-togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.signUpIn-input input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #d5d5d5;
+  font-size: 13px;
+}
+
+.signUpIn-SubmitContainor {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.signUpIn-submit {
+  background-color: #669399;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.signUpIn-signUpGoogle {
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #669399;
+  cursor: pointer;
+}
+
+.signUpIn-alreadyAccount {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signUpIn-alreadyAccount span {
+  color: #007bff;
+  cursor: pointer;
+}
+.signUpIn-input input:focus {
+  outline: none;
+}
+.signUpIn-alreadyAccount a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #6aafe5;
+}
+
+.signUpIn-alreadyAccount a:hover {
+  text-decoration: none;
+}
+
+.signUpIn-error {
+  color: red;
+  font-size: 14px;
+}
+.signUpIn-successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.signUpIn-forgotPassword {
+  text-align: right;
+}
+
+.signUpIn-forgotPassword a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #6aafe5;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+ 
+  .signUpIn-Logpicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    z-index: -1;
+  }
+ .signUpIn-Logpicture img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+  }
+ .signUpIn-header {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    margin: 50px;
+    background-color: white;
+    width: 70%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+ .signUpIn-inputs {
+    margin-top: 20px;
+  }
+  .signUpIn-input input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #f4f5fb;
+  }
+}
+@media (min-width:501) and (max-width: 768px) {
+ 
+  .signUpIn-Logpicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    z-index: -1;
+  }
+ .signUpIn-Logpicture img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+  }
+ .signUpIn-header {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+ .signUpIn-inputs {
+    margin-top: 20px;
+  }
+  .signUpIn-input input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #f4f5fb;
+  }
+}

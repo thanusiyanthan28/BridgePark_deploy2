@@ -1,50 +1,212 @@
+.custom-datepicker.ant-picker-outlined{
+  border: none;
+}
+.custom-datepicker.ant-picker .ant-picker-input >input{
+  font-size: 20px;
+  font-weight: bold;
+}
+.custom-datepicker.ant-picker .ant-picker-input{
+  width: 70%;
+}
+.custom-datepicker .anticon{
+  color: #669399;
+}
+.ant-picker .ant-picker-clear {}
+.card .ant-row {
+   margin-top: -3px;
+}
+.btnPrimary-check:hover {
+  background-color: #D5ECF4 !important;
+  color: white; /* Optional: Change the text color to white for better contrast */
+  border: 1px solid  black !important;
+}
+
 .card {
-    border: 1px solid #ccc;
-    border-radius: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    overflow: hidden;
-    width: 300px; /* Adjust width as needed */
-    background-color: white;
-    color: black;
-    width: 1600px; /* Adjust width as needed */
-    height: 180px; 
-    margin-left: 150px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+
+  margin: 10px;
+  overflow: hidden;
+  width: 90% !important;
+  background-color: white;
+  color: black;
+  height: 130px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body {
+  padding: 16px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+}
+
+.divider {
+  height: 100px;
+  background: black;
+}
+.divider4{
+  display: none;
+}
+
+.card-titleH1 {
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: "lato", serif;
+}
+
+.card-titleH3 {
+  color: rgba(71, 54, 54, 0.5);
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "lato", serif;
+}
+
+.containerCol {
+  text-align: center;
+  line-height: 10px;
+}
+
+.button-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrimary-check {
+  background-color: #669399;
+  border-radius: 0 !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 50px 0 50px ;
+  margin-left: 60%;
+  height: 50px;
+  font-family: "lato", serif;
+}
+.ant-space {
+  display: flex;
+  align-items: center;
+}
+
+.ant-input {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+  .titleH1, .titleH3 {
+    font-size: 12px;
+  }
+  .btnPrimary-check  {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px ;
+    margin-left: 40%;
+    height: 50px;
+    font-size: 12px;
+  }
+  .custom-datepicker.ant-picker .ant-picker-input >input{
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1225px) and (max-width: 1280px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px ;
+    margin-left: 40%;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  .titleH1, .titleH3 {
+    font-size: 15px;
+  }
+  .btnPrimary-check {
+    padding: 0 40px 0 40px ;
+    margin-left: 50%;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+
+@media (min-width: 1367px) and (max-width: 1440px) {
+  .titleH1, .titleH3 {
+    font-size: 15px;
+  }
+  .btnPrimary-check {
+    padding: 0 40px 0 40px ;
+    margin-left: 60%;
+    height: 50px;
+  }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1924px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 60px 0 60px ;
+    margin-left: 50%;
+    height: 60px;
+    font-size: 12px;
   }
   
-  .card-body {
-    padding: 16px;
-    text-align: left;
-    margin-left: 30px;
-  }
-  
-  .devider{
-    height: 130px;
-     background: black;
-     margin-left: -70px;
-  }
+.card {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 85% !important;
+  background-color: white;
+  color: black;
+  height: 150px !important;
+  margin-left: auto;
+  margin-right: auto;
 
-  .titleH1{
-    color:rgb(59, 53, 53);
-    margin-top: 10px;
-  }
+}
+.card-body {
+  padding: 16px;
+  text-align: left;
+  margin-top: 7px;
+}
 
-  .titleH3{
-    color: rgba(71, 54, 54, 0.5);
-    margin-top: 10px;
-  }
-
-  .containerCol1{
-    margin-left: 10px;
-  }
-
-  .btnPrimary{
-    background-color: rgb(46, 163, 134);
-    margin-top: 50px;
-    font-size: 30px;
-    padding-bottom: 50px;
-    text-align: center;
-    display: block;
-    width: 100%;
-    justify-content: center;
 }

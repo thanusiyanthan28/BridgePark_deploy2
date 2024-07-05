@@ -1,0 +1,177 @@
+.hotelRoomCardContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 350px;
+  font-family: "lato", serif;
+
+}
+.hotelRoomCardContainer:hover{
+  /* transform: scale(1.01); */
+  box-shadow: 0 4px 1rem -4px #33cccc;
+  transform: translateY(6px);
+}
+
+
+.hotelRoomCardImage {
+  flex: 1; /* Take up 50% of the height */
+  max-height: 230px; 
+}
+
+.hotelRoomCardContainer a img{
+  width: 100%; /* Example property */
+}
+.hotelRoomCardDetails {
+  flex: 1; /* Take up 50% of the height */
+  padding: 10px;
+  font-family: "lato", serif;
+}
+
+.hotelRoomCardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "lato", serif;
+}
+
+.hotelRoomCardTitle2 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-left: 140px;
+  font-family: "lato", serif;
+}
+
+.hotelRoomCardTitleTextFirst{
+  border-bottom: 2px solid rgba(5 5, 5, 0.068); 
+  padding-bottom: 10px;
+  width: 100%;
+  font-family: "lato", serif;
+}
+
+/* .cardDescription {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+} */
+
+.hotelRoomCardInfoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+/* .cardInfoText {
+  font-size: 12px;
+} */
+
+.hotelRoomCardPriceText {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "lato", serif;
+}
+
+.hotelRoomCardButton {
+  font-size: 100%;
+  color: white;
+  background-color: #669399;
+  border: none;
+  border-radius: 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+  /* float: right; */
+  width: 100%;
+  border-radius: 3px;
+  height: 40px;
+  font-family: "lato", serif;
+
+  
+}
+
+.hotelRoomCardButton:hover {
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000
+}
+
+.hotelRoomCard-MainRow{
+  border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
+  margin-top: -3px;
+}
+
+.hotelRoomCardTopBar{
+  background-color: #ffffffc2;
+  flex: 1;
+  position: absolute;
+  /* top: -30px; */
+  padding-left: 10px;
+  /* padding-right: 160px; */
+  padding-right: 50px;
+  color: #000;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: "lato", serif;
+}
+
+.hotelRoomViewMoreLink {
+  text-decoration: underline; 
+  cursor: pointer; 
+  margin-top: 10px;
+  user-select: none;
+  float: right;
+  font-family: "lato", serif;
+}
+
+.hotelRoomCard-subRow{
+  margin-top: -14px;
+  margin-left: 0px;
+}
+.hotelRoomCardButton-link {
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "lato", serif;
+}
+.cardPriceText2{
+  float: right;
+  font-family: "lato", serif;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .hotelRoomCardContainer {
+    width: 360px;
+    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: auto;
+    right: auto;
+  
+    
+  }
+
+  .hotelRoomCardButton {
+    font-size: 18px; 
+    margin-left: 60px; 
+    margin-top: 10px;
+    float: right;
+  }
+
+  .hotelRoomCardTopBar {
+    padding-right: 10px; 
+    padding-left: 10px; 
+    width: 100%; 
+    position: relative; 
+    top: auto; 
+    margin-bottom: 10px; 
+  }
+
+}
+

@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.about-bgimage{
+  position: absolute;
+  z-index: -3;
+  overflow: hidden;
+ height: 110vh;
+ width: 100%;
+ object-fit: cover;
+ opacity: 0.3;
+  
+}
+.abContainer-main{
+  height: 100%;
+}
+.about-discount{
+background-color: #EFEFEF ;
+color: black ;
+font-weight: bold;
+letter-spacing: 1px;
+color: rgb(3, 0, 0);
+border: none;
+cursor: pointer;
+/* float: right; */
+width: 100%;
+height: 40px;
+font-family: "lato", serif;
+}
+.about-discount:hover{
+
+  background-color:  #D5ECF4;
+
+  }
+.aboutContainer {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.about-welcome{
+  font-family: "Cinzel", serif;
+  margin-bottom: -10px;
+}
+.about-sub-content {
+  color: rgba(51, 49, 49, 0.767);
+  opacity: 1;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "lato", sans-serif;
+  text-align: center;
+  
+}
+
+
+.aboutTextWrapper {
+  text-align: center;
+  margin-top: 50px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.aboutH1 {
+  color: black;
+  font-size: 50px;
+  margin-top: 25px;
+  /* font-family: "Cadmium", sans-serif; */
+  font-family: "Cinzel", serif;
+  /* font-weight: lighter; */
+  /* margin-left: 35px; */
+}
+
+.paragraphContainer {
+  width: 80%;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  line-height: 2;
+  font-family: "lato", sans-serif;
+}
+
+.aboutCouroselComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+
+.carousel-container {
+  margin: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    height: auto;
+  }
+  .abContainer{
+    width: 95%;
+  }
+
+  .aboutTextWrapper {
+    margin-top: 30px; 
+    padding-left: 20px; 
+  }
+
+  .aboutH1 {
+    font-size: 30px; 
+    margin-left: 20px; 
+    margin-top: 10px; 
+  }
+
+  .paragraphContainer {
+    width: 90%;
+    margin-top: 10px; 
+    text-align: center; 
+  }
+
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+    .aboutContainer {
+      width: auto;
+      height: auto;
+    }
+    .carousel-container {
+      margin: 5px; 
+    }
+
+    .aboutH1 {
+      color: black;
+      font-size: 50px;
+      margin-top: 25px;
+      font-family: "Cadmium", sans-serif;
+      font-weight: lighter;
+      justify-content: center;
+    }
+    
+    .paragraphContainer {
+      width: 80%;
+      padding: 0 20px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 2;
+      font-family: "Cadmium", sans-serif;
+      justify-content: center;
+    }
+  }
+
+  @media (max-device-width: 1024px) {
+  
+  }
