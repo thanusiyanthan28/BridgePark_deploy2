@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./popupPage.css";
-import { List, Avatar, Rate, Button, Select, Progress } from "antd";
+import { List, Avatar, Rate, Button, Select, Progress, Modal } from "antd";
 import {
   LikeOutlined,
   DislikeOutlined,
@@ -12,6 +12,8 @@ import {
 } from "@ant-design/icons";
 import PopupCard from "./Sidebar";
 import { getAllReviews } from "../../Services/api";
+import ReviewForm from './writeReview';
+import { getUniqueRoomDetails } from "./roomData";
 
 const { Option } = Select;
 
@@ -39,7 +41,17 @@ const ReviewApp = () => {
   const [bookingNumber, setBookingNumber] = useState("");
   const [username, setUsername] = useState("");
   const [rev, setRev] = useState([]);
+  const [roomDetails, setRoomDetails] = useState({})
 
+  const handleReviewFormCancel = () => {
+    setVisible(false);
+  }
+
+  useEffect(() => {
+    const roomData = getUniqueRoomDetails();
+    setRoomDetails(roomData);
+  }, []);
+ 
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -72,7 +84,9 @@ const ReviewApp = () => {
   }, []);
 
 
-  console.log("reviews finds", rev)
+const handlerStatus=(value)=>{
+  setVisible(value)
+}
   
   const getFilteredReviews = () => {
     if (selectedTopics.length === 0) {
@@ -162,22 +176,17 @@ const ReviewApp = () => {
         <button className="write-pop" onClick={() => setVisible(true)}>
           Write Review
         </button>
-        <PopupCard
-          visible={visible}
-          showModal={() => setVisible(true)}
-          handleCancel={() => setVisible(false)}
-          bookingNumber={bookingNumber}
-          setBookingNumber={setBookingNumber}
-          username={username}
-          setUsername={setUsername}
-          handleSubmit={() => {
-            console.log("Booking Number:", bookingNumber);
-            console.log("Username/Email:", username);
-            setBookingNumber("");
-            setUsername("");
-            setVisible(false);
-          }}
-        />
+        <Modal
+        title="Write Your Review"
+        visible={visible}
+        onCancel={handleReviewFormCancel}
+        footer={null}
+        className="custom-modal2"
+        width={900}
+      >
+         <ReviewForm visible={visible} bookingNumber={bookingNumber} username={username} handlerStatus={handlerStatus}/> 
+      </Modal>
+        
       </div>
       <div className="review-card"></div>
       <h3>Categories:</h3>
@@ -266,7 +275,7 @@ const ReviewApp = () => {
           </select>
         </div> */}
       </div>
-      <div>
+      {/* <div>
         <h3 className="button-head-pop">Select topics to read reviews:</h3>
         <div className="topic-buttons-pop">
           {topics.map((topic) => (
@@ -288,7 +297,7 @@ const ReviewApp = () => {
             </Button>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className="guest-reviews-container">
         <h2 className="title-top-pop">Guest reviews</h2>
         <div className="sort-reviews-pop">

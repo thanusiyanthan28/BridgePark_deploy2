@@ -10,10 +10,7 @@ const PopupCard = ({ visible, showModal, handleCancel, bookingNumber, setBooking
     setShowReviewForm(true)
   }
 
-  const handleReviewFormCancel = () => {
-    setShowReviewForm(false);
-  }
-
+ 
   return (
     <>
       <Modal
@@ -44,16 +41,7 @@ const PopupCard = ({ visible, showModal, handleCancel, bookingNumber, setBooking
         This lets us know that our reviews come from real guests, like you.</p>
         </div>
       </Modal>
-      <Modal
-        title="Write Your Review"
-        visible={showReviewForm}
-        onCancel={handleReviewFormCancel}
-        footer={null}
-        className="custom-modal2"
-        width={900}
-      >
-        <ReviewForm bookingNumber={bookingNumber} username={username} onCancel={handleReviewFormCancel} />
-      </Modal>
+    
     </>
   );
 };

@@ -46,7 +46,7 @@ const countries = [
   "Japan",
 ];
 
-const ReviewForm = () => {
+const ReviewForm = (props) => {
   const [form] = Form.useForm();
   const [ratings, setRatings] = useState({
     staff: 0,
@@ -62,8 +62,7 @@ const ReviewForm = () => {
   const [email, setEmail] = useState("");
   const [userId, setUSerId] = useState("");
   const [image, setImage] = useState("");
-
-  console.log("user.email", user.email);
+  const{handlerStatus}=props
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -116,7 +115,7 @@ const ReviewForm = () => {
   
     try {
       const response = await submitReview(reviewData);
-      console.log('Review submitted successfully:', response);
+      handlerStatus(false)
     } catch (error) {
       console.error("Failed to submit review:", error);
     }
