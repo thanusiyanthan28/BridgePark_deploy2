@@ -1,18 +1,29 @@
 .room-info-cards {
     max-width: auto;
     margin: 0 auto;
+    margin-top: 5px;
   }
   
   .info-card {
-    height: 300px; /* Fixed height for each card */
+    height: 300px; 
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    overflow: hidden; /* Hide overflow to prevent image distortion */
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
   }
   
   .info-card img {
-    width: auto; /* Ensure image maintains aspect ratio */
-    height: 100%; /* Ensure image fills the height of the card */
-    object-fit: cover; /* Maintain aspect ratio and cover the content area */
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+
+  @media (max-width: 435px) {
+    .room-info-cards .ant-row {
+      flex-direction: column; 
+    }
+  
+    .room-info-cards .ant-col {
+      width: 100%; 
+    }
   }
