@@ -71,7 +71,11 @@
   border-radius: 0px;
   cursor: pointer;
 }
-
+.button-site:hover{
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000;
+}
 .card-body-site table {
   width: 100%;
   border-collapse: collapse;
@@ -141,14 +145,29 @@
   font-size: 12px;
   font-weight: bold;
 }
-.custom-date-picker{
+/* .custom-date-picker{
   font-size: 25px;
+} */
+.custom-datepicker1.ant-picker-outlined {
+  border: none;
 }
 
-/* CSS */
-.react-datepicker-wrapper input::placeholder {
-  font-size: 25px; /* Adjust the font size as needed */
+.custom-datepicker1.ant-picker .ant-picker-input > input {
+  font-size: 15px;
+  font-weight: bold;
 }
+
+.custom-datepicker1.ant-picker .ant-picker-input {
+  width: 70px;
+}
+
+.custom-datepicker1 .anticon {
+  color: #669399;
+}
+/* CSS */
+/* .react-datepicker-wrapper input::placeholder {
+  font-size: 25px; /* Adjust the font size as needed */
+
 .date-input-container-site {
   display: flex;
 
@@ -191,6 +210,7 @@
   right: 70px;
   z-index: 999; /* Ensure it's above other content */
 }
+/*------------------------------------*/
 
 @media(max-width:435px){
   .app-container-site {

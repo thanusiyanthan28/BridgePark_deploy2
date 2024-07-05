@@ -1,0 +1,29 @@
+.room-info-cards {
+    max-width: auto;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  
+  .info-card {
+    height: 300px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+  }
+  
+  .info-card img {
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+
+  @media (max-width: 435px) {
+    .room-info-cards .ant-row {
+      flex-direction: column; 
+    }
+  
+    .room-info-cards .ant-col {
+      width: 100%; 
+    }
+  }

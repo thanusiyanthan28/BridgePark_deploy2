@@ -19,6 +19,8 @@ const Room = () => {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [selectedRoomId, setSelectedRoomId] = useState(0);
   const [bookingUrl, setBookingUrl] = useState('');
+  const [bathroomType, setBathroomType] = useState('');
+  const [roomPrice, setRoomPrice] = useState('');
   const navigate = useNavigate();
 
   const handleViewMoreClick = (room, url, id) => {
@@ -26,6 +28,12 @@ const Room = () => {
     setBookingUrl(url);
     setIsModalVisible(true);
     setSelectedRoomId(id)
+    setRoomPrice(room.roomPrice);
+    if (room.title.includes('BASIC')) {
+      setBathroomType('Shared');
+    } else {
+      setBathroomType('Private');
+    }
   };
 
   const handleCancel = () => {
@@ -45,6 +53,7 @@ const Room = () => {
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
       roomPrice: "£48",
+    
     },
     {
       id: 5,
@@ -122,8 +131,10 @@ const Room = () => {
                 cardtitle={room.cardTitle}
                 onViewMoreClick={() => handleViewMoreClick({
                   title: room.title,
+                  cardTitle: room.cardTitle,
                   imageSource: room.image,
-                  id: room.id
+                  id: room.id,
+                  roomPrice: room.roomPrice
                 }, room.imageUrl, room.id)}
                 link={room.imageUrl}
               />
@@ -137,7 +148,7 @@ const Room = () => {
         footer={null}
         width="80%"
       >
-         <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
+         <RoomInformation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId} bathroomType={bathroomType} roomPrice={roomPrice}/>
       </Modal>
     </div>
   );

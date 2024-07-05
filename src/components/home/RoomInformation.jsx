@@ -7,8 +7,10 @@ import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
+import RoominfoCard from '../home/RoominfoCard'
 
-const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
+
+const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice }) => {
   const sec01Ref = useRef(null);
   const sec02Ref = useRef(null);
   const sec03Ref = useRef(null);
@@ -33,6 +35,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
     }
   };
 
+ 
   const cardsData = [
     { id: 1, title: 'Free WiFi' },
     { id: 2, title: 'Free Parking' },
@@ -84,7 +87,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
             className="RoomInformation-section-PriceList"
             onClick={() => handleTabClick("Room Information")}
           >
-            <h2 className="RoomInformation-section-PriceList-1">£200 per night</h2>
+            <h2 className="RoomInformation-section-PriceList-1">{roomPrice} per night</h2>
             <h2 className="RoomInformation-section-PriceList-2">
               including Taxes & Fees
             </h2>
@@ -98,7 +101,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
       
         <Row>
           <Col span={24}>
-            <img src={room.imageSource} className="RoomInformationCardImage" alt="Room" />
+           <RoominfoCard/>
           </Col>
         </Row>
         <div className="sec-01" ref={sec01Ref}>
@@ -126,7 +129,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
                   size="m"
                   style={{ color: "#050505" }}
                 />
-                <span className="RoomInformation-iconText">1 * Single Bed</span>
+                <span className="RoomInformation-iconText">{room.cardTitle}</span>
               </div>
               <div className="RoomInformation-icon-container">
                 <FontAwesomeIcon
@@ -135,7 +138,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId}) => {
                   style={{ color: "#050505" }}
                 />
                 <span className="RoomInformation-iconText">
-                  Shared Rest rooms
+                {bathroomType} Bathroom
                 </span>
               </div>
             </div>

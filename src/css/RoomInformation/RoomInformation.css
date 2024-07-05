@@ -1,14 +1,19 @@
+
+
 .RoomInformationCardImage {
-  flex: 1;
-  max-height: 300px;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6px;
+  width: 100%; /* Ensure the large image takes full width */
+  height: 300px; /* Maintain aspect ratio */
+  display: block; /* Ensure block display */
 }
+.aboutCouroselComponent1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+
+
 
 .RoomInformation-section {
   font-size: 12px;
@@ -19,6 +24,11 @@
   cursor: pointer;
 }
 
+
+.RoomInformation-section:hover {
+  text-decoration: underline;
+  color: #639497;
+}
 .RoomInformation-section::after {
   content: "";
   position: absolute;
@@ -58,7 +68,12 @@
   margin-left: 70px;
   margin-top: -40px;
 }
+.RoomInformation-section-Book:hover{
+  background-color: #e0ffff;
+  color: black;
+  border: 1px solid #000000;
 
+}
 .RoomInformation-section-Book-Container {
   margin-top: -10px;
 }
@@ -107,7 +122,12 @@
   border: none;
   padding: 20px;
   background-color: #fffff9;
-  color: #42d0d0;
+  color: #639497;
+}
+.facilitieshidebutton1:hover {
+  background-color: #ffffff;
+  color: black;
+ 
 }
 .facilitiesshowbutton1{
   display: inline-block;
@@ -115,7 +135,12 @@
   border: none;
   padding: 20px;
   background-color: #fffff9;
-  color: #42d0d0;
+  color: #639497;
+}
+.facilitiesshowbutton1:hover {
+  background-color: #ffffff;
+  color: black;
+ 
 }
 .columnlist{
   margin-left: -180px;
@@ -206,7 +231,10 @@
 
   }
   .RoomInformation-section-PriceList-2{
-   font-size: 9px;
+   font-size: 10px;
+   margin-left: 70px;
+   margin-top: -24px;
+   margin-bottom: 15px;
 
   }
   .RoomInformation-section-Book-Container {
@@ -227,7 +255,7 @@
     margin-left: 10px;
   }
   .RoomInformation-textP {
-    font-size: 5px;
+    font-size: 8px;
     width: 120%;
     margin-left: 10px;
   }
@@ -270,8 +298,8 @@
   }
   .site-card-room{
     position: absolute;
-    top: 270px;
-    right: 1px;
+    top: 420px;
+    right: 23px;
     z-index: 999; 
   }
   
@@ -433,7 +461,7 @@
   margin-top: 420px;
  }
  .site-card-room{
-  margin-right: 80px;
+  margin-right: 95px;
  }
   .columnlist {
     display: grid;
@@ -442,8 +470,8 @@
     grid-gap: 0px;
     align-items: center;
     margin-top: -80px;
-    margin-left: 10px;
-    font-size: 10px;
+    margin-left: -20px;
+    font-size: 7px;
     margin-bottom: 5px;
   }
   .RoomInformation-section-PriceList {

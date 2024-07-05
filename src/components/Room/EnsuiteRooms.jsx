@@ -27,6 +27,7 @@ const EnsuiteRoom = () => {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState("");
   const [selectedRoomId, setSelectedRoomId] = useState(0);
+  const [bathroomType, setBathroomType] = useState('');
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
@@ -36,6 +37,11 @@ const EnsuiteRoom = () => {
     setBookingUrl(url);
     setIsModalVisible(true);
     setSelectedRoomId(id)
+    if (EnsuiteRoom.title.includes('BASIC')) {
+      setBathroomType('Private');
+    } else {
+      setBathroomType('Private');
+    }
   };
 
   const handleCancel = () => {
@@ -187,7 +193,8 @@ const EnsuiteRoom = () => {
                       {
                         title: Ensuiteroom.title,
                         imageSource: Ensuiteroom.image,
-                        id: Ensuiteroom.id
+                        id: Ensuiteroom.id,
+                        EroomPrice: Ensuiteroom.EroomPrice,
                       },
                       Ensuiteroom.imageUrl,Ensuiteroom.id
                     )
@@ -205,7 +212,7 @@ const EnsuiteRoom = () => {
           footer={null}
           width="80%"
         >
-          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
+          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId} roomPrice={selectedRoom ? selectedRoom.EroomPrice : ''}/>
         </Modal>
       </div>
     </div>
