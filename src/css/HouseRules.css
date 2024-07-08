@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 .house-rules-container {
   padding: 20px;
@@ -15,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   flex-wrap: wrap;
 }
 
@@ -26,12 +25,12 @@
 .house-rules-title {
   font-size: 40px;
   color: rgb(0, 0, 0);
-    font-family: "Cinzel", serif;
-    font-weight:500;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
 }
 
 .house-rules-availability-button .availability-button {
-  background-color: #53949A;
+  background-color: #53949a;
   font-size: 100%;
   width: 100%;
   color: rgb(255, 255, 255);
@@ -46,13 +45,14 @@
 .house-rules-availability-button .availability-button:hover {
   background-color: #e0ffff;
   color: black;
-  border: 1px solid #000000
+  border: 1px solid #000000;
 }
 
 .house-rules-description {
   color: rgba(51, 49, 49, 0.767);
   font-weight: 400;
   font-family: "lato", sans-serif;
+  margin-top: -15px;
 }
 
 .house-rules-container-body {
@@ -125,6 +125,9 @@
 
 .house-rules-table tr:last-child td {
   border-bottom: none;
+}
+.condition-link {
+  color: #659399;
 }
 
 /* Media Queries */

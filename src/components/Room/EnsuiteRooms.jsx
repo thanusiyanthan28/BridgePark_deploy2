@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
-import img1 from "../../assets/images/DoubleEnsuite.jpg";
-import img2 from "../../assets/images/TwinRoom.jpg";
-import img3 from "../../assets/images/TripleEnsuite3singlebeds.jpg";
-import img4 from "../../assets/images/Tripleroomwithsharedbathroom.jpg";
-import img5 from "../../assets/images/QuadEnsuitedoubleandtwosinglebeds.jpg";
+import img1 from "../../assets/RoomTypes/DoubleRoom3.webp";
+import img2 from "../../assets/RoomTypes/TwinEnsuite1.webp";
+import img3 from "../../assets/RoomTypes/TripleRoom1.webp";
+import img4 from "../../assets/RoomTypes/TripleRoomEnsuite3.webp";
+import img5 from "../../assets/RoomTypes/Quaduple room.webp";
 import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
-import img7 from "../../assets/images/Untitled Project.jpg";
-import img8 from "../../assets/images/TwilightExecroom.jpg";
+import img7 from "../../assets/RoomTypes/Quad_2.webp";
+import img8 from "../../assets/RoomTypes/TwlightRoom2.webp";
 import { Row, Col, Modal } from "antd";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
@@ -27,7 +27,6 @@ const EnsuiteRoom = () => {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState("");
   const [selectedRoomId, setSelectedRoomId] = useState(0);
-  const [bathroomType, setBathroomType] = useState('');
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
@@ -37,11 +36,6 @@ const EnsuiteRoom = () => {
     setBookingUrl(url);
     setIsModalVisible(true);
     setSelectedRoomId(id)
-    if (EnsuiteRoom.title.includes('BASIC')) {
-      setBathroomType('Private');
-    } else {
-      setBathroomType('Private');
-    }
   };
 
   const handleCancel = () => {
@@ -75,7 +69,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon1,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(14),
-      EroomPrice: "£65",
+      EroomPrice: "£111.52",
     },
     {
       id: 11,
@@ -85,7 +79,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
-      EroomPrice: "£68",
+      EroomPrice: "£120.82",
     },
     {
       id: 9,
@@ -95,7 +89,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
-      EroomPrice: "£92",
+      EroomPrice: "£99.00",
     },
     {
       id: 10,
@@ -105,47 +99,47 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x single bed + 1x double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£97",
+      EroomPrice: "£104.95",
     },
     {
-      id: 10,
+      id: 19,
       image: img5,
       title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "2x single bed + 1x double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£120",
+      EroomPrice: "£90.00",
     },
     {
-      id: 10,
+      id: 20,
       image: img6,
       title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x double bed + 1x bunk bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£110",
+      EroomPrice: "£100.75",
     },
     {
-      id: 10,
+      id: 25,
       image: img7,
       title: "EXECUTIVE KING ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x Double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£120",
+      EroomPrice: "£121.39",
     },
     {
-      id: 10,
+      id: 4,
       image: img8,
       title: "CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x Superior King Room",
       imageUrl: getUrlById(10),
-      EroomPrice: "£125",
+      EroomPrice: "£126.45", 
     },
   ];
 
@@ -184,7 +178,7 @@ const EnsuiteRoom = () => {
                   icon2={Ensuiteroom.icon2}
                   description="Spacious room with a breathtaking view"
                   guests={2}
-                  status="Available"
+                  status="Check"
                   price={Ensuiteroom.EroomPrice}
                   buttonText="Book Now"
                   cardtitle={Ensuiteroom.cardTitle}
@@ -193,8 +187,7 @@ const EnsuiteRoom = () => {
                       {
                         title: Ensuiteroom.title,
                         imageSource: Ensuiteroom.image,
-                        id: Ensuiteroom.id,
-                        EroomPrice: Ensuiteroom.EroomPrice,
+                        id: Ensuiteroom.id
                       },
                       Ensuiteroom.imageUrl,Ensuiteroom.id
                     )
@@ -212,7 +205,7 @@ const EnsuiteRoom = () => {
           footer={null}
           width="80%"
         >
-          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId} roomPrice={selectedRoom ? selectedRoom.EroomPrice : ''}/>
+          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
         </Modal>
       </div>
     </div>

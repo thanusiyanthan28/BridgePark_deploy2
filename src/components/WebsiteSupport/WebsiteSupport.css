@@ -3,7 +3,7 @@
 
 .WebsiteSupport {
   width: 95%;
-  background-color: #33cccc;
+  background-color: #659399;
   height: 500px;
   background-image: url("../../assets/images/Restaurant1.jpg");
   background-repeat: no-repeat;
@@ -34,29 +34,47 @@
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  width: 95%;
-  border: 1px solid #33cccc;
+  width: 70%;
+  border: 1px solid #659399;
   border-radius: 10px;
   margin-bottom: 20px;
   
 }
 .WebsiteSupport-sub-content p,
 .WebsiteSupport-sub-title h1 {
-  margin-left: 30px;
+  /* margin-left: -10px; */
   text-align: justify;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 .WebsiteSupport-sub-title {
   line-height: 0px;
   margin-top: 30px;
   color: rgb(0, 0, 0);
   font-weight: 500;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-family: "Cinzel", serif;
   font-size: x-large;
   margin-left: 30px;
   text-align: justify;
   margin-right: 10px;
+}
+.WebsiteSupport-sub-titlesub{
+  color: black;
+  opacity: 1;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 30px; */
+  text-align: left;
+  margin-right: 40px;
+  font-size: medium;
+  font-family: "lato", sans-serif;
+  font-style: italic;
+}
+
+.WebsiteSupport-sub-p{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .WebsiteSupport-sub-content {
   color: rgba(51, 49, 49, 0.767);
@@ -64,12 +82,13 @@
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
-  margin-left: 40px;
-  text-align: justify;
+  margin-left: 30px;
+  text-align: left;
   margin-right: 40px;
   /* font-family: "lato", sans-serif; */
   font-size: medium;
   font-family: "lato", sans-serif;
+  margin-bottom: 20px;
 }
 .WebsiteSupport-sub-content a {
   cursor: pointer;
@@ -81,6 +100,7 @@
   margin-right: auto;
   text-align: justify;
   font-family: "lato", sans-serif;
+  color: #659399;
 }
 @media screen and (max-width: 768px) {
   .WebsiteSupport {

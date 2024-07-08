@@ -3,7 +3,7 @@
 
 .faq-main {
   width: 95%;
-  background-color: #33cccc;
+  background-color: #659399;
   height: 500px;
   background-image: url("../../assets/images/Restaurant1.jpg");
   background-repeat: no-repeat;
@@ -66,21 +66,21 @@
 }
 
 .faq-collapse .ant-collapse-item {
-    border: 1px solid #33cccc; 
+  border: 1px solid #659399; 
   }
   
   .faq-collapse .ant-collapse-header {
-    color: #33cccc; 
+    color: #659399; 
   }
   
   .faq-collapse .ant-collapse-content {
-    border-top: 1px solid #33cccc; 
+    border-top: 1px solid #659399; 
   }
   .faq-collapse .ant-collapse-item:last-child {
-    border-bottom: 2px solid #33cccc; 
+    border-bottom: 2px solid #659399; 
   }
   .faq-collapse .ant-collapse-item:first-child {
-    border-top: 2px solid #33cccc; 
+    border-top: 2px solid #659399; 
     border-top-left-radius: 3px; 
     border-top-right-radius: 3px;
   }
@@ -108,7 +108,7 @@
   font-family: "lato", sans-serif;
   background: none;
   border: none;
-  color: #33cccc;
+  color: #659399;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;

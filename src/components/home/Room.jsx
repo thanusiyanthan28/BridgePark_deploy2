@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
-import img1 from "../../assets/images/SingleRoomwithSharedBathroom.jpg";
 import { Row, Col, Modal } from "antd";
 import "../../css/Room.css";
 import RoomInformation from "./RoomInformation";
-import img3 from '../../assets/images/Tripleroomwithsharedbathroom.jpg'
-import img4 from "../../assets/images/DoubleEnsuite.jpg"
-import img5 from "../../assets/images/TwinRoom.jpg"
-import img6 from '../../assets/images/TripleEnsuite3singlebeds.jpg'
+import img1 from "../../assets/RoomTypes/SingleRoom.webp";
+import img2 from "../../assets/RoomTypes/DoubleRoom3.webp"
+import img3 from '../../assets/RoomTypes/TwinRoom5.webp'
+import img4 from "../../assets/RoomTypes/TwinEnsuite1.webp";
+import img5 from "../../assets/RoomTypes/TripleRoomEnsuite3.webp";
+import img6 from "../../assets/RoomTypes/Quaduple room.webp";
 import UrlLib from "../common/UrlLib";
 import { useNavigate } from "react-router-dom";
 import icon11 from "../../assets/icons/bed.png"
@@ -47,55 +48,67 @@ const Room = () => {
 
   const roomData = [
     {
-      id: 2,
+      id: 28,
       image: img1,
-      title: "SINGLE ROOM BASIC",
+      title: "SINGLE W SHARED BATHROOM",
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
-      roomPrice: "£48",
+      roomPrice: "£68.00",
+      NoOfGuests: "01",
+      NoOfRooms : "01",
     
     },
     {
-      id: 5,
-      image: img1,
-      title: "DOUBLE BASIC",
+      id: 29,
+      image: img2,
+      title: "DOUBLE W SHARED BATHROOM",
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
-      roomPrice: "£58",
+      roomPrice: "£90.93",
+      NoOfGuests: "02",
+      NoOfRooms : "01",
     },
     {
-      id: 10,
+      id: 34,
       image: img3,
-      title: "TRIPLE BASIC",
+      title: "TWIN W SHARED BATHROOM",
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(10),
-      roomPrice: "£60",
-    },
-    {
-      id: 3,
-      image: img4,
-      title: "DOUBLE ENSUITE",
-      cardTitle: "1x Double Bed",
-      imageUrl: getUrlById(3),
-      roomPrice: "£65",
+      roomPrice: "£95.13",
+      NoOfGuests: "02",
+      NoOfRooms : "01",
     },
     {
       id: 11,
-      image: img5,
-      title: "TWIN ENSUITE",
-      cardTitle: "2x Single Bed",
-      imageUrl: getUrlById(11),
-      roomPrice: "£68",
+      image: img4,
+      title: "TWIN W PRIVATE BATHROOM",
+      cardTitle: "1x Double Bed",
+      imageUrl: getUrlById(3),
+      roomPrice: "£120.82",
+      NoOfGuests: "02",
+      NoOfRooms : "01",
     },
     {
-      id: 9,
+      id: 10,
+      image: img5,
+      title: "TRIPLE W PRIVATE BATHROOM",
+      cardTitle: "2x Single Bed",
+      imageUrl: getUrlById(11),
+      roomPrice: "£104.95",
+      NoOfGuests: "03",
+      NoOfRooms : "01",
+    },
+    {
+      id: 19,
       image: img6,
-      title: "TRIPLE ENSUITE",
+      title: "QUADUPLE W PRIVATE BATHROOM",
       icon1: icon11,
       icon2: icon22,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
-      roomPrice: "£97",
+      roomPrice: "£90.00",
+      NoOfGuests: "04",
+      NoOfRooms : "01",
     },
   ];
 
@@ -124,11 +137,13 @@ const Room = () => {
                 // icon1={room.icon1}
                 // icon2={room.icon2}
                 description="Spacious room with a breathtaking view"
-                guests={2}
+                // guests={2}
                 status="Available"
                 price={room.roomPrice}
                 buttonText="Book Now"
                 cardtitle={room.cardTitle}
+                NoOfGuests={room.NoOfGuests} 
+                NoOfRooms={room.NoOfRooms}
                 onViewMoreClick={() => handleViewMoreClick({
                   title: room.title,
                   cardTitle: room.cardTitle,
