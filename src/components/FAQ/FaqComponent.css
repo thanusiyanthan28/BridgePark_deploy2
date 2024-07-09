@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.faq-main {
+  width: 95%;
+  background-color: #659399;
+  height: 500px;
+  background-image: url("../../assets/images/Restaurant1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+.faq-card{
+  padding-top: 10%;
+}
+.faq-title {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  padding: 35px;
+}
+
+.faq-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+.faq-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  background: white;
+  border: none;
+}
+
+.faq-Mainheading {
+  line-height: 0px;
+   margin-top: 30px;
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   margin-bottom: 30px;
+   font-family: "Cinzel", serif;
+   font-size: x-large;
+}
+
+.faq-content {
+  flex-grow: 1;
+  overflow-y: auto; /* Allow vertical scrolling */
+  border-radius: 3px;
+  padding-bottom: 50px;
+}
+
+.faq-collapse {
+  width: 100%;
+}
+
+.faq-collapse .ant-collapse-item {
+  border: 1px solid #659399; 
+  }
+  
+  .faq-collapse .ant-collapse-header {
+    color: #659399; 
+  }
+  
+  .faq-collapse .ant-collapse-content {
+    border-top: 1px solid #659399; 
+  }
+  .faq-collapse .ant-collapse-item:last-child {
+    border-bottom: 2px solid #659399; 
+  }
+  .faq-collapse .ant-collapse-item:first-child {
+    border-top: 2px solid #659399; 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+  }
+  .ant-collapse-item:hover > .ant-collapse-header {
+    background-color: #ECECEC;
+}
+
+.ant-collapse-item > .ant-collapse-header {
+    background-color: white;
+    color: rgba(51, 49, 49, 0.767);
+    opacity: 1;
+    font-weight: bold;
+    font-family: "lato", sans-serif;
+    font-size: medium;
+}
+.panel-border p{
+  color: rgba(51, 49, 49, 0.767);
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  opacity: 1;
+  font-size: medium;
+}
+.faq-view-full-text{
+  font-size: medium;
+  font-family: "lato", sans-serif;
+  background: none;
+  border: none;
+  color: #659399;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px; /* Adjust as needed */
+  display: block;
+}
+@media (max-width: 768px) {
+    .faq-main{
+        width: 100%;
+        height: 600px;
+        background-image: url("../../assets/images/image_gellery/image6.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+    .faq-title{
+        text-align: center;
+        font-size: 50px;
+        /* color: white; */
+        padding: 5px;
+    }
+    .faq-Mainheading{
+      line-height:1 ;
+    }
+    .faq-sitecard{
+      margin-top: 25px;
+    }
+}
