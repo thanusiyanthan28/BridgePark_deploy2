@@ -5,7 +5,7 @@ import img2 from "../../assets/RoomTypes/TwinEnsuite1.webp";
 import img3 from "../../assets/RoomTypes/TripleRoom1.webp";
 import img4 from "../../assets/RoomTypes/TripleRoomEnsuite3.webp";
 import img5 from "../../assets/RoomTypes/Quaduple room.webp";
-import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
+import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.webp";
 import img7 from "../../assets/RoomTypes/Quad_2.webp";
 import img8 from "../../assets/RoomTypes/TwlightRoom2.webp";
 import { Row, Col, Modal } from "antd";

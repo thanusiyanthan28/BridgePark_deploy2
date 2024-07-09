@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "../../css/LoginSignUp.css";
-import hotelFront from "../../assets/images/HotelFront.jpg";
+import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 // import { useHistory } from 'react-router-dom';
