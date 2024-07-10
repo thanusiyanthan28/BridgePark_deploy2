@@ -71,6 +71,8 @@ const ReviewForm = (props) => {
       setToken(storedToken);
     }
 
+    console.log('user', storedUser )
+
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
@@ -83,7 +85,6 @@ const ReviewForm = (props) => {
       }
     }
   }, []);
-
 
   const RoomID = (roomType) => {
     console.log("roomDetails", roomDetails);

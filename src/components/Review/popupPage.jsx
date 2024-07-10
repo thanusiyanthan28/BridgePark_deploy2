@@ -44,10 +44,13 @@ const ReviewApp = () => {
   const [roomDetails, setRoomDetails] = useState({});
   const [load, setLoad] = useState(false);
   const [HelpSatusChange, setHelpSatusChange] = useState(false)
+  const [user, setUser] = useState("");
 
   const handleReviewFormCancel = () => {
     setVisible(false);
   };
+
+
 
   useEffect(() => {
     const roomData = getUniqueRoomDetails();
@@ -394,7 +397,7 @@ const ReviewApp = () => {
                   <Rate
                     className="rate-pop"
                     disabled
-                    defaultValue={review.score / 2}
+                    value={review.overallStar}
                     count={5}
                     character={({ index }) => (
                       <CustomIcon icon={customIcons[index + 1]} size="25px" />
