@@ -11,7 +11,11 @@ import {
   SmileOutlined,
 } from "@ant-design/icons";
 import PopupCard from "./Sidebar";
-import { getAllReviews, updateReviewHelpful } from "../../Services/api";
+import {
+  getAllReviews,
+  updateReviewHelpful,
+  getReviewCategories,
+} from "../../Services/api";
 import ReviewForm from "./writeReview";
 import { getUniqueRoomDetails } from "./roomData";
 
@@ -43,19 +47,48 @@ const ReviewApp = () => {
   const [rev, setRev] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
   const [load, setLoad] = useState(false);
-  const [HelpSatusChange, setHelpSatusChange] = useState(false)
+  const [HelpSatusChange, setHelpSatusChange] = useState(false);
   const [user, setUser] = useState("");
+  const [cate, setCategories] = useState([]);
+  const [filteredReviewsRate, setFilteredReviewsRate] = useState([]);
+  const [categoryFilter, setCategoryFilter] = useState(1);
+
+  console.log("revirew rate id", filteredReviewsRate);
 
   const handleReviewFormCancel = () => {
     setVisible(false);
   };
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const data = await getReviewCategories();
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
 
+    fetchCategories();
+  }, []);
+
+  const filterReviews = (categoryId) => {
+    const filtered = rev.filter((review) =>
+      review.reviewCategoryRatings?.$values.some(
+        (rating) => rating.reviewCategoryId === categoryId
+      )
+    );
+    setFilteredReviewsRate(filtered);
+  };
+
+  console.log("setFilteredReviewsRate set view ", filteredReviewsRate);
 
   useEffect(() => {
     const roomData = getUniqueRoomDetails();
     setRoomDetails(roomData);
   }, []);
+
+  console.log("total rev", rev);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -74,6 +107,10 @@ const ReviewApp = () => {
     fetchCountries();
   }, []);
 
+  const handleCategoryChange = (categoryId) => {
+    setCategoryFilter(categoryId);
+  };
+
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -89,8 +126,10 @@ const ReviewApp = () => {
 
     fetchReviews();
     setLoad(false);
-    setHelpSatusChange(false)
+    setHelpSatusChange(false);
   }, [load, HelpSatusChange]);
+
+  console.log("rev", rev.reviewCategoryRatings);
 
   const handlerStatus = (value) => {
     setVisible(value);
@@ -120,9 +159,11 @@ const ReviewApp = () => {
     );
   };
 
-  const handleFilterChange = (event) => {
-    const { name, value } = event.target;
-    setFilters({ ...filters, [name]: value });
+  const handleFilterChange = (value, option) => {
+    // setFilters({ filter1: value });
+    const { key } = option;
+    handleCategoryChange(key);
+    filterReviews(key);
   };
 
   const handleHelpfulClick = async (id, value) => {
@@ -131,7 +172,7 @@ const ReviewApp = () => {
     };
     try {
       const response = await updateReviewHelpful(id, updateData);
-      setHelpSatusChange(true)
+      setHelpSatusChange(true);
     } catch (error) {
       console.error("Failed to update review helpful status:", error);
     }
@@ -216,90 +257,24 @@ const ReviewApp = () => {
       <div className="filter-options">
         <div>
           <label>Category :</label>
-          <select
+          <Select
             name="Reviewers"
             value={filters.filter1}
             onChange={handleFilterChange}
+            style={{ width: 200 }}
           >
-            <option value="">Select Option</option>
-            <option value="Option 1">Staff</option>
-            <option value="Option 2">Facilities</option>
-            <option value="Option 3">Rooms</option>
-            <option value="Option 4">Cleanlines</option>
-            <option value="Option 5">Location</option>
-            <option value="Option 6">Comport</option>
-            <option value="Option 7">Value of Money</option>
-          </select>
+            <Option value="">Select Option</Option>
+            {cate.$values &&
+              cate.$values.map((category) => (
+                <Option
+                  key={category.reviewCategoryId}
+                  value={category.reviewCategoryName}
+                >
+                  {category.reviewCategoryName}
+                </Option>
+              ))}
+          </Select>
         </div>
-        <div>
-          <label>Review Rating:</label>
-          <select
-            name="Review scores"
-            value={filters.filter2}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option A">Excellent</option>
-            <option value="Option B">Very Good</option>
-            <option value="Option C">Good</option>
-            <option value="Option C">Fair</option>
-            <option value="Option C">Poor</option>
-          </select>
-        </div>
-        <div>
-          <label>Country :</label>
-          <select
-            name="Languages"
-            value={filters.filter3}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Country</option>
-            {countries.map((country) => (
-              <option key={country} value={country}>
-                {country}
-              </option>
-            ))}
-          </select>
-        </div>
-        {/* <div>
-          <label>Time of year</label>
-          <select
-            name="Time of year"
-            value={filters.filter4}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option 123">Option 123</option>
-            <option value="Option 456">Option 456</option>
-            <option value="Option 789">Option 789</option>
-          </select>
-        </div> */}
-      </div>
-      {/* <div>
-        <h3 className="button-head-pop">Select topics to read reviews:</h3>
-        <div className="topic-buttons-pop">
-          {topics.map((topic) => (
-            <Button
-              key={topic}
-              type="default"
-              shape="round"
-              icon={
-                selectedTopics.includes(topic) ? (
-                  <span>&times;</span>
-                ) : (
-                  <span>+</span>
-                )
-              }
-              onClick={() => handleCategoryClick(topic)}
-              style={{ fontSize: "16px" }}
-            >
-              {topic}
-            </Button>
-          ))}
-        </div>
-      </div> */}
-      <div className="guest-reviews-container">
-        <h2 className="title-top-pop">Guest reviews</h2>
         <div className="sort-reviews-pop">
           <span>Sort reviews by:</span>
           <Select
@@ -313,6 +288,10 @@ const ReviewApp = () => {
             <Option value="Lowest score">Lowest score</Option>
           </Select>
         </div>
+      </div>
+      <div className="guest-reviews-container">
+        <h2 className="title-top-pop">Guest reviews</h2>
+
         <List
           itemLayout="vertical"
           size="large"

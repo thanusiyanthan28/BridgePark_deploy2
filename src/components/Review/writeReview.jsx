@@ -70,9 +70,7 @@ const ReviewForm = (props) => {
     if (storedToken) {
       setToken(storedToken);
     }
-
-    console.log('user', storedUser )
-
+    
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
