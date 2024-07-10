@@ -1,29 +1,30 @@
 
-.custom-carousel {
+.new-custom-carousel {
   width: 100%;
   height: 400px; /* Set the desired height for the carousel */
   overflow: hidden;
-
 }
 
-.custom-carousel .slick-slide {
+.new-custom-carousel .slick-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.custom-carousel .slick-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
- 
+.new-custom-carousel .slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Adjust object-fit property as needed */
+  vertical-align: middle; /* Ensure vertical alignment */
+  margin: auto; /* Center horizontally */
 }
-.carousel-image{
- background-position: center;
-}
-.carousel-slide{
+
+.new-carousel-slide {
   background-position: center;
   width: 100%;
-  height: fit-content;
+  height: 100%; /* Ensure the slide takes full height of the carousel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

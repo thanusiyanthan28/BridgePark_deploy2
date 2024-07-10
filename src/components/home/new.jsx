@@ -10,10 +10,10 @@ const CustomCarousel = ({ roomImages }) => {
   //console.log("roomImages", roomImages);
 
   return (
-    <Carousel autoplay autoplaySpeed={1000} effect="scrollx" className="custom-carousel">
+    <Carousel autoplay autoplaySpeed={1000} effect="scrollx" className="new-custom-carousel">
       {roomImages.map((image, index) => (
-        <div key={index} className="carousel-slide">
-        <img src={image} alt={`Room Image ${index}`} className="carousel-image" />
+        <div key={index} className="new-carousel-slide">
+        <img src={image} alt={`Room Image ${index}`} className="new-carousel-image" />
       </div>
       ))}
     </Carousel>
