@@ -36,7 +36,6 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
     }
   };
 
- 
   const cardsData = [
     { id: 1, title: 'Free WiFi' },
     { id: 2, title: 'Free Parking' },
@@ -102,8 +101,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
       
         <Row>
           <Col span={24}>
-           {/* <RoominfoCard/> */}
-           <CustomCarousel/>
+           <CustomCarousel roomImages={room.images} />
           </Col>
         </Row>
         <div className="sec-01" ref={sec01Ref}>
