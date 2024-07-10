@@ -19,6 +19,9 @@ const CustomCarousel = ({ roomImages }) => {
       ))}
     </Carousel>
     </div>
+
+
+
   );
 };
 
