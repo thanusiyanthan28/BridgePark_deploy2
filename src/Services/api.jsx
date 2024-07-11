@@ -67,3 +67,25 @@ export async function updateReviewHelpful(reviewId, data) {
     throw error;
   }
 }
+
+export async function getReviewCategories() {
+  const url = `${API_BASE_URL}/api/Review/ReviewCategoryGetAll`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('API request failed:', error);
+    throw error;
+  }
+}
