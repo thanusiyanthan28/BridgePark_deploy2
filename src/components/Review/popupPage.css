@@ -8,6 +8,13 @@
   font-family: Arial, sans-serif;
   padding: 20px;
 }
+.review-text-pop1{
+  color: #3b9f63;
+   margin-left: 10px;
+   background: none;
+   border: none;
+   text-decoration: underline;
+}
 
 .categories-pop {
   display: grid;
@@ -54,7 +61,7 @@
 
 .guest-reviews-pop {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   font-family: Arial, sans-serif;
 }
 
@@ -227,9 +234,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 340px;
   margin-top: 25px;
-  margin-left: 100px;
+  margin-left: 60px;
 }
 
 .sort-reviews-pop span {
@@ -313,7 +319,7 @@
   color: #f4f4f5;
   border: none;
   border-radius: 5px;
-  margin-left: 300px;
+  margin-left: 150px;
   height: 30px;
   width: 120px;
 }

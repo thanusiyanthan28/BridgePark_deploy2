@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Form, Input, Button, DatePicker, Rate, Avatar, Select } from "antd";
-import {
-  FrownOutlined,
-  MehOutlined,
-  SmileOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { Form, Input, Button, Rate, Avatar, Select } from "antd";
+import { FrownOutlined, MehOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 import "./writeReview.css";
 import { getUniqueRoomDetails } from "./roomData";
-import id from "../common/UrlLib";
 import { submitReview } from '../../Services/api';
-
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -61,7 +54,7 @@ const ReviewForm = (props) => {
   const [email, setEmail] = useState("");
   const [userId, setUSerId] = useState("");
   const [image, setImage] = useState("");
-  const{handlerStatus}=props
+  const { handlerStatus } = props;
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -70,7 +63,7 @@ const ReviewForm = (props) => {
     if (storedToken) {
       setToken(storedToken);
     }
-    
+
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
@@ -85,15 +78,13 @@ const ReviewForm = (props) => {
   }, []);
 
   const RoomID = (roomType) => {
-    console.log("roomDetails", roomDetails);
     const selectedRoom = roomDetails.find((room) => room.detail === roomType);
-    console.log("Selected Room:", selectedRoom);
     return selectedRoom ? selectedRoom.id : null;
   };
 
   const handleSubmit = async (values) => {
     const roomId = RoomID(values.roomType);
-  
+
     const reviewData = {
       reviewId: 0,
       userId: userId,
@@ -111,15 +102,14 @@ const ReviewForm = (props) => {
         { id: "0", reviewId: "0", reviewCategoryId: "7", rating: ratings.wifi },
       ],
     };
-  
+
     try {
       const response = await submitReview(reviewData);
-      handlerStatus(false)
+      handlerStatus(false);
     } catch (error) {
       console.error("Failed to submit review:", error);
     }
   };
-  
 
   const handleRatingChange = (key, value) => {
     setRatings({ ...ratings, [key]: value });
@@ -145,14 +135,14 @@ const ReviewForm = (props) => {
           label="Username"
           rules={[{ required: true, message: "Please enter your username!" }]}
         >
-          <Input />
+          <Input className="input-left-align" />
         </Form.Item>
         <Form.Item
           name="country"
           label="Country"
           rules={[{ required: true, message: "Please select your country!" }]}
         >
-          <Select>
+          <Select showSearch>
             {countries.map((country) => (
               <Option key={country} value={country}>
                 {country}
@@ -165,7 +155,7 @@ const ReviewForm = (props) => {
           label="Room Type"
           rules={[{ required: true, message: "Please select your room type!" }]}
         >
-          <Select>
+          <Select showSearch>
             {roomDetails.map((detail) => (
               <Option key={detail.id} value={detail.detail}>
                 {detail.detail}
@@ -176,9 +166,9 @@ const ReviewForm = (props) => {
         <Form.Item
           name="description"
           label="Description"
-          rules={[{ required: true, message: "Please enter a description!" }]}
+          // rules={[{ required: false, message: "Please enter a description!" }]}
         >
-          <TextArea rows={4} />
+          <TextArea rows={4} className="input-left-align" />
         </Form.Item>
         <div className="rating-container-write">
           <Form.Item label="Staff" name="staff">
