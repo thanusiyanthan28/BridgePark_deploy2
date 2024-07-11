@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin } from "@react-oauth/google";
 import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -28,8 +30,39 @@ const SignIn = () => {
     setPassword(e.target.value);
   };
 
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {};
+
+    if (!name) {
+      newErrors.name = "Name is required";
+      valid = false;
+    }
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email is invalid";
+      valid = false;
+    }
+    if (!password.trim()) {
+      newErrors.password = "Password is required";
+      valid = false;
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters long";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
     const mockResponse = {
       data: {
         success: true,
@@ -39,11 +72,13 @@ const SignIn = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       if (mockResponse.data.success) {
-        setSuccessMessage("Logged in successfully");
+        toast.success("Login successfully!");
         setIsLoggedIn(true);
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
       } else {
-        setErrors({ message: "Invalid email or password" });
+        toast.error("Invalid email or password.");
       }
     } catch (error) {
       console.error("Login failed", error);
@@ -53,8 +88,8 @@ const SignIn = () => {
 
   const handleGoogleSuccess = (response) => {
     console.log(response);
-    const token = response.credential; 
-    console.log('token', token)
+    const token = response.credential;
+    console.log("token", token);
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
@@ -71,6 +106,7 @@ const SignIn = () => {
 
   return (
     <body className="signUpIn-body">
+      <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
           <div className="signUpIn-Logpicture">
@@ -118,7 +154,7 @@ const SignIn = () => {
                     onClick={handleToggle}
                   >
                     <FontAwesomeIcon
-                      icon={showPassword ? faEyeSlash : faEye}
+                      icon={showPassword ? faEye : faEyeSlash}
                       size="xs"
                       style={{ color: "#669399" }}
                     />
@@ -136,6 +172,7 @@ const SignIn = () => {
                   Login
                 </div>
                 <GoogleLogin
+                  className="signUpIn-signUpGoogle"
                   onSuccess={handleGoogleSuccess}
                   onError={handleGoogleFailure}
                 />
@@ -146,11 +183,6 @@ const SignIn = () => {
                   <Link to="/SignUp">Sign up</Link>
                 </span>
               </div>
-              {successMessage && (
-                <div className="signUpIn-successMessage">
-                  {successMessage}
-                </div>
-              )}
             </div>
           </div>
         </div>

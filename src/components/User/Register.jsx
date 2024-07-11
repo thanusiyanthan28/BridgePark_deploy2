@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import {registerApi} from '../../Services/auth'
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -38,12 +40,17 @@ const SignUp = () => {
     } else if (password.length < 6) {
       errors.password = "Password must be at least 6 characters long";
     }
+    if (password !== confirmPassword) {
+      errors.confirmPassword = "Passwords do not match";
+    }
 
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = async () => {
+    
+    if (!validateForm()) return;
     const formData = {
       name: name,
       email: email,
@@ -54,9 +61,13 @@ const SignUp = () => {
       const response = await registerApi(formData);
       const token = response.passwordHash
       localStorage.setItem('token', token)
-      navigate("/signIn");
+      toast.success("Create account  successfully!");
+      setTimeout(() => {
+        navigate("/SignIn");
+      }, 3000);
     } catch (error) {
-      console.error('Sign in failed:', error);
+      console.error("Registration error:", error);
+      toast.error("Unable to create account.");
     }
   };
 
@@ -75,13 +86,10 @@ const SignUp = () => {
     setIsGoogleBtnClicked(true);
   };
 
-  const handleToggle = () => {
-    setType(type === "password" ? "text" : "password");
-    setIcon(icon === "fa-eye" ? "fa-eye-slash" : "fa-eye");
-  };
 
   return (
     <body className="signUpIn-body">
+      <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
           <div className="signUpIn-Logpicture">
@@ -119,17 +127,17 @@ const SignUp = () => {
               <div className="signUpIn-input">
                 <div className="signUpIn-passwordWrapper">
                   <input
-                    type={type}
+                   type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <span
                     className="signUpIn-togglePassword"
-                    onClick={handleToggle}
+                    onClick={handleTogglePassword}
                   >
                     <FontAwesomeIcon
-                      icon={showPassword ? faEyeSlash : faEye}
+                      icon={showPassword ? faEye : faEyeSlash   }
                       size="xs"
                       style={{ color: "#669399" }}
                     />
@@ -152,7 +160,7 @@ const SignUp = () => {
                     onClick={handleToggleConfirmPassword}
                   >
                     <FontAwesomeIcon
-                      icon={showConfirmPassword ? faEyeSlash : faEye}
+                      icon={showConfirmPassword ? faEye : faEyeSlash  }
                       size="xs"
                       style={{ color: "#669399" }}
                     />
@@ -185,13 +193,11 @@ const SignUp = () => {
                   <Link to="/SignIn">Login</Link>
                 </span>
               </div>
-              {successMessage && (
-                <div className="signUpIn-successMessage">{successMessage}</div>
-              )}
             </div>
           </div>
         </div>
       </div>
+  
     </body>
   );
 };
