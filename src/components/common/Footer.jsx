@@ -34,8 +34,8 @@ const Footer = () => {
         <ul className="contact-links">
           <li><a href="https://www.google.com/maps?ll=51.541287,-0.261686&z=17&t=m&hl=en&gl=LK&mapclient=embed&cid=11362073612214208868" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faMapMarkerAlt} /></span><span className='contact-label'>Bridge Park Hotel, 16 Hillside,<br/>London, NW10 8BN, United Kingdom</span></a></li>
           <li><a onClick={(e) => handlePhoneClick(e, '+44 208961 1260')} style={{ cursor: 'pointer' }}><span className='contact-icons'><FontAwesomeIcon icon={faPhone} /></span><span className='contact-label'>(+44) 020 8661 1260</span></a></li>
-          <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Booking)stay@bridgeparkhotel.co.uk</span></a></li>
-          <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Other)admin@bridgeparkhotel.co.uk</span></a></li>
+          <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Booking)<br/>stay@bridgeparkhotel.co.uk</span></a></li>
+          <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Other)<br/>admin@bridgeparkhotel.co.uk</span></a></li>
         </ul>
       </div>
 

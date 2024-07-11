@@ -9,7 +9,7 @@ const Rooms = () => {
     <>
       {/* <Header2 /> */}
       <div className="RoomsTypeFirstAlignment">
-      <img className='about-bgimage' src={bgimage}/>
+      <img className='room-bgimage' src={bgimage}/>
         <RoomType  />
         
        

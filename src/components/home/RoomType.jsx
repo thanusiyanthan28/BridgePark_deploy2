@@ -8,12 +8,12 @@ import "../../css/RoomTypes.css";
 
 const RoomType = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
