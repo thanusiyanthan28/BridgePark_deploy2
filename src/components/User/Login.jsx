@@ -5,6 +5,9 @@ import style from "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { loginApi } from "../../Services/auth";
+import { Alert } from "antd";
+import { jwtDecode } from "jwt-decode";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,7 +32,6 @@ const SignIn = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
   const validateForm = () => {
     let valid = true;
     const newErrors = {};
@@ -38,18 +40,12 @@ const SignIn = () => {
       newErrors.name = "Name is required";
       valid = false;
     }
-    if (!email.trim()) {
+    if (!email) {
       newErrors.email = "Email is required";
       valid = false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = "Email is invalid";
-      valid = false;
     }
-    if (!password.trim()) {
+    if (!password) {
       newErrors.password = "Password is required";
-      valid = false;
-    } else if (password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters long";
       valid = false;
     }
 
@@ -59,30 +55,34 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) {
       return;
     }
-    const mockResponse = {
-      data: {
-        success: true,
-      },
+    const formData = {
+      name: name,
+      email: email,
+      password: password,
     };
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      if (mockResponse.data.success) {
-        toast.success("Login successfully!");
-        setIsLoggedIn(true);
-        setTimeout(() => {
-          navigate("/");
-        }, 3000);
-      } else {
-        toast.error("Invalid email or password.");
-      }
+      const response = await loginApi(formData);
+      const token = response.token;
+      const user = response.user;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      console.log("tokensss", token);
+      console.log("user12233", user);
+      toast.success("Login successful");
+      setIsLoggedIn(true);
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
     } catch (error) {
-      console.error("Login failed", error);
-      setErrors({ message: "Invalid email or password" });
+      console.error("Sign in failed:", error);
+      setErrors({
+        message: "Login failed. Please check your credentials and try again.",
+      });
     }
   };
 
@@ -90,6 +90,10 @@ const SignIn = () => {
     console.log(response);
     const token = response.credential;
     console.log("token", token);
+    const userData = jwtDecode(token);
+    console.log("User Data:", userData);
+    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
@@ -164,15 +168,23 @@ const SignIn = () => {
                   <span className="signUpIn-error">{errors.password}</span>
                 )}
               </div>
-              <div className="signUpIn-forgotPassword">
-                <Link to="/reset-password">Forgot Password?</Link>
+              <div>
+                <div className="signUpIn-forgotPassword">
+                  <Link to="/reset-password">Forgot Password?</Link>
+                </div>
+                {successMessage && (
+                  <Alert message={successMessage} type="success" showIcon />
+                )}
+                {errors.message && (
+                  <Alert message={errors.message} type="error" showIcon />
+                )}
               </div>
               <div className="signUpIn-SubmitContainor">
                 <div className="signUpIn-submit" onClick={handleSubmit}>
                   Login
                 </div>
                 <GoogleLogin
-                  className="signUpIn-signUpGoogle"
+                 className="google-login-button"
                   onSuccess={handleGoogleSuccess}
                   onError={handleGoogleFailure}
                 />
@@ -183,6 +195,9 @@ const SignIn = () => {
                   <Link to="/SignUp">Sign up</Link>
                 </span>
               </div>
+              {successMessage && (
+                <div className="signUpIn-successMessage">{successMessage}</div>
+              )}
             </div>
           </div>
         </div>
