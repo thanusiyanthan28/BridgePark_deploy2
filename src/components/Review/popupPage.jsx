@@ -27,7 +27,8 @@ const customIcons = {
 
 const ReviewApp = () => {
   const [sortOption, setSortOption] = useState("Most relevant");
-  const [reviews, setReviews] = useState("");
+  const [reviews, setReviews] = useState([]);
+  const [filteredReviews, setFilteredReviews] = useState([]);
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [filters, setFilters] = useState({
     filter1: "",
@@ -43,15 +44,18 @@ const ReviewApp = () => {
   const [rev, setRev] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
   const [load, setLoad] = useState(false);
-  const [HelpSatusChange, setHelpSatusChange] = useState(false)
+  const [helpStatusChange, setHelpStatusChange] = useState(false);
 
   const handleReviewFormCancel = () => {
     setVisible(false);
   };
 
   useEffect(() => {
-    const roomData = getUniqueRoomDetails();
-    setRoomDetails(roomData);
+    const roomDetailsMap =  getUniqueRoomDetails().reduce((map, room) => {
+      map[room.id] = room.detail;
+      return map;
+    }, {});
+    setRoomDetails(roomDetailsMap);
   }, []);
 
   useEffect(() => {
@@ -79,6 +83,8 @@ const ReviewApp = () => {
           (a, b) => b.reviewId - a.reviewId
         );
         setRev(sortedReviews);
+        setReviews(sortedReviews);
+        setFilteredReviews(sortedReviews);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }
@@ -86,35 +92,37 @@ const ReviewApp = () => {
 
     fetchReviews();
     setLoad(false);
-    setHelpSatusChange(false)
-  }, [load, HelpSatusChange]);
+    setHelpStatusChange(false);
+  }, [load, helpStatusChange]);
 
   const handlerStatus = (value) => {
     setVisible(value);
     setLoad(true);
   };
 
-  const getFilteredReviews = () => {
-    if (selectedTopics.length === 0) {
-      return reviews;
-    }
-    return reviews.filter((review) =>
-      selectedTopics.some((topic) =>
-        review.text.toLowerCase().includes(topic.toLowerCase())
-      )
-    );
-  };
-
   const handleSortChange = (value) => {
     setSortOption(value);
   };
-
   const handleCategoryClick = (topic) => {
-    setSelectedTopics((prevSelectedTopics) =>
-      prevSelectedTopics.includes(topic)
-        ? prevSelectedTopics.filter((t) => t !== topic)
-        : [...prevSelectedTopics, topic]
-    );
+    const updatedTopics = selectedTopics.includes(topic)
+      ? selectedTopics.filter((t) => t !== topic)
+      : [...selectedTopics, topic];
+      console.log("Updated topics:", updatedTopics);
+  
+    setSelectedTopics(updatedTopics);
+  
+    if (updatedTopics.length === 0) {
+      setFilteredReviews(reviews);
+    } else {
+      const filtered = reviews.filter((review) =>
+        updatedTopics.some((topic) =>
+          review.text && typeof review.text === 'string'
+            ? review.text.toLowerCase().includes(topic.toLowerCase())
+            : false
+        )
+      );
+      setFilteredReviews(filtered);
+    }
   };
 
   const handleFilterChange = (event) => {
@@ -127,14 +135,13 @@ const ReviewApp = () => {
       isHelpful: value,
     };
     try {
-      const response = await updateReviewHelpful(id, updateData);
-      setHelpSatusChange(true)
+      await updateReviewHelpful(id, updateData);
+      setHelpStatusChange(true);
     } catch (error) {
       console.error("Failed to update review helpful status:", error);
     }
   };
 
-  const filteredReviews = getFilteredReviews();
   const totalReviews = filteredReviews.length;
   const reviewText = "Pleasant";
 
@@ -148,7 +155,7 @@ const ReviewApp = () => {
     { name: "Free WiFi", score: 6.6 },
   ];
 
-  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location"];
+  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location", "Hello"];
 
   const CustomIcon = ({ icon, size }) => (
     <span style={{ fontSize: size }}>{icon}</span>
@@ -219,13 +226,13 @@ const ReviewApp = () => {
             onChange={handleFilterChange}
           >
             <option value="">Select Option</option>
-            <option value="Option 1">Staff</option>
-            <option value="Option 2">Facilities</option>
-            <option value="Option 3">Rooms</option>
-            <option value="Option 4">Cleanlines</option>
-            <option value="Option 5">Location</option>
-            <option value="Option 6">Comport</option>
-            <option value="Option 7">Value of Money</option>
+            <option value="Staff">Staff</option>
+            <option value="Facilities">Facilities</option>
+            <option value="Rooms">Rooms</option>
+            <option value="Cleanliness">Cleanliness</option>
+            <option value="Location">Location</option>
+            <option value="Comfort">Comfort</option>
+            <option value="Value for Money">Value for Money</option>
           </select>
         </div>
         <div>
@@ -236,11 +243,11 @@ const ReviewApp = () => {
             onChange={handleFilterChange}
           >
             <option value="">Select Option</option>
-            <option value="Option A">Excellent</option>
-            <option value="Option B">Very Good</option>
-            <option value="Option C">Good</option>
-            <option value="Option C">Fair</option>
-            <option value="Option C">Poor</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
           </select>
         </div>
         <div>
@@ -258,21 +265,8 @@ const ReviewApp = () => {
             ))}
           </select>
         </div>
-        {/* <div>
-          <label>Time of year</label>
-          <select
-            name="Time of year"
-            value={filters.filter4}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option 123">Option 123</option>
-            <option value="Option 456">Option 456</option>
-            <option value="Option 789">Option 789</option>
-          </select>
-        </div> */}
       </div>
-      {/* <div>
+      <div>
         <h3 className="button-head-pop">Select topics to read reviews:</h3>
         <div className="topic-buttons-pop">
           {topics.map((topic) => (
@@ -294,7 +288,7 @@ const ReviewApp = () => {
             </Button>
           ))}
         </div>
-      </div> */}
+      </div>
       <div className="guest-reviews-container">
         <h2 className="title-top-pop">Guest reviews</h2>
         <div className="sort-reviews-pop">
@@ -319,7 +313,7 @@ const ReviewApp = () => {
             },
             pageSize: 5,
           }}
-          dataSource={rev}
+          dataSource={filteredReviews}
           renderItem={(review) => (
             <List.Item key={review.reviewId} className="review-item-pop">
               <div>
@@ -336,7 +330,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{review.roomId}</p>
+                        <p>{roomDetails[review.roomId]}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>
