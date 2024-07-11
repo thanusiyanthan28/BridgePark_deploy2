@@ -146,6 +146,7 @@
   align-items: flex-start;
   margin-top: 10px;
   margin-left: 220px;
+  color: #c10c0c;
 }
 
 .fscolumn {
@@ -154,16 +155,21 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  color: #ca1111;
 }
 
 .fscolumnh2 {
   margin-top: 0;
   align-self: flex-start;
+  color: #000;
+  font-family: 'Lato';
 }
 
 .fscolumn ul {
   margin-top: 0;
   padding-left: 0px;
+  color: #000;
+  font-family: 'Lato';
 }
 
 .fscolumn ul li {

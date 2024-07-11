@@ -3,15 +3,15 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import React, { useState, useEffect, useRef } from 'react';
 import '../../css/CardSlider.css';
-import image1 from "../../assets/images/Bar2.jpg";
-import image2 from "../../assets/images/BreakfastBuffet.jpg";
-import image3 from "../../assets/images/HotelBreakfast.jpg";
-import image4 from "../../assets/images/HotelFront.jpg";
-import image5 from "../../assets/images/Loungebar 1.jpg";
-import image6 from "../../assets/images/RearBeergarden.jpg";
-import image7 from "../../assets/images/Reception1.jpg";
-import image8 from "../../assets/images/Restaurant1.jpg";
-import image9 from "../../assets/images/Restaurant2.jpg";
+import image1 from "../../assets/images/Bar2.webp";
+import image2 from "../../assets/images/BreakfastBuffet.webp";
+import image3 from "../../assets/images/HotelBreakfast.webp";
+import image4 from "../../assets/images/HotelFront.webp";
+import image5 from "../../assets/images/Loungebar 1.webp";
+import image6 from "../../assets/images/RearBeergarden.webp";
+import image7 from "../../assets/images/Reception1.webp";
+import image8 from "../../assets/images/Restaurant1.webp";
+import image9 from "../../assets/images/Restaurant2.webp";
 
 const ImageGallery = () => {
     const cards = [

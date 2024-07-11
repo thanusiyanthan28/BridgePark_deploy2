@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import hotelFront from "../../assets/images/HotelFront.jpg";
+import hotelFront from "../../assets/images/HotelFront.webp";
 import SignUpGoogleBtn from "../common/SignUpGoogleBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";

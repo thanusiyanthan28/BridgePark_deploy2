@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faLinkedinIn, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import "../../css/Footer.css"; // CSS file for styling
-import logo from "../../assets/images/HotelLogo.png";
+import logo from "../../assets/images/HotelLogo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../../assets/RoomTypes/SingleRoom.webp";
-import img2 from "../../assets/RoomTypes/DoubleRoom3.webp";
-import img3 from "../../assets/RoomTypes/TwinRoom5.webp";
-import img4 from "../../assets/RoomTypes/TripleRoom2.webp";
+import SR from "../../assets/RoomTypes/SingleRoom/SingleRoom.webp";
+import DB1 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom3.webp";
+import DB2 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom2.webp";
+import DB3 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom1.webp";
+import TW5 from "../../assets/RoomTypes/TwinRoom/TwinRoom5.webp";
+import TW1 from "../../assets/RoomTypes/TwinRoom/TwinRoom1.webp";
+import TW2 from "../../assets/RoomTypes/TwinRoom/TwinRoom2.webp";
+import TW3 from "../../assets/RoomTypes/TwinRoom/TwinRoom3.webp";
+import TW4 from "../../assets/RoomTypes/TwinRoom/TwinRoom4.webp";
+import TW6 from "../../assets/RoomTypes/TwinRoom/TwinRoom6.webp";
+import TW7 from "../../assets/RoomTypes/TwinRoom/TwinRoom7.webp";
+import TW8 from "../../assets/RoomTypes/TwinRoom/TwinRoom8.webp";
+import TB2 from "../../assets/RoomTypes/TripleBasic/TripleRoom2.webp";
+import TB1 from "../../assets/RoomTypes/TripleBasic/TripleRoom1.webp";
 import { Row, Col, Modal } from "antd";
 import Card from "../common/Card";
 import "../../css/BasicRoom.css";
@@ -58,43 +68,47 @@ const BasicRoom = () => {
   const BasicroomData = [
     {
       id: 28,
-      image: img1,
+      image: SR,
       title: "SINGLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon1,
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
       BroomPrice: "£68.00",
+      images: [SR]
     },
     {
       id: 29,
-      image: img2,
+      image: DB1,
       title: "DOUBLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
       BroomPrice: "£90.93",
+      images: [DB1,DB2,DB3]
     },
     {
       id: 34,
-      image: img3,
+      image: TW5,
       title: "TWIN ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
       BroomPrice: "£95.13",
+      images: [TW1,TW2,TW3,TW4,TW5,TW6,TW7,TW8]
     },
     {
       id: 31,
-      image: img4,
+      image: TB2,
       title: "TRIPLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon3,
       icon2:bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
       BroomPrice: "£99.00",
+      images: [TB1,TB2]
     },
   ];
 
@@ -143,7 +157,8 @@ const BasicRoom = () => {
                 onViewMoreClick={() => handleViewMoreClick({
                   title: Basicroom.title,
                   imageSource: Basicroom.image,
-                  id: Basicroom.id
+                  id: Basicroom.id,
+                  images: Basicroom.images,
                 }, Basicroom.imageUrl,Basicroom.id)}
                 link={Basicroom.imageUrl}
               />

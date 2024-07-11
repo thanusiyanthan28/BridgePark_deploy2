@@ -42,7 +42,7 @@ const Facilities = () => {
 
   return (
     <body className='facilities-background'>
-      <img className='about-bgimage' src={bgimage}/>
+      {/* <img className='about-bgimage' src={bgimage}/> */}
       <div>
         <div>
           {/* <h1 className='facilitieshead'>FACILITIES</h1> */}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
-import img1 from "../../assets/RoomTypes/TwinRoom1.webp";
-import img2 from "../../assets/RoomTypes/TripleRoomEnsuite4.webp";
+import img1 from "../../assets/RoomTypes/TwinRoom/TwinRoom1.webp";
+import img2 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite4.webp";
 import SiteCard from "../Sitecard/siteCard";
 import Card from "../common/Card";
 import "../../css/RoomTypes.css";
