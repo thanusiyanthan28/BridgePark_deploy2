@@ -185,7 +185,7 @@ const HeaderUpdate = () => {
   return (
     <div className='header-update-container'>
       <div className='header-update'>
-        {/* <a href='/'><img className='update-header-logo' src={headerlogo}/></a> */}
+        <a href='/'><img className='update-header-logo' src={headerlogo}/></a>
         {!isMobile ? (
           <div className='header-nav-bar-left'>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />
