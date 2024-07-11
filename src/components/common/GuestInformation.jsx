@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import "../../css/RoomInformation/GuestInformation.css";
 import SiteCard from "../Sitecard/siteCard";
-import img1 from "../../assets/images/Loungebar 1.jpg";
+import img1 from "../../assets/images/Loungebar 1.webp";
 
 const GuestInfo = () => {
 

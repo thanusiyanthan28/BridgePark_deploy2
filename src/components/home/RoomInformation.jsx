@@ -7,7 +7,8 @@ import FacilitiesIconsContainer from "../Facilities/facilitiesiconsContainer";
 import ColumnList from "../Facilities/facilitiesList";
 import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
-import RoominfoCard from '../home/RoominfoCard'
+//import RoominfoCard from '../home/RoominfoCard'
+import CustomCarousel from "./new";
 
 
 const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice }) => {
@@ -35,7 +36,6 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
     }
   };
 
- 
   const cardsData = [
     { id: 1, title: 'Free WiFi' },
     { id: 2, title: 'Free Parking' },
@@ -101,7 +101,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
       
         <Row>
           <Col span={24}>
-           <RoominfoCard/>
+           <CustomCarousel roomImages={room.images} />
           </Col>
         </Row>
         <div className="sec-01" ref={sec01Ref}>
@@ -148,7 +148,7 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
 
       <div className="sec-02" ref={sec02Ref}>
         <div>
-          <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Ammenities"}</h2>
+          <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Amenities"}</h2>
         </div>
         <div>
           <FacilitiesIconsContainer cards={cardsData} />

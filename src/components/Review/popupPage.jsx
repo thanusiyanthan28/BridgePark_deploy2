@@ -10,7 +10,6 @@ import {
   MehOutlined,
   SmileOutlined,
 } from "@ant-design/icons";
-import PopupCard from "./Sidebar";
 import {
   getAllReviews,
   updateReviewHelpful,
@@ -31,7 +30,8 @@ const customIcons = {
 
 const ReviewApp = () => {
   const [sortOption, setSortOption] = useState("Most relevant");
-  const [reviews, setReviews] = useState("");
+  const [reviews, setReviews] = useState([]);
+  const [filteredReviews, setFilteredReviews] = useState([]);
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [filters, setFilters] = useState({
     filter1: "",
@@ -47,7 +47,7 @@ const ReviewApp = () => {
   const [rev, setRev] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
   const [load, setLoad] = useState(false);
-  const [HelpSatusChange, setHelpSatusChange] = useState(false);
+  const [helpStatusChange, setHelpStatusChange] = useState(false);
   const [user, setUser] = useState("");
   const [cate, setCategories] = useState([]);
   const [filteredReviewsRate, setFilteredReviewsRate] = useState([]);
@@ -60,6 +60,12 @@ const ReviewApp = () => {
   };
 
   useEffect(() => {
+    const roomDetailsMap =  getUniqueRoomDetails().reduce((map, room) => {
+      map[room.id] = room.detail;
+      return map;
+    }, {});
+    setRoomDetails(roomDetailsMap);
+
     const fetchCategories = async () => {
       try {
         const data = await getReviewCategories();
@@ -85,7 +91,11 @@ const ReviewApp = () => {
 
   useEffect(() => {
     const roomData = getUniqueRoomDetails();
-    setRoomDetails(roomData);
+    const roomDetailsMap = roomData.reduce((map, room) => {
+      map[room.id] = room.detail;
+      return map;
+    }, {});
+    setRoomDetails(roomDetailsMap);
   }, []);
 
   console.log("total rev", rev);
@@ -119,6 +129,8 @@ const ReviewApp = () => {
           (a, b) => b.reviewId - a.reviewId
         );
         setRev(sortedReviews);
+        setReviews(sortedReviews);
+        setFilteredReviews(sortedReviews);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }
@@ -126,8 +138,8 @@ const ReviewApp = () => {
 
     fetchReviews();
     setLoad(false);
-    setHelpSatusChange(false);
-  }, [load, HelpSatusChange]);
+    setHelpStatusChange(false);
+  }, [load, helpStatusChange]);
 
   console.log("rev", rev.reviewCategoryRatings);
 
@@ -136,27 +148,29 @@ const ReviewApp = () => {
     setLoad(true);
   };
 
-  const getFilteredReviews = () => {
-    if (selectedTopics.length === 0) {
-      return reviews;
-    }
-    return reviews.filter((review) =>
-      selectedTopics.some((topic) =>
-        review.text.toLowerCase().includes(topic.toLowerCase())
-      )
-    );
-  };
-
   const handleSortChange = (value) => {
     setSortOption(value);
   };
-
   const handleCategoryClick = (topic) => {
-    setSelectedTopics((prevSelectedTopics) =>
-      prevSelectedTopics.includes(topic)
-        ? prevSelectedTopics.filter((t) => t !== topic)
-        : [...prevSelectedTopics, topic]
-    );
+    const updatedTopics = selectedTopics.includes(topic)
+      ? selectedTopics.filter((t) => t !== topic)
+      : [...selectedTopics, topic];
+      console.log("Updated topics:", updatedTopics);
+  
+    setSelectedTopics(updatedTopics);
+  
+    if (updatedTopics.length === 0) {
+      setFilteredReviews(reviews);
+    } else {
+      const filtered = reviews.filter((review) =>
+        updatedTopics.some((topic) =>
+          review.text && typeof review.text === 'string'
+            ? review.text.toLowerCase().includes(topic.toLowerCase())
+            : false
+        )
+      );
+      setFilteredReviews(filtered);
+    }
   };
 
   const handleFilterChange = (value, option) => {
@@ -171,14 +185,13 @@ const ReviewApp = () => {
       isHelpful: value,
     };
     try {
-      const response = await updateReviewHelpful(id, updateData);
-      setHelpSatusChange(true);
+      await updateReviewHelpful(id, updateData);
+      setHelpStatusChange(true);
     } catch (error) {
       console.error("Failed to update review helpful status:", error);
     }
   };
 
-  const filteredReviews = getFilteredReviews();
   const totalReviews = filteredReviews.length;
   const reviewText = "Pleasant";
 
@@ -192,7 +205,7 @@ const ReviewApp = () => {
     { name: "Free WiFi", score: 6.6 },
   ];
 
-  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location"];
+  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location", "Hello"];
 
   const CustomIcon = ({ icon, size }) => (
     <span style={{ fontSize: size }}>{icon}</span>
@@ -294,14 +307,14 @@ const ReviewApp = () => {
 
         <List
           itemLayout="vertical"
-          size="large"
+          size="large"zzz
           pagination={{
             onChange: (page) => {
               console.log(page);
             },
             pageSize: 5,
           }}
-          dataSource={rev}
+          dataSource={filteredReviews}
           renderItem={(review) => (
             <List.Item key={review.reviewId} className="review-item-pop">
               <div>
@@ -318,7 +331,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{review.roomId}</p>
+                        <p>{roomDetails[review.roomId]}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>

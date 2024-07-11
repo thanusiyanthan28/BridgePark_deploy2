@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/Header.css";
-import logo from "../../assets/images/HotelLogo.png";
+import logo from "../../assets/images/HotelLogo.webp";
 import Button from "./Button";
 import Card from "./Card";
 import { Row } from "antd";
 import UserProfile from "./UserProfile";
-import img from "../../assets/images/DoubleEnsuite.jpg";
+import img from "../../assets/images/DoubleEnsuite.webp";
 import SiteCard from "../Sitecard/siteCard";
 import title from "../../assets/title.png"
 import HomeCard from "../Sitecard/homeCard";

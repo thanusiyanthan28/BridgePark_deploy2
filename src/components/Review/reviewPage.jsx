@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Button, Modal, Progress } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
 import ReviewApp from './popupPage';
+import { getAllReviews} from "../../Services/api";
 import './reviewPage.css';
 
 const ReviewPage = () => {
@@ -16,7 +17,8 @@ const ReviewPage = () => {
   ];
 
   const score = 6.1;
-  const totalReviews = 2651;
+  const [reviews, setReviews] = useState([]);
+  const [filteredReviews, setFilteredReviews] = useState([]);
   const reviewText = 'Pleasant';
   const topics = ['Room', 'Location', 'Breakfast', 'Bed', 'Clean'];
 
@@ -32,6 +34,22 @@ const ReviewPage = () => {
     setIsModalVisible(true);
   };
 
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const reviewsData = await getAllReviews();
+        const sortedReviews = reviewsData.$values.sort(
+          (a, b) => b.reviewId - a.reviewId
+        );
+        setReviews(sortedReviews);
+        setFilteredReviews(sortedReviews);
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
   const handleCancel = () => {
     setIsModalVisible(false);
     setClickedTopics([]);
@@ -40,7 +58,7 @@ const ReviewPage = () => {
   const getProgressBarColor = (score) => {
     return score > 5 ? '#F6BE00' : '#618e95';
   };
-
+  const totalReviews = filteredReviews.length;
   return (
     <div className="container-rev">
       <h2 className='rev-home-head'>Guest Reviews</h2>

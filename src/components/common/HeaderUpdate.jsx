@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
 import { MenuOutlined, UserOutlined,CloseOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
-import img from "../../assets/images/DoubleEnsuite.jpg";
+import img from "../../assets/images/DoubleEnsuite.webp";
 import headerlogo from '../../assets/header-logo.png'
 
 const HeaderUpdate = () => {

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
+
+import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import hotelFront from "../../assets/images/HotelFront.jpg";
 import "../../css/LoginSignUp.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

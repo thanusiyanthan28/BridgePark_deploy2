@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomCard from "../../components/common/HotelRoomCard";
-import img1 from "../../assets/RoomTypes/DoubleRoom3.webp";
-import img2 from "../../assets/RoomTypes/TwinEnsuite1.webp";
-import img3 from "../../assets/RoomTypes/TripleRoom1.webp";
-import img4 from "../../assets/RoomTypes/TripleRoomEnsuite3.webp";
-import img5 from "../../assets/RoomTypes/Quaduple room.webp";
-import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
+import DB3 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom3.webp";
+import DB1 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom1.webp";
+import DB2 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom2.webp";
+import TWE1 from "../../assets/RoomTypes/TwinEnsuite/TwinEnsuite1.webp";
+import TWE2 from "../../assets/RoomTypes/TwinEnsuite/TwinEnsuite2.webp";
+import TWE3 from "../../assets/RoomTypes/TwinEnsuite/TwinEnsuite3.webp";
+import TB1 from "../../assets/RoomTypes/TripleBasic/TripleRoom1.webp";
+import TB2 from "../../assets/RoomTypes/TripleBasic/TripleRoom2.webp";
+import TE3 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite3.webp";
+import TE1 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite1.webp";
+import TE2 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite2.webp";
+import TE4 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite4.webp";
+import TE5 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite5.webp";
+import QD from "../../assets/RoomTypes/Quaduple room.webp";
+import img6 from "../../assets/images/QuadEnsuitedoubleandBunk.webp";
 import img7 from "../../assets/RoomTypes/Quad_2.webp";
-import img8 from "../../assets/RoomTypes/TwlightRoom2.webp";
+import TW2 from "../../assets/RoomTypes/Twlight/TwlightRoom2.webp";
+import TW1 from "../../assets/RoomTypes/Twlight/TwlightRoom1.webp";
+import TW3 from "../../assets/RoomTypes/Twlight/TwlightRoom3.webp";
+import TW4 from "../../assets/RoomTypes/Twlight/TwlightRoom4.webp";
+import TW5 from "../../assets/RoomTypes/Twlight/TwlightRoom5.webp";
+import TW6 from "../../assets/RoomTypes/Twlight/TwlightRoom6.webp";
 import { Row, Col, Modal } from "antd";
 import Card from "../common/Card";
 import "../../css/EnsuiteRooms.css";
@@ -63,53 +77,58 @@ const EnsuiteRoom = () => {
   const EnsuiteroomData = [
     {
       id: 14,
-      image: img1,
+      image: DB3,
       title: "DOUBLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon1,
       icon2: bedIcon1,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(14),
       EroomPrice: "£111.52",
+      images: [DB3,DB1,DB2]
     },
     {
       id: 11,
-      image: img2,
+      image: TWE1,
       title: "TWIN ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon2,
       icon2: bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
       EroomPrice: "£120.82",
+      images:[TWE1,TWE2,TWE3]
     },
     {
       id: 9,
-      image: img3,
+      image: TB1,
       title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon2,
       icon2: bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
       EroomPrice: "£99.00",
+      images: [TB1,TB2]
     },
     {
       id: 10,
-      image: img4,
+      image: TE3,
       title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x single bed + 1x double bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£104.95",
+      images: [TE1,TE2,TE3,TE4,TE5]
     },
     {
       id: 19,
-      image: img5,
+      image: QD,
       title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "2x single bed + 1x double bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£90.00",
+      images: [QD]
     },
     {
       id: 20,
@@ -120,6 +139,7 @@ const EnsuiteRoom = () => {
       cardTitle: "1x double bed + 1x bunk bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£100.75",
+      images:[img6]
     },
     {
       id: 25,
@@ -130,16 +150,18 @@ const EnsuiteRoom = () => {
       cardTitle: "1x Double bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£121.39",
+      images: [img7]
     },
     {
       id: 4,
-      image: img8,
+      image: TW2,
       title: "CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x Superior King Room",
       imageUrl: getUrlById(10),
       EroomPrice: "£126.45", 
+      images:[TW1,TW2,TW3,TW4,TW5,TW6]
     },
   ];
 
@@ -187,7 +209,8 @@ const EnsuiteRoom = () => {
                       {
                         title: Ensuiteroom.title,
                         imageSource: Ensuiteroom.image,
-                        id: Ensuiteroom.id
+                        id: Ensuiteroom.id,
+                        images: Ensuiteroom.images,
                       },
                       Ensuiteroom.imageUrl,Ensuiteroom.id
                     )

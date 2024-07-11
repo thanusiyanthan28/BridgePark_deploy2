@@ -3,23 +3,12 @@ import '../../css/home/about.css';
 import CarouselComponent from '../common/CarouselComponent';
 import { Row, Col } from 'antd';
 import bgimage from '../../assets/bph-welcome.png'
-import img1 from '../../assets/images/Bar2.jpg';
-// import img2 from '../../assets/images/BreakfastBuffet.jpg';
-// import img3 from '../../assets/images/DormRoom.jpg';
-// import img4 from '../../assets/images/DoubleEnsuite.jpg';
-// import img5 from '../../assets/images/ExecutiveKingRoom 2.jpg';
-// import img6 from '../../assets/images/ExecutiveKingRoom.jpg';
-// import img7 from '../../assets/images/HotelBreakfast.jpg';
-// import img8 from '../../assets/images/HotelFront.jpg';
-// import img9 from '../../assets/images/Reception1.jpg';
-// import img10 from '../../assets/images/Loungebar 1.jpg';
-// import img11 from '../../assets/images/Loungebar 1.jpg';
-// import img12 from '../../assets/images/TwilightExecroom.jpg';
-import img2 from '../../assets/images/image_gellery/image1.jpg';
-import img3 from '../../assets/images/image_gellery/image2.jpg';
-import img4 from '../../assets/images/image_gellery/image3.jpg';
-import img5 from '../../assets/images/image_gellery/image4.jpg';
-import img6 from '../../assets/images/image_gellery/image5.jpeg';
+import img1 from '../../assets/images/image_gellery/image6.webp';
+import img2 from '../../assets/images/image_gellery/image1.webp';
+import img3 from '../../assets/images/image_gellery/image2.webp';
+import img4 from '../../assets/images/image_gellery/image3.webp';
+import img5 from '../../assets/images/image_gellery/image4.webp';
+import img6 from '../../assets/images/image_gellery/image5.webp';
 
 const About = () => {
     const carouselImages = [

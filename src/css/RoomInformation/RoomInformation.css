@@ -147,7 +147,7 @@
 }
 .site-card-room {
   position: absolute;
-  top: 260px;
+  top: 350px;
   right: 60px;
   z-index: 999; /* Ensure it's above other content */
 }
@@ -232,7 +232,7 @@
   }
   .RoomInformation-section-PriceList-2{
    font-size: 10px;
-   margin-left: 70px;
+   margin-left: 100px;
    margin-top: -24px;
    margin-bottom: 15px;
 
@@ -248,14 +248,14 @@
     margin-top: 5px;
     margin-right: -20px;
     padding: 5px 120px;
-    border-radius: 7px;
+    border-radius: 0px;
   }
   .RoomInformation-subHeadings {
     font-size: 15px;
     margin-left: 10px;
   }
   .RoomInformation-textP {
-    font-size: 8px;
+    font-size: 15px;
     width: 120%;
     margin-left: 10px;
   }
@@ -525,7 +525,7 @@
   }
 
   .RoomInformation-section-PriceList {
-    margin-left: 460px;
+    margin-left: 440px;
     font-size: 15px;
     margin-top: -18px;
     flex-direction: column;
