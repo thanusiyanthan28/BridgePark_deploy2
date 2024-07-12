@@ -87,3 +87,11 @@
   font-weight: 100;
 }
 
+.left-align-select .ant-select-selector {
+  text-align: left;
+}
+@media only screen and (min-width: 376px) and (max-width: 435px){
+  .ant-rate {
+    font-size: 22px;
+  }
+}

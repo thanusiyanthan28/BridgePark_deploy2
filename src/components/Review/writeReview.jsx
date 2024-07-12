@@ -120,7 +120,7 @@ const ReviewForm = (props) => {
   return (
     <div className="container-write">
       <div className="user-info-write">
-        <Avatar src={image} size={64} icon={<UserOutlined />}>
+        <Avatar src={image} size={54} icon={<UserOutlined />}>
           {!user.image && getInitials(email.split("@")[0])}
         </Avatar>
         <div className="user-email-write">{email}</div>

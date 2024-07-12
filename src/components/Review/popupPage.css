@@ -443,15 +443,23 @@
     display: grid;
     grid-template-columns: repeat(1, 350px);
     gap: 10px;
+    
   }
-
+  .container-pop{
+    width:360px;
+    margin-left: -40px;
+  }
   .rate-pop {
-    margin-left: 50px;
+    margin-left: 10px;
     margin-top: 10px;
   }
-
+ .review-text-pop1{
+  margin-top: 10px;
+  margin-left: -5px;
+ }
   .write-pop {
-    margin-left: 50px;
+    margin-left: -10px;
+    margin-top: 10px;
   }
 
   .sort-reviews-pop {
