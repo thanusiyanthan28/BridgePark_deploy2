@@ -49,7 +49,7 @@ const Room = () => {
     setIsModalVisible(true);
     setSelectedRoomId(id)
     setRoomPrice(room.roomPrice);
-    if (room.title.includes('BASIC')) {
+    if (room.title.includes('SHARED')) {
       setBathroomType('Shared');
     } else {
       setBathroomType('Private');

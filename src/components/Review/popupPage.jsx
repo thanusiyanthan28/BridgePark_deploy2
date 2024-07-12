@@ -239,7 +239,7 @@ const ReviewApp = () => {
           onCancel={handleReviewFormCancel}
           footer={null}
           className="custom-modal2"
-          width={900}
+          width={600}
         >
           <ReviewForm
             visible={visible}
