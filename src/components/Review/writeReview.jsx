@@ -127,9 +127,9 @@ const ReviewForm = (props) => {
       </div>
 
       <Form form={form} layout="vertical" onFinish={handleSubmit}>
-        <Form.Item name="" label="Email">
+        {/* <Form.Item name="" label="Email">
           <Input defaultValue={email} disabled />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item
           name="username"
           label="Username"
@@ -139,23 +139,24 @@ const ReviewForm = (props) => {
         </Form.Item>
         <Form.Item
           name="country"
-          label="Country"
+          label="Country "
           rules={[{ required: true, message: "Please select your country!" }]}
         >
-          <Select showSearch>
+          <Select className="left-align-select" showSearch >
             {countries.map((country) => (
               <Option key={country} value={country}>
                 {country}
               </Option>
             ))}
           </Select>
+          
         </Form.Item>
         <Form.Item
           name="roomType"
           label="Room Type"
           rules={[{ required: true, message: "Please select your room type!" }]}
         >
-          <Select showSearch>
+          <Select className="left-align-select" showSearch>
             {roomDetails.map((detail) => (
               <Option key={detail.id} value={detail.detail}>
                 {detail.detail}
