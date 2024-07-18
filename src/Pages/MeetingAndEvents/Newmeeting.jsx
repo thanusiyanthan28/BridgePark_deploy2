@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './NewMeeting.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
-import img1 from "../../assets/MEDIA & ASSESTS/banfire 5.jpg";
-import img2 from "../../assets/MEDIA & ASSESTS/christ8.png";
-import img3 from "../../assets/MEDIA & ASSESTS/christmas 3.jpg";
-import img4 from "../../assets/MEDIA & ASSESTS/valen 2.jpg";
-import img5 from "../../assets/MEDIA & ASSESTS/christmas 3.jpg";
+import img1 from "../../assets/MEDIA & ASSESTS/banfire 5.webp";
+import img2 from "../../assets/MEDIA & ASSESTS/christ8.webp";
+import img3 from "../../assets/MEDIA & ASSESTS/christmas 3.webp";
+import img4 from "../../assets/MEDIA & ASSESTS/valen 2.webp";
+import img5 from "../../assets/MEDIA & ASSESTS/christmas 3.webp";
 import img6 from "../../assets/MEDIA & ASSESTS/bonfire 3.webp";
 
 const cardsData = [
