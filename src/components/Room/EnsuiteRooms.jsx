@@ -41,6 +41,8 @@ const EnsuiteRoom = () => {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [bookingUrl, setBookingUrl] = useState("");
   const [selectedRoomId, setSelectedRoomId] = useState(0);
+  const [bathroomType, setBathroomType] = useState('');
+  const [roomPrice, setRoomPrice] = useState('');
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
@@ -49,7 +51,13 @@ const EnsuiteRoom = () => {
     setSelectedRoom(EnsuiteRoom);
     setBookingUrl(url);
     setIsModalVisible(true);
-    setSelectedRoomId(id)
+    setSelectedRoomId(id);
+    setRoomPrice(EnsuiteRoom.roomPrice);
+    if (EnsuiteRoom.title.includes('SHARED')) {
+      setBathroomType('Shared');
+    } else {
+      setBathroomType('Private');
+    }
   };
 
   const handleCancel = () => {
@@ -210,7 +218,9 @@ const EnsuiteRoom = () => {
                         title: Ensuiteroom.title,
                         imageSource: Ensuiteroom.image,
                         id: Ensuiteroom.id,
+                        cardTitle:Ensuiteroom.cardTitle,
                         images: Ensuiteroom.images,
+                        roomPrice: Ensuiteroom.EroomPrice,
                       },
                       Ensuiteroom.imageUrl,Ensuiteroom.id
                     )
@@ -228,7 +238,13 @@ const EnsuiteRoom = () => {
           footer={null}
           width="80%"
         >
-          <RoomInfromation room={selectedRoom} bookingUrl={bookingUrl} selectedRoomId={selectedRoomId}/>
+          <RoomInfromation
+           room={selectedRoom}
+            bookingUrl={bookingUrl}
+             selectedRoomId={selectedRoomId}
+             bathroomType={bathroomType}
+             roomPrice={roomPrice}
+             />
         </Modal>
       </div>
     </div>

@@ -17,6 +17,7 @@ import {
 } from "../../Services/api";
 import ReviewForm from "./writeReview";
 import { getUniqueRoomDetails } from "./roomData";
+import { fa0 } from "@fortawesome/free-solid-svg-icons";
 
 const { Option } = Select;
 
@@ -230,9 +231,15 @@ const ReviewApp = () => {
       <div className="guest-reviews-pop">
         <div className="score-pop">6.1</div>
         <div className="details-pop">
-          <span className="review-text-pop">{reviewText}</span> · {totalReviews}{" "}
+          <span className="review-text-pop">{reviewText}</span><br></br> {totalReviews}{" "}
           reviews
+        
+         
         </div>
+        <button className="review-text-pop1">
+        <a className="review-text-pop1">We aim for 100% real reviews</a>
+         </button>
+       
         <button className="write-pop" onClick={() => setVisible(true)}>
           Write Review
         </button>
@@ -242,7 +249,7 @@ const ReviewApp = () => {
           onCancel={handleReviewFormCancel}
           footer={null}
           className="custom-modal2"
-          width={900}
+          width={600}
         >
           <ReviewForm
             visible={visible}
@@ -281,12 +288,17 @@ const ReviewApp = () => {
 
         <List
           itemLayout="vertical"
-          size="large"zzz
+          size="large"
           pagination={{
-            onChange: (page) => {
-              console.log(page);
+            pageSize: 5, // Number of items per page
+            total: filteredReviews.length, // Total number of items in the data source
+            showSizeChanger: false,
+            pageSizeOptions: [], // Show the page size changer
+            // pageSizeOptions: ['5', '10', '20', '50'], // Options for items per page
+            onChange: (page, pageSize) => {
+              console.log("Page:", page, "Page Size:", pageSize);
+             
             },
-            pageSize: 5,
           }}
           dataSource={filteredReviews}
           renderItem={(review) => (
