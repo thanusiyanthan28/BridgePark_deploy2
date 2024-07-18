@@ -274,7 +274,7 @@ const ReviewApp = () => {
           ))}
       </div>
 
-      <div className="filter-options">
+      {/* <div className="filter-options">
         <div>
           <label>Category :</label>
           <Select
@@ -308,7 +308,7 @@ const ReviewApp = () => {
             <Option value="Lowest score">Lowest score</Option>
           </Select>
         </div>
-      </div>
+      </div> */}
       <div className="guest-reviews-container">
         <h2 className="title-top-pop">Guest reviews</h2>
 
