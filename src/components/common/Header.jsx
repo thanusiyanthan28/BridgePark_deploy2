@@ -29,11 +29,11 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-    setIsLoggedIn(true); // Set login status to true
+    setIsLoggedIn(true);
   };
 
   const handleLogout = () => {
-    setIsLoggedIn(false); // Set login status to false
+    setIsLoggedIn(false);
   };
 
   const userData = {
@@ -50,8 +50,6 @@ const Header = () => {
     };
 
     window.addEventListener("resize", handleResize);
-
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -62,15 +60,10 @@ const Header = () => {
       <div className="overlay"></div>
       {isMobile && <div className="home-sitecard"><HomeCard /></div>  }
       <div className="hero-container">
-     {/* <img src={title} alt="title" className="header-title" /> */}
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
         
-        {/* <div className="heading-container">
-          <h1 className="heading">BRIDGE </h1>
-          <h1 className="heading2">PARK HOTEL</h1>
-        </div> */}
         <div className="header-slogan">RESERVE YOUR STAY NOW</div>
         {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>

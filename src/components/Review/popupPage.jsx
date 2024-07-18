@@ -53,7 +53,8 @@ const ReviewApp = () => {
   const [filteredReviewsRate, setFilteredReviewsRate] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState(1);
 
-  console.log("revirew rate id", filteredReviewsRate);
+  console.log("revirew is rev kk", rev);
+  
 
   const handleReviewFormCancel = () => {
     setVisible(false);
@@ -87,8 +88,6 @@ const ReviewApp = () => {
     setFilteredReviewsRate(filtered);
   };
 
-  console.log("setFilteredReviewsRate set view ", filteredReviewsRate);
-
   useEffect(() => {
     const roomData = getUniqueRoomDetails();
     const roomDetailsMap = roomData.reduce((map, room) => {
@@ -97,8 +96,6 @@ const ReviewApp = () => {
     }, {});
     setRoomDetails(roomDetailsMap);
   }, []);
-
-  console.log("total rev", rev);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -119,7 +116,22 @@ const ReviewApp = () => {
 
   const handleCategoryChange = (categoryId) => {
     setCategoryFilter(categoryId);
+    filterreviewscat(categoryId);
   };
+
+  const filterreviewscat = (categoryId) => {
+    const filtered = rev.filter((review) => {
+      if (review.reviewCategoryRatings && review.reviewCategoryRatings.$values) {
+        return review.reviewCategoryRatings.$values.some(
+          (rating) => {
+            return rating.reviewCategoryId === categoryId;
+          }
+        );
+      }
+      return false;
+    });
+  };
+  
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -141,8 +153,6 @@ const ReviewApp = () => {
     setHelpStatusChange(false);
   }, [load, helpStatusChange]);
 
-  console.log("rev", rev.reviewCategoryRatings);
-
   const handlerStatus = (value) => {
     setVisible(value);
     setLoad(true);
@@ -151,6 +161,7 @@ const ReviewApp = () => {
   const handleSortChange = (value) => {
     setSortOption(value);
   };
+
   const handleCategoryClick = (topic) => {
     const updatedTopics = selectedTopics.includes(topic)
       ? selectedTopics.filter((t) => t !== topic)
@@ -174,7 +185,6 @@ const ReviewApp = () => {
   };
 
   const handleFilterChange = (value, option) => {
-    // setFilters({ filter1: value });
     const { key } = option;
     handleCategoryChange(key);
     filterReviews(key);
@@ -265,42 +275,6 @@ const ReviewApp = () => {
               />
             </div>
           ))}
-      </div>
-
-      <div className="filter-options">
-        <div>
-          <label>Category :</label>
-          <Select
-            name="Reviewers"
-            value={filters.filter1}
-            onChange={handleFilterChange}
-            style={{ width: 200 }}
-          >
-            <Option value="">Select Option</Option>
-            {cate.$values &&
-              cate.$values.map((category) => (
-                <Option
-                  key={category.reviewCategoryId}
-                  value={category.reviewCategoryName}
-                >
-                  {category.reviewCategoryName}
-                </Option>
-              ))}
-          </Select>
-        </div>
-        <div className="sort-reviews-pop">
-          <span>Sort reviews by:</span>
-          <Select
-            defaultValue={sortOption}
-            onChange={handleSortChange}
-            style={{ width: 200 }}
-          >
-            <Option value="Most relevant">Most relevant</Option>
-            <Option value="Most recent">Most recent</Option>
-            <Option value="Highest score">Highest score</Option>
-            <Option value="Lowest score">Lowest score</Option>
-          </Select>
-        </div>
       </div>
       <div className="guest-reviews-container">
         <h2 className="title-top-pop">Guest reviews</h2>

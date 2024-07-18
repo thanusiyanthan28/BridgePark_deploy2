@@ -163,7 +163,7 @@ const Room = () => {
                 // icon2={room.icon2}
                 description="Spacious room with a breathtaking view"
                 // guests={2}
-                status="Available"
+                status="Check"
                 price={room.roomPrice}
                 buttonText="Book Now"
                 cardtitle={room.cardTitle}
