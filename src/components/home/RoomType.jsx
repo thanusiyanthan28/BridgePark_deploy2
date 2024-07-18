@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
-import img1 from "../../assets/images/ExecutiveKingRoom.jpg";
-import img2 from "../../assets/images/QuadEnsuitedoubleandBunk.jpg";
+import img1 from "../../assets/RoomTypes/TwinRoom/TwinRoom1.webp";
+import img2 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite4.webp";
 import SiteCard from "../Sitecard/siteCard";
 import Card from "../common/Card";
 import "../../css/RoomTypes.css";
 
 const RoomType = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
@@ -62,7 +62,7 @@ const RoomType = () => {
           description="All the rooms “Basic” are with shared bathroom facilities"
           guests={2}
           status="Available"
-          price="£48"
+          price="£71.76"
           buttonText="Book Now"
           cardtitle="Basic Rooms"
           linkTo="/BasicRoom"
@@ -73,7 +73,7 @@ const RoomType = () => {
           description="“En-suite” rooms are with Private bathroom facilities"
           guests={2}
           status="Available"
-          price="£200"
+          price="£80.95"
           buttonText="Book Now"
           cardtitle="Ensuite Rooms"
           linkTo="/EnsuiteRoom"

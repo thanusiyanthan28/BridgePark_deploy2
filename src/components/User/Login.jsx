@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
-import hotelFront from "../../assets/images/HotelFront.jpg";
+import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginApi } from "../../Services/auth";
 import { Alert } from "antd";
 import { jwtDecode } from "jwt-decode";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -30,25 +32,52 @@ const SignIn = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {};
 
-  const handleSubmit = async () => {
+    if (!name) {
+      newErrors.name = "Name is required";
+      valid = false;
+    }
+    if (!email) {
+      newErrors.email = "Email is required";
+      valid = false;
+    }
+    if (!password) {
+      newErrors.password = "Password is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
     const formData = {
+      name: name,
       email: email,
       password: password,
     };
 
     try {
       const response = await loginApi(formData);
-      const  token = response.token; 
-      const user  = response.user; 
+      const token = response.token;
+      const user = response.user;
 
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      console.log('tokensss',token)
-      console.log('user12233',user)
-      setSuccessMessage("Login successful!");
+      console.log("tokensss", token);
+      console.log("user12233", user);
+      toast.success("Login successful");
       setIsLoggedIn(true);
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
     } catch (error) {
       console.error("Sign in failed:", error);
       setErrors({
@@ -65,7 +94,7 @@ const SignIn = () => {
     const userData = jwtDecode(token);
     console.log("User Data:", userData);
     localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
@@ -82,6 +111,7 @@ const SignIn = () => {
 
   return (
     <body className="signUpIn-body">
+      <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
           <div className="signUpIn-Logpicture">
@@ -126,7 +156,7 @@ const SignIn = () => {
                     onClick={handleToggle}
                   >
                     <FontAwesomeIcon
-                      icon={showPassword ? faEyeSlash : faEye}
+                      icon={showPassword ? faEye : faEyeSlash}
                       size="xs"
                       style={{ color: "#669399" }}
                     />
@@ -152,6 +182,7 @@ const SignIn = () => {
                   Login
                 </div>
                 <GoogleLogin
+                 className="google-login-button"
                   onSuccess={handleGoogleSuccess}
                   onError={handleGoogleFailure}
                 />

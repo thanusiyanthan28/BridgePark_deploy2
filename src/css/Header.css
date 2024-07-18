@@ -2,7 +2,7 @@
 .head-main {
   position: relative;
   height: 100vh;
-  background-image: url("../assets/images/HotelFront.jpg");
+  background-image: url("../assets/images/HotelFront.webp");
   background-size: cover;
   text-align: center;
   overflow: hidden; /* Ensures overlay stays within container bounds */
@@ -35,7 +35,7 @@
 }
 
 .headerLogoPosition {
-  /* margin-bottom: -100px !important; */
+  margin-top: 20px;
 }
 
 .heading-container h1 {
@@ -67,7 +67,20 @@
 
 }
 
-
+@media screen and (width: 390px) {
+  .home-sitecard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 40% !important;
+    z-index: 999;
+    text-align: left;
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .home-sitecard {
@@ -130,7 +143,7 @@
   .head-main {
     position: relative;
     height: 110vh;
-    background-image: url("../assets/images/HotelFront.jpg");
+    background-image: url("../assets/images/HotelFront.webp");
     background-size: cover;
     text-align: center;
     overflow: hidden; /* Ensures overlay stays within container bounds */

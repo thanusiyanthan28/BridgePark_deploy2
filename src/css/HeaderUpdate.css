@@ -6,6 +6,9 @@
   height: 50px;
 
 }
+.mobile-toggle.ant-btn-primary{
+ background-color: #669399;
+}
 .header-font{
   font-family: "lato", serif;
 }

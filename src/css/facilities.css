@@ -63,11 +63,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40%;
+  height: 50%;
   font-size: 14px;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   margin-bottom: 15px;
-  font-weight: bold;
+  margin-top: 5px;
+  font-weight: 600;
 
  
 }
@@ -145,6 +146,7 @@
   align-items: flex-start;
   margin-top: 10px;
   margin-left: 220px;
+  color: #c10c0c;
 }
 
 .fscolumn {
@@ -153,16 +155,21 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  color: #ca1111;
 }
 
 .fscolumnh2 {
   margin-top: 0;
   align-self: flex-start;
+  color: #000;
+  font-family: 'Lato';
 }
 
 .fscolumn ul {
   margin-top: 0;
   padding-left: 0px;
+  color: #000;
+  font-family: 'Lato';
 }
 
 .fscolumn ul li {
@@ -175,7 +182,9 @@
   margin: 6px;
   top: 0;
 }
-
+.before-bracket {
+  margin-left: 25px; /* Adjust the value as needed */
+}
 /* Media queries */
 
 /* Max width 768px */
@@ -201,6 +210,13 @@
 }
   
 /* Max width 435px */
+@media (max-width :768px){
+  .facilities-sub-content{
+    text-align: justify;
+    width: 90%;
+    
+  }
+}
 @media(max-width:435px) {
    .facilitiescard {
     width: 65%;

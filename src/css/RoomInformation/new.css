@@ -1,0 +1,25 @@
+.new-main{
+  height: 300px;
+}
+.new-custom-carousel {
+  width: 100%;
+  height: auto; /* Set the desired height for the carousel */
+  overflow: hidden;
+
+}
+
+.new-custom-carousel .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide{
+  width: 100%;
+}

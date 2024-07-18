@@ -1,38 +1,30 @@
 import React, { useState } from "react";
-import style from "../../css/LoginSignUp.css";
-import hotelFront from "../../assets/images/HotelFront.jpg";
+import { Link,useNavigate } from "react-router-dom";
+
+import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-// import { useHistory } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import "../../css/LoginSignUp.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ResetPassword = () => {
-  // const history = useHistory();
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
-    const newPassword = e.target.value;
-    setPassword(newPassword);
-
-    if (newPassword.length < 6) {
-      setErrors({
-        ...errors,
-        password: "Password must be at least 6 characters long",
-      });
-    } else {
-      setErrors({ ...errors, password: "" });
-    }
+    setPassword(e.target.value);
   };
 
   const handleConfirmPasswordChange = (e) => {
@@ -47,44 +39,54 @@ const ResetPassword = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
-  //Function to the valaidate form inputs
   const validateForm = () => {
     let formIsValid = true;
-    let newErrors = {};
+    const newErrors = {};
+
     if (!email.trim()) {
-      formIsValid = false;
       newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
       formIsValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Email is invalid";
+      formIsValid = false;
     }
 
     if (!password.trim()) {
-      formIsValid = false;
       newErrors.password = "Password is required";
-    } else if (password.length < 6) {
       formIsValid = false;
+    } else if (password.length < 6) {
       newErrors.password = "Password must be at least 6 characters long";
+      formIsValid = false;
+    }
+
+    if (!confirmPassword.trim()) {
+      newErrors.confirmPassword = "Confirm Password is required";
+      formIsValid = false;
+    } else if (confirmPassword !== password) {
+      newErrors.confirmPassword = "Passwords do not match";
+      formIsValid = false;
     }
 
     setErrors(newErrors);
     return formIsValid;
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (validateForm()) {
-      if (password === confirmPassword) {
-        setSuccessMessage("Password Reset successfully");
-        setErrorMessage("");
-      } else {
-        setErrorMessage("Passwords do not match");
-        setSuccessMessage("");
-      }
+      toast.success("Password reset successfully!");
+      setTimeout(() => {
+        navigate("/SignIn");
+      }, 3000);
+    } else {
+      toast.error("Unable to Reset Password.");
     }
   };
 
   return (
     <body className="signUpIn-body">
+      <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
           <div className="signUpIn-Logpicture">
@@ -93,14 +95,14 @@ const ResetPassword = () => {
           <div className="signUpIn-header">
             <div className="signUpIn-text">Reset Your Password</div>
             <p className="signUpIn-Subtext">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Join Bridge Park Hotel and share your experience to help us
+              improve and provide the best services.
             </p>
             <div className="signUpIn-inputs">
               <div className="signUpIn-input">
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email *"
                   value={email}
                   onChange={handleEmailChange}
                 />
@@ -112,7 +114,7 @@ const ResetPassword = () => {
                 <div className="signUpIn-ResetpasswordWrapper">
                   <input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter new password"
+                    placeholder="Enter new password *"
                     value={password}
                     onChange={handlePasswordChange}
                   />
@@ -121,18 +123,21 @@ const ResetPassword = () => {
                     onClick={handleTogglePassword}
                   >
                     <FontAwesomeIcon
-                      icon={showPassword ? faEyeSlash : faEye}
+                      icon={showPassword ? faEye : faEyeSlash}
                       size="xs"
                       style={{ color: "#669399" }}
                     />
                   </span>
                 </div>
+                {errors.password && (
+                  <span className="signUpIn-error">{errors.password}</span>
+                )}
               </div>
               <div className="signUpIn-input">
                 <div className="signUpIn-ResetpasswordWrapper">
                   <input
                     type={showConfirmPassword ? "text" : "password"}
-                    placeholder="Confirm new password"
+                    placeholder="Confirm new password *"
                     value={confirmPassword}
                     onChange={handleConfirmPasswordChange}
                   />
@@ -141,30 +146,22 @@ const ResetPassword = () => {
                     onClick={handleToggleConfirmPassword}
                   >
                     <FontAwesomeIcon
-                      icon={showConfirmPassword ? faEyeSlash : faEye}
+                      icon={showConfirmPassword ? faEye : faEyeSlash}
                       size="xs"
                       style={{ color: "#669399" }}
                     />
                   </span>
                 </div>
+                {errors.confirmPassword && (
+                  <span className="signUpIn-error">
+                    {errors.confirmPassword}
+                  </span>
+                )}
               </div>
               <div className="signUpIn-SubmitContainor">
-                <div className="signUpIn-submit" onClick={handleSubmit}>
+                <button className="signUpIn-submit" onClick={handleSubmit}>
                   Reset Your Password
-                </div>
-                {errorMessage && (
-                  <span className="signUpIn-error">{errorMessage}</span>
-                )}
-                {successMessage && (
-                  <span className="signUpIn-successMessage">
-                    {successMessage}
-                  </span>
-                )}
-                {successMessage && ( // Conditionally render the link if successMessage is not empty
-                  <span>
-                    Go to <Link to="/SignIn">Login</Link>
-                  </span>
-                )}
+                </button>
               </div>
             </div>
           </div>

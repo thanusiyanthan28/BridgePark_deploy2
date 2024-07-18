@@ -37,6 +37,11 @@
         margin-right: auto;
         width: 90%;
       }
+      .rooms-sub-content{
+        text-align: justify;
+        width: 95%;
+        
+      }
   
   .hotelRoomMainRow {
     display: block; /* Change to block to display columns one after the other */

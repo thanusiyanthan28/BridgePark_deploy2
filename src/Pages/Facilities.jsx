@@ -4,16 +4,16 @@ import '../css/facilities.css';
 import ColumnList from '../components/Facilities/facilitiesList';
 import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import nonSmokingGif from '../assets/Facilities of BPH/Non-smoking rooms.gif';
-import roomServiceGif from '../assets/Facilities of BPH/Room service.gif';
-import wifiGif from '../assets/Facilities of BPH/Free WiFi.gif';
-import parkingGif from '../assets/Facilities of BPH/Free on-site parking.gif';
-import familyRoomsGif from '../assets/Facilities of BPH/Rooms.gif';
-import frontDeskGif from '../assets/Facilities of BPH/Front Desk Services.gif';
-import barGif from '../assets/Facilities of BPH/champagne.gif';
-import heatingGif from '../assets/Facilities of BPH/heating.gif';
-import housekeepingGif from '../assets/Facilities of BPH/Cleaning Services.gif';
-import breakfastGif from '../assets/Facilities of BPH/Breakfast.gif';
+import nonSmokingGif from '../assets/Facilities of BPH/non_smoking_rooms.png';
+import roomServiceGif from '../assets/Facilities of BPH/room_service.png';
+import wifiGif from '../assets/Facilities of BPH/wifi.png';
+import parkingGif from '../assets/Facilities of BPH/parking.png';
+import familyRoomsGif from '../assets/Facilities of BPH/family.png';
+import frontDeskGif from '../assets/Facilities of BPH/hour.png';
+import barGif from '../assets/Facilities of BPH/bar.png';
+import heatingGif from '../assets/Facilities of BPH/heating.png';
+import housekeepingGif from '../assets/Facilities of BPH/Housekeeping.png';
+import breakfastGif from '../assets/Facilities of BPH/breakfast.png';
 import bgimage from '../assets/bph-welcome.png'
 
 const Facilities = () => {
@@ -42,7 +42,7 @@ const Facilities = () => {
 
   return (
     <body className='facilities-background'>
-      <img className='about-bgimage' src={bgimage}/>
+      {/* <img className='about-bgimage' src={bgimage}/> */}
       <div>
         <div>
           {/* <h1 className='facilitieshead'>FACILITIES</h1> */}
@@ -51,7 +51,7 @@ const Facilities = () => {
 
         <div>
           <p className='facilities-sub-content'>
-            Originally a Grade ii listed building, Bridge Park Hotel is the ideal
+            Originally a Grade II-listed building, Bridge Park Hotel is the ideal
             place to stay whether you are visiting Wembley or simply looking for
             accommodation to explore the sites of London.
             Just a short distance from Wembley Stadium.
@@ -64,7 +64,7 @@ const Facilities = () => {
           {cardsData.map((card) => (
             <div key={card.id} className="facilitiescard">
               <div className='facilitiesiconcontainer'>
-                <img src={card.icon} alt={card.title} style={{ width: '54px', height: '54px', objectFit: 'cover' }}/>
+                <img src={card.icon} alt={card.title} style={{ width: '44px', height: '44px', objectFit: 'cover' }}/>
               </div>
               <div className="facilitiescardcontent">
                 <>{card.title}</>

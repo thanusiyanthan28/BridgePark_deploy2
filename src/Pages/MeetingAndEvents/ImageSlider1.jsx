@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ImageSlider1.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
-import image1 from "../../assets/images/Bar2.jpg";
-import image2 from "../../assets/images/BreakfastBuffet.jpg";
-import image3 from "../../assets/images/HotelBreakfast.jpg";
-import image4 from "../../assets/images/HotelFront.jpg";
-import image5 from "../../assets/images/Loungebar 1.jpg";
-import image6 from "../../assets/images/RearBeergarden.jpg";
-import image7 from "../../assets/images/Reception1.jpg";
-import image8 from "../../assets/images/Restaurant1.jpg";
-import image9 from "../../assets/images/Restaurant2.jpg";
+import image1 from "../../assets/RoomTypes/Reception/Reception&Lobby1.webp";
+import image2 from "../../assets/RoomTypes/Reception/Reception&Lobby11.webp";
+import image3 from "../../assets/RoomTypes/Reception/Reception&Lobby12.webp";
+import image4 from "../../assets/RoomTypes/Reception/Reception&Lobby3.webp";
+import image5 from "../../assets/RoomTypes/Reception/Reception&Lobby4.webp";
+import image6 from "../../assets/RoomTypes/Reception/Reception&Lobby6.webp";
+import image7 from "../../assets/RoomTypes/Reception/Reception&Lobby7.webp";
+import image8 from "../../assets/RoomTypes/Reception/Reception&Lobby9.webp";
+import image9 from "../../assets/RoomTypes/Restuarent/Resturant2.webp";
+import image10 from "../../assets/RoomTypes/Restuarent/Resturant3.webp";
+import image11 from "../../assets/RoomTypes/Garden/Garden1.webp";
+import image12 from "../../assets/RoomTypes/Garden/Garden2.webp";
+import image13 from "../../assets/RoomTypes/Garden/Garden3.webp";
+import image14 from "../../assets/RoomTypes/Garden/Garden5.webp";
+import image15 from "../../assets/RoomTypes/Garden/Garden6.webp";
 
 const ImageSlider1 = () => {
   const images = [
@@ -22,8 +28,13 @@ const ImageSlider1 = () => {
     image7,
     image8,
     image9,
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
+    image15,
   ];
-
   const [index, setIndex] = useState(images.length - 3);
   const [startIndex, setStartIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 

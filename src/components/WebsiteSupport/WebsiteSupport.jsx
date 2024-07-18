@@ -54,7 +54,10 @@ const WebsiteSupport = () => {
                 receive instant confirmation.
                 </a>
               
-              <p>
+              
+            </div>
+            <div className="WebsiteSupport-sub-content">
+            <p>
                 If you have already made a reservation through our website, you
                 can view and manage your booking directly from your email
                 confirmation, simply click on the 'manage my booking' link.
@@ -74,7 +77,7 @@ const WebsiteSupport = () => {
                   
                 .
               </p>
-              <p>If you have already booked:</p>
+              <p className="WebsiteSupport-sub-p">If you have already booked:</p>
             </div>
             <h1 className="WebsiteSupport-sub-title">To Cancel:</h1>
             <div className="WebsiteSupport-sub-content">
@@ -102,13 +105,11 @@ const WebsiteSupport = () => {
                 Reducing nights or rooms: If you have booked via our website,
                 please check the cancellation policy in your booking
                 confirmation email and then reply to the email with a
-                modification request.
+                modification request.<p className="WebsiteSupport-sub-titlesub">If you have booked through a different website please call
+                reception on Tel: (+44) 020 8961 1260</p>
               </p>
             </div>
-            <h1 className="WebsiteSupport-sub-title">
-              If you have booked through a different website please call
-              reception on Tel: +44 (0)20 8961 1260
-            </h1>
+            
             <h1 className="WebsiteSupport-sub-title">For Directions:</h1>
             
             <div className="WebsiteSupport-sub-content">
@@ -117,19 +118,24 @@ const WebsiteSupport = () => {
                 <a href="/location">Directions
                   </a>
                 ' above for directions from the tube and a map. <br />
+                <p className="WebsiteSupport-sub-p">
                 For further enquiries, feel free to check the information on our
                 website or use the form below. Usage of our website and forms
                 are covered by our &nbsp;
-                
                 <a href="/privacy">privacy policy
                   </a>
                 .
+                </p>
+                
+                
               </p>
             </div>
-            <h1 className="WebsiteSupport-sub-title">Customer advice</h1>
-            <h1 className="WebsiteSupport-sub-title">
-              Reception can be reached on Tel: +44 (0)20 8961 1260
-            </h1>
+            <div className="WebsiteSupport-sub-content">
+              <h1 className="WebsiteSupport-sub-titlesub">Customer advice</h1>
+              <h1 className="WebsiteSupport-sub-titlesub">
+              Reception can be reached on Tel: (+44) 020 8961 1260
+               </h1>
+            </div>
           </div>
         </div>
       </div>

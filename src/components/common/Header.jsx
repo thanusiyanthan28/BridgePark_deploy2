@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/Header.css";
-import logo from "../../assets/images/HotelLogo.png";
+import logo from "../../assets/images/HotelLogo.webp";
 import Button from "./Button";
 import Card from "./Card";
 import { Row } from "antd";
 import UserProfile from "./UserProfile";
-import img from "../../assets/images/DoubleEnsuite.jpg";
+import img from "../../assets/images/DoubleEnsuite.webp";
 import SiteCard from "../Sitecard/siteCard";
 import title from "../../assets/title.png"
 import HomeCard from "../Sitecard/homeCard";
@@ -14,7 +14,7 @@ import HomeCard from "../Sitecard/homeCard";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
 
   const handleClick = () => {
     console.log("button clicked");
@@ -29,11 +29,11 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-    setIsLoggedIn(true); // Set login status to true
+    setIsLoggedIn(true);
   };
 
   const handleLogout = () => {
-    setIsLoggedIn(false); // Set login status to false
+    setIsLoggedIn(false);
   };
 
   const userData = {
@@ -50,8 +50,6 @@ const Header = () => {
     };
 
     window.addEventListener("resize", handleResize);
-
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -60,17 +58,12 @@ const Header = () => {
   return (
     <div className="head-main">
       <div className="overlay"></div>
-      {isMobile ? <div className="home-sitecard"><HomeCard /></div> : null}
+      {isMobile && <div className="home-sitecard"><HomeCard /></div>  }
       <div className="hero-container">
-     <img src={title} alt="title" className="header-title" />
         <div className="headerLogoPosition">
           <img src={logo} alt="Logo" className="headerLogo" />
         </div>
         
-        {/* <div className="heading-container">
-          <h1 className="heading">BRIDGE </h1>
-          <h1 className="heading2">PARK HOTEL</h1>
-        </div> */}
         <div className="header-slogan">RESERVE YOUR STAY NOW</div>
         {!isMobile ? <div className=""><Card title="Card Title 2" description="Description for Card 2" /></div> : null}
       </div>

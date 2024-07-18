@@ -13,6 +13,8 @@ const HotelRoomCard = ({
   cardtitle,
   onViewMoreClick,
   link,
+  NoOfGuests,
+  NoOfRooms
 
 }) => {
   return (
@@ -44,7 +46,7 @@ const HotelRoomCard = ({
               <p>GUEST</p>
             </Row>
             <Row className="hotelRoomCard-subRow">
-              <p>01</p>
+              <p>{NoOfGuests}</p>
             </Row>
           </Col>
           <Col span={8}>
@@ -53,7 +55,7 @@ const HotelRoomCard = ({
               <p>ROOMS</p>
             </Row>
             <Row className="hotelRoomCard-subRow">
-              <p>02</p>
+              <p>{NoOfRooms}</p>
             </Row>
           </Col>
           <Col span={8}>

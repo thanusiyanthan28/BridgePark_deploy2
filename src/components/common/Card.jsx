@@ -29,11 +29,26 @@ function Card() {
   }, []);
 
   const handleCheckAvailability = () => {
+    const today = dayjs();
     const checkIn = checkInDate ? checkInDate.format("YYYY-MM-DD") : '';
     const checkOut = checkOutDate ? checkOutDate.format("YYYY-MM-DD") : '';
+  
+    // Check if check-in date is in the past
+    if (checkInDate && checkInDate.isBefore(today, 'day')) {
+      alert('Please select a future date for Check-in.');
+      return;
+    }
+  
+    // Check if check-out date is in the past
+    if (checkOutDate && checkOutDate.isBefore(today, 'day')) {
+      alert('Please select a future date for Check-out.');
+      return;
+    }
+  
     const bookingUrl = `https://direct-book.com/properties/bridgeparkdirect?check_in_date=${checkIn}&check_out_date=${checkOut}&number_adults=${adults}&number_children=${children}`;
     window.open(bookingUrl, "_blank"); // Open in a new window
   };
+  
 
   return (
     <div className="card">

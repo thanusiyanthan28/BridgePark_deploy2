@@ -8,6 +8,13 @@
   font-family: Arial, sans-serif;
   padding: 20px;
 }
+.review-text-pop1{
+  color: #3b9f63;
+   margin-left: 10px;
+   background: none;
+   border: none;
+   text-decoration: underline;
+}
 
 .categories-pop {
   display: grid;
@@ -20,10 +27,10 @@
 }
 
 .category-name-pop {
-  font-weight: bold;
   margin-bottom: -15px;
   display: flex;
   align-items: center;
+  font-family: 'leto';
 }
 
 .down-arrow-pop {
@@ -54,7 +61,7 @@
 
 .guest-reviews-pop {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   font-family: Arial, sans-serif;
 }
 
@@ -93,6 +100,7 @@
   font-size: 20px;
   border: 1px solid gray;
   height: 30px;
+  font-family: 'leto';
 }
 
 .filter-options,
@@ -102,6 +110,7 @@
   align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
+
 }
 
 .filter-options select {
@@ -110,11 +119,15 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: 'leto';
 }
+
 .filter-options label {
   font-weight: 500;
   margin-right: 5px;
+  font-family: 'leto';
 }
+
 .search-bar {
   flex: 1;
   height: 30px;
@@ -130,6 +143,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 /*horizontal line top*/
 .review-card {
   display: flex;
@@ -220,7 +234,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 350px;
+  margin-top: 25px;
+  margin-left: 60px;
 }
 
 .sort-reviews-pop span {
@@ -243,11 +258,13 @@
 
 .review-details-pop p {
   margin: 0;
-  
+
 }
-.pop-content{
+
+.pop-content {
   border: 1px;
 }
+
 .review-meta-pop {
   display: flex;
   align-items: center;
@@ -302,7 +319,7 @@
   color: #f4f4f5;
   border: none;
   border-radius: 5px;
-  margin-left: 300px;
+  margin-left: 150px;
   height: 30px;
   width: 120px;
 }
@@ -331,13 +348,15 @@
 .review-actions .ant-rate {
   margin-left: auto;
 }
-.clicked-text-useful{
+
+.clicked-text-useful {
   margin-top: 10px;
   font-size: 15px;
   margin-bottom: 10px;
   color: #1619dc;
   font-family: 'leto';
 }
+
 /*----------------------------------*/
 .review-item-pop {
   display: flex;
@@ -412,38 +431,66 @@
   font-family: 'leto';
   margin: 0;
 }
-.title-top-pop{
+
+.title-top-pop {
   font-family: 'Cinzel';
 }
-
-@media only screen and (min-width: 375px) and (max-width: 435px){
+.custom-modal2{
+  text-align: center;
+}
+@media only screen and (min-width: 376px) and (max-width: 435px) {
   .categories-pop {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 350px);
     gap: 10px;
   }
+
   .rate-pop {
     margin-left: 50px;
     margin-top: 10px;
   }
-  .write-pop{
+
+  .write-pop {
     margin-left: 50px;
   }
+
   .sort-reviews-pop {
-   
+
     margin-bottom: 20px;
     margin-left: 10px;
   }
-  .filter-options{
+
+  .filter-options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
-  .category-score-pop{
-    margin-left: 230px;
+  .filter-pop{
+    float: right;
+    width: 150px;
   }
+
+  .category-score-pop {
+    margin-left: 250px;
+  }
+
   .filter-options label {
     font-weight: 500;
     margin-right: 15px;
   }
+
+  .review-date-pop {
+    width: 200px;
+    margin-left: 150px;
+
+  }
+
+  .reviewers-choice-pop {
+    width: 100px;
+    margin-left: 50px;
+  }
+  .review-actions-pop{
+    margin-left: -10px;
+  }
+ 
 }

@@ -6,7 +6,8 @@ import Facilities from "./Facilities";
 import RoomInformation from "../components/home/RoomInformation";
 import MeetingAndEvents from "./MeetingAndEvents/MeetingAndEvents";
 import NewMeeting from "./MeetingAndEvents/NewMeeting"
-import FAQ from "../components/FAQ/Faq";
+//import FAQ from "../components/FAQ/Faq";
+import FAQComponent from "../components/FAQ/FaqComponent";
 
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Facilities />
       <NewMeeting />
       {/* <FAQ /> */}
+      <FAQComponent/>
        
     </>
   );

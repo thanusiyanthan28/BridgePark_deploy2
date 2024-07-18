@@ -1,3 +1,10 @@
-/* .RoomsTypeFirstAlignment{
-    margin-left: 200px;
-} */
+.room-bgimage{
+    position: absolute;
+    z-index: -3;
+    overflow: hidden;
+   height: 110vh;
+   width: 100%;
+   object-fit: cover;
+   opacity: 0.3;
+   margin-top: -50px;
+}

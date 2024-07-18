@@ -10,10 +10,14 @@ import {
   MehOutlined,
   SmileOutlined,
 } from "@ant-design/icons";
-import PopupCard from "./Sidebar";
-import { getAllReviews, updateReviewHelpful } from "../../Services/api";
+import {
+  getAllReviews,
+  updateReviewHelpful,
+  getReviewCategories,
+} from "../../Services/api";
 import ReviewForm from "./writeReview";
 import { getUniqueRoomDetails } from "./roomData";
+import { fa0 } from "@fortawesome/free-solid-svg-icons";
 
 const { Option } = Select;
 
@@ -27,7 +31,8 @@ const customIcons = {
 
 const ReviewApp = () => {
   const [sortOption, setSortOption] = useState("Most relevant");
-  const [reviews, setReviews] = useState("");
+  const [reviews, setReviews] = useState([]);
+  const [filteredReviews, setFilteredReviews] = useState([]);
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [filters, setFilters] = useState({
     filter1: "",
@@ -43,15 +48,54 @@ const ReviewApp = () => {
   const [rev, setRev] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
   const [load, setLoad] = useState(false);
-  const [HelpSatusChange, setHelpSatusChange] = useState(false)
+  const [helpStatusChange, setHelpStatusChange] = useState(false);
+  const [user, setUser] = useState("");
+  const [cate, setCategories] = useState([]);
+  const [filteredReviewsRate, setFilteredReviewsRate] = useState([]);
+  const [categoryFilter, setCategoryFilter] = useState(1);
+
+  console.log("revirew is rev kk", rev);
+  
 
   const handleReviewFormCancel = () => {
     setVisible(false);
   };
 
   useEffect(() => {
+    const roomDetailsMap =  getUniqueRoomDetails().reduce((map, room) => {
+      map[room.id] = room.detail;
+      return map;
+    }, {});
+    setRoomDetails(roomDetailsMap);
+
+    const fetchCategories = async () => {
+      try {
+        const data = await getReviewCategories();
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  const filterReviews = (categoryId) => {
+    const filtered = rev.filter((review) =>
+      review.reviewCategoryRatings?.$values.some(
+        (rating) => rating.reviewCategoryId === categoryId
+      )
+    );
+    setFilteredReviewsRate(filtered);
+  };
+
+  useEffect(() => {
     const roomData = getUniqueRoomDetails();
-    setRoomDetails(roomData);
+    const roomDetailsMap = roomData.reduce((map, room) => {
+      map[room.id] = room.detail;
+      return map;
+    }, {});
+    setRoomDetails(roomDetailsMap);
   }, []);
 
   useEffect(() => {
@@ -71,6 +115,25 @@ const ReviewApp = () => {
     fetchCountries();
   }, []);
 
+  const handleCategoryChange = (categoryId) => {
+    setCategoryFilter(categoryId);
+    filterreviewscat(categoryId);
+  };
+
+  const filterreviewscat = (categoryId) => {
+    const filtered = rev.filter((review) => {
+      if (review.reviewCategoryRatings && review.reviewCategoryRatings.$values) {
+        return review.reviewCategoryRatings.$values.some(
+          (rating) => {
+            return rating.reviewCategoryId === categoryId;
+          }
+        );
+      }
+      return false;
+    });
+  };
+  
+
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -79,6 +142,8 @@ const ReviewApp = () => {
           (a, b) => b.reviewId - a.reviewId
         );
         setRev(sortedReviews);
+        setReviews(sortedReviews);
+        setFilteredReviews(sortedReviews);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }
@@ -86,23 +151,12 @@ const ReviewApp = () => {
 
     fetchReviews();
     setLoad(false);
-    setHelpSatusChange(false)
-  }, [load, HelpSatusChange]);
+    setHelpStatusChange(false);
+  }, [load, helpStatusChange]);
 
   const handlerStatus = (value) => {
     setVisible(value);
     setLoad(true);
-  };
-
-  const getFilteredReviews = () => {
-    if (selectedTopics.length === 0) {
-      return reviews;
-    }
-    return reviews.filter((review) =>
-      selectedTopics.some((topic) =>
-        review.text.toLowerCase().includes(topic.toLowerCase())
-      )
-    );
   };
 
   const handleSortChange = (value) => {
@@ -110,16 +164,31 @@ const ReviewApp = () => {
   };
 
   const handleCategoryClick = (topic) => {
-    setSelectedTopics((prevSelectedTopics) =>
-      prevSelectedTopics.includes(topic)
-        ? prevSelectedTopics.filter((t) => t !== topic)
-        : [...prevSelectedTopics, topic]
-    );
+    const updatedTopics = selectedTopics.includes(topic)
+      ? selectedTopics.filter((t) => t !== topic)
+      : [...selectedTopics, topic];
+      console.log("Updated topics:", updatedTopics);
+  
+    setSelectedTopics(updatedTopics);
+  
+    if (updatedTopics.length === 0) {
+      setFilteredReviews(reviews);
+    } else {
+      const filtered = reviews.filter((review) =>
+        updatedTopics.some((topic) =>
+          review.text && typeof review.text === 'string'
+            ? review.text.toLowerCase().includes(topic.toLowerCase())
+            : false
+        )
+      );
+      setFilteredReviews(filtered);
+    }
   };
 
-  const handleFilterChange = (event) => {
-    const { name, value } = event.target;
-    setFilters({ ...filters, [name]: value });
+  const handleFilterChange = (value, option) => {
+    const { key } = option;
+    handleCategoryChange(key);
+    filterReviews(key);
   };
 
   const handleHelpfulClick = async (id, value) => {
@@ -127,14 +196,13 @@ const ReviewApp = () => {
       isHelpful: value,
     };
     try {
-      const response = await updateReviewHelpful(id, updateData);
-      setHelpSatusChange(true)
+      await updateReviewHelpful(id, updateData);
+      setHelpStatusChange(true);
     } catch (error) {
       console.error("Failed to update review helpful status:", error);
     }
   };
 
-  const filteredReviews = getFilteredReviews();
   const totalReviews = filteredReviews.length;
   const reviewText = "Pleasant";
 
@@ -148,7 +216,7 @@ const ReviewApp = () => {
     { name: "Free WiFi", score: 6.6 },
   ];
 
-  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location"];
+  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location", "Hello"];
 
   const CustomIcon = ({ icon, size }) => (
     <span style={{ fontSize: size }}>{icon}</span>
@@ -163,9 +231,15 @@ const ReviewApp = () => {
       <div className="guest-reviews-pop">
         <div className="score-pop">6.1</div>
         <div className="details-pop">
-          <span className="review-text-pop">{reviewText}</span> · {totalReviews}{" "}
+          <span className="review-text-pop">{reviewText}</span><br></br> {totalReviews}{" "}
           reviews
+        
+         
         </div>
+        <button className="review-text-pop1">
+        <a className="review-text-pop1">We aim for 100% real reviews</a>
+         </button>
+       
         <button className="write-pop" onClick={() => setVisible(true)}>
           Write Review
         </button>
@@ -175,7 +249,7 @@ const ReviewApp = () => {
           onCancel={handleReviewFormCancel}
           footer={null}
           className="custom-modal2"
-          width={900}
+          width={600}
         >
           <ReviewForm
             visible={visible}
@@ -209,117 +283,24 @@ const ReviewApp = () => {
             </div>
           ))}
       </div>
-
-      <div className="filter-options">
-        <div>
-          <label>Category :</label>
-          <select
-            name="Reviewers"
-            value={filters.filter1}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option 1">Staff</option>
-            <option value="Option 2">Facilities</option>
-            <option value="Option 3">Rooms</option>
-            <option value="Option 4">Cleanlines</option>
-            <option value="Option 5">Location</option>
-            <option value="Option 6">Comport</option>
-            <option value="Option 7">Value of Money</option>
-          </select>
-        </div>
-        <div>
-          <label>Review Rating:</label>
-          <select
-            name="Review scores"
-            value={filters.filter2}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option A">Excellent</option>
-            <option value="Option B">Very Good</option>
-            <option value="Option C">Good</option>
-            <option value="Option C">Fair</option>
-            <option value="Option C">Poor</option>
-          </select>
-        </div>
-        <div>
-          <label>Country :</label>
-          <select
-            name="Languages"
-            value={filters.filter3}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Country</option>
-            {countries.map((country) => (
-              <option key={country} value={country}>
-                {country}
-              </option>
-            ))}
-          </select>
-        </div>
-        {/* <div>
-          <label>Time of year</label>
-          <select
-            name="Time of year"
-            value={filters.filter4}
-            onChange={handleFilterChange}
-          >
-            <option value="">Select Option</option>
-            <option value="Option 123">Option 123</option>
-            <option value="Option 456">Option 456</option>
-            <option value="Option 789">Option 789</option>
-          </select>
-        </div> */}
-      </div>
-      {/* <div>
-        <h3 className="button-head-pop">Select topics to read reviews:</h3>
-        <div className="topic-buttons-pop">
-          {topics.map((topic) => (
-            <Button
-              key={topic}
-              type="default"
-              shape="round"
-              icon={
-                selectedTopics.includes(topic) ? (
-                  <span>&times;</span>
-                ) : (
-                  <span>+</span>
-                )
-              }
-              onClick={() => handleCategoryClick(topic)}
-              style={{ fontSize: "16px" }}
-            >
-              {topic}
-            </Button>
-          ))}
-        </div>
-      </div> */}
       <div className="guest-reviews-container">
         <h2 className="title-top-pop">Guest reviews</h2>
-        <div className="sort-reviews-pop">
-          <span>Sort reviews by:</span>
-          <Select
-            defaultValue={sortOption}
-            onChange={handleSortChange}
-            style={{ width: 200 }}
-          >
-            <Option value="Most relevant">Most relevant</Option>
-            <Option value="Most recent">Most recent</Option>
-            <Option value="Highest score">Highest score</Option>
-            <Option value="Lowest score">Lowest score</Option>
-          </Select>
-        </div>
+
         <List
           itemLayout="vertical"
           size="large"
           pagination={{
-            onChange: (page) => {
-              console.log(page);
+            pageSize: 5, // Number of items per page
+            total: filteredReviews.length, // Total number of items in the data source
+            showSizeChanger: false,
+            pageSizeOptions: [], // Show the page size changer
+            // pageSizeOptions: ['5', '10', '20', '50'], // Options for items per page
+            onChange: (page, pageSize) => {
+              console.log("Page:", page, "Page Size:", pageSize);
+             
             },
-            pageSize: 5,
           }}
-          dataSource={rev}
+          dataSource={filteredReviews}
           renderItem={(review) => (
             <List.Item key={review.reviewId} className="review-item-pop">
               <div>
@@ -336,7 +317,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{review.roomId}</p>
+                        <p>{roomDetails[review.roomId]}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>
@@ -394,7 +375,7 @@ const ReviewApp = () => {
                   <Rate
                     className="rate-pop"
                     disabled
-                    defaultValue={review.score / 2}
+                    value={review.overallStar}
                     count={5}
                     character={({ index }) => (
                       <CustomIcon icon={customIcons[index + 1]} size="25px" />

@@ -1,0 +1,107 @@
+[33m24ff212[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev3[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m24ff212[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev3[m[33m)[m HEAD@{1}: reset: moving to HEAD^
+[33m700dfa5[m[33m ([m[1;31morigin/dev3[m[33m)[m HEAD@{2}: reset: moving to HEAD
+[33m700dfa5[m[33m ([m[1;31morigin/dev3[m[33m)[m HEAD@{3}: pull origin dev3: Fast-forward
+[33m6aa4b6e[m[33m ([m[1;31morigin/BugsRework[m[33m, [m[1;32mBugsRework[m[33m)[m HEAD@{4}: checkout: moving from dus-changes to dev3
+[33m504c893[m[33m ([m[1;31morigin/dus-changes[m[33m, [m[1;32mdus-changes[m[33m)[m HEAD@{5}: checkout: moving from dev3 to dus-changes
+[33m6aa4b6e[m[33m ([m[1;31morigin/BugsRework[m[33m, [m[1;32mBugsRework[m[33m)[m HEAD@{6}: checkout: moving from dus-changes to dev3
+[33m504c893[m[33m ([m[1;31morigin/dus-changes[m[33m, [m[1;32mdus-changes[m[33m)[m HEAD@{7}: checkout: moving from dev3 to dus-changes
+[33m6aa4b6e[m[33m ([m[1;31morigin/BugsRework[m[33m, [m[1;32mBugsRework[m[33m)[m HEAD@{8}: merge BugsRework: Fast-forward
+[33m9ce1b1e[m[33m ([m[1;31morigin/dev4[m[33m, [m[1;32mdev4[m[33m)[m HEAD@{9}: checkout: moving from BugsRework to dev3
+[33m6aa4b6e[m[33m ([m[1;31morigin/BugsRework[m[33m, [m[1;32mBugsRework[m[33m)[m HEAD@{10}: checkout: moving from dev4 to BugsRework
+[33m9ce1b1e[m[33m ([m[1;31morigin/dev4[m[33m, [m[1;32mdev4[m[33m)[m HEAD@{11}: checkout: moving from dev3 to dev4
+[33m9ce1b1e[m[33m ([m[1;31morigin/dev4[m[33m, [m[1;32mdev4[m[33m)[m HEAD@{12}: checkout: moving from Recorrections to dev3
+[33meaa0f74[m[33m ([m[1;31morigin/Recorrections[m[33m, [m[1;32mRecorrections[m[33m)[m HEAD@{13}: checkout: moving from dev3 to Recorrections
+[33m9ce1b1e[m[33m ([m[1;31morigin/dev4[m[33m, [m[1;32mdev4[m[33m)[m HEAD@{14}: checkout: moving from Recorrections to dev3
+[33meaa0f74[m[33m ([m[1;31morigin/Recorrections[m[33m, [m[1;32mRecorrections[m[33m)[m HEAD@{15}: pull origin Recorrections: Fast-forward
+[33maf5d307[m HEAD@{16}: checkout: moving from dev3 to Recorrections
+[33m9ce1b1e[m[33m ([m[1;31morigin/dev4[m[33m, [m[1;32mdev4[m[33m)[m HEAD@{17}: commit (merge): update
+[33mb5d01cf[m HEAD@{18}: checkout: moving from dus-changes to dev3
+[33m504c893[m[33m ([m[1;31morigin/dus-changes[m[33m, [m[1;32mdus-changes[m[33m)[m HEAD@{19}: pull origin dus-changes: Fast-forward
+[33mb7bc0f8[m HEAD@{20}: checkout: moving from dev3 to dus-changes
+[33mb5d01cf[m HEAD@{21}: checkout: moving from main to dev3
+[33m332eb74[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{22}: pull origin main: Fast-forward
+[33m73f88bc[m HEAD@{23}: checkout: moving from dev3 to main
+[33mb5d01cf[m HEAD@{24}: reset: moving to HEAD
+[33mb5d01cf[m HEAD@{25}: checkout: moving from Recorrections to dev3
+[33maf5d307[m HEAD@{26}: checkout: moving from dev3 to Recorrections
+[33mb5d01cf[m HEAD@{27}: commit: update
+[33ma0f7187[m HEAD@{28}: commit (merge): update
+[33mb2003f8[m HEAD@{29}: checkout: moving from dus-changes to dev3
+[33mb7bc0f8[m HEAD@{30}: pull origin dus-changes: Fast-forward
+[33me06feed[m HEAD@{31}: checkout: moving from dev3 to dus-changes
+[33mb2003f8[m HEAD@{32}: commit: update
+[33mdfbc2ee[m HEAD@{33}: checkout: moving from admin to dev3
+[33mb50214d[m[33m ([m[1;31morigin/admin[m[33m, [m[1;32madmin[m[33m)[m HEAD@{34}: checkout: moving from dev3 to admin
+[33mdfbc2ee[m HEAD@{35}: pull origin dev3: Fast-forward
+[33m1b2afa6[m HEAD@{36}: commit (merge): update
+[33m774501d[m HEAD@{37}: checkout: moving from dus-changes to dev3
+[33me06feed[m HEAD@{38}: pull origin dus-changes: Fast-forward
+[33me777d00[m HEAD@{39}: checkout: moving from dev3 to dus-changes
+[33m774501d[m HEAD@{40}: commit (merge): update
+[33mad3f013[m HEAD@{41}: checkout: moving from RoomRework to dev3
+[33ma5262eb[m[33m ([m[1;32mRoomRework[m[33m)[m HEAD@{42}: pull origin RoomRework: Fast-forward
+[33m240d33a[m HEAD@{43}: checkout: moving from dev3 to RoomRework
+[33mad3f013[m HEAD@{44}: checkout: moving from admin to dev3
+[33mb50214d[m[33m ([m[1;31morigin/admin[m[33m, [m[1;32madmin[m[33m)[m HEAD@{45}: checkout: moving from dev3 to admin
+[33mad3f013[m HEAD@{46}: commit: update
+[33m4ec9f58[m HEAD@{47}: checkout: moving from admin to dev3
+[33mb50214d[m[33m ([m[1;31morigin/admin[m[33m, [m[1;32madmin[m[33m)[m HEAD@{48}: commit: update
+[33m9bfad93[m HEAD@{49}: checkout: moving from dev3 to admin
+[33m4ec9f58[m HEAD@{50}: checkout: moving from admin to dev3
+[33m9bfad93[m HEAD@{51}: commit: update
+[33md7add8f[m HEAD@{52}: checkout: moving from dev3 to admin
+[33m4ec9f58[m HEAD@{53}: commit (merge): update
+[33m3324547[m HEAD@{54}: commit: update
+[33m53dba8a[m HEAD@{55}: commit (merge): update
+[33mc7c5ebc[m HEAD@{56}: checkout: moving from HomeRules to dev3
+[33mc886236[m[33m ([m[1;31morigin/HomeRules[m[33m, [m[1;32mHomeRules[m[33m)[m HEAD@{57}: pull origin HomeRules: Fast-forward
+[33md0c7ff4[m HEAD@{58}: checkout: moving from dev3 to HomeRules
+[33mc7c5ebc[m HEAD@{59}: checkout: moving from admin to dev3
+[33md7add8f[m HEAD@{60}: commit: update
+[33m85a64a4[m HEAD@{61}: checkout: moving from dev3 to admin
+[33mc7c5ebc[m HEAD@{62}: checkout: moving from admin to dev3
+[33m85a64a4[m HEAD@{63}: checkout: moving from dev3 to admin
+[33mc7c5ebc[m HEAD@{64}: commit (merge): update
+[33m6a5260f[m HEAD@{65}: checkout: moving from dus-changes to dev3
+[33me777d00[m HEAD@{66}: checkout: moving from dev3 to dus-changes
+[33m6a5260f[m HEAD@{67}: checkout: moving from admin to dev3
+[33m85a64a4[m HEAD@{68}: checkout: moving from dev3 to admin
+[33m6a5260f[m HEAD@{69}: commit: update
+[33m86938bc[m HEAD@{70}: checkout: moving from admin to dev3
+[33m85a64a4[m HEAD@{71}: checkout: moving from dev3 to admin
+[33m86938bc[m HEAD@{72}: merge dus-changes: updating HEAD
+[33m86938bc[m HEAD@{73}: checkout: moving from dus-changes to dev3
+[33me777d00[m HEAD@{74}: pull origin dus-changes: Fast-forward
+[33m5c45a65[m HEAD@{75}: checkout: moving from dev3 to dus-changes
+[33m86938bc[m HEAD@{76}: checkout: moving from admin to dev3
+[33m85a64a4[m HEAD@{77}: checkout: moving from dev3 to admin
+[33m86938bc[m HEAD@{78}: checkout: moving from HomeRules to dev3
+[33md0c7ff4[m HEAD@{79}: pull origin HomeRules: Fast-forward
+[33m71f8c99[m HEAD@{80}: checkout: moving from dev3 to HomeRules
+[33m86938bc[m HEAD@{81}: commit: update
+[33m400b8e5[m HEAD@{82}: checkout: moving from admin to dev3
+[33m85a64a4[m HEAD@{83}: commit: update
+[33me89b3d4[m HEAD@{84}: checkout: moving from dev3 to admin
+[33m400b8e5[m HEAD@{85}: commit (merge): update
+[33m1424008[m HEAD@{86}: checkout: moving from BPH1-correction to dev3
+[33mc2581fb[m[33m ([m[1;31morigin/BPH1-correction[m[33m, [m[1;32mBPH1-correction[m[33m)[m HEAD@{87}: checkout: moving from dev3 to BPH1-correction
+[33m1424008[m HEAD@{88}: commit: update
+[33md86986c[m HEAD@{89}: checkout: moving from admin to dev3
+[33me89b3d4[m HEAD@{90}: checkout: moving from dev3 to admin
+[33md86986c[m HEAD@{91}: checkout: moving from admin to dev3
+[33me89b3d4[m HEAD@{92}: commit: update
+[33md86986c[m HEAD@{93}: merge dev3: Fast-forward
+[33md87358b[m HEAD@{94}: checkout: moving from dev3 to admin
+[33md86986c[m HEAD@{95}: commit: update
+[33md87358b[m HEAD@{96}: checkout: moving from admin to dev3
+[33md87358b[m HEAD@{97}: reset: moving to HEAD
+[33md87358b[m HEAD@{98}: merge dev3: Fast-forward
+[33m5c45a65[m HEAD@{99}: checkout: moving from dev3 to admin
+[33md87358b[m HEAD@{100}: commit (merge): update
+[33m5c45a65[m HEAD@{101}: checkout: moving from New-meeting to dev3
+[33m8d7d1f5[m[33m ([m[1;31morigin/New-meeting[m[33m, [m[1;32mNew-meeting[m[33m)[m HEAD@{102}: commit: update
+[33m324d48e[m HEAD@{103}: checkout: moving from dev3 to New-meeting
+[33m5c45a65[m HEAD@{104}: checkout: moving from new-meeting to dev3
+[33m324d48e[m HEAD@{105}: commit: update
+[33md20e8d7[m HEAD@{106}: checkout: moving from dev3 to 

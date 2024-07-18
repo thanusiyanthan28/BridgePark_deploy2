@@ -3,9 +3,9 @@
 
 .FaqDetails-main {
   width: 95%;
-  background-color: #33cccc;
+  background-color: #659399;
   height: 500px;
-  background-image: url("../../assets/images/Restaurant1.jpg");
+  background-image: url("../../assets/images/Restaurant1.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -38,7 +38,7 @@
 .FaqDetails-view-full-text {
   font-size: medium;
   font-family: "lato", sans-serif;
-  background: #33cccc;
+  background: #659399;
   border: 1px solid white;
   color: white;
   cursor: pointer;
@@ -50,7 +50,7 @@
     .FaqDetails-main{
         width: 100%;
         height: 600px;
-        background-image: url("../../assets/images/image_gellery/image6.jpg");
+        background-image: url("../../assets/images/image_gellery/image6.webp");
         background-repeat: no-repeat;
         background-size: cover;
     }    

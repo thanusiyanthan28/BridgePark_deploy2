@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
-import { MenuOutlined, UserOutlined,CloseOutlined } from '@ant-design/icons';
+import { MenuOutlined, UserOutlined, CloseOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
-import img from "../../assets/images/DoubleEnsuite.jpg";
-import headerlogo from '../../assets/header-logo.png'
+import img from "../../assets/images/DoubleEnsuite.webp";
+import headerlogo from '../../assets/header-logo.png';
 
 const HeaderUpdate = () => {
   const [current, setCurrent] = useState();
@@ -26,7 +26,6 @@ const HeaderUpdate = () => {
     email: "john@example.com",
     location: "New York",
   };
-  
 
   const showDrawer = () => {
     setOpen(true);
@@ -78,7 +77,7 @@ const HeaderUpdate = () => {
     {
       label: (
         <Link to="/main-meeting" className="header-meeting header-font">
-          Meeting&Events
+          Meeting & Events
         </Link>
       ),
       key: 'Meeting & Events',
@@ -113,8 +112,8 @@ const HeaderUpdate = () => {
     {
       label: (
         <Link to="/" className="custom-dropdown-item header-font" onClick={() => { handleLogout(); setCurrent('Home'); }}>
-        Logout
-      </Link>
+          Logout
+        </Link>
       ),
       key: 'logout',
     }
@@ -168,13 +167,13 @@ const HeaderUpdate = () => {
           <Avatar
             icon={<UserOutlined />}
             src={isLoggedIn ? userData.avatar : null}
-            
           />
         </Dropdown>
       ),
       key: 'profile',
     },
   ];
+
   useEffect(() => {
     // Close drawer when switching from mobile to desktop view
     if (!isMobile) {
@@ -185,16 +184,16 @@ const HeaderUpdate = () => {
   return (
     <div className='header-update-container'>
       <div className='header-update'>
-        <a href='/'><img className='update-header-logo' src={headerlogo}/></a>
+        <a href='/'><img className='update-header-logo' src={headerlogo} alt="Logo" /></a>
         {!isMobile ? (
           <div className='header-nav-bar-left'>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />
           </div>
         ) : null}
         {!isMobile ? (
-        <div className='header-nav-bar-right'>
-          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsRight} />
-        </div>
+          <div className='header-nav-bar-right'>
+            <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsRight} />
+          </div>
         ) : null}
         <div className='header-update-toggle-button'>
           <Button type="primary" onClick={showDrawer} className="mobile-toggle">
@@ -202,14 +201,12 @@ const HeaderUpdate = () => {
           </Button>
         </div>
       </div>
-     
-      
+
       <Drawer placement="left" closable={false} onClose={onClose} open={open} className='update-header-drawer'>
-        <Button onClick={onClose}  className='drawer-close-btn'><CloseOutlined /></Button>
+        <Button onClick={onClose} className='drawer-close-btn'><CloseOutlined /></Button>
         <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft} />
         <Menu mode="inline" items={profileMenuItems} onClick={onClose} />
       </Drawer>
-     
     </div>
   );
 };
