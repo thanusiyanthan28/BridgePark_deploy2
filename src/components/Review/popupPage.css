@@ -62,7 +62,7 @@
 .guest-reviews-pop {
   display: flex;
   /* align-items: center; */
-  font-family: Arial, sans-serif;
+  font-family: 'lato';
 }
 
 .details-pop {
@@ -155,7 +155,7 @@
   margin-top: 10px;
 }
 
-.country-flag {
+/* .country-flag {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -167,7 +167,7 @@
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 10px;
-}
+} */
 
 .review-content-pop {
   flex: 1;
@@ -205,12 +205,14 @@
   padding: 5px 10px;
   border: none;
   background-color: #f4f4f5;
-  color: #1619dc;
+  color:dimgrey ;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 20px;
 }
-
+.rev-room-type-pop{
+  color: dimgrey;
+}
 .review-actions-pop .button-row-pop {
   display: flex;
   gap: 10px;
@@ -399,7 +401,7 @@
 }
 
 .reviewer-country-pop {
-  color: rgb(145, 119, 119);
+  color: #417885;
 }
 
 .review-details-pop p {
@@ -428,8 +430,9 @@
 
 .review-text-pop {
   font-size: 14px;
-  font-family: 'leto';
+  font-family: 'lato';
   margin: 0;
+  color:  #417885;
 }
 
 .title-top-pop {
