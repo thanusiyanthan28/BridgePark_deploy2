@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Rooms from "./Pages/Rooms";
 import Footer from "./components/common/Footer";
-import MeetingAndEvents from "./Pages/MeetingAndEvents/MeetingAndEvents";
+
 import HeaderUpdate from "./components/common/HeaderUpdate";
 
 import Facilities from "./Pages/Facilities";
@@ -19,7 +19,6 @@ import MainMeeting from "./Pages/MeetingAndEvents/MainMeeting";
 import Location from "./components/Location/Location";
 import GuestInfo from "./components/common/GuestInformation";
 import ResetPassword from "./components/User/ResetPassword";
-import ImageGallery from "./Pages/MeetingAndEvents/ImageGallery";
 
 import SiteCard from "./components/Sitecard/siteCard";
 import ScrollToTop from "./components/common/ScrollToTop";
@@ -59,7 +58,7 @@ export default function App() {
             <Route path="/BasicRoom" element={<BasicRoom />} />
             <Route path="/EnsuiteRoom" element={<EnsuiteRoom />} />
             {/* <Route path="/image-gallery" element={<ImageArray/>} /> */}
-            <Route path="/meeting-events" element={<MeetingAndEvents />} />
+           
             <Route path="/main-meeting" element={<MainMeeting />} />
             <Route path="/location" element={<Location />} />
             <Route path="/guest-info" element={<GuestInfo />} />
@@ -67,7 +66,7 @@ export default function App() {
             <Route path="/room-card" element={<SiteCard />} />
             <Route path="/card2" element={<SiteCard2 />} />
             <Route path="/review" element={<ReviewPage />} />
-            <Route path="/image-gallery" element={<ImageGallery />} />
+           
             <Route path="/copyright" element={<Copyright />} />
           </Routes>
           <Footer />

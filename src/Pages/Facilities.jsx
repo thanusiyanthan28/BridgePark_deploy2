@@ -14,7 +14,7 @@ import barGif from '../assets/Facilities of BPH/bar.png';
 import heatingGif from '../assets/Facilities of BPH/heating.png';
 import housekeepingGif from '../assets/Facilities of BPH/Housekeeping.png';
 import breakfastGif from '../assets/Facilities of BPH/breakfast.png';
-import bgimage from '../assets/bph-welcome.png'
+import bgimage from '../assets/bph-welcome.webp'
 
 const Facilities = () => {
   const [showList, setShowList] = useState(false);

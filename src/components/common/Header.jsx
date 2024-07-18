@@ -8,7 +8,6 @@ import { Row } from "antd";
 import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.webp";
 import SiteCard from "../Sitecard/siteCard";
-import title from "../../assets/title.png"
 import HomeCard from "../Sitecard/homeCard";
 
 const Header = () => {

@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import '../../css/home/about.css';
 import CarouselComponent from '../common/CarouselComponent';
 import { Row, Col } from 'antd';
-import bgimage from '../../assets/bph-welcome.png'
+import bgimage from '../../assets/bph-welcome.webp'
 import img1 from '../../assets/images/image_gellery/image6.webp';
 import img2 from '../../assets/images/image_gellery/image1.webp';
 import img3 from '../../assets/images/image_gellery/image2.webp';
