@@ -53,11 +53,11 @@ const RoomInformation = ({room, bookingUrl,selectedRoomId,bathroomType,roomPrice
   const handleHideList = () => {
     setShowList(false);
   };
-
+ 
   return (
     <div>
         <div className="site-card-room">
-        <SiteCard selectedRoomId={selectedRoomId} />
+        <SiteCard selectedRoomId={selectedRoomId} roomPrice={parseFloat(roomPrice.replace('£', ''))}/>
         </div>
       <div className="The-header">
         <Row className="RoomInformation-section-All">

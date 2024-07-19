@@ -86,19 +86,17 @@ const SignIn = () => {
     }
   };
 
+
   const handleGoogleSuccess = (response) => {
-    console.log(response);
     const token = response.credential;
-    console.log("token", token);
     const userData = jwtDecode(token);
-    console.log("User Data:", userData);
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");
     setIsLoggedIn(true);
     navigate("/");
   };
-
+  
   const handleGoogleFailure = (error) => {
     console.error("Google login failed", error);
     setErrors({ message: "Google login failed" });
@@ -130,9 +128,6 @@ const SignIn = () => {
                   value={name}
                   onChange={handleNameChange}
                 />
-                {errors.name && (
-                  <span className="signUpIn-error">{errors.name}</span>
-                )}
               </div>
               <div className="signUpIn-input">
                 <input
