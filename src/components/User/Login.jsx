@@ -88,11 +88,8 @@ const SignIn = () => {
 
 
   const handleGoogleSuccess = (response) => {
-    console.log(response);
     const token = response.credential;
-    console.log("token", token);
     const userData = jwtDecode(token);
-    console.log("User Data:", userData);
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");
