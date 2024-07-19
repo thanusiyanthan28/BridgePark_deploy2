@@ -329,7 +329,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{roomDetails[review.roomId]}</p>
+                        <p className="rev-room-type-pop">{roomDetails[review.roomId]}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>
