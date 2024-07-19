@@ -186,9 +186,8 @@
       }
 
       @media screen and (max-width: 768px) {
-        .desktop{
-          display: none;
-        }
+  
+
         .pano-image-modal{
           background-color: rgba(0, 0, 0, 0.808);
           padding: 30px 0px 5px 0px;
@@ -212,5 +211,6 @@
         margin-top: 0;
       }
     }
+    
      
     

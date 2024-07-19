@@ -53,16 +53,14 @@ const ReviewApp = () => {
   const [cate, setCategories] = useState([]);
   const [filteredReviewsRate, setFilteredReviewsRate] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState(1);
-
-  console.log("revirew is rev kk", rev);
-  
+  const [LogedIn, isLogedIn] = useState(false);
 
   const handleReviewFormCancel = () => {
     setVisible(false);
   };
 
   useEffect(() => {
-    const roomDetailsMap =  getUniqueRoomDetails().reduce((map, room) => {
+    const roomDetailsMap = getUniqueRoomDetails().reduce((map, room) => {
       map[room.id] = room.detail;
       return map;
     }, {});
@@ -78,6 +76,14 @@ const ReviewApp = () => {
     };
 
     fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    const storedUser = localStorage.getItem("user");
+    if (storedToken) {
+      isLogedIn(true);
+    }
   }, []);
 
   const filterReviews = (categoryId) => {
@@ -122,17 +128,17 @@ const ReviewApp = () => {
 
   const filterreviewscat = (categoryId) => {
     const filtered = rev.filter((review) => {
-      if (review.reviewCategoryRatings && review.reviewCategoryRatings.$values) {
-        return review.reviewCategoryRatings.$values.some(
-          (rating) => {
-            return rating.reviewCategoryId === categoryId;
-          }
-        );
+      if (
+        review.reviewCategoryRatings &&
+        review.reviewCategoryRatings.$values
+      ) {
+        return review.reviewCategoryRatings.$values.some((rating) => {
+          return rating.reviewCategoryId === categoryId;
+        });
       }
       return false;
     });
   };
-  
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -167,16 +173,16 @@ const ReviewApp = () => {
     const updatedTopics = selectedTopics.includes(topic)
       ? selectedTopics.filter((t) => t !== topic)
       : [...selectedTopics, topic];
-      console.log("Updated topics:", updatedTopics);
-  
+    console.log("Updated topics:", updatedTopics);
+
     setSelectedTopics(updatedTopics);
-  
+
     if (updatedTopics.length === 0) {
       setFilteredReviews(reviews);
     } else {
       const filtered = reviews.filter((review) =>
         updatedTopics.some((topic) =>
-          review.text && typeof review.text === 'string'
+          review.text && typeof review.text === "string"
             ? review.text.toLowerCase().includes(topic.toLowerCase())
             : false
         )
@@ -216,7 +222,14 @@ const ReviewApp = () => {
     { name: "Free WiFi", score: 6.6 },
   ];
 
-  const topics = ["Room", "Breakfast", "Facilities", "Bed", "Location", "Hello"];
+  const topics = [
+    "Room",
+    "Breakfast",
+    "Facilities",
+    "Bed",
+    "Location",
+    "Hello",
+  ];
 
   const CustomIcon = ({ icon, size }) => (
     <span style={{ fontSize: size }}>{icon}</span>
@@ -231,18 +244,18 @@ const ReviewApp = () => {
       <div className="guest-reviews-pop">
         <div className="score-pop">6.1</div>
         <div className="details-pop">
-          <span className="review-text-pop">{reviewText}</span><br></br> {totalReviews}{" "}
-          reviews
-        
-         
+          <span className="review-text-pop">{reviewText}</span>
+          <br></br> {totalReviews} reviews
         </div>
         <button className="review-text-pop1">
-        <a className="review-text-pop1">We aim for 100% real reviews</a>
-         </button>
-       
-        <button className="write-pop" onClick={() => setVisible(true)}>
-          Write Review
+          <a className="review-text-pop1">We aim for 100% real reviews</a>
         </button>
+
+        {LogedIn && (
+          <button className="write-pop" onClick={() => setVisible(true)}>
+            Write Review
+          </button>
+        )}
         <Modal
           title="Write Your Review"
           visible={visible}
@@ -297,7 +310,6 @@ const ReviewApp = () => {
             // pageSizeOptions: ['5', '10', '20', '50'], // Options for items per page
             onChange: (page, pageSize) => {
               console.log("Page:", page, "Page Size:", pageSize);
-             
             },
           }}
           dataSource={filteredReviews}
@@ -317,7 +329,7 @@ const ReviewApp = () => {
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p>{roomDetails[review.roomId]}</p>
+                        <p className="rev-room-type-pop">{roomDetails[review.roomId]}</p>
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>

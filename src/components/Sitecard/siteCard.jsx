@@ -15,7 +15,7 @@ dayjs.updateLocale('en', {
   ]
 });
 
-const SiteCard = ({ selectedRoomId }) => {
+const SiteCard = ({ selectedRoomId,roomPrice }) => {
   const [formData, setFormData] = useState({
     checkInDate: dayjs(),
     checkOutDate: dayjs(),
@@ -30,7 +30,7 @@ const SiteCard = ({ selectedRoomId }) => {
     checkOutDay: dayjs().format('dddd'),
   });
 
-  const [singleRoomPrice, setSingleRoomPrice] = useState(0.00);
+  
   const [tax, setTax] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -91,27 +91,11 @@ const SiteCard = ({ selectedRoomId }) => {
     window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
   };
 
-  const valueCheck = (selectedRoomId) => {
-    let price = 48;
-    if (selectedRoomId === 2) {
-      price = 48;
-    } else if (selectedRoomId === 5) {
-      price = 58;
-    } else if (selectedRoomId === 3) {
-      price = 68;
-    } else if (selectedRoomId === 10) {
-      price = 60;
-    } else if (selectedRoomId === 11) {
-      price = 68;
-    } else if (selectedRoomId === 9) {
-      price = 97;
-    }
-    setSingleRoomPrice(price);
-  };
+
 
   const calculatePrices = () => {
     const personCount = formData.adults + formData.children;
-    let price = singleRoomPrice;
+    let price = roomPrice;
     if (personCount > 2) {
       price *= 2; // Double the price if more than two persons
     }
@@ -125,11 +109,13 @@ const SiteCard = ({ selectedRoomId }) => {
   }, [selectedRoomId]);
 
   useEffect(() => {
+    console.log('selectedRoomId:', selectedRoomId);
+    console.log('roomPrice:', roomPrice);
     calculatePrices();
-  }, [formData.adults, formData.children, singleRoomPrice]);
+  }, [formData.adults, formData.children, roomPrice]);
 
   const currentDate = moment().format('DD MMM');
-
+  const valueCheck = (value) => value > 0;
   return (
     <div className='app-container2-site'>
       <div className="app-container-site">
@@ -147,7 +133,7 @@ const SiteCard = ({ selectedRoomId }) => {
                         value={formData.checkInDate}
                         onChange={(date) => handleDateChange(date, 'checkInDate')}
                         format="DD MMM"
-                        placeholder="Select the date"
+                        placeholder="Select date"
                         className="custom-datepicker1"
                       />
                     </div>
@@ -161,7 +147,7 @@ const SiteCard = ({ selectedRoomId }) => {
                         value={formData.checkOutDate}
                         onChange={(date) => handleDateChange(date, 'checkOutDate')}
                         format="DD MMM"
-                        placeholder="Select the date"
+                        placeholder="Select date"
                         className="custom-datepicker1"
                       />
                     </div>
@@ -193,7 +179,7 @@ const SiteCard = ({ selectedRoomId }) => {
           </div>
         </div>
         <div>
-          <p>1 x Single Room Basic <span className='price-site'>£{singleRoomPrice.toFixed(2)}</span></p>
+          <p>1 x Single Room Basic <span className='price-site'>£{roomPrice ? roomPrice.toFixed(2): '0.00'}</span></p>
           <p>Tax <span className='price-site'>£{tax.toFixed(2)}</span></p>
           <hr />
           <p>Grand total <span className='price-site'>£{totalPrice.toFixed(2)}</span></p>

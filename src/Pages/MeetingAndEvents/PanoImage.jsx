@@ -22,15 +22,8 @@ const PanoImage = () => {
   
   ];
   const [startIndex, setStartIndex] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
-  const handlePrevClick1 = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  const handleNextClick1 = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+ 
 
   const handlePrevClick = () => {
     setStartIndex(Math.max(startIndex - 1, 0));
@@ -90,49 +83,13 @@ const PanoImage = () => {
         width="100%"
         height="100%"
         src={selectedImage.emlink}
-        allowFullScreen=""
-        frameBorder="0"
       ></iframe>
         </div>
       )}
       </div>
-      <div className='mobile'>
-         <div className='pano-image-main'>
-      <div className='location-title'>Experience Bridge Park Hotel Like Never Before</div>
-      <div className='pano-image-discription'>
-        <hr className="pano-image-title-line" />
-        <p>Our 360° virtual tour provides an immersive look into our elegant rooms, stunning facilities, and scenic surroundings.</p>
-      </div>
-      <div className='pano-image-main2'>
-        <button onClick={handlePrevClick1} className={`pano-image-nav-btn-pre ${currentIndex > 0 ? 'pano-image-active-btn' : 'pano-image-inactive-btn'}`}>
-          <LeftOutlined style={{ fontSize: 25, color: '#08c' }} />
-        </button>
-        <div className="pano-image-image-gallery">
-          <div className={`pano-image-image-container`} onClick={() => handleImageClick(currentIndex)}>
-            <img src={images[currentIndex].url} alt={images[currentIndex].alt} />
-          </div>
-        </div>
-        <button onClick={handleNextClick1} className={`pano-image-nav-btn-nxt ${currentIndex < images.length - 1 ? 'pano-image-active-btn' : 'pano-image-inactive-btn'}`}>
-          <RightOutlined style={{ fontSize: 25, color: '#08c' }} />
-        </button>
-      </div>
-      {selectedImage && (
-        <div className="pano-image-modal">
-          <button onClick={handleCloseModal} className="pano-image-close-btn">
-            &times;
-          </button>
-          <iframe
-            title="360 degree panorama"
-            width="100%"
-            height="100%"
-            src={selectedImage.emlink}
-            allowFullScreen=""
-            frameBorder="0"
-          ></iframe>
-        </div>
-      )}
-    </div>
-      </div>
+
+
+
     </div>
   );
 };
