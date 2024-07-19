@@ -69,10 +69,10 @@ const Room = () => {
     {
       id: 28,
       image: img1,
-      title: "SINGLE W SHARED BATHROOM",
+      title: "SINGLE WITH SHARED BATHROOM",
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
-      roomPrice: "£68.00",
+      roomPrice: "£56.58",
       NoOfGuests: "01",
       NoOfRooms : "01",
       images: [img1]
@@ -81,10 +81,10 @@ const Room = () => {
     {
       id: 29,
       image: DB3,
-      title: "DOUBLE W SHARED BATHROOM",
+      title: "DOUBLE WITH SHARED BATHROOM",
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
-      roomPrice: "£90.93",
+      roomPrice: "£71.45",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [DB1,DB2,DB3]
@@ -92,10 +92,10 @@ const Room = () => {
     {
       id: 34,
       image: TS1,
-      title: "TWIN W SHARED BATHROOM",
-      cardTitle: "3x Single Bed",
+      title: "TWIN WITH SHARED BATHROOM",
+      cardTitle: "2x Single Bed",
       imageUrl: getUrlById(10),
-      roomPrice: "£95.13",
+      roomPrice: "£74.75",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8]
@@ -103,10 +103,10 @@ const Room = () => {
     {
       id: 11,
       image: TE1,
-      title: "TWIN W PRIVATE BATHROOM",
-      cardTitle: "1x Double Bed",
+      title: "TWIN WITH PRIVATE BATHROOM",
+      cardTitle: "2x Single Bed",
       imageUrl: getUrlById(3),
-      roomPrice: "£120.82",
+      roomPrice: "£81.85",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [TE1,TE2,TE3]
@@ -114,8 +114,8 @@ const Room = () => {
     {
       id: 10,
       image: TR1,
-      title: "TRIPLE W PRIVATE BATHROOM",
-      cardTitle: "2x Single Bed",
+      title: "TRIPLE WITH PRIVATE BATHROOM",
+      cardTitle: "1x Double Bed + 1x Single Bed",
       imageUrl: getUrlById(11),
       roomPrice: "£104.95",
       NoOfGuests: "03",
@@ -125,10 +125,10 @@ const Room = () => {
     {
       id: 19,
       image: img6,
-      title: "QUADUPLE W PRIVATE BATHROOM",
+      title: "QUADRUPLE WITH PRIVATE BATHROOM",
       icon1: icon11,
       icon2: icon22,
-      cardTitle: "3x Single Bed",
+      cardTitle: "1x Double Bed + 2x Single Bed",
       imageUrl: getUrlById(9),
       roomPrice: "£90.00",
       NoOfGuests: "04",

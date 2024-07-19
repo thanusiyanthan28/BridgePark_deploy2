@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.SiteMaps-main {
+  width: 95%;
+  background-color: #33cccc;
+  height: 500px;
+  background-image: url("../../assets/images/Restaurant1.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+.SiteMaps-sitecard {
+  margin-top: 25px;
+}
+.SiteMaps-card {
+  padding-top: 10%;
+}
+
+.SiteMaps-title {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  padding: 35px;
+}
+
+.SiteMaps-sub {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.SiteMaps-Containor {
+  width: 75%;
+  padding: 10px;
+}
+.SiteMaps-Containor {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 70%;
+    border: 1px solid #33cccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+  }
+.SiteMaps-sub-title {
+    line-height: 0px;
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: "Cinzel", serif;
+    font-size: x-large;
+    margin-left: 30px;
+    text-align: justify;
+    margin-right: 10px;
+}
+.sitemap {
+  /* list-style-type: none; */
+  padding: 0;
+  margin: 10px;
+  color: rgba(51, 49, 49, 0.767);
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.sitemap li {
+  margin: 0 10px;
+}
+
+.sitemap a {
+  text-decoration: none;
+  color: rgba(51, 49, 49, 0.767);
+  font-family: "lato", sans-serif;
+  font-size: medium;
+}
+.sitemap a:hover{
+    text-decoration: underline;
+    color: #659399;
+    cursor: pointer;
+}
+.SiteMapstooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+@media screen and (max-width: 768px) {
+  .SiteMaps-main {
+    width: 100%;
+    height: 600px;
+    background-image: url("../../assets/images/image_gellery/image6.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .SiteMaps-title {
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+  }
+
+  .SiteMaps-sub {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .SiteMaps-Containor {
+    width: 95%;
+    padding: 5px;
+
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}

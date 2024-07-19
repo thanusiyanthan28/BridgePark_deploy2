@@ -31,6 +31,7 @@ import SiteCard2 from "./components/SiteCard2/siteCard2";
 import ReviewPage from "./components/Review/reviewPage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Copyright from "./components/common/Copyright";
+import SiteMaps from  "./components/SiteMaps/SiteMaps"
 
 const clientId =
   "1009464659569-k6eof9rvm8ugs5mcnb86h4j5iud5elnr.apps.googleusercontent.com";
@@ -68,6 +69,7 @@ export default function App() {
             <Route path="/review" element={<ReviewPage />} />
            
             <Route path="/copyright" element={<Copyright />} />
+            <Route path="/sitemaps" element={<SiteMaps />} />
           </Routes>
           <Footer />
         </Router>

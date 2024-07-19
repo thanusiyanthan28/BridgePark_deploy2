@@ -62,7 +62,7 @@ const RoomType = () => {
           description="All the rooms “Basic” are with shared bathroom facilities"
           guests={2}
           status="Available"
-          price="£71.76"
+          price="£56.58"
           buttonText="Book Now"
           cardtitle="Basic Rooms"
           linkTo="/BasicRoom"
