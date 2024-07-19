@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './NewMeeting.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
@@ -20,6 +20,16 @@ const cardsData = [
 
 const NewMeeting = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cardsData.length);

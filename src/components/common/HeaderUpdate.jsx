@@ -12,7 +12,7 @@ const HeaderUpdate = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const isMobile = windowWidth <= 767;
+  const isMobile = windowWidth <= 768;
 
   const handleLogout = () => {
     setIsLoggedIn(false);
