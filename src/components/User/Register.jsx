@@ -108,7 +108,7 @@ const SignUp = () => {
               <div className="signUpIn-input">
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder="Name *"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -119,7 +119,7 @@ const SignUp = () => {
               <div className="signUpIn-input">
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email *"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -131,7 +131,7 @@ const SignUp = () => {
                 <div className="signUpIn-passwordWrapper">
                   <input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Password"
+                    placeholder="Password *"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
@@ -154,7 +154,7 @@ const SignUp = () => {
                 <div className="signUpIn-ResetpasswordWrapper">
                   <input
                     type={showConfirmPassword ? "text" : "password"}
-                    placeholder="Confirm new password"
+                    placeholder="Confirm new password *"
                     value={confirmPassword}
                     onChange={handleConfirmPasswordChange}
                   />

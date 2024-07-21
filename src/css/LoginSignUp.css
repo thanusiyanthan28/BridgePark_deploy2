@@ -151,7 +151,7 @@ input[type="password"]::placeholder {
 
 .signUpIn-alreadyAccount a:hover {
   text-decoration: none;
-  color: #bde9fc;
+  color: blue;
   cursor: pointer;
 }
 

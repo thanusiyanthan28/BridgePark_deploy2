@@ -44,7 +44,7 @@ const UrlLib = [
       id: 9,
       url: "https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=3&items[0][children]=0&items[0][infants]=0&items[0][rateId]=31931&checkInDate=2024-05-20&checkOutDate=2024-05-21&currency=GBP&trackPage=no",
     },
-    //Triple Room with Shared Bathroom (3 Single Beds)
+    //Triple Room with Shared Bathroom 
     {
       id: 10,
       url: "https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=3&items[0][children]=0&items[0][infants]=0&items[0][rateId]=31932&checkInDate=2024-05-20&checkOutDate=2024-05-21&currency=GBP&trackPage=no",

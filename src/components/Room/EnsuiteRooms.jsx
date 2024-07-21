@@ -84,14 +84,14 @@ const EnsuiteRoom = () => {
 
   const EnsuiteroomData = [
     {
-      id: 14,
+      id: 27,
       image: DB3,
       title: "DOUBLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon1,
       icon2: bedIcon1,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(14),
-      EroomPrice: "£111.52",
+      EroomPrice: "£65",
       images: [DB3,DB1,DB2]
     },
     {
@@ -102,62 +102,62 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
-      EroomPrice: "£120.82",
+      EroomPrice: "£68",
       images:[TWE1,TWE2,TWE3]
     },
     {
-      id: 9,
+      id: 31,
       image: TB1,
       title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon2,
       icon2: bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
-      EroomPrice: "£99.00",
+      EroomPrice: "£92",
       images: [TB1,TB2]
     },
     {
-      id: 10,
+      id: 30,
       image: TE3,
       title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x single bed + 1x double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£104.95",
+      EroomPrice: "£97",
       images: [TE1,TE2,TE3,TE4,TE5]
     },
     {
-      id: 19,
+      id: 32,
       image: QD,
-      title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
+      title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "2x single bed + 1x double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£90.00",
+      EroomPrice: "£120",
       images: [QD]
     },
     {
-      id: 20,
+      id: 33,
       image: img6,
-      title: "QUADUPLE ROOM WITH PRIVATE BATHROOM",
+      title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x double bed + 1x bunk bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£100.75",
+      EroomPrice: "£110",
       images:[img6]
     },
     {
-      id: 25,
+      id: 4,
       image: img7,
       title: "EXECUTIVE KING ROOM WITH PRIVATE BATHROOM",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x Double bed",
       imageUrl: getUrlById(10),
-      EroomPrice: "£121.39",
+      EroomPrice: "£120",
       images: [img7]
     },
     {
@@ -168,7 +168,7 @@ const EnsuiteRoom = () => {
       icon2: bedIcon2,
       cardTitle: "1x Superior King Room",
       imageUrl: getUrlById(10),
-      EroomPrice: "£126.45", 
+      EroomPrice: "£125", 
       images:[TW1,TW2,TW3,TW4,TW5,TW6]
     },
   ];

@@ -93,7 +93,7 @@ const HouseRules = () => {
             <td className="house-rules-info">Refundable damage deposit</td>
             <td>
               A damage deposit of GBP 100 is required on arrival. That's about
-              LKR 37283. This will be collected by credit card. You should be
+              GBP 100. This will be collected by credit card. You should be
               reimbursed on check-out. Your deposit will be refunded in full via
               credit card, subject to an inspection of the property.
             </td>

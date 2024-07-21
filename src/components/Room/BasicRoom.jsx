@@ -82,7 +82,7 @@ const BasicRoom = () => {
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
-      BroomPrice: "£68.00",
+      BroomPrice: "£48",
       images: [SR]
     },
     {
@@ -93,7 +93,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
-      BroomPrice: "£90.93",
+      BroomPrice: "£58",
       images: [DB1,DB2,DB3]
     },
     {
@@ -104,7 +104,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(11),
-      BroomPrice: "£95.13",
+      BroomPrice: "£60",
       images: [TW1,TW2,TW3,TW4,TW5,TW6,TW7,TW8]
     },
     {
@@ -115,7 +115,7 @@ const BasicRoom = () => {
       icon2:bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
-      BroomPrice: "£99.00",
+      BroomPrice: "£85",
       images: [TB1,TB2]
     },
   ];

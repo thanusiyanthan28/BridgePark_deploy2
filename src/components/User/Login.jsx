@@ -127,7 +127,7 @@ const SignIn = () => {
               <div className="signUpIn-input">
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder="Name *"
                   value={name}
                   onChange={handleNameChange}
                 />
@@ -135,7 +135,7 @@ const SignIn = () => {
               <div className="signUpIn-input">
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email *"
                   value={email}
                   onChange={handleEmailChange}
                 />
@@ -147,7 +147,7 @@ const SignIn = () => {
                 <div className="signUpIn-passwordWrapper">
                   <input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Password"
+                    placeholder="Password *"
                     value={password}
                     onChange={handlePasswordChange}
                   />

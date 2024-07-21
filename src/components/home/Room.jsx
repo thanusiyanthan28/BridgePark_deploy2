@@ -72,7 +72,7 @@ const Room = () => {
       title: "SINGLE WITH SHARED BATHROOM",
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
-      roomPrice: "£56.58",
+      roomPrice: "£48",
       NoOfGuests: "01",
       NoOfRooms : "01",
       images: [img1]
@@ -84,7 +84,7 @@ const Room = () => {
       title: "DOUBLE WITH SHARED BATHROOM",
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
-      roomPrice: "£71.45",
+      roomPrice: "£58",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [DB1,DB2,DB3]
@@ -95,7 +95,7 @@ const Room = () => {
       title: "TWIN WITH SHARED BATHROOM",
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(10),
-      roomPrice: "£74.75",
+      roomPrice: "£60",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8]
@@ -106,7 +106,7 @@ const Room = () => {
       title: "TWIN WITH PRIVATE BATHROOM",
       cardTitle: "2x Single Bed",
       imageUrl: getUrlById(3),
-      roomPrice: "£81.85",
+      roomPrice: "£68",
       NoOfGuests: "02",
       NoOfRooms : "01",
       images: [TE1,TE2,TE3]
@@ -117,20 +117,20 @@ const Room = () => {
       title: "TRIPLE WITH PRIVATE BATHROOM",
       cardTitle: "1x Double Bed + 1x Single Bed",
       imageUrl: getUrlById(11),
-      roomPrice: "£104.95",
+      roomPrice: "£97",
       NoOfGuests: "03",
       NoOfRooms : "01",
       images:[TR1,TR2,TR3,TR4,TR5]
     },
     {
-      id: 19,
+      id: 5,
       image: img6,
       title: "QUADRUPLE WITH PRIVATE BATHROOM",
       icon1: icon11,
       icon2: icon22,
       cardTitle: "1x Double Bed + 2x Single Bed",
       imageUrl: getUrlById(9),
-      roomPrice: "£90.00",
+      roomPrice: "£120",
       NoOfGuests: "04",
       NoOfRooms : "01",
       images: [img6]

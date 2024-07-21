@@ -46,6 +46,11 @@
   margin: 10px 0; /* Adjust as needed */
   display: block;
 }
+.FaqDetails-view-full-text:hover{
+  background: white;
+  color: #659399;
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
     .FaqDetails-main{
         width: 100%;
