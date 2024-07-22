@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import HotelRoomTypeCard from "../common/HotelRoomTypeCard";
 import img1 from "../../assets/RoomTypes/TwinRoom/TwinRoom1.webp";
 import img2 from "../../assets/RoomTypes/TripleEnsuite/TripleRoomEnsuite4.webp";
-import SiteCard from "../Sitecard/siteCard";
 import Card from "../common/Card";
 import "../../css/RoomTypes.css";
+import HomeCard from "../Sitecard/homeCard";
 
 const RoomType = () => {
   const [isMobile, setIsMobile] = useState(
@@ -28,7 +28,7 @@ const RoomType = () => {
       <div className="RoomType-CardContainor">
         {isMobile ? (
           <div className="RoomType-sitecard">
-            <SiteCard />
+            <HomeCard />
           </div>
         ) : null}
         {!isMobile ? (
