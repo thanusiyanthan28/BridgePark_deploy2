@@ -34,12 +34,12 @@
 .SiteMaps-sub {
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 80%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 .SiteMaps-Containor {
-  width: 75%;
+  width: 100%;
   padding: 10px;
 }
 .SiteMaps-Containor {
@@ -121,7 +121,7 @@
   }
 
   .SiteMaps-Containor {
-    width: 95%;
+    width: 100%;
     padding: 5px;
 
     box-sizing: border-box;
