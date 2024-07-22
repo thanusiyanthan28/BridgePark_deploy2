@@ -78,7 +78,7 @@ const Facilities = () => {
           {showList && (
             <button className='facilitieshidebutton' onClick={handleHideList}>
               <FontAwesomeIcon icon={faCircleChevronUp} size='3x' />
-              <span>Hide All Ammenities</span>
+              <span>Hide All Amenities</span>
             </button>
           )}
         </div>
