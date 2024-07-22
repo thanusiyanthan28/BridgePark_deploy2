@@ -94,6 +94,10 @@
     margin-right: 10px;
     z-index: 99999999;
   }
+  .drawer-close-btn{
+    margin-right: 30px;
+    margin-top: 10px;
+  }
 }
 /* HeaderUpdate.css */
 .custom-dropdown-menu {
