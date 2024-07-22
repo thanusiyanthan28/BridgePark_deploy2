@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,8 +15,6 @@ const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
@@ -43,11 +41,14 @@ const ResetPassword = () => {
     let formIsValid = true;
     const newErrors = {};
 
+    // Strict email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!email.trim()) {
       newErrors.email = "Email is required";
       formIsValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = "Email is invalid";
+    } else if (!emailPattern.test(email)) {
+      newErrors.email = "Please enter a valid email";
       formIsValid = false;
     }
 
@@ -85,7 +86,7 @@ const ResetPassword = () => {
   };
 
   return (
-    <body className="signUpIn-body">
+    <div className="signUpIn-body">
       <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
@@ -167,7 +168,7 @@ const ResetPassword = () => {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
