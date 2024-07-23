@@ -33,24 +33,31 @@ const SignIn = () => {
     setPassword(e.target.value);
   };
   const validateForm = () => {
-    let valid = true;
+    let formIsValid = true;
     const newErrors = {};
+
+    // Strict email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+      formIsValid = false;
+    } else if (!emailPattern.test(email)) {
+      newErrors.email = "Please enter a valid email";
+      formIsValid = false;
+    }
 
     if (!name) {
       newErrors.name = "Name is required";
-      valid = false;
-    }
-    if (!email) {
-      newErrors.email = "Email is required";
-      valid = false;
+      formIsValid = false;
     }
     if (!password) {
       newErrors.password = "Password is required";
-      valid = false;
+      formIsValid = false;
     }
 
     setErrors(newErrors);
-    return valid;
+    return formIsValid;
   };
 
   const handleSubmit = async (e) => {
@@ -88,11 +95,8 @@ const SignIn = () => {
 
 
   const handleGoogleSuccess = (response) => {
-    console.log(response);
     const token = response.credential;
-    console.log("token", token);
     const userData = jwtDecode(token);
-    console.log("User Data:", userData);
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(userData));
     setSuccessMessage("Logged in with Google successfully");

@@ -33,7 +33,7 @@ const Footer = () => {
         <p className='footer-contact-title'><b>Contact Us</b></p>
         <ul className="contact-links">
           <li><a href="https://www.google.com/maps?ll=51.541287,-0.261686&z=17&t=m&hl=en&gl=LK&mapclient=embed&cid=11362073612214208868" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faMapMarkerAlt} /></span><span className='contact-label'>Bridge Park Hotel, 16 Hillside,<br/>London, NW10 8BN, United Kingdom</span></a></li>
-          <li><a onClick={(e) => handlePhoneClick(e, '+44 208961 1260')} style={{ cursor: 'pointer' }}><span className='contact-icons'><FontAwesomeIcon icon={faPhone} /></span><span className='contact-label'>(+44) 020 8661 1260</span></a></li>
+          <li><a onClick={(e) => handlePhoneClick(e, '+44 208961 1260')} style={{ cursor: 'pointer' }}><span className='contact-icons'><FontAwesomeIcon icon={faPhone} /></span><span className='contact-label'>(+44) 020 8961 1260</span></a></li>
           <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Booking)<br/>stay@bridgeparkhotel.co.uk</span></a></li>
           <li><a href="mailto:bridgeparkhotel@gmail.com" target='_blank' rel="noopener noreferrer"><span className='contact-icons'><FontAwesomeIcon icon={faEnvelope} /></span><span className='contact-label'>(Other)<br/>admin@bridgeparkhotel.co.uk</span></a></li>
         </ul>
@@ -42,17 +42,18 @@ const Footer = () => {
       <div className="footer-quick-links">
         <div className='footer-quick-menu'>
           <p><b>Quick Links</b></p>
-          <ul className="quick-links">
+          <ul className="quick-links quick-links-mobile">
+            <div className='check-line'>
             <li><a href="/rooms" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Rooms</span></a></li>
-            <li><a href="https://direct-book.com/properties/bridgeparkdirect?" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Group booking</span></a></li>
+            <li><a href="https://direct-book.com/properties/bridgeparkdirect?" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Group Booking</span></a></li>
             <li><a href="/HomeRules" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Booking Policy</span></a></li>
-            {/* <li><a href="/" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Terms & Condition</span></a></li> */}
-            <li><a href="https://direct-book.com/properties/bridgepark/book?step=step1" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Guest Info</span></a></li>
-            <li><a href="/faq" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">FAQ</span></a></li>
+            <li><a href="https://direct-book.com/properties/bridgepark/book?step=step1" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Guest Info&nbsp;&nbsp;&nbsp;</span></a></li>
+            <li><a href="/faq" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">FAQ&nbsp;</span></a></li>
             <li><a href="/website-support" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Website Support</span></a></li>
-            <li><a href="https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-06-14&checkOutDate=2024-06-15&trackPage=no" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Siteminder page</span></a></li>
-            <li><a href="/sitemaps" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Site Maps</span></a></li>
+            <li><a href="https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-06-14&checkOutDate=2024-06-15&trackPage=no" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Siteminder Page</span></a></li>
+            <li><a href="/sitemaps" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Site Map</span></a></li>
             <li><a href="/privacy" target='_blank' rel="noopener noreferrer"><span className="quick-link-label">Privacy & Policy</span></a></li>
+            </div>
           </ul>
         </div>
 
@@ -69,7 +70,7 @@ const Footer = () => {
       </div>
       
       <div className='footer-copyright'>
-       <a href='/copyright'><p>Copyright &copy; {currentYear} Bridge Park Hotel. All Rights Reserved</p></a>
+       <a /*</div>href='/copyright'*/><p>Copyright &copy; {currentYear} Bridge Park Hotel. All Rights Reserved</p></a>
       </div>
       
       {showTooltip && (

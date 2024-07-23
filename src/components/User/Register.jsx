@@ -26,15 +26,21 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const validateForm = () => {
+    let formIsValid = true;
     const errors = {};
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!name.trim()) {
       errors.name = "Name is required";
     }
 
     if (!email.trim()) {
       errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Email is invalid";
+      formIsValid = false;
+    } else if (!emailPattern.test(email)) {
+      errors.email = "Please enter a valid email";
+      formIsValid = false;
     }
 
     if (!password.trim()) {

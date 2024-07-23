@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+.header-nav-bar-right .ant-menu-overflow{
+  gap: 3%;
+  margin-right: 10px;
+}
 .header-update-container{
   display: flex;
   height: 50px;
@@ -90,6 +93,10 @@
     right: 0;
     margin-right: 10px;
     z-index: 99999999;
+  }
+  .drawer-close-btn{
+    margin-right: 30px;
+    margin-top: 10px;
   }
 }
 /* HeaderUpdate.css */

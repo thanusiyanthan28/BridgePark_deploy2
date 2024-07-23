@@ -3,11 +3,6 @@ import ImageSlider1 from './ImageSlider1'
 import PanoImage from './PanoImage'
 import NewMeeting from './NewMeeting'
 
-
-
-
-
-
 const MainMeeting = () => {
   return (
     <div>
@@ -15,6 +10,7 @@ const MainMeeting = () => {
         <ImageSlider1 />
         <NewMeeting />
         <PanoImage />
+      
         
       
         

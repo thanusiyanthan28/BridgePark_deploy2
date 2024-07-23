@@ -106,28 +106,22 @@
   color: #fff;
 }
 
-
 @media (max-width: 768px) {
+  .quick-links-mobile{
+    display:list-item;
+  }
   .footer-quick-links{
     gap: 0;
     justify-content: space-between;
     margin-left: 0;
     padding: 0;
   }
-  .quick-links a{
-
-  }
 }
-
 @media (max-width: 440px) {
   .footer {
     flex-direction: column;
     padding-bottom: 10px;
   }
-  .footer-quick-menu{
-
-  }
-
   .footer-logo,
   .footer-contact,
   .footer-quick-links {

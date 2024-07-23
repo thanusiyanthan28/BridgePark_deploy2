@@ -18,12 +18,12 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Hair Dryer</li>
         </ul>
 
-        <h2 className='fscolumnh2'><FaBed /> Bedroom</h2>
+        <h2 className='fscolumnh2'><FaBed style={{marginBottom: "-4px"}}/> Bedroom</h2>
         <ul>
           <li>Linen</li>
           <li>Wardrobe or Closet</li>
         </ul>
-        <h2 className='fscolumnh2'><FaTree /> Outdoors</h2>
+        <h2 className='fscolumnh2'><FaTree style={{marginBottom: "-2px"}}/> Outdoors</h2>
         <ul>
           <li>Outdoor Furniture</li>
           <li>Terrace</li>
@@ -37,11 +37,11 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         <ul>
           <li>Live Sport Events (Broadcast)</li>
         </ul>
-        <h2 className='fscolumnh2'><FaCouch /> Living Area</h2>
+        <h2 className='fscolumnh2'><FaCouch style={{marginBottom: "-4px"}}/> Living Area</h2>
         <ul>
           <li>Desk</li>
         </ul>
-        <h2 className='fscolumnh2'><FaTv /> Media & Technology</h2>
+        <h2 className='fscolumnh2'><FaTv style={{marginBottom: "-4px"}}/> Media & Technology</h2>
         <ul>
           <li>Flat-Screen TV</li>
           <li>Telephone</li>
@@ -59,11 +59,11 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Bar</li>
           <li>Restaurant</li>
         </ul>
-        <h2 className='fscolumnh2'><FaWifi /> Internet</h2>
+        <h2 className='fscolumnh2'><FaWifi style={{marginBottom: "-3px"}} /> Internet</h2>
         <ul>
           <li>Free Wifi it available in all areas</li>
         </ul>
-        <h2 className='fscolumnh2'><FaParking /> Parking</h2>
+        <h2 className='fscolumnh2'><FaParking style={{marginBottom: "-3px"}}/> Parking</h2>
         <ul>
           <li>Free Public parking is possible on site<br></br>
           <span class="before-bracket">(Reservation is not needed)</span></li>
@@ -82,14 +82,14 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         </ul>
       </div>
       <div className="fscolumn">
-      <h2 className='fscolumnh2'><FaBriefcase /> Business facilities</h2>
+      <h2 className='fscolumnh2'><FaBriefcase style={{marginBottom: "-3px"}}/> Business facilities</h2>
         <ul>
           <li>Fax/photocopying
           (Additional charge)</li>
           <li>Meeting/banquet facilities
           (Additional charge)</li>
         </ul>
-        <h2 className='fscolumnh2'><FaUserShield /> Safety & Security</h2>
+        <h2 className='fscolumnh2'><FaUserShield style={{marginBottom: "-2px"}} /> Safety & Security</h2>
         <ul>
           <li>Fire Extinguishers</li>
           <li>CCTV outside property</li>
@@ -98,7 +98,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Key access</li>
           <li>Safety deposit box</li>
         </ul>
-        <h2 className='fscolumnh2'><FaHome /> General</h2>
+        <h2 className='fscolumnh2'><FaHome style={{marginBottom: "-3px"}}/> General</h2>
         <ul>
           <li>Designated smoking area</li>
           <li>Non-smoking throughout</li>
@@ -109,7 +109,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Non smoking rooms</li>
           <li>Room service</li>
         </ul>
-        <h2 className='fscolumnh2'><FaGlobe /> Languages spoken</h2>
+        <h2 className='fscolumnh2'><FaGlobe style={{marginBottom: "-4px"}}/> Languages spoken</h2>
         <ul>
           <li>English</li>
         </ul>

@@ -53,22 +53,23 @@ const ReviewForm = (props) => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [userId, setUSerId] = useState("");
+
   const [image, setImage] = useState("");
+
   const { handlerStatus } = props;
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     const storedUser = localStorage.getItem("user");
-
     if (storedToken) {
       setToken(storedToken);
     }
-
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
         setUser(parsedUser);
         setEmail(parsedUser.email);
+        setUSerId(parsedUser.userId);
         setUSerId(parsedUser.userId);
         setImage(parsedUser.picture);
       } catch (error) {
@@ -77,6 +78,9 @@ const ReviewForm = (props) => {
     }
   }, []);
 
+  console.log("user user user", user)
+  console.log("user user idddddd", userId)
+
   const RoomID = (roomType) => {
     const selectedRoom = roomDetails.find((room) => room.detail === roomType);
     return selectedRoom ? selectedRoom.id : null;
@@ -84,23 +88,27 @@ const ReviewForm = (props) => {
 
   const handleSubmit = async (values) => {
     const roomId = RoomID(values.roomType);
-  
     const reviewData = {
       reviewId: 0,
-      userId: userId,
-      roomId: roomId,
+      userId: user.userId ?? null,
+      roomId: roomId ?? 0,
       country: values.country,
+      travelerType: values.travelerType ?? null,
       overallStar: 0,
       comment: values.description,
+      helpful: 0,
+      notHelpful: 0,
+      reviewDate: null,
       reviewCategoryRatings: [
-        { id: "0", reviewId: "0", reviewCategoryId: "1", rating: ratings.staff },
-        { id: "0", reviewId: "0", reviewCategoryId: "2", rating: ratings.facilities },
-        { id: "0", reviewId: "0", reviewCategoryId: "3", rating: ratings.cleanliness },
-        { id: "0", reviewId: "0", reviewCategoryId: "4", rating: ratings.comfort },
-        { id: "0", reviewId: "0", reviewCategoryId: "5", rating: ratings.value },
-        { id: "0", reviewId: "0", reviewCategoryId: "6", rating: ratings.location },
-        { id: "0", reviewId: "0", reviewCategoryId: "7", rating: ratings.wifi },
+        { id: 0, reviewId: 0, reviewCategoryId: 1, rating: ratings.staff },
+        { id: 0, reviewId: 0, reviewCategoryId: 2, rating: ratings.facilities },
+        { id: 0, reviewId: 0, reviewCategoryId: 3, rating: ratings.cleanliness },
+        { id: 0, reviewId: 0, reviewCategoryId: 4, rating: ratings.comfort },
+        { id: 0, reviewId: 0, reviewCategoryId: 6, rating: ratings.value },
+        { id: 0, reviewId: 0, reviewCategoryId: 7, rating: ratings.location },
+        { id: 0, reviewId: 0, reviewCategoryId: 8, rating: ratings.wifi },
       ],
+      userEmail: email,
     };
   
     try {
@@ -110,8 +118,9 @@ const ReviewForm = (props) => {
       console.error("Failed to submit review:", error);
     }
   };
-  
 
+  
+  
   const handleRatingChange = (key, value) => {
     setRatings({ ...ratings, [key]: value });
   };
@@ -121,7 +130,7 @@ const ReviewForm = (props) => {
   return (
     <div className="container-write">
       <div className="user-info-write">
-        <Avatar src={image} size={64} icon={<UserOutlined />}>
+        <Avatar src={image} size={54} icon={<UserOutlined />}>
           {!user.image && getInitials(email.split("@")[0])}
         </Avatar>
         <div className="user-email-write">{email}</div>
