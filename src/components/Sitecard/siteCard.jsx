@@ -179,7 +179,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
           </div>
         </div>
         <div>
-          <p>1 x Single Room Basic <span className='price-site'>£{roomPrice ? roomPrice.toFixed(2): '0.00'}</span></p>
+          <p>1 x  Room Price <span className='price-site'>£{roomPrice ? roomPrice.toFixed(2): '0.00'}</span></p>
           <p>Tax <span className='price-site'>£{tax.toFixed(2)}</span></p>
           <hr />
           <p>Grand total <span className='price-site'>£{totalPrice.toFixed(2)}</span></p>
