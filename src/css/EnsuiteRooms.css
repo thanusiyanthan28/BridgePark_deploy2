@@ -41,14 +41,14 @@
 @media (max-width: 768px) {
   .EnsuiteRoom-Container {
     overflow-x: hidden;
-    margin-top: 600px;
+    margin-top: 500px;
     margin-left: 15px;
     align-items: center;
   }
   .EnsuiteRoom-sitecard {
     width: 100%;
     position: absolute;
-    top: 40%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;

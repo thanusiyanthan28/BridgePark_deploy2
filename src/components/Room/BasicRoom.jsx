@@ -27,6 +27,7 @@ import UrlLib from "../common/UrlLib";
 import SiteCard from "../Sitecard/siteCard";
 import HotelRoomCardBasicRoom from "../Room/HotelRoomCardBasicRoom";
 import HouseRules from "../common/HomeRules";
+import HomeCard from "../Sitecard/homeCard";
 
 const BasicRoom = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -37,7 +38,7 @@ const BasicRoom = () => {
   const [roomPrice, setRoomPrice] = useState('');
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 767px)").matches
+    window.matchMedia("(max-width: 768px)").matches
   );
 
   const handleViewMoreClick = (Basicroom, url , id) => {
@@ -62,7 +63,7 @@ const BasicRoom = () => {
   };
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
@@ -125,7 +126,8 @@ const BasicRoom = () => {
       <div className="BasicRoom-cardContainor">
         {isMobile ? (
           <div className="BasicRoom-sitecard">
-            <SiteCard selectedRoomId={selectedRoomId} />
+            {/* <SiteCard selectedRoomId={selectedRoomId} /> */}
+            <HomeCard />
           </div>
         ) : null}
         {!isMobile ? (
