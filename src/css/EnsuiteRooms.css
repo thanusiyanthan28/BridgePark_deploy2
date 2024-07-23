@@ -66,3 +66,14 @@
     width: 90%;
   }
 }
+@media (max-height: 750px) {
+  .EnsuiteRoom-sitecard {
+  top: 40%;
+  }
+}
+@media (max-width: 390px) {
+  .EnsuiteRoom-sitecard {
+  top: 40%;
+  }
+}
+

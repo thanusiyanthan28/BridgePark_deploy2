@@ -66,3 +66,15 @@
     width: 90%;
   }
 }
+@media (max-height: 750px) {
+  .BasicRoom-sitecard{
+  top: 40%;
+  }
+}
+@media (max-width: 390px) {
+  .BasicRoom-sitecard {
+  top: 40%;
+  }
+}
+
+
