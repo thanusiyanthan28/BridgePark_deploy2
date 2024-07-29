@@ -87,89 +87,97 @@ const EnsuiteRoom = () => {
     {
       id: 27,
       image: DB3,
-      title: "DOUBLE ROOM WITH PRIVATE BATHROOM",
+      title: "Double Room With Private Bathroom",
       icon1: personIcon1,
       icon2: bedIcon1,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(14),
       EroomPrice: "£65",
+      NoOfGuests: "02",
       images: [DB3,DB1,DB2]
     },
     {
       id: 11,
       image: TWE1,
-      title: "TWIN ROOM WITH PRIVATE BATHROOM",
+      title: "Twin Room With Private Bathroom",
       icon1: personIcon2,
       icon2: bedIcon2,
-      cardTitle: "2x Single Bed",
+      cardTitle: "2x Single Beds",
       imageUrl: getUrlById(11),
       EroomPrice: "£68",
+      NoOfGuests: "02",
       images:[TWE1,TWE2,TWE3]
     },
     {
       id: 31,
       image: TB1,
-      title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+      title: "Triple Room With Private Bathroom",
       icon1: personIcon2,
       icon2: bedIcon2,
       cardTitle: "3x Single Bed",
       imageUrl: getUrlById(9),
       EroomPrice: "£92",
+      NoOfGuests: "03",
       images: [TB1,TB2]
     },
     {
       id: 30,
       image: TE3,
-      title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+      title: "Triple Room With Private Bathroom",
       icon1: personIcon3,
       icon2: bedIcon2,
-      cardTitle: "1x single bed + 1x double bed",
+      cardTitle: "1x Single Bed + 1x Double Bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£97",
+      NoOfGuests: "03",
       images: [TE1,TE2,TE3,TE4,TE5]
     },
     {
       id: 32,
       image: QD,
-      title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
+      title: "Quadruple Room With Private Bathroom",
       icon1: personIcon3,
       icon2: bedIcon2,
-      cardTitle: "2x single bed + 1x double bed",
+      cardTitle: "2x Single Beds + 1x Double Bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£120",
+      NoOfGuests: "04",
       images: [QD]
     },
     {
       id: 33,
       image: img6,
-      title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
+      title: "Quadruple Room With Private Bathroom",
       icon1: personIcon3,
       icon2: bedIcon2,
-      cardTitle: "1x double bed + 1x bunk bed",
+      cardTitle: "1x Double Bed + 1x Bunk Bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£110",
+      NoOfGuests: "04",
       images:[img6]
     },
     {
       id: 4,
       image: img7,
-      title: "EXECUTIVE KING ROOM WITH PRIVATE BATHROOM",
+      title: "Executive King Room With Private Bathroom",
       icon1: personIcon3,
       icon2: bedIcon2,
-      cardTitle: "1x Double bed",
+      cardTitle: "1x Sofa Bed + 1x Large Double Bed",
       imageUrl: getUrlById(10),
       EroomPrice: "£120",
+      NoOfGuests: "03",
       images: [img7]
     },
     {
       id: 4,
       image: TW2,
-      title: "CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM",
+      title: "Chambre of Twilight Room With Private Bathroom",
       icon1: personIcon3,
       icon2: bedIcon2,
       cardTitle: "1x Superior King Room",
       imageUrl: getUrlById(10),
       EroomPrice: "£125", 
+      NoOfGuests: "02",
       images:[TW1,TW2,TW3,TW4,TW5,TW6]
     },
   ];
@@ -214,6 +222,7 @@ const EnsuiteRoom = () => {
                   price={Ensuiteroom.EroomPrice}
                   buttonText="Book Now"
                   cardtitle={Ensuiteroom.cardTitle}
+                  NoOfGuests={Ensuiteroom.NoOfGuests} 
                   onViewMoreClick={() =>
                     handleViewMoreClick(
                       {

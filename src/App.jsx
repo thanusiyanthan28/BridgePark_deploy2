@@ -27,8 +27,7 @@ import Privacy from "./components/Privacy/Privacy";
 import FAQ from "./components/FAQ/Faq";
 import WebsiteSupport from "./components/WebsiteSupport/WebsiteSupport";
 import FaqDetails from "./components/FAQ/FaqDetails";
-import SiteCard2 from "./components/SiteCard2/siteCard2";
-import ReviewPage from "./components/Review/reviewPage";
+import ReviewPage from "./components/NewReview/Reviews";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Copyright from "./components/common/Copyright";
 import SiteMaps from  "./components/SiteMaps/SiteMaps"
@@ -65,7 +64,6 @@ export default function App() {
             <Route path="/guest-info" element={<GuestInfo />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/room-card" element={<SiteCard />} />
-            <Route path="/card2" element={<SiteCard2 />} />
             <Route path="/review" element={<ReviewPage />} />
            
             <Route path="/copyright" element={<Copyright />} />

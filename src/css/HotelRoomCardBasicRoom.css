@@ -53,13 +53,9 @@
   font-family: "lato", serif;
 }
 .hotelRoomCardTitleTextFirstBasicRoom:hover {
-  overflow-y: auto; /* Show the scrollbar on hover */
+  overflow-y: auto; 
 }
-/* .cardDescription {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 10px;
-  } */
+
 
 .hotelRoomCardInfoRowBasicRoom {
   display: flex;
@@ -69,10 +65,6 @@
   font-family: "lato", serif;
 
 }
-
-/* .cardInfoText {
-    font-size: 12px;
-  } */
 
 .hotelRoomCardPriceTextBasicRoom {
   font-size: 14px;
@@ -111,9 +103,7 @@
   background-color: #ffffffc2;
   flex: 1;
   position: absolute;
-  /* top: -30px; */
-  padding-left: 10px;
-  /* padding-right: 160px; */
+  padding-left: 10px; 
   padding-right: 50px;
   color: #000;
   font-size: 15px;

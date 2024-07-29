@@ -148,7 +148,7 @@
 }
 .site-card-room {
   position: absolute;
-  top: 350px;
+  top: 150px;
   right: 60px;
   z-index: 999; /* Ensure it's above other content */
 }
