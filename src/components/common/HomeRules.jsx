@@ -89,7 +89,7 @@ const HouseRules = () => {
               accommodation type. Please check what{" "}
               <a
                 class="condition-link"
-                href="https://www.booking.com/hotel/gb/bridge-park.en-gb.html?aid=304142&label=gen173nr-1FCBcoggI46AdIM1gEaIUBiAEBmAEJuAEXyAEM2AEB6AEB-AECiAIBqAIDuALV2cSzBsACAdICJDI3MTJjYmQ4LWEzZjctNGY0Yy1iMGFmLTc5NDM0NWI0ZmMzY9gCBeACAQ&sid=e38fae7ee230a9aa3af29fb028fbdfe8&dest_id=35378;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1718693477;srpvid=de992f6bf1ac00e1;type=total;ucfs=1&#availability_target"
+                href="https://direct-book.com/properties/bridgeparkdirect/policies?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-07-29&checkOutDate=2024-07-30&trackPage=no "
                 target="_blank"
                 rel="noopener noreferrer"
               >
