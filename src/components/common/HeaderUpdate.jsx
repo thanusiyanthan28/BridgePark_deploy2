@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Drawer, Button, Dropdown, Avatar } from 'antd';
-import { MenuOutlined, UserOutlined, CloseOutlined } from '@ant-design/icons';
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import "../../css/HeaderUpdate.css";
-import img from "../../assets/images/DoubleEnsuite.webp";
-import headerlogo from '../../assets/header-logo.png';
+import headerlogo from '../../assets/images/HotelLogo1.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { AuthContext } from '../../../src/AuthContext'; // Import context
 
 const HeaderUpdate = () => {
   const [current, setCurrent] = useState();
   const [open, setOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const isMobile = windowWidth <= 768;
+  const { isLoggedIn, userData, logout } = useContext(AuthContext); // Use context
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    onClose();
-  };
-
-  const userData = {
-    name: "John Doe",
-    avatar: img,
-    bio: "Lorem ipsum dolor sit amet",
-    email: "john@example.com",
-    location: "New York",
+    logout();
+    window.location.reload(); // Force refresh to reflect changes
   };
 
   const showDrawer = () => {
@@ -51,87 +45,47 @@ const HeaderUpdate = () => {
 
   const itemsLeft = [
     {
-      label: (
-        <Link to="/" className="header-home header-font">
-          Home
-        </Link>
-      ),
+      label: <Link to="/" className="header-home header-font">Home</Link>,
       key: 'Home',
     },
     {
-      label: (
-        <Link to="/rooms" className="header-rooms header-font">
-          Rooms
-        </Link>
-      ),
+      label: <Link to="/rooms" className="header-rooms header-font">Rooms</Link>,
       key: 'Rooms',
     },
     {
-      label: (
-        <Link to="/facilities" className="header-facilities header-font">
-          Facilities
-        </Link>
-      ),
+      label: <Link to="/facilities" className="header-facilities header-font">Facilities</Link>,
       key: 'Facilities',
     },
     {
-      label: (
-        <Link to="/main-meeting" className="header-meeting header-font">
-          Meeting & Events
-        </Link>
-      ),
+      label: <Link to="/main-meeting" className="header-meeting header-font">Meeting & Events</Link>,
       key: 'Meeting & Events',
     },
     {
-      label: (
-        <Link to="/location" className="location-meeting header-font">
-          Location
-        </Link>
-      ),
+      label: <Link to="/location" className="location-meeting header-font">Location</Link>,
       key: 'Location',
     },
     {
-      label: (
-        <Link to="/review" className="location-meeting header-font">
-          Review
-        </Link>
-      ),
+      label: <Link to="/review" className="location-meeting header-font">Review</Link>,
       key: 'Review',
     },
   ];
 
   const profileMenuItems = isLoggedIn ? [
     {
-      label: (
-        <Link to="/profile" className="custom-dropdown-item header-font" onClick={onClose}>
-          Profile
-        </Link>
-      ),
+      label: <Link to="/profile" className="custom-dropdown-item header-font" onClick={onClose}>Profile</Link>,
       key: 'profile',
     },
     {
-      label: (
-        <Link to="/" className="custom-dropdown-item header-font" onClick={() => { handleLogout(); setCurrent('Home'); }}>
-          Logout
-        </Link>
-      ),
+      label: <Link to="/" className="custom-dropdown-item header-font" onClick={handleLogout}>Logout</Link>,
       key: 'logout',
     }
   ] : [
     {
-      label: (
-        <Link to="/SignIn" className="custom-dropdown-item header-font" onClick={onClose}>
-          Login
-        </Link>
-      ),
+      label: <Link to="/SignIn" className="custom-dropdown-item header-font" onClick={onClose}>Login</Link>,
       key: 'login',
     },
     {
-      label: (
-        <Link to="/SignUp" className="custom-dropdown-item header-font" onClick={onClose}>
-          Signup
-        </Link>
-      ),
+      label: <Link to="/SignUp" className="custom-dropdown-item header-font" onClick={onClose}>Signup</Link>,
       key: 'signup',
     }
   ];
@@ -139,20 +93,15 @@ const HeaderUpdate = () => {
   const itemsRight = [
     {
       label: (
-        <button className='header-button '>
-          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now header-font'>
-            Book Now
-          </Link>
+        <button className='header-button'>
+          <Link to="https://direct-book.com/properties/bridgeparkdirect?" className='header-book-now header-font'>Book Now</Link>
         </button>
       ),
       key: 'Book Now',
     },
     {
       label: isMobile ? (
-        <Menu.SubMenu
-          key="profile-submenu"
-          title={isLoggedIn ? "Profile / Logout" : "Login / Signup"}
-        >
+        <Menu.SubMenu key="profile-submenu" title={isLoggedIn ? "Profile / Logout" : "Login / Signup"}>
           {profileMenuItems.map(item => (
             <Menu.Item key={item.key}>{item.label}</Menu.Item>
           ))}
@@ -165,8 +114,8 @@ const HeaderUpdate = () => {
           onVisibleChange={setDropdownVisible}
         >
           <Avatar
-            icon={<UserOutlined />}
-            src={isLoggedIn ? userData.avatar : null}
+            icon={<FontAwesomeIcon icon={faUserTie} />}
+            src={isLoggedIn && userData ? userData.picture : null}
           />
         </Dropdown>
       ),

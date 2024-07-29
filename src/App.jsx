@@ -32,6 +32,10 @@ import ReviewPage from "./components/Review/reviewPage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Copyright from "./components/common/Copyright";
 import SiteMaps from  "./components/SiteMaps/SiteMaps"
+import NewHeader from "./components/common/NewHeader";
+import TopBar from "./components/common/TopBar";
+import { AuthProvider } from "./AuthContext";
+import "./App.css"
 
 const clientId =
   "1009464659569-k6eof9rvm8ugs5mcnb86h4j5iud5elnr.apps.googleusercontent.com";
@@ -40,8 +44,13 @@ export default function App() {
   return (
     <div>
       <GoogleOAuthProvider clientId={clientId}>
+      <AuthProvider>
         <Router>
-          <HeaderUpdate />
+          {/* <NewHeader /> */}
+          <TopBar />
+          <div className="app-margin-top">
+            <HeaderUpdate />
+            </div>
           <ScrollToTop />
           <Routes>
             <Route path="/profile" element={<Profile />} />
@@ -73,6 +82,7 @@ export default function App() {
           </Routes>
           <Footer />
         </Router>
+        </AuthProvider>
       </GoogleOAuthProvider>
     </div>
   );

@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.app-margin-top {
+  margin-top: 40px;
+}
+
+/* This style will remove the margin on screens smaller than 768px */
+@media (max-width: 768px) {
+  .app-margin-top {
+    margin-top: 0;
+  }
+}
+
+

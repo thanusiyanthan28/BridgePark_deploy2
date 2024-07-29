@@ -8,7 +8,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-  
+
   
   }
   .new-meeting-mtitle{
@@ -87,7 +87,7 @@
   
   .new-meeting-card.new-meeting-active {
     transform: scale(1.17);
-    opacity: 1; z-index: 10;
+    opacity: 1; z-index: 8;
     background-color: rgb(255, 255, 255);
     margin-top: 50px;
     border:  solid #e9e4e4;

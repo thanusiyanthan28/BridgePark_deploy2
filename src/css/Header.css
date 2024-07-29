@@ -1,13 +1,15 @@
 
 .head-main {
   position: relative;
-  height: 100vh;
   background-image: url("../assets/images/HotelFront.webp");
   background-size: cover;
   text-align: center;
   overflow: hidden; /* Ensures overlay stays within container bounds */
   width: 100%;
   margin-top: -10px;
+  height: 85vh;
+  /* height: 100% !important; */
+  background-position: center center; /* Focus on the middle of the image */
 }
 
 .overlay {
@@ -32,6 +34,8 @@
 .headerLogo {
   width: 400px;
   padding: 20px;
+  filter: contrast(150%);
+  filter: brightness(150%);
 }
 
 .headerLogoPosition {
@@ -154,3 +158,25 @@
 
 }
 
+
+@media only screen and (max-height: 768px){
+  .head-main {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-height: 1024px){
+  .head-main {
+    height: 82vh;
+  }
+}
+@media only screen and (max-height: 900px){
+  .head-main {
+    height: 85vh;
+  }
+}
+@media only screen and (max-height: 2160px){
+  .head-main {
+    height: 92vh;
+  }
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.topbar {
+  width: 100%;
+  height: 40px;
+  background-color: #669399;
+  color: white; /* Optional: to make the text color white */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  font-family: 'Inter', sans-serif;
+}
+.overlay-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 0.5 opacity */
+  z-index: 1; /* Ensures the overlay is above the background but below the content */
+ 
+}
+.topbar-sub {
+  display: flex;
+  justify-content: space-between; /* Space out items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Ensure it takes full height of the topbar */
+}
+.topbar-phone-email {
+  display: flex;
+  gap: 20px;
+  font-weight: 200;
+  font-size: 9px;
+  margin-left: 30px;
+}
+.topbar-mobile, .topbar-email {
+  display: flex;
+  gap: 8px;
+}
+.topbar-location{
+  display: flex;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 200;
+  margin-left: 30%;
+}
+
+
+.topbar-icons {
+  display: flex;
+  margin-right: 30px;
+}
+
+.topbar-icons span {
+  border-left: 0.5px solid rgb(255, 255, 255 ,0.5);
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border-width: 0.1px;
+ 
+}
+
+.topbar-icons span a{
+  font-size: 15px;
+  color: white;
+  font-weight: 200;
+  z-index: 999999;
+}
+.topbar a{
+  color: white;
+  text-decoration: none;
+}
+.topbar-location a:hover{
+ text-decoration: underline;
+ color: white;
+ 
+}
+@media screen and (max-width: 768px) {
+  .topbar{
+    display: none;
+  }
+}

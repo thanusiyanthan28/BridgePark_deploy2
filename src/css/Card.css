@@ -22,7 +22,7 @@
 .btnPrimary-check:hover {
   background-color: #D5ECF4 !important;
   color: white; /* Optional: Change the text color to white for better contrast */
-  border: 1px solid  black !important;
+  border: 1px solid  #0cadc2 !important;
 }
 
 .card {
@@ -32,10 +32,10 @@
 
   margin: 10px;
   overflow: hidden;
-  width: 90% !important;
+  width: 80% !important;
   background-color: white;
   color: black;
-  height: 130px !important;
+  height: 120px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -50,7 +50,7 @@
 
 .divider {
   height: 100px;
-  background: black;
+  background: #669399;
 }
 .divider4{
   display: none;
@@ -157,7 +157,7 @@
   }
   .btnPrimary-check {
     padding: 0 40px 0 40px ;
-    margin-left: 50%;
+    margin-left: 40%;
     height: 50px;
     margin-top: auto;
     margin-bottom: auto;
@@ -177,7 +177,7 @@
 }
 
 
-@media (min-width: 1441px) and (max-width: 1924px) {
+@media (min-width: 1441px) and (max-width: 1600px) {
   .titleH1, .titleH3 {
     font-size: 14px;
   }
@@ -213,4 +213,46 @@
   margin-top: 7px;
 }
 
+}
+@media (min-width: 1601px) and (max-width: 1924px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    border-radius: 0 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 80px 0 80px ;
+    margin-left: 70%;
+    height: 60px;
+    font-size: 12px;
+  }
+  
+.card {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 80% !important;
+  background-color: white;
+  color: black;
+  height: 150px !important;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.card-body {
+  padding: 25px;
+  text-align: left;
+  margin-top: 7px;
+}
+
+}
+@media only screen and (max-height: 1024px){
+  .head-mai {
+    height: 82vh;
+  }
 }
