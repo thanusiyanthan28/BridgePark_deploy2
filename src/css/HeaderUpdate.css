@@ -4,12 +4,13 @@
   margin-right: 10px;
   height: 100%;
   width: 100%;
+
 }
 .header-nav-bar-left .ant-menu-overflow,
 .header-nav-bar-right .ant-menu-overflow,
 .header-update
 {
-  background-color: #EFEFEF ;
+  background-color: #0c434b ;
 }
 .ant-menu-title-content{
 }
@@ -141,3 +142,21 @@
   margin-right: 20px;
   width: 60px;
 }
+/* manu color */
+.header-nav-bar-left .ant-menu-item,
+.header-nav-bar-right .ant-menu-item,
+.update-header-drawer .ant-menu-item {
+  color: white !important;
+}
+
+.header-nav-bar-left .ant-menu-item a,
+.header-nav-bar-right .ant-menu-item a,
+.update-header-drawer .ant-menu-item a {
+  color: white !important;
+}
+.header-nav-bar-left .ant-menu-item a:hover,
+.header-nav-bar-right .ant-menu-item a:hover,
+.update-header-drawer .ant-menu-item a:hover {
+  color: #669399 !important;
+}
+

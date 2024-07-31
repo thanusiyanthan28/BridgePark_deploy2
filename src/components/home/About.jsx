@@ -34,7 +34,7 @@ const About = () => {
     return (
         < div className='abContainer-main'>
             <img className='about-bgimage' src={bgimage}/>
-     {! isMobile && <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 25% and get exclusive discounts when you Book!</button></a>}
+     {! isMobile && <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 10% and get exclusive discounts when you Book!</button></a>}
         <div className='abContainer'>
            
             <div className='aboutContainer'>

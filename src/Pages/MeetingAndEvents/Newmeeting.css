@@ -11,10 +11,12 @@
 
   
   }
-  .new-meeting-mtitle{
-    margin-bottom: -60px !important;
-  }
-  
+  /* .new-meeting-title{
+    margin-bottom: 600px !important;
+  } */
+.new-meeting-title{
+  margin-top: 45px;
+}
   .new-meeting-nav-button {
     color: rgb(0, 238, 255);
     border: none;

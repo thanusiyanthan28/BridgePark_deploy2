@@ -132,6 +132,7 @@ const HeaderUpdate = () => {
 
   return (
     <div className='header-update-container'>
+     
       <div className='header-update'>
         <a href='/'><img className='update-header-logo' src={headerlogo} alt="Logo" /></a>
         {!isMobile ? (
@@ -156,6 +157,7 @@ const HeaderUpdate = () => {
         <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft} />
         <Menu mode="inline" items={profileMenuItems} onClick={onClose} />
       </Drawer>
+      
     </div>
   );
 };
