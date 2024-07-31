@@ -85,9 +85,9 @@
 
 .hotelRoomCardTitle {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 5px;
-  font-family: "lato", serif;
+  font-family: "lato";
   text-align: center;
   justify-content: center;
 }

@@ -113,7 +113,7 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 29,
         image: DB1,
-        title: "Double Room With Shared Bathroom",
+        title: "DOUBLE ROOM WITH SHARED BATHROOM",
         cardTitle: "1x Double Bed",
         imageUrl: getUrlById(5),
         BroomPrice: "£58",
