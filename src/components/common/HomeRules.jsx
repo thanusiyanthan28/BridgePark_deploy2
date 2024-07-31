@@ -8,6 +8,7 @@ import pets from "../../assets/icons/Pets.gif";
 import groupImg from "../../assets/icons/Group.gif";
 import acceptPay from "../../assets/icons/Accepted payment methods.gif";
 import refundabaleImg from "../../assets/icons/Refundable DAmage.gif";
+import wheelchair from "../../assets/icons/wheelchair.gif";
 import americanex from "../../assets/Facilities of BPH/americanex.png";
 import mastercard from "../../assets/Facilities of BPH/mastercard.png";
 import visa from "../../assets/Facilities of BPH/visa.jpeg";
@@ -21,7 +22,15 @@ const HouseRules = () => {
           <h1 className="house-rules-title">House rules</h1>
         </div>
         <div className="house-rules-availability-button">
-          <button className="availability-button"  onClick={() => window.location.href = 'https://direct-book.com/properties/bridgeparkdirect'}>See All Availability</button>
+          <button
+            className="availability-button"
+            onClick={() =>
+              (window.location.href =
+                "https://direct-book.com/properties/bridgeparkdirect")
+            }
+          >
+            See All Availability
+          </button>
         </div>
       </div>
       <p className="house-rules-description">
@@ -40,7 +49,11 @@ const HouseRules = () => {
             <td className="house-rules-info">Check-in</td>
             <td>
               <ul className="house-rules-table-ul">
-                <li>From 14:00</li>
+                <li>
+                  Standard check-in time is 14:00 on the day of arrival. You can
+                  check in anytime after 14:00.Early check-in is subject to
+                  availability.
+                </li>
                 <li>
                   Guests are required to show a photo identification and credit
                   card upon check-in
@@ -57,7 +70,10 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Check-out</td>
-            <td>From 14:00</td>
+            <td>
+              Check-out time is before 11:00 am. Late check out is subject to
+              availability.
+            </td>
           </tr>
           <tr>
             <td>
@@ -122,10 +138,26 @@ const HouseRules = () => {
                   search.
                 </li>
                 <li className="house-rule-sub-topic">
-                  Cot and extra bed policies
+                  Cot and Sofa Bed Request
                 </li>
-                <li>Cots and extra beds are not available at this property.</li>
+                <li>
+                  Cot and sofa bed are available upon request only for rooms
+                  that can accommodate them.
+                </li>
               </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src={wheelchair}
+                alt="wheelchaire restriction Icon"
+                class="house-rules-icon"
+              />
+            </td>
+            <td className="house-rules-info">Not disabled-friendly</td>
+            <td className="house-rules-Details">
+            The property does not have facilities for disabled guests and there is no lift.
             </td>
           </tr>
 
@@ -138,7 +170,9 @@ const HouseRules = () => {
               />
             </td>
             <td className="house-rules-info">Age restriction</td>
-            <td className="house-rules-Details">The minimum age for check-in is 18</td>
+            <td className="house-rules-Details">
+              The minimum age for check-in is 18
+            </td>
           </tr>
 
           <tr>

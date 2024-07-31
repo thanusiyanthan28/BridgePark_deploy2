@@ -107,6 +107,11 @@ const SiteMaps = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="https://direct-book.com/properties/bridgeparkdirect/policies?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-07-29&checkOutDate=2024-07-30&trackPage=yes" target="_blank">
+                  Policies
+                  </a>
+                </li>
+                <li>
                   <a
                     href="https://direct-book.com/properties/bridgepark/book?step=step1"
                     target="_blank"
@@ -130,6 +135,14 @@ const SiteMaps = () => {
                 <li>
                   <a href="/privacy" target="_blank">
                     Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://direct-book.com/properties/bridgeparkdirect/contact?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-07-29&checkOutDate=2024-07-30&trackPage=yes"
+                    target="_blank"
+                  >
+                    Contact Us
                   </a>
                 </li>
                 <li>
@@ -197,6 +210,11 @@ const SiteMaps = () => {
                 <li>
                   <a href="mailto:bridgeparkhotel@gmail.com" target="_blank">
                     Other Mail
+                  </a>
+                </li>
+                <li>
+                  <a href="https://direct-book.com/properties/bridgeparkdirect/about?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=GBP&checkInDate=2024-07-29&checkOutDate=2024-07-30&trackPage=yes" target="_blank">
+                  About Us
                   </a>
                 </li>
                 {showTooltip && (
