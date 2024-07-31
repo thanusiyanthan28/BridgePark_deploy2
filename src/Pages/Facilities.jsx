@@ -21,7 +21,7 @@ const Facilities = () => {
 
   const cardsData = [
     { id: 1, title: 'Non-smoking rooms', icon: nonSmokingGif },
-    { id: 2, title: 'Room service', icon: roomServiceGif },
+    // { id: 2, title: 'Room service', icon: roomServiceGif },
     { id: 3, title: 'Free WiFi', icon: wifiGif },
     { id: 4, title: 'Free parking', icon: parkingGif },
     { id: 5, title: 'Family rooms', icon: familyRoomsGif },

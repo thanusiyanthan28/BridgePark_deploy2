@@ -1,0 +1,201 @@
+.hotelRoomCardContainer-R1 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: 1px solid #33cccc;
+    overflow: hidden;
+    transition: background-color 0.2s, transform 0.2s;
+    width: 350px;
+    font-family:'Jomolhari';
+    position: relative;
+  
+  }
+  .hotelRoomCardContainer1-R1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 310px;
+  }
+  /* --------------------------------------------------- */
+  .bed-info-container-R1 {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right of the container */
+    align-items: center; /* Centers items vertically */
+    gap: 10px;/* Align items to the start of the container */
+  }
+  
+  .bed-info-item-R1 {
+    display: flex;
+    align-items: center; /* Adds space between bed items */
+  }
+  
+  .bed-info-item-R1 img {
+    width: 24px; /* Adjust size of bed icons as needed */
+    height: auto;
+    margin-right: 8px; /* Adds space between icon and text */
+  }
+  
+  .bed-info-text-R1 {
+    font-size: 15px; /* Adjust font size as needed */
+    color: #333; /* Change color to match your design */
+  }
+  
+  .single-bed-info-R1 {
+    margin-left: auto; /* Pushes the single bed info to the right */
+  }
+  
+  /* Add this to ensure all icons are aligned to the right */
+  .right-align-container-R1 {
+    display: flex;
+    margin-left: auto; /* Aligns items to the end of the container */
+  }
+  
+  .right-align-container-R1 .bed-info-item {
+    margin: 0px;
+    margin-left: auto; /* Removes margin so that items align closely */
+  }
+  /*--------------------------------------------------------*/
+  
+  .hotelRoomCardContainer-R1 a {
+    width: 100%;
+    display: block; /* Ensures the link takes up full width */
+  }
+  .hotelRoomCardContainer:hover{
+    /* transform: scale(1.01); */
+    box-shadow: 0 4px 1rem -4px #33cccc;
+    transform: translateY(6px);
+  }
+  
+  .hotelRoomCardImage-R1 {
+    width: 100%; /* Ensure image fits the container */
+    height: 310px;
+  }
+  
+  .hotelRoomCardContainer-R1 a img{
+    width: 100%; /* Example property */
+  }
+  .hotelRoomCardDetails-R1 {
+    flex: 1; /* Take up 50% of the height */
+    padding: 10px;
+    font-family: "Jomolhari", serif;
+  }
+  
+  .hotelRoomCardTitle-R1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: "LATO", serif;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .hotelRoomCardTitleTextFirst-R1{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+    border-bottom: 1px solid #B5D9D4;
+    padding-bottom: 10px;
+    margin-bottom: 4px;
+    width: 100%;
+    font-family: "Lato", serif;
+  }
+  
+  .hotelRoomCardInfoRow-R1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+    border-top: 1px solid #9da7a6; /* Add top border */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    padding-top: 10px;
+  }
+  
+  .hotelRoomCardPriceText-R1 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+    margin-left: 10px;
+   
+  }
+  
+  .hotelRoomCard-MainRow-R1{
+    border-bottom: 2px solid rgba(5, 5, 5, 0.068); 
+    margin-top: 0px;
+  }
+  .hotelRoomCardIconCol-R1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hotelRoomCardIcon-R1 {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .hotelRoomCardIconText-R1 {
+    font-size: 15px; /* Adjust the text size as needed */
+  }
+  .hotelRoomCardTopBar-R1 {
+    background-color:#000000;
+    width: 100%;
+    position: absolute;
+    bottom: -12px; /* Position it at the bottom of the image */
+    left: 0;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "lato", serif;
+    font-weight: 600;
+  }
+  
+  .hotelRoomViewMoreLink-R1 {
+    cursor: pointer;
+    color: #33cccc;
+    margin-top: 20px; 
+    text-decoration:none ;
+    font-family:'Jomolhari' ;
+    font-size: 20px;
+    margin-left: 60px;
+  }
+  .hotelRoomViewMoreLink-R1:hover {
+    color: blue;
+    text-decoration: underline; 
+  }
+  
+  .cardPriceText2-R1{
+    float: right;
+    font-family: "Jomolhari", serif;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .hotelRoomCardContainer-R1 {
+      width: 360px;
+      justify-content: center;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      left: auto;
+      right: auto;
+    
+      
+    }
+  
+    .hotelRoomCardTopBar-R1 {
+      padding-right: 10px; 
+      padding-left: 10px; 
+      width: 100%; 
+      position: absolute; 
+      top: auto; 
+      margin-bottom: 10px; 
+    }
+  
+  }
+  
+  
