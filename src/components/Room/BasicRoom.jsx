@@ -84,7 +84,7 @@ const BasicRoom = () => {
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
       BroomPrice: "£48",
-      NoOfGuests: "02",
+      NoOfGuests: "01",
       images: [SR]
     },
     {

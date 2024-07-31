@@ -130,13 +130,13 @@ const Room = () => {
         <div className="room-text-wraper">
           {/* <h1 className="aboutH1">OUR ROOMS</h1> */}
           <div className='location-title'>Our Rooms</div>
-          {/* <div className="rooms-sub-content">
+          <div className="rooms-sub-content">
             <p>
               Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
               Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
               Wembley Stadium.
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="hotelRoomMainDiv">
@@ -158,7 +158,7 @@ const Room = () => {
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
-        width="40%"
+        width="80%"
       >
          {selectedCardId && <RoomAll selectedCardId={selectedCardId} />}
       </Modal>

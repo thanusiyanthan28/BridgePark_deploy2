@@ -38,8 +38,9 @@
 }
 
 .bed-info-text {
-  font-size: 15px; /* Adjust font size as needed */
-  color: #333; /* Change color to match your design */
+  font-size: 20px; /* Adjust font size as needed */
+  color: #333; 
+  font-weight: 500;
 }
 
 .single-bed-info {
@@ -83,10 +84,10 @@
 }
 
 .hotelRoomCardTitle {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 5px;
-  font-family: "Jomolhari", serif;
+  font-family: "lato", serif;
   text-align: center;
   justify-content: center;
 }
@@ -114,9 +115,9 @@
 }
 
 .hotelRoomCardPriceText {
-  font-size: 15px;
-  font-weight: 400;
-  font-family: "Jomolhari", serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "lato", serif;
 }
 
 .hotelRoomCard-MainRow{
@@ -135,7 +136,9 @@
 }
 
 .hotelRoomCardIconText {
-  font-size: 15px; /* Adjust the text size as needed */
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
 }
 .hotelRoomCardTopBar {
   background-color: rgba(110, 66, 28, 0.45);
@@ -146,7 +149,7 @@
   padding: 8px 10px;
   color: #ffffff;
   font-size: 15px;
-  font-family: "Jomolhari", serif;
+  font-family: "lato", serif;
   font-weight: 400;
 }
 
@@ -156,7 +159,7 @@
   text-decoration:none ; 
   margin-top: 5px;
   text-align: center;
-  font-family:'Jomolhari' ;
+  font-family:'lato' ;
 }
 .hotelRoomViewMoreLink:hover {
   color: blue;
@@ -165,7 +168,9 @@
 
 .cardPriceText2{
   float: right;
-  font-family: "Jomolhari", serif;
+  font-family: "lato", serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 
