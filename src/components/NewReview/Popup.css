@@ -252,10 +252,12 @@
   .reviewer-name-pop {
     font-weight: bold;
     margin-right: 5px;
+    font-size: 16px;
   }
   
   .reviewer-country-pop {
     color: gray;
+    font-size: 14px;
   }
   
   .review-details-pop p {
@@ -421,11 +423,11 @@
   }
   
   .review-title-pop {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: 'Cinzel';
+    font-family: 'lato';
   }
   
   .review-text-pop {

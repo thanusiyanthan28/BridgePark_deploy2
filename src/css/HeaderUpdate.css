@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .header-nav-bar-right .ant-menu-overflow{
-  gap: 3%;
   margin-right: 10px;
+  height: 100%;
+  width: 100%;
+
+}
+.header-nav-bar-left .ant-menu-overflow,
+.header-nav-bar-right .ant-menu-overflow,
+.header-update
+{
+  background-color: #0c434b ;
+}
+.ant-menu-title-content{
+}
+.header-nav-bar-left .ant-menu-overflow :hover{
+
+
+}
+.header-nav-bar-left .ant-menu-overflow{
+  height: 100%;
+  width: 100%;
 }
 .header-update-container{
   display: flex;
   height: 50px;
-
 }
 .mobile-toggle.ant-btn-primary{
  background-color: #669399;
@@ -23,7 +40,6 @@
   font-weight:400;
   border-bottom: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
   position: fixed;
  z-index: 999;
  
@@ -32,16 +48,29 @@
 }
 .header-nav-bar-left {
   width: 100%;
+  
+
 }
 .header-nav-bar-left .ant-menu-item{
 
  }
 .header-button{
-  color: white;
-  background-color:#669399;
-  padding: 7px;
-  border: none;
- 
+  color: #7f8cff;
+  border: 1px solid #0051ff;
+  width: 100px;
+  background-color: transparent;
+  height: 90%;
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 100;
+  border-radius: 2px;
+  margin-top: 2.5%;
+}
+
+.header-button:hover{
+   background-color: #669399;
+   color: white;
 }
 .ant-menu-horizontal {
   border-bottom: none; /* Remove the bottom border */
@@ -51,7 +80,7 @@
 }
 
 
-.header-update-profile{
+/* .header-update-profile{
   position: relative;
   display: flex;
   margin-top: -70px;
@@ -59,7 +88,7 @@
   width: 30px;
   height: 30px;
   
-}
+} */
 .header-button1{
   /* width: 50px; */
 }
@@ -111,4 +140,23 @@
   margin-left: 10px;
   padding: 5px;
   margin-right: 20px;
+  width: 60px;
 }
+/* manu color */
+.header-nav-bar-left .ant-menu-item,
+.header-nav-bar-right .ant-menu-item,
+.update-header-drawer .ant-menu-item {
+  color: white !important;
+}
+
+.header-nav-bar-left .ant-menu-item a,
+.header-nav-bar-right .ant-menu-item a,
+.update-header-drawer .ant-menu-item a {
+  color: white !important;
+}
+.header-nav-bar-left .ant-menu-item a:hover,
+.header-nav-bar-right .ant-menu-item a:hover,
+.update-header-drawer .ant-menu-item a:hover {
+  color: #669399 !important;
+}
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link, useNavigate } from "react-router-dom";
 import style from "../../css/LoginSignUp.css";
@@ -7,9 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginApi } from "../../Services/auth";
 import { Alert } from "antd";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode"; // Fix import
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../../src/AuthContext"; // Import context
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -18,8 +19,8 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext); // Use context
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -32,11 +33,11 @@ const SignIn = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
   const validateForm = () => {
     let formIsValid = true;
     const newErrors = {};
 
-    // Strict email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email.trim()) {
@@ -51,6 +52,7 @@ const SignIn = () => {
       newErrors.name = "Name is required";
       formIsValid = false;
     }
+
     if (!password) {
       newErrors.password = "Password is required";
       formIsValid = false;
@@ -65,45 +67,32 @@ const SignIn = () => {
     if (!validateForm()) {
       return;
     }
-    const formData = {
-      name: name,
-      email: email,
-      password: password,
-    };
+    const formData = { name, email, password };
 
     try {
       const response = await loginApi(formData);
-      const token = response.token;
-      const user = response.user;
+      const { token, user } = response;
 
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
-      console.log("tokensss", token);
-      console.log("user12233", user);
+      login(user); // Update context state
       toast.success("Login successful");
-      setIsLoggedIn(true);
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
+      setTimeout(() => navigate("/"), 3000);
     } catch (error) {
       console.error("Sign in failed:", error);
-      setErrors({
-        message: "Login failed. Please check your credentials and try again.",
-      });
+      setErrors({ message: "Login failed. Please check your credentials and try again." });
     }
   };
-
 
   const handleGoogleSuccess = (response) => {
     const token = response.credential;
     const userData = jwtDecode(token);
+
     localStorage.setItem("token", token);
-    localStorage.setItem("user", JSON.stringify(userData));
-    setSuccessMessage("Logged in with Google successfully");
-    setIsLoggedIn(true);
-    navigate("/");
+    login(userData); // Update context state
+    toast.success("Logged in with Google successfully");
+    setTimeout(() => navigate("/"), 3000);
   };
-  
+
   const handleGoogleFailure = (error) => {
     console.error("Google login failed", error);
     setErrors({ message: "Google login failed" });
@@ -114,7 +103,7 @@ const SignIn = () => {
   };
 
   return (
-    <body className="signUpIn-body">
+    <div className="signUpIn-body">
       <ToastContainer />
       <div className="signUpIn-container">
         <div className="signUpIn-fullRow">
@@ -124,8 +113,7 @@ const SignIn = () => {
           <div className="signUpIn-header">
             <div className="signUpIn-text">Login</div>
             <p className="signUpIn-Subtext">
-              Join Bridge Park Hotel and share your experience to help us
-              improve and provide the best services.
+              Join Bridge Park Hotel and share your experience to help us improve and provide the best services.
             </p>
             <div className="signUpIn-inputs">
               <div className="signUpIn-input">
@@ -186,7 +174,7 @@ const SignIn = () => {
                   Login
                 </div>
                 <GoogleLogin
-                 className="google-login-button"
+                  className="google-login-button"
                   onSuccess={handleGoogleSuccess}
                   onError={handleGoogleFailure}
                 />
@@ -204,7 +192,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 

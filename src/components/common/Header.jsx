@@ -9,6 +9,7 @@ import UserProfile from "./UserProfile";
 import img from "../../assets/images/DoubleEnsuite.webp";
 import SiteCard from "../Sitecard/siteCard";
 import HomeCard from "../Sitecard/homeCard";
+import hotellogo1 from "../../assets/images/HotelLogo1.png"
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -60,7 +61,7 @@ const Header = () => {
       {isMobile && <div className="home-sitecard"><HomeCard /></div>  }
       <div className="hero-container">
         <div className="headerLogoPosition">
-          <img src={logo} alt="Logo" className="headerLogo" />
+          <img src={hotellogo1} alt="Logo" className="headerLogo" />
         </div>
         
         <div className="header-slogan">RESERVE YOUR STAY NOW</div>

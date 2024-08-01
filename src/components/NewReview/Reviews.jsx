@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Modal, Progress } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
+import { reviewData } from './reviewData';
 import './Reviews.css';
 import ReviewApp from './Popup';
 
@@ -27,6 +28,10 @@ const ReviewPage = () => {
         { name: "Free WiFi", score: 6.6 },
     ];
     setCategoryData(staticCategoryData);
+
+    // Set the reviews data
+    setReviews(reviewData);
+    setFilteredReviews(reviewData);
   }, []);
 
   const handleCategoryClick = (topic) => {

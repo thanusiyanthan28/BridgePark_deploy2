@@ -1,0 +1,118 @@
+.imagesilder2-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 550px;
+    /* margin-top: 10px; */
+  }
+  
+  .imagesilder2-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 90%;
+    height: 500px;
+    position: relative; /* Add this line */
+    gap: 1px;
+  }
+  
+  .slide {
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+ 
+    
+  }
+  
+  .slide.hidden {
+    opacity: 0;
+    width: 0;
+  }
+  
+  .slide.large {
+    width: 50%;
+    opacity: 1;
+    transition: width 0.2s ease-in-out; /* Add this line */
+  }
+  
+  .slide.medium {
+    width: 30%;
+    opacity: 1;
+    transition: width 0.2s ease-in-out; /* Add this line */
+  }
+  
+  .slide.small {
+    width: 20%;
+    opacity: 1;
+    transition: width 0.2s ease-in-out; /* Add this line */
+  }
+  
+  .imagesilder2-container .slide img {
+    width: 100%;
+    height: 100%; /* Ensure all images maintain the same height */
+    object-fit: cover; /* Ensure images cover the slide area */
+    border-radius: 10px;
+
+  
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 0px; /* Update this line */
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: To make the arrow buttons more visible */
+    border-radius: 50%;
+    
+  }
+  
+  .left-arrow {
+    left: -10px;
+  }
+  
+  .right-arrow {
+    right: -20px;
+  }
+  @media screen and (max-width: 768px) {
+    .slide.medium,
+    .slide.small{
+        display: none;
+    }
+    .imagesilder2-container {
+        height: 400px;
+        margin-top: 10px;
+      }
+      .slide.large {
+        width: 100%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .imagesilder2-container img{
+        border-radius: 10px;
+        width: 100%;
+      }
+      .slide {
+        height: 350px;
+      }
+      .imagesilder2-carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        gap: 0;
+      }
+      .right-arrow {
+        right: 0px;
+      }
+      .left-arrow {
+        left: 0px;
+      }
+      
+  }
+  

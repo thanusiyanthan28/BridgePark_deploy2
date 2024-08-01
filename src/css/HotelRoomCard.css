@@ -11,6 +11,7 @@
   width: 350px;
   font-family:'Jomolhari';
   position: relative;
+  height: 450px;
 
 }
 .hotelRoomCardContainer1 {
@@ -84,7 +85,7 @@
 }
 
 .hotelRoomCardTitle {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
   font-family: "lato";
@@ -141,7 +142,7 @@
   font-weight: 500;
 }
 .hotelRoomCardTopBar {
-  background-color: rgba(110, 66, 28, 0.45);
+  background-color: rgba(0, 0, 0, 0.45);
   width: 100%;
   position: absolute;
   bottom: -8px; /* Position it at the bottom of the image */
@@ -150,7 +151,7 @@
   color: #ffffff;
   font-size: 15px;
   font-family: "lato", serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .hotelRoomViewMoreLink {

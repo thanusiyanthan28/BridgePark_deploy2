@@ -9,13 +9,16 @@ import img3 from '../../assets/images/image_gellery/image2.webp';
 import img4 from '../../assets/images/image_gellery/image3.webp';
 import img5 from '../../assets/images/image_gellery/image4.webp';
 import img6 from '../../assets/images/image_gellery/image5.webp';
+import img7 from '../../assets/images/image_gellery/widen-1680-noupsize.webp';
+import img8 from '../../assets/images/image_gellery/Wembley-Stadium-3.webp';
+
 
 const About = () => {
     const carouselImages = [
-        [img1, img5, img3],
-        [img2, img6, img4],
-        [img3, img1, img5],
-        [img4, img2, img6]
+        [img1, img5,],
+        [img2, img6,],
+        [img3, img7, ],
+        [img4, img8,]
     ];
     const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
     useEffect(() => {
@@ -34,7 +37,7 @@ const About = () => {
     return (
         < div className='abContainer-main'>
             <img className='about-bgimage' src={bgimage}/>
-     {! isMobile && <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 25% and get exclusive discounts when you Book!</button></a>}
+     {! isMobile && <a href='https://direct-book.com/properties/bridgeparkdirect?'target='_blank'> <button className="about-discount">Save up to 10% and get exclusive discounts when you Book!</button></a>}
         <div className='abContainer'>
            
             <div className='aboutContainer'>

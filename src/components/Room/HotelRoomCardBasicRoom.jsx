@@ -1,13 +1,21 @@
 import React from "react";
-import "../../css/HotelRoomCardBasicRoom.css";
+import "../../css/HotelRoomCard.css";
 import { Row, Col } from "antd";
 import PersonIcon from "../../assets/icons/person.png";
-import SingleBedIcon from "../../assets/icons/single_bed.png"; // Single Bed Icon
-import DoubleBedIcon from "../../assets/icons/bed_double.png"; 
+import SingleBedIcon from "../../assets/Facilities of BPH/single-bed.png"; // Single Bed Icon
+import DoubleBedIcon from "../../assets/Facilities of BPH/bed.png"; 
+import BunkBedIcon from "../../assets/Facilities of BPH/bunk-bed.png"
+import KingBedIcon from "../../assets/Facilities of BPH/kingbed.png"
+import LargeDouble from "../../assets/Facilities of BPH/largedouble.png"
+import SofaBed from "../../assets/Facilities of BPH/sofa.png"
 
 const bedIconMap = {
-  "Single Bed": SingleBedIcon,
-  "Double Bed": DoubleBedIcon
+  "SINGLE BED": SingleBedIcon,
+  "DOUBLE BED": DoubleBedIcon,
+  "BUNK BED": BunkBedIcon ,
+  "SUPERIOR KING BED":KingBedIcon,
+  "LARGE DOUBLE BED": LargeDouble,
+  "SOFA BED":SofaBed,
 };
 
 const HotelRoomCardBasicRoom = ({
@@ -33,7 +41,7 @@ const HotelRoomCardBasicRoom = ({
       const cleanDesc = desc.trim();
 
       // Match pattern "number x Bed Type"
-      const match = cleanDesc.match(/(\d+)x (Single Bed|Double Bed|Large Double Bed|Sofa Bed)/);
+      const match = cleanDesc.match(/(\d+) x (SINGLE BED|DOUBLE BED|BUNK BED|LARGE DOUBLE BED|SOFA BED|SUPERIOR KING BED)/);
       if (match) {
         const count = parseInt(match[1], 10);
         const bedType = match[2];

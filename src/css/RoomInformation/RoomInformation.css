@@ -145,12 +145,7 @@
   margin-left: -180px;
 }
 .site-card-room{
-  position: absolute;
-  top: 100px;
-  right: 50px;
-  z-index: 999; 
-      
-  
+  margin-top: -80px;
 }
 @media (max-width: 435px) {
   .RoomInformationCardImage {
@@ -246,8 +241,8 @@
   }
   .site-card-room{
     position: absolute;
-    top: 320px;
-    right: 60px;
+    top: 370px;
+    right: 30px;
     z-index: 999; 
   }
   
@@ -309,34 +304,30 @@
     z-index: 999; /* Ensure it's above other content */
   }
 }
-@media only screen and (min-width:770px) and (max-width:1024px){
+@media only screen and (min-width:770px) and (max-width:1025px){
   .RoomInformation-section-All{
     height: 40px;
   }
   .RoomInformation-section{
       margin-top: -20px;
   }
-  .site-card-room{
-    margin-top: -50px;
-    margin-right: -15px;
-  }
-  
+ 
   .RoomInformation-headings{
     font-size: 22px;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-subHeadings {
     text-transform: uppercase;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-main-container{
     display: flex;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-textP {
     font-size: 12px;
-    width: 70%;
-    margin-left: 50px;
+    width: 55%;
+    margin-left: 0px;
   }
   .facilitieshidebutton1{
     margin-left: 170px;
@@ -356,6 +347,12 @@
     font-size: 10px;
     margin-bottom: -250px;
   }
+  .site-card-room {
+    position: absolute;
+    top: 220px;
+    right: 50px;
+    z-index: 999; 
+  }
 }
 /* media 768px*/
 @media only screen and (min-width: 440px) and (max-width: 769px)
@@ -372,7 +369,7 @@
  }
   .site-card-room {
     position: absolute;
-    top: 220px;
+    top: 190px;
     right: 50px;
     z-index: 999; 
   }

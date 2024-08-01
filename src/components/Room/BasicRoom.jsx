@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SR from "../../assets/RoomTypes/SingleRoom/SingleRoom.webp";
+import SR from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg4.webp";
+import SR2 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg3.webp";
+import SR1 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg2.webp";
+import SR3 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg1.webp";
+import SR4 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg5.webp";
 import DB1 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom3.webp";
 import DB2 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom2.webp";
 import DB3 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom1.webp";
@@ -78,22 +82,22 @@ const BasicRoom = () => {
     {
       id: 28,
       image: SR,
-      title: "Single Room With Shared Bathroom",
+      title: "SINGLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon1,
       icon2:bedIcon1,
-      cardTitle: "1x Single Bed",
+      cardTitle: "1 x SINGLE BED",
       imageUrl: getUrlById(2),
       BroomPrice: "£48",
       NoOfGuests: "01",
-      images: [SR]
+      images: [SR,SR1,SR2,SR3,SR4]
     },
     {
       id: 29,
       image: DB1,
-      title: "Double Room With Shared Bathroom",
+      title: "DOUBLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
-      cardTitle: "1x Double Bed",
+      cardTitle: "1 x DOUBLE BED",
       imageUrl: getUrlById(5),
       BroomPrice: "£58",
       NoOfGuests: "02",
@@ -102,10 +106,10 @@ const BasicRoom = () => {
     {
       id: 34,
       image: TW5,
-      title: "Twin Room With Shared Bathroom",
+      title: "TWIN ROOM WITH SHARED BATHROOM",
       icon1:personIcon2,
       icon2:bedIcon2,
-      cardTitle: "2x Single Beds",
+      cardTitle: "2 x SINGLE BEDS",
       imageUrl: getUrlById(11),
       BroomPrice: "£60",
       NoOfGuests: "02",
@@ -114,10 +118,10 @@ const BasicRoom = () => {
     {
       id: 31,
       image: TB2,
-      title: "Triple Room With Shared Bathroom",
+      title: "TRIPLE ROOM WITH SHARED BATHROOM",
       icon1:personIcon3,
       icon2:bedIcon2,
-      cardTitle: "3x Single Beds",
+      cardTitle: "2 x SINGLE BEDS",
       imageUrl: getUrlById(9),
       BroomPrice: "£85",
       NoOfGuests: "03",
