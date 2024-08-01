@@ -15,7 +15,7 @@ dayjs.updateLocale('en', {
   ]
 });
 
-const SiteCard = ({ selectedRoomId,roomPrice }) => {
+const SiteCard = ({ selectedRoomId,roomPrice,room_link }) => {
   const [formData, setFormData] = useState({
     checkInDate: dayjs(),
     checkOutDate: dayjs(),
@@ -88,7 +88,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
       number_adults: formData.adults,
       number_children: formData.children,
     });
-    window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
+    window.location.href = `${room_link}`;
   };
 
 

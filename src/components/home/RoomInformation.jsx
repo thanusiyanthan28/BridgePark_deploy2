@@ -8,7 +8,7 @@ import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
 import CustomCarousel from "./new";
 
-const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomPrice }) => {
+const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomPrice,room_link }) => {
   const [showList, setShowList] = useState(false);
   const [showTab, setShowTab] = useState("info");
 
@@ -37,7 +37,7 @@ const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomP
         <div>
          
           <div className="site-card-room">
-           <SiteCard selectedRoomId={selectedRoomId} roomPrice={parseFloat(roomPrice.replace('£', ''))} />
+           <SiteCard selectedRoomId={selectedRoomId} roomPrice={parseFloat(roomPrice.replace('£', ''))} room_link={room_link}/>
           </div>
           
           <div>

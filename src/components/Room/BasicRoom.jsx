@@ -101,7 +101,8 @@ const BasicRoom = () => {
       imageUrl: getUrlById(5),
       BroomPrice: "£58",
       NoOfGuests: "02",
-      images: [DB1,DB2,DB3]
+      images: [DB1,DB2,DB3],
+      room_link:"https://direct-book.com/properties/bridgeparkdirect?locale=31919https://direct-book.com/properties/bridgeparkdirect?locale=en&items[0][adults]=1&items[0][children]=0&items[0][infants]=0&items[0][rateId]=31919&checkInDate=2024-05-20&checkOutDate=2024-05-21&currency=GBP&trackPage=no"
     },
     {
       id: 34,
@@ -180,6 +181,7 @@ const BasicRoom = () => {
                   id: Basicroom.id,
                   roomPrice: Basicroom.BroomPrice,
                   images: Basicroom.images,
+                  room_link:Basicroom.room_link
                 }, Basicroom.imageUrl,Basicroom.id)}
                 link={Basicroom.imageUrl}
               />
