@@ -15,7 +15,7 @@ dayjs.updateLocale('en', {
   ]
 });
 
-const SiteCard = ({ selectedRoomId,roomPrice,room_link }) => {
+const SiteCard = ({ selectedRoomId,roomPrice }) => {
   const [formData, setFormData] = useState({
     checkInDate: dayjs(),
     checkOutDate: dayjs(),
@@ -88,7 +88,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,room_link }) => {
       number_adults: formData.adults,
       number_children: formData.children,
     });
-    window.location.href = `${room_link}`;
+    window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
   };
 
 
@@ -153,7 +153,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,room_link }) => {
                     </div>
                   </td>
                 </tr>
-                {/* <tr className='tr-site'>
+                <tr className='tr-site'>
                   <td className='td-site'>
                     <label className='check-head-site'>ADULTS</label>
                     <p className='site-p'>No of Persons</p>
@@ -172,7 +172,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,room_link }) => {
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', 1)}>+</button>
                     </div>
                   </td>
-                </tr> */}
+                </tr>
               </tbody>
             </table>
             <button className="button-site" type="submit" onClick={handleSubmit}>Modify</button>
