@@ -78,45 +78,49 @@ const BasicRoom = () => {
     {
       id: 28,
       image: SR,
-      title: "SINGLE ROOM WITH SHARED BATHROOM",
+      title: "Single Room With Shared Bathroom",
       icon1:personIcon1,
       icon2:bedIcon1,
       cardTitle: "1x Single Bed",
       imageUrl: getUrlById(2),
       BroomPrice: "£48",
+      NoOfGuests: "01",
       images: [SR]
     },
     {
       id: 29,
       image: DB1,
-      title: "DOUBLE ROOM WITH SHARED BATHROOM",
+      title: "Double Room With Shared Bathroom",
       icon1:personIcon2,
       icon2:bedIcon2,
       cardTitle: "1x Double Bed",
       imageUrl: getUrlById(5),
       BroomPrice: "£58",
+      NoOfGuests: "02",
       images: [DB1,DB2,DB3]
     },
     {
       id: 34,
       image: TW5,
-      title: "TWIN ROOM WITH SHARED BATHROOM",
+      title: "Twin Room With Shared Bathroom",
       icon1:personIcon2,
       icon2:bedIcon2,
-      cardTitle: "2x Single Bed",
+      cardTitle: "2x Single Beds",
       imageUrl: getUrlById(11),
       BroomPrice: "£60",
+      NoOfGuests: "02",
       images: [TW1,TW2,TW3,TW4,TW5,TW6,TW7,TW8]
     },
     {
       id: 31,
       image: TB2,
-      title: "TRIPLE ROOM WITH SHARED BATHROOM",
+      title: "Triple Room With Shared Bathroom",
       icon1:personIcon3,
       icon2:bedIcon2,
-      cardTitle: "3x Single Bed",
+      cardTitle: "3x Single Beds",
       imageUrl: getUrlById(9),
       BroomPrice: "£85",
+      NoOfGuests: "03",
       images: [TB1,TB2]
     },
   ];
@@ -161,6 +165,7 @@ const BasicRoom = () => {
                 description="Spacious room with a breathtaking view"
                 guests={2}
                 status="Check"
+                NoOfGuests={Basicroom.NoOfGuests} 
                 price={Basicroom.BroomPrice}
                 buttonText="Book Now"
                 cardtitle={Basicroom.cardTitle}

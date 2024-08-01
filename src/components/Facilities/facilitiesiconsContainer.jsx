@@ -28,30 +28,18 @@ const FacilitiesIconsContainer = () => {
 
   return (
     <div className="facilitiescontainer1">
-      <div className="facilitiesrow1">
-        {cardsData.slice(0, 5).map((card) => (
-          <div key={card.id} className="facilitiescard1">
+      {cardsData.map((card) => (
+        <div key={card.id} className="facilitiescardwrapper1">
+          <div className="facilitiescard1">
             <div className='facilitiesiconcontainer1'>
-              <img src={card.icon} alt={card.title} style={{ width: '54px', height: '54px', objectFit: 'cover' }}/>
-            </div>
-            <div className="facilitiescardcontent1">
-              <h2>{card.title}</h2>
+              <img src={card.icon} alt={card.title} className="facility-icon"/>
             </div>
           </div>
-        ))}
-      </div>
-      <div className="facilitiesrow1">
-        {cardsData.slice(5, 10).map((card) => (
-          <div key={card.id} className="facilitiescard1">
-            <div className='facilitiesiconcontainer1'>
-              <img src={card.icon} alt={card.title} style={{ width: '54px', height: '54px', objectFit: 'cover' }}/>
-            </div>
-            <div className="facilitiescardcontent1">
-              <h2>{card.title}</h2>
-            </div>
+          <div className="facilitiescardcontent1">
+            <h2 className='facility-title'>{card.title}</h2>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

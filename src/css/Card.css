@@ -159,7 +159,7 @@
     font-size: 15px;
   }
   .btnPrimary-check {
-    padding: 0 20px 0 10px ;
+    padding: 0 20px 0 20px ;
     margin-left: 60%;
     height: 50px;
     margin-top: auto;
@@ -191,11 +191,10 @@
   }
   .btnPrimary-check {
     background-color: #53949A;
-    border-radius: 0 !important;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 0 40px 0 40px ;
+    padding: 0 30px 0 30px ;
     margin-left: 50%;
     height: 60px;
     font-size: 12px;
@@ -228,14 +227,13 @@
   }
   .btnPrimary-check {
     background-color: #53949A;
-    border-radius: 0 !important;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 0 80px 0 80px ;
-    margin-left: 70%;
-    height: 60px;
-    font-size: 12px;
+    padding: 0 30px 0 30px ;
+    margin-left: 60%;
+    height: 90px !important;
+    font-size: 20px;
   }
   
 .card {
@@ -263,6 +261,42 @@
   .head-mai {
     height: 82vh;
   }
+}
+@media (width: 2560px) {
+  .titleH1, .titleH3 {
+    font-size: 14px;
+  }
+  .btnPrimary-check {
+    background-color: #53949A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 30px 0 30px ;
+    margin-left: 60%;
+    height: 90px !important;
+    font-size: 20px;
+  }
+  
+.card {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 70% !important;
+  background-color: white;
+  color: black;
+  height: 200px !important;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.card-body {
+  padding: 25px;
+  text-align: left;
+  margin-top: 25px;
+}
+
 }
 @media (width: 3840px)  {
   .titleH1, .titleH3 {

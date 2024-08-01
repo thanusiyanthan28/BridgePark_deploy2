@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/HotelRoomCardBasicRoom.css";
+import "./AllCards.css";
 import { Row, Col } from "antd";
 import PersonIcon from "../../assets/icons/person.png";
 import SingleBedIcon from "../../assets/icons/single_bed.png"; // Single Bed Icon
@@ -10,15 +10,20 @@ const bedIconMap = {
   "Double Bed": DoubleBedIcon
 };
 
-const HotelRoomCardBasicRoom = ({
+const HotelAllCards = ({
   imageSource,
   title,
+  description,
   NoOfGuests,
+  status,
   price,
+  buttonText,
   cardtitle,
   onViewMoreClick,
   link,
-  
+  icon1,
+  icon2
+
 }) => {
   const numberOfGuests = parseInt(NoOfGuests, 10);
   console.log("NoOfGuests prop:", NoOfGuests);
@@ -100,4 +105,4 @@ const HotelRoomCardBasicRoom = ({
   );
 };
 
-export default HotelRoomCardBasicRoom;
+export default HotelAllCards;
