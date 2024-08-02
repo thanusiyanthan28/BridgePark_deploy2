@@ -109,10 +109,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Non smoking rooms</li>
           <li>Room service</li>
         </ul>
-        <h2 className='fscolumnh2'><FaGlobe style={{marginBottom: "-4px"}}/> Languages spoken</h2>
-        <ul>
-          <li>English</li>
-        </ul>
+        
       </div>
     </div>
     </div>
