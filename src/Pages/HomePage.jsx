@@ -7,7 +7,7 @@ import RoomInformation from "../components/home/RoomInformation";
 
 //import FAQ from "../components/FAQ/Faq";
 import FAQComponent from "../components/FAQ/FaqComponent";
-import NewMeeting from "./MeetingAndEvents/NewMeeting";
+import NewMeeting from "./MeetingAndEvents/Newmeeting";
 
 
 export default function HomePage() {
