@@ -5,7 +5,7 @@ import ColumnList from '../components/Facilities/facilitiesList';
 import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import nonSmokingGif from '../assets/Facilities of BPH/non_smoking_rooms.png';
-import roomServiceGif from '../assets/Facilities of BPH/room_service.png';
+import roomServiceGif from '../assets/Facilities of BPH/room.png';
 import wifiGif from '../assets/Facilities of BPH/wifi.png';
 import parkingGif from '../assets/Facilities of BPH/parking.png';
 import familyRoomsGif from '../assets/Facilities of BPH/family.png';
@@ -21,7 +21,7 @@ const Facilities = () => {
 
   const cardsData = [
     { id: 1, title: 'Non-smoking rooms', icon: nonSmokingGif },
-    // { id: 2, title: 'Room service', icon: roomServiceGif },
+    { id: 2, title: 'Cloak Room', icon: roomServiceGif },
     { id: 3, title: 'Free WiFi', icon: wifiGif },
     { id: 4, title: 'Free parking', icon: parkingGif },
     { id: 5, title: 'Family rooms', icon: familyRoomsGif },
@@ -46,7 +46,7 @@ const Facilities = () => {
       <div>
         <div>
           {/* <h1 className='facilitieshead'>FACILITIES</h1> */}
-          <div className='location-title'>FACILITIES</div>
+          <div className='location-title'>AMENITIES</div>
         </div>
 
         <div>

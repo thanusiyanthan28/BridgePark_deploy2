@@ -68,7 +68,7 @@
     width: 100%;
     display: block; /* Ensures the link takes up full width */
   }
-  .hotelRoomCardContainer:hover{
+  .hotelRoomCardContainer-R1:hover{
     /* transform: scale(1.01); */
     box-shadow: 0 4px 1rem -4px #33cccc;
     transform: translateY(6px);
@@ -146,7 +146,7 @@
     font-size: 15px; /* Adjust the text size as needed */
   }
   .hotelRoomCardTopBar-R1 {
-    background-color:#000000;
+    background-color:rgba(0, 0, 0, 0.45);
     width: 100%;
     position: absolute;
     bottom: -12px; /* Position it at the bottom of the image */

@@ -101,7 +101,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,bookLink }) => {
     if (personCount > 2) {
       price *= 2; // Double the price if more than two persons
     }
-    const tax = price * 0.1; // Assuming a tax rate of 10%
+    const tax = price * 0.15; // Assuming a tax rate of 10%
     setTax(tax);
     setTotalPrice(price + tax);
   };
@@ -156,7 +156,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,bookLink }) => {
                     </div>
                   </td>
                 </tr>
-                <tr className='tr-site'>
+                {/* <tr className='tr-site'>
                   <td className='td-site'>
                     <label className='check-head-site'>ADULTS</label>
                     <p className='site-p'>No of Persons</p>
@@ -175,7 +175,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,bookLink }) => {
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', 1)}>+</button>
                     </div>
                   </td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
             <button className="button-site" type="submit" onClick={handleSubmit}>Modify</button>
@@ -184,7 +184,7 @@ const SiteCard = ({ selectedRoomId,roomPrice,bookLink }) => {
         </div>
         <div>
           <p>1 x  Room Price <span className='price-site'>£{roomPrice ? roomPrice.toFixed(2): '0.00'}</span></p>
-          <p>Tax <span className='price-site'>£{tax.toFixed(2)}</span></p>
+          <p>VAT 15% <span className='price-site'>£{tax.toFixed(2)}</span></p>
           <hr />
           <p>Grand total <span className='price-site'>£{totalPrice.toFixed(2)}</span></p>
         </div>

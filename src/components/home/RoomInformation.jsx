@@ -75,7 +75,9 @@ const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomP
             </div>
             <div>
               <h2 className="RoomInformation-headings">{showList ? "Facilities" : "Amenities"}</h2>
+              <div className="fs-cont">
               <FacilitiesIconsContainer />
+              </div>
               {!showList && (
                 <button className='facilitiesshowbutton1' onClick={handleToggleList}>
                   <FontAwesomeIcon icon={faCircleChevronDown} size='3x' />

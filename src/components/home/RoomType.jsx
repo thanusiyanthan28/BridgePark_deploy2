@@ -53,7 +53,7 @@ const RoomType = () => {
       </div>
       <div className="RoomType-subHead">
         {/* <h1 className="RoomType-subHading">ROOM TYPES</h1> */}
-        <div className='location-title'>ROOM TYPES</div>
+        {/* <div className='location-title'>ROOM TYPES</div> */}
       </div>
       <div className="RoomType-typecontainor">
         <HotelRoomTypeCard

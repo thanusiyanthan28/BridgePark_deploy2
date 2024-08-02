@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Row, Col, Modal } from "antd";
 import "./AllRooms.css";
 import RoomInformation from "../home/RoomInformation";
-import img1 from "../../assets/RoomTypes/SingleRoom/SingleRoom.webp";
+import img1 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg4.webp";
+import img2 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg2.webp";
+import img3 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg3.webp";
+import img4 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg1.webp";
 import DB3 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom3.webp"
 import DB1 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom1.webp";
 import DB2 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom2.webp";
@@ -47,7 +50,7 @@ import CustomCarousel from "../home/new";
 import HotelAllCards from "./AllCards";
 
 
-const RoomAll = ({ selectedCardId }) => {
+const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [selectedRoomId, setSelectedRoomId] = useState(0);
@@ -86,13 +89,13 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 28,
       image: img1,
-      title: "Single Room With Shared Bathroom",
-      cardTitle: "1x Single Bed",
+      title: "SINGLE ROOM WITH SHARED BATHROOM",
+      cardTitle: "1 x SINGLE BED",
       imageUrl: getUrlById(2),
       roomPrice: "£48",
       NoOfGuests: "01",
       NoOfRooms : "01",
-      images: [img1],
+      images: [img1,img2,img3,img4],
       bedIcons: [SinBed],
       cardId:"01",
     
@@ -100,8 +103,8 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 29,
       image: DB3,
-      title: "Double Room With Private Bathroom",
-      cardTitle: "1x Double Bed",
+      title: "DOUBLE ROOM WITH PRIVATE BATHROOM",
+      cardTitle: "1 x DOUBLE BED",
       imageUrl: getUrlById(5),
       roomPrice: "£58",
       NoOfGuests: "02",
@@ -113,10 +116,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 29,
         image: DB1,
-        title: "Double Room With Shared Bathroom",
-        cardTitle: "1x Double Bed",
+        title: "DOUBLE ROOM WITH SHARED BATHROOM",
+        cardTitle: "1 x DOUBLE BED",
         imageUrl: getUrlById(5),
-        BroomPrice: "£58",
+        roomPrice: "£58",
         NoOfGuests: "02",
         images: [DB1,DB2,DB3],
         cardId:"02",
@@ -124,8 +127,8 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 34,
       image: TS1,
-      title: "Twin Room With Shared Bathroom",
-      cardTitle: "2x Single Beds",
+      title: "TWIN ROOM WITH SHARED BATHROOM",
+      cardTitle: "2 x SINGLE BEDS",
       imageUrl: getUrlById(10),
       roomPrice: "£60",
       NoOfGuests: "02",
@@ -137,10 +140,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 11,
         image: TWE1,
-        title: "Twin Room With Private Bathroom",
-        cardTitle: "2x Single Beds",
+        title: "TWIN ROOM WITH PRIVATE BATHROOM",
+        cardTitle: "2 x SINGLE BEDS",
         imageUrl: getUrlById(11),
-        EroomPrice: "£68",
+        roomPrice: "£68",
         NoOfGuests: "02",
         images:[TWE1,TWE2,TWE3],
         cardId:"03",
@@ -148,8 +151,8 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 11,
       image: TE1,
-      title: "Triple Room With Private Bathroom",
-      cardTitle: "3x Single Beds",
+      title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+      cardTitle: "3 x SINGLE BEDS",
       imageUrl: getUrlById(3),
       roomPrice: "£68",
       NoOfGuests: "02",
@@ -161,10 +164,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 31,
         image: TB2,
-        title: "Triple Room With Shared Bathroom",
-        cardTitle: "3x Single Beds",
+        title: "TRIPLE ROOM WITH SHARED BATHROOM",
+        cardTitle: "3 x SINGLE BEDS",
         imageUrl: getUrlById(9),
-        BroomPrice: "£85",
+        roomPrice: "£85",
         NoOfGuests: "03",
         images: [TB1,TB2],
         cardId:"04",
@@ -172,10 +175,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 30,
         image: TE3,
-        title: "Triple Room With Private Bathroom",
-        cardTitle: "1x Single Bed + 1x Double Bed",
+        title: "TRIPLE ROOM WITH PRIVATE BATHROOM",
+        cardTitle: "1 x SINGLE BED + 1 x DOUBLE BED",
         imageUrl: getUrlById(10),
-        EroomPrice: "£97",
+        roomPrice: "£97",
         NoOfGuests: "03",
         images: [TE1,TE2,TE3,TE4,TE5],
         cardId:"04",
@@ -183,8 +186,8 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 10,
       image: TR1,
-      title: "Quadruple Room With Private Bathroom",
-      cardTitle: "2x Single Beds + 1x Double Bed",
+      title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
+      cardTitle: "2 x SINGLE BEDS + 1 x DOUBLE BED",
       imageUrl: getUrlById(11),
       roomPrice: "£97",
       NoOfGuests: "03",
@@ -196,10 +199,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 33,
         image: img6,
-        title: "Quadruple Room With Private Bathroom",
-        cardTitle: "1x Double Bed + 1x Bunk Bed",
+        title: "QUADRUPLE ROOM WITH PRIVATE BATHROOM",
+        cardTitle: "1 x DOUBLE BED + 1 x BUNK BED",
         imageUrl: getUrlById(10),
-        EroomPrice: "£110",
+        roomPrice: "£110",
         NoOfGuests: "04",
         images:[img6],
         cardId:"05",
@@ -207,10 +210,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
       id: 5,
       image: img6,
-      title: "Executive King Room With Private Bathroom",
+      title: "EXECUTIVE KING ROOM WITH PRIVATE BATHROOM",
       icon1: icon11,
       icon2: icon22,
-      cardTitle: "1x Sofa Bed + 1x Large Double Bed",
+      cardTitle: "1 x SOFA BED + 1 x LARGE DOUBLE BED",
       imageUrl: getUrlById(9),
       roomPrice: "£120",
       NoOfGuests: "04",
@@ -222,10 +225,10 @@ const RoomAll = ({ selectedCardId }) => {
     {
         id: 4,
         image: TW2,
-        title: "Chambre of Twilight Room With Private Bathroom",
-        cardTitle: "1x Superior King Room",
+        title: "CHAMBRE OF TWILIGHT ROOM WITH PRIVATE BATHROOM",
+        cardTitle: "1 x SUPERIOR KING BED",
         imageUrl: getUrlById(10),
-        EroomPrice: "£125", 
+        roomPrice: "£125", 
         NoOfGuests: "02",
         images:[TW1,TW2,TW3,TW4,TW5,TW6],
         cardId:"06",
@@ -236,29 +239,19 @@ const RoomAll = ({ selectedCardId }) => {
   );
 
   return (
-    <div className="rooms-main-container">
-      <div className="aboutContainer">
-        <div className="room-text-wraper">
-          {/* <h1 className="aboutH1">OUR ROOMS</h1> */}
-          <div className='location-title'>OUR ROOMS</div>
-          <div className="rooms-sub-content">
-            <p>
-              Originally a Grade II-listed building, Bridge Park Hotel is the ideal place to stay, whether you are visiting 
-              Wembley or simply looking for accommodation to explore the sites of London. Just a short distance from 
-              Wembley Stadium.
-            </p>
-          </div>
+    <div>
+      <div>
+        <div>
+          <div className='location-title-ALL'>{selectedCardTitle}</div>
         </div>
       </div>
-      <div className="hotelRoomMainDiv">
-        <Row gutter={[16, 16]} className="hotelRoom-row">
+      <div className="hotelRoomMainDiv-ALL">
+        <Row gutter={[16, 16]} className="hotelRoom-row-ALL">
         {filteredRoomData.map((room) => (
-            <Col key={room.id} className="hotelRoom-col">
+            <Col key={room.id} className="hotelRoom-col-ALL">
               <HotelAllCards
                 imageSource={room.image}
                 title={room.title}
-                description="Spacious room with a breathtaking view"
-                // guests={2}
                 status="Check"
                 price={room.roomPrice}
                 buttonText="Book Now"

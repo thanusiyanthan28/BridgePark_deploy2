@@ -196,7 +196,7 @@ const BasicRoom = () => {
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
-        width="80%"
+        width="70%"
       >
         <RoomInformation 
         room={selectedRoom} 

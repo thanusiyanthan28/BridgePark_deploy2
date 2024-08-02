@@ -15,7 +15,7 @@ import breakfastGif from '../../assets/Facilities of BPH/breakfast.png';
 const FacilitiesIconsContainer = () => {
   const cardsData = [
     { id: 1, title: 'Non-smoking rooms', icon: nonSmokingGif },
-    { id: 2, title: 'Room service', icon: roomServiceGif },
+    // { id: 2, title: 'Room service', icon: roomServiceGif },
     { id: 3, title: 'Free WiFi', icon: wifiGif },
     { id: 4, title: 'Free parking', icon: parkingGif },
     { id: 5, title: 'Family rooms', icon: familyRoomsGif },
@@ -27,17 +27,11 @@ const FacilitiesIconsContainer = () => {
   ];
 
   return (
-    <div className="facilitiescontainer1">
+    <div className="facilities-container">
       {cardsData.map((card) => (
-        <div key={card.id} className="facilitiescardwrapper1">
-          <div className="facilitiescard1">
-            <div className='facilitiesiconcontainer1'>
-              <img src={card.icon} alt={card.title} className="facility-icon"/>
-            </div>
-          </div>
-          <div className="facilitiescardcontent1">
-            <h2 className='facility-title'>{card.title}</h2>
-          </div>
+        <div key={card.id} className="facility-card">
+          <img src={card.icon} alt={card.title} className="facility-icon" />
+          <span className="facility-title">{card.title}</span>
         </div>
       ))}
     </div>

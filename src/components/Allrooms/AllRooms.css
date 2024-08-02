@@ -1,10 +1,11 @@
-.hotelRoomMainDiv {
+.hotelRoomMainDiv-ALL {
     width: 100%;
     align-items: center;
+    margin-bottom: 60px;
   
   
   }
-  .rooms-sub-content{
+  .rooms-sub-content-ALL{
     color: rgba(51, 49, 49, 0.767);
     opacity: 1;
     font-weight: 400;
@@ -17,48 +18,57 @@
     text-align: center;
     
   }
-  .hotelRoom-row {
+  .hotelRoom-row-ALL {
    width: 90%;
    margin-left: auto !important;
    margin-right: auto !important;
    justify-content: center;
    align-items: center;
   }
-  .hotelRoom-col {
+  .hotelRoom-col-ALL {
     display: flex;
     flex-direction: row;
     gap: auto;
   
   }
+  .location-title-ALL{
+    text-align: center;
+    font-size: 30px;
+    color: #639497;
+    font-weight: 600;
+    padding: 5px;
+    margin-bottom: 20px;
+   
+  }
   
   @media (max-width: 768px) {
-        .hotelRoomMainDiv {
-          margin-left: auto;
-          margin-right: auto;
-          width: 90%;
+        .hotelRoomMainDiv-ALL {
+          margin-left: -25px;
+         
+          width: 115%;
         }
-        .rooms-sub-content{
+        .rooms-sub-content-ALL{
           text-align: justify;
           width: 95%;
           
         }
     
-    .hotelRoomMainRow {
+    .hotelRoomMainRow-ALL {
       display: block; /* Change to block to display columns one after the other */
       width: 80%;
       /* margin-left: 20px; */
       
     }
-    .rooms-main-contaner {
+    .rooms-main-contaner-ALL {
       width: 100%;
     }
   
-    .hotelRoomMainRow > .ant-col {
+    .hotelRoomMainRow-ALL > .ant-col {
       width: 100%; /* Each column takes up full width on mobile */
       margin-bottom: 20px; /* Add spacing between columns */
     }
   }
-  .room-text-wraper{
+  .room-text-wraper-ALL{
     width: 95%;
    margin-left: auto;
    margin-right: auto;

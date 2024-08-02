@@ -35,6 +35,7 @@ import NewHeader from "./components/common/NewHeader";
 import TopBar from "./components/common/TopBar";
 import { AuthProvider } from "./AuthContext";
 import "./App.css"
+import RoomAll from "./components/Allrooms/AllRooms";
 
 const clientId =
   "1009464659569-k6eof9rvm8ugs5mcnb86h4j5iud5elnr.apps.googleusercontent.com";

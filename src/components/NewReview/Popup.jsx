@@ -9,7 +9,7 @@ import {
   MehOutlined,
   SmileOutlined,
 } from "@ant-design/icons";
-//import { getUniqueRoomDetails } from "./roomData";
+import { reviewData } from "./reviewData";
 
 const { Option } = Select;
 
@@ -100,44 +100,9 @@ const ReviewApp = () => {
   };
 
   useEffect(() => {
-    
-    const staticReviews = [
-      {
-        reviewId: 1,
-        name: "John Doe",
-        country: "USA",
-        roomId: 101,
-        nights: 3,
-        travelerType: "Solo",
-        reviewDate: "2024-07-20",
-        reviewerChoice: true,
-        title: "Great stay!",
-        comment: "I had a fantastic time. The staff were friendly and helpful.",
-        overallStar: 4,
-        helpful: 5,
-        notHelpful: 2,
-      },
-      {
-        reviewId: 2,
-        name: "Jane Smith",
-        country: "UK",
-        roomId: 102,
-        nights: 2,
-        travelerType: "Couple",
-        reviewDate: "2024-07-18",
-        reviewerChoice: false,
-        title: "Good experience",
-        comment: "The room was clean and comfortable. Great location.",
-        overallStar: 3,
-        helpful: 3,
-        notHelpful: 1,
-      },
-      
-    ];
-
-    setRev(staticReviews);
-    setReviews(staticReviews);
-    setFilteredReviews(staticReviews);
+    setRev(reviewData);
+    setReviews(reviewData);
+    setFilteredReviews(reviewData);
     setLoad(false);
     setHelpStatusChange(false);
   }, [load, helpStatusChange]);
@@ -221,6 +186,14 @@ const ReviewApp = () => {
   const getProgressBarColor = (score) => {
     return score > 5 ? "#F6BE00" : "#618e95";
   };
+  const [selectedReview, setSelectedReview] = useState(null);
+
+const handleReviewClick = (review) => {
+  setSelectedReview(review);
+  setVisible(true);
+};
+
+
 
   return (
     <div className="container-pop">
@@ -296,17 +269,20 @@ const ReviewApp = () => {
                   title={
                     <div className="review-header-pop">
                       <span className="reviewer-name-pop">{review.name}</span>
+                      <div>
                       <span className="reviewer-country-pop">
                         {review.country}
                       </span>
+                      </div>
+                      
                     </div>
                   }
                   description={
                     <>
                       <div className="review-details-pop">
-                        <p className="rev-room-type-pop">
+                        {/* <p className="rev-room-type-pop">
                           {roomDetails[review.roomId]}
-                        </p>
+                        </p> */}
                         <p>{review.nights}</p>
                         <p>{review.travelerType}</p>
                       </div>

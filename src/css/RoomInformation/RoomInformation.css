@@ -115,9 +115,13 @@
   text-align: justify; /* Optional: Justify the text for a cleaner look */
   padding: 0 20px; /* Optional: Add padding for better spacing */
 }
+
+.fs-cont{
+  display: flex;
+  margin-left: 10px;
+}
 .facilitieshidebutton1{
-  display: inline-block;
-  margin-left: 520px;
+  display: flex;
   border: none;
   padding: 20px;
   background-color: #fffff9;
@@ -130,7 +134,7 @@
 }
 .facilitiesshowbutton1{
   display: inline-block;
-  margin-left: 550px;
+  margin-left: 580px;
   border: none;
   padding: 20px;
   background-color: #fffff9;
@@ -145,12 +149,7 @@
   margin-left: -180px;
 }
 .site-card-room{
-  position: absolute;
-  top: 100px;
-  right: 50px;
-  z-index: 999; 
-      
-  
+  margin-top: -80px;
 }
 @media (max-width: 435px) {
   .RoomInformationCardImage {
@@ -179,7 +178,7 @@
     flex: 1;
     padding: 15px;
     font-size: 15px;
-    margin-top: 450px;
+    margin-top: 300px;
     margin-left: -5px;
     
     
@@ -224,11 +223,11 @@
     margin-left: 10px;
   }
   .facilitieshidebutton1{
-    margin-left: 45px;
+    margin-left: 85px;
     margin-bottom: 10px;
   }
   .facilitiesshowbutton1{
-    margin-left: 115px;
+    margin-left: 85px;
   }
   .columnlist {
     display: grid;
@@ -236,7 +235,7 @@
     grid-template-rows: repeat(1, 1600px);
     grid-gap: 0px;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 30px;
     font-size: 10px;
     margin-bottom: 20px;
@@ -246,8 +245,8 @@
   }
   .site-card-room{
     position: absolute;
-    top: 320px;
-    right: 60px;
+    top: 370px;
+    right: 15px;
     z-index: 999; 
   }
   
@@ -285,11 +284,11 @@
     }
   
   .facilitieshidebutton1{
-    margin-left: 540px;
+    margin-left: 440px;
     margin-bottom: 10px;
   }
   .facilitiesshowbutton1{
-    margin-left: 530px;
+    margin-left: 440px;
   }
   .columnlist {
     display: grid;
@@ -309,52 +308,54 @@
     z-index: 999; /* Ensure it's above other content */
   }
 }
-@media only screen and (min-width:770px) and (max-width:1024px){
+@media only screen and (min-width:770px) and (max-width:1025px){
   .RoomInformation-section-All{
     height: 40px;
   }
   .RoomInformation-section{
       margin-top: -20px;
   }
-  .site-card-room{
-    margin-top: -50px;
-    margin-right: -15px;
-  }
-  
+ 
   .RoomInformation-headings{
     font-size: 22px;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-subHeadings {
     text-transform: uppercase;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-main-container{
     display: flex;
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .RoomInformation-textP {
     font-size: 12px;
-    width: 70%;
-    margin-left: 50px;
+    width: 55%;
+    margin-left: 0px;
   }
   .facilitieshidebutton1{
-    margin-left: 170px;
+    margin-left: 295px;
     margin-bottom: -40px;
   }
   .facilitiesshowbutton1{
-    margin-left: 370px;
+    margin-left: 295px;
   }
   .columnlist {
     display: grid;
     grid-template-columns: repeat(1, 5fr);
     grid-template-rows: repeat(1, 1200px);
-    grid-gap: 0px;
+    grid-gap: 10px;
     align-items: center;
-    margin-top: -180px;
-    margin-left: 0px;
+    margin-top: -160px;
+    margin-left: -150px;
     font-size: 10px;
     margin-bottom: -250px;
+  }
+  .site-card-room {
+    position: absolute;
+    top: 170px;
+    right: 40px;
+    z-index: 999; 
   }
 }
 /* media 768px*/
@@ -372,7 +373,7 @@
  }
   .site-card-room {
     position: absolute;
-    top: 220px;
+    top: 190px;
     right: 50px;
     z-index: 999; 
   }
@@ -444,11 +445,11 @@
   
  
   .facilitieshidebutton1{
-    margin-left: 230px;
+    margin-left: 415px;
     margin-bottom: 10px;
   }
   .facilitiesshowbutton1{
-    margin-left: 490px;
+    margin-left: 415px;
   }
   .columnlist {
     display: grid;
@@ -461,8 +462,11 @@
     font-size: 10px;
     margin-bottom: -350px;
   }
-  .site-card-room{
-    margin-top: -70px;
+  .site-card-room {
+    position: absolute;
+    top: 220px;
+    right: 40px;
+    z-index: 999; /* Ensure it's above other content */
   }
   .RoomInformation-textP {
     font-size: 12px;
@@ -519,11 +523,11 @@
     margin-left: 10px;
   }
   .facilitieshidebutton1{
-    margin-left: 320px;
+    margin-left: 605px;
     margin-bottom: 10px;
   }
   .facilitiesshowbutton1{
-    margin-left: 450px;
+    margin-left: 605px;
   }
   .columnlist {
     display: grid;

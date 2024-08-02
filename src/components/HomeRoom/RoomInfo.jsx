@@ -4,7 +4,7 @@ import HotelAllCards from "../Allrooms/AllCards";
 import { Row, Col, Modal } from "antd";
 import "./RoomInfo.css";
 //import RoomInformation from "./RoomInformation";
-import img1 from "../../assets/RoomTypes/SingleRoom/SingleRoom.webp";
+import img1 from "../../assets/Rooms/SingleRoomWithSharedBathroom/SingleRoomWithSharedBathroomImg4.webp";
 import DB3 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom3.webp"
 import DB1 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom1.webp";
 import DB2 from "../../assets/RoomTypes/DoubleBasic/DoubleRoom2.webp";
@@ -37,10 +37,12 @@ import RoomAll from "../Allrooms/AllRooms";
 const Room = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedCardId, setSelectedCardId] = useState(null);
+  const [selectedCardTitle, setSelectedCardTitle] = useState(null);
  
 
-  const handleViewMoreClick = (cardId) => {
+  const handleViewMoreClick = (cardId, cardTitle) => {
     setSelectedCardId(cardId);
+    setSelectedCardTitle(cardTitle);
     setIsModalVisible(true);
   };
 
@@ -125,9 +127,9 @@ const Room = () => {
   ];
 
   return (
-    <div className="rooms-main-container">
-      <div className="aboutContainer">
-        <div className="room-text-wraper">
+    <div className="rooms-main-container-R2">
+      <div className="aboutContainer-R2">
+        <div className="room-text-wraper-R2">
           {/* <h1 className="aboutH1">OUR ROOMS</h1> */}
           <div className='location-title'>Our Rooms</div>
           <div className="rooms-sub-content">
@@ -139,16 +141,16 @@ const Room = () => {
           </div>
         </div>
       </div>
-      <div className="hotelRoomMainDiv">
-        <Row gutter={[16, 16]} className="hotelRoom-row">
+      <div className="hotelRoomMainDiv-R2">
+        <Row gutter={[16, 16]} className="hotelRoom-row-R2">
           {roomData.map((room) => (
-            <Col key={room.id} className="hotelRoom-col">
+            <Col key={room.id} className="hotelRoom-col-R2">
               <RoomCard
                 imageSource={room.image}
                 price={room.roomPrice}
                 cardtitle={room.cardTitle}
                
-                onViewMoreClick={() => handleViewMoreClick(room.cardId)}
+                onViewMoreClick={() => handleViewMoreClick(room.cardId, room.cardTitle)}
               />
             </Col>
           ))}
@@ -159,8 +161,14 @@ const Room = () => {
         onCancel={handleCancel}
         footer={null}
         width="80%"
+        className="custom-modal"
       >
-         {selectedCardId && <RoomAll selectedCardId={selectedCardId} />}
+        {selectedCardId && selectedCardTitle && (
+    <RoomAll 
+      selectedCardId={selectedCardId} 
+      selectedCardTitle={selectedCardTitle} 
+    />
+  )}
       </Modal>
     </div>
   );
