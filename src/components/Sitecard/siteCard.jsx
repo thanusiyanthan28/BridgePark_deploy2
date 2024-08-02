@@ -153,7 +153,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
                     </div>
                   </td>
                 </tr>
-                <tr className='tr-site'>
+                {/* <tr className='tr-site'>
                   <td className='td-site'>
                     <label className='check-head-site'>ADULTS</label>
                     <p className='site-p'>No of Persons</p>
@@ -172,7 +172,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
                       <button className="valueupdown-site" onClick={() => handleCountChange('children', 1)}>+</button>
                     </div>
                   </td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
             <button className="button-site" type="submit" onClick={handleSubmit}>Modify</button>
