@@ -57,6 +57,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
   const [bookingUrl, setBookingUrl] = useState('');
   const [bathroomType, setBathroomType] = useState('');
   const [roomPrice, setRoomPrice] = useState('');
+  const [bookLink, setBookLink] = useState('');
   const navigate = useNavigate();
 
   const handleViewMoreClick = (room, url, id) => {
@@ -68,6 +69,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
     setIsModalVisible(true);
     setSelectedRoomId(id)
     setRoomPrice(room.roomPrice);
+    setBookLink(room.bookLink);
     if (room.title.includes('SHARED')) {
       setBathroomType('Shared');
     } else {
@@ -98,6 +100,8 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images: [img1,img2,img3,img4],
       bedIcons: [SinBed],
       cardId:"01",
+       BookingLink:"31929"
+
     
     },
     {
@@ -112,6 +116,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images: [DB1,DB2,DB3],
       bedIcons: [DoubBed],
       cardId:"02",
+      BookingLink:"31920"
     },
     {
         id: 29,
@@ -123,6 +128,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "02",
         images: [DB1,DB2,DB3],
         cardId:"02",
+        BookingLink:"31921"
       },
     {
       id: 34,
@@ -136,6 +142,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images: [TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8],
       bedIcons: [SinBed, SinBed],
       cardId:"03",
+      BookingLink:"31934"
     },
     {
         id: 11,
@@ -147,6 +154,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "02",
         images:[TWE1,TWE2,TWE3],
         cardId:"03",
+         BookingLink:"31933"
     },
     {
       id: 11,
@@ -160,6 +168,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images: [TE1,TE2,TE3],
       bedIcons: [SinBed, SinBed],
       cardId:"04",
+       BookingLink:"31932"
     },
     {
         id: 31,
@@ -171,6 +180,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "03",
         images: [TB1,TB2],
         cardId:"04",
+          BookingLink:"31931"
       },
     {
         id: 30,
@@ -182,6 +192,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "03",
         images: [TE1,TE2,TE3,TE4,TE5],
         cardId:"04",
+         BookingLink:"31927"
     },
     {
       id: 10,
@@ -195,6 +206,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images:[TR1,],
       bedIcons: [DoubBed,SinBed],
       cardId:"05",
+       BookingLink:"31925"
     },
     {
         id: 33,
@@ -206,6 +218,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "04",
         images:[img6],
         cardId:"05",
+        BookingLink:"31922"
       },
     {
       id: 5,
@@ -221,6 +234,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
       images: [img6],
       bedIcons: [DoubBed,SinBed, SinBed],
       cardId:"06",
+       BookingLink:""
     },
     {
         id: 4,
@@ -232,6 +246,7 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
         NoOfGuests: "02",
         images:[TW1,TW2,TW3,TW4,TW5,TW6],
         cardId:"06",
+         BookingLink:""
       },
   ];
   const filteredRoomData = roomData.filter(
@@ -264,7 +279,8 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
                   cardTitle: room.cardTitle,
                   id: room.id,
                   images: room.images,
-                  roomPrice: room.roomPrice
+                  roomPrice: room.roomPrice,
+                  bookLink:room.BookingLink,
                 }, room.imageUrl, room.id)}
                 link={room.imageUrl}
               />
@@ -286,6 +302,8 @@ const RoomAll = ({ selectedCardId ,selectedCardTitle}) => {
               selectedRoomId={selectedRoomId}
               bathroomType={bathroomType}
               roomPrice={roomPrice}
+              bookLink={bookLink}
+
             />
             {/* <CustomCarousel roomImages={selectedRoom.images} /> */}
           </>
