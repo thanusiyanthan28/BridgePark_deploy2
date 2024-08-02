@@ -78,7 +78,7 @@
   .right-arrow {
     right: -20px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     .slide.medium,
     .slide.small{
         display: none;

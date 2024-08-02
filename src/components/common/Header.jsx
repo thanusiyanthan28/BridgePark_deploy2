@@ -14,7 +14,7 @@ import hotellogo1 from "../../assets/images/HotelLogo1.png"
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 820px)").matches);
 
   const handleClick = () => {
     console.log("button clicked");
@@ -46,7 +46,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 820px)").matches);
     };
 
     window.addEventListener("resize", handleResize);

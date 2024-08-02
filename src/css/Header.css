@@ -39,7 +39,7 @@
 }
 
 .headerLogoPosition {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .heading-container h1 {
@@ -86,7 +86,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
   .home-sitecard {
     position: absolute;
     top: 50%;

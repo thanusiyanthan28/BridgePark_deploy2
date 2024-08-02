@@ -178,7 +178,7 @@
     width: 70%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
     .pano-image-image-gallery {
         flex-wrap: nowrap;
         justify-content: center;

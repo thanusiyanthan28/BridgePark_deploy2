@@ -36,6 +36,7 @@ const BasicRoom = () => {
   const [selectedRoomId, setSelectedRoomId] = useState(0);
   const [bathroomType, setBathroomType] = useState('');
   const [roomPrice, setRoomPrice] = useState('');
+  const [bookLink, setBookLink] = useState('');
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 768px)").matches
@@ -47,6 +48,7 @@ const BasicRoom = () => {
     setIsModalVisible(true);
     setSelectedRoomId(id);
     setRoomPrice(Basicroom.roomPrice);
+    setBookLink(Basicroom.bookLink);
     if (Basicroom.title.includes('SHARED')) {
       setBathroomType('Shared');
     } else {
@@ -85,7 +87,8 @@ const BasicRoom = () => {
       imageUrl: getUrlById(2),
       BroomPrice: "£48",
       NoOfGuests: "01",
-      images: [SR]
+      images: [SR],
+      BookingLink:"31929"
     },
     {
       id: 29,
@@ -97,7 +100,8 @@ const BasicRoom = () => {
       imageUrl: getUrlById(5),
       BroomPrice: "£58",
       NoOfGuests: "02",
-      images: [DB1,DB2,DB3]
+      images: [DB1,DB2,DB3],
+      BookingLink:"31921"
     },
     {
       id: 34,
@@ -109,7 +113,8 @@ const BasicRoom = () => {
       imageUrl: getUrlById(11),
       BroomPrice: "£60",
       NoOfGuests: "02",
-      images: [TW1,TW2,TW3,TW4,TW5,TW6,TW7,TW8]
+      images: [TW1,TW2,TW3,TW4,TW5,TW6,TW7,TW8],
+      BookingLink:"31934"
     },
     {
       id: 31,
@@ -121,7 +126,8 @@ const BasicRoom = () => {
       imageUrl: getUrlById(9),
       BroomPrice: "£85",
       NoOfGuests: "03",
-      images: [TB1,TB2]
+      images: [TB1,TB2],
+      BookingLink:"31931"
     },
   ];
 
@@ -175,6 +181,7 @@ const BasicRoom = () => {
                   cardTitle:Basicroom.cardTitle,
                   id: Basicroom.id,
                   roomPrice: Basicroom.BroomPrice,
+                  bookLink:Basicroom.BookingLink,
                   images: Basicroom.images,
                 }, Basicroom.imageUrl,Basicroom.id)}
                 link={Basicroom.imageUrl}
@@ -197,6 +204,7 @@ const BasicRoom = () => {
         selectedRoomId={selectedRoomId}
         bathroomType={bathroomType}
         roomPrice={roomPrice}
+        bookLink={bookLink}
         />
       </Modal>
     </div>

@@ -21,7 +21,7 @@ const PanoImage = () => {
 
   const [startIndex, setStartIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [visibleImages, setVisibleImages] = useState(window.innerWidth <= 768 ? 1 : 3);
+  const [visibleImages, setVisibleImages] = useState(window.innerWidth <= 820 ? 1 : 3);
 
   useEffect(() => {
     const handleResize = () => {

@@ -13,7 +13,7 @@ const HeaderUpdate = () => {
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const isMobile = windowWidth <= 768;
+  const isMobile = windowWidth <= 820;
   const { isLoggedIn, userData, logout } = useContext(AuthContext); // Use context
 
   const handleLogout = () => {
@@ -134,7 +134,9 @@ const HeaderUpdate = () => {
     <div className='header-update-container'>
      
       <div className='header-update'>
+         <div className='update-header-main-logo'>
         <a href='/'><img className='update-header-logo' src={headerlogo} alt="Logo" /></a>
+        </div>
         {!isMobile ? (
           <div className='header-nav-bar-left'>
             <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={itemsLeft} />

@@ -44,6 +44,7 @@ const EnsuiteRoom = () => {
   const [selectedRoomId, setSelectedRoomId] = useState(0);
   const [bathroomType, setBathroomType] = useState('');
   const [roomPrice, setRoomPrice] = useState('');
+  const [bookLink, setBookLink] = useState('');
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 768px)").matches
   );
@@ -54,6 +55,7 @@ const EnsuiteRoom = () => {
     setIsModalVisible(true);
     setSelectedRoomId(id);
     setRoomPrice(EnsuiteRoom.roomPrice);
+    setBookLink(EnsuiteRoom.bookLink);
     if (EnsuiteRoom.title.includes('SHARED')) {
       setBathroomType('Shared');
     } else {
@@ -94,7 +96,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(14),
       EroomPrice: "£65",
       NoOfGuests: "02",
-      images: [DB3,DB1,DB2]
+      images: [DB3,DB1,DB2],
+      BookingLink:"31920"
     },
     {
       id: 11,
@@ -106,7 +109,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(11),
       EroomPrice: "£68",
       NoOfGuests: "02",
-      images:[TWE1,TWE2,TWE3]
+      images:[TWE1,TWE2,TWE3],
+       BookingLink:"31933"
     },
     {
       id: 31,
@@ -118,7 +122,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(9),
       EroomPrice: "£92",
       NoOfGuests: "03",
-      images: [TB1,TB2]
+      images: [TB1,TB2],
+       BookingLink:"31932"
     },
     {
       id: 30,
@@ -130,7 +135,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(10),
       EroomPrice: "£97",
       NoOfGuests: "03",
-      images: [TE1,TE2,TE3,TE4,TE5]
+      images: [TE1,TE2,TE3,TE4,TE5],
+       BookingLink:"31927"
     },
     {
       id: 32,
@@ -142,7 +148,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(10),
       EroomPrice: "£120",
       NoOfGuests: "04",
-      images: [QD]
+      images: [QD],
+       BookingLink:"31925"
     },
     {
       id: 33,
@@ -154,7 +161,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(10),
       EroomPrice: "£110",
       NoOfGuests: "04",
-      images:[img6]
+      images:[img6],
+       BookingLink:"31922"
     },
     {
       id: 4,
@@ -166,7 +174,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(10),
       EroomPrice: "£120",
       NoOfGuests: "03",
-      images: [img7]
+      images: [img7],
+       BookingLink:""
     },
     {
       id: 4,
@@ -178,7 +187,8 @@ const EnsuiteRoom = () => {
       imageUrl: getUrlById(10),
       EroomPrice: "£125", 
       NoOfGuests: "02",
-      images:[TW1,TW2,TW3,TW4,TW5,TW6]
+      images:[TW1,TW2,TW3,TW4,TW5,TW6],
+       BookingLink:""
     },
   ];
 
@@ -232,6 +242,7 @@ const EnsuiteRoom = () => {
                         cardTitle:Ensuiteroom.cardTitle,
                         images: Ensuiteroom.images,
                         roomPrice: Ensuiteroom.EroomPrice,
+                        bookLink:Ensuiteroom.BookingLink,
                       },
                       Ensuiteroom.imageUrl,Ensuiteroom.id
                     )
@@ -255,6 +266,7 @@ const EnsuiteRoom = () => {
              selectedRoomId={selectedRoomId}
              bathroomType={bathroomType}
              roomPrice={roomPrice}
+             bookLink={bookLink}
              />
         </Modal>
       </div>

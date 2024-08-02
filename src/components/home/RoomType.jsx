@@ -8,7 +8,7 @@ import HomeCard from "../Sitecard/homeCard";
 
 const RoomType = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 768px)").matches
+    window.matchMedia("(max-width: 820px)").matches
   );
 
   useEffect(() => {

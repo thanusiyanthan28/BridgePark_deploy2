@@ -46,6 +46,8 @@ export default function App() {
       <AuthProvider>
         <Router>
           {/* <NewHeader /> */}
+          
+          
           <TopBar />
           <div className="app-margin-top">
             <HeaderUpdate />

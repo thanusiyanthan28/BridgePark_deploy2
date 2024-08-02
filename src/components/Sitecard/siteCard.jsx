@@ -15,7 +15,7 @@ dayjs.updateLocale('en', {
   ]
 });
 
-const SiteCard = ({ selectedRoomId,roomPrice }) => {
+const SiteCard = ({ selectedRoomId,roomPrice,bookLink }) => {
   const [formData, setFormData] = useState({
     checkInDate: dayjs(),
     checkOutDate: dayjs(),
@@ -34,7 +34,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
   const [tax, setTax] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect`;
+  const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect/book`;
 
   const handleCountChange = (fieldName, increment) => {
     setFormData(prevState => {
@@ -83,12 +83,14 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
     e.preventDefault();
 
     const queryString = new URLSearchParams({
+      
       check_in_date: formData.checkInDate.format('YYYY-MM-DD'),
       check_out_date: formData.checkOutDate.format('YYYY-MM-DD'),
-      number_adults: formData.adults,
-      number_children: formData.children,
+      // number_adults: formData.adults,
+      // number_children: formData.children,
+
     });
-    window.location.href = `${bookingEngineUrl}?${queryString.toString()}`;
+    window.location.href = `${bookingEngineUrl}?items[0][rateId]=${bookLink}&${queryString.toString()}&step=step1`;
   };
 
 
@@ -111,6 +113,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
   useEffect(() => {
     console.log('selectedRoomId:', selectedRoomId);
     console.log('roomPrice:', roomPrice);
+    console.log('booklink:', bookLink);
     calculatePrices();
   }, [formData.adults, formData.children, roomPrice]);
 
@@ -176,6 +179,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
               </tbody>
             </table>
             <button className="button-site" type="submit" onClick={handleSubmit}>Modify</button>
+            
           </div>
         </div>
         <div>

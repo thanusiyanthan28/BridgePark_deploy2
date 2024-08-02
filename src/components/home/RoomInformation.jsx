@@ -8,7 +8,7 @@ import HouseRules from "../common/HomeRules";
 import SiteCard from "../Sitecard/siteCard";
 import CustomCarousel from "./new";
 
-const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomPrice }) => {
+const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomPrice ,bookLink}) => {
   const [showList, setShowList] = useState(false);
   const [showTab, setShowTab] = useState("info");
 
@@ -37,7 +37,7 @@ const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomP
         <div>
          
           <div className="site-card-room">
-           <SiteCard selectedRoomId={selectedRoomId} roomPrice={parseFloat(roomPrice.replace('£', ''))} />
+           <SiteCard selectedRoomId={selectedRoomId} roomPrice={parseFloat(roomPrice.replace('£', ''))} bookLink={bookLink}/>
           </div>
           
           <div>
@@ -46,6 +46,7 @@ const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomP
           
           <div>
             <h2 className="RoomInformation-heading">Room Information</h2>
+            <h2 className="RoomInformation-heading">{bookLink}</h2>
             <h2 className="RoomInformation-subHeadings">{room.title}</h2>
             <p className="RoomInformation-textP">
               This Lovely single basic room has just become available, equipped

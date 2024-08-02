@@ -3,12 +3,13 @@ import "./Location.css"
 import Header from '../common/Header'
 import Card from '../common/Card'
 import SiteCard from "../Sitecard/siteCard";
+import HomeCard from "../Sitecard/homeCard";
 
 const Location = () => {
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 820px)").matches);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 820px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
@@ -21,7 +22,7 @@ const Location = () => {
   return (
     <div className='location'>
        <div className='location-main'>  
-       {isMobile ? <div className="location-sitecard"><SiteCard /></div> :  <div className='location-card'><Card /></div>}
+       {isMobile ? <div className="location-sitecard"><HomeCard /></div> :  <div className='location-card'><Card /></div>}
        </div>
        <div className='location-title'>Location</div>
     <div className='location-sub'>

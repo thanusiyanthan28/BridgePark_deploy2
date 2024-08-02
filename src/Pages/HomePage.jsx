@@ -12,8 +12,8 @@ import NewMeeting from "./MeetingAndEvents/NewMeeting";
 
 export default function HomePage() {
   return (
-    <>
-    
+    <div className="home-top-margin">
+       
       <Header />
       <About />
       <Room />
@@ -22,6 +22,6 @@ export default function HomePage() {
       {/* <FAQ /> */}
       <FAQComponent/>
        
-    </>
+    </div>
   );
 }
