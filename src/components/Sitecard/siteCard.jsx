@@ -99,7 +99,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
     if (personCount > 2) {
       price *= 2; // Double the price if more than two persons
     }
-    const tax = price * 0.1; // Assuming a tax rate of 10%
+    const tax = price * 0.15; // Assuming a tax rate of 10%
     setTax(tax);
     setTotalPrice(price + tax);
   };
@@ -180,7 +180,7 @@ const SiteCard = ({ selectedRoomId,roomPrice }) => {
         </div>
         <div>
           <p>1 x  Room Price <span className='price-site'>£{roomPrice ? roomPrice.toFixed(2): '0.00'}</span></p>
-          <p>Tax <span className='price-site'>£{tax.toFixed(2)}</span></p>
+          <p>VAT 15% <span className='price-site'>£{tax.toFixed(2)}</span></p>
           <hr />
           <p>Grand total <span className='price-site'>£{totalPrice.toFixed(2)}</span></p>
         </div>
