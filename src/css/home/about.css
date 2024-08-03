@@ -163,6 +163,31 @@ font-family: "lato", serif;
     }
   }
 
-  @media (max-device-width: 1024px) {
+  /* @media (width: 1024px) {
+    .custom-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   
-  }
+    .custom-col-xs-24 {
+      flex: 0 0 100%; 
+      max-width: 100%;
+    }
+  
+  } */
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .IpadProR {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .IpadProR-xs-24 {
+      flex: 0 0 100%; 
+      max-width: 100%;
+    }
+    .aboutCouroselComponent .ant-row{
+      margin-right: 8px !important;
+      margin-left: 8px !important;
+    }
+  } 
