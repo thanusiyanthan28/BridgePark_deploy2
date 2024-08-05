@@ -31,7 +31,7 @@ const HomeCard = ({ selectedRoomId }) => {
     checkOutDay: dayjs().format('dddd'),
   });
 
-  const [discountPercentage, setDiscountPercentage] = useState(25); // Default discount percentage
+  const [discountPercentage, setDiscountPercentage] = useState(10); // Default discount percentage
   const bookingEngineUrl = `https://direct-book.com/properties/bridgeparkdirect`;
 
   useEffect(() => {

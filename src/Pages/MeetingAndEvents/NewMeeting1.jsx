@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import './NewMeeting.css';
+import './NewMeeting1.css';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import img7 from "../../assets/MEDIA & ASSESTS/bonfire 1.webp"
 import img6 from "../../assets/MEDIA & ASSESTS/bonfire 3.webp";
@@ -26,7 +26,7 @@ const cardsData = [
  
 ];
 
-const NewMeeting = () => {
+const NewMeeting1 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -92,4 +92,4 @@ const NewMeeting = () => {
   );
 };
 
-export default NewMeeting;
+export default NewMeeting1;
