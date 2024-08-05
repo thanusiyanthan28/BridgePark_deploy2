@@ -23,8 +23,7 @@ const cardsData = [
   { id: 2, images: [img2, img3 ,img2],       title: 'Christmas eve Dinner ', description: 'Description 2', date: '2024-02-01', time: '07.00 pm' },
   { id: 3, images: [ img4, img5, img8, img9], title: 'New Years eve Dinner ', description: 'Description 3', date: '2024-03-01', time: '07.00 pm' },
   { id: 5, images: [img10, img11,img10], title: 'New Years eve Dinner ', description: 'Description 5', date: '2024-05-01', time: '07.00 pm' },
-  // { id: 6, images: [img5, img6, img1], title: 'New Years eve Dinner 6', description: 'Description 6', date: '2024-06-01', time: '07.00 pm' },
-  // { id: 7, images: [img6, img1, img2], title: 'New Years eve Dinner 7', description: 'Description 7', date: '2024-07-01', time: '07.00 pm' },
+ 
 ];
 
 const NewMeeting = () => {
@@ -83,8 +82,6 @@ const NewMeeting = () => {
               <img src={card.images[currentImageIndex]} alt={card.title} />
               <div className={`new-meeting-card-content ${index === 1 ? 'new-meeting-active-content' : 'new-meeting-overlay-content'}`}>
                 <h4 className='new-meeting-title'>{card.title}</h4>
-                {/* <p className='new-meeting-dis'>{card.description}</p>
-                <p className='new-meeting-date'><span>{card.date}</span>&nbsp; | &nbsp;<span>{card.time}</span></p> */}
               </div>
             </div>
           ))}
