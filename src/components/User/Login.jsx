@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link, useNavigate } from "react-router-dom";
-import style from "../../css/LoginSignUp.css";
+import  "../../css/LoginSignUp.css";
 import hotelFront from "../../assets/images/HotelFront.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";

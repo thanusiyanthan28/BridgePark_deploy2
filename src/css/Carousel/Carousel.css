@@ -50,9 +50,9 @@
       height: 250px; 
     }
   
-    .carousel-slide {
+    /* .carousel-slide {
       margin-top: 30px; 
-    }
+    } */
   
     /* Styles for navigation dots */
     .ant-carousel .slick-dots li {
