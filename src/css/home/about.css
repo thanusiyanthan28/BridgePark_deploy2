@@ -100,7 +100,7 @@ font-family: "lato", serif;
   margin: 10px; 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .aboutContainer {
     height: auto;
     width: 95%;
@@ -130,6 +130,9 @@ font-family: "lato", serif;
     margin-top: 10px; 
     text-align: center; 
   }
+  .aboutCouroselComponent .ant-row{
+    margin-right: 8px !important;
+    margin-left: 8px !important;
 }
 
 @media only screen and (min-width: 1370px) and (max-width: 1605px) {
@@ -163,20 +166,8 @@ font-family: "lato", serif;
     }
   }
 
-  /* @media (width: 1024px) {
-    .custom-col {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  
-    .custom-col-xs-24 {
-      flex: 0 0 100%; 
-      max-width: 100%;
-    }
-  
-  } */
-
-  @media (min-width: 769px) and (max-width: 1024px) {
+} 
+  @media (min-width: 768px) and (max-width: 1024px) {
     .IpadProR {
       flex: 0 0 50%;
       max-width: 50%;
