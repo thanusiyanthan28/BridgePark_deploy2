@@ -69,12 +69,12 @@
   background-color: #618e95;
   color: #fff;
   border: none;
-  border-radius: 0px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .button-site:hover{
-  background-color: #e0ffff;
-  color: black;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   border: 1px solid #000000;
 }
 .card-body-site table {

@@ -48,7 +48,7 @@ const ReviewPage = () => {
   };
 
   const getProgressBarColor = (score) => {
-    return score > 5 ? '#F6BE00' : '#618e95'; // Yellow if score > 5, else light blue
+    return score > 5 ? '#136f63' : '#081c15'; // Yellow if score > 5, else light blue
   };
 
   const totalReviews = filteredReviews.length;
@@ -112,7 +112,7 @@ const ReviewPage = () => {
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
-        width={800}
+        width={900}
         style={{ top: 20, right: 20, position: 'fixed', margin: 0 }}
         bodyStyle={{ maxHeight: 'calc(100vh - 40px)', overflowY: 'auto', padding: '20px' }}
       >

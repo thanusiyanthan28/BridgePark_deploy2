@@ -61,8 +61,8 @@
   font-family: "lato", serif;
 }
 .hotelRoomTypeCardButton:hover {
-  background-color: #e0ffff;
-  color: black;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   border: 1px solid #000000
 }
 /* Show the bottom text of the card */

@@ -150,6 +150,7 @@
 }
 .site-card-room{
   margin-top: -80px;
+  margin-right: 28px;
 }
 @media (max-width: 435px) {
   .RoomInformationCardImage {

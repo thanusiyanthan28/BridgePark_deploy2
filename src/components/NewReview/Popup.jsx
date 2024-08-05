@@ -184,7 +184,7 @@ const ReviewApp = () => {
   );
 
   const getProgressBarColor = (score) => {
-    return score > 5 ? "#F6BE00" : "#618e95";
+    return score > 5 ? "#136f63" : "#081c15";
   };
   const [selectedReview, setSelectedReview] = useState(null);
 
