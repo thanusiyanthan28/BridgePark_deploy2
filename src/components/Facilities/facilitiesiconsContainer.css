@@ -10,18 +10,18 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100px; /* Adjust width as needed */
+  width: 100px; 
 }
 
 .facility-icon {
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
+  width: 30px; 
+  height: 30px;
 }
 
 .facility-title {
   margin-top: 8px;
-  font-size: 13px; /* Adjust font size as needed */
-  color: #0b0b0b; /* Adjust color as needed */
+  font-size: 13px; 
+  color: #0b0b0b;
 }
 
 
@@ -59,7 +59,5 @@
     height: 35px;
   }
 
-  .facility-title {
-    font-size: 
-  }
+  
 }
