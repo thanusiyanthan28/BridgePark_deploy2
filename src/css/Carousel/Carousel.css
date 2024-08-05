@@ -50,9 +50,9 @@
       height: 250px; 
     }
   
-    .carousel-slide {
+    /* .carousel-slide {
       margin-top: 30px; 
-    }
+    } */
   
     /* Styles for navigation dots */
     .ant-carousel .slick-dots li {
@@ -64,4 +64,12 @@
       height: 8px; 
     }
   }
+  @media (max-device-width: 1024px) {
+    .carousel-container{
+      width: 450px;
+      height: auto;
+    }
+  
+  }
+
   

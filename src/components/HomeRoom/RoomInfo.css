@@ -31,15 +31,15 @@
   
   }
   .custom-modal .ant-modal-content {
-    background-color: #d6d3d3; /* Change this to your desired background color */
+    background-color: #e0f8fa; /* Change this to your desired background color */
 }
 
 .custom-modal .ant-modal-header {
-    background-color: #baa2a2; /* Change this to match the content background color */
+    background-color: #8f8585; /* Change this to match the content background color */
 }
 
 .custom-modal .ant-modal-body {
-    background-color: #d6d3d3; /* Change this to match the content background color */
+    background-color: #e0f8fa; /* Change this to match the content background color */
 }
   
   @media (max-width: 768px) {

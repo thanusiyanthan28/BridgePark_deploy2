@@ -58,7 +58,8 @@ const About = () => {
             <div className='aboutCouroselComponent'>
                 <Row gutter={[16, 16]}>
                     {carouselImages.map((images, index) => (
-                        <Col key={index} xs={24} sm={12} md={6}>
+                        <Col key={index} xs={24} sm={12} md={6}
+                        className={window.innerWidth <= 1024 ? 'IpadProR' : ''}> 
                             <CarouselComponent images={images} />
                         </Col>
                     ))}

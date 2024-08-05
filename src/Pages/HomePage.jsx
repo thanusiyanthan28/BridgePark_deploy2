@@ -7,7 +7,7 @@ import RoomInformation from "../components/home/RoomInformation";
 
 //import FAQ from "../components/FAQ/Faq";
 import FAQComponent from "../components/FAQ/FaqComponent";
-import NewMeeting from "./MeetingAndEvents/Newmeeting";
+import NewMeeting1 from "./MeetingAndEvents/NewMeeting1";
 
 
 export default function HomePage() {
@@ -18,8 +18,7 @@ export default function HomePage() {
       <About />
       <Room />
       <Facilities />
-      <NewMeeting />
-      {/* <FAQ /> */}
+      <NewMeeting1 />
       <FAQComponent/>
        
     </div>

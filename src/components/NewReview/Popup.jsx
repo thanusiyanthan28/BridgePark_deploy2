@@ -45,18 +45,6 @@ const ReviewApp = () => {
     setVisible(false);
   };
 
-//   useEffect(() => {
-    
-//     setCategories([
-//       { id: 1, name: "Staff" },
-//       { id: 2, name: "Facilities" },
-//       { id: 3, name: "Cleanliness" },
-//       { id: 4, name: "Comfort" },
-//       { id: 5, name: "Value for money" },
-//       { id: 6, name: "Location" },
-//       { id: 7, name: "Free WiFi" },
-//     ]);
-//   }, []);
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -184,7 +172,7 @@ const ReviewApp = () => {
   );
 
   const getProgressBarColor = (score) => {
-    return score > 5 ? "#F6BE00" : "#618e95";
+    return score > 5 ? "#136f63" : "#081c15";
   };
   const [selectedReview, setSelectedReview] = useState(null);
 

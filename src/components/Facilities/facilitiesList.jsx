@@ -41,12 +41,7 @@ const ColumnList =  ({ forRoomInfoPage }) => {
         <ul>
           <li>Desk</li>
         </ul>
-        <h2 className='fscolumnh2'><FaTv style={{marginBottom: "-4px"}}/> Media & Technology</h2>
-        <ul>
-          <li>Flat-Screen TV</li>
-          <li>Telephone</li>
-          <li>TV</li>
-        </ul>
+       
       </div>
       <div className="fscolumn">
         <h2 className='fscolumnh2'><FaWineGlassAlt /> Food & Drink</h2>
@@ -108,6 +103,12 @@ const ColumnList =  ({ forRoomInfoPage }) => {
           <li>Ironing Facilities</li>
           <li>Non smoking rooms</li>
           <li>Room service</li>
+        </ul>
+        <h2 className='fscolumnh2'><FaTv style={{marginBottom: "-4px"}}/> Media & Technology</h2>
+        <ul>
+          <li>Flat-Screen TV</li>
+          <li>Telephone</li>
+          <li>TV</li>
         </ul>
         
       </div>

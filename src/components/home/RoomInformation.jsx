@@ -46,7 +46,6 @@ const RoomInformation = ({ room, bookingUrl, selectedRoomId, bathroomType, roomP
           
           <div>
             <h2 className="RoomInformation-heading">Room Information</h2>
-            <h2 className="RoomInformation-heading">{bookLink}</h2>
             <h2 className="RoomInformation-subHeadings">{room.title}</h2>
             <p className="RoomInformation-textP">
               This Lovely single basic room has just become available, equipped
