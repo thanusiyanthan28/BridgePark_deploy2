@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="overlay"></div>
+      <div className="overlay2"></div>
      
       <div className="footer-logo">
         <img src={logo} alt="Logo" className="logo" />
