@@ -103,6 +103,7 @@ font-family: "lato", serif;
 @media screen and (max-width: 768px) {
   .aboutContainer {
     height: auto;
+    width: 95%;
   }
   .about-sub-content {
     text-align: justify;
@@ -110,7 +111,7 @@ font-family: "lato", serif;
   }
   
   .abContainer{
-    width: 95%;
+    width: 100%;
   }
 
   .aboutTextWrapper {
@@ -129,7 +130,6 @@ font-family: "lato", serif;
     margin-top: 10px; 
     text-align: center; 
   }
-
 }
 
 @media only screen and (min-width: 1370px) and (max-width: 1605px) {
