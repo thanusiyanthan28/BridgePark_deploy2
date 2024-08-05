@@ -74,7 +74,10 @@
     font-size: 16px;
     margin-top: 70px;
   }
-  
+  .review-show-btn:hover{
+    background-color: black;
+    color:white;
+  }
   .review-show {
     margin-left: auto; 
     margin-top: -80px; 
@@ -93,7 +96,7 @@
     font-family: Arial, sans-serif;
   }
   .score-rev {
-    background-color: #F6BE00;
+    background-color: #136f63;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;

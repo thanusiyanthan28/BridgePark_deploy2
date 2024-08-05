@@ -310,7 +310,7 @@
   }
   
   .score-pop {
-    background-color: #F6BE00;
+    background-color: #136f63;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -323,14 +323,14 @@
     color: #f4f4f5;
     border: none;
     border-radius: 5px;
-    margin-left: 150px;
+    margin-left: 170px;
     height: 30px;
     width: 120px;
   }
   
   .write-pop:hover {
-    background-color: white;
-    color: #1619dc;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
   }
   
   .close-icon {
