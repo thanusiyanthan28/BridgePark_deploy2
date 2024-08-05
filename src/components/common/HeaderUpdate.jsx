@@ -156,8 +156,8 @@ const HeaderUpdate = () => {
 
       <Drawer placement="left" closable={false} onClose={onClose} open={open} className='update-header-drawer'>
         <Button onClick={onClose} className='drawer-close-btn'><CloseOutlined /></Button>
-        <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft} />
-        <Menu mode="inline" items={profileMenuItems} onClick={onClose} />
+        <Menu onClick={onClick} selectedKeys={[current]} mode="inline" items={itemsLeft}  className='update-header-drawer1'/>
+        <Menu mode="inline" items={profileMenuItems} onClick={onClose}  className='update-header-drawer2'/>
       </Drawer>
       
     </div>
